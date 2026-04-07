@@ -1,0 +1,25 @@
+# Backup files
+*.bak
+
+# Build artifacts
+deploy.zip
+
+# Python
+__pycache__/
+*.pyc
+
+# Wrangler/Cloudflare local state
+.wrangler/
+public/.wrangler/
+
+# Working/scratch artifacts (transcripts, dumps, debug files)
+_extracted_data.json
+_lecture_boundaries.json
+_work/_extracted_app.js
+_work/_extracted_app_pretty.js
+_work/_node_summaries.json
+_work/all_lectures.json
+_work/recordings.json
+_work/lectures/
+_work/exam*.txt
+_work/apr*.txt
