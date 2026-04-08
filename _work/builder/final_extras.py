@@ -12,7 +12,7 @@ EXISTING_PATH = os.path.join(
 # IDs we want to keep (history-of-life and phylogenetics are REPLACED
 # by the new lecture-based Lec 14 and Lec 15 nodes).
 KEEP_IDS = {
-    'species-concepts',
+    # 'species-concepts' is replaced by the richer ch13_nodes() in lectures_16_speciation.py
     'biogeography-extinction',
     'conservation',
     'human-evolution',
@@ -21,7 +21,6 @@ KEEP_IDS = {
 
 # New row assignments for the final-exam rail
 ROW_REASSIGN = {
-    'species-concepts':       14,
     'biogeography-extinction':14,
     'conservation':           15,
     'human-evolution':        15,

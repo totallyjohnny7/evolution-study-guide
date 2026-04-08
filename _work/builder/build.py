@@ -17,8 +17,9 @@ from lectures_1_7    import (lec1_nodes, lec2_nodes, lec3_nodes,
                               lec4_nodes, lec5_6_nodes, lec7_nodes)
 from lectures_8_13   import (lec8_nodes, lec9_nodes, lec10_11_nodes,
                               lec12_nodes, lec13_nodes)
-from lectures_14_15  import lec14_nodes, lec15_nodes
-from final_extras    import final_extras_nodes
+from lectures_14_15         import lec14_nodes, lec15_nodes
+from lectures_16_speciation import ch13_nodes
+from final_extras           import final_extras_nodes
 
 ROOT      = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 DATA_JSON = os.path.join(ROOT, 'data.json')
@@ -51,7 +52,7 @@ def assemble():
     for fn in (lec1_nodes, lec2_nodes, lec3_nodes, lec4_nodes,
                lec5_6_nodes, lec7_nodes, lec8_nodes, lec9_nodes,
                lec10_11_nodes, lec12_nodes, lec13_nodes,
-               lec14_nodes, lec15_nodes, final_extras_nodes):
+               lec14_nodes, lec15_nodes, ch13_nodes, final_extras_nodes):
         all_nodes.extend(fn())
 
     meta = {
