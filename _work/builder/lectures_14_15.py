@@ -240,18 +240,18 @@ def lec14_nodes():
             '"Age of X" means the period when X DOMINATES, not when X first appeared. E.g., Age of Fishes = Devonian, but fish originated in the Ordovician.',
             'Synapsid ≠ reptile, even though "mammal-like reptiles" is sometimes used casually. Synapsids are a separate lineage from the reptile lineage (sauropsids).',
         ],
-        mnemonic='COME OVER SOME DAY MAYBE PICK UP HER VAUPHILIES — Cambrian, Ordovician, Silurian, Devonian, Mississippian, Pennsylvanian, Permian, Triassic, Jurassic, Cretaceous (not quite right but close to the professor\'s mnemonic).',
+        mnemonic='Robbins\' mnemonic: "COME OVER SOME DAY MAYBE PICKING UP HARD CASH" = Cambrian, Ordovician, Silurian, Devonian, Mississippian, Pennsylvanian, Permian, Triassic, Jurassic, Cretaceous. Or just: "Camels Often Sit Down Carefully, Perhaps Their Joints Creak." The Paleozoic 6: Cambrian → Ordovician → Silurian → Devonian → Carboniferous → Permian.',
         flashcard={
             'front': 'What was the Cambrian explosion, and why is the Burgess Shale so important?',
             'back': 'The Cambrian explosion (~542-488 Mya) was a relatively brief geological interval when most major animal PHYLA first appear in the fossil record. It represents a rapid burst of body-plan diversification: trilobites, early arthropods, brachiopods, mollusks, chordates, echinoderms all show up in the Cambrian. The Burgess Shale (Canadian Rockies, 505 Mya) is one of the most important fossil sites on Earth because (1) it captures a snapshot of an entire Cambrian ecosystem, (2) the anoxic conditions from underwater mudslides preserved SOFT tissues — normally fossils only preserve hard parts, (3) it contains 65,000+ specimens representing 93 species, including bizarre forms like Hallucigenia, Opabinia, and Anomalocaris that have no close modern relatives. Because of its exceptional preservation, Burgess Shale is called a "Lagerstätte" (German: storage place).',
         },
         quiz={
-            'question': 'Which major event characterizes the Devonian period?',
-            'correct': 'Earliest tetrapods emerging onto land (Age of Fishes)',
+            'question': 'The Devonian is called the "Age of Fishes," but which ADDITIONAL major vertebrate transition also occurred during the Devonian?',
+            'correct': 'The first tetrapods appeared (~370 Mya), transitioning from lobe-finned fish to early limbed vertebrates capable of weight-bearing locomotion',
             'distractors': [
-                'First appearance of trilobites',
-                'Origin of flowering plants',
-                'Mass extinction at the K-T boundary',
+                'The first birds evolved from theropod dinosaurs, marking the origin of powered flight in vertebrates',
+                'The first reptiles diverged into synapsids and sauropsids, establishing the lineages leading to mammals and modern reptiles',
+                'The first bony fish (Osteichthyes) appeared, eventually displacing cartilaginous fish as the dominant vertebrate group',
             ],
         },
         visual={

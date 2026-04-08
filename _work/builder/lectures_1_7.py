@@ -17,6 +17,10 @@ def lec1_nodes():
             "Dobzhansky: \"Nothing in biology makes sense except in the light of evolution\"",
             "Practical applications include antibiotic resistance, vaccine design, crop improvement, conservation.",
         ],
+        warnings=[
+            'EXAM TRAP: Evolution is NOT "organisms improving over time" and NOT "individuals changing." It is POPULATION-LEVEL change in allele frequencies across generations.',
+            'Individuals do not evolve — populations do. A giraffe\'s neck does not grow longer because it stretches. The population shifts toward longer necks over generations.',
+        ],
         mnemonic='CHANGE: Change in allele frequencies over generations — the minimal definition of evolution.',
         flashcard={
             'front': 'Why is evolution considered the unifying theory of biology?',
@@ -101,12 +105,12 @@ def lec1_nodes():
             'back': '(1) It explains patterns we observe in all living organisms; (2) It has direct practical applications (medicine, agriculture, conservation); (3) It provides the only coherent framework for asking "why" questions in biology.',
         },
         quiz={
-            'question': 'According to Lecture 1, evolutionary biology is best described as:',
-            'correct': 'A predictive, testable framework that unifies all subfields of biology',
+            'question': 'According to Lecture 1, which feature most distinguishes evolutionary biology as a SCIENCE rather than just a historical account of life?',
+            'correct': 'It generates testable, falsifiable predictions about allele frequencies, fitness, and adaptation — not just post-hoc narratives',
             'distractors': [
-                'A set of historical narratives about extinct species',
-                'A philosophy restricted to explaining past events only',
-                'A belief system with no empirical tests',
+                'It relies on direct observation of speciation events, which occur over human-observable timescales',
+                'It explains only past events and makes no predictions about future population change',
+                'Its claims are insulated from genetic evidence because behavior cannot be fossilized',
             ],
         },
         visual={
@@ -227,9 +231,9 @@ def lec2_nodes():
             'question': 'A population of plants shows variation in leaf shape, but leaf shape is entirely determined by soil chemistry and not passed from parent to offspring. Can natural selection act on this variation?',
             'correct': 'No — without heritability, differential reproduction will not change allele frequencies',
             'distractors': [
-                'Yes — any variation will lead to evolution',
-                'Yes — but only if plants have sexual reproduction',
-                'No — natural selection cannot act on plants at all',
+                'Yes — any phenotypic variation is sufficient for evolution by natural selection',
+                'Yes — but only if the variation produces differences in germination rate',
+                'No — but only because plants reproduce vegetatively rather than sexually',
             ],
         },
         visual={
@@ -258,6 +262,10 @@ def lec2_nodes():
             'Peter and Rosemary Grant measured beak depth in Geospiza fortis on Daphne Major across decades.',
             '1977 drought: small soft seeds disappeared; only large hard seeds remained. Birds with larger, deeper beaks survived at higher rates.',
             'Next generation had significantly larger average beak size — directly measured evolution by natural selection.',
+        ],
+        warnings=[
+            'EXAM TRAP: The Grant finch study showed selection REVERSED in wet years — larger beaks were selected AGAINST when large hard seeds were gone and small soft seeds dominated again. Selection direction tracks the environment, it is NOT unidirectional.',
+            'Heritability of beak depth (h² ≈ 0.65-0.8) was measured by parent-offspring regression in the Grant study — not assumed. Without measuring heritability, you cannot confirm the R = h²S prediction.',
         ],
         mnemonic='4 conditions confirmed in finches: Variable beaks, Heritable beaks, Survival differences, Beak size mattered → Positive selection for larger beaks.',
         flashcard={
@@ -345,6 +353,10 @@ def lec3_nodes():
             'Dolphin hindlimb genes are still present but transcriptionally silenced — regulation, not gene loss, explains limb absence.',
             'Gene expression is regulated by complex networks: enhancers, transcription factors, miRNA, chromatin state.',
         ],
+        warnings=[
+            'EXAM TRAP: "Central dogma" (DNA → RNA → Protein) does NOT mean every gene is always expressed. Transcriptional regulation determines WHICH genes are ON or OFF — the same genome can produce hundreds of different cell types.',
+            'Reverse transcription (RNA → DNA) occurs in retroviruses and in the cell\'s own retrotransposons. This does NOT contradict the central dogma, which refers to information flow in normal cellular protein synthesis.',
+        ],
         mnemonic='DNA → RNA → Protein (Central dogma), but REGULATION of this flow is what determines phenotype.',
         flashcard={
             'front': 'Why are dolphin hindlimb genes a surprising illustration of gene expression regulation?',
@@ -430,6 +442,10 @@ def lec3_nodes():
             'Independent assortment of homologs during metaphase I — 2^n possible combinations for n chromosome pairs (2^23 ≈ 8 million in humans).',
             'Random fertilization: any sperm can meet any egg, multiplying variation further.',
         ],
+        warnings=[
+            'EXAM TRAP: Crossing over occurs during PROPHASE I (when homologs are synapsed), NOT during anaphase. Independent assortment is the metaphase I process.',
+            'Meiosis generates variation; mitosis does NOT — mitosis produces genetically identical daughter cells. Only meiosis + fertilization expand the genotypic space.',
+        ],
         mnemonic='CIR: Crossing over + Independent assortment + Random fertilization = meiotic variation engine.',
         flashcard={
             'front': 'How many genetically distinct gametes can a single human potentially produce, ignoring new mutations?',
@@ -468,6 +484,10 @@ def lec3_nodes():
             'Genetic polymorphism: simultaneous existence of two or more discrete forms in a population (e.g., blood types, color morphs).',
             'Polygenic traits: phenotype determined by many genes (e.g., height, skin color, disease risk) — produces continuous variation.',
             'Environmental effects: same genotype can produce different phenotypes (reaction norms — covered more in Lec 5-6).',
+        ],
+        warnings=[
+            'EXAM TRAP: Continuous variation in a trait does NOT mean the trait is environmentally determined. Human height is ~80% heritable but is continuous because MANY genes contribute (polygenic). Heritability and discrete vs continuous are independent dimensions.',
+            'Genetic polymorphism ≠ allele. A polymorphism is a population-level phenomenon (two or more forms coexist). An individual has alleles, not polymorphisms.',
         ],
         mnemonic='PPE: Polymorphism (discrete) vs Polygenic (continuous) vs Environmental (plasticity).',
         flashcard={
@@ -512,6 +532,10 @@ def lec4_nodes():
         examples=[
             'Five evolutionary forces: mutation, genetic drift, gene flow, natural selection, non-random mating.',
             'In a Hardy-Weinberg "null" population, all five forces are absent and allele frequencies do not change.',
+        ],
+        warnings=[
+            'EXAM TRAP: Non-random mating (inbreeding, assortative mating) changes GENOTYPE frequencies but does NOT directly change ALLELE frequencies — so it violates HWE but does not cause allele frequency evolution by itself.',
+            'Only MUTATION creates NEW genetic variation. Drift, gene flow, selection, and non-random mating only redistribute existing variation.',
         ],
         mnemonic='MUD-GAS: Mutation, Unequal (drift), Drift, Gene flow, Assortative mating, Selection.',
         flashcard={
@@ -639,6 +663,10 @@ def lec4_nodes():
             'Dominant, recessive, and additive allele interactions produce different rates of allele frequency change under selection.',
             'Most complex traits are influenced by many loci — selection on one trait changes allele frequencies at many loci simultaneously.',
         ],
+        warnings=[
+            'EXAM TRAP: Selection against a RECESSIVE deleterious allele becomes progressively LESS EFFICIENT as the allele gets rarer — it hides more and more in heterozygotes. You CANNOT fully eliminate a recessive allele by selection alone.',
+            'Relative fitness is always scaled to the BEST genotype (w = 1). A selection coefficient of s = 0.1 means that genotype leaves 10% fewer offspring than the most fit genotype — it is NOT eliminated, just disadvantaged.',
+        ],
         mnemonic='SCAR: Selection Coefficient = 1 - (fitness / best fitness). Relative fitness drives allele frequency change.',
         flashcard={
             'front': 'How do the rates of allele frequency change differ when selection acts on a dominant versus a recessive allele?',
@@ -648,9 +676,9 @@ def lec4_nodes():
             'question': 'A recessive lethal allele is under strong negative selection. Why does it persist at low frequencies rather than being eliminated entirely?',
             'correct': 'Heterozygotes are not exposed to selection, so rare alleles hide in 2pq',
             'distractors': [
-                'The allele mutates back every generation',
-                'Recessive alleles are never subject to selection',
-                'Selection cannot eliminate deleterious alleles under any conditions',
+                'New copies are constantly replenished by back-mutation from the dominant allele at the same rate selection removes them',
+                'Balancing selection maintains both alleles because heterozygotes have higher fitness than either homozygote',
+                'Genetic drift counteracts selection in large populations, preventing fixation of the favorable dominant allele',
             ],
         },
         visual={
@@ -683,6 +711,10 @@ def lec5_6_nodes():
             'Qualitative: discrete categories (flower color, presence/absence) — often Mendelian, 1 or 2 loci.',
             'Quantitative: continuous variation (height, weight, yield) — many loci each contributing a small effect.',
             'Phenotypic variance: V_P = V_G + V_E + V_GxE (+ covariance terms). Genetic variance (V_G) includes additive, dominance, and epistatic components.',
+        ],
+        warnings=[
+            'EXAM TRAP: V_G includes THREE components — additive (V_A), dominance (V_D), and epistatic (V_I). ONLY V_A (additive genetic variance) responds to selection. The breeders equation uses h² = V_A/V_P, not V_G/V_P.',
+            'V_P = V_G + V_E only when G and E are uncorrelated and non-interacting. In natural populations, there are often gene-environment CORRELATIONS (e.g., tall parents provide better nutrition) that inflate or deflate the apparent genetic component.',
         ],
         mnemonic='VP = VG + VE: Phenotypic variance = Genetic + Environmental. Add interaction term V_GxE if relevant.',
         flashcard={
@@ -770,6 +802,10 @@ def lec5_6_nodes():
             'G × E interaction: different genotypes have different reaction-norm shapes. Detect by common-garden experiments.',
             'Common garden: grow multiple genotypes in the same environment to separate genetic from environmental effects.',
         ],
+        warnings=[
+            'EXAM TRAP: Phenotypic plasticity is NOT the same as evolution. A single individual showing different phenotypes in different environments is plasticity — not a change in allele frequency. Plasticity can evolve (the REACTION NORM shape is heritable), but the individual\'s plastic response is not evolution.',
+            'G × E interaction means the BEST GENOTYPE CHANGES WITH ENVIRONMENT. If reaction norms cross, there is no single "best" genotype across all environments — this is why adaptation is always environment-specific.',
+        ],
         mnemonic='Plastic vs Genetic: Common garden test answers "is the difference genetic or environmental?"',
         flashcard={
             'front': 'What is a reaction norm, and how does a common garden experiment distinguish genetic from environmental contributions to phenotype?',
@@ -810,6 +846,10 @@ def lec7_nodes():
         color='amber', row=6,
         heading='Lecture 7 — Empirical Studies of Natural Selection',
         sections=slides_to_sections(d, (1, 6)),
+        warnings=[
+            'EXAM TRAP: A phenotype-fitness CORRELATION is NOT sufficient proof of natural selection. The correlation could be driven by an environmental confound (e.g., better-fed animals are bigger AND survive longer — but diet, not size, drives survival). You need experimental manipulation or heritability data.',
+            'Observing that a trait CHANGED across generations (R > 0) is NOT sufficient either — you must confirm h² > 0 for that trait and show S ≠ 0.',
+        ],
         mnemonic='MOD: Measure → Observe differential success → Document inheritance.',
         flashcard={
             'front': 'Why are empirical studies of natural selection in wild populations so difficult, and what three kinds of evidence must be gathered to prove selection is occurring?',
@@ -847,6 +887,10 @@ def lec7_nodes():
             'Beach populations match the light sand habitat (cryptic coloration).',
             'Hoekstra et al.: a single amino acid change in the Mc1r gene causes the light coat color.',
             'The Mc1r mutation is different in each beach population — so camouflage evolved TWICE independently from the same starting genetic variation (parallel evolution at the gene level).',
+        ],
+        warnings=[
+            'EXAM TRAP: "Parallel evolution" is NOT the same as "convergent evolution." Parallel evolution involves the SAME gene (Mc1r) in closely related populations. Convergent evolution involves different genes or lineages arriving at similar phenotypes independently.',
+            'Mc1r is only one of several genes contributing to coat color in Peromyscus. The beach mouse studies showed MOST (not all) of the light-coat phenotype maps to Mc1r, but other loci also contribute.',
         ],
         mnemonic='MMMP: Mc1r mutation → Melanin loss → Match sand → Predation protection.',
         flashcard={
@@ -931,6 +975,10 @@ def lec7_nodes():
             'Valleys: low-fitness genotype combinations between peaks.',
             'Populations tend to climb local peaks via natural selection, but may get stuck on suboptimal peaks (can\'t cross valleys).',
             'Drift or gene flow can help populations cross valleys and reach higher peaks.',
+        ],
+        warnings=[
+            'EXAM TRAP: The fitness landscape metaphor is a SIMPLIFICATION. Real genotype space is >10,000-dimensional — there is no simple 2D landscape. Two-dimensional diagrams are teaching tools, not reality.',
+            'Fitness landscapes CHANGE over time when environments change. A local peak in one environment may be a valley in another — environmental change can "shift the landscape" and re-start the climbing process.',
         ],
         mnemonic='Peaks & Valleys: Selection → local peak; Drift/flow → cross valley to higher peak.',
         flashcard={

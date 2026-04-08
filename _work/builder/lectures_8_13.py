@@ -18,6 +18,10 @@ def lec8_nodes():
             'Novel traits: arise de novo (not inherited) — e.g., limbs in tetrapods, wings in birds.',
             'Complex traits: require coordination of multiple genes and developmental modules.',
         ],
+        warnings=[
+            'EXAM TRAP: Not every trait is an adaptation. Some traits are SPANDRELS (byproducts of other adaptations), some are VESTIGIAL (remnants of past function), and some are selectively NEUTRAL. Do not call every feature adaptive without evidence.',
+            'Adaptation is ALWAYS relative to an environment. A trait adaptive in one environment can be neutral or deleterious in another (e.g., sickle cell in malaria-free regions).',
+        ],
         mnemonic='Trait vs Process: the word "adaptation" carries both meanings — always specify which.',
         flashcard={
             'front': 'What is the difference between "adaptation" as a trait and "adaptation" as a process?',
@@ -27,9 +31,9 @@ def lec8_nodes():
             'question': 'Which statement best describes a "novel trait" in evolution?',
             'correct': 'A trait that arises de novo and is not directly inherited from an ancestor',
             'distractors': [
-                'Any new mutation that appears in a population',
-                'A trait that never existed before life began',
-                'A trait unique to a single individual',
+                'Any point mutation that appears in a germ cell, regardless of phenotypic effect',
+                'A trait that results from phenotypic plasticity in response to a new environment',
+                'A trait shared by two distantly related species due to convergent evolution',
             ],
         },
         visual={
@@ -56,6 +60,10 @@ def lec8_nodes():
             'Hox genes: conserved master regulators of body plan across animals. Small changes in Hox expression → large morphological changes.',
             'Limb development: same gene network (Hox, Tbx, Sonic hedgehog) is used by all tetrapods to build limbs.',
             'Galapagos finches: beak size differences are controlled by Bmp4 and calmodulin expression differences, not new genes.',
+        ],
+        warnings=[
+            'EXAM TRAP: Regulatory evolution and protein-coding evolution are NOT mutually exclusive. The beach mouse Mc1r example (Lec 7) shows coding-sequence change. Evo-devo emphasizes regulatory changes for LARGE morphological differences across distantly related species.',
+            'Hox gene sequence conservation ≠ Hox function conservation. Changing WHEN or WHERE a Hox gene is expressed changes body plan even without changing the protein sequence.',
         ],
         mnemonic='Small regulatory changes → Big morphological differences. Same toolkit, different deployment.',
         flashcard={
@@ -98,6 +106,10 @@ def lec8_nodes():
             'Eye stages: simple photoreceptor patch → pit → pinhole → lensed camera eye.',
             'Mollusks alone show ALL intermediate eye stages today — flat eyespots (limpets), pit eyes (abalone), pinhole eyes (Nautilus), lensed eyes (squid, octopus).',
         ],
+        warnings=[
+            'EXAM TRAP: Vertebrate and cephalopod camera eyes are CONVERGENT (NOT homologous as complete organs). They share the opsin toolkit but evolved camera-eye structure INDEPENDENTLY. This is why vertebrate eyes have a blind spot (photoreceptors backward) while octopus eyes do not.',
+            '"Irreducible complexity" applies to the claim that no intermediate form provides any benefit. Eye evolution directly disproves this: every molluscan intermediate stage gives a real fitness advantage.',
+        ],
         mnemonic='From patch to camera: each stage provides its own fitness advantage. No "half eye" problem.',
         flashcard={
             'front': 'How does eye evolution refute the creationist claim of "irreducible complexity" for complex organs?',
@@ -107,9 +119,9 @@ def lec8_nodes():
             'question': 'Why is the evolution of the eye often used to refute "irreducible complexity" arguments?',
             'correct': 'Every intermediate stage of eye evolution (patch, pit, pinhole, lensed) is functional and provides fitness benefit',
             'distractors': [
-                'The eye evolved in a single mutational step',
-                'Only vertebrates have eyes',
-                'Eye evolution required miraculous intervention',
+                'The eye is identical across all animal phyla, showing a single evolutionary origin that requires no intermediate steps',
+                'Crystallin lens proteins were newly evolved specifically for vision, with no precursor function in other tissues',
+                'Vertebrate and cephalopod eyes share identical retinal organization, proving they descended from a single complex ancestor',
             ],
         },
         visual={
@@ -186,6 +198,10 @@ def lec9_nodes():
             'Types of interaction: antagonistic (predator-prey, parasite-host), mutualistic (pollinator-flower), neutral/commensal.',
             'Strong coevolution requires intimate, long-term, specific interaction — generalists coevolve weakly.',
         ],
+        warnings=[
+            'EXAM TRAP: Coevolution requires RECIPROCAL evolution — if only one species is changing, that is adaptation, not coevolution.',
+            'Not every predator-prey pair is tightly coevolving. Generalist predators do not exert enough selective pressure on any single prey species to drive reciprocal change.',
+        ],
         mnemonic='Coevolution = Reciprocal change. Both species adapt to each other, not just to environment.',
         flashcard={
             'front': 'What is the difference between coevolution and simple adaptation to another species?',
@@ -226,6 +242,10 @@ def lec9_nodes():
             'Both toxicity and resistance have COSTS: TTX-resistant snakes move slower; highly toxic newts are energetically expensive.',
             'Geographic mosaic theory (Thompson): coevolution is locally variable — some populations are coevolutionary "hotspots," others "coldspots."',
         ],
+        warnings=[
+            'EXAM TRAP: Arms races are NOT infinitely escalating. COSTS on both sides limit escalation. TTX-resistant snakes move SLOWER — the resistance trait carries a locomotion penalty that sets an upper limit on resistance evolution.',
+            'The geographic mosaic does NOT mean coevolution fails in coldspots. It means the intensity varies by local conditions. Gene flow between hotspots and coldspots can spread coevolutionary outcomes across the range.',
+        ],
         mnemonic='Arms race: each side escalates + pays costs. Locally variable = mosaic.',
         flashcard={
             'front': 'Describe the garter snake / rough-skinned newt arms race and why it illustrates the costs of coevolutionary escalation.',
@@ -264,6 +284,10 @@ def lec9_nodes():
             'Mutualisms: both species benefit from the interaction.',
             'Specialized fly pollinators and matching flowers — e.g., long-tongued flies and long-spurred orchids coevolved.',
             'Darwin\'s prediction: seeing a Madagascar orchid with a 30 cm nectary, Darwin predicted a moth with a matching 30 cm proboscis existed — confirmed 40 years later (Xanthopan morganii praedicta).',
+        ],
+        warnings=[
+            'EXAM TRAP: Darwin predicted the moth in 1862; it was confirmed in 1903 — 40+ years AFTER Darwin\'s death. Do not say Darwin confirmed his prediction.',
+            'Mutualisms can evolve into antagonistic relationships if one species begins to "cheat" (take reward without providing benefit). Stability of mutualisms depends on policing mechanisms.',
         ],
         mnemonic='Mutual benefit = coevolution with reward not punishment. Each side gets paid.',
         flashcard={
@@ -348,6 +372,10 @@ def lec9_nodes():
             'Plant plastids are derived from free-living cyanobacteria.',
             'Many insects depend on bacterial symbionts for survival — without them, they cannot develop.',
         ],
+        warnings=[
+            'EXAM TRAP: Margulis\'s theory was initially REJECTED by the scientific community in the late 1960s. It was accepted only after accumulating evidence from molecular biology (mitochondrial/chloroplast DNA, 70S ribosomes). Do not assume scientists immediately accepted it.',
+            'Mitochondria have LOST most of their original bacterial genes to the nuclear genome over evolutionary time (gene transfer). Modern mitochondrial genomes are much smaller than free-living alpha-proteobacterial genomes — this is evidence of long co-existence and integration.',
+        ],
         mnemonic='Endosymbiosis: not just a historical event — happening continuously today. Life is collaborative.',
         flashcard={
             'front': 'What is the endosymbiotic theory, and what evidence supports it for mitochondria and chloroplasts?',
@@ -392,6 +420,10 @@ def lec10_11_nodes():
             'Other costs: finding a mate, courtship energy, risk of STDs, loss of coadapted gene combinations.',
             'Benefits: (1) combining beneficial mutations, (2) clearing deleterious mutations (Muller\'s ratchet), (3) reducing sibling competition through variation, (4) Red Queen effect — staying ahead of coevolving parasites.',
         ],
+        warnings=[
+            'EXAM TRAP: The twofold cost of sex is about GENE TRANSMISSION (50% dilution per sexual female), NOT about energetic cost of producing offspring. An asexual female transmits 2× more genome copies per offspring.',
+            'The Red Queen does NOT mean sexual species always have higher fitness than asexual ones — in stable environments with low parasite pressure, asexual lineages can outcompete sexual ones (Potamopyrgus data).',
+        ],
         mnemonic='Red Queen: "It takes all the running you can do, to keep in the same place." Sex = running against parasites.',
         flashcard={
             'front': 'What is the Red Queen hypothesis for the maintenance of sexual reproduction, and what evidence supports it?',
@@ -430,6 +462,10 @@ def lec10_11_nodes():
             'Isogamy → anisogamy evolved because disruptive selection on gamete size: a few large, well-provisioned gametes + many small, cheap gametes outperform intermediates.',
             'Anisogamy leads to differential reproductive investment: females invest more per offspring → fewer offspring per female.',
             'Result: males benefit from MORE MATINGS, females benefit from BETTER MATES. Leads to sexual selection.',
+        ],
+        warnings=[
+            'EXAM TRAP: Sex roles (which sex competes vs. which sex chooses) are NOT fixed in all species. In pipefish and seahorses, MALES carry offspring and invest more → females compete, males choose. The rule is: the sex investing MORE per offspring is the choosy sex.',
+            'Anisogamy defines male/female biologically (sperm = male, egg = female), but investment levels determine who is choosy — the two can come apart.',
         ],
         mnemonic='Small sperm, Big eggs → different strategies → Sexual selection.',
         flashcard={
@@ -472,6 +508,10 @@ def lec10_11_nodes():
             'Sensory bias: female preferences may arise from pre-existing sensory biases (e.g., swordtail fish — females prefer swords even in species without them).',
             'Ornaments can signal GENETIC QUALITY (handicap principle) or arbitrary runaway selection.',
         ],
+        warnings=[
+            'EXAM TRAP: The handicap principle (Zahavi 1975) and Fisherian runaway selection are TWO DIFFERENT explanations for the same observation (extravagant ornaments). Handicap = honest signal of real genetic quality. Runaway = arbitrary preference amplified by genetic correlation. Both can co-operate.',
+            'Sensory bias is NOT the same as runaway selection. Sensory bias = preference exists BEFORE the signal evolves. Runaway = preference and signal co-evolve and amplify each other.',
+        ],
         mnemonic='Costly signal = honest. Ornaments can\'t be faked if they are genuinely handicapping.',
         flashcard={
             'front': 'What is the "handicap principle" for sexual ornaments, and why must the ornaments be costly to function as honest signals?',
@@ -481,9 +521,9 @@ def lec10_11_nodes():
             'question': 'According to the handicap principle, why do peacock tails evolve to be so large and metabolically expensive?',
             'correct': 'The cost ensures the signal is honest — only high-quality males can afford it, so the tail truthfully signals genetic quality',
             'distractors': [
-                'Peahens cannot distinguish different tail sizes, so size is random',
-                'Large tails are actually free to produce',
-                'Large tails improve peacock flight ability',
+                'Runaway (Fisherian) sexual selection causes tail size to increase without limit until males die, so large tails are a neutral by-product',
+                'Peahens prefer large tails as a learned cultural tradition rather than an evolved response to tail quality',
+                'Large tails improve thermoregulation in tropical climates where peacocks live, so the selection pressure is ecological rather than sexual',
             ],
         },
         visual={
@@ -561,6 +601,10 @@ def lec12_nodes():
             'r-strategy: many small offspring, little parental care, fast maturation (insects, weeds).',
             'K-strategy: few large offspring, heavy parental care, slow maturation (elephants, humans, oak trees).',
             'Trade-offs: energy spent on reproduction CANNOT be spent on growth or survival. Time spent finding a mate cannot be spent foraging.',
+        ],
+        warnings=[
+            'EXAM TRAP: r/K is a CONTINUUM, not a binary classification. Most species fall somewhere in between. Do not treat r vs K as mutually exclusive categories.',
+            'r and K are POPULATION GROWTH PARAMETERS. r-selected means the species thrives when below carrying capacity (fast growth rate). K-selected thrives at carrying capacity (competitive at high density). The strategy is about environment, not just offspring number.',
         ],
         mnemonic='r vs K: rabbits (r) vs K-apes. Live fast, die young OR slow and steady.',
         flashcard={
@@ -645,6 +689,10 @@ def lec12_nodes():
             'Fisher\'s principle: at equilibrium, parents should invest equally in males and females. If one sex is rare, selection favors producing more of it.',
             'Trivers-Willard: parents in good condition should invest in sons (in species where male RS depends on condition); poor-condition parents should invest in daughters (safer reproductive return).',
         ],
+        warnings=[
+            'EXAM TRAP: Fisher\'s principle predicts equal INVESTMENT, not necessarily equal NUMBERS. If sons cost twice as much to produce, the expected ratio at birth is 2 daughters : 1 son (equal investment, unequal counts).',
+            'Trivers-Willard applies only when male reproductive success is MORE condition-dependent than female RS. In species where female RS depends equally on condition, the effect is weakened or absent.',
+        ],
         mnemonic='Fisher says 50/50. Trivers-Willard says adjust by condition. Seahorses reverse it all.',
         flashcard={
             'front': 'State Fisher\'s principle of sex allocation and explain why the equilibrium sex ratio is 1:1.',
@@ -691,6 +739,10 @@ def lec13_nodes():
             'Rock-paper-scissors dynamics: side-blotched lizards with orange/yellow/blue throat morphs maintained by negative frequency-dependent selection.',
             'Game theory assumes frequency-dependent payoff — your fitness depends on what others are doing.',
         ],
+        warnings=[
+            'EXAM TRAP: An ESS is NOT necessarily the best strategy in absolute fitness terms — it is the strategy that is stable against invasion. A world of all-doves might have higher total fitness than an ESS mixed population, but it is not stable.',
+            'ESS can be a PURE strategy (always hawk or always dove) or a MIXED strategy (hawk 60% of the time, dove 40%). Both are valid ESSs. Do not assume ESS always means a mix.',
+        ],
         mnemonic='ESS = Evolutionarily Stable Strategy. Stable = can\'t be invaded by a rare mutant.',
         flashcard={
             'front': 'What is an Evolutionarily Stable Strategy (ESS) and why can a population of hawks-only or doves-only NOT be an ESS in the Hawk-Dove game?',
@@ -730,6 +782,10 @@ def lec13_nodes():
             'Williams\' critique (1966): naive group selection usually fails because individual-level selection is stronger — selfish individuals in a group invade and destroy group traits.',
             'Group hunting in African wild dogs works not because it helps the species but because each individual hunter gets more food than hunting alone.',
             'Cliff swallows: colonies provide anti-predator vigilance, but each individual benefits from being in the group.',
+        ],
+        warnings=[
+            'EXAM TRAP: "This behavior evolved for the good of the species" is almost always WRONG on an evolution exam. You must explain how individual-level fitness benefits maintained the trait.',
+            'Lemmings do NOT intentionally leap off cliffs to control population — this is a myth. The behavior is individual panic-flight; mass deaths are accidental. It is a classic example of falsely invoking group selection.',
         ],
         mnemonic='Selection acts on the INDIVIDUAL. "Good for the species" is a common but wrong framing.',
         flashcard={
@@ -772,6 +828,10 @@ def lec13_nodes():
             'Inclusive fitness: an individual\'s total fitness = direct fitness (own reproduction) + indirect fitness (from helping relatives reproduce).',
             'Haldane: "I would lay down my life for two brothers or eight cousins" — illustrates rB > C logic.',
             'Haplodiploidy in Hymenoptera: sisters are more related to each other (r = 0.75) than to their own offspring (r = 0.5), which may have facilitated eusociality in ants, bees, wasps.',
+        ],
+        warnings=[
+            'EXAM TRAP: Hamilton\'s rule is rB > C, NOT B > rC or rB > rC. Only benefit is discounted by relatedness; cost is NOT discounted. Getting the formula wrong is a common exam error.',
+            'Haplodiploidy (r = 0.75 for sisters) facilitates but does NOT automatically cause eusociality. Many haplodiploid species are NOT eusocial. Haplodiploidy is one factor, not the whole explanation.',
         ],
         mnemonic='Hamilton\'s rule: rB > C. Relatedness × Benefit > Cost.',
         flashcard={

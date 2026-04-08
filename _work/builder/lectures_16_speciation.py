@@ -93,15 +93,25 @@ def ch13_nodes():
         quotes=[
             '"Species are groups of actually or potentially interbreeding natural populations '
             'which are reproductively isolated from other such groups." — Ernst Mayr, 1942',
+            '"It all comes, I believe, from trying to define the indefinable." — Charles Darwin, 1856',
+            'Robbins (lecture): "There are approximately 25 definitions of what species are. '
+            'They all agree on one thing: species = groups of interbreeding individuals that '
+            'share common ancestry — they have the same evolutionary trajectory."',
         ],
         examples=[
             'BSC failure — Asexual: Bdelloid rotifers reproduce entirely asexually. '
             'Under BSC, every individual would be its own "species." Concept is inapplicable.',
             'BSC failure — Allopatry: Elk (North America) and red deer (Europe) can interbreed '
             'in captivity. BSC cannot classify them without geographic context.',
-            'PSC success — Cryptic bird species: Willow flycatcher and Alder flycatcher look '
-            'identical but differ in song and are reproductively isolated — PSC correctly '
-            'separates them; BSC also works here but requires behavioral data.',
+            'Morphological SC — Trilobites: ~22,000 described species identified entirely from '
+            'fossils. The only option when there is no DNA. Robbins: "We have no idea how much '
+            'environmental variation a trilobite might show — might be juvenile vs adult."',
+            'PSC problem — Splitter tendency: Robbins: "Garbage in, garbage out — totally '
+            'dependent on what characters you use to build the phylogeny. Two molecular trees '
+            'can disagree slightly, meaning PSC would give you different species lists."',
+            'Hybrids complicate BSC — Mule: horse × donkey → mule. Viable but sterile. '
+            'Robbins: "Where do you draw the line? They can mate, but the offspring can\'t reproduce. '
+            'Is that a species barrier or not? BSC says yes — the offspring\'s line ends there."',
             'General Lineage success — Anopheles mosquitoes: The Anopheles gambiae complex '
             'contains 7 cryptic species invisible to morphology but distinguished by genomics. '
             'Matters enormously for malaria vector control.',
@@ -113,6 +123,10 @@ def ch13_nodes():
             'reproductively isolated but look identical.',
             '"Potentially interbreeding" in the BSC definition means would interbreed if '
             'they came into contact — but this is untestable for many allopatric pairs.',
+            'Robbins exam angle: PSC is "garbage in, garbage out" — the species list you get '
+            'totally depends on which characters or which gene you used to build the tree.',
+            '~25 species definitions exist — Robbins says they all agree on ONE thing: '
+            'species = evolutionarily independent lineages.',
         ],
         mnemonic=(
             'BSC = "Mayr says you gotta bang to be the same gang" (gene flow = same species). '
@@ -135,14 +149,23 @@ def ch13_nodes():
         },
         quiz={
             'question': (
-                'A population of bacteria divides asexually. Which species concept CANNOT '
-                'be applied to determine if two bacterial populations are different species?'
+                'A research team applies the PSC to a gecko group using skin-pattern characters '
+                'and identifies 40 distinct species. A second team uses skull morphology on the '
+                'same geckos and finds only 18 species. Robbins called this the "garbage in, '
+                'garbage out" problem. Which fundamental weakness does this illustrate?'
             ),
-            'correct': 'Biological Species Concept — requires interbreeding, impossible for asexual organisms',
+            'correct': (
+                'PSC species boundaries are entirely dependent on WHICH characters are chosen — '
+                'different character sets produce different tree topologies and different species '
+                'counts, with no objective criterion for selecting the correct character set'
+            ),
             'distractors': [
-                'Phylogenetic Species Concept — based on shared derived characters, works for asexuals',
-                'General Lineage Concept — based on gene pool boundaries, works for asexuals',
-                'Morphological Species Concept — based on physical features, works for all organisms',
+                'PSC cannot recognize species that share a common ancestor, since all life is '
+                'ultimately related through common descent',
+                'PSC requires molecular (DNA) data to be valid — any morphological application '
+                'automatically undercounts species due to phenotypic plasticity',
+                'PSC always identifies FEWER species than the BSC because it requires a minimum '
+                'threshold of genetic divergence before recognizing a new species',
             ],
         },
         visual={
@@ -300,12 +323,29 @@ def ch13_nodes():
             'Behavioral isolation — firefly flash patterns: each species has a species-specific '
             'flash pattern and interval. Females only respond to conspecific patterns → classic '
             'pre-mating behavioral barrier.',
+            'Ecological isolation — Rhagoletis flies (Robbins lecture example): Hawthorn and apple '
+            'flies are sympatric (flying by each other in the same field). They COULD mate '
+            'genetically, but behavioral choice of host fruit prevents it. One group only deposits '
+            'eggs in hawthorn; the other only in apples — same area, zero gene flow.',
+            'Temporal isolation — Robbins: flower phenology (blooming times). One species flowers '
+            'in early spring, another in late spring. The hummingbird pollinator won\'t freeze and '
+            'wait between them. In a greenhouse where you force them to flower simultaneously, you '
+            'can get viable hybrids — the barrier is purely temporal, not genetic.',
+            'Post-mating prezygotic (weird one) — Robbins: "Insects sometimes do a courtship dance '
+            'WHILE mating. If the male does something the female doesn\'t like, she can refuse to '
+            'use the sperm even though it was already transferred." Female controls sperm use.',
+            'Mechanical isolation — Robbins: plant genitalia (flower structure) and animal genital '
+            'lock-and-key morphology. "The mechanics or protein which is still basically biochemistry '
+            '— ultimately gonna be genetically associated."',
             'Gametic incompatibility — sea urchins: Strongylocentrotus purpuratus and S. franciscanus '
             'can be found in the same tide pools. Heterospecific sperm cannot penetrate the egg coat '
             'because the bindin protein (sperm) doesn\'t match the receptor on the egg surface.',
-            'Hybrid sterility — mule: Horse (2n=64) × donkey (2n=62) = mule (2n=63). The odd '
-            'chromosome number prevents proper meiosis. Mules are vigorous but completely sterile — '
-            'no gene flow returns to either parent species.',
+            'Hybrid sterility — mule: Robbins: "Male donkeys mate with female horses to produce '
+            'mules — the ONLY way it works. The other way doesn\'t." Mule (2n=63) is vigorous but '
+            'completely sterile. Each mule is "the end of its line."',
+            'Geographic vicariance — Grand Canyon squirrels (Robbins): Abert\'s squirrel (south rim) '
+            'and Kaibab squirrel (north rim). They\'re so close but don\'t interbreed because the '
+            'bottom of the canyon is desert — no trees. The top has forests. They just never cross.',
             'BDM — Mimulus monkeyflowers: Two specific gene loci (Hms1, Hms2) each function '
             'normally in their own species but produce sterile pollen when combined from different '
             'species. Discovered by Sweigart & Willis.',
@@ -318,6 +358,8 @@ def ch13_nodes():
             'Prezygotic barriers evolve FASTER than postzygotic (Coyne & Orr Drosophila data).',
             'Gametic incompatibility: sperm physically arrives at the egg — it just cannot '
             'fertilize it. This is different from mechanical isolation (genitalia incompatibility).',
+            'Mule direction: male DONKEY × female HORSE → mule. The reverse cross does not work '
+            '(Robbins emphasized this). Mules are sterile — their line ends there.',
         ],
         mnemonic=(
             'Timeline: FIND → MATE → GAMETES → ZYGOTE → EMBRYO → OFFSPRING\n'
@@ -347,14 +389,29 @@ def ch13_nodes():
         },
         quiz={
             'question': (
-                'Sea urchin sperm from species A reaches the egg of species B but cannot '
-                'penetrate the egg coat. This is an example of:'
+                'Rhagoletis pomonella flies historically fed on hawthorn berries. ~140 years '
+                'ago, some switched to apples. Today, apple-race flies emerge 2–3 weeks '
+                'EARLIER than hawthorn-race flies, timed to match apple ripening. Females '
+                'lay eggs on the fruit where they hatched; males perch on the same fruit '
+                'to find mates. Which category of isolation is PRIMARY here, and why is '
+                'this significant for sympatric speciation theory?'
             ),
-            'correct': 'Gametic incompatibility — a post-mating prezygotic barrier',
+            'correct': (
+                'Habitat isolation + temporal isolation acting together as pre-mating '
+                'prezygotic barriers — mate choice on host fruit AND emergence timing '
+                'together reduce cross-race encounters to near zero, all arising within '
+                '~140 years with NO geographic separation, making it a strong sympatric '
+                'speciation candidate'
+            ),
             'distractors': [
-                'Mechanical isolation — reproductive structures are physically incompatible',
-                'Hybrid inviability — the hybrid embryo dies after fertilization',
-                'Behavioral isolation — species do not recognize each other as mates',
+                'Post-mating prezygotic isolation — apple-race sperm cannot penetrate '
+                'hawthorn-race eggs due to gametic incompatibilities that evolved rapidly '
+                'over 140 years of host divergence',
+                'Postzygotic hybrid inviability — F1 hawthorn × apple larvae cannot '
+                'survive on either host plant because each genome is mis-tuned to its '
+                'host\'s chemistry',
+                'BDM incompatibility — hawthorn-race and apple-race alleles produce '
+                'sterile hybrids when combined, constituting complete postzygotic isolation',
             ],
         },
         visual={
@@ -474,14 +531,20 @@ def ch13_nodes():
                     'nonrandomly — preferring genetically or phenotypically similar mates.\n'
                     'Two groups diverge in the same geographic range.\n\n'
                     'Mechanism: Disruptive selection + assortative mating.\n\n'
-                    'Classic example: Rhagoletis flies\n'
+                    'Classic example: Rhagoletis flies (Robbins lecture)\n'
                     '• Originally bred exclusively on hawthorn trees in North America.\n'
-                    '• ~150 years ago, some individuals switched to apple trees (an introduced species).\n'
+                    '• ~140 years ago, some individuals switched to apple trees (apples introduced).\n'
+                    '• Key mechanism: some hawthorn flies were ALREADY emerging slightly earlier.\n'
+                    '  That earlier emergence matched when apples became ripe. Low competition for\n'
+                    '  the new resource → higher fitness for early-emerging apple users → genetic\n'
+                    '  component of emergence timing spread rapidly through the apple-using population.\n'
                     '• Now: hawthorn-race and apple-race flies prefer their own host species.\n'
                     '• Same field, different host = assortative mating = reproductive isolation beginning.\n'
-                    '• No geographic barrier — FULLY SYMPATRIC.\n\n'
+                    '• No geographic barrier — FULLY SYMPATRIC. Robbins: "They watched it happen."\n\n'
                     'Why controversial: Requires strong disruptive selection to overcome the\n'
-                    'homogenizing effect of gene flow within the same range. Hardest model to prove.'
+                    'homogenizing effect of gene flow within the same range. Hardest model to prove.\n'
+                    'Robbins: "Micro-allopatry argument — maybe they\'re only truly in the same\n'
+                    'place at a landscape scale, but at a local scale they\'re on different trees."'
                 ),
             },
             {
@@ -491,8 +554,13 @@ def ch13_nodes():
                     'environments or ecological niches.\n\n'
                     'Two populations specialize on different prey, soil types, host plants, etc.\n'
                     'This: (1) reduces contact between them, (2) makes hybrids unfit for either niche,\n'
-                    '(3) may trigger REINFORCEMENT — selection strengthens prezygotic barriers further\n'
-                    'to avoid producing unfit hybrids.\n\n'
+                    '(3) may trigger REINFORCEMENT.\n\n'
+                    'REINFORCEMENT (Robbins definition): When two previously allopatric populations\n'
+                    'come back into secondary contact and their hybrids have low fitness, natural\n'
+                    'selection REINFORCES (confirms and strengthens) the reproductive isolation.\n'
+                    'It\'s "reinforcing their divergence" — now they can\'t hybridize even if they try.\n'
+                    'Robbins: "It\'s also confirming it — there\'s no way they\'re gonna become one\n'
+                    'species again because they can\'t. It\'s called reinforcement."\n\n'
                     'Key: Reproductive isolation emerges FROM ecological divergence, not random drift.\n\n'
                     'ISOLATION BY DISTANCE: No explicit barrier, but individuals disperse only short\n'
                     'distances. Gene flow decreases as a function of distance across the range.\n'
@@ -574,15 +642,30 @@ def ch13_nodes():
         },
         quiz={
             'question': (
-                'Two sister salamander species live on opposite sides of a mountain range. '
-                'The range erodes over millions of years and they come into contact but do '
-                'not interbreed. What type of speciation occurred?'
+                'The Isthmus of Panama closed ~3 mya, splitting Atlantic and Pacific '
+                'populations of snapping shrimp. Molecular data show the sister pairs '
+                'diverged right at the closure event. Knowlton (1993) then placed Atlantic '
+                'and Pacific pairs together in the lab — they refused to interbreed. '
+                'Why is the LAB MATING EXPERIMENT considered a stronger test of allopatric '
+                'speciation than molecular divergence data alone?'
             ),
-            'correct': 'Allopatric — geographic barrier separated them; reproductive isolation evolved during separation',
+            'correct': (
+                'Genetic divergence alone can reflect neutral drift or local adaptation '
+                'without reproductive isolation — the BSC definition requires that the '
+                'populations CANNOT interbreed. Lab mating tests directly verify that '
+                'the geographic barrier produced COMPLETE reproductive isolation, not '
+                'just genetic difference'
+            ),
             'distractors': [
-                'Sympatric — they now occupy the same range and still do not interbreed',
-                'Parapatric — they retained some contact zone during divergence',
-                'Ecological — differences in habitat use drove the divergence',
+                'Molecular clocks are unreliable for marine invertebrates, so mating '
+                'experiments are needed to establish the true divergence time independently '
+                'of the uncertain geological closure date',
+                'Shrimp have very low mutation rates, so any genetic divergence detected '
+                'after only 3 million years must reflect balancing selection rather than '
+                'allopatric divergence — behavioral tests rule out this alternative',
+                'The Isthmus closure changed ocean temperature and salinity on both sides, '
+                'so behavioral experiments are needed to rule out ecological speciation '
+                'as the cause rather than simple geographic isolation',
             ],
         },
         visual={
@@ -784,15 +867,29 @@ def ch13_nodes():
         },
         quiz={
             'question': (
-                'A hybrid between two Mimulus species has sterile pollen ONLY when it inherits '
-                'the Hms1 allele from species A AND the Hms2 allele from species B. When either '
-                'allele is present alone, pollen is fertile. This is an example of:'
+                'Apanteles leucostigmus was described as ONE parasitoid wasp species. '
+                'DNA barcoding of specimens attacking Astraptes caterpillars in Costa Rica '
+                'revealed it was actually 32 distinct cryptic species. A conservation '
+                'agency had been managing it as a single species. What is the most '
+                'serious conservation implication of this result?'
             ),
-            'correct': 'BDM (Bateson-Dobzhansky-Muller) incompatibility — two alleles that each work fine alone are incompatible together',
+            'correct': (
+                'If 32 cryptic species each have distinct host associations, geographic '
+                'ranges, and population sizes, the single-species management plan may '
+                'have protected some lineages while allowing others to go extinct '
+                'invisibly — biodiversity loss occurs beneath a single taxonomic name, '
+                'making true extinction risk impossible to assess'
+            ),
             'distractors': [
-                'Hybrid inviability — the hybrid dies before reaching reproductive age',
-                'Gametic incompatibility — sperm cannot fertilize the egg',
-                'Reinforcement — selection strengthens prezygotic barriers in sympatry',
+                'Since all 32 cryptic species attack the same caterpillar host, the '
+                'ecological function of "A. leucostigmus" is unchanged and no '
+                'conservation reassessment is required',
+                'DNA barcoding only detects mitochondrial lineages, which do not '
+                'correspond to biological species — the 32 "species" almost certainly '
+                'represent within-species population structure, not true speciation',
+                'Because the wasp is a parasitoid (a natural pest-control agent), '
+                'discovering 32 cryptic species is a benefit: each one can be deployed '
+                'independently to control specific Astraptes host races',
             ],
         },
         visual={
@@ -893,14 +990,20 @@ def ch13_nodes():
                 'label': 'Hawaiian Laupala Crickets — Sexual Selection Speciation (Shaw)',
                 'body': (
                     '37 species of swordtail crickets found ONLY in Hawaii. Kerry Shaw (Cornell).\n\n'
-                    'Phylogeny shows island-hopping westward to eastward tracks colonization history.\n'
-                    'Rate: 6 new species on the Big Island in 430,000 years = 10× average arthropod rate.\n\n'
-                    'Remarkable feature: Crickets show NO ecological divergence — they all eat the\n'
-                    'same food, occupy the same habitat.\n\n'
+                    'Colonization history: Phylogeny shows island-hopping westward to eastward.\n'
+                    'TWO INDEPENDENT COLONIZATIONS to the Big Island -- visible as two separate\n'
+                    'lineages (two arrows) in the phylogeny. Robbins: "similar to frogs --\n'
+                    'probably the same general mechanism."\n\n'
+                    'Rate: ~6 new species on the Big Island in 430,000 years = 10× average arthropod rate.\n\n'
+                    'Remarkable feature: NO ecological divergence — all species eat the same food,\n'
+                    'live in the same habitat.\n\n'
                     'What DID diverge: MALE COURTSHIP SONGS (pulse rate) + FEMALE PREFERENCES.\n'
+                    'HOW males sing: males RUB THEIR LEGS TOGETHER to produce the pulse signal.\n'
+                    'Females HEAR and RESPOND to the call — same mechanism as frogs (Robbins).\n\n'
                     'QTL mapping: SAME locus controls BOTH male song production AND female preference\n'
-                    '(Shaw & Lesnick 2009). This co-localization may explain rapid speciation.\n\n'
-                    'Implication: Sexual selection (not ecology) can be a primary driver of speciation.'
+                    '(Shaw & Lesnick 2009). Co-localization = single mutation changes signal AND\n'
+                    'receiver simultaneously → explains explosive speciation rate.\n\n'
+                    'Implication: Sexual selection (not ecology) can be the PRIMARY driver of speciation.'
                 ),
             },
             {
@@ -1034,15 +1137,34 @@ def ch13_nodes():
         },
         quiz={
             'question': (
-                'Polar bears diverged from brown bears approximately 479,000–343,000 years ago. '
-                'Genomic evidence shows gene flow has continued since divergence. '
-                'Based on this, which of the following best characterizes polar bear speciation?'
+                'Hawaiian Laupala crickets: 37 species, Big Island only, diverging at '
+                '~10× the average arthropod speciation rate. Males rub their legs together '
+                'to produce a pulse-rate song; females hear and respond to it. QTL mapping '
+                '(Shaw & Lesnick 2009) showed the SAME genetic locus controls BOTH male '
+                'song production AND female song preference. Two independent colonizations '
+                'of the Big Island are visible in the phylogeny. What does co-localization '
+                'of the signal and preference loci most directly explain about the rapid '
+                'speciation rate?'
             ),
-            'correct': 'Ecological speciation with secondary interspecies gene flow — reproductive isolation is incomplete but maintained by selection against alleles in the other species\' niche',
+            'correct': (
+                'A single mutation at the shared locus simultaneously shifts the male song '
+                'AND the female preference — signal and receiver co-evolve in one step, '
+                'so reproductive isolation between newly diverged populations is immediate '
+                'rather than requiring slow sequential accumulation of separate sender and '
+                'receiver mutations across different loci'
+            ),
             'distractors': [
-                'Sympatric speciation — polar bears and brown bears live in the same geographic range',
-                'Allopolyploidy — new species formed by genome doubling after hybridization',
-                'Reinforcement speciation — prezygotic barriers strengthened by selection against sterile hybrids',
+                'Co-localization means song and preference alleles are always inherited '
+                'together, preventing females from ever preferring the wrong male — this '
+                'removes the cost of sexual selection entirely and allows populations to '
+                'drift apart faster under neutral evolution',
+                'The shared locus links courtship song to ecological habitat selection, '
+                'so a single mutation simultaneously changes mating preference AND '
+                'microhabitat use, amplifying the rate of both ecological and sexual '
+                'speciation simultaneously',
+                'Because the locus is on the X chromosome, only females experience '
+                'selection on preference while males evolve songs neutrally — this '
+                'asymmetric selection pressure accelerates divergence between islands',
             ],
         },
         visual={
