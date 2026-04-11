@@ -110,6 +110,20 @@ def validate(data):
 
 def main():
     data = assemble()
+    # Inject CORE CONCEPT sections for nodes that need them
+    import json as _json, os as _os
+    _cc_path = _os.path.join(_os.path.dirname(__file__), '_core_concepts.json')
+    if _os.path.exists(_cc_path):
+        with open(_cc_path, 'r', encoding='utf-8') as _f:
+            _cc = _json.load(_f)
+        for _n in data['nodes']:
+            _nid = _n.get('id')
+            if _nid in _cc:
+                _sections = _n.get('popup', {}).get('sections', [])
+                _has = any('CORE CONCEPT' in (_s.get('label','').upper()) for _s in _sections)
+                if not _has:
+                    _sections.insert(0, {'label': 'CORE CONCEPT', 'body': _cc[_nid]})
+                    _n['popup']['sections'] = _sections
     n_unique = validate(data)
 
     blob_json = json.dumps(data, ensure_ascii=False, separators=(',', ':'))

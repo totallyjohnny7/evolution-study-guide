@@ -1,0 +1,221 @@
+/* EvoDiagram styles — matches site tokens exactly. */
+
+.evo-diagram {
+  background: #0e0e14;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 16px 0 8px;
+  min-width: 320px;
+}
+.evo-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.evo-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #d4a826;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.evo-export-btn {
+  background: #1a1a25;
+  border: 1px solid rgba(255,255,255,.08);
+  color: #c8c4b8;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .15s;
+  min-height: 28px;
+}
+.evo-export-btn:hover {
+  background: #d4a826;
+  color: #0a0a0e;
+  border-color: #d4a826;
+}
+.evo-export-btn:focus {
+  outline: 2px solid #d4a826;
+  outline-offset: 2px;
+}
+.evo-mnemonic-banner {
+  background: rgba(212,168,38,.08);
+  border-left: 3px solid #d4a826;
+  border-radius: 0 6px 6px 0;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  color: #e8e4d8;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.evo-mnemonic-icon { color: #d4a826; margin-right: 4px; }
+
+.evo-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 520px;
+  background: #0a0a0e;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.04);
+}
+.evo-edges path.evo-edge {
+  fill: none;
+  stroke: #6e6a80;
+  stroke-width: 1.8;
+  transition: stroke .15s;
+}
+.evo-edges text.evo-edge-label {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 11px;
+  fill: #8884a0;
+}
+.evo-nodes g.evo-node {
+  cursor: pointer;
+  transition: transform .15s;
+}
+.evo-nodes g.evo-node:hover rect {
+  filter: drop-shadow(0 0 8px #d4a826);
+}
+.evo-nodes g.evo-node:focus {
+  outline: none;
+}
+.evo-nodes g.evo-node:focus rect {
+  stroke-width: 3;
+  filter: drop-shadow(0 0 10px #d4a826);
+}
+.evo-nodes text.evo-node-label {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  fill: #e8e4d8;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Node value badge (real numbers rendered inside node) */
+.evo-nodes text.evo-node-value {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Edge labels rendered as text on top of labelBg rects */
+.evo-edges text.evo-edge-label {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 10.5px;
+  fill: #a8a4bc;
+  font-style: italic;
+  pointer-events: none;
+}
+
+/* Detail panel — scrollable for dense content */
+.evo-panel {
+  margin-top: 16px;
+  background: #13131d;
+  border-left: 3px solid #d4a826;
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.evo-panel::-webkit-scrollbar { width: 6px; }
+.evo-panel::-webkit-scrollbar-track { background: #0a0a0e; }
+.evo-panel::-webkit-scrollbar-thumb { background: #44416a; border-radius: 3px; }
+.evo-panel.evo-panel-shown {
+  animation: evoPanelIn .28s ease both;
+}
+@keyframes evoPanelIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.evo-panel-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: #d4a826;
+  margin-bottom: 8px;
+}
+.evo-panel-detail {
+  font-size: 13.5px;
+  color: #c8c4b8;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.evo-panel-mnemonic {
+  background: rgba(212,168,38,.08);
+  border-left: 3px solid #d4a826;
+  border-radius: 0 6px 6px 0;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  color: #e8e4d8;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+.evo-panel-mnemonic-icon { color: #d4a826; font-weight: 700; margin-right: 4px; }
+.evo-panel-trap {
+  background: rgba(224,82,82,.07);
+  border-left: 3px solid #e05252;
+  border-radius: 0 6px 6px 0;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  color: #c8c4b8;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+.evo-panel-trap-icon { color: #e05252; font-weight: 700; margin-right: 4px; }
+
+/* Key terms footer: auto-generated term chip strip */
+.evo-terms-footer {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.evo-terms-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #44416a;
+  margin-bottom: 8px;
+}
+.evo-terms-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.evo-term-chip {
+  background: #1a1a25;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 4px;
+  padding: 3px 9px;
+  font-size: 11px;
+  color: #c8c4b8;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.4;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .evo-panel.evo-panel-shown { animation: none; opacity: 1; transform: none; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .evo-diagram { padding: 14px 14px; }
+  .evo-title { font-size: 12px; }
+  .evo-svg { max-height: 420px; }
+  .evo-panel { max-height: 220px; }
+}

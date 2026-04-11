@@ -1,0 +1,606 @@
+{
+  "lec3-sex-meiosis": [
+    {
+      "front": "What are the THREE mechanisms that generate genetic variation during sexual reproduction?",
+      "back": "**TECHNICAL:** (1) Crossing over (recombination) at chiasmata during Prophase I of meiosis, (2) Independent assortment of homologous chromosomes at Metaphase I, (3) Random fertilization (which sperm meets which egg). Together these ensure virtually every gamete is genetically unique.\n\n**ELI5:** Imagine making a sandwich: (1) you swap fillings between two sandwiches (crossing over), (2) you randomly pick bread from different loaves (independent assortment), (3) someone randomly picks which sandwich to eat (random fertilization). Three layers of randomness."
+    },
+    {
+      "front": "What is crossing over and WHEN does it occur in meiosis?",
+      "back": "**TECHNICAL:** Crossing over is the reciprocal exchange of DNA segments between non-sister chromatids of homologous chromosomes. It occurs during Prophase I of meiosis at structures called chiasmata (singular: chiasma). This produces recombinant chromosomes that carry allele combinations not present in either parent.\n\n**ELI5:** Two matching chromosomes line up and literally swap chunks of their DNA, like two friends trading sleeves on their jackets. This happens in Prophase I, the very first major stage of meiosis."
+    },
+    {
+      "front": "What is a chiasma (plural: chiasmata)?",
+      "back": "**TECHNICAL:** A chiasma is the physical point of contact where crossing over occurs between non-sister chromatids of homologous chromosomes during Prophase I. It is the cytologically visible manifestation of recombination. Multiple chiasmata can form per chromosome pair.\n\n**ELI5:** It's the spot where two chromosomes are physically stuck together while swapping DNA -- like the point where two people are mid-handshake, each passing something to the other."
+    },
+    {
+      "front": "What is independent assortment? When does it happen and how much variation does it produce in humans?",
+      "back": "**TECHNICAL:** Independent assortment is the random orientation of homologous chromosome pairs at the metaphase plate during Metaphase I. Each pair aligns independently of all other pairs. In humans (n=23), this produces 2^23 = 8,388,608 (approximately 8.4 million) possible gamete combinations from one individual, WITHOUT counting crossing over.\n\n**ELI5:** You have 23 pairs of chromosomes, and at each pair you flip a coin to decide which version goes into the egg/sperm. That's 23 coin flips = over 8 million possible outcomes per person."
+    },
+    {
+      "front": "Calculate: How many genetically unique zygotes can two human parents theoretically produce from independent assortment alone?",
+      "back": "**TECHNICAL:** Each parent can produce 2^23 different gamete types via independent assortment. Random fertilization combines one gamete from each parent: 2^23 x 2^23 = 2^46 = approximately 70 trillion (7 x 10^13) unique zygote combinations. This is BEFORE adding crossing over variation.\n\n**ELI5:** Mom can make 8 million different eggs, Dad can make 8 million different sperm. Any egg can meet any sperm: 8 million times 8 million = about 70 trillion unique babies possible. And that's the conservative number."
+    },
+    {
+      "front": "What is random fertilization and why does it matter for genetic variation?",
+      "back": "**TECHNICAL:** Random fertilization is the chance union of any one sperm with any one egg during sexual reproduction. Because each gamete is genetically unique (due to crossing over and independent assortment), and which sperm fertilizes which egg is essentially random, this adds a third multiplicative layer of genetic variation.\n\n**ELI5:** Out of millions of different sperm and thousands of different eggs, which two actually meet is pure luck -- like pulling one random marble from each of two enormous bags, each containing millions of unique marbles."
+    },
+    {
+      "front": "What is an allele?",
+      "back": "**TECHNICAL:** An allele is a specific variant form of a gene at a particular locus (position) on a chromosome. Diploid organisms carry two alleles per locus (one from each parent), which may be identical (homozygous) or different (heterozygous). Different alleles arise by mutation.\n\n**ELI5:** If a gene is a recipe, an allele is a specific version of that recipe. You got one version from Mom and one from Dad -- they might be the same version or different."
+    },
+    {
+      "front": "Name TWO key differences between meiosis and mitosis regarding genetic variation.",
+      "back": "**TECHNICAL:** (1) Meiosis includes crossing over between homologs in Prophase I; mitosis does not involve recombination between homologs. (2) Meiosis has independent assortment at Metaphase I (homologs separate randomly); mitosis does not separate homologs at all. Additionally, meiosis produces 4 haploid cells (genetically unique), while mitosis produces 2 diploid cells (genetically identical to parent).\n\n**ELI5:** Mitosis is a photocopy machine -- it makes identical copies. Meiosis is a shuffle-and-deal card game -- it mixes everything up and deals out four unique hands."
+    },
+    {
+      "front": "COMMON MISTAKE: A student says 'Independent assortment happens during Metaphase II.' Why is this wrong?",
+      "back": "**TECHNICAL:** Independent assortment occurs at Metaphase I, not Metaphase II. It is the random orientation of HOMOLOGOUS pairs at the metaphase plate. By Metaphase II, homologs have already been separated -- only sister chromatids remain. Metaphase II is analogous to mitotic metaphase and does not contribute to combinatorial variation.\n\n**ELI5:** The big shuffle happens in round 1 (Metaphase I) when matching pairs decide which side to go to. By round 2 (Metaphase II), the pairs are already split up -- there's nothing left to independently assort."
+    },
+    {
+      "front": "COMMON MISTAKE: 'Crossing over produces new alleles.' True or false?",
+      "back": "**TECHNICAL:** FALSE. Crossing over produces new COMBINATIONS of existing alleles on chromosomes, but it does not create new alleles. Only mutation creates entirely new alleles. Crossing over recombines alleles that already exist in the population by swapping segments between homologous chromosomes.\n\n**ELI5:** Crossing over is like reshuffling a deck of cards -- you get new hands, but no new cards are created. Only mutation can add a brand new card to the deck."
+    },
+    {
+      "front": "During which phase of meiosis do homologous chromosomes physically pair up (synapsis)?",
+      "back": "**TECHNICAL:** Synapsis occurs during Prophase I of meiosis. Homologous chromosomes pair up to form bivalents (tetrads), connected by the synaptonemal complex. This pairing is a prerequisite for crossing over to occur at chiasmata.\n\n**ELI5:** In Prophase I, matching chromosomes find each other and zipper together side-by-side, like partners lining up for a dance. They need to be paired up before they can trade pieces."
+    },
+    {
+      "front": "Why is sexual reproduction considered more evolutionarily costly than asexual reproduction, yet so widespread?",
+      "back": "**TECHNICAL:** Sexual reproduction has the 'two-fold cost of sex': only females produce offspring, so a sexual population grows half as fast as an asexual one. Yet sex persists because the three mechanisms of variation (crossing over, independent assortment, random fertilization) generate enormous genetic diversity, allowing populations to adapt to changing environments, parasites (Red Queen hypothesis), and purge deleterious mutations more efficiently.\n\n**ELI5:** Making babies with a partner is slower and harder than cloning yourself, but mixing genes creates variety. Variety is insurance -- some offspring will survive whatever new threat comes along."
+    },
+    {
+      "front": "Put the three mechanisms of meiotic variation in order from MOST to LEAST new combinations generated.",
+      "back": "**TECHNICAL:** (1) Random fertilization generates the most combinations (2^23 x 2^23 = 2^46 in humans), (2) Crossing over generates enormous variation (theoretically unlimited recombinant types per chromosome), (3) Independent assortment generates 2^n combinations per individual (2^23 in humans). However, all three are multiplicative, so ranking is somewhat context-dependent. The standard lecture emphasis is: independent assortment (2^23) < random fertilization (2^46), with crossing over adding variation on top.\n\n**ELI5:** All three multiply together like a combo lock. Independent assortment gives millions, random fertilization squares that to trillions, and crossing over adds even more on top by remixing individual chromosomes."
+    }
+  ],
+
+  "lec3-genotype-phenotype": [
+    {
+      "front": "What are the THREE types of genotype-to-phenotype variation discussed in lecture?",
+      "back": "**TECHNICAL:** (1) Genetic polymorphism -- discrete phenotypic classes controlled by one or few loci (e.g., morning glory flower color T/t). (2) Polygenic inheritance -- continuous or near-continuous phenotypic variation controlled by many loci (e.g., East 1916 tobacco corolla length). (3) Phenotypic plasticity -- a single genotype producing different phenotypes in different environments (e.g., Ambystoma salamander morphs).\n\n**ELI5:** Traits come in three flavors: (1) simple switches (one gene, few options), (2) many-dial blending (lots of genes, smooth spectrum), (3) same genes but the environment changes the result (like how the same plant grows differently in sun vs. shade)."
+    },
+    {
+      "front": "What is genetic polymorphism? Give the lecture example.",
+      "back": "**TECHNICAL:** Genetic polymorphism is the occurrence of two or more discrete phenotypic forms in a population, controlled by alleles at one or a few loci. The lecture example is morning glory (Ipomoea) flower color: a single locus with alleles T (dominant, producing pigmented flowers) and t (recessive, producing white flowers). Genotypes TT and Tt produce colored flowers; tt produces white.\n\n**ELI5:** It's like a light switch -- one gene flips between distinct options (colored or white flowers). No in-between."
+    },
+    {
+      "front": "Describe East's 1916 tobacco experiment and what it demonstrated about polygenic inheritance.",
+      "back": "**TECHNICAL:** East crossed two pure-breeding tobacco lines differing in corolla length. The F1 was intermediate and relatively uniform. The F2 showed much greater variation, forming a roughly continuous distribution. East showed that with just 2 loci (each with 2 alleles contributing additively), you get 5 phenotypic classes; with 6 loci, you get 13 classes. As locus number increases, the distribution approaches a continuous bell curve even though the underlying genetics are discrete Mendelian loci.\n\n**ELI5:** East crossed short-flower and long-flower tobacco plants. Their kids were medium. Their grandkids ranged from short to long in a smooth spread. He proved you don't need 'blending inheritance' -- just a handful of genes each adding a little bit creates a smooth-looking spectrum."
+    },
+    {
+      "front": "In East's tobacco experiment, how many phenotypic classes result from 2 additive loci? From 6 loci?",
+      "back": "**TECHNICAL:** For n additive loci each with 2 alleles, the number of phenotypic classes = 2n + 1. So: 2 loci produce 2(2)+1 = 5 phenotypic classes; 6 loci produce 2(6)+1 = 13 phenotypic classes. As locus number increases, the distribution becomes increasingly continuous and bell-shaped.\n\n**ELI5:** With 2 genes, you get 5 possible heights (like a 5-step staircase). With 6 genes, you get 13 steps. The more genes involved, the more steps, until the staircase looks like a smooth ramp."
+    },
+    {
+      "front": "What is phenotypic plasticity? Give the lecture example.",
+      "back": "**TECHNICAL:** Phenotypic plasticity is the ability of a single genotype to produce different phenotypes depending on environmental conditions. The lecture example is Ambystoma (tiger salamander): the same genotype can develop into either a typical morph or a cannibal morph depending on environmental cues like population density and food availability. This is NOT genetic change.\n\n**ELI5:** Same DNA, different result depending on surroundings. Like how the same salamander can grow up normal OR become a big-headed cannibal depending on how crowded its pond is. The genes didn't change -- the environment flipped a switch."
+    },
+    {
+      "front": "Write the equation that partitions total phenotypic variance. Define each term.",
+      "back": "**TECHNICAL:** VP = VG + VE, where VP = total phenotypic variance (all observable variation), VG = genetic variance (variation due to genetic differences among individuals), VE = environmental variance (variation due to environmental differences among individuals). A more complete model includes VGxE (genotype-by-environment interaction), but the basic partition is VP = VG + VE.\n\n**ELI5:** How different people look (VP) = differences in their genes (VG) + differences in their environments (VE). It's nature + nurture adding up."
+    },
+    {
+      "front": "COMMON MISTAKE: 'Continuous phenotypic variation must be caused by environmental effects, not genes.' Why is this wrong?",
+      "back": "**TECHNICAL:** This is false. Continuous variation can be entirely genetic in origin if the trait is polygenic (controlled by many loci). East's tobacco experiment demonstrated that even with purely genetic differences (no environmental variation in the inbred lines), multiple additive loci produce continuous-looking distributions. The key insight is: continuous distribution does NOT imply environmental causation.\n\n**ELI5:** Just because heights form a smooth bell curve doesn't mean it's all about nutrition. Even if everyone ate the same food, many genes each adding a little would still produce a smooth range of heights."
+    },
+    {
+      "front": "What is the difference between a genotype and a phenotype?",
+      "back": "**TECHNICAL:** Genotype is the genetic constitution of an organism -- the specific alleles it carries at one or more loci. Phenotype is the observable characteristics of an organism (morphology, physiology, behavior), which result from the interaction of genotype with the environment. The same genotype can produce different phenotypes in different environments (plasticity), and different genotypes can produce similar phenotypes.\n\n**ELI5:** Genotype is the recipe written in your DNA. Phenotype is the actual dish that comes out of the oven -- which depends on the recipe AND the cooking conditions."
+    },
+    {
+      "front": "In the morning glory example, what are the genotypes and phenotypes for the T locus?",
+      "back": "**TECHNICAL:** Genotype TT (homozygous dominant) = pigmented flowers. Genotype Tt (heterozygous) = pigmented flowers (T is dominant). Genotype tt (homozygous recessive) = white flowers. This is a case of complete dominance at a single locus producing a genetic polymorphism with two discrete phenotypic classes.\n\n**ELI5:** TT or Tt = colored flowers (the T allele is bossy and dominates). tt = white flowers (without any T, the recessive white shows through). Two gene copies, but only two possible looks."
+    },
+    {
+      "front": "How does increasing the number of loci affect the phenotypic distribution in a polygenic trait?",
+      "back": "**TECHNICAL:** As the number of additive loci increases, the number of phenotypic classes increases (2n+1), the differences between adjacent classes become smaller, and the overall distribution becomes more continuous and approaches a normal (bell-shaped) distribution. Even with just 6 loci, the distribution is nearly indistinguishable from continuous. Adding environmental variance further smooths the distribution.\n\n**ELI5:** Imagine stacking blocks of different colors. With 2 types, you see clear groups. With 20 types, each adding tiny differences, the groups blur into a smooth rainbow. More genes = smoother spectrum."
+    },
+    {
+      "front": "Can phenotypic plasticity be considered evolution? Why or why not?",
+      "back": "**TECHNICAL:** No. Phenotypic plasticity is NOT evolution because it does not involve a change in allele frequencies in the population. It is a within-generation phenotypic response to the environment by individuals with the same genotype. However, the CAPACITY for plasticity (the reaction norm) is itself genetically determined and can evolve by natural selection.\n\n**ELI5:** A plant growing taller in more sunlight isn't evolution -- its DNA didn't change. But if some plant families are BETTER at adjusting to sunlight than others, that ability to adjust can itself evolve."
+    },
+    {
+      "front": "What is a qualitative trait vs. a quantitative trait?",
+      "back": "**TECHNICAL:** A qualitative trait shows discrete, distinct phenotypic classes (e.g., flower color, blood type) and is typically controlled by 1-2 loci. A quantitative trait shows continuous variation across a range (e.g., height, weight, corolla length) and is typically polygenic (many loci). The distinction is about the number of loci and whether the phenotypic distribution is discrete or continuous.\n\n**ELI5:** Qualitative = categories you can sort into buckets (red vs. white flowers). Quantitative = a sliding scale with every shade in between (how tall you are). One has a few genes calling the shots, the other has a whole committee."
+    }
+  ],
+
+  "lec4-sources-evolution": [
+    {
+      "front": "What is a population in evolutionary biology?",
+      "back": "**TECHNICAL:** A population is a group of interbreeding individuals of the same species that share a common gene pool (the total set of alleles at all loci in the population). It is the fundamental unit of evolution because evolution occurs through changes in allele frequencies within populations, not within individuals.\n\n**ELI5:** A population is a neighborhood of animals (or plants) that actually mate with each other and share the same pool of gene versions. Evolution happens to the neighborhood, not to any single individual."
+    },
+    {
+      "front": "What is the precise definition of evolution at the population level?",
+      "back": "**TECHNICAL:** Evolution is a change in allele frequencies within a population over generations. If the frequency of any allele at any locus changes from one generation to the next, evolution has occurred. This is the microevolutionary definition, distinct from the broader concept of descent with modification.\n\n**ELI5:** Evolution = the recipe book of a population changing over time. If blue-eye genes go from 30% to 35% of the gene pool in one generation, that's evolution -- even if nobody notices."
+    },
+    {
+      "front": "List ALL FIVE mechanisms (forces) that can cause evolution.",
+      "back": "**TECHNICAL:** (1) Natural selection -- differential survival/reproduction based on phenotype. (2) Genetic drift -- random changes in allele frequencies due to finite population size. (3) Mutation -- introduction of new alleles. (4) Gene flow (migration) -- movement of alleles between populations. (5) Non-random mating -- preferential mating based on genotype/phenotype (e.g., assortative mating, inbreeding).\n\n**ELI5:** Five ways to change a population's gene mix: (1) some do better than others (selection), (2) random luck (drift), (3) typos in DNA (mutation), (4) newcomers arrive or locals leave (gene flow), (5) picky mating (non-random mating)."
+    },
+    {
+      "front": "What is the Hardy-Weinberg Equilibrium and what role does it play in evolutionary biology?",
+      "back": "**TECHNICAL:** Hardy-Weinberg Equilibrium (HWE) is the null hypothesis of population genetics. It states that allele and genotype frequencies remain constant across generations in the absence of evolutionary forces. If a population deviates from HWE expectations, one or more of the five evolutionary mechanisms must be acting. It serves as a baseline for detecting evolution.\n\n**ELI5:** HWE is the 'nothing is happening' scenario -- like assuming a coin is fair until proven otherwise. If gene frequencies change when they shouldn't, something (selection, drift, etc.) must be causing it."
+    },
+    {
+      "front": "Which of the five evolutionary mechanisms is the ONLY one that can create genuinely NEW genetic variation?",
+      "back": "**TECHNICAL:** Mutation is the only mechanism that creates new alleles (new genetic variants that did not previously exist). Natural selection, genetic drift, gene flow, and non-random mating can change the frequencies of existing alleles or redistribute them, but they cannot generate novel alleles. Recombination creates new combinations of existing alleles but not new alleles themselves.\n\n**ELI5:** Mutation is the inventor -- it creates brand new gene versions. Everything else just shuffles, spreads, or filters the versions that mutation already invented."
+    },
+    {
+      "front": "What is gene flow and how does it affect evolution?",
+      "back": "**TECHNICAL:** Gene flow (migration) is the movement of alleles between populations, typically through the immigration or emigration of individuals (or gametes, like pollen). It can introduce new alleles to a population, change allele frequencies, and homogenize allele frequencies between populations, counteracting divergence due to selection or drift.\n\n**ELI5:** Gene flow is when someone from another town moves in and has kids with the locals. They bring gene versions that might be rare or absent in the new town, mixing the gene pools together."
+    },
+    {
+      "front": "How does non-random mating differ from the other four evolutionary forces?",
+      "back": "**TECHNICAL:** Non-random mating changes GENOTYPE frequencies (e.g., increasing homozygosity through inbreeding) but does NOT by itself change ALLELE frequencies. The other four forces (selection, drift, mutation, gene flow) all change allele frequencies. Non-random mating is sometimes excluded from lists of evolutionary forces for this reason, though it is still considered a departure from HWE.\n\n**ELI5:** Picky mating reshuffles who pairs with whom (more like-with-like, or relatives together), changing how gene versions are packaged into individuals. But the overall fraction of each gene version in the population stays the same."
+    },
+    {
+      "front": "What is a gene pool?",
+      "back": "**TECHNICAL:** The gene pool is the complete set of all alleles at all loci present in a population at a given time. It represents the total genetic diversity available in that population. Allele frequencies within the gene pool are what change during evolution.\n\n**ELI5:** The gene pool is like a giant bag of marbles where each marble is a copy of a gene variant. All the individuals in a population contribute their gene copies to this shared bag, and babies draw from it."
+    },
+    {
+      "front": "Natural selection requires heritable variation in fitness. What does this mean in terms of the five mechanisms?",
+      "back": "**TECHNICAL:** Natural selection requires: (1) phenotypic variation among individuals, (2) that variation must be heritable (genetic basis), and (3) variation must cause differential fitness (survival and/or reproduction). Mutation provides the raw material (new alleles), recombination creates new combinations, and selection then acts on the resulting phenotypic variation. Without heritable variation, selection has nothing to act on.\n\n**ELI5:** For natural selection to work, individuals must differ, those differences must be passed to offspring, and some versions must help you survive/reproduce better. No differences = nothing to select."
+    },
+    {
+      "front": "Can evolution occur without natural selection? Explain.",
+      "back": "**TECHNICAL:** Yes. Genetic drift alone can change allele frequencies (especially in small populations), causing evolution without any fitness differences. Gene flow can change allele frequencies regardless of selection. Mutation pressure can shift frequencies. Non-random mating changes genotype frequencies. Natural selection is just ONE of five mechanisms; evolution can occur through any combination of them.\n\n**ELI5:** Absolutely. A storm killing random members of a small island population (drift) changes the gene mix without any gene being 'better.' Evolution just means gene frequencies changed -- it doesn't require survival of the fittest."
+    },
+    {
+      "front": "EXAM TRAP: A student writes 'Evolution is when organisms change to adapt to their environment.' What is wrong with this definition?",
+      "back": "**TECHNICAL:** This definition is too narrow. It describes only adaptive evolution via natural selection. The correct population genetics definition is: evolution is any change in allele frequencies within a population over generations. This includes non-adaptive changes due to drift, gene flow, mutation pressure, and non-random mating. Also, individuals do not evolve -- populations do.\n\n**ELI5:** That definition only describes one of five ways evolution happens and wrongly implies it's always purposeful improvement. Evolution includes random changes (drift) and is about populations, not individual organisms changing during their lifetime."
+    },
+    {
+      "front": "Why is mutation considered a weak evolutionary force on its own?",
+      "back": "**TECHNICAL:** Mutation rates are extremely low (typically 10^-5 to 10^-9 per locus per generation), so mutation alone changes allele frequencies very slowly. It would take thousands of generations for mutation pressure alone to significantly shift an allele frequency. However, mutation is critical as the ULTIMATE source of all new genetic variation that the other forces then act upon.\n\n**ELI5:** Mutation is like a very slow drip filling a pool. By itself, it barely changes anything per generation. But it's the only faucet in the room -- without it, there would be no new gene versions for selection or drift to work with."
+    },
+    {
+      "front": "What is the difference between a mechanism of evolution and the raw material of evolution?",
+      "back": "**TECHNICAL:** Mutation and recombination provide the raw material of evolution (genetic variation). The five evolutionary mechanisms (selection, drift, mutation, gene flow, non-random mating) are the processes that change allele or genotype frequencies. Mutation plays a dual role: it is both a source of variation AND a (weak) evolutionary force. Recombination generates new allele combinations but is not itself a mechanism that changes allele frequencies.\n\n**ELI5:** Raw material = the different ingredients available (created by mutation). Mechanisms = the processes that change the recipe (selection picks favorites, drift removes some randomly, etc.)."
+    }
+  ],
+
+  "lec4-hardy-weinberg": [
+    {
+      "front": "State the Hardy-Weinberg Equilibrium equations for a two-allele system.",
+      "back": "**TECHNICAL:** Allele frequencies: p + q = 1, where p = frequency of allele A (or dominant), q = frequency of allele a (or recessive). Genotype frequencies: p^2 + 2pq + q^2 = 1, where p^2 = freq(AA), 2pq = freq(Aa), q^2 = freq(aa). These hold when no evolutionary forces are acting.\n\n**ELI5:** If p is the fraction of 'A' alleles and q is the fraction of 'a' alleles (and p + q = 1), then randomly pairing them gives: AA = p times p, Aa = 2 times p times q, aa = q times q. It's just the math of random combinations."
+    },
+    {
+      "front": "List ALL FIVE assumptions of Hardy-Weinberg Equilibrium.",
+      "back": "**TECHNICAL:** (1) Infinitely large population (no genetic drift), (2) No natural selection (all genotypes have equal fitness), (3) No migration/gene flow, (4) No mutation, (5) Random mating (no assortative mating or inbreeding). If ANY assumption is violated, the population may deviate from HWE.\n\n**ELI5:** HWE works only in a fantasy world where: the population is huge, nobody's better at surviving, nobody moves in/out, no DNA typos happen, and everyone mates randomly. Break any rule and the math won't match reality."
+    },
+    {
+      "front": "HWE PROBLEM: In a population of 500 Drosophila, you observe 287 AA, 126 Aa, and 87 aa at the ADH locus. Calculate p and q.",
+      "back": "**TECHNICAL:** Count alleles: Total alleles = 2 x 500 = 1000. A alleles = 2(287) + 126 = 574 + 126 = 700. So p = 700/1000 = 0.70. a alleles = 2(87) + 126 = 174 + 126 = 300. So q = 300/1000 = 0.30. Check: p + q = 0.70 + 0.30 = 1.0.\n\n**ELI5:** Each fly has 2 gene copies. Count all the A copies: each AA fly gives 2, each Aa gives 1. Divide by total copies (1000). You get 70% A and 30% a."
+    },
+    {
+      "front": "HWE PROBLEM: With p=0.7 and q=0.3 in 500 flies, what are the EXPECTED genotype numbers under HWE?",
+      "back": "**TECHNICAL:** Expected frequencies: AA = p^2 = (0.7)^2 = 0.49, Aa = 2pq = 2(0.7)(0.3) = 0.42, aa = q^2 = (0.3)^2 = 0.09. Expected numbers (x500): AA = 0.49 x 500 = 245, Aa = 0.42 x 500 = 210, aa = 0.09 x 500 = 45. Check: 245 + 210 + 45 = 500.\n\n**ELI5:** If mating were truly random: 49% should be AA (245 flies), 42% should be Aa (210 flies), 9% should be aa (45 flies)."
+    },
+    {
+      "front": "HWE PROBLEM: Observed = 287 AA, 126 Aa, 87 aa. Expected = 245, 210, 45. The chi-square test gives P=0.02. What do you conclude?",
+      "back": "**TECHNICAL:** Since P = 0.02 < 0.05 (significance threshold), we REJECT the null hypothesis that the population is in Hardy-Weinberg Equilibrium. The observed genotype frequencies differ significantly from HWE expectations. One or more evolutionary forces must be acting on this locus (excess of homozygotes suggests possible non-random mating, selection, or population substructure/Wahlund effect).\n\n**ELI5:** The math says the real numbers don't match what random mating would predict. Something's going on -- maybe flies prefer mating with similar types, or some genotypes survive better."
+    },
+    {
+      "front": "How do you calculate the chi-square statistic for an HWE test?",
+      "back": "**TECHNICAL:** Chi-square = Sum of [(Observed - Expected)^2 / Expected] for each genotype class. For the Drosophila example: (287-245)^2/245 + (126-210)^2/210 + (87-45)^2/45 = (42)^2/245 + (-84)^2/210 + (42)^2/45 = 7.2 + 33.6 + 39.2 = 80.0. With 1 degree of freedom (3 classes - 2 estimated parameters), compare to chi-square table. The critical value at P=0.05 is 3.84; our value far exceeds this.\n\n**ELI5:** For each genotype, take (actual minus expected), square it, divide by expected. Add them up. If the total is big (bigger than 3.84), the difference is real, not just random noise."
+    },
+    {
+      "front": "Why does a chi-square HWE test have only 1 degree of freedom for a 2-allele system?",
+      "back": "**TECHNICAL:** Degrees of freedom = (number of genotype classes) - (number of estimated parameters) - 1. With 3 genotype classes (AA, Aa, aa) and 1 estimated parameter (p, since q = 1-p), df = 3 - 1 - 1 = 1. We lose one df for estimating the allele frequency from the data and one for the constraint that frequencies sum to 1.\n\n**ELI5:** You have 3 categories but you used the data to estimate one number (p), and the total must equal your sample size. So only 1 number is truly free to vary."
+    },
+    {
+      "front": "If a population IS in Hardy-Weinberg Equilibrium, what can you conclude about evolutionary forces?",
+      "back": "**TECHNICAL:** If a population is in HWE at a given locus, you can conclude that the NET effect of evolutionary forces at that locus is negligible. However, failing to reject HWE does NOT prove no forces are acting -- forces could be weak, opposing each other, or the test may lack statistical power. HWE is assessed locus by locus; a population may be in HWE at one locus but not another.\n\n**ELI5:** It means everything looks 'normal' at that gene -- like a coin that appears fair after 100 flips. But it doesn't guarantee nothing's happening; the test might just not be sensitive enough to catch it."
+    },
+    {
+      "front": "Can a population be in HWE at one locus but not another? Why?",
+      "back": "**TECHNICAL:** Yes. Each locus is tested independently. Different evolutionary forces may act on different loci. For example, natural selection might act strongly on a locus coding for disease resistance while a nearby neutral locus remains in HWE. Genetic drift, selection, and gene flow can have locus-specific effects.\n\n**ELI5:** Each gene is its own story. One gene might be under heavy selection (not in HWE) while the gene next door is ignored by selection and looks perfectly random (in HWE)."
+    },
+    {
+      "front": "A population has q^2 = 0.04 for a recessive condition. What are q, p, and the carrier frequency?",
+      "back": "**TECHNICAL:** q^2 = 0.04, so q = sqrt(0.04) = 0.20. p = 1 - q = 0.80. Carrier frequency (heterozygotes) = 2pq = 2(0.80)(0.20) = 0.32 = 32%. Note: carriers (32%) are far more common than affected individuals (4%), which is why recessive alleles persist in populations.\n\n**ELI5:** 4% of people show the condition (aa). Square-root to get the 'a' frequency: 20%. The 'A' frequency is 80%. Carriers (Aa) = 2 x 80% x 20% = 32%. One in three people carries the hidden allele!"
+    },
+    {
+      "front": "COMMON MISTAKE: 'A dominant allele will eventually reach a frequency of 100%.' Why is this wrong under HWE?",
+      "back": "**TECHNICAL:** Under HWE, allele frequencies do not change across generations regardless of dominance relationships. Dominance affects phenotype ratios, not allele frequency dynamics. In the absence of selection, a dominant allele at 30% will remain at 30% indefinitely. Dominance is about the phenotypic expression of heterozygotes, not about evolutionary advantage.\n\n**ELI5:** Being dominant just means you show your effect when you're paired with a recessive. It doesn't mean you spread faster. A dominant allele at 30% stays at 30% forever if nothing else is going on -- being loud doesn't make you more popular."
+    },
+    {
+      "front": "Why does HWE require random mating? What happens with non-random mating?",
+      "back": "**TECHNICAL:** HWE requires random mating to produce genotype frequencies that match p^2, 2pq, q^2 predictions. Non-random mating (e.g., inbreeding, assortative mating) changes GENOTYPE frequencies -- typically increasing homozygosity (excess of AA and aa, deficit of Aa) -- without changing allele frequencies. The population departs from HWE genotype predictions even though p and q remain the same.\n\n**ELI5:** If tall people only marry tall people, you'll see more extreme tall and short people (more homozygotes) than random mixing would predict. But the overall fraction of 'tall' and 'short' gene copies hasn't changed."
+    },
+    {
+      "front": "In the Drosophila ADH example, the observed data shows excess homozygotes (both AA and aa) and deficit of heterozygotes. What evolutionary force might explain this?",
+      "back": "**TECHNICAL:** Excess homozygosity with deficient heterozygosity is a classic signature of: (1) Non-random mating (inbreeding or positive assortative mating), (2) Population substructure (Wahlund effect -- sampling from two differentiated subpopulations), or (3) Disruptive selection favoring homozygotes over heterozygotes. Further data would be needed to distinguish these.\n\n**ELI5:** Too many 'purebreds' (AA and aa) and too few 'mixes' (Aa) means either: flies mate with similar flies, the sample is actually two separate groups mixed together, or middle-of-the-road flies do worse than the extremes."
+    },
+    {
+      "front": "A recessive allele has q = 0.01. What fraction of recessive alleles are 'hidden' in carriers vs. expressed in homozygotes?",
+      "back": "**TECHNICAL:** Alleles in homozygotes (aa) = 2 x q^2 = 2(0.01)^2 = 0.0002 per person on average. Alleles in carriers (Aa) = 2pq = 2(0.99)(0.01) = 0.0198. Ratio of carrier alleles to homozygote alleles: 0.0198/0.0002 = 99. So 99% of recessive alleles are hidden in carriers and only 1% are in homozygous individuals. This is why selection against rare recessives is extremely slow.\n\n**ELI5:** When a bad recessive allele is rare (1%), almost all copies of it are hiding in healthy carriers (99 out of 100 copies). Selection can only 'see' the 1% that show up in affected individuals -- the other 99% are invisible."
+    },
+    {
+      "front": "Write out a step-by-step protocol for testing whether a population is in HWE.",
+      "back": "**TECHNICAL:** (1) Count observed genotype numbers. (2) Calculate observed allele frequencies (p, q) from genotype counts. (3) Calculate expected genotype frequencies under HWE: p^2, 2pq, q^2. (4) Multiply expected frequencies by total N to get expected numbers. (5) Compute chi-square statistic: sum of (O-E)^2/E. (6) Compare to chi-square distribution with 1 df. (7) If P < 0.05, reject HWE.\n\n**ELI5:** Count your genotypes, figure out allele percentages, predict what random mating should give you, compare prediction to reality using chi-square math, and if the mismatch is too big, something evolutionary is happening."
+    }
+  ],
+
+  "lec4-genetic-drift": [
+    {
+      "front": "What is genetic drift?",
+      "back": "**TECHNICAL:** Genetic drift is the random change in allele frequencies from one generation to the next due to chance sampling of alleles in a finite population. It is a stochastic process that affects all populations but is strongest in small populations. Drift can lead to allele fixation (frequency = 1) or loss (frequency = 0) regardless of whether the allele is beneficial, neutral, or deleterious.\n\n**ELI5:** Genetic drift is evolution by pure luck. In a small town, if a few families happen to have more kids just by chance, their gene versions become more common. Nobody was 'better' -- they just got lucky."
+    },
+    {
+      "front": "Describe Buri's 1956 Drosophila experiment and its key result.",
+      "back": "**TECHNICAL:** Buri established 107 replicate populations of Drosophila melanogaster, each with 16 flies (8 males + 8 females), all initially heterozygous (bw75/bw) at 50% frequency for each allele. Each generation, 16 random flies founded the next generation. By generation 19, many populations had drifted to fixation (bw75 = 100%) or loss (bw75 = 0%), with wide variation among replicates -- despite identical starting conditions and no selection.\n\n**ELI5:** Buri started 107 tiny fly colonies, all with the same 50/50 gene mix. He let random chance play out for 19 generations. Some colonies ended up 100% one allele, some 100% the other, and everything in between -- proving that random luck alone can dramatically change gene frequencies."
+    },
+    {
+      "front": "What is a population bottleneck? Give the lecture example.",
+      "back": "**TECHNICAL:** A bottleneck is a sharp temporary reduction in population size that drastically reduces genetic variation through drift. The surviving individuals carry only a fraction of the original gene pool. The lecture example is northern elephant seals (Mirounga angustirostris): hunted down to approximately 10-20 individuals in the 1890s, now recovered to >100,000, but essentially zero genetic variation at many loci due to the bottleneck.\n\n**ELI5:** A bottleneck is like squeezing a crowd through a tiny door -- only a few people make it through, and they don't represent everyone's genes. Elephant seals were hunted to ~20 animals. Now there are 100,000+ but they're all nearly genetically identical."
+    },
+    {
+      "front": "What is the founder effect? Give TWO lecture examples.",
+      "back": "**TECHNICAL:** The founder effect occurs when a small number of individuals colonize a new area, carrying only a subset of the original population's genetic variation. (1) The Amish: a small founding group from Europe carries elevated frequency of Ellis-van Creveld syndrome (dwarfism, heart defects, polydactyly) due to the founder carrying the allele. (2) Pingelap atoll: after a typhoon reduced the population, one survivor carried achromatopsia (total colorblindness), now at ~10% frequency on the island.\n\n**ELI5:** When a few people start a new colony, their quirky gene versions become way more common than normal. A few Amish founders happened to carry a rare dwarfism gene, so it's common among Amish today. On tiny Pingelap island, a typhoon survivor carried a colorblindness gene, and now 1 in 10 islanders is colorblind."
+    },
+    {
+      "front": "How does population size affect the strength of genetic drift?",
+      "back": "**TECHNICAL:** Drift is inversely proportional to population size. In small populations, sampling error is large, so allele frequencies fluctuate widely each generation and fixation/loss occurs rapidly. In large populations, sampling error is small, allele frequencies change slowly, and drift is a weak force relative to selection. Specifically, the variance in allele frequency change per generation is approximately pq/(2N).\n\n**ELI5:** In a small town of 10 families, one family having 5 kids changes the whole town's gene pool. In a city of a million, one family's luck barely registers. Smaller population = bigger random swings."
+    },
+    {
+      "front": "Is genetic drift directional (like selection) or random? Explain the consequence.",
+      "back": "**TECHNICAL:** Drift is NOT directional. It is a purely stochastic (random) process with no tendency to push allele frequencies in any particular direction. As a result, different replicate populations experiencing drift from the same starting point will diverge in random directions (as demonstrated by Buri's experiment). Drift can fix beneficial, neutral, OR harmful alleles.\n\n**ELI5:** Drift is a random walk -- like a drunk person stumbling left or right with no preference. Different drunk walkers starting from the same spot end up in completely different places. Drift doesn't care if a gene is good or bad."
+    },
+    {
+      "front": "Once an allele is lost from a population by drift, can it come back? Why or why not?",
+      "back": "**TECHNICAL:** Once an allele reaches a frequency of 0 (complete loss), it is gone permanently from that population. It cannot reappear through drift (drift can only modify existing allele frequencies). The only ways to restore the allele are: (1) new mutation producing the same allele (extremely unlikely), or (2) gene flow (immigration from another population carrying the allele).\n\n**ELI5:** Once a gene version hits zero, it's extinct in that population -- like losing the last copy of a rare book. No amount of shuffling the remaining books will recreate it. You'd need a new copy from outside or a fresh reprint (mutation)."
+    },
+    {
+      "front": "What is the Galapagos Islands founder effect example from lecture?",
+      "back": "**TECHNICAL:** The Galapagos Islands represent a founder effect: a small number of individuals from South American mainland populations colonized the islands, carrying only a random subset of the mainland genetic variation. This small founding population then diverged through drift (and subsequent selection) to produce the unique species found on different islands (e.g., Darwin's finches, giant tortoises).\n\n**ELI5:** A few mainland birds and reptiles accidentally arrived on remote volcanic islands. Those few founders didn't carry all the genes from the mainland. Starting from that limited mix, plus isolation, they evolved into the unique Galapagos species."
+    },
+    {
+      "front": "COMMON MISTAKE: 'Genetic drift only happens in small populations.' Is this correct?",
+      "back": "**TECHNICAL:** This is imprecise. Drift occurs in ALL finite populations, but its effect is proportional to 1/(2N). In large populations, drift occurs but is so weak relative to selection and other forces that it is negligible for most alleles. In small populations, drift can overpower even moderate selection. The statement should be: 'Drift is strongest in small populations' not 'only happens in small populations.'\n\n**ELI5:** Drift happens everywhere -- even in a city of millions, there's a tiny random wobble. But it's only a big deal in small towns where each random event makes a noticeable splash."
+    },
+    {
+      "front": "Compare and contrast bottleneck effect vs. founder effect.",
+      "back": "**TECHNICAL:** Both involve a small number of individuals establishing the genetic basis for a population, and both reduce genetic variation through drift. Bottleneck: a large population is temporarily reduced to small size in situ (same location), then recovers. Founder effect: a small group emigrates to establish a new population elsewhere. The distinction is geographic: bottleneck = same place but reduction, founder = new place from small colonizers.\n\n**ELI5:** Bottleneck = your town's population crashes (disaster, hunting) and the survivors rebuild. Founder effect = a few people leave town to start a brand-new settlement. Both cases: a small group's genes define the future, but one stays put and the other moves away."
+    },
+    {
+      "front": "In Buri's experiment, what was the starting allele frequency, and what happened to the distribution of frequencies across populations by generation 19?",
+      "back": "**TECHNICAL:** Starting frequency: p(bw75) = q(bw) = 0.50 in all 107 populations. By generation 19, the distribution became U-shaped (bimodal): many populations had fixed for one allele or the other (frequencies near 0 or 1), with fewer populations at intermediate frequencies. This U-shape is the expected equilibrium distribution under pure drift.\n\n**ELI5:** They all started at 50/50. After 19 generations, the graph looked like a U -- most populations ended up at nearly 100% or 0% of one allele, with few in the middle. Random luck pushes you to the extremes."
+    },
+    {
+      "front": "How do elephant seals today demonstrate the lasting effects of a genetic bottleneck?",
+      "back": "**TECHNICAL:** Despite recovering to >100,000 individuals, northern elephant seals show almost zero genetic variation at electrophoretically assayed protein loci. This is because the ~10-20 survivors of the 1890s bottleneck carried almost no heterozygosity, and recovery of lost variation through new mutation is an extremely slow process (thousands of generations). The population is large again but genetically impoverished.\n\n**ELI5:** Even though there are now 100,000+ elephant seals, they're almost genetic clones because all of them descended from just 10-20 survivors. Growing the population back up gave them numbers but not their lost genetic diversity."
+    },
+    {
+      "front": "What is Ellis-van Creveld syndrome and why is it common among the Amish?",
+      "back": "**TECHNICAL:** Ellis-van Creveld syndrome is a rare autosomal recessive disorder causing short-limbed dwarfism, polydactyly (extra fingers), and heart defects. It occurs at unusually high frequency (1 in 200) among the Lancaster County Amish because their founding population (~200 individuals in the 1700s) happened to include carriers of the allele. This founder effect, combined with genetic isolation (endogamy), maintained the elevated frequency.\n\n**ELI5:** A rare dwarfism condition is 100x more common in Amish communities than in the general population. Why? The small group of founders who started the community happened to include carriers. Since the Amish mostly marry within their community, the gene stayed concentrated."
+    },
+    {
+      "front": "Can genetic drift cause an allele to INCREASE in frequency even if it is slightly harmful?",
+      "back": "**TECHNICAL:** Yes. In small populations, drift can increase the frequency of mildly deleterious alleles and even drive them to fixation. Drift overpowers selection when the selection coefficient (s) is much less than 1/(2N). The condition is roughly |s| < 1/(2N) -- when s is small relative to population size, the allele behaves as effectively neutral and drifts randomly. This is why small populations accumulate genetic load.\n\n**ELI5:** In a small enough group, bad luck beats weak disadvantage. A slightly harmful gene version can spread just by random chance in a tiny population, like a mediocre player winning a poker tournament by pure luck in a small field."
+    },
+    {
+      "front": "Why is achromatopsia (total colorblindness) so common on Pingelap atoll?",
+      "back": "**TECHNICAL:** In ~1775, a typhoon reduced the Pingelap population to approximately 20 survivors. One survivor (a chief) carried the autosomal recessive allele for achromatopsia. Through the founder effect and subsequent inbreeding within this small isolated population, the allele frequency rose dramatically. Today, about 5-10% of the population is affected (homozygous) -- orders of magnitude higher than the worldwide rate of ~1 in 30,000.\n\n**ELI5:** A catastrophic storm left only ~20 people on a tiny Pacific island. One guy happened to carry a colorblindness gene. Since the population rebuilt from so few people and stayed isolated, that gene is now super common there."
+    }
+  ],
+
+  "lec4-selection-mechanism": [
+    {
+      "front": "In the General Selection Model, what do the symbols w and s represent, and how are they related?",
+      "back": "**TECHNICAL:** w = fitness (relative survival/reproductive success of a genotype, scaled so the most fit genotype has w = 1.0). s = selection coefficient (the reduction in fitness relative to the most fit genotype). They are related by: s = 1 - w, or equivalently w = 1 - s. A genotype with w = 0.8 has s = 0.2 (20% fitness reduction).\n\n**ELI5:** w is your score out of 1 (how well you do compared to the best). s is how much you lose. If your score is 0.8, you lose 0.2. w + s = 1 always."
+    },
+    {
+      "front": "CALCULATION: Peppered moth. Initial frequency p(B) = 0.5. Fitnesses: BB = 0.9, Bb = 0.87, bb = 0.55. First convert to relative fitness (w). What are the relative fitnesses?",
+      "back": "**TECHNICAL:** Divide each absolute fitness by the highest value (0.9 for BB): w(BB) = 0.9/0.9 = 1.0, w(Bb) = 0.87/0.9 = 0.967 (approximately 0.96), w(bb) = 0.55/0.9 = 0.611 (approximately 0.61). Selection coefficients: s(BB) = 0, s(Bb) = 0.04, s(bb) = 0.39.\n\n**ELI5:** The best genotype (BB) gets a score of 1.0. Everyone else is graded relative to that. Bb scores about 0.96 (pretty close), bb scores only 0.61 (big disadvantage)."
+    },
+    {
+      "front": "CALCULATION: Starting with p=0.5, q=0.5 and w(BB)=1.0, w(Bb)=0.96, w(bb)=0.61, calculate p' (new frequency of B after one generation of selection).",
+      "back": "**TECHNICAL:** Mean fitness w-bar = p^2 * w(BB) + 2pq * w(Bb) + q^2 * w(bb) = (0.25)(1.0) + (0.5)(0.96) + (0.25)(0.61) = 0.25 + 0.48 + 0.1525 = 0.8825. p' = [p^2 * w(BB) + pq * w(Bb)] / w-bar = [0.25(1.0) + 0.25(0.96)] / 0.8825 = [0.25 + 0.24] / 0.8825 = 0.49/0.8825 = 0.555. So p' approximately equals 0.557, and delta-p = +0.057.\n\n**ELI5:** We calculate the average fitness of the population, then figure out what fraction of next generation's genes come from B-carrying survivors. B went from 50% to about 55.7% in one generation -- a +5.7% boost."
+    },
+    {
+      "front": "What does delta-p (change in allele frequency) tell you about the direction and strength of selection?",
+      "back": "**TECHNICAL:** Delta-p = p' - p. If delta-p > 0, allele B is increasing (favored by selection). If delta-p < 0, allele B is decreasing (disfavored). The magnitude of delta-p indicates the strength of selection per generation. In the peppered moth example, delta-p = +0.057 means the B allele increased by 5.7 percentage points in one generation, indicating moderately strong selection.\n\n**ELI5:** Delta-p is like checking the score change after one round. Positive = your allele is winning. The bigger the number, the faster it's winning. +0.057 means the favored allele gained about 6% in one generation."
+    },
+    {
+      "front": "What is dominance in the context of the selection model?",
+      "back": "**TECHNICAL:** Dominance refers to the relationship between heterozygote fitness and the two homozygote fitnesses. Complete dominance: w(Aa) = w(AA) (heterozygote phenotype matches one homozygote). Incomplete dominance: w(Aa) is intermediate. Overdominance: w(Aa) > both w(AA) and w(aa). Underdominance: w(Aa) < both. In the peppered moth example, dominance is incomplete since w(Bb) = 0.96 is between w(BB) = 1.0 and w(bb) = 0.61.\n\n**ELI5:** Dominance is about what the 'half-and-half' genotype looks like. Does it match one parent (complete dominance), split the difference (incomplete), or actually do better than both (overdominance)?"
+    },
+    {
+      "front": "What is pleiotropy? Give the lecture example.",
+      "back": "**TECHNICAL:** Pleiotropy is when a single gene affects multiple (seemingly unrelated) phenotypic traits. The lecture example is the Ester1 locus in mosquitoes: the same allele that confers insecticide resistance (beneficial in sprayed environments) also affects other physiological traits, potentially imposing a fitness cost in the absence of insecticide. Pleiotropic effects complicate the prediction of selection outcomes.\n\n**ELI5:** One gene, many jobs. In mosquitoes, the same gene that makes them pesticide-resistant also affects other body functions. It's like a tool that's great for one job but causes problems elsewhere."
+    },
+    {
+      "front": "What is epistasis?",
+      "back": "**TECHNICAL:** Epistasis is the interaction between alleles at different loci, where the effect of an allele at one locus depends on the genotype at another locus. For example, a modifier locus might alter the phenotypic effect of a major locus. Epistasis means that fitness effects are non-additive across loci, complicating simple selection models.\n\n**ELI5:** Epistasis is when genes don't work independently -- they interact. Gene A might make you tall, but only if Gene B has the right version. It's like ingredients in a recipe: sugar is great, but its effect depends on whether you're making cake or soup."
+    },
+    {
+      "front": "What does 'additive' genetic effect mean?",
+      "back": "**TECHNICAL:** An additive genetic effect means each allele contributes a fixed increment to the phenotype regardless of what other alleles are present. There is no dominance (heterozygote is exactly intermediate) and no epistasis (effects of loci add independently). Additive effects produce the additive genetic variance (VA), which is the only component of genetic variance that responds directly to selection.\n\n**ELI5:** Additive = each gene copy adds a fixed amount, like stacking blocks. Two 'tall' alleles = 2 inches extra, one = 1 inch extra, zero = 0 extra. No surprises from interactions -- just simple addition."
+    },
+    {
+      "front": "Why does selection against a recessive allele become less efficient as the allele becomes rarer?",
+      "back": "**TECHNICAL:** Selection can only act on phenotypes it can 'see.' For a recessive allele at frequency q, only homozygotes (q^2) express the phenotype. As q decreases, q^2 decreases much faster (quadratically). At q = 0.01, only 0.01% are homozygous, but 2% are heterozygous carriers who are invisible to selection. Most copies of the allele are hidden in carriers (2pq >> q^2 when q is small), making removal by selection extremely slow.\n\n**ELI5:** When a recessive 'bad' gene is rare, almost all copies are hiding inside healthy carriers who look fine. Selection can only weed out the rare visible homozygotes. It's like trying to find needles in a haystack that keeps getting bigger."
+    },
+    {
+      "front": "CALCULATION: If s(bb) = 0.39, what is the fitness of bb?",
+      "back": "**TECHNICAL:** w(bb) = 1 - s = 1 - 0.39 = 0.61. The bb genotype has 61% the fitness of the fittest genotype (BB). In other words, for every 100 BB individuals that survive/reproduce, only 61 bb individuals do so.\n\n**ELI5:** The bb type is 39% worse than the best type. If the best type scores 100 points, bb scores 61."
+    },
+    {
+      "front": "What is mean fitness (w-bar) and why is it important in the selection model?",
+      "back": "**TECHNICAL:** Mean fitness (w-bar) is the average fitness of the entire population, calculated as: w-bar = p^2*w(AA) + 2pq*w(Aa) + q^2*w(aa). It serves as a normalizing factor when calculating the new allele frequency after selection. p' = [p^2*w(AA) + pq*w(Aa)] / w-bar. Mean fitness increases over generations under directional selection (Fisher's Fundamental Theorem).\n\n**ELI5:** w-bar is the population's average score. You need it to figure out what fraction of the next generation each genotype contributes. It's the denominator that converts raw survival numbers into proportions."
+    },
+    {
+      "front": "How would you calculate the selection coefficient (s) for a genotype if given absolute fitness values?",
+      "back": "**TECHNICAL:** (1) Identify the genotype with the highest absolute fitness. (2) Calculate relative fitness for each genotype: w(i) = absolute fitness(i) / max absolute fitness. (3) Calculate selection coefficient: s(i) = 1 - w(i). Example: if absolute fitnesses are 0.9, 0.87, 0.55, then max = 0.9, w values = 1.0, 0.967, 0.611, and s values = 0, 0.033, 0.389.\n\n**ELI5:** Find who does best (score them 1.0). Grade everyone else as a fraction of the best. Whatever they're missing from 1.0 is their 's' value -- their penalty."
+    },
+    {
+      "front": "In the peppered moth selection example, selection favors the B allele. Will B ever reach 100% if bb homozygotes keep being produced?",
+      "back": "**TECHNICAL:** If selection is against a completely recessive allele (b expressed only in bb), B can approach but may never fully fix because (1) as q decreases, selection against bb becomes very inefficient (most b alleles hide in Bb carriers), and (2) mutation continually reintroduces b. In practice, a mutation-selection balance is reached where the rate of new mutations equals the rate of removal by selection: q-hat approximately equals sqrt(mu/s).\n\n**ELI5:** The 'bad' b allele keeps hiding in healthy carriers, and mutation keeps making new copies. It gets rarer and rarer but never quite reaches zero -- like a weed you keep pulling but it always comes back a little."
+    },
+    {
+      "front": "What general formula gives the new allele frequency (p') after one generation of selection?",
+      "back": "**TECHNICAL:** p' = [p^2 * w(AA) + p * q * w(Aa)] / w-bar, where w-bar = p^2*w(AA) + 2pq*w(Aa) + q^2*w(aa). Equivalently, p' = p * [p*w(AA) + q*w(Aa)] / w-bar. This formula weights each allele by the fitness of the genotypes carrying it, then normalizes by mean fitness.\n\n**ELI5:** To find the new frequency of allele A: count how many A alleles survive (weighted by each genotype's fitness), then divide by the total fitness of everyone. Survivors with more A alleles boost A's frequency."
+    },
+    {
+      "front": "What is the difference between the target of selection and a correlated response?",
+      "back": "**TECHNICAL:** The target of selection is the specific trait that directly affects fitness (e.g., beak depth for cracking seeds). A correlated response is a change in a different trait that is genetically correlated with the target (e.g., body size changing when beak depth is selected). Correlated traits change not because they are directly selected but because their underlying genes are linked or pleiotropic with the selected trait.\n\n**ELI5:** Selection aims at one thing (beak size) but accidentally changes other things too (body size) because the genes are tangled together. Like pulling one thread in a sweater and watching other parts move."
+    }
+  ],
+
+  "lec56-quant-intro": [
+    {
+      "front": "What is the fundamental difference between qualitative and quantitative traits?",
+      "back": "**TECHNICAL:** Qualitative traits have discrete, distinct phenotypic classes controlled by 1-2 major loci (e.g., Mendelian traits like flower color, blood type). Quantitative traits show continuous phenotypic variation controlled by many loci (polygenic), each of small effect, plus environmental influence. The distribution of quantitative traits is typically normal (bell-shaped).\n\n**ELI5:** Qualitative traits = distinct buckets (you're either type A or type B blood). Quantitative traits = a sliding scale (height ranges from short to tall with every value in between). One uses a few big switches, the other uses hundreds of tiny dials."
+    },
+    {
+      "front": "Write the full partition of phenotypic variance (VP) into its components.",
+      "back": "**TECHNICAL:** VP = VG + VE, where VG can be further partitioned: VG = VA + VD + VI. Thus: VP = VA + VD + VI + VE. VA = additive genetic variance (effects of individual alleles summed). VD = dominance variance (interactions between alleles at the same locus). VI = epistatic/interaction variance (interactions between alleles at different loci). VE = environmental variance.\n\n**ELI5:** Total variation in a trait = gene variation + environment variation. Gene variation further splits into: simple adding-up effects (VA), same-gene interactions (VD), and different-gene interactions (VI). Only the simple adding part (VA) matters for predicting response to selection."
+    },
+    {
+      "front": "What is additive genetic variance (VA) and why is it the most important component for evolution?",
+      "back": "**TECHNICAL:** VA is the portion of genetic variance due to the additive effects of alleles -- the average effect each allele has on the phenotype when substituted across all genetic backgrounds. VA is crucial because it is the ONLY component of genetic variance that responds predictably to selection. Alleles are passed individually from parent to offspring, so only their average (additive) effects are reliably transmitted. Dominance and epistatic effects are reshuffled each generation.\n\n**ELI5:** VA is the part of genetic variation that parents reliably pass to kids. Since you get one allele from each parent (not whole genotype combos), only the individual allele effects matter for inheritance. Dominance and epistasis get scrambled each generation."
+    },
+    {
+      "front": "What is dominance variance (VD)?",
+      "back": "**TECHNICAL:** VD is the portion of genetic variance due to dominance interactions between alleles at the SAME locus. It arises when the heterozygote phenotype is not exactly intermediate between the two homozygotes. VD does not contribute to parent-offspring resemblance (in randomly mating diploid populations) because specific allele combinations at a locus are broken up by meiosis and random mating.\n\n**ELI5:** VD is the variation caused by how two alleles at the same gene interact. If Aa doesn't fall exactly halfway between AA and aa, that deviation is VD. It matters for the individual but doesn't pass neatly to offspring because the allele pairing is randomized each generation."
+    },
+    {
+      "front": "What is epistatic variance (VI)?",
+      "back": "**TECHNICAL:** VI (also called interaction variance) is the portion of genetic variance due to non-additive interactions between alleles at DIFFERENT loci. When the effect of an allele at locus A depends on the genotype at locus B, this generates epistatic variance. Like VD, VI does not respond directly to selection because multi-locus genotype combinations are broken up by recombination and segregation each generation.\n\n**ELI5:** VI is variation caused by genes at different locations interacting. Gene A's effect changes depending on what Gene B is doing. Like how a spice tastes different depending on what other spices are in the dish. This complexity gets reshuffled each generation."
+    },
+    {
+      "front": "COMMON MISTAKE: 'Heritability is VG/VP.' Why is this misleading?",
+      "back": "**TECHNICAL:** VG/VP is BROAD-sense heritability (H^2), which includes all genetic variance (additive, dominance, epistatic). The heritability relevant for predicting evolutionary response to selection is NARROW-sense heritability: h^2 = VA/VP, which includes only the additive component. H^2 overestimates the proportion of variance that can respond to selection because VD and VI are not transmitted reliably from parent to offspring.\n\n**ELI5:** There are two versions of heritability. The one that matters for evolution is h^2 = VA/VP (just the simple additive part). The broader version H^2 = VG/VP includes gene interactions that don't pass neatly to offspring, so it overpromises how fast a trait can evolve."
+    },
+    {
+      "front": "How did East's 1916 tobacco experiment demonstrate polygenic inheritance?",
+      "back": "**TECHNICAL:** East crossed two true-breeding tobacco lines with different corolla lengths. F1 was intermediate and uniform. F2 showed greatly increased variance with a roughly continuous distribution. The pattern was inconsistent with 1-2 loci but consistent with multiple additive loci. With 2 loci, 5 phenotypic classes were predicted; with 6 loci, 13 classes -- approaching continuous. This showed that standard Mendelian genetics (many loci, additive effects) explains continuous variation without invoking blending inheritance.\n\n**ELI5:** East proved that smooth, continuous variation in flower tube length could come from regular Mendelian genes -- you just need several of them, each contributing a small amount. No special 'blending' magic required."
+    },
+    {
+      "front": "Why can't dominance variance (VD) be used to predict response to selection?",
+      "back": "**TECHNICAL:** VD arises from specific allele combinations within a locus (e.g., the heterozygote effect). During sexual reproduction, these specific combinations are broken up by segregation (meiosis) and random mating. Parents pass individual alleles to offspring, not genotype combinations. Therefore, the dominance deviations of parents are NOT transmitted to offspring, and VD does not contribute to parent-offspring resemblance or response to selection.\n\n**ELI5:** VD is like the special chemistry between two specific dance partners. When they split up and find new partners next generation, that special chemistry is gone. Only what each dancer brings individually (their additive value) carries forward."
+    },
+    {
+      "front": "If VP = 100, VA = 30, VD = 15, VI = 5, what is VE, H^2, and h^2?",
+      "back": "**TECHNICAL:** VG = VA + VD + VI = 30 + 15 + 5 = 50. VE = VP - VG = 100 - 50 = 50. Broad-sense heritability: H^2 = VG/VP = 50/100 = 0.50. Narrow-sense heritability: h^2 = VA/VP = 30/100 = 0.30. The trait is 50% genetically determined overall, but only 30% of phenotypic variance will respond to directional selection.\n\n**ELI5:** Half the variation is genetic, half environmental. But only 30% of total variation is the kind that gets passed straight from parent to child. So selection can only 'grab onto' 30% of what it sees."
+    },
+    {
+      "front": "What does it mean for a trait to be 'polygenic'?",
+      "back": "**TECHNICAL:** A polygenic trait is influenced by alleles at many loci (typically tens to hundreds or more), each contributing a small effect to the phenotype. The cumulative effect of many small-effect loci, combined with environmental variation, produces a continuous, approximately normal phenotypic distribution. Most ecologically and evolutionarily important traits (body size, growth rate, disease resistance) are polygenic.\n\n**ELI5:** Polygenic = many genes working together, each doing a little bit. Like a choir where no single voice stands out but together they create the full sound. Height, weight, intelligence -- all influenced by hundreds of genes each nudging the outcome slightly."
+    },
+    {
+      "front": "Can environmental variance create a continuous distribution even for a single-locus trait?",
+      "back": "**TECHNICAL:** Yes. Even a trait controlled by a single locus with discrete genotypic classes can show a continuous phenotypic distribution if there is sufficient environmental variance (VE). The environmental noise smooths out the discrete genotypic classes. However, the converse is the key insight: continuous distributions do NOT necessarily imply environmental causation -- polygenic inheritance alone can create them.\n\n**ELI5:** If you add enough random environmental noise to a simple either-or gene, the sharp categories get blurred into a smooth curve. But remember: a smooth curve doesn't mean the environment did it -- lots of genes can do the same thing."
+    }
+  ],
+
+  "lec56-heritability-breeders": [
+    {
+      "front": "Define broad-sense heritability (H^2) and narrow-sense heritability (h^2). Which matters for evolution?",
+      "back": "**TECHNICAL:** H^2 = VG/VP (broad-sense): proportion of phenotypic variance due to ALL genetic variance. h^2 = VA/VP (narrow-sense): proportion of phenotypic variance due to ADDITIVE genetic variance only. For predicting evolutionary response to selection, h^2 is what matters because only additive effects are reliably transmitted from parents to offspring.\n\n**ELI5:** H^2 asks 'how much is genes vs. environment?' h^2 asks 'how much of that genetic stuff actually gets passed on in a predictable way?' For evolution, only h^2 counts because the complicated gene interactions get scrambled each generation."
+    },
+    {
+      "front": "State the Breeder's Equation and define each term.",
+      "back": "**TECHNICAL:** R = h^2 x S. R = response to selection (how much the population mean changes between generations). h^2 = narrow-sense heritability (VA/VP). S = selection differential (the difference between the mean phenotype of selected parents and the mean of the whole population before selection). Units of R and S are the same as the trait units.\n\n**ELI5:** How much the average changes next generation (R) = how heritable the trait is (h^2) times how strongly you selected (S). If you pick the tallest parents (S) and height is very heritable (h^2), the kids will be taller (R)."
+    },
+    {
+      "front": "CALCULATION: Grant's finches. h^2 for beak depth = 0.65. Drought selects for larger beaks, S = 2 mm. What is the predicted response (R)?",
+      "back": "**TECHNICAL:** R = h^2 x S = 0.65 x 2 mm = 1.3 mm. The mean beak depth of the next generation is predicted to increase by 1.3 mm. Note: the response is LESS than the selection differential because h^2 < 1 -- not all the phenotypic difference among parents is due to additive genetics.\n\n**ELI5:** Parents with 2 mm bigger beaks were selected. But beaks are only 65% heritable, so kids' beaks only increase by 65% of that 2 mm = 1.3 mm. Heritability acts as a filter between what you select and what you get."
+    },
+    {
+      "front": "How is narrow-sense heritability (h^2) estimated from parent-offspring regression?",
+      "back": "**TECHNICAL:** Plot offspring phenotype (y-axis) against mid-parent phenotype (x-axis). The slope of the regression line equals h^2. This works because the slope measures how much offspring resemble parents: slope = 1.0 means offspring perfectly predict from parents (h^2 = 1), slope = 0 means offspring show no resemblance (h^2 = 0). For single-parent regression, the slope = h^2/2.\n\n**ELI5:** Graph kid trait vs. parent trait. If the dots make a steep upward line (slope near 1), the trait is very heritable -- kids look like parents. A flat line (slope 0) means parents' traits don't predict kids' traits at all. The steepness IS the heritability."
+    },
+    {
+      "front": "What is directional selection? Give the lecture example.",
+      "back": "**TECHNICAL:** Directional selection favors one extreme of the phenotypic distribution, shifting the population mean toward that extreme. It reduces variation on one side while the mean moves. Lecture example: Grant's finch drought -- drought eliminated plants producing small seeds, so only birds with larger, deeper beaks could crack remaining large seeds. The mean beak depth increased in the next generation.\n\n**ELI5:** Directional selection is like a headwind pushing the whole crowd in one direction. During the drought, only big-beaked finches survived, so the average beak size got bigger next generation."
+    },
+    {
+      "front": "What is stabilizing selection? Give the lecture example.",
+      "back": "**TECHNICAL:** Stabilizing selection favors intermediate phenotypes and selects against both extremes, reducing phenotypic variance without changing the mean. Lecture example: human birth weight -- babies with intermediate birth weight have the highest survival. Very small babies have health complications; very large babies face delivery difficulties. The optimum is near the current mean.\n\n**ELI5:** Stabilizing selection is Goldilocks selection -- not too big, not too small, just right. Babies that are average-weight survive best. Too small = health problems, too big = delivery problems. The average stays the same but extremes get weeded out."
+    },
+    {
+      "front": "What is disruptive selection? Give the lecture example.",
+      "back": "**TECHNICAL:** Disruptive (diversifying) selection favors both extremes of the phenotypic distribution and selects against intermediates, increasing phenotypic variance and potentially leading to a bimodal distribution. Lecture example: the Illinois corn oil selection experiment (started 1896) -- researchers selected for both high and low oil content, and the two lines diverged dramatically, demonstrating that variation existed in both directions.\n\n**ELI5:** Disruptive selection is when the middle ground is worst. Like if short and tall people both did fine but medium-height people struggled. The population splits into two groups moving in opposite directions."
+    },
+    {
+      "front": "CALCULATION: If R = 3 cm and S = 5 cm, what is h^2?",
+      "back": "**TECHNICAL:** R = h^2 x S, so h^2 = R/S = 3/5 = 0.60. The narrow-sense heritability is 0.60 (or 60%). This means 60% of the selection differential was transmitted to offspring, consistent with 60% of phenotypic variance being additive genetic.\n\n**ELI5:** You selected parents that were 5 cm above average, and their kids were only 3 cm above average. 3 divided by 5 = 0.6, meaning the trait is 60% heritable. The 40% 'lost' was environmental or non-additive genetic effects."
+    },
+    {
+      "front": "Dutch people have increased in average height by ~20 cm over 150 years despite high heritability for height. How is this possible?",
+      "back": "**TECHNICAL:** High heritability does NOT mean the trait cannot change with environment. Heritability is a ratio (VA/VP) measured in a specific population in a specific environment. The Dutch height increase was driven by improved nutrition, healthcare, and living conditions (environmental change), not genetic change. h^2 describes within-population variation, not between-population or between-generation differences caused by environmental shifts.\n\n**ELI5:** Heritability says 'in this group, most height differences are genetic.' But if you change everyone's diet dramatically (like better nutrition over 150 years), the whole group shifts up. Heritability tells you about differences within a group, not what happens when you change the environment for everyone."
+    },
+    {
+      "front": "COMMON MISTAKE: 'If height is 80% heritable, then 80% of your height is determined by genes.' Why is this wrong?",
+      "back": "**TECHNICAL:** h^2 = 0.80 means that 80% of the VARIATION in height WITHIN A POPULATION is attributable to additive genetic DIFFERENCES among individuals. It says nothing about how much of any individual's height is 'due to genes.' Heritability is a population-level statistic about variance, not a statement about individuals. In a different environment, the same genes might produce very different heights.\n\n**ELI5:** Saying height is 80% heritable means 'most of the reason people in this group differ in height is genetic.' It does NOT mean 80% of YOUR height came from genes and 20% from food. You can't split an individual's trait into gene percent and environment percent."
+    },
+    {
+      "front": "What is the selection differential (S) and how is it calculated?",
+      "back": "**TECHNICAL:** S = mean phenotype of selected parents - mean phenotype of the entire population before selection. It measures the intensity of selection. A larger S means more intense selection (greater difference between selected and unselected individuals). S is also called the 'reach' of selection -- how far the parents are from the population average.\n\n**ELI5:** S is the gap between the average of the chosen parents and the average of everyone. If average height is 170 cm and you only let 180 cm+ people breed, S = 10 cm. Bigger gap = stronger selection."
+    },
+    {
+      "front": "What does the Illinois corn oil experiment (1896) demonstrate about quantitative genetics?",
+      "back": "**TECHNICAL:** The experiment selected for both high and low oil content in corn kernels starting in 1896. After 100+ generations, the lines diverged enormously -- high-oil line reached ~20% oil, low-oil line dropped to ~1%. This demonstrates: (1) enormous standing genetic variation for a quantitative trait, (2) response to selection persists for many generations, (3) disruptive selection can produce dramatic divergence, (4) quantitative traits can respond in both directions.\n\n**ELI5:** Scientists picked the oiliest corn kernels to plant every year (and the least oily separately) since 1896. After 100+ years, one line has 20x more oil than the other. Shows that a huge amount of hidden genetic variation existed for selection to work with."
+    },
+    {
+      "front": "If h^2 = 0, what happens when you apply selection (positive S)?",
+      "back": "**TECHNICAL:** R = h^2 x S = 0 x S = 0. There is no evolutionary response to selection. This means either there is no additive genetic variance (VA = 0, all variation is environmental or non-additive), or there is no genetic variation at all. Selection changes who reproduces, but offspring are no different from the pre-selection population because the selected differences were entirely non-heritable.\n\n**ELI5:** If h^2 = 0, picking the tallest parents doesn't produce taller kids. All the height differences were due to environment (better soil, more water, etc.), and environment isn't inherited. The next generation resets to average."
+    },
+    {
+      "front": "Why does the response to selection (R) often decline over many generations of continued selection?",
+      "back": "**TECHNICAL:** Continued directional selection erodes additive genetic variance (VA) as favorable alleles approach fixation. As VA decreases, h^2 decreases, and R declines even if S remains constant (R = h^2 x S). Additionally, mutation-selection balance may reach equilibrium, natural selection may oppose artificial selection on correlated traits, and genetic drift in finite populations reduces variation. Eventually, a selection plateau is reached.\n\n**ELI5:** Selection uses up the genetic variation it works with. Once most individuals have the 'good' alleles, there's less and less room for improvement. It's like squeezing a sponge -- at first you get a lot of water, but eventually the sponge is mostly dry."
+    },
+    {
+      "front": "CALCULATION: A breeder selects the top 10% of a herd for milk production. Mean of selected cows = 12,000 kg, population mean = 10,000 kg, h^2 = 0.35. What is the expected response?",
+      "back": "**TECHNICAL:** S = 12,000 - 10,000 = 2,000 kg. R = h^2 x S = 0.35 x 2,000 = 700 kg. The next generation is predicted to produce, on average, 10,700 kg of milk (a 7% improvement over the current population mean).\n\n**ELI5:** Selected moms produce 2,000 kg more than average. But milk production is only 35% heritable, so the daughters gain 35% of that advantage = 700 kg more than the old average."
+    }
+  ],
+
+  "lec56-reaction-norms": [
+    {
+      "front": "What is phenotypic plasticity?",
+      "back": "**TECHNICAL:** Phenotypic plasticity is the ability of a single genotype to produce different phenotypes in response to different environmental conditions. The phenotypic change occurs within an individual's lifetime (or developmental trajectory) without any change in DNA sequence. It is a property of the genotype, and the capacity for plasticity is itself genetically determined and heritable.\n\n**ELI5:** Same DNA, different result depending on the environment. Like how one caterpillar species can look like a flower in spring or a twig in summer -- same genes, different look depending on what it eats. The DNA didn't change, the environment flipped a switch."
+    },
+    {
+      "front": "Is phenotypic plasticity evolution? Why or why not?",
+      "back": "**TECHNICAL:** No. Phenotypic plasticity is NOT evolution because it does not involve a change in allele frequencies in the population. It is an individual-level, within-generation response to the environment. However, the capacity for plasticity (the reaction norm itself) is genetically determined and CAN evolve by natural selection if there is heritable variation in plasticity among genotypes.\n\n**ELI5:** No. A plant growing taller in more sunlight isn't evolution -- its DNA didn't change, and the population's gene mix didn't change. But whether a plant species CAN adjust to different sunlight levels -- that ability itself can evolve."
+    },
+    {
+      "front": "What is a reaction norm? Who coined the term?",
+      "back": "**TECHNICAL:** A reaction norm is the set of phenotypes a single genotype can produce across a range of environmental conditions. Graphically, it is a line or curve plotting phenotype (y-axis) against environment (x-axis) for a given genotype. The term was coined by Richard Woltereck in 1909, based on experiments with Daphnia head shape across different food concentrations.\n\n**ELI5:** A reaction norm is a genotype's 'response curve' -- a graph showing what phenotype it produces in each environment. Woltereck invented the term in 1909 by graphing how the same water flea genotype grew different head shapes depending on food levels."
+    },
+    {
+      "front": "What is G x E (genotype-by-environment) interaction?",
+      "back": "**TECHNICAL:** G x E interaction occurs when different genotypes respond differently to the same environmental change. Graphically, it appears as non-parallel reaction norms (lines crossing or diverging). If all genotypes respond identically to environmental change (parallel reaction norms), there is no G x E. G x E means the 'best' genotype depends on the environment.\n\n**ELI5:** G x E means different genotypes react differently to the same environment change. Genotype A might thrive at high altitude but struggle at sea level, while Genotype B does the opposite. Who 'wins' depends on where they are."
+    },
+    {
+      "front": "What is polyphenism? Give THREE lecture examples.",
+      "back": "**TECHNICAL:** Polyphenism is a specific type of phenotypic plasticity where a single genotype produces two or more discrete (distinct) phenotypic morphs in response to environmental cues (as opposed to continuous plastic responses). Lecture examples: (1) Daphnia producing neck teeth/helmets in response to predator chemical cues. (2) Aphids producing winged vs. wingless morphs depending on crowding. (3) Nemoria caterpillars developing as catkin-mimics in spring or twig-mimics in summer depending on diet.\n\n**ELI5:** Polyphenism is when one genotype can become two completely different-looking forms based on the environment. Water fleas grow armor spines when they smell predators. Aphids grow wings when it's crowded. Caterpillars look like flowers in spring or twigs in summer. Same genes, different costumes."
+    },
+    {
+      "front": "Describe the common garden experiment and its purpose. Give the lecture example.",
+      "back": "**TECHNICAL:** A common garden experiment grows individuals from different populations (or genotypes) in the same (common) environment to determine whether observed phenotypic differences are genetic or environmental. If differences persist in the common garden, they are genetic. The lecture example: Clausen, Keck & Hiesey grew Achillea (yarrow) from different elevations (Mather vs. Stanford) in common gardens. Plants from different elevations maintained height differences, demonstrating genetic differentiation.\n\n**ELI5:** Grow plants from different places in the SAME garden. If they still look different, the differences must be in their genes (since the environment is now identical). Clausen's team grew mountain yarrow and valley yarrow side by side -- the mountain ones stayed short, proving the difference was genetic."
+    },
+    {
+      "front": "What is a reciprocal transplant experiment and how does it differ from a common garden?",
+      "back": "**TECHNICAL:** A reciprocal transplant takes individuals from each population and moves them to the other's environment (AND keeps some in their home environment). This tests both genetic differences AND plasticity simultaneously. Unlike a common garden (one shared environment), reciprocal transplant tests performance in multiple environments. Clausen, Keck & Hiesey also performed reciprocal transplants across elevation gradients with Achillea.\n\n**ELI5:** Common garden = bring everyone to one place. Reciprocal transplant = swap people between places. If mountain plants do well in the valley and vice versa, the differences were just plastic. If mountain plants struggle in the valley, they're genetically adapted to mountains."
+    },
+    {
+      "front": "Who were Clausen, Keck, and Hiesey, and what did they demonstrate?",
+      "back": "**TECHNICAL:** Clausen, Keck, and Hiesey were botanists who conducted classic common garden and reciprocal transplant experiments with Achillea (yarrow) and other plant species along an elevation gradient in California (coast to Sierra Nevada). They demonstrated that: (1) populations from different elevations are genetically differentiated (local adaptation), and (2) phenotypic plasticity also contributes to observed differences. Their work is foundational to understanding the interplay of genetics and environment in natural populations.\n\n**ELI5:** Three scientists grew the same species of plant from sea level, mid-elevation, and mountaintop in each other's gardens. They proved that plants from different elevations had genuinely different genes (not just different environments making them look different), though the environment also mattered."
+    },
+    {
+      "front": "How does the Daphnia neck teeth/helmet example illustrate adaptive phenotypic plasticity?",
+      "back": "**TECHNICAL:** Daphnia (water fleas) can develop defensive neck teeth or helmet-like structures when they detect chemical cues (kairomones) from predators. In predator-free environments, the same genotype develops without these structures, saving the developmental cost. This is adaptive plasticity because: (1) the plastic response matches the environmental challenge, (2) the defense is only produced when needed, and (3) producing it only when necessary avoids the cost of permanent defense.\n\n**ELI5:** Water fleas grow armor only when predators are nearby (they can smell them). When predators leave, they stop making armor to save energy. It's like only wearing a helmet when you expect rocks to fall -- smart and efficient."
+    },
+    {
+      "front": "Can natural selection act on reaction norms? Explain.",
+      "back": "**TECHNICAL:** Yes. If there is heritable genetic variation in reaction norms (i.e., genotypes differ in their plasticity), and if certain reaction norms confer higher fitness than others, then natural selection can shape the form of the reaction norm. Selection can favor more plasticity, less plasticity, or specific patterns of response to particular environmental cues.\n\n**ELI5:** Yes! If some genotypes are better at adjusting to the environment than others, and that ability helps them survive and reproduce, then the ability to be flexible (or inflexible) itself evolves. Evolution can tune the volume knob on plasticity."
+    },
+    {
+      "front": "What do non-parallel reaction norms indicate?",
+      "back": "**TECHNICAL:** Non-parallel reaction norms indicate G x E interaction: different genotypes respond differently to the same environmental gradient. When reaction norms cross, it means the rank order of genotype fitness changes across environments (no single genotype is best everywhere). This is important because it can maintain genetic variation in variable environments.\n\n**ELI5:** If the graph lines for different genotypes cross, it means who's 'best' depends on the environment. Genotype A beats B in one setting, but B beats A in another. Nobody wins everywhere, which keeps both types around."
+    },
+    {
+      "front": "Why is it important to distinguish phenotypic plasticity from genetic adaptation?",
+      "back": "**TECHNICAL:** Because they have different evolutionary implications. Phenotypic plasticity allows rapid phenotypic adjustment within a generation without genetic change, but it does NOT represent evolution. Genetic adaptation involves changes in allele frequencies across generations and represents true evolution. Confusing them leads to incorrect conclusions about whether a population has evolved. Common garden experiments are needed to distinguish the two.\n\n**ELI5:** Plasticity = individuals adjusting (no evolution). Adaptation = genes changing across generations (real evolution). If we see plants in sunny spots growing taller, we need to check: is it because sunny plants grow taller (plasticity) or because tall-gene plants moved to sunny spots (adaptation)? The answer matters hugely for predicting what happens next."
+    },
+    {
+      "front": "Describe the Nemoria caterpillar polyphenism in detail.",
+      "back": "**TECHNICAL:** Nemoria arizonaria caterpillars display a striking polyphenism: individuals hatching in spring, when oak catkins (flowers) are present, develop as catkin-mimics (resembling the catkins they feed on). Individuals of the same genotype hatching in summer, after catkins have fallen and only twigs are available, develop as twig-mimics. The cue appears to be dietary (catkin chemical compounds in spring food). This is adaptive because it provides camouflage in the specific seasonal environment.\n\n**ELI5:** Same caterpillar species looks like a flower in spring and a stick in summer. If it eats flower parts, it develops to look like flowers. If it eats leaves/twigs, it develops to look like a twig. Same DNA, different disguise depending on the season's menu."
+    }
+  ],
+
+  "lec7-review-empirical": [
+    {
+      "front": "What are the two main approaches to studying natural selection empirically?",
+      "back": "**TECHNICAL:** (1) Observational approach: measure phenotypic variation, fitness variation, and heritability in natural populations to document selection in action (e.g., correlating beak size with survival during drought). (2) Experimental approach: directly manipulate traits or environments and measure fitness consequences (e.g., clay model experiments, reciprocal transplants). The strongest evidence combines both approaches.\n\n**ELI5:** Two ways to study natural selection: (1) Watch nature and measure who survives (observational), or (2) Set up controlled experiments to test cause-and-effect (experimental). Best science uses both."
+    },
+    {
+      "front": "Why is it important to verify R = h^2 x S in natural populations?",
+      "back": "**TECHNICAL:** Verifying R = h^2 x S confirms that observed phenotypic changes are actually due to natural selection acting on heritable variation (evolution), not just environmental effects, plasticity, or statistical artifacts. Without verifying all three components (R, h^2, S), you cannot distinguish true evolutionary response from non-genetic phenotypic change. It's the complete chain of evidence for selection-driven evolution.\n\n**ELI5:** You need to prove the WHOLE chain: (1) certain types survived better (S), (2) the trait runs in families (h^2), and (3) the next generation actually shifted as predicted (R). Missing any step means you can't be sure evolution really happened."
+    },
+    {
+      "front": "What is the problem of correlated traits when studying natural selection on a specific trait?",
+      "back": "**TECHNICAL:** Phenotypic traits are often genetically and phenotypically correlated with other traits. If beak depth is correlated with body size, and we observe selection on 'beak depth,' the actual target of selection might be body size (with beak depth changing as a correlated response). Without multivariate analyses that control for correlations, we cannot identify the TRUE target of selection.\n\n**ELI5:** If big beaks come with big bodies, and big-bodied birds survive the drought, is selection really about beak size or body size? They come as a package deal, making it hard to figure out which trait is actually being selected."
+    },
+    {
+      "front": "What type of evidence would distinguish direct selection on a trait from a correlated response?",
+      "back": "**TECHNICAL:** Multivariate selection analysis (Lande & Arnold approach) uses multiple regression to estimate selection gradients on individual traits while statistically controlling for other correlated traits. Also, experimental manipulation of a single trait (holding others constant) can isolate direct selection. If beak depth is manipulated independently of body size and fitness still changes, beak depth is a direct target.\n\n**ELI5:** Use statistics or experiments to untangle correlated traits. Statistically hold body size constant and ask: does beak size still predict survival? Or physically change just beak size and see what happens. This separates the direct target from tag-alongs."
+    },
+    {
+      "front": "Why must natural selection studies measure fitness directly rather than just phenotypic change?",
+      "back": "**TECHNICAL:** Phenotypic change between generations can result from environmental change (plasticity), genetic drift, or gene flow -- not just selection. Measuring fitness (survival, reproduction) directly links specific phenotypes to specific fitness advantages. Without fitness data, you cannot calculate the selection differential (S) or distinguish selection from other causes of change.\n\n**ELI5:** Just seeing the average change doesn't prove selection caused it. Maybe the weather changed, or random luck was involved. You need to actually show that certain types survived/reproduced better, not just that the average shifted."
+    },
+    {
+      "front": "In the Grant finch studies, what evidence confirmed that beak depth was under directional selection during drought?",
+      "back": "**TECHNICAL:** The Grants documented: (1) S -- birds that survived the 1977 drought had significantly deeper beaks than the pre-drought average. (2) h^2 -- parent-offspring regression showed high heritability for beak depth (~0.65). (3) R -- the mean beak depth of the next generation (offspring of survivors) was larger than the pre-drought generation, and the observed R matched the predicted R = h^2 x S. All three components of the Breeder's Equation were verified.\n\n**ELI5:** The Grants proved the full chain: big-beaked birds survived the drought (S), beak size is inherited (h^2 = 0.65), and the next generation's beaks were bigger by exactly the amount the math predicted (R). Textbook proof of natural selection."
+    },
+    {
+      "front": "What makes a natural selection study 'empirical' vs. 'theoretical'?",
+      "back": "**TECHNICAL:** An empirical study collects actual data from real populations -- measuring phenotypes, fitness, heritability, and evolutionary response through observation or experiment. A theoretical study uses mathematical models to predict outcomes under different assumptions (e.g., population genetics models). Empirical studies test whether real-world data match theoretical predictions. Lecture 7 focuses on the empirical side.\n\n**ELI5:** Empirical = going outside and measuring real animals. Theoretical = doing math at a desk to predict what should happen. The best science checks if the math matches reality."
+    },
+    {
+      "front": "Why is documenting selection in a single generation not enough to demonstrate adaptive evolution?",
+      "back": "**TECHNICAL:** Selection in a single generation only demonstrates differential survival/reproduction (the S component). For adaptive evolution, you need to show that the trait is heritable (h^2 > 0) and that the response (R) actually occurred in the next generation. Selection on non-heritable variation causes no evolutionary change. Additionally, selection might fluctuate in direction across years, producing no net change.\n\n**ELI5:** Showing that big birds survived one drought proves there WAS selection, but not that evolution happened. You also need to show (1) the trait is inherited and (2) the next generation actually shifted. One selection event could also be reversed next year."
+    }
+  ],
+
+  "lec7-beach-mice": [
+    {
+      "front": "What organism is the beach mouse study system, and what is the key phenotypic variation?",
+      "back": "**TECHNICAL:** The study organism is Peromyscus polionotus (oldfield mouse). Mainland populations have dark dorsal fur for camouflage on dark soil. Beach-dwelling populations (Gulf coast and Atlantic coast) have evolved lighter fur for camouflage on white sand beaches. The light phenotype has evolved independently in geographically separated beach populations.\n\n**ELI5:** Oldfield mice come in dark (mainland) and light (beach) versions. Dark mice live on dark soil, light mice live on white sand. The light coloring evolved separately on the Gulf coast and Atlantic coast beaches."
+    },
+    {
+      "front": "What genes control light coat color in Gulf coast beach mice?",
+      "back": "**TECHNICAL:** In Gulf coast beach mice (P. polionotus), light coloration is controlled primarily by mutations in two genes: Mc1r (melanocortin-1 receptor) and Agouti. Specific alleles at these loci reduce melanin deposition, producing lighter fur. This was demonstrated by Hoekstra and colleagues through genetic mapping and functional studies.\n\n**ELI5:** Two genes work together to make Gulf coast beach mice light-colored: Mc1r and Agouti. They're like two dimmer switches that both turn down the pigment to make fur lighter."
+    },
+    {
+      "front": "What genes control light coat color in Atlantic coast beach mice, and why is this significant?",
+      "back": "**TECHNICAL:** Atlantic coast beach mice achieved the SAME light phenotype through DIFFERENT genes than Gulf coast populations (Steiner et al. 2009). This is significant because it demonstrates parallel evolution -- the same phenotypic outcome (light fur) evolved independently via different genetic mechanisms in different populations facing the same selective pressure (predation on pale sandy substrate).\n\n**ELI5:** Atlantic beach mice are also light-colored, but they used DIFFERENT genes to get there! Same result, different recipe. That's remarkable -- evolution found two separate solutions to the same problem."
+    },
+    {
+      "front": "What is parallel evolution, and how do beach mice demonstrate it?",
+      "back": "**TECHNICAL:** Parallel evolution is the independent evolution of similar phenotypes in closely related lineages through different genetic mechanisms. Beach mice demonstrate this because Gulf coast and Atlantic coast populations both evolved light coloration (same phenotype) independently, but through mutations in different genes (different genetic basis). Steiner et al. 2009 confirmed this with genetic analysis.\n\n**ELI5:** Parallel evolution = related species solving the same problem independently. Two beach mouse populations both became light-colored but used different genes to do it. Like two students getting the same right answer using different methods."
+    },
+    {
+      "front": "Describe the clay model experiment (Vignieri et al. 2010) and what it demonstrated.",
+      "back": "**TECHNICAL:** Vignieri et al. (2010) placed light and dark plasticine (clay) mouse models on both light (beach) and dark (mainland) substrates. They measured attack marks from predators (birds, mammals). Mismatched models (dark on light substrate, light on dark substrate) received significantly more predator attacks than matched models. This directly demonstrated that coat color functions as camouflage and that mismatched coloration imposes a fitness cost via predation.\n\n**ELI5:** Scientists made fake mice out of clay -- some light, some dark -- and left them on beaches and dark soil. Predators attacked the ones that didn't blend in WAY more. Proof that color matching saves your life and mismatching gets you eaten."
+    },
+    {
+      "front": "What is the difference between parallel evolution and convergent evolution?",
+      "back": "**TECHNICAL:** Parallel evolution: similar phenotypes evolve independently in closely related lineages, often (but not always) through different genetic mechanisms. Convergent evolution: similar phenotypes evolve independently in distantly related lineages (e.g., wings in birds vs. bats). Some definitions distinguish them by whether the same or different genes are involved. The beach mice (Peromyscus populations) show parallel evolution; the White Sands lizards show convergent evolution (different species, different Mc1r mutations).\n\n**ELI5:** Parallel = close relatives evolving the same trait independently (like siblings both deciding to dye their hair). Convergent = unrelated species evolving the same trait (like birds and bats both evolving wings). Similar end result, different family trees."
+    },
+    {
+      "front": "How do White Sands lizards relate to the beach mice story?",
+      "back": "**TECHNICAL:** In White Sands, New Mexico, multiple lizard species have independently evolved lighter coloration on white gypsum sand, similar to beach mice on pale substrates. Crucially, different lizard species achieved lighter color through DIFFERENT mutations in the Mc1r gene. This demonstrates convergent evolution at the phenotypic level with independent genetic solutions, paralleling the beach mice story but across more distantly related taxa.\n\n**ELI5:** In New Mexico's white sand dunes, several lizard species all became light-colored independently, each using different DNA changes in the same gene (Mc1r). It's the same theme as beach mice: same survival problem, same general solution, different genetic specifics."
+    },
+    {
+      "front": "Who is the primary researcher associated with the beach mice studies?",
+      "back": "**TECHNICAL:** Hopi Hoekstra (Harvard University) is the primary researcher. Her lab has conducted extensive work on the genetics of adaptive coloration in Peromyscus, identifying the specific genes (Mc1r, Agouti) and mutations responsible for light coloration, and demonstrating the fitness consequences of color matching through experimental studies.\n\n**ELI5:** Hopi Hoekstra is the scientist who figured out which genes make beach mice light and proved that the color really helps them hide from predators. She's the leading expert on how mouse color evolves."
+    },
+    {
+      "front": "What is the Mc1r gene and what does it do?",
+      "back": "**TECHNICAL:** Mc1r (melanocortin-1 receptor) is a gene encoding a receptor on melanocyte cells that regulates the switch between eumelanin (dark pigment) and pheomelanin (light/yellow pigment) production. Loss-of-function or reduced-function Mc1r alleles typically result in lighter coloration because melanocytes produce less eumelanin. Mc1r is involved in color variation across many vertebrate species (mice, lizards, birds, humans).\n\n**ELI5:** Mc1r is a gene that acts like a pigment dial. Turn it up = dark color. Turn it down = light color. It's been used repeatedly across many different animals to evolve lighter or darker coloring."
+    },
+    {
+      "front": "What does the beach mice system teach us about the predictability of evolution?",
+      "back": "**TECHNICAL:** The beach mouse system shows that evolution is predictable at the phenotypic level (light color evolves on light substrates) but less predictable at the genetic level (different genes/mutations achieve the same outcome in different populations). Natural selection consistently produces the adaptive phenotype, but the molecular path to that phenotype can vary. This is a key insight about the interplay of constraint and contingency in evolution.\n\n**ELI5:** Evolution always 'figures out' that light mice need light fur on light sand -- that part is predictable. But HOW it gets there genetically is like taking different roads to the same destination. The outcome is predictable, the route is not."
+    },
+    {
+      "front": "Why were Gulf coast and Atlantic coast beach populations studied separately?",
+      "back": "**TECHNICAL:** The Gulf and Atlantic beach populations are geographically separated and represent independent colonization events of beach habitats from dark-adapted mainland ancestors. By studying them separately, researchers could determine whether the same or different genetic mechanisms produced convergent light phenotypes, directly testing whether evolution repeats itself at the molecular level.\n\n**ELI5:** They're separate experiments run by nature. Each beach population independently evolved from dark mainland mice. By comparing them, scientists could ask: when evolution solves the same problem twice, does it use the same solution or different ones?"
+    },
+    {
+      "front": "What evidence from the clay model experiment specifically shows that selection is acting through predation?",
+      "back": "**TECHNICAL:** (1) Models that were mismatched to their substrate (dark on light sand, light on dark soil) received significantly more predator attacks (bite marks, claw marks) than substrate-matched models. (2) The attack marks came from identifiable predators (raptors, snakes, mammals). (3) The effect was reciprocal: light models were attacked more on dark substrate AND dark models were attacked more on light substrate. This rules out any bias toward one color being inherently more attacked.\n\n**ELI5:** Fake mice that didn't match their background got attacked way more than ones that blended in. This happened BOTH ways -- dark fakes on white sand AND white fakes on dark soil got targeted. That proves it's about camouflage matching, not just one color being unlucky."
+    },
+    {
+      "front": "What role does the Agouti gene play in beach mouse coloration?",
+      "back": "**TECHNICAL:** The Agouti gene encodes a signaling protein (Agouti Signaling Protein) that acts as an antagonist of Mc1r. When Agouti is expressed, it blocks Mc1r signaling, causing melanocytes to switch from eumelanin (dark) to pheomelanin (light pigment) production. In Gulf coast beach mice, specific Agouti alleles contribute to the light ventral (belly) coloration. Agouti and Mc1r work together to produce the overall light phenotype.\n\n**ELI5:** Agouti is a gene that blocks the 'make dark pigment' signal. When it's active, fur grows lighter. In beach mice, it works with Mc1r to create the full light-colored look. Think of Mc1r as the dark paint factory and Agouti as the person who keeps turning the factory off."
+    }
+  ]
+}

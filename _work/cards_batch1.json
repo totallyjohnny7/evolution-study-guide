@@ -1,0 +1,538 @@
+{
+  "lec1-intro-evolution": [
+    {
+      "front": "What is the precise definition of biological evolution?",
+      "back": "**TECHNICAL:** Evolution is the change in inherited (heritable) traits within a population across successive generations. It occurs at the population level, not the individual level. It encompasses changes in allele frequencies over time.\n\n**ELI5:** Imagine a jar of mixed jellybeans. Each generation, the mix of colors changes slightly. Evolution is like the jar's color mix shifting over time -- no single jellybean changes color, but the whole jar looks different after many rounds."
+    },
+    {
+      "front": "Why is evolution considered the unifying theory of biology?",
+      "back": "**TECHNICAL:** Evolution connects all subdisciplines of biology -- genetics, ecology, physiology, anatomy, development, behavior -- under one explanatory framework. Every biological phenomenon, from molecular to ecosystem level, can be understood through the lens of evolutionary processes (natural selection, drift, mutation, migration).\n\n**ELI5:** Evolution is like gravity for biology. Just like gravity explains why balls fall AND why planets orbit AND why tides happen, evolution explains why bacteria resist drugs AND why flowers are colorful AND why whales have tiny leg bones. One idea ties everything together."
+    },
+    {
+      "front": "Who said 'Nothing in biology makes sense except in the light of evolution' and when?",
+      "back": "**TECHNICAL:** Theodosius Dobzhansky, in a 1973 essay published in The American Biology Teacher. This statement encapsulates evolution's role as the central organizing principle of the biological sciences.\n\n**ELI5:** A famous biologist named Dobzhansky said in 1973 that trying to understand biology without evolution is like trying to understand a movie by watching random scenes out of order -- nothing makes sense until you see the whole story."
+    },
+    {
+      "front": "What is a scientific theory, and how does it differ from the everyday use of 'theory'?",
+      "back": "**TECHNICAL:** A scientific theory is a well-substantiated, testable explanation of natural phenomena supported by a large body of evidence from multiple independent lines of inquiry. It has predictive power and has withstood repeated attempts at falsification. It is NOT a guess or hypothesis. Examples: theory of gravity, germ theory, evolutionary theory.\n\n**ELI5:** In everyday talk, 'theory' means a guess ('I have a theory about who stole the cookies'). In science, a theory is more like a proven instruction manual -- it's been tested thousands of times and keeps working. Evolution is a theory like gravity is a theory -- extremely well-proven."
+    },
+    {
+      "front": "How does evolution apply to agriculture?",
+      "back": "**TECHNICAL:** Evolutionary principles guide selective breeding of crops and livestock for desirable traits (yield, disease resistance, drought tolerance). Understanding evolution also helps manage pest resistance to pesticides and herbicides through resistance management strategies.\n\n**ELI5:** Farmers have been using evolution for thousands of years without knowing it -- picking the biggest corn ears to plant next year is basically guiding evolution. It also explains why bugs keep becoming resistant to pesticides."
+    },
+    {
+      "front": "How does evolution apply to medicine?",
+      "back": "**TECHNICAL:** Evolutionary medicine explains antibiotic resistance (natural selection favoring resistant bacteria), virulence evolution, cancer as somatic evolution, pharmacogenomics (population-level drug response variation), and vulnerability to diseases due to evolutionary mismatch with modern environments.\n\n**ELI5:** When you take antibiotics but don't finish the full course, the toughest bacteria survive and multiply. That's evolution happening inside your body. Doctors need to understand evolution to stay one step ahead of germs."
+    },
+    {
+      "front": "How does evolution apply to conservation biology?",
+      "back": "**TECHNICAL:** Conservation biologists use evolutionary principles to maintain genetic diversity in endangered populations, manage inbreeding depression, identify evolutionarily significant units (ESUs) for protection, and predict adaptive potential to environmental change (e.g., climate change).\n\n**ELI5:** If all the cheetahs in the world are almost genetically identical (which they nearly are), one disease could wipe them all out. Conservation scientists use evolution knowledge to keep populations genetically healthy, like making sure a sports team has players with different skills."
+    },
+    {
+      "front": "How does evolution apply to immunology and epidemiology?",
+      "back": "**TECHNICAL:** Pathogen evolution drives antigenic variation (flu, HIV), necessitating updated vaccines. Epidemiological modeling incorporates evolutionary dynamics to predict outbreaks, track strain emergence, and design surveillance programs. The immune system itself is shaped by coevolutionary arms races with pathogens.\n\n**ELI5:** Germs are constantly evolving to dodge our immune system, like a burglar learning new tricks. Scientists who study diseases have to track how germs evolve to predict the next outbreak and make vaccines that actually work."
+    },
+    {
+      "front": "When was On the Origin of Species published, and by whom?",
+      "back": "**TECHNICAL:** On the Origin of Species by Means of Natural Selection was published by Charles Darwin on November 24, 1859. It presented the theory of evolution by natural selection with extensive supporting evidence from biogeography, paleontology, embryology, and morphology.\n\n**ELI5:** Charles Darwin published his big book in 1859. It was like dropping a bombshell in science -- he showed that all living things are related and change over time through a process called natural selection."
+    },
+    {
+      "front": "MISCONCEPTION: Do individuals evolve?",
+      "back": "**TECHNICAL:** No. Individuals do NOT evolve. An individual's genotype is fixed at conception (barring somatic mutations). Evolution is a population-level phenomenon -- it is the change in allele frequencies within a population over generations. An individual can be selected for or against, but the individual itself does not evolve.\n\n**ELI5:** You don't evolve during your lifetime. You're born with your genes and you keep them. Evolution is like a classroom where each year the mix of students changes -- no single student transforms, but the class as a whole shifts over time."
+    },
+    {
+      "front": "MISCONCEPTION: Is evolution progressive or goal-directed?",
+      "back": "**TECHNICAL:** No. Evolution has no inherent direction, goal, or purpose. It does not trend toward 'improvement' or 'higher' organisms. Natural selection favors traits that increase relative fitness in the CURRENT environment. What is adaptive today may be maladaptive tomorrow. There is no teleology in evolutionary processes.\n\n**ELI5:** Evolution isn't climbing a ladder toward perfection. It's more like water flowing downhill -- it just goes wherever the ground takes it right now. Bacteria aren't 'lower' than humans; they're incredibly well-adapted to their own world."
+    },
+    {
+      "front": "What is the difference between population-level and individual-level change?",
+      "back": "**TECHNICAL:** Individual-level change (e.g., muscle growth, tanning, learning) is phenotypic plasticity -- non-heritable modification within a single lifetime. Population-level change is evolution -- heritable shifts in allele/trait frequencies across generations due to selection, drift, mutation, or gene flow.\n\n**ELI5:** If you lift weights and get strong, that's YOU changing (not evolution). But if over many generations, a whole group of people tends to be born stronger because strong people survived better, THAT's evolution. The difference: one is temporary and personal, the other is permanent and population-wide."
+    },
+    {
+      "front": "List at least 5 applied fields where evolutionary thinking is essential.",
+      "back": "**TECHNICAL:** (1) Agriculture -- crop/livestock breeding, pest resistance management. (2) Medicine -- antibiotic resistance, cancer biology, evolutionary medicine. (3) Conservation -- genetic diversity management, ESU identification. (4) Immunology -- vaccine design, immune system evolution. (5) Epidemiology -- disease surveillance, pathogen tracking. Also: forensics, bioinformatics, biotechnology, ecology.\n\n**ELI5:** Evolution matters for: (1) growing better food, (2) fighting superbugs at the hospital, (3) saving endangered animals, (4) making flu shots, and (5) tracking disease outbreaks. It's basically everywhere in biology."
+    },
+    {
+      "front": "Why is evolution compared to gravity as a scientific theory?",
+      "back": "**TECHNICAL:** Both are scientific theories supported by overwhelming evidence from multiple independent lines of inquiry. Both have immense predictive power. Both explain observable phenomena (falling objects / biodiversity patterns). Neither is 'just a guess.' The comparison highlights that calling evolution 'just a theory' misunderstands what 'theory' means in science.\n\n**ELI5:** Nobody says 'gravity is just a theory, maybe things will float tomorrow.' Evolution has the same level of proof. Saying it's 'just a theory' is like saying gravity is 'just a theory' -- technically true in science-speak, but it's one of the most proven ideas we have."
+    }
+  ],
+  "lec1-flu-case-study": [
+    {
+      "front": "What is the function of hemagglutinin (HA) in influenza?",
+      "back": "**TECHNICAL:** Hemagglutinin (HA) is a surface glycoprotein on the influenza virion that binds to sialic acid residues on host cell surface receptors, mediating viral attachment and entry into the host cell via receptor-mediated endocytosis. It is the primary target of neutralizing antibodies.\n\n**ELI5:** HA is like a key on the outside of the flu virus. It fits into a lock on your cells to break in. Your immune system tries to recognize this key, which is why the virus keeps changing it."
+    },
+    {
+      "front": "What is the function of neuraminidase (NA) in influenza?",
+      "back": "**TECHNICAL:** Neuraminidase (NA) is a surface enzyme that cleaves sialic acid residues, enabling release of newly assembled virions from the host cell surface. It prevents viral self-aggregation and facilitates spread to new cells. Drugs like oseltamivir (Tamiflu) inhibit NA.\n\n**ELI5:** NA is like a pair of scissors. After the virus copies itself inside your cell, NA cuts the new viruses free so they can escape and infect more cells. Tamiflu works by jamming those scissors."
+    },
+    {
+      "front": "What is antigenic drift?",
+      "back": "**TECHNICAL:** Antigenic drift is the gradual accumulation of point mutations in genes encoding surface antigens (primarily HA and NA) during viral replication. Because RNA polymerase lacks proofreading, errors accumulate over time, causing incremental changes in antigenic properties. This is the primary reason for seasonal flu epidemics.\n\n**ELI5:** Antigenic drift is like a person slowly changing their disguise -- a new hat here, different glasses there. Each year the flu changes just enough that your immune system doesn't fully recognize it anymore."
+    },
+    {
+      "front": "What is antigenic shift (reassortment)?",
+      "back": "**TECHNICAL:** Antigenic shift is the abrupt, major change in influenza surface antigens resulting from reassortment -- the exchange of entire RNA genome segments between two or more different influenza strains co-infecting the same host cell. This produces novel viral subtypes to which the population has little or no immunity, potentially causing pandemics.\n\n**ELI5:** Antigenic shift is like two people swapping entire outfits instead of just accessories. When two different flu viruses infect the same cell, they can mix and match their gene pieces to create a totally new virus nobody's immune system has ever seen. That's how pandemics start."
+    },
+    {
+      "front": "What is the difference between antigenic drift and antigenic shift?",
+      "back": "**TECHNICAL:** Drift = gradual point mutations in HA/NA genes during replication (small changes, seasonal epidemics). Shift = sudden reassortment of entire RNA segments between different strains co-infecting one cell (major changes, potential pandemics). Drift is continuous; shift is episodic. Drift affects existing subtypes; shift can create entirely new subtypes.\n\n**ELI5:** Drift = slowly repainting a car one panel at a time (it's still recognizable but a bit different). Shift = swapping the entire engine, doors, and hood between two different cars to make a Frankenstein car nobody recognizes."
+    },
+    {
+      "front": "How many RNA segments does the influenza genome contain?",
+      "back": "**TECHNICAL:** The influenza A genome consists of 8 single-stranded, negative-sense RNA segments encoding approximately 13 proteins (some segments encode multiple proteins through alternative splicing or overlapping reading frames). The segmented nature enables reassortment.\n\n**ELI5:** The flu's instruction manual comes in 8 separate booklets (not one big book). Because they're separate, two different flu viruses in the same cell can shuffle booklets like trading cards -- that's what makes the flu so good at reinventing itself."
+    },
+    {
+      "front": "What was the origin of the 2009 H1N1 pandemic virus?",
+      "back": "**TECHNICAL:** The 2009 H1N1 ('swine flu') pandemic virus was a triple reassortant containing RNA segments from avian, swine (North American and Eurasian lineages), and human influenza strains. This novel combination arose through sequential reassortment events in pigs, which served as mixing vessels.\n\n**ELI5:** The 2009 swine flu was a Frankenstein virus -- it had pieces from bird flu, pig flu (two different kinds), and human flu all mixed together. Pigs caught all three types and their cells accidentally shuffled the pieces into one super-new virus."
+    },
+    {
+      "front": "Describe the Hensley et al. (2009) experiment on flu evolution.",
+      "back": "**TECHNICAL:** Hensley et al. (2009, Science) serially passaged influenza virus through vaccinated mice for 9 sequential cycles. The virus evolved altered HA with mutations in antigenic sites, enabling immune escape. Control virus passaged through unvaccinated mice showed no such antigenic changes. This demonstrated that immune pressure drives directional selection on HA.\n\n**ELI5:** Scientists took flu virus and kept putting it into mice that had been vaccinated, over and over, 9 times. Each time, the virus that survived was slightly better at dodging the vaccine. By the end, the virus had changed its disguise. Flu in unvaccinated mice didn't change -- proving the vaccine pressure forced the virus to evolve."
+    },
+    {
+      "front": "Why do we need a new flu vaccine every year?",
+      "back": "**TECHNICAL:** Continuous antigenic drift in HA and NA means circulating strains progressively diverge from vaccine strains. Annual reformulation is necessary to match the predicted dominant circulating strains for the upcoming season. The WHO Global Influenza Surveillance Network monitors viral evolution to recommend vaccine composition.\n\n**ELI5:** The flu keeps changing its outfit (antigenic drift), so last year's wanted poster (vaccine) doesn't match this year's criminal. Scientists have to take a new photo every year and update the poster so your immune system knows what to look for."
+    },
+    {
+      "front": "What makes the influenza virus's replication error-prone?",
+      "back": "**TECHNICAL:** Influenza's RNA-dependent RNA polymerase (RdRp) lacks 3'-to-5' exonuclease proofreading activity, resulting in a mutation rate of approximately 10^-3 to 10^-4 substitutions per nucleotide per replication cycle. This high error rate generates extensive genetic variation upon which selection can act.\n\n**ELI5:** When the flu copies its genes, the copying machine has no spell-check. It makes about 1 typo for every 1,000-10,000 letters it copies. Most typos are meaningless, but occasionally one helps the virus escape your immune system -- and that mutant wins."
+    },
+    {
+      "front": "Are most mutations in influenza beneficial to the virus?",
+      "back": "**TECHNICAL:** No. The vast majority of mutations are neutral (no fitness effect) or deleterious (reduce fitness). Only a small fraction are advantageous. However, given the enormous population sizes and rapid replication of viruses, even rare beneficial mutations (e.g., immune escape mutations in HA) arise frequently in absolute numbers.\n\n**ELI5:** Most mutations are like random typos in a recipe -- they either don't matter or ruin the dish. But the flu makes billions of copies of itself, so even if only 1 in a million typos is helpful, that still means thousands of 'lucky' mutants appear. It's a numbers game."
+    },
+    {
+      "front": "How does reassortment differ mechanistically from point mutation?",
+      "back": "**TECHNICAL:** Point mutation = a single nucleotide change within one RNA segment during replication. Reassortment = the physical exchange of entire RNA segments between two or more different viral strains co-infecting the same host cell. Reassortment requires co-infection; point mutation does not. Reassortment produces much larger antigenic changes in a single event.\n\n**ELI5:** Point mutation is like changing one word in a sentence. Reassortment is like ripping out entire chapters from two different books and binding them into one new book. One is a tiny tweak; the other is a major remix."
+    },
+    {
+      "front": "What are the H and N numbers in flu naming (e.g., H1N1, H5N1)?",
+      "back": "**TECHNICAL:** The H number designates the hemagglutinin subtype (18 known: H1-H18) and the N number designates the neuraminidase subtype (11 known: N1-N11). Different combinations (e.g., H1N1, H3N2, H5N1) represent distinct surface antigen profiles. Subtypes are classified by antigenic reactivity, not sequence alone.\n\n**ELI5:** Think of H and N as the virus's first and last name. H is the type of key it uses to break into cells (18 varieties), and N is the type of scissors it uses to escape (11 varieties). H1N1 and H5N1 are as different as 'John Smith' and 'Emily Johnson.'"
+    },
+    {
+      "front": "What is the basic structure of an influenza virion?",
+      "back": "**TECHNICAL:** Influenza A is an enveloped virus with a lipid bilayer derived from the host cell membrane. HA and NA glycoproteins project from the envelope. Inside is a protein shell (matrix protein M1) surrounding 8 ribonucleoprotein (RNP) complexes, each consisting of an RNA segment wrapped around nucleoprotein (NP) with associated RNA polymerase.\n\n**ELI5:** The flu virus is like a tiny ball wrapped in a stolen piece of your cell's skin. Sticking out of it are HA keys and NA scissors. Inside the ball are 8 little instruction scrolls (RNA segments) wrapped in protein."
+    },
+    {
+      "front": "What did the Hensley experiment's control group demonstrate?",
+      "back": "**TECHNICAL:** The control group (virus passaged through unvaccinated mice) showed no significant antigenic changes in HA over the same number of passages. This demonstrated that the mutations observed in the experimental group were not simply due to serial passage or genetic drift, but were specifically driven by immune-mediated selection pressure.\n\n**ELI5:** The control proved it wasn't just random change. Flu that went through mice with no vaccine didn't bother changing its disguise. Only the flu facing the vaccine had a reason to evolve. No pressure = no change. That's how we know the immune system was the driving force."
+    }
+  ],
+  "lec1-takehome-course": [
+    {
+      "front": "Why are pigs considered 'mixing vessels' for influenza?",
+      "back": "**TECHNICAL:** Pigs express both avian-type (alpha-2,3-linked sialic acid) and human-type (alpha-2,6-linked sialic acid) receptors in their respiratory tract. This dual receptor expression allows co-infection by avian and human influenza strains, enabling reassortment of RNA segments and generation of novel pandemic-potential viruses.\n\n**ELI5:** Pigs have two types of locks on their cells -- one that bird flu keys fit and one that human flu keys fit. So pigs can catch both at the same time. When both viruses are inside the same pig cell, their gene pieces get shuffled together like a deck of cards, creating brand-new viruses."
+    },
+    {
+      "front": "How does evolutionary biology make predictions (using flu as an example)?",
+      "back": "**TECHNICAL:** Evolutionary theory predicts that RNA viruses with high mutation rates and large population sizes will undergo rapid adaptation under selection pressure. This predicts: (1) circulating flu strains will diverge from vaccine strains (requiring annual updates), (2) antiviral resistance will emerge under drug pressure, (3) reassortment in mixing vessels can produce pandemic strains. Global surveillance programs are built on these evolutionary predictions.\n\n**ELI5:** Because we understand how evolution works, we can predict the flu will keep changing its disguise. That's why scientists watch flu viruses around the world all year -- they're trying to guess what next year's flu will look like so they can update the vaccine in advance. Evolution lets us see the future (sort of)."
+    },
+    {
+      "front": "What organism does Dr. Robbins study?",
+      "back": "**TECHNICAL:** Dr. Robbins studies lizards in the genus Sceloporus (fence lizards/spiny lizards). This research focuses on evolutionary biology questions using these squamate reptiles as a model system.\n\n**ELI5:** The professor studies a group of lizards called Sceloporus -- they're the spiny lizards you might see sunning themselves on rocks or fences. They're great for studying evolution because there are lots of different species that live in different environments."
+    },
+    {
+      "front": "What is the course textbook for Evolution (BIOL 4230)?",
+      "back": "**TECHNICAL:** Evolution: Making Sense of Life, 2nd edition. This is the primary text for the course and covers the breadth of evolutionary biology from molecular to macroevolutionary scales.\n\n**ELI5:** The textbook is called 'Evolution: Making Sense of Life' (2nd edition). It's the main book you need for the class."
+    },
+    {
+      "front": "What are the three main course expectations for BIOL 4230?",
+      "back": "**TECHNICAL:** (1) Read the assigned material before class. (2) Attend lectures regularly. (3) Apply concepts, not just memorize facts -- the course emphasizes understanding evolutionary processes and applying them to novel scenarios.\n\n**ELI5:** Three rules: (1) Do the reading before class (not after!), (2) Show up to lectures, (3) Don't just memorize -- actually understand how evolution works so you can use the ideas on new problems you haven't seen before."
+    },
+    {
+      "front": "Why is evolution described as a 'predictive' science?",
+      "back": "**TECHNICAL:** Evolutionary theory generates testable, falsifiable predictions about: future trait distributions, resistance emergence timelines, phylogenetic relationships, fossil intermediates, and adaptive responses to environmental change. The flu surveillance system is a direct application of evolutionary prediction -- forecasting strain evolution to design vaccines months in advance.\n\n**ELI5:** Evolution isn't just about the past -- it helps us predict what's coming next. Scientists predicted bacteria would evolve antibiotic resistance before it happened. They predict which flu strains will be common next winter. That's the power of understanding the rules of the game."
+    },
+    {
+      "front": "How does the flu case study illustrate all core evolutionary concepts from Lecture 1?",
+      "back": "**TECHNICAL:** The flu demonstrates: (1) heritable variation (HA/NA genetic variants), (2) population-level change (strain frequencies shift over time), (3) natural selection (immune pressure selects for antigenic escape mutants), (4) practical application (vaccine design, surveillance), (5) predictive power (forecasting dominant strains). It is NOT individual change -- viral populations evolve.\n\n**ELI5:** The flu is a perfect mini-example of everything in Lecture 1. There's variety in flu genes, some survive better than others when your immune system attacks, and over time the population of flu viruses changes. Scientists use this knowledge to make vaccines. It's evolution happening in fast-forward."
+    }
+  ],
+  "lec2-pre-darwin": [
+    {
+      "front": "What was the Great Chain of Being?",
+      "back": "**TECHNICAL:** The Great Chain of Being (scala naturae) was a pre-evolutionary worldview positing a fixed, hierarchical ordering of all matter and life, from minerals to plants to animals to humans to angels to God. Species were considered immutable, perfectly designed, and occupying fixed positions. This framework precluded evolutionary thinking.\n\n**ELI5:** People used to think everything in nature was arranged on a permanent ladder -- rocks at the bottom, plants above them, animals higher, humans near the top, angels above, and God at the very top. Nothing could change its rung. It was like assigned seating that could never be rearranged."
+    },
+    {
+      "front": "What was Archbishop Ussher's calculation, and when did he publish it?",
+      "back": "**TECHNICAL:** Archbishop James Ussher (1664) calculated, based on biblical genealogies and chronologies, that Earth was created on October 23, 4004 BC, at approximately 9:00 AM. This young-Earth estimate (~6,000 years) severely constrained the time available for evolutionary change and was widely accepted for centuries.\n\n**ELI5:** In 1664, a church leader named Ussher added up all the ages in the Bible and decided Earth was created on October 23, 4004 BC, at 9 in the morning. That made Earth only about 6,000 years old -- way too short for evolution to work. (We now know Earth is about 4.5 billion years old.)"
+    },
+    {
+      "front": "What were Linnaeus's contributions, and what were his dates?",
+      "back": "**TECHNICAL:** Carl Linnaeus (1707-1778) developed binomial nomenclature (genus + species naming, e.g., Homo sapiens) and the hierarchical classification system (Kingdom, Phylum, Class, Order, Family, Genus, Species). Though he believed species were fixed and created by God, his nested hierarchical system inadvertently reflected evolutionary relationships.\n\n**ELI5:** Linnaeus (1707-1778) invented the naming system we still use -- giving every organism a two-part name like a first and last name (Homo sapiens = 'wise human'). He also organized life into groups within groups, like folders inside folders on a computer. He didn't believe in evolution, but his filing system accidentally showed how species are related."
+    },
+    {
+      "front": "What were Buffon's contributions, and what were his dates?",
+      "back": "**TECHNICAL:** Georges-Louis Leclerc, Comte de Buffon (1707-1788) proposed that Earth was much older than Ussher's estimate, suggested organisms could change over time through 'organic particles,' and noted similarities between species in different regions. He moved thinking toward an ancient, dynamic Earth, though he did not propose a mechanism for species change.\n\n**ELI5:** Buffon (1707-1788) was one of the first to say 'Hey, Earth might be WAY older than 6,000 years, and animals might change over time.' He noticed that similar animals in different places looked a bit different. He didn't figure out HOW they changed, but he planted the seed of the idea."
+    },
+    {
+      "front": "What was James Hutton's contribution, and what were his dates?",
+      "back": "**TECHNICAL:** James Hutton (1726-1797) proposed uniformitarianism -- the principle that the same natural laws and processes operating today have always operated in the past, and that geological features are explained by slow, continuous processes over immense time periods. This 'deep time' concept was essential for evolutionary theory.\n\n**ELI5:** Hutton (1726-1797) looked at rocks and said, 'The same rain, wind, and rivers we see today carved these mountains and canyons -- it just took millions of years.' This idea of slow change over huge amounts of time (uniformitarianism) was a crucial ingredient Darwin needed later."
+    },
+    {
+      "front": "What is uniformitarianism?",
+      "back": "**TECHNICAL:** Uniformitarianism is the geological principle that natural processes (erosion, sedimentation, volcanism, etc.) operate at roughly the same rates and by the same mechanisms today as they have throughout Earth's history. 'The present is the key to the past.' Proposed by James Hutton, it implies Earth is extremely old (deep time), providing the temporal framework necessary for gradual evolutionary change.\n\n**ELI5:** Uniformitarianism means nature's rules don't change. The same forces shaping Earth today -- rivers wearing down rocks, volcanoes building mountains -- have been doing the same thing for billions of years. If you watch a river slowly carve a small groove, imagine it doing that for a million years. That's how you get the Grand Canyon."
+    },
+    {
+      "front": "What were Cuvier's contributions, and what were his dates?",
+      "back": "**TECHNICAL:** Georges Cuvier (1769-1832) established extinction as a scientific fact through comparative anatomy of fossil and living organisms. He proposed catastrophism -- the idea that periodic sudden, violent events (floods, volcanic eruptions) caused mass extinctions, after which new species appeared. He opposed evolutionary transmutation but demonstrated that species could disappear entirely.\n\n**ELI5:** Cuvier (1769-1832) proved that species could go extinct -- before him, people thought God wouldn't let that happen. He studied fossil bones and showed they belonged to animals that no longer exist. He thought big disasters wiped them out (catastrophism). He didn't believe in evolution, but proving extinction was a huge step."
+    },
+    {
+      "front": "What is catastrophism?",
+      "back": "**TECHNICAL:** Catastrophism is the geological doctrine that Earth's features and the fossil record are primarily explained by sudden, violent, short-lived events (catastrophes) rather than gradual processes. Proposed by Cuvier as an alternative to uniformitarianism. Each catastrophe supposedly destroyed existing life, followed by repopulation (sometimes interpreted as new divine creation).\n\n**ELI5:** Catastrophism says big, sudden disasters (like massive floods or eruptions) shaped the Earth and wiped out animals, and then new ones appeared. It's like thinking the world gets rebuilt after each disaster, rather than changing slowly and steadily."
+    },
+    {
+      "front": "What was William Smith's contribution, and what were his dates?",
+      "back": "**TECHNICAL:** William Smith (1769-1839), the 'Father of English Geology,' discovered the principle of faunal succession -- that rock strata could be identified and correlated across distances by their characteristic fossil assemblages. He produced the first large-scale geological map of England, organized by fossil content. This showed a consistent temporal ordering of life forms.\n\n**ELI5:** William Smith (1769-1839) figured out that specific types of fossils are always found in specific layers of rock, and these layers are always in the same order everywhere. It's like finding that the same songs always play in the same order on a playlist -- it tells you which layer is older or younger."
+    },
+    {
+      "front": "What was Lamarck's theory of evolution, and what were his dates?",
+      "back": "**TECHNICAL:** Jean-Baptiste Lamarck (1744-1829) proposed the first comprehensive theory of biological evolution, involving two mechanisms: (1) the principle of use and disuse (organs used frequently become stronger; unused organs degenerate), and (2) inheritance of acquired characteristics (modifications gained during an organism's lifetime are passed to offspring). While the mechanism was incorrect, he correctly proposed that species change over time.\n\n**ELI5:** Lamarck (1744-1829) was the first to publish a real theory of evolution. He thought if a giraffe stretched its neck to reach high leaves all its life, its babies would be born with longer necks. That mechanism is wrong (your gym muscles don't get passed to your kids), but he deserves credit for saying 'species change over time' before Darwin."
+    },
+    {
+      "front": "Why was Lamarck's mechanism of evolution wrong?",
+      "back": "**TECHNICAL:** Inheritance of acquired characteristics is incorrect because changes to somatic (body) cells during an organism's lifetime do not alter the DNA in germline (reproductive) cells. Only mutations in germ cells are heritable. August Weismann demonstrated this with his mouse tail-cutting experiment (no effect on offspring tail length across 22 generations). Modern genetics confirms the Weismann barrier between soma and germline.\n\n**ELI5:** If you cut off a mouse's tail, its babies are still born with tails. That's because what happens to your body doesn't change the instruction manual (DNA) in your egg or sperm cells. Working out at the gym doesn't give your kids bigger muscles -- your body changes aren't sent back to your genes."
+    },
+    {
+      "front": "How did pre-Darwin thinkers collectively set the stage for evolutionary theory?",
+      "back": "**TECHNICAL:** Each contributed a necessary piece: Hutton/Lyell provided deep time (uniformitarianism). Cuvier established extinction as fact. Smith demonstrated temporal ordering of life. Buffon suggested species change and an old Earth. Linnaeus provided a classification system reflecting natural groupings. Lamarck proposed the first transmutation theory. Together, they dismantled the static worldview and created the intellectual conditions for Darwin's synthesis.\n\n**ELI5:** Darwin didn't come out of nowhere. Hutton said 'Earth is super old.' Cuvier said 'Species can go extinct.' Smith said 'Life comes in a sequence.' Buffon said 'Animals change.' Lamarck said 'Here's how (sort of).' Each one laid a brick, and Darwin built the house."
+    },
+    {
+      "front": "Put these pre-Darwin thinkers in chronological order by birth: Cuvier, Hutton, Lamarck, Linnaeus, Buffon, Smith.",
+      "back": "**TECHNICAL:** (1) Linnaeus 1707-1778 and Buffon 1707-1788 (born same year), (2) Hutton 1726-1797, (3) Lamarck 1744-1829, (4) Cuvier 1769-1832 and Smith 1769-1839 (born same year). Key note: Linnaeus/Buffon were contemporaries, as were Cuvier/Smith.\n\n**ELI5:** Timeline: Linnaeus & Buffon (1707) came first, then Hutton (1726), then Lamarck (1744), then Cuvier & Smith (1769). Fun fact: two pairs were born the same year! It's like a relay race where each runner passed the baton to the next generation of thinkers."
+    },
+    {
+      "front": "What was the significance of establishing deep time for evolutionary theory?",
+      "back": "**TECHNICAL:** Deep time (Earth being billions of years old rather than thousands) was essential because evolution by natural selection requires vast time periods for small, incremental changes to accumulate into the diversity of life we observe. Without deep time, there is insufficient time for gradual evolutionary change. Hutton's uniformitarianism and Lyell's elaboration provided this framework.\n\n**ELI5:** If Earth were only 6,000 years old, there wouldn't be enough time for a fish to eventually become a human through tiny changes. But 4.5 billion years? That's plenty of time. Discovering that Earth is ancient was like giving evolution the time it needed to work."
+    }
+  ],
+  "lec2-darwin-voyage": [
+    {
+      "front": "How old was Darwin when he joined the HMS Beagle, and what were the voyage dates?",
+      "back": "**TECHNICAL:** Charles Darwin was 22 years old when he departed on HMS Beagle on December 27, 1831. The voyage lasted approximately 5 years, ending on October 2, 1836. It was a circumnavigation of the globe, primarily for cartographic surveying, with Darwin serving as the ship's naturalist and gentleman companion to Captain FitzRoy.\n\n**ELI5:** Darwin was just 22 -- barely out of college -- when he hopped on a ship called the Beagle in 1831. The trip lasted 5 years and went all the way around the world. He was basically an unpaid nature nerd on a mapping expedition, and it changed science forever."
+    },
+    {
+      "front": "What book did Darwin read on the Beagle, and how did it influence him?",
+      "back": "**TECHNICAL:** Darwin read Charles Lyell's Principles of Geology, which advocated uniformitarianism and an ancient Earth. This framework profoundly influenced Darwin by providing the deep-time perspective necessary for gradual evolutionary change. Lyell's evidence for slow geological change suggested analogous slow biological change was possible.\n\n**ELI5:** Darwin brought along a geology book by Charles Lyell that argued the Earth changes very, very slowly over millions of years. Reading this was a lightbulb moment -- if rocks and mountains can change slowly, maybe living things can too. The book basically gave Darwin permission to think about very slow change."
+    },
+    {
+      "front": "What was John Gould's role in Darwin's thinking?",
+      "back": "**TECHNICAL:** John Gould was the ornithologist at the Zoological Society of London who examined Darwin's Galapagos bird specimens in 1837. Gould identified them as a closely related group of finches (not the various unrelated species Darwin had assumed). This was pivotal -- it showed that similar but distinct species on different islands had diverged from a common ancestor, suggesting speciation.\n\n**ELI5:** Darwin collected birds from different Galapagos islands but didn't think much of them. When he got home, a bird expert named John Gould told him, 'These are all finches -- they're all related but each island has its own type!' That was a huge clue that species can split into new ones."
+    },
+    {
+      "front": "Why were the Galapagos finches so important for Darwin's theory?",
+      "back": "**TECHNICAL:** The Galapagos finches demonstrated: (1) closely related species occupying different ecological niches on different islands, (2) morphological divergence (especially beak shape) correlated with diet/ecology, (3) geographic patterns consistent with descent from a common ancestor that colonized the archipelago and diversified (adaptive radiation). This was direct evidence that species are not fixed.\n\n**ELI5:** Each island had finches with different beak shapes -- big crushers for hard seeds, thin pokers for insects, etc. They were all clearly related (like cousins), but each adapted to the food on its own island. It was like finding the same family living in different houses, each modified for a different job."
+    },
+    {
+      "front": "What was the significance of Darwin's fossil and living armadillo observation?",
+      "back": "**TECHNICAL:** In South America, Darwin found fossils of giant extinct armadillos (glyptodonts) in the same geographic region as living armadillos. The morphological similarity between extinct and extant forms in the same location suggested a genealogical connection -- that modern armadillos descended from the ancient forms. This pattern (geographic continuity of related forms through time) supported descent with modification.\n\n**ELI5:** Darwin found giant armadillo fossils buried in the ground right where small armadillos were still living. It was like finding a photo of your great-great-grandfather in the attic -- he looks different but clearly related. Why would God make a giant armadillo fossil and a small armadillo in the same place unless one came from the other?"
+    },
+    {
+      "front": "Why did Darwin wait over 20 years to publish his theory?",
+      "back": "**TECHNICAL:** Multiple factors: (1) He wanted to amass overwhelming evidence (spent years on barnacle taxonomy, pigeon breeding, biogeography). (2) Fear of social/religious backlash. (3) Awareness of the radical implications of his theory. (4) Desire for scientific credibility through exhaustive documentation. (5) Personal health issues. He was only spurred to publish when Alfred Russel Wallace independently arrived at the same conclusions in 1858.\n\n**ELI5:** Darwin knew his idea was explosive -- saying humans aren't specially created would upset a LOT of people. So he spent 20+ years gathering mountains of evidence to make his case bulletproof. He probably would have waited even longer, but then another scientist (Wallace) had the same idea, and Darwin had to publish or lose credit."
+    },
+    {
+      "front": "Who was Alfred Russel Wallace, and what was his role?",
+      "back": "**TECHNICAL:** Alfred Russel Wallace (1823-1913) was a British naturalist who independently conceived the theory of evolution by natural selection while conducting fieldwork in the Malay Archipelago. In 1858, he sent Darwin a manuscript outlining the theory. This prompted the joint presentation of both men's work at the Linnean Society on July 1, 1858, and spurred Darwin to finally publish On the Origin of Species in 1859.\n\n**ELI5:** Wallace was another explorer-scientist who, on the other side of the world, came up with the exact same big idea as Darwin. He mailed his paper to Darwin, who panicked because someone else had figured it out too. Their friends arranged for both of them to present together in 1858, and then Darwin rushed to publish his book."
+    },
+    {
+      "front": "What happened at the 1858 Linnean Society presentation?",
+      "back": "**TECHNICAL:** On July 1, 1858, papers by both Darwin and Wallace were read jointly at the Linnean Society of London, arranged by Charles Lyell and Joseph Hooker. Neither Darwin nor Wallace was present. Ironically, the presentation generated little immediate reaction. It established priority for both scientists and prompted Darwin to write an 'abstract' that became On the Origin of Species (1859).\n\n**ELI5:** In 1858, Darwin's and Wallace's ideas were read aloud at a science meeting in London. Neither of them was even there! Weirdly, nobody in the audience seemed that impressed at the time. But it lit a fire under Darwin to finally finish his book, which came out the next year and changed everything."
+    },
+    {
+      "front": "When was On the Origin of Species published?",
+      "back": "**TECHNICAL:** On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life was published on November 24, 1859. The entire first printing of 1,250 copies sold out on the first day. Darwin published 6 editions during his lifetime, with substantial revisions.\n\n**ELI5:** Darwin's famous book came out on November 24, 1859. Every single copy sold on day one -- it was a scientific bestseller. People were hungry for this idea, even though it was controversial. It's one of the most important books ever written."
+    },
+    {
+      "front": "How did Lyell's geology influence Darwin's biology?",
+      "back": "**TECHNICAL:** Lyell's Principles of Geology convinced Darwin that: (1) Earth is immensely old (deep time), providing sufficient time for gradual biological change; (2) slow, continuous natural processes (uniformitarianism) can produce large cumulative effects; (3) the natural world is dynamic, not static. Darwin applied this gradualist thinking directly to biological evolution -- small variations accumulating over millions of years.\n\n**ELI5:** Lyell showed that tiny forces (rain, wind) can reshape entire continents if given enough time. Darwin thought: 'If that works for rocks, maybe it works for living things too. Small differences adding up over millions of years could turn one species into a totally different one.' Geology gave Darwin the recipe: small changes + lots of time = big transformations."
+    },
+    {
+      "front": "What was the HMS Beagle's primary mission?",
+      "back": "**TECHNICAL:** The primary mission of HMS Beagle's second voyage (1831-1836) was to survey the coastline of South America (particularly Patagonia and Tierra del Fuego) and establish a chain of chronometric stations around the world for accurate longitude measurements. Darwin's position as naturalist was secondary to the navigational objectives.\n\n**ELI5:** The Beagle's real job was to make maps of the South American coast -- Darwin was basically just along for the ride as the ship's nature enthusiast. Nobody expected the side project (collecting specimens and thinking about where species come from) to be more important than the maps."
+    },
+    {
+      "front": "What did Darwin observe about the geographic distribution of species?",
+      "back": "**TECHNICAL:** Darwin noted that: (1) species on islands resembled those on the nearest mainland (suggesting colonization and divergence), (2) fossil forms in a region resembled modern forms in the same region (temporal continuity), (3) similar environments on different continents had different but ecologically similar species. These biogeographic patterns were inexplicable by special creation but consistent with descent with modification.\n\n**ELI5:** Darwin noticed something strange: island animals looked like their mainland neighbors (not like animals on similar islands far away). And fossils in South America looked like modern South American animals. It's like how your accent sounds like your neighbors', not like people from a far-off country with similar weather. This made sense only if species come from nearby ancestors."
+    }
+  ],
+  "lec2-natural-selection-ingredients": [
+    {
+      "front": "Who was Thomas Malthus, and how did he influence Darwin?",
+      "back": "**TECHNICAL:** Thomas Robert Malthus (1766-1834) was an English cleric and economist who argued in An Essay on the Principle of Population (1798) that human populations grow geometrically while food supply grows arithmetically, inevitably leading to competition and suffering. Darwin read Malthus in 1838 and realized this 'struggle for existence' provided the selective pressure driving evolution.\n\n**ELI5:** Malthus (1766-1834) was an economist who said populations always grow faster than their food supply, leading to a constant struggle. When Darwin read this, he had his 'aha!' moment: if there's always a fight for food, the organisms best suited to win that fight will survive and have more babies. Competition drives evolution."
+    },
+    {
+      "front": "What are the five ingredients (conditions) required for natural selection?",
+      "back": "**TECHNICAL:** (1) High reproductive potential -- organisms can produce more offspring than the environment can support. (2) Stable population size -- despite reproductive potential, populations remain roughly constant. (3) Limited resources -- food, space, mates, etc. are finite. (4) Phenotypic variation -- individuals within a population differ in observable traits. (5) Heritability -- at least some of that variation is genetically based and passed to offspring.\n\n**ELI5:** Five things must be true for natural selection to work: (1) Animals can make lots of babies. (2) But the population stays about the same size. (3) Because there's not enough food/space for everyone. (4) Every individual is a bit different. (5) Those differences are passed down from parents to kids. If all five are true, evolution by natural selection is inevitable."
+    },
+    {
+      "front": "Give three examples of high reproductive potential.",
+      "back": "**TECHNICAL:** (1) A single pair of aphids could theoretically produce 524 billion descendants in one year. (2) A single pair of elephants (the slowest-reproducing land mammal) could theoretically produce 19 million descendants in 750 years. (3) A single Staphylococcus aureus bacterium could theoretically produce enough offspring to cover Earth 7 feet deep in just 24 hours.\n\n**ELI5:** Nature overproduces like crazy: (1) Two aphids could make 524 billion babies in a year. (2) Even slow-breeding elephants could fill the earth in 750 years. (3) One bacterium could bury the planet 7 feet deep in a single day. Obviously this doesn't happen -- most die before reproducing. That's the point."
+    },
+    {
+      "front": "What is the inference from the five ingredients of natural selection?",
+      "back": "**TECHNICAL:** The logical inference: since more offspring are produced than can survive (ingredients 1-3), and individuals vary in heritable traits (ingredients 4-5), survival and reproduction are nonrandom -- individuals with traits better suited to the current environment will disproportionately survive and reproduce. This differential reproductive success IS natural selection, leading to adaptation.\n\n**ELI5:** Put the five ingredients together and you get this: since not everyone can survive, and everyone's a little different, and those differences are inherited -- the ones best suited to their environment will win the survival lottery most often. Over time, the 'winning' traits become more common. That's natural selection."
+    },
+    {
+      "front": "What is the precise definition of fitness in evolutionary biology?",
+      "back": "**TECHNICAL:** Fitness (Darwinian fitness, W) is the relative reproductive success of a genotype or phenotype compared to other genotypes/phenotypes in the same population and environment. It is measured as the proportional contribution of offspring to the next generation. Fitness is ALWAYS relative -- there is no absolute fitness. A fitness of W=1.0 is assigned to the most fit genotype; others are expressed relative to it.\n\n**ELI5:** Fitness isn't about being strong or fast -- it's about having the most surviving babies compared to everyone else. A scrawny mouse that has 20 pups is 'fitter' than a buff mouse that has 2. And fitness is always a comparison -- you're only fit or unfit compared to your neighbors, not in absolute terms."
+    },
+    {
+      "front": "Why is fitness described as RELATIVE rather than absolute?",
+      "back": "**TECHNICAL:** Fitness is relative because natural selection acts through differential reproduction -- what matters is not how many offspring an individual produces in isolation, but how many it produces compared to others in the same population and environment. An organism producing 10 offspring is highly fit if others average 2, but poorly fit if others average 20. Fitness also changes when the environment changes.\n\n**ELI5:** Imagine a race. Running a mile in 6 minutes is great if everyone else takes 8 minutes, but terrible if everyone else does it in 4 minutes. Fitness works the same way -- it's always relative to your competition. And when the competition or conditions change, who's 'fit' changes too."
+    },
+    {
+      "front": "What is the definition of adaptation in evolutionary biology?",
+      "back": "**TECHNICAL:** An adaptation is a heritable trait that increases the relative fitness of its bearer compared to individuals lacking that trait in a given environment. Adaptations arise through natural selection acting on heritable variation over generations. The term can also refer to the process of becoming adapted. Not all traits are adaptations (some arise by drift, constraint, or chance).\n\n**ELI5:** An adaptation is any inherited feature that helps an organism survive and reproduce better than others. A cactus's thick skin that holds water is an adaptation for the desert. A polar bear's white fur is an adaptation for sneaking up on seals in the snow. It's a trait that gives you an edge."
+    },
+    {
+      "front": "What was Malthus's specific contribution to the development of natural selection theory?",
+      "back": "**TECHNICAL:** Malthus provided the key insight that populations inherently tend to grow exponentially while resources remain limited, creating an inevitable 'struggle for existence.' Darwin and Wallace both credited Malthus as the catalyst for understanding that this competition, combined with heritable variation, produces differential survival and reproduction -- the mechanism of natural selection.\n\n**ELI5:** Malthus wasn't even a biologist -- he was an economist worried about too many people and not enough food. But both Darwin and Wallace read his work and thought, 'Wait -- if there's always a competition for survival, then the ones with the best traits will win!' An economics book accidentally helped solve the biggest question in biology."
+    },
+    {
+      "front": "What happens if any one of the five ingredients is missing?",
+      "back": "**TECHNICAL:** Without any single ingredient, natural selection cannot operate: (1) Without high reproductive potential, no overproduction and no competition. (2) Without stable population size, there's no evidence of mortality/selection. (3) Without limited resources, all survive equally (no selection). (4) Without phenotypic variation, selection has nothing to act on (all are equal). (5) Without heritability, even if some variants survive better, the advantage cannot be passed on and the population doesn't evolve.\n\n**ELI5:** Remove any one ingredient and evolution breaks: No overproduction = no competition. No limited resources = everyone survives equally. No variation = everyone's the same, so there's nothing to select. No heritability = even if the best survive, their kids don't inherit the advantage. It's like a recipe -- leave out any ingredient and the cake doesn't rise."
+    },
+    {
+      "front": "Does natural selection act on phenotypes or genotypes?",
+      "back": "**TECHNICAL:** Natural selection acts directly on phenotypes (observable traits), not genotypes (genetic constitution). The environment 'sees' the phenotype -- e.g., beak size, running speed, coloration. However, evolution occurs only when phenotypic differences have a genetic (heritable) basis, because only genetic changes are transmitted to offspring. Selection on phenotypes with no genetic basis produces no evolutionary change.\n\n**ELI5:** Nature doesn't read your DNA -- it sees what you look like and what you can do. A predator chasing zebras doesn't care about their genes; it catches the slowest one. BUT, for evolution to happen, that speed has to be inherited. If slow parents have fast kids randomly, being slow doesn't get 'selected out.' Natural selection judges the outside but needs the inside to make it stick."
+    },
+    {
+      "front": "What is the distinction between phenotype and genotype in the context of selection?",
+      "back": "**TECHNICAL:** Genotype = the specific set of alleles an organism carries. Phenotype = the observable characteristics resulting from genotype-environment interaction. Selection differential (S) acts on phenotypic variation. Evolutionary response (R) depends on heritability (h2): R = h2 x S. Without heritability, phenotypic selection produces no genotypic (evolutionary) change. The environment mediates the genotype-phenotype relationship.\n\n**ELI5:** Your genotype is your recipe (DNA). Your phenotype is the finished dish (how you look and act). Nature tastes the dish (selects on phenotype), but only the recipe gets passed down (genotype). If the dish is great because of the recipe, the next generation gets the good recipe too. If the dish is great because of the oven (environment), the next generation doesn't benefit."
+    },
+    {
+      "front": "What is the breeder's equation, and what does each variable mean?",
+      "back": "**TECHNICAL:** R = h2 x S, where R = response to selection (evolutionary change in trait mean between generations), h2 = narrow-sense heritability (proportion of phenotypic variance due to additive genetic effects, ranging 0-1), and S = selection differential (difference in mean trait value between the selected parents and the overall population). This equation predicts evolutionary response to selection.\n\n**ELI5:** R = h2 x S is evolution's prediction formula. S = how much you push (how different are the survivors from the average). h2 = how much that push sticks (how heritable the trait is, 0 to 1). R = how much the next generation actually changes. Big push + high heritability = big evolution. Big push + low heritability = nothing much happens."
+    },
+    {
+      "front": "How is the concept of 'struggle for existence' derived from ingredients 1-3?",
+      "back": "**TECHNICAL:** Ingredient 1 (high reproductive potential) means populations can grow exponentially. Ingredient 2 (stable population size) means populations are not growing exponentially. Ingredient 3 (limited resources) explains WHY populations are stable despite reproductive potential -- most individuals die before reproducing or produce fewer offspring. This mortality is the 'struggle for existence' that creates the opportunity for differential survival.\n\n**ELI5:** Animals can make way more babies than the environment can handle (ingredient 1), but the population stays about the same (ingredient 2), because there isn't enough food and space (ingredient 3). This means most babies die. That deadly competition is what Darwin called the 'struggle for existence' -- and it's where natural selection happens."
+    }
+  ],
+  "lec2-finches-case": [
+    {
+      "front": "Who are Peter and Rosemary Grant, and what did they study?",
+      "back": "**TECHNICAL:** Peter and Rosemary Grant are evolutionary biologists (Princeton University) who conducted a multi-decade field study of Darwin's finches (Geospiza spp.) on the island of Daphne Major in the Galapagos. Their work provided some of the most detailed, real-time documentation of natural selection and evolution in a wild population.\n\n**ELI5:** Peter and Rosemary Grant are a husband-wife scientist team who spent decades on a tiny island in the Galapagos catching, measuring, and tagging finches. They basically watched evolution happen in real time -- like setting up a camera to film a flower blooming, except it was natural selection they captured."
+    },
+    {
+      "front": "What species did the Grants primarily study, and on which island?",
+      "back": "**TECHNICAL:** The Grants primarily studied the medium ground finch (Geospiza fortis) on the island of Daphne Major in the Galapagos archipelago. Daphne Major is small (~0.34 km2) and isolated, making it ideal for monitoring entire populations -- every individual could be banded, measured, and tracked.\n\n**ELI5:** They studied a bird called the medium ground finch (Geospiza fortis) on a tiny volcanic island called Daphne Major. The island is so small they could catch and measure basically every single finch living there -- like doing a census of every person in a small town."
+    },
+    {
+      "front": "What happened during the 1977 drought on Daphne Major?",
+      "back": "**TECHNICAL:** A severe drought in 1977 caused ~89% mortality in the G. fortis population (from ~1,200 to ~180 individuals). Drought dramatically reduced seed availability, with small soft seeds depleted first. The remaining seeds were predominantly large, hard seeds (especially from Tribulus cistoides, caltrop plant). Birds with larger, deeper beaks could crack these hard seeds and survived at higher rates.\n\n**ELI5:** In 1977, it barely rained on the island, and almost 9 out of 10 finches died. The small, easy-to-eat seeds ran out first, leaving only big, tough seeds that were like trying to crack a walnut. Finches with bigger, stronger beaks could crack those tough seeds and survived. The small-beaked birds starved."
+    },
+    {
+      "front": "What seeds remained available during the 1977 drought?",
+      "back": "**TECHNICAL:** The large, hard seeds of Tribulus cistoides (puncture vine/caltrop) persisted while smaller, softer seeds were quickly depleted. Tribulus seeds require substantial biting force to crack, creating strong directional selection for larger, deeper beaks in G. fortis.\n\n**ELI5:** The tough seeds from a plant called Tribulus cistoides (basically little spiky balls) were the last food standing after the drought killed off all the easy-to-eat stuff. Only finches with big, strong beaks could crack them open. It was like the only food left in the house being inside a locked safe."
+    },
+    {
+      "front": "What was the heritability (h2) of beak depth in Geospiza fortis?",
+      "back": "**TECHNICAL:** The narrow-sense heritability (h2) of beak depth in G. fortis was approximately 0.65-0.80 (varies by study/year). This high heritability means 65-80% of the phenotypic variation in beak depth is attributable to additive genetic effects. This ensured that selection on beak depth during the drought would produce an evolutionary response in the next generation.\n\n**ELI5:** Heritability of beak depth was about 0.65-0.80, meaning beak size is VERY strongly inherited from parents. If your parents have big beaks, you almost certainly will too. This is why the drought changed the population -- the big-beaked survivors passed their big beaks to their chicks."
+    },
+    {
+      "front": "How does the breeder's equation (R = h2 x S) apply to the Grants' finch data?",
+      "back": "**TECHNICAL:** S (selection differential) = the difference in mean beak depth between surviving finches and the original population (survivors had ~0.5mm deeper beaks). h2 (heritability) = ~0.65-0.80. R (response) = h2 x S predicts the expected shift in mean beak depth in the next generation. The observed shift closely matched the prediction, providing powerful validation of quantitative genetics theory in a wild population.\n\n**ELI5:** The formula R = h2 x S predicted exactly how much bigger the next generation's beaks would be. The survivors had beaks about 0.5mm bigger than average (that's S). Heritability was ~0.7 (that's h2). So the prediction was: next generation's beaks should be about 0.35mm bigger. And that's almost exactly what happened. Math predicted evolution!"
+    },
+    {
+      "front": "Did natural selection on finches only go in one direction?",
+      "back": "**TECHNICAL:** No. Selection reversed in subsequent wet years (e.g., 1984-85) when abundant rainfall increased the availability of small, soft seeds. Under these conditions, smaller beaks were favored (more efficient for handling small seeds), and mean beak depth decreased. This demonstrates that natural selection is responsive to current environmental conditions and has no fixed direction.\n\n**ELI5:** Nope! When the rains came back and small seeds were plentiful again, the smaller-beaked finches actually did better. So beaks got smaller again. Evolution went in reverse! This proves evolution doesn't have a destination -- it just responds to whatever's happening right now."
+    },
+    {
+      "front": "How did the Grants' study verify all five conditions for natural selection?",
+      "back": "**TECHNICAL:** (1) High reproductive potential: finches can lay multiple clutches per year. (2) Stable to declining population: population didn't explode (89% died in drought). (3) Limited resources: drought eliminated most food. (4) Phenotypic variation: continuous variation in beak depth across the population. (5) Heritability: h2 = 0.65-0.80 for beak depth. All five conditions met, and the predicted evolutionary response was observed.\n\n**ELI5:** The Grants checked every box: (1) Finches make lots of eggs. (2) But the population didn't grow (most died). (3) There wasn't enough food. (4) Every finch had a slightly different beak. (5) Big-beaked parents had big-beaked babies. All five conditions were met, and evolution happened exactly as predicted. It's like a perfect science experiment done by nature."
+    },
+    {
+      "front": "What role does sexual selection play in the finch system?",
+      "back": "**TECHNICAL:** In addition to natural selection via survival, sexual selection also contributed to beak evolution in G. fortis. Females preferentially mate with males whose songs and beak morphology match certain preferences. Beak shape affects song production (the beak acts as a resonating structure), creating a link between natural and sexual selection on beak morphology.\n\n**ELI5:** Female finches are picky about who they mate with -- they prefer males with certain beak shapes and songs. Since beak shape actually affects how a finch sings (like how the shape of a trumpet affects its sound), beak evolution is driven by both survival AND attracting mates. It's a double whammy."
+    },
+    {
+      "front": "What makes the Grants' study one of the best demonstrations of natural selection?",
+      "back": "**TECHNICAL:** The study's strength lies in: (1) complete population monitoring (every individual tracked), (2) quantitative measurement of selection differentials, (3) known pedigrees allowing heritability estimation, (4) observed environmental cause (drought), (5) predicted and observed evolutionary response matching quantitative genetic theory, (6) multi-generational data, (7) demonstration of selection reversal. It is one of few studies showing all components of natural selection in a wild population.\n\n**ELI5:** The Grants' study is special because they measured EVERYTHING: every bird, every beak, every parent-child pair, every seed. They saw the cause (drought), the selection (big beaks survived), the inheritance (big beaks passed on), and the result (bigger beaks next generation). They even saw it reverse. No other study has caught evolution so completely in the act."
+    },
+    {
+      "front": "What is directional selection, as illustrated by the 1977 drought?",
+      "back": "**TECHNICAL:** Directional selection occurs when individuals at one extreme of a phenotypic distribution have higher fitness than those at the other extreme, shifting the population mean in that direction. The 1977 drought imposed directional selection for larger beak depth -- the mean beak depth of the population shifted toward larger values after the selective event.\n\n**ELI5:** Directional selection means the average shifts one way. During the drought, the average beak got bigger because all the small-beaked birds died. It's like if a basketball team cut everyone under 6 feet tall -- the average height of the remaining team would jump up. The whole bell curve shifted to the right."
+    },
+    {
+      "front": "What was the approximate mortality rate during the 1977 drought?",
+      "back": "**TECHNICAL:** Approximately 89% of the Geospiza fortis population on Daphne Major died during the 1977 drought. The population declined from approximately 1,200 individuals to roughly 180 survivors. This severe selective episode created an extremely strong selection differential for beak morphology.\n\n**ELI5:** About 89% of the finches died -- almost 9 out of every 10. Out of about 1,200 birds, only about 180 survived. That's a brutal filter. The survivors weren't random -- they were disproportionately the ones with bigger, stronger beaks."
+    }
+  ],
+  "lec2-descent-modification": [
+    {
+      "front": "What are Darwin's five key points about natural selection?",
+      "back": "**TECHNICAL:** (1) Natural selection acts on individuals but is seen at the population level. (2) It acts on phenotypes, not directly on genotypes. (3) It is not forward-looking or goal-directed (no teleology). (4) It produces descent with modification (organisms share common ancestors but diverge over time). (5) It does not produce perfection -- only 'good enough' solutions constrained by existing variation, history, and trade-offs.\n\n**ELI5:** Five things to remember about natural selection: (1) Individual animals get selected, but evolution shows up in groups. (2) Nature judges how you look, not your genes directly. (3) There's no plan or goal -- just what works right now. (4) All life is related but changes over time. (5) Nothing comes out perfect -- just good enough."
+    },
+    {
+      "front": "What is homology in evolutionary biology?",
+      "back": "**TECHNICAL:** Homology refers to similarity between structures in different organisms due to shared ancestry (inherited from a common ancestor). Homologous structures may differ in form and function (e.g., forelimbs of whales, bats, humans, dogs) but share underlying structural elements (same bones: humerus, radius, ulna, carpals, metacarpals, phalanges). Homology is evidence of common descent.\n\n**ELI5:** Homology means 'same origin, different use.' Your arm, a whale's flipper, a bat's wing, and a dog's front leg all have the same bones arranged in the same basic pattern. They look different because they do different jobs, but they all started from the same ancestor's limb. It's like how English, Spanish, and French all came from Latin."
+    },
+    {
+      "front": "Give the classic example of forelimb homology.",
+      "back": "**TECHNICAL:** The vertebrate forelimb demonstrates homology across: human arm (manipulation), whale flipper (swimming), bat wing (flying), dog forelimb (running). All share the same skeletal elements -- humerus, radius, ulna, carpals, metacarpals, phalanges -- modified in proportion and shape for different functions. The underlying structural plan is conserved despite functional divergence.\n\n**ELI5:** Look at these four arms: a human's hand for grabbing, a whale's flipper for swimming, a bat's wing for flying, a dog's leg for running. They all have the exact same bones inside! Humerus, radius, ulna, wrist bones, finger bones -- just stretched, shrunk, or fused differently. Same blueprint, different uses, one ancestor."
+    },
+    {
+      "front": "What is the difference between homology and analogy?",
+      "back": "**TECHNICAL:** Homology = structural similarity due to common descent (shared ancestry), regardless of function (e.g., bat wing and human arm). Analogy (convergent evolution) = functional similarity NOT due to common descent, but due to similar selective pressures (e.g., bat wing and insect wing). Analogous structures have different developmental origins and structural plans. Distinguishing them is crucial for phylogenetics.\n\n**ELI5:** Homology = same ancestor, maybe different job (your arm and a whale flipper -- same bones, different use). Analogy = same job, different ancestor (bird wing and butterfly wing -- both fly, but built totally differently). Homology = genuine family resemblance. Analogy = strangers who happen to wear the same outfit."
+    },
+    {
+      "front": "What is Brassica oleracea, and how does it demonstrate artificial selection?",
+      "back": "**TECHNICAL:** Brassica oleracea is a single wild mustard species that humans have artificially selected into dramatically different cultivars: broccoli (selected for flower clusters), cauliflower (inflorescence), cabbage (terminal bud/leaves), Brussels sprouts (lateral buds), kale (leaves), and kohlrabi (stem). All are the same species, demonstrating the power of selection on existing variation.\n\n**ELI5:** Broccoli, cauliflower, cabbage, Brussels sprouts, kale, and kohlrabi are ALL the same species -- just one wild mustard plant that humans bred in different directions. Want big leaves? You get kale. Want a big flower? Broccoli. It's like one dog breed split into Great Danes and Chihuahuas, except with vegetables."
+    },
+    {
+      "front": "How do dogs demonstrate artificial selection?",
+      "back": "**TECHNICAL:** All domestic dog breeds (Canis lupus familiaris) are descended from wolves (Canis lupus) through ~15,000-40,000 years of artificial selection. The enormous morphological diversity -- from Chihuahuas to Great Danes -- arose from selection on standing genetic variation in the ancestral wolf population. This demonstrates how selection can produce dramatic phenotypic change relatively quickly.\n\n**ELI5:** Every dog -- from a tiny Chihuahua to a giant Great Dane -- came from wolves. Humans just kept picking the ones they liked and breeding them together for thousands of years. The result is more physical variety in dogs than in almost any other species. If humans can do this much in a few thousand years, imagine what nature can do in millions."
+    },
+    {
+      "front": "How does corn (maize) demonstrate artificial selection?",
+      "back": "**TECHNICAL:** Modern maize (Zea mays) was domesticated from teosinte (Zea mays ssp. parviglumis) approximately 9,000 years ago in Mexico. Teosinte has small ears with few hard kernels and a shattering rachis. Artificial selection transformed it into modern corn with large cobs, hundreds of soft kernels, and a non-shattering rachis. Remarkably, only ~5 major genetic loci account for most morphological differences.\n\n**ELI5:** Modern corn came from a scraggly grass called teosinte that had tiny 'ears' with maybe 5-12 hard kernels. Ancient farmers kept planting the biggest, tastiest seeds for thousands of years, and eventually got the big fat corn cobs we eat today. The two plants look nothing alike, but they're the same species -- just massively reshaped by human selection."
+    },
+    {
+      "front": "What are vestigial structures, and how do they support evolution?",
+      "back": "**TECHNICAL:** Vestigial structures are anatomical features that have lost most or all of their ancestral function through evolution. They are remnants of structures that were functional in ancestors. Examples: whale pelvic bones (remnant of terrestrial ancestor's hindlimbs), human appendix (reduced cecum), cave fish eyes (degenerated in darkness), arrector pili muscles (once raised fur for insulation/display). They are evidence of descent with modification.\n\n**ELI5:** Vestigial structures are evolutionary leftovers -- body parts that used to do something useful in an ancestor but don't anymore. Whales have tiny hidden leg bones (from when their ancestors walked on land). Blind cave fish still grow eyes that don't work. It's like your phone still having a calculator app from a feature phone era -- it hints at the past."
+    },
+    {
+      "front": "Give four examples of vestigial structures.",
+      "back": "**TECHNICAL:** (1) Whale pelvic/femur bones -- remnants of hindlimbs from terrestrial ancestors, now reduced to small internal bones with no locomotor function. (2) Human vermiform appendix -- reduced cecum, vestigial from herbivorous ancestors. (3) Cave fish eyes -- present but non-functional in permanently dark cave environments. (4) Human arrector pili muscles -- tiny muscles that erect body hair (goosebumps), vestigial from ancestors with dense fur where this aided thermoregulation and display.\n\n**ELI5:** (1) Whales have tiny leg bones hidden inside their bodies -- from when their great-great-grandparents walked on land. (2) Your appendix used to help digest tough plants in your ancestors but now mostly just sits there. (3) Blind cave fish grow eyes that get covered with skin -- eyes are useless in total darkness. (4) Goosebumps: your muscles try to fluff up fur you don't have anymore."
+    },
+    {
+      "front": "Why is the 'March of Progress' image misleading?",
+      "back": "**TECHNICAL:** The iconic linear 'March of Progress' (ape-to-human sequence) is misleading because: (1) evolution is a branching tree, not a linear ladder; (2) it implies progression toward a 'goal' (humans), which contradicts the non-teleological nature of evolution; (3) modern apes are NOT ancestral to humans -- they are cousin lineages; (4) it implies improvement/directionality, which evolution does not have; (5) it represents only one of millions of evolutionary lineages.\n\n**ELI5:** That famous picture of an ape slowly turning into a man walking upright is WRONG in almost every way. Evolution isn't a straight line heading toward humans. It's more like a bush with millions of branches going in all directions. Chimps aren't our ancestors -- they're our cousins. We're not the 'end goal' of evolution. We're just one twig on an enormous tree."
+    },
+    {
+      "front": "Why doesn't natural selection produce perfection?",
+      "back": "**TECHNICAL:** Natural selection cannot produce perfection because: (1) it can only work with existing variation (constrained by mutation supply), (2) genetic constraints and trade-offs limit optimization (e.g., pleiotropy), (3) environments constantly change (what's optimal now may not be tomorrow), (4) historical contingency (evolution modifies existing structures, doesn't design from scratch), (5) genetic drift can fix suboptimal alleles, (6) time lags between environmental change and adaptive response.\n\n**ELI5:** Evolution can't build from scratch -- it can only modify what already exists, like remodeling a house instead of tearing it down and rebuilding. You're stuck with the original floor plan. Plus, the 'rules' keep changing (environments shift), and sometimes random luck matters more than quality. That's why humans have back pain (our spine was designed for four legs) and why we choke on food (breathing and eating share a tube)."
+    },
+    {
+      "front": "What does 'descent with modification' mean?",
+      "back": "**TECHNICAL:** Descent with modification is Darwin's central concept: all organisms share common ancestors (descent), and lineages change over time as they adapt to different environments (modification). This explains both the unity of life (shared features due to common ancestry) and its diversity (accumulated modifications across diverging lineages). It predicts nested hierarchies of relatedness.\n\n**ELI5:** 'Descent with modification' means all living things are related (we all share great-great-great-grandparents) AND they change over time. It's like a family tree where every generation looks slightly different from the last. Over millions of years, some branches became fish, some became trees, some became you. Same family, different modifications."
+    },
+    {
+      "front": "What types of evidence support common ancestry?",
+      "back": "**TECHNICAL:** Evidence for common ancestry includes: (1) homologous structures (shared skeletal plans), (2) embryological similarities (pharyngeal arches, similar early development across vertebrates), (3) vestigial structures, (4) molecular homology (universal genetic code, shared genes), (5) biogeographic patterns, (6) fossil record (transitional forms), (7) artificial selection demonstrating modification potential, (8) observed speciation events.\n\n**ELI5:** Many clues prove all life is related: (1) Same arm bones in whales, bats, and humans. (2) Embryos of fish, chickens, and humans look eerily similar early on. (3) Leftover body parts (whale leg bones). (4) ALL life uses the same DNA code. (5) Island animals look like nearby mainland ones. (6) Fossils show species between groups (like fish-to-land-animal transitions). It's like a detective case with overwhelming evidence."
+    },
+    {
+      "front": "What is embryological homology?",
+      "back": "**TECHNICAL:** Embryological homology refers to similarities in developmental stages across different species, reflecting shared ancestry. For example, all vertebrate embryos develop pharyngeal arches (gill slits in fish, modified into jaw/ear structures in mammals), notochords, and similar body plans during early development, even when adult forms are radically different. These shared developmental programs are inherited from common ancestors.\n\n**ELI5:** In the early weeks of development, a human embryo, a chicken embryo, and a fish embryo look almost identical -- they all have little gill-like slits and tails. As they grow, they become very different. But that early similarity is like finding the same baby photo in three different people's albums -- it proves they're related."
+    }
+  ],
+  "lec3-genes-proteins": [
+    {
+      "front": "What is the central dogma of molecular biology?",
+      "back": "**TECHNICAL:** The central dogma states that genetic information flows from DNA to RNA to protein: DNA is transcribed into mRNA by RNA polymerase, and mRNA is translated into protein by ribosomes. DNA serves as the heritable information store; RNA is the intermediate messenger; proteins are the functional molecules that carry out cellular processes. Information does not flow from protein back to nucleic acid.\n\n**ELI5:** The central dogma is biology's production line: DNA is the master blueprint (locked in the vault), RNA is the photocopy that goes to the factory floor, and protein is the finished product that does the actual work. Information flows one way: blueprint -> photocopy -> product. You don't reverse-engineer the blueprint from the product."
+    },
+    {
+      "front": "What is transcription, and what enzyme carries it out?",
+      "back": "**TECHNICAL:** Transcription is the synthesis of a complementary RNA strand from a DNA template, catalyzed by RNA polymerase. The enzyme reads the template DNA strand 3' to 5' and synthesizes mRNA in the 5' to 3' direction. In eukaryotes, transcription occurs in the nucleus and the pre-mRNA is processed (5' cap, 3' poly-A tail, intron splicing) before export to the cytoplasm.\n\n**ELI5:** Transcription is photocopying the DNA. An enzyme called RNA polymerase unzips the DNA, reads one side, and makes an RNA copy of the gene. It's like a scribe in a library who can't take the original book out, so they copy the relevant page (RNA) and carry that copy to the workshop (ribosome)."
+    },
+    {
+      "front": "What is translation, and what structure carries it out?",
+      "back": "**TECHNICAL:** Translation is the synthesis of a polypeptide (protein) from an mRNA template, carried out by the ribosome. The ribosome reads mRNA codons (three-nucleotide sequences) and, with the aid of tRNAs carrying specific amino acids, assembles the polypeptide chain according to the genetic code. Translation occurs in the cytoplasm (on free ribosomes or rough ER).\n\n**ELI5:** Translation is reading the RNA photocopy and building the actual product. The ribosome is like a little factory robot that reads the RNA instructions three letters at a time and snaps together the correct amino acid building blocks to build a protein. It's assembling LEGO pieces following coded instructions."
+    },
+    {
+      "front": "What is the evidence from human chromosome 2 for common ancestry with apes?",
+      "back": "**TECHNICAL:** Humans have 23 chromosome pairs; great apes have 24. Human chromosome 2 shows evidence of an ancient fusion of two ancestral chromosomes: (1) it contains two centromeric regions (one functional, one vestigial), (2) it has interstitial (internal) telomeric sequences at the fusion site (telomeres normally only occur at chromosome ends), (3) its banding pattern matches two separate ape chromosomes (2A and 2B). This is a molecular 'fossil' of the fusion event.\n\n**ELI5:** Humans have 23 pairs of chromosomes but apes have 24. Scientists found that our chromosome 2 is actually two ape chromosomes glued together! The evidence: it has two center points (centromeres) when it should have one, and it has end-cap sequences (telomeres) stuck in the MIDDLE where two chromosomes fused. It's like finding the seam where two books were taped together into one."
+    },
+    {
+      "front": "What are four mechanisms of gene regulation?",
+      "back": "**TECHNICAL:** (1) Chromatin remodeling/histone modification -- acetylation, methylation, etc. alter DNA accessibility. (2) Transcription factors (TFs) -- proteins that bind DNA regulatory regions (promoters, enhancers) to activate or repress transcription. (3) Hormonal regulation -- hormones (e.g., steroid hormones) enter cells and activate nuclear receptors that function as TFs. (4) Environmental regulation -- external signals (temperature, nutrition, light) influence gene expression through signal transduction pathways.\n\n**ELI5:** Genes aren't just 'on' or 'off' -- they're controlled like a dimmer switch by: (1) Histones -- proteins that DNA wraps around, which can be loosened or tightened to hide or expose genes. (2) Transcription factors -- helper proteins that sit on DNA and tell RNA polymerase 'go' or 'stop.' (3) Hormones -- chemical messengers that travel through your blood and flip gene switches. (4) Environment -- things like temperature and food can change which genes are active."
+    },
+    {
+      "front": "What is the evolutionary significance of dolphin hindlimb genes?",
+      "back": "**TECHNICAL:** Dolphins possess the same hindlimb developmental genes (e.g., Sonic hedgehog, Tbx4) as terrestrial mammals, but these genes are silenced during development through regulatory changes (altered enhancer activity). The genes are intact but not expressed at the right time/place. This demonstrates that evolution often works by modifying gene regulation rather than eliminating genes, and provides molecular evidence of dolphins' terrestrial ancestry.\n\n**ELI5:** Dolphins still have the genes for making legs -- they just turned off! The instruction manual still has the 'build legs' chapter, but the switch is flipped to 'skip.' This is amazing evidence that dolphins descended from animals that walked on land. Evolution didn't delete the leg genes; it just silenced them."
+    },
+    {
+      "front": "Why does the universality of the genetic code support common ancestry?",
+      "back": "**TECHNICAL:** Nearly all living organisms (from bacteria to humans) use the same genetic code: the same 64 codons specify the same 20 amino acids and stop signals. This universality is most parsimoniously explained by inheritance from a single common ancestor (LUCA -- Last Universal Common Ancestor). If life arose independently multiple times, different genetic codes would be expected. Minor code variations in some mitochondria and microorganisms represent derived modifications.\n\n**ELI5:** Every living thing on Earth -- from bacteria to mushrooms to whales to you -- uses the exact same DNA language. The 'word' ATG always means the same amino acid everywhere. The chances of this happening by coincidence are essentially zero. It's like discovering that every book ever written uses the same alphabet -- the simplest explanation is they all came from the same source."
+    },
+    {
+      "front": "Does reverse transcription (RNA to DNA) violate the central dogma?",
+      "back": "**TECHNICAL:** No. Reverse transcription (catalyzed by reverse transcriptase, as in retroviruses like HIV) converts RNA back to DNA, but this does not violate the central dogma. The dogma specifically states that information cannot flow from protein to nucleic acid. RNA-to-DNA is a nucleic acid to nucleic acid conversion. Crick's original formulation explicitly allowed for RNA-to-DNA transfer.\n\n**ELI5:** No! The central dogma says information can't go from protein BACK to DNA. Going from RNA back to DNA is fine -- it's still nucleic acid talking to nucleic acid (like translating between two similar languages). The 'forbidden' direction would be protein back to DNA, which never happens. Retroviruses going RNA -> DNA is perfectly compatible."
+    },
+    {
+      "front": "What is the relationship between DNA, RNA, and protein in terms of information flow?",
+      "back": "**TECHNICAL:** DNA is the permanent information repository (double-stranded, stable, replicated). RNA is the transient intermediate (single-stranded, less stable, diverse functions: mRNA, tRNA, rRNA, regulatory RNA). Protein is the functional endpoint (enzymes, structural components, signaling molecules). The flow DNA -> RNA -> Protein represents increasing functional specificity and decreasing informational permanence. DNA replication (DNA -> DNA) and reverse transcription (RNA -> DNA) are also possible.\n\n**ELI5:** Think of it as: DNA = the original recipe book kept safe in a library. RNA = the handwritten copy you take to the kitchen. Protein = the actual cake you bake. The recipe book is permanent and precious. The handwritten copy is temporary. The cake does the actual job of being delicious. Information flows from book to copy to cake, not backwards."
+    },
+    {
+      "front": "Why is gene regulation important for understanding evolution?",
+      "back": "**TECHNICAL:** Gene regulation is a major mechanism of evolutionary change. Many evolutionary differences between species result from changes in WHEN, WHERE, and HOW MUCH genes are expressed (cis-regulatory evolution) rather than changes in the protein-coding sequences themselves. Humans and chimpanzees share ~99% coding DNA; many differences are regulatory. Evo-devo research shows that morphological diversity often arises from modifications in developmental gene regulation.\n\n**ELI5:** Here's a mind-blowing fact: humans and chimps have almost identical genes, but we look very different. The difference is mostly in which genes are turned on, when, and how much -- like having the same ingredients but following different recipes. Evolution often works by changing the recipe (regulation) rather than the ingredients (genes)."
+    },
+    {
+      "front": "What are histones, and how do they affect gene expression?",
+      "back": "**TECHNICAL:** Histones are alkaline proteins around which DNA winds to form nucleosomes (the fundamental unit of chromatin). Chemical modifications to histone tails (acetylation, methylation, phosphorylation, ubiquitination) alter chromatin structure. Acetylation generally loosens chromatin (euchromatin), increasing gene accessibility and transcription. Methylation can either activate or repress, depending on the specific residue. This is a key mechanism of epigenetic regulation.\n\n**ELI5:** DNA is super long, so it wraps around little protein spools called histones, like thread around bobbins. When the thread is wound tight, the cell can't read the DNA (gene is OFF). When it's loosened, the gene becomes readable (gene is ON). Chemical tags on the histones control how tight or loose the winding is -- it's like adjusting how tightly you roll up a poster to hide or show the image."
+    }
+  ],
+  "lec3-mutations": [
+    {
+      "front": "Why are mutations considered the 'raw material' of evolution?",
+      "back": "**TECHNICAL:** Mutations are the ultimate source of all new genetic variation in populations. Without mutation, there would be no new alleles for natural selection, genetic drift, or gene flow to act upon. While recombination reshuffles existing variation, only mutation generates novel alleles. All evolutionary change ultimately traces back to mutational events.\n\n**ELI5:** Mutations are like typos in the DNA recipe book -- and they're the ONLY way to get truly new recipes. Without mutations, evolution would have nothing new to work with. Natural selection is the taste-tester, but mutation is the chef who invents new dishes. No new dishes = no evolution."
+    },
+    {
+      "front": "How many chromosome pairs do humans have vs. great apes?",
+      "back": "**TECHNICAL:** Humans have 23 pairs of chromosomes (2n = 46). Great apes (chimpanzees, gorillas, orangutans) have 24 pairs (2n = 48). The difference is explained by the fusion of two ancestral ape chromosomes into human chromosome 2, as evidenced by vestigial centromeric and telomeric sequences at the fusion site.\n\n**ELI5:** Humans have 23 pairs of chromosomes, but chimps, gorillas, and orangutans all have 24 pairs. We're the odd ones out! Our chromosome 2 is actually two ape chromosomes that got stuck together long ago. It's like finding out everyone else has a 24-volume encyclopedia set and yours has 23 volumes because someone bound two into one."
+    },
+    {
+      "front": "What is the difference between somatic and germline mutations?",
+      "back": "**TECHNICAL:** Somatic mutations occur in non-reproductive (body) cells and are NOT passed to offspring. They can cause cancer and mosaicism within an individual but have no evolutionary significance. Germline mutations occur in reproductive cells (eggs, sperm, or their precursors) and ARE transmitted to offspring. Only germline mutations contribute to heritable variation and evolutionary change.\n\n**ELI5:** Somatic mutations are like scratches on YOUR copy of a book -- they affect only you and disappear when you die. Germline mutations are like typos in the MASTER copy that gets photocopied for your kids -- they get passed down forever. Evolution only cares about germline mutations because those are the ones that get inherited."
+    },
+    {
+      "front": "What is a silent (synonymous) mutation?",
+      "back": "**TECHNICAL:** A silent mutation is a point mutation in a protein-coding region that changes a codon but does NOT change the amino acid it specifies, due to the degeneracy (redundancy) of the genetic code. For example, GCU, GCC, GCA, GCG all encode alanine. A change from GCU to GCC is silent. These mutations are often selectively neutral at the protein level, though they can affect mRNA folding, splicing, or translation efficiency.\n\n**ELI5:** A silent mutation is like changing a word's spelling without changing its meaning -- like 'colour' vs 'color.' The DNA letter changes, but the protein stays exactly the same because multiple DNA codes can produce the same amino acid. It's a change nobody notices."
+    },
+    {
+      "front": "What is a missense mutation?",
+      "back": "**TECHNICAL:** A missense mutation is a point mutation that changes a codon to specify a DIFFERENT amino acid. Effects range from benign (conservative substitution, e.g., leucine to isoleucine) to severe (non-conservative substitution affecting protein structure/function, e.g., sickle cell: glutamic acid to valine in hemoglobin). The impact depends on the chemical properties of the substituted amino acid and its location in the protein.\n\n**ELI5:** A missense mutation swaps one amino acid for a different one -- like replacing one LEGO brick with a different color. Sometimes it doesn't matter (replacing a red brick with an orange one in a big wall). Sometimes it's catastrophic (replacing the keystone piece that holds the whole structure together). Sickle cell anemia comes from just one missense mutation."
+    },
+    {
+      "front": "What is a nonsense mutation?",
+      "back": "**TECHNICAL:** A nonsense mutation is a point mutation that converts an amino acid codon into a premature stop codon (UAG, UAA, or UGA), resulting in a truncated (shortened) protein. The truncated protein is usually nonfunctional and is often degraded by nonsense-mediated mRNA decay. Nonsense mutations are typically deleterious.\n\n**ELI5:** A nonsense mutation is like a period appearing in the middle of a sentence. The ribosome reads 'build this protein... STOP' way too early, and you get a half-finished protein. Imagine building a bridge but stopping halfway -- it's useless. That's what a nonsense mutation does."
+    },
+    {
+      "front": "What is a frameshift mutation?",
+      "back": "**TECHNICAL:** A frameshift mutation results from an insertion or deletion of nucleotides that is NOT a multiple of three, shifting the reading frame of all downstream codons. This typically produces an entirely different amino acid sequence downstream of the mutation and often introduces a premature stop codon. Frameshifts are almost always severely deleterious because they garble the entire protein from the mutation point onward.\n\n**ELI5:** DNA is read three letters at a time: THE CAT ATE THE RAT. Delete one letter: THE CA TAT ETH ERA T. Every word after the deletion is scrambled. That's a frameshift -- adding or removing a letter shifts the 'reading frame' and turns the rest of the protein into gibberish."
+    },
+    {
+      "front": "What are typical mutation rates in different organisms?",
+      "back": "**TECHNICAL:** Per-base-pair per-generation mutation rates vary: Yeast (Saccharomyces cerevisiae) ~3 x 10^-8 per bp per generation. Arabidopsis thaliana ~7 x 10^-9 per bp per generation. Humans ~1.0-1.5 x 10^-8 per bp per generation, resulting in approximately 70 new mutations per individual per generation across the ~3.2 billion bp genome.\n\n**ELI5:** Different organisms make typos at different rates: Yeast makes about 3 typos per hundred million letters each generation. A tiny plant (Arabidopsis) makes about 7 per billion. Humans make about 70 brand-new typos per baby (out of 3.2 billion DNA letters total). Most typos don't matter, but occasionally one changes something important."
+    },
+    {
+      "front": "Approximately how many new mutations does each human carry?",
+      "back": "**TECHNICAL:** Each human individual carries approximately 70 de novo (new) mutations not present in either parent. This is derived from the per-nucleotide mutation rate (~1.0-1.5 x 10^-8 per bp/generation) multiplied by the diploid genome size (~6.4 x 10^9 bp). Most of these fall in non-coding regions and are selectively neutral.\n\n**ELI5:** Every baby born has about 70 brand-new mutations that neither parent had. Out of 6.4 billion DNA letters, 70 are 'new typos.' Most of those typos are in the boring parts of the manual that nobody reads (non-coding DNA), so they don't cause any problems. But occasionally, one lands somewhere important."
+    },
+    {
+      "front": "Why are most mutations neutral or slightly deleterious?",
+      "back": "**TECHNICAL:** Most mutations are neutral because: (1) ~98.5% of the human genome is non-coding, so most mutations hit non-functional regions; (2) the genetic code is degenerate, so many coding mutations are synonymous (silent); (3) many amino acid substitutions are conservative (similar chemical properties). Of mutations that do affect fitness, most are deleterious because organisms are already reasonably well-adapted -- random changes to a functional system are more likely to break it than improve it.\n\n**ELI5:** Imagine randomly changing one part of a working car engine. Most changes will either do nothing (neutral -- you changed a non-essential bolt) or break something (deleterious -- you swapped a fuel line). Very rarely will a random change make the car go faster (beneficial). Same with mutations -- random changes to a well-tuned system usually don't help."
+    },
+    {
+      "front": "What is albinism, and what gene is associated with it?",
+      "back": "**TECHNICAL:** Albinism involves mutations in genes required for melanin biosynthesis, resulting in reduced or absent pigmentation. The question references FGFR3, though classical oculocutaneous albinism is typically associated with TYR (tyrosinase) gene mutations. FGFR3 mutations are more commonly associated with achondroplasia (dwarfism). The key principle: single-gene mutations can produce dramatic phenotypic effects.\n\n**ELI5:** Albinism happens when a mutation breaks the gene that makes skin/hair/eye pigment. The body can't make the color chemical (melanin), so the animal or person has very pale skin, white hair, and light eyes. One tiny change in one gene can have a huge visible effect."
+    },
+    {
+      "front": "What causes polydactyly, and what gene is involved?",
+      "back": "**TECHNICAL:** Polydactyly (extra fingers or toes) is associated with mutations in the LMBR1 gene (limb development membrane protein 1), specifically in its regulatory element (ZRS -- Zone of Polarizing Activity Regulatory Sequence) that controls Sonic hedgehog (SHH) expression during limb development. Point mutations in this enhancer cause ectopic SHH expression, leading to extra digit formation. It demonstrates how regulatory mutations can cause morphological changes.\n\n**ELI5:** Polydactyly (being born with extra fingers or toes) is caused by a mutation in a gene called LMBR1 that controls how fingers develop. The mutation makes the 'build more fingers' signal turn on where it shouldn't. It's like a typo in the blueprint that says 'build 6 rooms' instead of 5 -- the builder just follows the (wrong) instructions."
+    },
+    {
+      "front": "What causes progeria, and what gene is involved?",
+      "back": "**TECHNICAL:** Hutchinson-Gilford progeria syndrome is caused by a de novo point mutation in the LMNA gene (Lamin A/C). The most common mutation (C1824T) creates an abnormal splice site, producing a truncated protein called progerin. This disrupts the nuclear lamina, causing premature aging, cardiovascular disease, and death typically in the teenage years. It demonstrates how a single nucleotide change can have devastating systemic effects.\n\n**ELI5:** Progeria makes children age super fast -- a 10-year-old can look 70. It's caused by just ONE letter change in ONE gene (LMNA) that makes a protein for the cell's skeleton. The broken protein makes cells fall apart, like a building with a cracked foundation. One tiny typo in 3 billion letters causes catastrophic premature aging."
+    },
+    {
+      "front": "Are mutations directed toward the needs of the organism?",
+      "back": "**TECHNICAL:** No. Mutations are stochastic (random) with respect to fitness -- they occur regardless of whether they would be beneficial or harmful. The probability of a particular mutation occurring is unrelated to its potential fitness effects. Mutations arise from replication errors, chemical damage, and radiation, not from organismal 'need.' This was demonstrated by the Luria-Delbruck fluctuation test (1943) and later by replica plating experiments. Lamarck's idea of 'directed' variation is incorrect.\n\n**ELI5:** Mutations don't happen because an organism needs them. A bacterium doesn't 'decide' to mutate to resist antibiotics -- random mutations are happening all the time, and the ones that happen to help survival get passed on. It's like lottery tickets: you don't win because you need money, you just get lucky. Mutations are random; selection is not."
+    },
+    {
+      "front": "What is the difference between point mutations and chromosomal mutations?",
+      "back": "**TECHNICAL:** Point mutations affect single nucleotides (substitutions: transitions/transversions; small insertions/deletions). Chromosomal mutations are large-scale changes affecting chromosome structure or number: duplications, deletions, inversions, translocations, aneuploidy (extra/missing chromosomes), polyploidy (extra chromosome sets). Chromosomal mutations affect many genes simultaneously and can have major evolutionary consequences (e.g., polyploidy in plant speciation).\n\n**ELI5:** Point mutations are like changing one letter in a word. Chromosomal mutations are like rearranging entire chapters of a book -- copying a chapter twice, deleting one, flipping one backwards, or moving it to a different book. Point mutations are small and surgical; chromosomal mutations are big and dramatic."
+    },
+    {
+      "front": "How does mutation relate to natural selection?",
+      "back": "**TECHNICAL:** Mutation generates the raw heritable variation upon which natural selection acts. Mutation is RANDOM with respect to fitness (provides variation without direction). Natural selection is NONRANDOM (provides direction by differentially favoring certain variants). Together, they produce adaptive evolution: mutation proposes, selection disposes. Without mutation, there are no new variants. Without selection, mutations just accumulate randomly (genetic drift).\n\n**ELI5:** Mutation and natural selection are a team. Mutation is like a cook throwing random ingredients into pots. Natural selection is the judge who tastes everything and keeps only the good dishes. Neither works alone -- without new ingredients (mutations), there's nothing new to taste. Without the judge (selection), you just get random mush. Together, they produce great recipes (adaptations)."
+    },
+    {
+      "front": "What is a transition vs. a transversion?",
+      "back": "**TECHNICAL:** Transitions are point mutations that substitute a purine for a purine (A<->G) or a pyrimidine for a pyrimidine (C<->T). Transversions substitute a purine for a pyrimidine or vice versa (A<->C, A<->T, G<->C, G<->T). Transitions are more common than transversions (~2:1 ratio) because they involve less structural disruption to the DNA helix. There are 4 possible transversions but only 2 possible transitions, yet transitions still predominate.\n\n**ELI5:** DNA bases come in two sizes: big ones (A, G = purines) and small ones (C, T = pyrimidines). Transitions swap big for big or small for small -- like trading a basketball for a soccer ball (both round). Transversions swap big for small -- like trading a basketball for a golf ball. Transitions happen more often because it's easier to swap similar-sized things."
+    }
+  ]
+}
