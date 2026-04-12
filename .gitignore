@@ -23,3 +23,5 @@ _work/recordings.json
 _work/lectures/
 _work/exam*.txt
 _work/apr*.txt
+node_modules/
+package*.json
