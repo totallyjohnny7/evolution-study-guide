@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Evolution Full Course — Study Command Center</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,6 +10,7 @@
 <style>
 /* ── Reset ─────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
 :root{
   --bg:#0a0a0a;--surface:#141414;--surface2:#1a1a1a;--surface3:#1e1e1e;--surface4:#252525;
   --text:#e5e5e5;--text2:#888;--text3:#666;
@@ -45,14 +46,14 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
 
 /* ── Topbar ────────────────────────────────────────── */
-#topbar{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);
+#topbar{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(255,255,255,0.06);padding:0 20px;display:flex;align-items:center;gap:12px;height:52px}
 #topbar h1{font-size:1.1rem;font-weight:600;white-space:nowrap;color:var(--text)}
 #nav{display:flex;overflow-x:auto;gap:4px;flex:1;scrollbar-width:none;-ms-overflow-style:none}
 #nav::-webkit-scrollbar{display:none}
 .tab-btn{padding:7px 16px;border-radius:var(--radius-sm);border:none;background:transparent;
   color:var(--text2);font-size:13px;font-weight:500;font-family:var(--font);cursor:pointer;
-  white-space:nowrap;transition:var(--trans)}
+  white-space:nowrap;transition:var(--trans);touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center}
 .tab-btn:hover{color:var(--text);background:var(--surface2)}
 .tab-btn.active{color:var(--text);background:var(--accent-dim)}
 #gs-trigger{background:none;border:none;color:var(--text2);cursor:pointer;padding:6px;border-radius:4px;flex-shrink:0}
@@ -80,7 +81,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 .fc-answer{font-size:.95rem;line-height:1.7;color:var(--text)}
 .fc-controls{display:flex;gap:12px;justify-content:center;margin-top:16px}
 .fc-controls button{padding:10px 28px;border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.1);
-  background:var(--surface);color:var(--text);cursor:pointer;font-family:var(--font);font-size:14px;transition:var(--trans)}
+  background:var(--surface);color:var(--text);cursor:pointer;font-family:var(--font);font-size:14px;transition:var(--trans);touch-action:manipulation;min-height:44px}
 .fc-controls button:hover{background:var(--surface2);border-color:rgba(255,255,255,0.2)}
 .fc-progress{text-align:center;color:var(--text2);font-size:13px;margin-top:8px}
 #fc-inner.swipe-left{transition:transform .3s ease,opacity .3s ease;transform:translateX(-120%) rotateZ(-8deg);opacity:0}
@@ -97,7 +98,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 .quiz-question{font-size:1rem;font-weight:500;margin-bottom:12px;line-height:1.5}
 .quiz-opts{display:flex;flex-direction:column;gap:8px}
 .quiz-opt{border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-sm);padding:10px 14px;
-  cursor:pointer;transition:background .15s,border-color .15s;font-size:14px;background:var(--surface);color:var(--text)}
+  cursor:pointer;transition:background .15s,border-color .15s;font-size:14px;background:var(--surface);color:var(--text);touch-action:manipulation}
 .quiz-opt:hover{background:var(--surface2)}
 .quiz-opt.selected{background:var(--accent-dim);border-color:rgba(255,255,255,0.2)}
 .quiz-opt.correct{background:rgba(46,160,67,0.18);color:var(--green);animation:correctFlash .5s ease}
@@ -161,7 +162,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 .match-wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .match-col{display:flex;flex-direction:column;gap:8px}
 .match-btn{padding:10px 14px;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-sm);
-  cursor:pointer;transition:var(--trans);text-align:left;background:var(--surface);color:var(--text);font-size:13px;font-family:var(--font)}
+  cursor:pointer;transition:var(--trans);text-align:left;background:var(--surface);color:var(--text);font-size:13px;font-family:var(--font);touch-action:manipulation;min-height:44px}
 .match-btn:hover{background:var(--surface2)}
 .match-btn.selected{background:var(--accent-dim);animation:glowPulse 1.5s infinite}
 .match-btn.matched{background:var(--green-dim);pointer-events:none;opacity:.7}
@@ -193,7 +194,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 
 /* ── Chapters ──────────────────────────────────────── */
 #chapters-layout{display:grid;grid-template-columns:240px 1fr;gap:24px;align-items:start}
-#chapters-toc{position:sticky;top:52px;max-height:calc(100vh - 80px);overflow-y:auto;
+#chapters-toc{position:sticky;top:52px;max-height:calc(100dvh - 80px);max-height:calc(100vh - 80px);overflow-y:auto;
   scrollbar-width:thin;scrollbar-color:var(--surface3) transparent}
 .toc-item{padding:8px 12px;border-radius:var(--radius-sm);cursor:pointer;font-size:13px;
   color:var(--text2);transition:var(--trans);display:flex;justify-content:space-between;align-items:center}
@@ -224,7 +225,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 
 /* ── Timer ─────────────────────────────────────────── */
 #timer-bar{position:fixed;bottom:0;width:100%;z-index:200;background:var(--surface);
-  border-top:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(12px);
+  border-top:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   padding:8px 16px;display:flex;align-items:center;gap:12px}
 #timer-bar.hidden{transform:translateY(100%);pointer-events:none}
 .timer-btn{background:none;border:1px solid rgba(255,255,255,0.1);border-radius:4px;
@@ -252,7 +253,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 .hotkey-grid span{padding:4px 8px;background:var(--surface2);border-radius:4px;text-align:center}
 
 /* ── Search Widget (sticky side panel) ─────────────── */
-#gs-widget{position:fixed;top:52px;right:0;width:340px;max-height:calc(100vh - 52px);z-index:250;
+#gs-widget{position:fixed;top:52px;right:0;width:340px;max-height:calc(100dvh - 52px);max-height:calc(100vh - 52px);z-index:250;
   background:var(--surface);border-left:1px solid rgba(255,255,255,0.08);
   transform:translateX(100%);transition:transform .2s ease;display:flex;flex-direction:column;
   box-shadow:-4px 0 20px rgba(0,0,0,0.3)}
@@ -303,6 +304,19 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
   #main{padding:16px 12px 100px}
   .card{padding:1rem 1.1rem}
   #topbar h1{font-size:.9rem}
+}
+/* ── Hover guard (touch devices) ──────────────────── */
+@media(hover:none){
+  .card:hover{border-color:rgba(255,255,255,0.06);transform:none}
+  .tab-btn:hover{color:var(--text2);background:transparent}
+  .fc-controls button:hover{background:var(--surface);border-color:rgba(255,255,255,0.1)}
+  .quiz-opt:hover{background:var(--surface)}
+  .match-btn:hover{background:var(--surface)}
+  .trap-controls button:hover{background:var(--surface2);color:var(--text2)}
+  .toc-item:hover{background:transparent;color:var(--text2)}
+  .gs-result:hover,.gs-node:hover,.gs-lec:hover{background:transparent}
+  #gs-trigger:hover{color:var(--text2);background:transparent}
+  #settings-toggle:hover{border-color:rgba(255,255,255,0.1)}
 }
 @media print{
   #topbar,#timer-bar,#settings-toggle,#settings-panel,#gs-modal{display:none!important}
@@ -556,6 +570,30 @@ function resetFC(){
   renderFC();
 }
 renderFC();
+
+// ── Flashcard touch swipe ────────────────────────────
+(function(){
+  const area=document.getElementById('fc-area');
+  if(!area)return;
+  let startX=0,startY=0,dx=0,swiping=false;
+  const THRESHOLD=50;
+  area.addEventListener('touchstart',function(e){
+    if(e.touches.length!==1)return;
+    startX=e.touches[0].clientX;startY=e.touches[0].clientY;dx=0;swiping=false;
+  },{passive:true});
+  area.addEventListener('touchmove',function(e){
+    if(e.touches.length!==1)return;
+    dx=e.touches[0].clientX-startX;
+    const dy=Math.abs(e.touches[0].clientY-startY);
+    if(Math.abs(dx)>dy&&Math.abs(dx)>10){swiping=true;e.preventDefault();}
+  },{passive:false});
+  area.addEventListener('touchend',function(){
+    if(!swiping)return;
+    if(dx<-THRESHOLD){fcWrong();}
+    else if(dx>THRESHOLD){fcRight();}
+  },{passive:true});
+  area.style.touchAction='pan-y';
+})();
 
 // ══════════════════════════════════════════════════════
 // QUIZ ENGINE (with config panel)
