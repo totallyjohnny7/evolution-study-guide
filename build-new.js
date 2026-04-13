@@ -586,6 +586,12 @@ data.nodes.forEach(node => {
   }
 });
 
+// ── Search TOC: lecture → nodes (lightweight for widget) ────────
+const SEARCH_TOC = Object.entries(CHAPTER_MAP).map(([key, ch]) => ({
+  key, title: ch.title,
+  nodes: ch.nodes.map(n => ({ id: n.id, title: n.title, qCount: n.totalQuiz }))
+}));
+
 // ── Escape for embedding in JS ───────────────────────────────────
 function jsStr(obj) {
   return JSON.stringify(obj)
@@ -847,20 +853,42 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 .hotkey-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:12px}
 .hotkey-grid span{padding:4px 8px;background:var(--surface2);border-radius:4px;text-align:center}
 
-/* ── Search Modal ──────────────────────────────────── */
-#gs-modal{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);
-  align-items:flex-start;justify-content:center;padding-top:80px}
-#gs-modal.open{display:flex}
-#gs-box{width:90%;max-width:560px;background:var(--surface);border:1px solid rgba(255,255,255,0.1);
-  border-radius:var(--radius-lg);padding:16px;max-height:70vh;overflow-y:auto}
-#gs-input{width:100%;padding:10px 14px;background:var(--surface2);border:1px solid rgba(255,255,255,0.08);
-  border-radius:var(--radius-sm);color:var(--text);font-family:var(--font);font-size:14px;outline:none}
-#gs-input:focus{border-color:rgba(255,255,255,0.2)}
-#gs-results{margin-top:12px}
-.gs-result{padding:10px;border-radius:var(--radius-sm);cursor:pointer;transition:var(--trans);margin-bottom:4px}
+/* ── Search Widget (sticky side panel) ─────────────── */
+#gs-widget{position:fixed;top:52px;right:0;width:340px;max-height:calc(100vh - 52px);z-index:250;
+  background:var(--surface);border-left:1px solid rgba(255,255,255,0.08);
+  transform:translateX(100%);transition:transform .2s ease;display:flex;flex-direction:column;
+  box-shadow:-4px 0 20px rgba(0,0,0,0.3)}
+#gs-widget.open{transform:translateX(0)}
+#gs-header{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06)}
+#gs-header label{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
+#gs-close{background:none;border:none;color:var(--text3);cursor:pointer;font-size:16px;margin-left:auto;padding:2px 6px}
+#gs-close:hover{color:var(--text)}
+#gs-input{width:100%;padding:10px 14px;background:var(--surface2);border:none;border-bottom:1px solid rgba(255,255,255,0.06);
+  color:var(--text);font-family:var(--font);font-size:14px;outline:none}
+#gs-input:focus{background:var(--surface3)}
+#gs-count{padding:4px 14px;font-size:11px;color:var(--text3);border-bottom:1px solid rgba(255,255,255,0.04)}
+#gs-body{flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--surface3) transparent}
+#gs-toc{padding:4px 0}
+#gs-results{padding:4px 0}
+.gs-lec{padding:8px 14px;font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;
+  border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
+.gs-lec:hover{background:var(--surface2)}
+.gs-lec .gs-arrow{transition:transform .15s;font-size:9px;color:var(--text3)}
+.gs-lec.collapsed .gs-arrow{transform:rotate(-90deg)}
+.gs-lec .gs-lec-count{margin-left:auto;font-size:10px;font-weight:400;color:var(--text3);background:var(--surface2);padding:1px 6px;border-radius:8px}
+.gs-node{padding:6px 14px 6px 28px;cursor:pointer;transition:var(--trans);border-bottom:1px solid rgba(255,255,255,0.02);display:flex;align-items:center;gap:8px}
+.gs-node:hover{background:var(--surface2)}
+.gs-node-label{font-size:12px;color:var(--text);line-height:1.3;flex:1}
+.gs-node-badge{font-size:9px;color:var(--text3);background:var(--surface2);padding:1px 5px;border-radius:6px;white-space:nowrap}
+.gs-result{padding:10px 14px;cursor:pointer;transition:var(--trans);border-bottom:1px solid rgba(255,255,255,0.03)}
 .gs-result:hover{background:var(--surface2)}
-.gs-result-type{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.03em}
-.gs-result-text{font-size:13px;color:var(--text);margin-top:2px}
+.gs-result-type{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.gs-result-text{font-size:13px;color:var(--text);margin-top:2px;line-height:1.4}
+.gs-result-ch{font-size:10px;color:var(--text3);margin-top:2px}
+.gs-highlight{background:rgba(255,255,255,0.15);padding:0 2px;border-radius:2px}
+.gs-lec-nodes{display:block}
+.gs-sep{padding:6px 14px;font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid rgba(255,255,255,0.04);background:var(--surface2)}
+@media(max-width:640px){#gs-widget{width:100%}}
 
 /* ── Responsive ────────────────────────────────────── */
 @media(max-width:768px){
@@ -900,7 +928,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
     <button class="tab-btn" data-tab="bossmode">Boss Mode</button>
     <button class="tab-btn" data-tab="chapters">Chapters</button>
   </div>
-  <button id="gs-trigger" aria-label="Search" onclick="document.getElementById('gs-modal').classList.add('open');document.getElementById('gs-input').focus()">
+  <button id="gs-trigger" aria-label="Search" onclick="toggleSearch()">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
   </button>
 </div>
@@ -917,8 +945,8 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
       </div>
     </div>
     <div class="fc-controls">
-      <button id="fc-no" onclick="event.stopPropagation();fcWrong()">✗ Review again</button>
-      <button id="fc-yes" onclick="event.stopPropagation();fcRight()">✓ Got it</button>
+      <button id="fc-no" onclick="event.stopPropagation();fcWrong()">Fail</button>
+      <button id="fc-yes" onclick="event.stopPropagation();fcRight()">Pass</button>
     </div>
     <div class="fc-progress" id="fc-progress"></div>
   </div>
@@ -1027,20 +1055,20 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
   <div class="setting-group">
     <label>Keyboard Shortcuts</label>
     <div class="hotkey-grid">
-      <span>F → Flash</span><span>Q → Quiz</span>
-      <span>X → Compare</span><span>S → Sequence</span>
-      <span>M → Match</span><span>T → Traps</span>
-      <span>B → Boss</span><span>C → Chapters</span>
       <span>Space → Flip</span><span>← → → Nav</span>
       <span>P → Timer</span><span>+/- Speed</span>
+      <span>Ctrl+F → Search</span><span>Esc → Close</span>
     </div>
   </div>
 </div>
 
-<!-- ── Search Modal ────────────────────────────────── -->
-<div id="gs-modal">
-  <div id="gs-box">
-    <input id="gs-input" placeholder="Search flashcards, quiz, traps..." oninput="doSearch(this.value)">
+<!-- ── Search Widget (side panel) ──────────────────── -->
+<div id="gs-widget">
+  <div id="gs-header"><label>Search</label><span style="font-size:11px;color:var(--text3)">Ctrl+F</span><button id="gs-close" onclick="toggleSearch(false)">✕</button></div>
+  <input id="gs-input" placeholder="Search all content..." oninput="doSearch(this.value)">
+  <div id="gs-count"></div>
+  <div id="gs-body">
+    <div id="gs-toc"></div>
     <div id="gs-results"></div>
   </div>
 </div>
@@ -1058,6 +1086,7 @@ const MATCH_SETS=${jsStr(MATCH_SETS)};
 const TRAPS=${jsStr(TRAPS)};
 const BOSS=${jsStr(BOSS)};
 const CHAPTERS=${jsStr(CHAPTER_MAP)};
+const SEARCH_TOC=${jsStr(SEARCH_TOC)};
 
 // ══════════════════════════════════════════════════════
 // TAB NAVIGATION
@@ -1383,7 +1412,7 @@ function renderChapters(){
     const sec=document.createElement('div');sec.id='ch-'+key;sec.style.marginBottom='32px';
     let html='<h2 style="font-size:1.4rem;margin-bottom:16px;padding-top:8px">'+esc(ch.title)+'</h2>';
     ch.nodes.forEach(n=>{
-      html+='<div class="concept-block card"><div class="concept-header"><span class="pill">'+esc(key)+'</span><h3 style="font-size:1.1rem">'+esc(n.title)+'</h3>';
+      html+='<div class="concept-block card" data-node-id="'+n.id+'"><div class="concept-header"><span class="pill">'+esc(key)+'</span><h3 style="font-size:1.1rem">'+esc(n.title)+'</h3>';
       if(n.totalQuiz)html+='<span class="toc-qcount" style="margin-left:auto">'+n.totalQuiz+'Q</span>';
       html+='</div>';
       if(n.subtitle)html+='<div style="font-size:12px;color:var(--text3);margin-bottom:8px">'+esc(n.subtitle)+'</div>';
@@ -1476,36 +1505,105 @@ function advanceActive(){
 // KEYBOARD SHORTCUTS
 // ══════════════════════════════════════════════════════
 document.addEventListener('keydown',e=>{
-  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;
-  const map={f:'flashcards',q:'quiz',x:'compare',s:'sequence',m:'match',t:'trapdrill',b:'bossmode',c:'chapters'};
-  if(map[e.key]){showTab(map[e.key]);return}
+  // Ctrl+F → open search widget
+  if((e.ctrlKey||e.metaKey)&&e.key==='f'){e.preventDefault();toggleSearch(true);return}
+  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'){
+    if(e.key==='Escape'){toggleSearch(false)}
+    return;
+  }
   if(e.key===' '){flipCard();e.preventDefault()}
   if(e.key==='ArrowRight'){fcRight()}
   if(e.key==='ArrowLeft'){fcWrong()}
   if(e.key==='p'||e.key==='P'){toggleTimer()}
   if(e.key==='+'){adjustTimer(0.5)}
   if(e.key==='-'){adjustTimer(-0.5)}
-  if(e.key==='Escape'){document.getElementById('gs-modal').classList.remove('open')}
+  if(e.key==='Escape'){toggleSearch(false)}
 });
-document.getElementById('gs-modal').addEventListener('click',e=>{if(e.target.id==='gs-modal')e.target.classList.remove('open')});
 
 // ══════════════════════════════════════════════════════
-// GLOBAL SEARCH
+// GLOBAL SEARCH (TOC + text search)
 // ══════════════════════════════════════════════════════
+// Build search index
 let searchIdx=[];
-function buildSearchIndex(){
-  FLASHCARDS.forEach((f,i)=>searchIdx.push({type:'Flashcard',text:f.q,tab:'flashcards',idx:i}));
-  QUIZ.forEach((q,i)=>searchIdx.push({type:'Quiz',text:q.q,tab:'quiz',idx:i}));
+(function buildSearchIndex(){
+  FLASHCARDS.forEach((f,i)=>searchIdx.push({type:'Flashcard',text:f.q,tab:'flashcards',ch:f.ch,idx:i}));
+  QUIZ.forEach((q,i)=>searchIdx.push({type:'Quiz',text:q.q,tab:'quiz',ch:q.ch,idx:i}));
   TRAPS.forEach((t,i)=>searchIdx.push({type:'Trap',text:t.stmt,tab:'trapdrill',idx:i}));
+  // Index chapter node content
+  SEARCH_TOC.forEach(lec=>{
+    lec.nodes.forEach(n=>{
+      searchIdx.push({type:'Topic',text:n.title,tab:'chapters',ch:lec.key,nodeId:n.id});
+    });
+  });
+})();
+
+// Build TOC tree in widget
+(function buildTOC(){
+  const toc=document.getElementById('gs-toc');
+  let html='';
+  SEARCH_TOC.forEach((lec,li)=>{
+    const nCount=lec.nodes.length;
+    html+='<div class="gs-lec" data-lec="'+li+'" onclick="toggleLecSection(this)"><span class="gs-arrow">▼</span>'+esc(lec.title)+'<span class="gs-lec-count">'+nCount+'</span></div>';
+    html+='<div class="gs-lec-nodes" data-lec="'+li+'">';
+    lec.nodes.forEach(n=>{
+      html+='<div class="gs-node" data-node="'+n.id+'" onclick="jumpToNode(\\x27'+n.id+'\\x27)">';
+      html+='<span class="gs-node-label">'+esc(n.title)+'</span>';
+      if(n.qCount)html+='<span class="gs-node-badge">'+n.qCount+'Q</span>';
+      html+='</div>';
+    });
+    html+='</div>';
+  });
+  toc.innerHTML=html;
+})();
+
+function toggleLecSection(el){
+  el.classList.toggle('collapsed');
+  const idx=el.dataset.lec;
+  const nodes=document.querySelector('.gs-lec-nodes[data-lec="'+idx+'"]');
+  if(nodes)nodes.style.display=el.classList.contains('collapsed')?'none':'block';
 }
-buildSearchIndex();
+
+function jumpToNode(nodeId){
+  showTab('chapters');
+  setTimeout(()=>{
+    const el=document.querySelector('[data-node-id="'+nodeId+'"]');
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});el.style.outline='2px solid var(--accent)';setTimeout(()=>el.style.outline='',2000)}
+  },150);
+}
+
+function toggleSearch(forceOpen){
+  const w=document.getElementById('gs-widget');
+  if(forceOpen===true){w.classList.add('open');document.getElementById('gs-input').focus();return}
+  if(forceOpen===false){w.classList.remove('open');return}
+  w.classList.toggle('open');
+  if(w.classList.contains('open'))document.getElementById('gs-input').focus();
+}
+
 function doSearch(query){
+  const toc=document.getElementById('gs-toc');
   const r=document.getElementById('gs-results');
-  if(!query||query.length<2){r.innerHTML='';return}
+  const countEl=document.getElementById('gs-count');
+  if(!query||query.length<2){
+    toc.style.display='block';r.innerHTML='';countEl.textContent='';return;
+  }
+  toc.style.display='none';
   const q=query.toLowerCase();
-  const results=searchIdx.filter(s=>s.text.toLowerCase().includes(q)).slice(0,20);
-  r.innerHTML=results.map(s=>'<div class="gs-result" data-tab="'+s.tab+'"><div class="gs-result-type">'+s.type+'</div><div class="gs-result-text">'+esc(s.text.substring(0,120))+'</div></div>').join('');
-  r.querySelectorAll('.gs-result').forEach(function(el){el.onclick=function(){showTab(this.dataset.tab);document.getElementById('gs-modal').classList.remove('open')}});
+  const results=searchIdx.filter(s=>s.text.toLowerCase().includes(q)).slice(0,30);
+  countEl.textContent=results.length+' result'+(results.length!==1?'s':'');
+  r.innerHTML=results.map(s=>{
+    const highlighted=esc(s.text.substring(0,140)).replace(new RegExp('('+q.replace(/[.*+?^\${}()|[\\]\\\\]/g,'\\\\\\$&')+')','gi'),'<span class="gs-highlight">\\$1</span>');
+    return '<div class="gs-result" data-tab="'+(s.tab||'')+'" data-node="'+(s.nodeId||'')+'">'
+      +'<div class="gs-result-type">'+s.type+(s.ch?' · '+s.ch:'')+'</div>'
+      +'<div class="gs-result-text">'+highlighted+'</div></div>';
+  }).join('');
+  r.querySelectorAll('.gs-result').forEach(el=>{
+    el.onclick=function(){
+      const nodeId=this.dataset.node;
+      const tab=this.dataset.tab;
+      if(nodeId){jumpToNode(nodeId)}
+      else if(tab){showTab(tab)}
+    };
+  });
 }
 
 // ── Utility ───────────────────────────────────────────
