@@ -8,6 +8,12 @@ const data = require('./data.json');
 
 // ── Lecture → Chapter mapping ────────────────────────────────────
 function getChapter(id) {
+  // Check longer prefixes FIRST to avoid lec1 matching lec12-lec15
+  if (id.startsWith('lec1011')) return 'Lec 10-11';
+  if (id.startsWith('lec15')) return 'Lec 15';
+  if (id.startsWith('lec14')) return 'Lec 14';
+  if (id.startsWith('lec13')) return 'Lec 13';
+  if (id.startsWith('lec12')) return 'Lec 12';
   if (id.startsWith('lec1')) return 'Lec 1-2';
   if (id.startsWith('lec2')) return 'Lec 1-2';
   if (id.startsWith('lec3')) return 'Lec 3';
@@ -16,11 +22,6 @@ function getChapter(id) {
   if (id.startsWith('lec7')) return 'Lec 7';
   if (id.startsWith('lec8')) return 'Lec 8';
   if (id.startsWith('lec9')) return 'Lec 9';
-  if (id.startsWith('lec1011')) return 'Lec 10-11';
-  if (id.startsWith('lec12')) return 'Lec 12';
-  if (id.startsWith('lec13')) return 'Lec 13';
-  if (id.startsWith('lec14')) return 'Lec 14';
-  if (id.startsWith('lec15')) return 'Lec 15';
   if (id.startsWith('ch13')) return 'Speciation';
   return 'Applied';
 }
@@ -53,16 +54,20 @@ console.log(`Flashcards: ${FLASHCARDS.length}`);
 
 // ── 2. QUIZ ──────────────────────────────────────────────────────
 const QUIZ = [];
+const QUIZ_CHAPTERS = {}; // chapter → [quiz indices]
 data.nodes.forEach(node => {
+  const ch = getChapter(node.id);
   const coreSection = node.popup?.sections?.find(s => s.label === 'CORE CONCEPT');
   const coreBrief = coreSection ? coreSection.body.split('.').slice(0, 2).join('.') + '.' : '';
+  if (!QUIZ_CHAPTERS[ch]) QUIZ_CHAPTERS[ch] = [];
   (node.quiz || []).forEach(q => {
-    // Shuffle correct answer into distractors
     const allOpts = [...q.distractors];
     const insertIdx = Math.floor(Math.random() * 4);
     allOpts.splice(insertIdx, 0, q.correct);
     const explain = `Correct: ${q.correct}. ${coreBrief}`.substring(0, 400);
-    QUIZ.push({ q: q.question, opts: allOpts.slice(0, 4), ans: insertIdx, explain });
+    const idx = QUIZ.length;
+    QUIZ.push({ q: q.question, opts: allOpts.slice(0, 4), ans: insertIdx, explain, ch });
+    QUIZ_CHAPTERS[ch].push(idx);
   });
 });
 console.log(`Quiz: ${QUIZ.length}`);
@@ -550,6 +555,19 @@ const CHAPTER_MAP = {
 data.nodes.forEach(node => {
   const ch = getChapter(node.id);
   if (CHAPTER_MAP[ch]) {
+    // Embed quiz questions for this node (for "Check Your Understanding")
+    const nodeQuiz = (node.quiz || []).slice(0, 5).map(q => {
+      const allOpts = [...q.distractors];
+      const insertIdx = Math.floor(Math.random() * 4);
+      allOpts.splice(insertIdx, 0, q.correct);
+      return { q: q.question, opts: allOpts.slice(0, 4), ans: insertIdx };
+    });
+    // Visual regions for concept diagram
+    const regions = (node.visual?.regions || []).map(r => ({
+      label: r.label,
+      color: r.color || '#888',
+      items: r.items || []
+    }));
     CHAPTER_MAP[ch].nodes.push({
       id: node.id,
       title: node.title,
@@ -561,6 +579,9 @@ data.nodes.forEach(node => {
       })),
       warnings: node.popup?.warnings || [],
       mnemonic: node.visual?.mnemonic || '',
+      quiz: nodeQuiz,
+      regions: regions,
+      totalQuiz: (node.quiz || []).length,
     });
   }
 });
@@ -680,6 +701,34 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 .quiz-explain{display:none;border-left:3px solid var(--teal);background:var(--teal-dim);
   padding:10px 14px;margin-top:8px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:13px;line-height:1.6}
 .quiz-explain.show{display:block;animation:revealDown .3s ease}
+
+/* ── Quiz Config ───────────────────────────────────── */
+.qcfg-group{margin-bottom:20px}
+.qcfg-label{font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--text2);text-transform:uppercase;margin-bottom:8px}
+.qcfg-pills{display:flex;flex-wrap:wrap;gap:8px}
+.qcfg-pill{padding:8px 18px;border-radius:99px;border:1px solid rgba(255,255,255,0.1);background:transparent;
+  color:var(--text2);font-size:13px;font-family:var(--font);cursor:pointer;transition:var(--trans);white-space:nowrap}
+.qcfg-pill:hover{border-color:rgba(255,255,255,0.25);color:var(--text)}
+.qcfg-pill.active{background:var(--accent-dim);border-color:rgba(255,255,255,0.3);color:var(--text)}
+#quiz-start-btn:hover{background:var(--surface3);border-color:rgba(255,255,255,0.3)}
+
+/* ── Check Questions (chapters) ────────────────────── */
+.check-section{border-top:1px solid rgba(255,255,255,0.06);margin-top:14px;padding-top:14px}
+.check-label{font-size:11px;font-weight:600;letter-spacing:.05em;color:var(--text2);text-transform:uppercase;margin-bottom:10px}
+.check-q{font-size:14px;font-weight:500;margin-bottom:8px;line-height:1.5}
+.check-opts{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.check-opt{border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-sm);padding:8px 12px;
+  cursor:pointer;transition:background .15s,border-color .15s;font-size:13px;background:var(--surface);color:var(--text)}
+.check-opt:hover{background:var(--surface2)}
+.check-opt.correct{background:rgba(46,160,67,0.18);color:var(--green)}
+.check-opt.wrong{text-decoration:line-through;color:var(--text3)}
+
+/* ── Visual Regions (concept diagrams) ─────────────── */
+.visual-regions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;margin-bottom:8px}
+.visual-region{flex:1;min-width:140px;padding:10px 14px;border-radius:var(--radius-sm);border-left:3px solid;background:rgba(255,255,255,0.03)}
+.visual-region-label{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.visual-region-items{font-size:12px;color:var(--text2);line-height:1.5}
+.visual-region-items li{list-style:none;padding:2px 0}
 
 /* ── Compare ───────────────────────────────────────── */
 .cmp-card h3{font-size:1.3rem;margin-bottom:12px}
@@ -876,12 +925,42 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 
   <!-- Quiz -->
   <div id="tab-quiz" class="view">
-    <div id="quiz-results-bar">
-      <span id="quiz-score">0 / 0</span>
-      <button id="quiz-reset" onclick="resetQuiz()">Reset</button>
+    <!-- Config panel -->
+    <div id="quiz-config">
+      <h2 style="font-size:1.6rem;margin-bottom:4px">Quiz</h2>
+      <div style="width:40px;height:3px;background:var(--accent);margin-bottom:12px"></div>
+      <p style="color:var(--text2);margin-bottom:20px">Configure your session, then start.</p>
+      <div class="qcfg-group">
+        <div class="qcfg-label">CHAPTER</div>
+        <div class="qcfg-pills" id="quiz-ch-pills"></div>
+      </div>
+      <div class="qcfg-group">
+        <div class="qcfg-label">NUMBER OF QUESTIONS</div>
+        <div class="qcfg-pills" id="quiz-count-pills"></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+          <span style="color:var(--text2);font-size:13px">Custom:</span>
+          <input id="quiz-custom-count" type="number" placeholder="e.g. 15" min="1" style="width:80px;padding:6px 10px;background:var(--surface2);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-sm);color:var(--text);font-family:var(--font);font-size:13px">
+        </div>
+      </div>
+      <div class="qcfg-group">
+        <div class="qcfg-label">QUESTION ORDER</div>
+        <div class="qcfg-pills">
+          <button class="qcfg-pill active" data-order="random" onclick="setQuizOrder(this)">🔀 Random</button>
+          <button class="qcfg-pill" data-order="original" onclick="setQuizOrder(this)">📋 Original order</button>
+        </div>
+      </div>
+      <p id="quiz-avail" style="color:var(--text3);font-size:13px;margin-bottom:16px"></p>
+      <button id="quiz-start-btn" onclick="startQuiz()" style="padding:12px 28px;border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.15);background:var(--surface2);color:var(--text);font-size:15px;font-weight:600;cursor:pointer;font-family:var(--font);transition:var(--trans)">Start Quiz →</button>
     </div>
-    <div id="quiz-container"></div>
-    <div id="quiz-sentinel"></div>
+    <!-- Active quiz -->
+    <div id="quiz-active" style="display:none">
+      <div id="quiz-results-bar">
+        <span id="quiz-score">0 / 0</span>
+        <button id="quiz-reset" onclick="resetQuiz()">← Back to Config</button>
+      </div>
+      <div id="quiz-container"></div>
+      <div id="quiz-sentinel"></div>
+    </div>
   </div>
 
   <!-- Compare -->
@@ -972,6 +1051,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.2}
 // ══════════════════════════════════════════════════════
 const FLASHCARDS=${jsStr(FLASHCARDS)};
 const QUIZ=${jsStr(QUIZ)};
+const QUIZ_CHAPTERS=${jsStr(QUIZ_CHAPTERS)};
 const COMPARES=${jsStr(COMPARES)};
 const SEQUENCES=${jsStr(SEQUENCES)};
 const MATCH_SETS=${jsStr(MATCH_SETS)};
@@ -1004,7 +1084,7 @@ function initTab(id){
   if(id==='trapdrill')renderTraps();
   if(id==='bossmode')renderBoss();
   if(id==='chapters')renderChapters();
-  if(id==='quiz')renderQuizBatch();
+  if(id==='quiz')initQuizConfig();
 }
 
 // ══════════════════════════════════════════════════════
@@ -1051,23 +1131,92 @@ function resetFC(){
 renderFC();
 
 // ══════════════════════════════════════════════════════
-// QUIZ ENGINE (lazy)
+// QUIZ ENGINE (with config panel)
 // ══════════════════════════════════════════════════════
 let quizRendered=0,quizCorrect=0,quizAnswered=0;
+let quizPool=[]; // filtered+shuffled indices
+let quizOrder='random';
+let quizSelectedCh='all';
+let quizCount=30;
 const QUIZ_BATCH=30;
+
+// Build config panel
+function initQuizConfig(){
+  const pills=document.getElementById('quiz-ch-pills');
+  const allBtn=document.createElement('button');allBtn.className='qcfg-pill active';allBtn.textContent='All chapters';
+  allBtn.dataset.ch='all';allBtn.onclick=function(){setQuizCh(this)};
+  pills.appendChild(allBtn);
+  Object.keys(QUIZ_CHAPTERS).forEach(ch=>{
+    const btn=document.createElement('button');btn.className='qcfg-pill';
+    btn.textContent=ch+' ('+QUIZ_CHAPTERS[ch].length+')';
+    btn.dataset.ch=ch;btn.onclick=function(){setQuizCh(this)};
+    pills.appendChild(btn);
+  });
+  // Count pills
+  const countPills=document.getElementById('quiz-count-pills');
+  [10,20,30,50].forEach(n=>{
+    const btn=document.createElement('button');btn.className='qcfg-pill'+(n===30?' active':'');
+    btn.textContent=String(n);btn.dataset.count=String(n);
+    btn.onclick=function(){setQuizCount(this)};
+    countPills.appendChild(btn);
+  });
+  const allC=document.createElement('button');allC.className='qcfg-pill';allC.textContent='All';
+  allC.dataset.count='all';allC.onclick=function(){setQuizCount(this)};
+  countPills.appendChild(allC);
+  updateQuizAvail();
+}
+function setQuizCh(btn){
+  document.querySelectorAll('#quiz-ch-pills .qcfg-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');quizSelectedCh=btn.dataset.ch;
+  updateQuizAvail();
+}
+function setQuizCount(btn){
+  document.querySelectorAll('#quiz-count-pills .qcfg-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  quizCount=btn.dataset.count==='all'?9999:parseInt(btn.dataset.count);
+  document.getElementById('quiz-custom-count').value='';
+  updateQuizAvail();
+}
+function setQuizOrder(btn){
+  document.querySelectorAll('[data-order]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');quizOrder=btn.dataset.order;
+}
+function updateQuizAvail(){
+  const avail=getFilteredIndices().length;
+  const show=Math.min(quizCount,avail);
+  document.getElementById('quiz-avail').textContent=avail+' questions available · '+show+' will be shown';
+}
+function getFilteredIndices(){
+  if(quizSelectedCh==='all')return QUIZ.map((_,i)=>i);
+  return QUIZ_CHAPTERS[quizSelectedCh]||[];
+}
+function startQuiz(){
+  const custom=parseInt(document.getElementById('quiz-custom-count').value);
+  if(custom>0)quizCount=custom;
+  let pool=getFilteredIndices();
+  if(quizOrder==='random'){for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}}
+  quizPool=pool.slice(0,Math.min(quizCount,pool.length));
+  quizRendered=0;quizCorrect=0;quizAnswered=0;
+  document.getElementById('quiz-config').style.display='none';
+  document.getElementById('quiz-active').style.display='block';
+  document.getElementById('quiz-container').innerHTML='';
+  document.getElementById('quiz-score').textContent='0 / 0';
+  renderQuizBatch();
+}
 function renderQuizBatch(){
   const container=document.getElementById('quiz-container');
-  const end=Math.min(quizRendered+QUIZ_BATCH,QUIZ.length);
-  for(let i=quizRendered;i<end;i++){
-    const q=QUIZ[i];
+  const end=Math.min(quizRendered+QUIZ_BATCH,quizPool.length);
+  for(let r=quizRendered;r<end;r++){
+    const qi=quizPool[r];
+    const q=QUIZ[qi];
     const div=document.createElement('div');div.className='quiz-q';
-    div.innerHTML='<div class="quiz-question">'+(i+1)+'. '+esc(q.q)+'</div><div class="quiz-opts">'+
-      q.opts.map((o,oi)=>'<div class="quiz-opt" data-qi="'+i+'" data-oi="'+oi+'" onclick="answerQuiz(this,'+i+','+oi+')">'+esc(o)+'</div>').join('')+
-      '</div><div class="quiz-explain" data-qi="'+i+'">'+esc(q.explain)+'</div>';
+    div.innerHTML='<div class="quiz-question">'+(r+1)+'. '+esc(q.q)+'</div><div class="quiz-opts">'+
+      q.opts.map((o,oi)=>'<div class="quiz-opt" data-qi="'+qi+'" data-oi="'+oi+'" onclick="answerQuiz(this,'+qi+','+oi+')">'+esc(o)+'</div>').join('')+
+      '</div><div class="quiz-explain" data-qi="'+qi+'">'+esc(q.explain)+'</div>';
     container.appendChild(div);
   }
   quizRendered=end;
-  if(quizRendered<QUIZ.length){
+  if(quizRendered<quizPool.length){
     const sent=document.getElementById('quiz-sentinel');
     const obs=new IntersectionObserver((entries)=>{
       if(entries[0].isIntersecting){obs.disconnect();renderQuizBatch()}
@@ -1088,10 +1237,9 @@ function answerQuiz(el,qi,oi){
   if(exp)exp.classList.add('show');
 }
 function resetQuiz(){
-  document.getElementById('quiz-container').innerHTML='';
-  quizRendered=0;quizCorrect=0;quizAnswered=0;
-  document.getElementById('quiz-score').textContent='0 / 0';
-  renderQuizBatch();window.scrollTo(0,0);
+  document.getElementById('quiz-active').style.display='none';
+  document.getElementById('quiz-config').style.display='block';
+  window.scrollTo(0,0);
 }
 
 // ══════════════════════════════════════════════════════
@@ -1214,14 +1362,17 @@ function bossReveal(i){const els=document.querySelectorAll('.boss-answer');if(el
 // ══════════════════════════════════════════════════════
 // CHAPTERS ENGINE
 // ══════════════════════════════════════════════════════
+let checkQId=0;
 function renderChapters(){
   const toc=document.getElementById('chapters-toc');
   const body=document.getElementById('chapters-body');
   Object.entries(CHAPTERS).forEach(([key,ch])=>{
     if(!ch.nodes||ch.nodes.length===0)return;
+    // Count total questions in this chapter
+    const totalQ=ch.nodes.reduce((a,n)=>a+(n.totalQuiz||0),0);
     // TOC item
     const ti=document.createElement('div');ti.className='toc-item';
-    ti.innerHTML=esc(ch.title)+'<span class="toc-qcount">'+ch.nodes.length+'</span>';
+    ti.innerHTML=esc(ch.title)+'<span class="toc-qcount">'+totalQ+'Q</span>';
     ti.onclick=()=>{
       document.querySelectorAll('.toc-item').forEach(t=>t.classList.remove('active'));
       ti.classList.add('active');
@@ -1232,8 +1383,20 @@ function renderChapters(){
     const sec=document.createElement('div');sec.id='ch-'+key;sec.style.marginBottom='32px';
     let html='<h2 style="font-size:1.4rem;margin-bottom:16px;padding-top:8px">'+esc(ch.title)+'</h2>';
     ch.nodes.forEach(n=>{
-      html+='<div class="concept-block card"><div class="concept-header"><span class="pill">'+esc(key)+'</span><h3 style="font-size:1.1rem">'+esc(n.title)+'</h3></div>';
+      html+='<div class="concept-block card"><div class="concept-header"><span class="pill">'+esc(key)+'</span><h3 style="font-size:1.1rem">'+esc(n.title)+'</h3>';
+      if(n.totalQuiz)html+='<span class="toc-qcount" style="margin-left:auto">'+n.totalQuiz+'Q</span>';
+      html+='</div>';
       if(n.subtitle)html+='<div style="font-size:12px;color:var(--text3);margin-bottom:8px">'+esc(n.subtitle)+'</div>';
+      // Visual regions diagram
+      if(n.regions&&n.regions.length>0){
+        html+='<div class="visual-regions">';
+        n.regions.forEach(r=>{
+          html+='<div class="visual-region" style="border-color:'+r.color+'"><div class="visual-region-label" style="color:'+r.color+'">'+esc(r.label)+'</div><ul class="visual-region-items">';
+          r.items.forEach(item=>{html+='<li>'+esc(item)+'</li>'});
+          html+='</ul></div>';
+        });
+        html+='</div>';
+      }
       if(n.core)html+='<div class="concept-body"><p>'+esc(n.core)+'</p></div>';
       if(n.sections.length>0){
         html+='<div class="concept-sections">';
@@ -1250,11 +1413,31 @@ function renderChapters(){
       if(n.mnemonic){
         html+='<div class="mnemonic"><span class="callout-label">Mnemonic</span>'+esc(n.mnemonic)+'</div>';
       }
+      // Embedded check questions
+      if(n.quiz&&n.quiz.length>0){
+        html+='<div class="check-section"><div class="check-label">CHECK YOUR UNDERSTANDING ('+n.quiz.length+' QUESTIONS)</div>';
+        n.quiz.forEach(cq=>{
+          const cid=checkQId++;
+          html+='<div class="check-q">'+esc(cq.q)+'</div><div class="check-opts">';
+          cq.opts.forEach((o,oi)=>{
+            html+='<div class="check-opt" data-cid="'+cid+'" data-oi="'+oi+'" onclick="answerCheck(this,'+cid+','+oi+','+cq.ans+')">'+esc(o)+'</div>';
+          });
+          html+='</div>';
+        });
+        html+='</div>';
+      }
       html+='</div>';
     });
     sec.innerHTML=html;
     body.appendChild(sec);
   });
+}
+function answerCheck(el,cid,oi,ans){
+  const opts=document.querySelectorAll('.check-opt[data-cid="'+cid+'"]');
+  if(el.classList.contains('correct')||el.classList.contains('wrong'))return;
+  opts.forEach(o=>o.style.pointerEvents='none');
+  if(oi===ans){el.classList.add('correct')}
+  else{el.classList.add('wrong');opts[ans].classList.add('correct')}
 }
 
 // ══════════════════════════════════════════════════════
