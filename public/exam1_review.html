@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>BIOL 4230 — Exam 1 Review</title>
+<style>
+:root{--bg:#0d0d0d;--bg2:#141414;--card:#1e1e1e;--gold:#f5c542;--gold2:#e0a800;--text:#e8e8e8;--muted:#999;--purple:#a78bfa;--purplebg:#1e1235;--pink:#f472b6;--pinkbg:#2d1229;--yellow:#fbbf24;--yellowbg:#2a1f00;--green:#22c55e;--greenbg:#0d2e1a;--red:#ef4444;--redbg:#2e0d0d;--blue:#60a5fa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:15px;line-height:1.65;display:flex;min-height:100vh}
+#sb{width:248px;min-width:248px;background:var(--bg2);border-right:1px solid #2a2a2a;height:100vh;position:sticky;top:0;overflow-y:auto;padding:0 0 40px}
+#sb::-webkit-scrollbar{width:4px}#sb::-webkit-scrollbar-thumb{background:#333}
+.st{padding:18px 14px 10px;font-size:16px;font-weight:800;color:var(--gold);border-bottom:1px solid #2a2a2a;position:sticky;top:0;background:var(--bg2);z-index:10}
+.st span{font-size:11px;color:var(--muted);display:block;font-weight:400;margin-top:2px}
+.cl{padding:8px 14px 2px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700}
+.cll{display:flex;flex-direction:column;padding:0 0 4px}
+.cll a{padding:4px 14px 4px 24px;color:#bbb;text-decoration:none;font-size:13px;border-left:2px solid transparent;transition:all .15s;display:block}
+.cll a:hover,.cll a.active{color:var(--gold);border-left-color:var(--gold);background:#1e1e1e;font-weight:600}
+#wrap{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#mode-bar{background:#0d0d0d;border-bottom:2px solid #2a2a2a;padding:10px 20px;display:flex;align-items:center;gap:14px;flex-shrink:0;position:sticky;top:0;z-index:100}
+.mode-btn{padding:7px 18px;border-radius:20px;border:1.5px solid #333;background:#1a1a1a;color:#aaa;font-size:13px;cursor:pointer;transition:all .2s;font-weight:600}
+.mode-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
+.score-badge{font-size:11px;background:#1a1a1a;border:1px solid #333;color:#888;border-radius:12px;padding:3px 10px;margin-left:auto}
+#prog{font-size:12px;color:var(--muted)}
+#main{overflow-y:auto;padding:0 34px 80px;flex:1}
+#main::-webkit-scrollbar{width:6px}#main::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+.ph{padding:28px 0 14px;border-bottom:2px solid var(--gold);margin-bottom:24px}
+.ph h1{font-size:24px;font-weight:900;color:var(--gold)}
+.ph p{color:var(--muted);font-size:13px;margin-top:4px}
+.chh{padding:18px 0 4px;margin:26px 0 0}
+.chh h2{font-size:19px;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:8px}
+.chh h2 .cn{background:var(--gold);color:#000;border-radius:5px;padding:1px 9px;font-size:12px}
+.chh p{color:var(--muted);font-size:13px;margin-top:3px}
+.sec{background:var(--card);border-radius:10px;padding:20px 22px;margin:13px 0;border:1px solid #2a2a2a}
+.sec h3{font-size:15px;font-weight:700;color:var(--gold2);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #2a2a2a}
+.wb,.yb,.hb{margin:8px 0;padding:10px 12px;border-radius:7px}
+.wb{background:#161b22;border-left:3px solid var(--blue)}
+.yb{background:#161b22;border-left:3px solid var(--green)}
+.hb{background:#161b22;border-left:3px solid var(--purple)}
+.bl{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;margin-bottom:4px}
+.wb .bl{color:var(--blue)}.yb .bl{color:var(--green)}.hb .bl{color:var(--purple)}
+.hb ol{padding-left:18px}.hb ol li{margin:3px 0}
+.trap{background:var(--yellowbg);border:1.5px solid var(--yellow);border-radius:7px;padding:10px 12px;margin:10px 0}
+.tl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--yellow);font-weight:800;margin-bottom:4px}
+.trap p{color:#ffe88a;font-size:14px}
+.rem{background:var(--purplebg);border:1.5px solid var(--purple);border-radius:7px;padding:10px 12px;margin:10px 0}
+.rl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--purple);font-weight:800;margin-bottom:4px}
+.rem p{color:#d4b8ff;font-size:14px;font-style:italic}
+.mn{background:var(--pinkbg);border:1.5px solid var(--pink);border-radius:7px;padding:10px 12px;margin:10px 0}
+.ml{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--pink);font-weight:800;margin-bottom:4px}
+.mn p{color:#fbb6d4;font-size:14px}
+.ct{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
+.ct th{background:#252525;color:var(--gold);padding:7px 10px;text-align:left;border:1px solid #333}
+.ct td{padding:7px 10px;border:1px solid #2a2a2a;vertical-align:top}
+.ct tr:nth-child(even) td{background:#191919}
+.dg{background:#111;border:1px solid #2a2a2a;border-radius:8px;padding:12px;margin:10px 0;overflow-x:auto}
+.dg-title{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:700;margin-bottom:7px}
+.qb{background:#111;border:1px solid #2a2a2a;border-radius:10px;padding:15px 16px;margin:14px 0}
+.qh{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:700;margin-bottom:6px}
+.qq{font-size:14px;color:#e0e0e0;margin-bottom:9px;font-weight:500}
+.ch{display:grid;gap:6px}
+.cb{background:#1a1a1a;border:1.5px solid #333;border-radius:7px;padding:8px 12px;text-align:left;color:#ccc;font-size:14px;cursor:pointer;transition:all .2s;width:100%}
+.cb:hover:not(:disabled){border-color:var(--gold);color:var(--gold);background:#1f1f1f}
+.cb.correct{background:var(--greenbg)!important;border-color:var(--green)!important;color:var(--green)!important;font-weight:700}
+.cb.wrong{background:var(--redbg)!important;border-color:var(--red)!important;color:var(--red)!important}
+.cb:disabled{cursor:default}
+.exp{display:none;background:#0f1f0f;border-left:3px solid var(--green);border-radius:0 7px 7px 0;padding:10px 12px;margin-top:7px;font-size:13px;color:#aee3b8;line-height:1.6}
+.exp.show{display:block}
+/* Flashcard mode */
+body.card-mode #main-content{display:none}
+body.card-mode #fc-wrap{display:block}
+body.study-mode #main-content{display:block}
+body.study-mode #fc-wrap{display:none}
+#fc-wrap{display:none;padding:0 34px 80px;overflow-y:auto;flex:1}
+#fc-wrap::-webkit-scrollbar{width:6px}#fc-wrap::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+#fc-filter{display:flex;flex-wrap:wrap;gap:8px;padding:14px 0 6px}
+.flt-btn{padding:4px 12px;border-radius:14px;border:1px solid #333;background:#1a1a1a;color:#888;font-size:12px;cursor:pointer;transition:all .2s}
+.flt-btn.on{border-color:var(--gold);color:var(--gold);background:#1e1a00}
+.fc-chapter{margin:20px 0 10px}
+.fc-chapter h3{font-size:14px;font-weight:800;color:var(--gold);margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:9px}
+.fc2{perspective:800px;height:120px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.fi2{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+.fc2.flipped .fi2{transform:rotateY(180deg)}
+.ff2,.fb2{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 11px;text-align:center;line-height:1.45}
+.ff2{background:#1a1500;border:1.5px solid var(--yellow);color:var(--yellow);font-size:11px;font-weight:600}
+.ff2 .chip{font-size:9px;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:3px}
+.fb2{background:var(--greenbg);border:1.5px solid var(--green);color:#b5f5c8;font-size:11px;transform:rotateY(180deg)}
+.fb2 .verdict{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--green);opacity:.8;margin-bottom:3px}
+strong{color:#fff}
+@media(max-width:768px){#sb{display:none}#main,#fc-wrap{padding:0 12px 60px}}
+</style>
+</head>
+<body>
+<nav id="sb">
+<div class="st">BIOL 4230 — Exam 1 Review<span>Mechanisms, Genetics, History | Dr. Robbins</span></div>
+<div class="cl">Unit I • Evolutionary Mechanisms</div><div class="cll"><a href="#s_ns">Natural Selection</a><a href="#s_drift">Genetic Drift</a><a href="#s_gf_mut">Gene Flow & Mutation</a><a href="#s_inbreeding">Inbreeding</a></div><div class="cl">Unit II • Genetics & Genomics</div><div class="cll"><a href="#s_hwe">Hardy-Weinberg Equilibrium</a><a href="#s_quant_gen">Quantitative Genetics</a><a href="#s_plasticity">Phenotypic Plasticity</a><a href="#s_genome">Genome & Regulation</a></div><div class="cl">Unit III • Evolutionary History</div><div class="cll"><a href="#s_key_figures">Key Figures</a></div>
+</nav>
+<div id="wrap">
+<div id="mode-bar">
+  <button class="mode-btn active" id="btn-study" onclick="setMode('study')">📖 Study Mode</button>
+  <button class="mode-btn" id="btn-card" onclick="setMode('card')">🃏 Flashcard Mode</button>
+  <span class="score-badge" id="score-badge">Score: 0 / 0</span>
+  <span id="prog"></span>
+</div>
+<main id="main">
+<div id="main-content">
+<div class="ph"><h1>BIOL 4230 — Exam 1 Review</h1><p>Mechanisms, Genetics, History | Dr. Robbins &bull; Dr. Robbins &bull; Read block &rarr; answer &rarr; flip cards</p></div>
+
+<div class="chh" id="s_evo_mech"><h2><span class="cn">Unit I</span> Evolutionary Mechanisms</h2>
+<p>The five forces that change allele frequencies &mdash; the engine of evolution.</p></div>
+
+<div class="sec" id="s_ns">
+<h3>Natural Selection</h3>
+<div class="wb"><div class="bl">What it is</div><strong>Natural selection</strong> = differential survival and reproduction of individuals based on heritable traits. The NON-RANDOM mechanism of evolution. Requires 3 conditions: (1) phenotypic variation, (2) variation is heritable (genetic), (3) variation affects fitness (differential survival/reproduction).</div>
+<div class="yb"><div class="bl">Why it matters</div>Natural selection is the ONLY mechanism that consistently produces adaptation. All other forces (drift, mutation, gene flow) are either random or directionless. Selection specifically favors traits that improve reproductive success in the current environment.</div>
+<div class="hb"><div class="bl">Key formulas</div><ol>
+<li><strong>Breeder&apos;s Equation:</strong> R = h&sup2; &times; S (Response = heritability &times; selection differential)</li>
+<li><strong>Selection Differential (S)</strong> = mean of breeders &minus; mean of total population</li>
+<li><strong>Heritability (h&sup2;)</strong> = V<sub>A</sub> / V<sub>P</sub> = additive genetic variance / total phenotypic variance</li>
+<li>If h&sup2; = 0 OR S = 0 &rarr; R = 0 &rarr; NO evolutionary change (selection without heritability = no evolution)</li>
+</ol></div>
+<div class="dg"><div class="dg-title">Breeder&apos;s Equation: Response to Selection</div>
+<svg viewBox="0 0 500 130" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:500px;display:block;margin:0 auto">
+<rect width="500" height="130" fill="#0d0d0d" rx="6"/>
+<!-- Formula -->
+<rect x="160" y="8" width="180" height="36" rx="8" fill="#1a1a2e" stroke="#a78bfa" stroke-width="2"/>
+<text x="250" y="28" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">R = h&#178; &#215; S</text>
+<text x="250" y="38" text-anchor="middle" fill="#a78bfa" font-size="9">Breeder&apos;s Equation</text>
+<!-- Labels -->
+<text x="250" y="64" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold">R = Response to Selection</text>
+<text x="250" y="76" text-anchor="middle" fill="#888" font-size="9">Change in mean trait value in offspring generation</text>
+<text x="100" y="98" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="bold">h&#178; = Narrow-sense heritability</text>
+<text x="100" y="108" text-anchor="middle" fill="#888" font-size="8">VA/VP — proportion of phenotypic</text>
+<text x="100" y="118" text-anchor="middle" fill="#888" font-size="8">variance due to additive genetics</text>
+<text x="390" y="98" text-anchor="middle" fill="#f472b6" font-size="11" font-weight="bold">S = Selection Differential</text>
+<text x="390" y="108" text-anchor="middle" fill="#888" font-size="8">Mean of breeders &#8722; mean of</text>
+<text x="390" y="118" text-anchor="middle" fill="#888" font-size="8">total population</text>
+<!-- Arrows to formula components -->
+<line x1="100" y1="89" x2="182" y2="40" stroke="#60a5fa" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="390" y1="89" x2="320" y2="40" stroke="#f472b6" stroke-width="1" stroke-dasharray="3,2"/>
+</svg></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; Selection Without Heritability &ne; Evolution</div><p>Natural selection CAN act on a trait without causing EVOLUTION if the variation is not heritable. Example: all tall plants grew in good soil (environment), not because of genes. Selection culls them, but allele frequencies don&apos;t change. R = h&sup2; &times; S: if h&sup2; = 0, then R = 0 regardless of how strong selection is.</p></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; Selection is Non-Random, Not Deterministic</div><p>Selection is non-random (favors higher fitness genotypes) but outcomes are not guaranteed. In small populations, drift can overpower selection even for beneficial alleles. &ldquo;Evolution is not completely random&rdquo; is the key phrase &mdash; selection is directional but the environment + alleles determine direction.</p></div>
+<div class="rem"><div class="rl">The thing to remember is:</div><p>Selection acts on PHENOTYPES, but evolution occurs in ALLELE FREQUENCIES. The bridge is heritability (h&sup2;). No heritability = selection cannot move allele frequencies = no evolution.</p></div>
+<div class="mn"><div class="ml">Mnemonic</div><p>&ldquo;<strong>V-F-H-P</strong>: Variation, Fitness differences, Heritable, Predictable change&rdquo; = the 4 conditions that guarantee natural selection produces evolution.</p></div>
+<div class="qb"><div class="qh">Q1</div>
+<div class="qq">A population of mice is culled: larger mice are selectively removed. However, ALL of the size variation in this population is due to differences in food availability (not genetics). What happens to mean body size in the next generation?</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) Decreases — selection removes large mice, so the population will evolve smaller size</button><button class="cb" data-i="1">B) Stays the same — if h² = 0, R = h² × S = 0; no evolutionary change despite selection</button><button class="cb" data-i="2">C) Increases — removing large individuals leaves only small mice to reproduce, increasing size through drift</button><button class="cb" data-i="3">D) Decreases, but slowly — it takes many generations for non-heritable selection to cause evolution</button></div>
+<div class="exp">&#9989; <strong>B.</strong> This is the Selection Without Heritability trap. R = h² × S. If all variation is environmental (h² = 0), then R = 0 regardless of selection differential. Selection is occurring (larger mice die) but allele frequencies don't change because the size differences aren't genetic. No evolution.</div></div>
+<div class="qb"><div class="qh">Q2</div>
+<div class="qq">The selection differential (S) in an artificial selection experiment is LARGEST when:</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) The breeders chosen are representative of the entire population</button><button class="cb" data-i="1">B) Heritability is high for the selected trait</button><button class="cb" data-i="2">C) The mean phenotype of selected breeders deviates maximally from the population mean</button><button class="cb" data-i="3">D) Population size is large enough to prevent genetic drift</button></div>
+<div class="exp">&#9989; <strong>C.</strong> S = mean of breeders − mean of total population. S is maximized when the BREEDERS are most different (extreme) from the whole population. Heritability (B) determines how much of S translates to R, but S itself is purely about how different breeders are from the population.</div></div>
+<div class="qb"><div class="qh">Q3</div>
+<div class="qq">Why does a rare beneficial recessive allele increase in frequency slowly even though natural selection favors it?</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) Recessive alleles mutate back to dominant alleles, counteracting selection</button><button class="cb" data-i="1">B) When the allele is rare, nearly all copies are in heterozygotes where the recessive phenotype is masked; selection cannot see and act on it</button><button class="cb" data-i="2">C) Natural selection is too weak to act on single alleles; only multiple alleles at a locus create detectable selection</button><button class="cb" data-i="3">D) Gene flow constantly imports the original allele from other populations</button></div>
+<div class="exp">&#9989; <strong>B.</strong> When a recessive allele is rare, nearly all copies occur in Aa heterozygotes — where the dominant allele MASKS the recessive phenotype. Selection can only act on the expressed phenotype. Since Aa looks like AA, selection can't distinguish them and can't favor the recessive allele efficiently. Only when the allele becomes common enough that aa homozygotes appear in significant numbers does selection become fully effective.</div></div>
+</div>
+
+<div class="sec" id="s_drift">
+<h3>Genetic Drift</h3>
+<div class="wb"><div class="bl">What it is</div><strong>Genetic drift</strong> = random fluctuation of allele frequencies due to chance sampling. Strongest in <strong>small populations</strong>. Can cause evolution even when selection is absent. Results in: (1) reduced genetic variation, (2) non-adaptive allele frequency changes, (3) fixation or loss of alleles by chance.</div>
+<div class="yb"><div class="bl">Why it matters</div>In small populations, drift OVERWHELMS natural selection &mdash; a beneficial allele can be lost by chance, a deleterious allele can fix. This is why conservation of small populations (Ne) is critical. Two types of extreme drift: Bottleneck Effect and Founder Effect.</div>
+<table class="ct"><thead><tr><th></th><th>Bottleneck Effect</th><th>Founder Effect</th></tr></thead><tbody>
+<tr><td><strong>Trigger</strong></td><td>Catastrophic reduction in population size (disease, disaster)</td><td>Small group colonizes new area, isolated from source population</td></tr>
+<tr><td><strong>Result</strong></td><td>Reduced genetic diversity; allele frequencies changed by chance</td><td>New population has a subset of original alleles; may fix or lose alleles randomly</td></tr>
+<tr><td><strong>FST effect</strong></td><td>Population diverges from original</td><td>New population diverges from source; different allele frequencies</td></tr>
+<tr><td><strong>Example</strong></td><td>Tasmanian devils + facial tumor disease</td><td>Amish populations (Ellis-van Creveld syndrome)</td></tr></tbody></table>
+<div class="dg"><div class="dg-title">Genetic Drift vs. Natural Selection — Population Size Effect</div>
+<svg viewBox="0 0 540 180" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:540px;display:block;margin:0 auto">
+<rect width="540" height="180" fill="#0d0d0d" rx="6"/>
+<text x="130" y="18" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="bold">SMALL POPULATION</text>
+<text x="130" y="28" text-anchor="middle" fill="#888" font-size="9">(e.g., N=10) — Drift dominates</text>
+<!-- Zigzag lines for drift -->
+<polyline points="30,80 55,50 80,95 105,40 130,85 155,55 170,90" fill="none" stroke="#60a5fa" stroke-width="2"/>
+<polyline points="30,80 52,100 75,65 100,110 125,75 150,100 170,85" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="3,2" opacity=".6"/>
+<text x="100" y="130" text-anchor="middle" fill="#888" font-size="8">Random zigzag</text>
+<text x="100" y="140" text-anchor="middle" fill="#888" font-size="8">allele can FIX or LOSE by chance</text>
+<text x="100" y="150" text-anchor="middle" fill="#888" font-size="8">even if beneficial</text>
+<line x1="30" y1="60" x2="30" y2="110" stroke="#444" stroke-width="1"/>
+<line x1="30" y1="110" x2="175" y2="110" stroke="#444" stroke-width="1"/>
+<text x="30" y="118" fill="#888" font-size="8">Gen 0</text>
+<text x="160" y="118" fill="#888" font-size="8">Gen 12</text>
+<!-- Divider -->
+<line x1="270" y1="20" x2="270" y2="165" stroke="#2a2a2a" stroke-width="1"/>
+<!-- Large population -->
+<text x="400" y="18" text-anchor="middle" fill="#f5c542" font-size="11" font-weight="bold">LARGE POPULATION</text>
+<text x="400" y="28" text-anchor="middle" fill="#888" font-size="9">(e.g., N=10,000) — Selection dominates</text>
+<polyline points="300,100 320,92 340,84 360,76 380,68 400,58 420,50 440,42 460,35" fill="none" stroke="#f5c542" stroke-width="2.5"/>
+<text x="380" y="130" text-anchor="middle" fill="#888" font-size="8">Smooth, predictable rise</text>
+<text x="380" y="140" text-anchor="middle" fill="#888" font-size="8">of beneficial allele</text>
+<text x="380" y="150" text-anchor="middle" fill="#f5c542" font-size="8">Selection is EFFECTIVE</text>
+<line x1="295" y1="30" x2="295" y2="110" stroke="#444" stroke-width="1"/>
+<line x1="295" y1="110" x2="475" y2="110" stroke="#444" stroke-width="1"/>
+<text x="295" y="118" fill="#888" font-size="8">Gen 0</text>
+<text x="460" y="118" fill="#888" font-size="8">Gen 12</text>
+<text x="270" y="172" text-anchor="middle" fill="#888" font-size="8">KEY: In small pops, drift overwhelms selection even for beneficial alleles. In large pops, selection consistently wins.</text>
+</svg></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; Drift vs. Selection</div><p>Drift is RANDOM &mdash; it can increase OR decrease ANY allele&apos;s frequency regardless of fitness. Selection is NON-RANDOM &mdash; it consistently favors higher-fitness genotypes. In a SMALL population, drift can overwhelm selection and fix a deleterious allele or lose a beneficial one. In a LARGE population, selection dominates. Population size determines which force wins.</p></div>
+<div class="rem"><div class="rl">The thing to remember is:</div><p>Drift = nonadaptive evolution. It can cause fixation of deleterious alleles in small populations &mdash; this is why genetic diversity matters for conservation. Drift reduces genetic variation; selection uses it.</p></div>
+<div class="qb"><div class="qh">Q4</div>
+<div class="qq">The Amish community in Lancaster, PA has an unusually high frequency of Ellis-van Creveld syndrome (a recessive condition). This is BEST explained by:</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) Natural selection favoring the allele in Amish farming environments</button><button class="cb" data-i="1">B) High inbreeding causing the allele to be expressed more frequently in homozygotes</button><button class="cb" data-i="2">C) Founder effect — the community was founded by a small group that happened to carry a high frequency of this allele, and that frequency was preserved through isolation</button><button class="cb" data-i="3">D) Mutation pressure — the Amish lifestyle increases DNA damage and thus mutation rates</button></div>
+<div class="exp">&#9989; <strong>C.</strong> This is the textbook founder effect example. A small founding group of ~200 settlers in the 1700s happened to include several carriers of the EVC allele. Because the community remained genetically isolated, this high allele frequency was maintained and expressed. No selection FOR the allele — it's purely a historical accident of who founded the colony.</div></div>
+<div class="qb"><div class="qh">Q5</div>
+<div class="qq">What is the key difference between the Bottleneck Effect and Founder Effect?</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) Bottleneck only applies to plants; Founder Effect only applies to animals</button><button class="cb" data-i="1">B) Bottleneck reduces genetic diversity by shrinking an existing population; Founder Effect creates a new isolated population from a small group colonizing a new area</button><button class="cb" data-i="2">C) Bottleneck always leads to extinction; Founder Effect never reduces genetic diversity</button><button class="cb" data-i="3">D) Bottleneck involves natural disasters only; Founder Effect requires intentional migration</button></div>
+<div class="exp">&#9989; <strong>B.</strong> Both are extreme genetic drift events. Bottleneck = existing population dramatically shrinks (then may recover, but with reduced diversity). Founder Effect = small group LEAVES and starts new isolated population elsewhere (e.g., island colonization). Both result in reduced genetic variation and potentially non-representative allele frequencies compared to the original large population.</div></div>
+</div>
+
+<div class="sec" id="s_gf_mut">
+<h3>Gene Flow &amp; Mutation</h3>
+<div class="wb"><div class="bl">Gene Flow</div><strong>Gene flow</strong> = movement of alleles between populations via migration. Effect: <strong>homogenizes populations</strong> (makes them more similar). High gene flow → low FST (genetic differentiation). Low gene flow → populations diverge by drift/selection. Gene flow can PREVENT local adaptation by constantly importing alleles from other environments.</div>
+<div class="wb"><div class="bl">Mutation</div><strong>Mutation</strong> = changes in DNA sequence. The ONLY source of NEW alleles that did not previously exist. Mutations are RANDOM with respect to fitness — not directed by need. Selection acting on mutations is NON-RANDOM. Mutations are rare events, so mutation pressure alone changes allele frequencies slowly.</div>
+<div class="dg"><div class="dg-title">The 5 Forces That Change Allele Frequencies</div>
+<svg viewBox="0 0 560 170" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:560px;display:block;margin:0 auto">
+<rect width="560" height="170" fill="#0d0d0d" rx="6"/>
+<rect x="200" y="65" width="160" height="40" rx="20" fill="#1a2a1a" stroke="#22c55e" stroke-width="2"/>
+<text x="280" y="90" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="bold">Allele Frequency</text>
+<!-- 5 forces as arrows -->
+<text x="30" y="50" text-anchor="middle" fill="#f5c542" font-size="11" font-weight="bold">Natural</text>
+<text x="30" y="62" text-anchor="middle" fill="#f5c542" font-size="11">Selection</text>
+<line x1="75" y1="58" x2="195" y2="80" stroke="#f5c542" stroke-width="2" marker-end="url(#y1)"/>
+<text x="30" y="120" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="bold">Genetic</text>
+<text x="30" y="132" text-anchor="middle" fill="#60a5fa" font-size="11">Drift</text>
+<line x1="72" y1="120" x2="195" y2="96" stroke="#60a5fa" stroke-width="2" marker-end="url(#y2)"/>
+<text x="280" y="22" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">Mutation</text>
+<line x1="280" y1="30" x2="280" y2="62" stroke="#a78bfa" stroke-width="2" marker-end="url(#y3)"/>
+<text x="530" y="50" text-anchor="middle" fill="#f472b6" font-size="11" font-weight="bold">Gene</text>
+<text x="530" y="62" text-anchor="middle" fill="#f472b6" font-size="11">Flow</text>
+<line x1="487" y1="58" x2="365" y2="80" stroke="#f472b6" stroke-width="2" marker-end="url(#y4)"/>
+<text x="530" y="120" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="bold">Non-Random</text>
+<text x="530" y="132" text-anchor="middle" fill="#fbbf24" font-size="11">Mating</text>
+<line x1="490" y1="120" x2="365" y2="96" stroke="#fbbf24" stroke-width="2" marker-end="url(#y5)"/>
+<!-- Note -->
+<text x="280" y="155" text-anchor="middle" fill="#888" font-size="9">All 5 forces CHANGE allele frequency. HWE = equilibrium when ALL 5 are absent.</text>
+<text x="280" y="165" text-anchor="middle" fill="#ef4444" font-size="9">Only MUTATION creates NEW alleles. The other 4 only redistribute existing variation.</text>
+<defs>
+<marker id="y1" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#f5c542"/></marker>
+<marker id="y2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#60a5fa"/></marker>
+<marker id="y3" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#a78bfa"/></marker>
+<marker id="y4" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#f472b6"/></marker>
+<marker id="y5" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#fbbf24"/></marker>
+</defs></svg></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; Only Mutation Creates NEW Alleles</div><p>Gene flow, drift, selection, and non-random mating only REDISTRIBUTE existing variation. Only MUTATION introduces truly new alleles. On multiple choice: "which force is the ultimate source of all new genetic variation?" = MUTATION. Every other force works with pre-existing alleles.</p></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; Mutations Are Random; Selection Is Not</div><p>Mutations are random with respect to their EFFECTS on fitness. They do NOT occur &ldquo;because&rdquo; the organism needs them. Antibiotic resistance: bacteria don&apos;t mutate IN RESPONSE to antibiotics &mdash; pre-existing random mutations are selected when antibiotics kill susceptibles. The mutation was random; the selection is non-random.</p></div>
+<div class="qb"><div class="qh">Q6</div>
+<div class="qq">FST values near zero between two populations indicate:</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) Strong natural selection is maintaining different alleles in each population</button><button class="cb" data-i="1">B) High gene flow is homogenizing the two populations, keeping their allele frequencies similar</button><button class="cb" data-i="2">C) High genetic drift is causing both populations to independently lose alleles</button><button class="cb" data-i="3">D) The two populations are highly diverged due to long geographic separation</button></div>
+<div class="exp">&#9989; <strong>B.</strong> FST = fixation index for subpopulations. FST near 0 = little genetic differentiation = populations have similar allele frequencies. This happens when gene flow is HIGH (migrants constantly move alleles between populations, preventing divergence). High FST would indicate restricted gene flow + independent drift/selection in each population.</div></div>
+<div class="qb"><div class="qh">Q7</div>
+<div class="qq">A population of bacteria is treated with a new antibiotic. Within 2 weeks, some bacteria survive. The CORRECT interpretation is:</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) The antibiotic caused mutations that created resistance in some bacteria</button><button class="cb" data-i="1">B) Bacteria directed their mutations toward resistance because they sensed the antibiotic</button><button class="cb" data-i="2">C) Pre-existing random mutations conferring resistance were already present at low frequency; the antibiotic selected FOR those variants by killing susceptible bacteria</button><button class="cb" data-i="3">D) Gene flow from resistant bacteria in a nearby hospital created the resistance</button></div>
+<div class="exp">&#9989; <strong>C.</strong> Mutations are RANDOM. Resistance alleles existed before the antibiotic was applied (as pre-existing variation from prior random mutations). The antibiotic didn't create them — it SELECTED for them by eliminating susceptibles. This is also why stopping antibiotics early is dangerous: resistant variants that were always there now have no competition.</div></div>
+</div>
+
+<div class="sec" id="s_inbreeding">
+<h3>Inbreeding &amp; Non-Random Mating</h3>
+<div class="wb"><div class="bl">What it is</div><strong>Inbreeding</strong> = mating between closely related individuals. Effect: increases HOMOZYGOSITY (both alleles identical by descent) and decreases heterozygosity. KEY: inbreeding changes GENOTYPE frequencies (more homozygotes, fewer heterozygotes) but does NOT directly change ALLELE frequencies (p and q are unchanged).</div>
+<div class="yb"><div class="bl">Why it matters</div><strong>Inbreeding depression</strong>: increased expression of deleterious recessive alleles in homozygotes. Population shows excess homozygotes compared to HWE expectations. Inbreeding does NOT cause evolution directly (no allele frequency change) but EXPOSES hidden recessive variation to selection.</div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; Inbreeding Changes Genotypes, NOT Allele Frequencies</div><p>Inbreeding shifts GENOTYPE frequencies (more AA and aa, fewer Aa) but DOES NOT change p or q. You could calculate p from genotype counts before and after inbreeding and get the SAME p. This is why inbreeding violates HWE (changes genotype distribution) but is NOT itself a force that drives allele frequency change. However, inbreeding exposes recessives to selection, which THEN can change allele frequencies indirectly.</p></div>
+<div class="qb"><div class="qh">Q8</div>
+<div class="qq">A population shows EXCESS homozygotes compared to Hardy-Weinberg expectations. Which mechanism is MOST likely NOT responsible?</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) Inbreeding — relatives mating increases homozygosity</button><button class="cb" data-i="1">B) Population subdivision — Wahlund effect creates apparent excess homozygotes when subpopulations with different allele frequencies are lumped together</button><button class="cb" data-i="2">C) Heterozygote advantage (overdominance) — selection favoring heterozygotes would DECREASE homozygotes below HWE expectations</button><button class="cb" data-i="3">D) Assortative mating — similar phenotypes mating together can increase homozygosity at trait-associated loci</button></div>
+<div class="exp">&#9989; <strong>C is NOT responsible.</strong> Heterozygote advantage (e.g., sickle cell) produces EXCESS HETEROZYGOTES compared to HWE, not excess homozygotes. Selection maintaining both alleles (balancing selection) favors Aa over AA and aa, resulting in more Aa than predicted by HWE. ALL other options (A, B, D) produce excess homozygotes. On Robbins' exams, &ldquo;Which is NOT&rdquo; questions like this are common.</div></div>
+<div class="qb"><div class="qh">Q9</div>
+<div class="qq">Inbreeding in a population changes:</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) Both allele frequencies and genotype frequencies</button><button class="cb" data-i="1">B) Genotype frequencies only — allele frequencies p and q remain unchanged</button><button class="cb" data-i="2">C) Allele frequencies only — the same alleles exist but in different ratios</button><button class="cb" data-i="3">D) Neither; inbreeding has no detectable effect on population genetics</button></div>
+<div class="exp">&#9989; <strong>B.</strong> Inbreeding increases the probability of homozygosity (identical alleles by descent) without changing which alleles exist or at what frequencies. If p = 0.7 before inbreeding, it&apos;s still 0.7 after. But the 2pq heterozygote class shrinks and the p² + q² homozygote classes grow. This violates HWE assumptions but doesn&apos;t change allele frequencies directly.</div></div>
+</div>
+
+<div class="chh" id="s_genetics"><h2><span class="cn">Unit II</span> Genetics &amp; Genomics</h2>
+<p>From DNA to phenotype &mdash; and back to allele frequencies.</p></div>
+
+<div class="sec" id="s_hwe">
+<h3>Hardy-Weinberg Equilibrium</h3>
+<div class="dg"><div class="dg-title">Hardy-Weinberg Equilibrium — At a Glance</div>
+<svg viewBox="0 0 540 160" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:540px;display:block;margin:0 auto">
+<rect width="540" height="160" fill="#0d0d0d" rx="6"/>
+<!-- Formula box -->
+<rect x="160" y="8" width="220" height="50" rx="8" fill="#1a2e1a" stroke="#22c55e" stroke-width="2"/>
+<text x="270" y="30" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">p&#178; + 2pq + q&#178; = 1</text>
+<text x="270" y="45" text-anchor="middle" fill="#22c55e" font-size="9">Genotype frequencies under HWE</text>
+<!-- Genotype labels -->
+<text x="170" y="80" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="bold">p&#178; = AA</text>
+<text x="270" y="80" text-anchor="middle" fill="#f5c542" font-size="11" font-weight="bold">2pq = Aa</text>
+<text x="370" y="80" text-anchor="middle" fill="#f472b6" font-size="11" font-weight="bold">q&#178; = aa</text>
+<text x="170" y="92" text-anchor="middle" fill="#888" font-size="9">homozygous dominant</text>
+<text x="270" y="92" text-anchor="middle" fill="#888" font-size="9">heterozygous</text>
+<text x="370" y="92" text-anchor="middle" fill="#888" font-size="9">homozygous recessive</text>
+<!-- 5 assumptions -->
+<text x="270" y="112" text-anchor="middle" fill="#60a5fa" font-size="10" font-weight="bold">5 Assumptions (NONE acting = equilibrium):</text>
+<text x="270" y="124" text-anchor="middle" fill="#888" font-size="9">No selection &bull; No mutation &bull; No gene flow &bull; No drift (infinite pop) &bull; Random mating</text>
+<text x="270" y="138" text-anchor="middle" fill="#ef4444" font-size="9">INBREEDING changes GENOTYPE frequencies but NOT allele frequencies (p and q unchanged)</text>
+<text x="270" y="150" text-anchor="middle" fill="#888" font-size="8">HWE = null hypothesis for evolution. Deviations indicate one or more forces are acting.</text>
+</svg></div>
+<div class="wb"><div class="bl">What it is</div>The <strong>Hardy-Weinberg equilibrium (HWE)</strong> is the null hypothesis of population genetics: in a large, randomly mating population with no selection, mutation, gene flow, or drift, genotype frequencies p&sup2; + 2pq + q&sup2; = 1 remain constant across generations. Used to DETECT evolution by testing for deviations.</div>
+<div class="hb"><div class="bl">Calculation Steps</div><ol>
+<li>Count genotypes (AA, Aa, aa) in the population</li>
+<li>Calculate allele frequencies: p = (2&times;AA + Aa) / 2N ; q = (2&times;aa + Aa) / 2N ; or simply p + q = 1</li>
+<li>Calculate EXPECTED genotype counts: p&sup2;&times;N (AA), 2pq&times;N (Aa), q&sup2;&times;N (aa)</li>
+<li>Compare OBSERVED vs. EXPECTED — excess homozygotes suggests inbreeding/population structure; excess heterozygotes suggests heterozygote advantage</li>
+</ol></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; HWE at One Locus &ne; No Evolution</div><p>HWE at one locus means that ONE locus, at ONE moment, shows no deviation. It does NOT mean the entire population is not evolving at other loci. Also: if a population meets HWE, you CANNOT conclude &ldquo;no evolutionary forces are acting&rdquo; &mdash; only that no forces are DETECTABLY altering genotype frequencies at that locus at that moment.</p></div>
+<div class="qb"><div class="qh">Q10</div>
+<div class="qq">In a population of 500 individuals, you observe: AA = 245, Aa = 210, aa = 45. What is the frequency of the A allele (p)?</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) p = 0.245</button><button class="cb" data-i="1">B) p = 0.49</button><button class="cb" data-i="2">C) p = 0.70</button><button class="cb" data-i="3">D) p = 0.455</button></div>
+<div class="exp">&#9989; <strong>C. p = 0.70.</strong> p = (2×AA + Aa) / (2×N) = (2×245 + 210) / (2×500) = (490 + 210) / 1000 = 700/1000 = 0.70. Then q = 1 - 0.70 = 0.30. Expected HWE counts: AA = 0.49×500 = 245, Aa = 0.42×500 = 210, aa = 0.09×500 = 45. These match observed! This population IS in HWE.</div></div>
+<div class="qb"><div class="qh">Q11</div>
+<div class="qq">Using p = 0.7 and q = 0.3, what is the expected frequency of HETEROZYGOTES under HWE?</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) 0.21</button><button class="cb" data-i="1">B) 0.42</button><button class="cb" data-i="2">C) 0.49</button><button class="cb" data-i="3">D) 0.09</button></div>
+<div class="exp">&#9989; <strong>B. 2pq = 2 × 0.7 × 0.3 = 0.42.</strong> This is always the biggest genotype frequency class when both alleles exist at intermediate frequencies. Remember: p² + 2pq + q² = 0.49 + 0.42 + 0.09 = 1.0 ✓. If you observe FEWER heterozygotes than 0.42, suspect inbreeding. If MORE, suspect heterozygote advantage.</div></div>
+<div class="qb"><div class="qh">Q12</div>
+<div class="qq">A recessive disorder occurs at frequency 1/10,000 in a large randomly mating population. What is the carrier (heterozygote) frequency?</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) 1/10,000 (same as affected frequency)</button><button class="cb" data-i="1">B) 1/100 (square root of affected frequency — the recessive allele frequency)</button><button class="cb" data-i="2">C) ~1/50 (approximately 2pq ≈ 2q when q is small)</button><button class="cb" data-i="3">D) 1/5,000 (half the affected frequency)</button></div>
+<div class="exp">&#9989; <strong>C. ~1/50.</strong> q² = 1/10,000, so q = 1/100 = 0.01. Carrier frequency = 2pq ≈ 2×(0.99)×(0.01) ≈ 0.0198 ≈ 1/50. CRITICAL insight: carriers are ~200× more common than affected individuals! (1/50 vs 1/10,000). Most recessive disease alleles in a population are hiding in heterozygote carriers, not in affected homozygotes.</div></div>
+</div>
+
+<div class="sec" id="s_quant_gen">
+<h3>Quantitative Genetics &amp; Heritability</h3>
+<div class="wb"><div class="bl">What it is</div>Quantitative traits are continuous (height, weight, beak size). Their phenotypic variance is partitioned: <strong>V<sub>P</sub> = V<sub>A</sub> + V<sub>D</sub> + V<sub>I</sub> + V<sub>E</sub></strong>. Only <strong>V<sub>A</sub></strong> (additive genetic variance) responds predictably to natural selection. Narrow-sense heritability h&sup2; = V<sub>A</sub>/V<sub>P</sub>.</div>
+<table class="ct"><thead><tr><th>Component</th><th>Symbol</th><th>Definition</th><th>Responds to Selection?</th></tr></thead><tbody>
+<tr><td>Additive genetic variance</td><td>V<sub>A</sub></td><td>Variance due to additive effects of alleles (each copy adds a fixed amount)</td><td><strong>YES</strong> — determines h² and R</td></tr>
+<tr><td>Dominance variance</td><td>V<sub>D</sub></td><td>Variance from allele interactions within a locus (heterozygote vs. homozygote)</td><td>Less predictably</td></tr>
+<tr><td>Epistatic/Interaction variance</td><td>V<sub>I</sub></td><td>Variance from interactions between different loci (gene × gene)</td><td>Less predictably</td></tr>
+<tr><td>Environmental variance</td><td>V<sub>E</sub></td><td>Variance from environmental effects on phenotype (non-genetic)</td><td>NO</td></tr></tbody></table>
+<div class="hb"><div class="bl">Estimating h²</div><ol>
+<li>Measure trait values of parents and offspring</li>
+<li>Plot offspring phenotype (y-axis) vs. midparent phenotype (x-axis)</li>
+<li>Fit a regression line — the SLOPE of this parent-offspring regression = narrow-sense heritability (h²)</li>
+<li>Slope near 1.0 = highly heritable (offspring closely resemble parents). Slope near 0 = mostly environmental.</li>
+</ol></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; h² = VA/VP, NOT VG/VP</div><p>Broad-sense heritability H² = V<sub>G</sub>/V<sub>P</sub> (includes all genetic variance). NARROW-sense heritability h² = V<sub>A</sub>/V<sub>P</sub> (only ADDITIVE variance). The breeder&apos;s equation uses h², not H². Only additive variance produces predictable parent-offspring resemblance. Dominance and epistasis don&apos;t transfer cleanly across generations.</p></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; High Heritability Does NOT Mean Environment Is Unimportant</div><p>h² = 0.9 means 90% of VARIATION in a population is explained by additive genetics &mdash; it does NOT mean environment is unimportant for the trait. Human height h² ≈ 0.8, yet adequate nutrition is essential for achieving genetic potential. Heritability describes variation within a population, not whether a trait can respond to environmental change.</p></div>
+<div class="qb"><div class="qh">Q13</div>
+<div class="qq">Which component of phenotypic variance is MOST directly responsible for the response to natural selection (R in the breeder's equation)?</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) VD — dominance variance, because it determines heterozygote expression</button><button class="cb" data-i="1">B) VE — environmental variance, because organisms must match their environment</button><button class="cb" data-i="2">C) VA — additive genetic variance, because it determines parent-offspring resemblance and h²</button><button class="cb" data-i="3">D) VI — epistatic variance, because gene-gene interactions create new combinations</button></div>
+<div class="exp">&#9989; <strong>C. V<sub>A</sub></strong> — additive variance is the component that parent-offspring regression captures. h² = V<sub>A</sub>/V<sub>P</sub>. R = h² × S = (V<sub>A</sub>/V<sub>P</sub>) × S. Dominance and epistasis (V<sub>D</sub>, V<sub>I</sub>) don&apos;t transfer as predictably across generations because the allele combinations that create them may not be preserved.</div></div>
+<div class="qb"><div class="qh">Q14</div>
+<div class="qq">A parent-offspring regression for beak length in finches has a slope of 0.65. This means:</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) 65% of phenotypic variance is due to the environment</button><button class="cb" data-i="1">B) Narrow-sense heritability (h²) = 0.65 — 65% of phenotypic variance is due to additive genetic effects</button><button class="cb" data-i="2">C) 65% of individuals will inherit the same beak length as their parents</button><button class="cb" data-i="3">D) The breeder's equation predicts a selection differential of 0.65 for beak length</button></div>
+<div class="exp">&#9989; <strong>B.</strong> The SLOPE of a parent-offspring regression IS narrow-sense heritability h². A slope of 0.65 means h² = 0.65. 65% of phenotypic variance is attributable to additive genetic effects. This is actually the reported heritability for beak length in the Grants&apos; Galápagos finch study.</div></div>
+</div>
+
+<div class="sec" id="s_plasticity">
+<h3>Phenotypic Plasticity &amp; Reaction Norms</h3>
+<div class="wb"><div class="bl">What it is</div><strong>Phenotypic plasticity</strong> = one genotype produces different phenotypes in different environments. A <strong>reaction norm</strong> = a plot of phenotype (y-axis) vs. environment (x-axis) for a single genotype. Sloped reaction norm = plasticity. Non-parallel slopes between genotypes = genotype-by-environment interaction (G×E, V<sub>G×E</sub>).</div>
+<div class="hb"><div class="bl">Reading Reaction Norm Graphs</div><ol>
+<li>FLAT line for a genotype = NO plasticity for that genotype (same phenotype in all environments)</li>
+<li>SLOPED line = plasticity (phenotype changes with environment)</li>
+<li>PARALLEL sloped lines for different genotypes = plasticity but NO G×E (all genotypes respond equally)</li>
+<li>NON-PARALLEL lines (crossing or different slopes) = G×E interaction (genotypes differ in HOW they respond to environment)</li>
+</ol></div>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; Polyphenic vs. Continuous Plasticity</div><p>Polyphenic traits = discrete phenotypes from one genotype (e.g., army ant castes, wasp queens vs. workers &mdash; same genes, completely different bodies based on larval conditions). Continuous plasticity = gradual phenotypic change with environment (e.g., plant height increasing with water). Both are phenotypic plasticity, but polypheny produces DISCRETE forms.</p></div>
+<div class="qb"><div class="qh">Q15</div>
+<div class="qq">A reaction norm graph shows genotype A as a flat horizontal line and genotype B as a steep positive slope across environments 1-4. Which statement is CORRECT?</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) Genotype A is more plastic than B because it maintains the same phenotype across all environments</button><button class="cb" data-i="1">B) There is no G×E because one genotype is flat</button><button class="cb" data-i="2">C) Genotype B is more plastic than A; there IS G×E (non-parallel lines) because the two genotypes respond differently to the environment</button><button class="cb" data-i="3">D) G×E requires that the reaction norms cross each other; non-crossing non-parallel lines have no G×E</button></div>
+<div class="exp">&#9989; <strong>C.</strong> Plasticity = slope of the reaction norm for a given genotype. Genotype A (flat) = no plasticity. Genotype B (steep) = high plasticity. G×E = non-parallel slopes between genotypes = they respond differently to environment. A flat line vs. a steep line = non-parallel = G×E. Crossing is ONE type of G×E but not the only type.</div></div>
+</div>
+
+<div class="sec" id="s_genome">
+<h3>Genome Structure &amp; Gene Expression Regulation</h3>
+<div class="wb"><div class="bl">Genome composition</div>Eukaryotic genomes (including human) contain: protein-coding genes (~1.5% of human genome), pseudogenes (non-functional copies of genes), mobile genetic elements/transposons (~45% of human genome), introns, regulatory sequences, and other non-coding DNA. Genome SIZE does not correlate with organismal complexity (C-value paradox).</div>
+<table class="ct"><thead><tr><th>Level of Regulation</th><th>Mechanism</th><th>When it Acts</th></tr></thead><tbody>
+<tr><td><strong>Pre-transcriptional</strong></td><td>DNA methylation, histone modification, chromatin remodeling</td><td>Before RNA is made — controls DNA accessibility</td></tr>
+<tr><td><strong>Transcriptional</strong></td><td>Transcription factors binding promoters/enhancers</td><td>During RNA synthesis — affects how much mRNA is made</td></tr>
+<tr><td><strong>Post-transcriptional</strong></td><td>Alternative splicing, microRNA (miRNA), RNA degradation</td><td>After RNA is made, before/during translation</td></tr>
+<tr><td><strong>Post-translational</strong></td><td>Protein phosphorylation, ubiquitination, glycosylation, cleavage</td><td>After protein is made — affects protein activity/stability</td></tr></tbody></table>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; microRNA vs. DNA Methylation Levels</div><p>DNA methylation = PRE-transcriptional (controls whether a gene is accessible for transcription). microRNA (miRNA) = POST-transcriptional (binds to mRNA and promotes its degradation or blocks translation). These are TWO DIFFERENT levels. Robbins tests whether you know which regulatory mechanism acts at which stage.</p></div>
+<div class="qb"><div class="qh">Q16</div>
+<div class="qq">DNA methylation of a gene's promoter region most directly affects gene expression at which level?</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) Post-translational — methylation adds chemical groups that change protein function</button><button class="cb" data-i="1">B) Post-transcriptional — methylation degrades existing mRNA transcripts</button><button class="cb" data-i="2">C) Pre-transcriptional — methylation condenses chromatin, making the DNA inaccessible for transcription</button><button class="cb" data-i="3">D) Transcriptional — methylation directly inhibits RNA polymerase activity</button></div>
+<div class="exp">&#9989; <strong>C.</strong> DNA methylation at promoter regions causes chromatin condensation (heterochromatin), making the DNA physically inaccessible to transcription factors and RNA polymerase. This is a PRE-transcriptional mechanism &mdash; it prevents transcription from even beginning. miRNA acts post-transcriptionally; post-translational mechanisms act after protein is made.</div></div>
+<div class="qb"><div class="qh">Q17</div>
+<div class="qq">Pseudogenes in a genome are BEST described as:</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) Genes that control the expression of other genes at the transcriptional level</button><button class="cb" data-i="1">B) Non-functional copies of genes that have accumulated mutations rendering them inactive, often relics of gene duplication or retrotransposition</button><button class="cb" data-i="2">C) Genes expressed only in embryonic development, silenced in adults</button><button class="cb" data-i="3">D) Mobile genetic elements that can move to different chromosomal locations</button></div>
+<div class="exp">&#9989; <strong>B.</strong> Pseudogenes are DEAD GENES &mdash; sequences with strong homology to functional genes but containing mutations (frameshifts, premature stops) that prevent expression of functional protein. They&apos;re evolutionary relics. Humans have thousands of pseudogenes (e.g., olfactory receptor pseudogenes). They&apos;re important evidence of evolution (shared pseudogenes in related species = common ancestor had a functional copy).</div></div>
+</div>
+
+<div class="chh" id="s_hist"><h2><span class="cn">Unit III</span> Evolutionary History &amp; Key Figures</h2>
+<p>Who discovered what, and why it mattered.</p></div>
+
+<div class="sec" id="s_key_figures">
+<h3>Key Figures in Evolutionary Thought</h3>
+<table class="ct"><thead><tr><th>Figure</th><th>Key Contribution</th><th>Key Detail</th></tr></thead><tbody>
+<tr><td><strong>Lamarck</strong></td><td>Proposed inheritance of acquired characteristics (use/disuse)</td><td>Wrong mechanism (acquired traits aren&apos;t heritable), but right that species change over time. First serious evolutionary framework.</td></tr>
+<tr><td><strong>Charles Lyell</strong></td><td>Uniformitarianism &mdash; gradual geological processes, deep time</td><td>Influenced Darwin: if geology takes millions of years, there was enough time for biological evolution to occur gradually</td></tr>
+<tr><td><strong>William Smith</strong></td><td>Stratigraphy &mdash; used fossils to date rock layers; established reality of extinction</td><td>Different rock layers contain different fossil assemblages &rarr; species have gone extinct; Earth has a history</td></tr>
+<tr><td><strong>Darwin</strong></td><td>Theory of evolution by natural selection; descent with modification</td><td>Required VARIATION + HERITABILITY + DIFFERENTIAL SURVIVAL/REPRODUCTION. <em>Origin of Species</em> 1859.</td></tr>
+<tr><td><strong>Alfred Russel Wallace</strong></td><td>Independently conceived natural selection simultaneously with Darwin</td><td>Wallace&apos;s letter to Darwin in 1858 <strong>prompted Darwin to publish</strong>. Darwin had been sitting on his theory for ~20 years.</td></tr>
+<tr><td><strong>Great Chain of Being</strong></td><td>Pre-Darwinian: fixed hierarchical chain of life, humans at top</td><td>No evolution, no extinction in the modern sense. Aristotelian concept. Replaced by evolutionary thinking.</td></tr></tbody></table>
+<div class="trap"><div class="tl">&#9888; Trap &mdash; Who Spurred Darwin to Publish?</div><p><strong>Alfred Russel Wallace</strong> is the answer. Wallace sent Darwin a letter in 1858 describing natural selection independently. Darwin, who had been developing the theory since ~1838, realized he had to publish or lose priority. Darwin and Wallace presented jointly to the Linnean Society in 1858, then Darwin published <em>Origin of Species</em> in 1859.</p></div>
+<div class="mn"><div class="ml">Mnemonic &mdash; Key Figures</div><p>&ldquo;<strong>Lamarck Lifts Wrong Weights; Darwin Wins</strong>&rdquo; = Lamarck (wrong mechanism but evolutionary), Lyell (deep time), William Smith (stratigraphy/extinction), Darwin (natural selection), Wallace (co-discoverer who forced Darwin to publish).</p></div>
+<div class="qb"><div class="qh">Q18</div>
+<div class="qq">Alfred Russel Wallace's key contribution to evolutionary biology was:</div>
+<div class="ch" data-correct="2"><button class="cb" data-i="0">A) Discovering the fossil record and demonstrating that species had gone extinct</button><button class="cb" data-i="1">B) Proposing the inheritance of acquired characteristics before Darwin</button><button class="cb" data-i="2">C) Independently conceiving natural selection and prompting Darwin to publish by sending him a letter in 1858</button><button class="cb" data-i="3">D) Providing the geological evidence of deep time that Darwin needed for evolution to work</button></div>
+<div class="exp">&#9989; <strong>C.</strong> Wallace independently developed natural selection working in Southeast Asia. His 1858 letter to Darwin describing his theory forced Darwin to act. Darwin had been developing his theory since 1838 but delayed publication. The threat of losing priority prompted the joint Darwin-Wallace presentation to the Linnean Society in 1858 and Darwin&apos;s publication of Origin in 1859.</div></div>
+<div class="qb"><div class="qh">Q19</div>
+<div class="qq">The 'Great Chain of Being' differs from modern evolutionary theory in which fundamental way?</div>
+<div class="ch" data-correct="3"><button class="cb" data-i="0">A) It placed humans at the top of a hierarchy, while evolutionary theory considers humans just another branch</button><button class="cb" data-i="1">B) It proposed no mechanism for evolutionary change, while Darwin provided natural selection</button><button class="cb" data-i="2">C) It proposed that species are FIXED and do not change; it had no concept of common descent, extinction as we know it, or species transforming over time</button><button class="cb" data-i="3">D) All of the above — A, B, and C are all correct differences</button></div>
+<div class="exp">&#9989; <strong>D.</strong> The Great Chain of Being was a pre-scientific, pre-Darwinian concept. It proposed: (A) humans at top of a hierarchical chain of beings, (B) no evolutionary mechanism &mdash; species were fixed in their station, (C) species were static, immutable entities created in their current form. Modern evolutionary theory has all three elements: humans are one branch (not top), natural selection is the mechanism, and species change over time.</div></div>
+<div class="qb"><div class="qh">Q20</div>
+<div class="qq">William Smith's major contribution to evolutionary thought was:</div>
+<div class="ch" data-correct="1"><button class="cb" data-i="0">A) Proposing that all species shared a common ancestor</button><button class="cb" data-i="1">B) Demonstrating that different rock strata contain different fossil assemblages, establishing the reality of extinction and the geological history of life</button><button class="cb" data-i="2">C) Proposing uniformitarianism: the idea that present processes explain the geological past</button><button class="cb" data-i="3">D) Discovering the first hominin fossils in England</button></div>
+<div class="exp">&#9989; <strong>B.</strong> William Smith (1769-1839) was a surveyor who noticed that each rock stratum contained a distinct, characteristic assemblage of fossils. Crucially: organisms in older (deeper) strata no longer existed &mdash; they had gone EXTINCT. This established extinction as a geological reality and provided a way to correlate and date rock layers worldwide. Lyell (C) proposed uniformitarianism.</div></div>
+</div>
+
+</div><!-- end main-content -->
+</main>
+<div id="fc-wrap">
+  <div id="fc-filter"><button class="flt-btn on" data-ch="all" onclick="filterCards(this,'all')">All</button><button class="flt-btn" data-ch="ch5" onclick="filterCards(this,'ch5')">Mechanisms</button><button class="flt-btn" data-ch="ch6" onclick="filterCards(this,'ch6')">HWE & Genetics</button><button class="flt-btn" data-ch="misc" onclick="filterCards(this,'misc')">Key Figures & Hist</button><button class="flt-btn" data-ch="trap" onclick="filterCards(this,'trap')">⚠ Exam 1 Traps</button></div>
+  <div class="fc-chapter" data-ch="ch5">
+<h3 style="color:#4ade80"><span style="background:#4ade80;color:#000;border-radius:4px;padding:1px 8px;font-size:11px">Ch 5-6 • Mec</span> Ch 5-6 • Mechanisms</h3>
+<div class="fc-grid">
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Natural selection — 3 requirements</div>
+<div class="fb2"><div class="verdict">Answer</div>(1) Phenotypic VARIATION exists. (2) Variation is HERITABLE (genetic). (3) Variation affects FITNESS (differential survival/reproduction). ALL 3 required for selection to cause evolution.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Breeder's Equation</div>
+<div class="fb2"><div class="verdict">Answer</div>R = h² × S. R = response to selection (change in mean trait value in offspring). h² = narrow-sense heritability (V_A/V_P). S = selection differential (mean of breeders − mean of population).</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Selection differential (S)</div>
+<div class="fb2"><div class="verdict">Answer</div>S = mean of SELECTED BREEDERS − mean of ENTIRE POPULATION. Larger S = more intense selection = faster evolution (if h² &gt; 0).</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>h² = 0 means...</div>
+<div class="fb2"><div class="verdict">Answer</div>If heritability = 0, then R = 0 regardless of selection strength. No evolutionary change even with intense selection. All variation is environmental — not genetic.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>5 forces that change allele frequencies</div>
+<div class="fb2"><div class="verdict">Answer</div>Natural selection, Genetic drift, Mutation, Gene flow (migration), Non-random mating (inbreeding). All 5 absent = Hardy-Weinberg equilibrium.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Which force creates NEW alleles?</div>
+<div class="fb2"><div class="verdict">Answer</div>MUTATION ONLY. Selection, drift, gene flow, and non-random mating only REDISTRIBUTE existing alleles. Mutation is the ULTIMATE source of all genetic variation.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Genetic drift — key features</div>
+<div class="fb2"><div class="verdict">Answer</div>Random changes in allele frequency due to chance. Strongest in SMALL populations. Can fix deleterious alleles or lose beneficial ones by chance. Causes nonadaptive evolution.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Bottleneck vs. Founder Effect</div>
+<div class="fb2"><div class="verdict">Answer</div>Bottleneck = existing population dramatically shrinks (disaster). Founder Effect = small group colonizes new area. Both = reduced genetic diversity, non-representative allele frequencies. Both are extreme drift events.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Gene flow effect on populations</div>
+<div class="fb2"><div class="verdict">Answer</div>Homogenizes populations (makes allele frequencies MORE SIMILAR). High gene flow → low FST (little differentiation). Can prevent local adaptation.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>FST interpretation</div>
+<div class="fb2"><div class="verdict">Answer</div>FST near 0 = low differentiation = high gene flow between populations. FST near 1 = high differentiation = isolated populations with independent evolutionary histories.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Inbreeding: what it changes</div>
+<div class="fb2"><div class="verdict">Answer</div>Changes GENOTYPE frequencies (increases homozygotes, decreases heterozygotes). Does NOT change allele frequencies (p and q remain the same). Causes inbreeding depression by exposing recessive deleterious alleles.</div></div></div>
+<div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH5</div>Is evolution completely random?</div>
+<div class="fb2"><div class="verdict">Answer</div>NO. Mutation and drift are random. Natural selection is NON-RANDOM (favors higher fitness). In large populations, selection dominates. In small populations, drift can overpower selection.</div></div></div>
+</div></div>
+<div class="fc-chapter" data-ch="ch6">
+<h3 style="color:#60a5fa"><span style="background:#60a5fa;color:#000;border-radius:4px;padding:1px 8px;font-size:11px">Ch 5-6 • HWE</span> Ch 5-6 • HWE & Genetics</h3>
+<div class="fc-grid">
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>HWE formula</div>
+<div class="fb2"><div class="verdict">Answer</div>p² + 2pq + q² = 1. Where p = freq(A allele), q = freq(a allele), p² = freq(AA), 2pq = freq(Aa), q² = freq(aa). Also p + q = 1.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>HWE 5 assumptions</div>
+<div class="fb2"><div class="verdict">Answer</div>(1) No natural selection, (2) No mutation, (3) No gene flow, (4) No genetic drift (infinite population), (5) Random mating. ALL must hold for equilibrium.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>HWE: excess homozygotes — 3 causes</div>
+<div class="fb2"><div class="verdict">Answer</div>(1) Inbreeding (non-random mating), (2) Population subdivision/Wahlund effect, (3) Selection AGAINST heterozygotes. Excess homozygotes ≠ excess heterozygotes.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>HWE: excess heterozygotes — cause</div>
+<div class="fb2"><div class="verdict">Answer</div>Heterozygote advantage (overdominance/balancing selection). Example: sickle cell HbA/HbS has higher fitness than either homozygote in malaria-endemic regions.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>Narrow-sense heritability h²</div>
+<div class="fb2"><div class="verdict">Answer</div>h² = V_A / V_P. Additive genetic variance / total phenotypic variance. Estimated from SLOPE of parent-offspring regression. Range 0-1. Only this component responds predictably to selection.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>V_P components</div>
+<div class="fb2"><div class="verdict">Answer</div>V_P = V_A + V_D + V_I + V_E. Additive + Dominance + Interaction(epistasis) + Environmental. Only V_A drives R in breeder's equation.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>Parent-offspring regression slope = ?</div>
+<div class="fb2"><div class="verdict">Answer</div>Narrow-sense heritability h². Steep slope → high h² → offspring resemble parents → trait responds to selection. Flat slope → h² ≈ 0 → no parent-offspring resemblance → no evolutionary response.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>Phenotypic plasticity — definition</div>
+<div class="fb2"><div class="verdict">Answer</div>One genotype produces DIFFERENT phenotypes in DIFFERENT environments. Reaction norm = plot of phenotype vs. environment for one genotype. Sloped reaction norm = plasticity present.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>G×E interaction — what is it?</div>
+<div class="fb2"><div class="verdict">Answer</div>Genotype-by-Environment interaction: different genotypes respond DIFFERENTLY to environmental change. Seen as NON-PARALLEL slopes in reaction norm plots. Contributes V_G×E to phenotypic variance.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>Polyphenic trait — example</div>
+<div class="fb2"><div class="verdict">Answer</div>One genotype can produce DISCRETE phenotypes depending on environment. Example: army ant castes, honeybee queens vs. workers — same genome, completely different phenotypes based on developmental conditions.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>Genome composition — human</div>
+<div class="fb2"><div class="verdict">Answer</div>~1.5% protein-coding genes, ~45% mobile elements/transposons, ~8% pseudogenes and remnants, rest = introns, regulatory sequences, non-coding. Genome SIZE ≠ organismal complexity.</div></div></div>
+<div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">CH6</div>4 levels of gene expression regulation</div>
+<div class="fb2"><div class="verdict">Answer</div>(1) Pre-transcriptional: DNA methylation, histone modification. (2) Transcriptional: transcription factors. (3) Post-transcriptional: splicing, miRNA. (4) Post-translational: phosphorylation, cleavage. Robbins tests which is which.</div></div></div>
+</div></div>
+<div class="fc-chapter" data-ch="misc">
+<h3 style="color:#fbbf24"><span style="background:#fbbf24;color:#000;border-radius:4px;padding:1px 8px;font-size:11px">Key Figures </span> Key Figures & History</h3>
+<div class="fc-grid">
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>Who prompted Darwin to publish?</div>
+<div class="fb2"><div class="verdict">Answer</div>Alfred Russel Wallace — sent Darwin a letter in 1858 independently describing natural selection. Darwin (who had been developing the theory since ~1838) arranged a joint presentation at the Linnean Society, then published Origin in 1859.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>Lamarck's contribution + error</div>
+<div class="fb2"><div class="verdict">Answer</div>Proposed organisms CHANGE OVER TIME (first serious evolutionary framework). Error: inheritance of acquired characteristics (use/disuse). Wrong mechanism but correct that species transform.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>Charles Lyell's contribution</div>
+<div class="fb2"><div class="verdict">Answer</div>Uniformitarianism — gradual geological processes acting over vast time (deep time). Influenced Darwin: millions of years existed for evolution to proceed gradually.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>William Smith's contribution</div>
+<div class="fb2"><div class="verdict">Answer</div>Stratigraphy — showed different rock layers contain different fossil assemblages. Established EXTINCTION as a geological reality and enabled dating of rock layers by fossil content.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>Great Chain of Being — what is it?</div>
+<div class="fb2"><div class="verdict">Answer</div>Pre-Darwinian concept: fixed hierarchical chain of life with humans at top. No evolution, no extinction as we know it. Species were fixed and immutable. Replaced by evolutionary thinking.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>Hypothesis vs. Theory (scientific)</div>
+<div class="fb2"><div class="verdict">Answer</div>Hypothesis = tentative, testable explanation for an observation. Theory = well-substantiated explanation supported by large body of evidence that generates MANY testable hypotheses. Theories are MORE supported than hypotheses, not less certain.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>FST value interpretation</div>
+<div class="fb2"><div class="verdict">Answer</div>FST near 0 = little genetic differentiation = high gene flow homogenizing populations. FST near 1 = high differentiation = populations isolated with independent evolutionary histories.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>Why are rare beneficial recessives slow to spread?</div>
+<div class="fb2"><div class="verdict">Answer</div>When rare, nearly ALL copies of a recessive allele are in Aa heterozygotes — where the dominant allele MASKS it from selection. Only aa homozygotes express it and face selection. Must become more common before selection is fully effective.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>Selection vs. evolution — the distinction</div>
+<div class="fb2"><div class="verdict">Answer</div>Selection CAN occur without evolution if variation is not heritable (h² = 0). Evolution = change in ALLELE FREQUENCIES across generations. Selection acts on phenotypes; evolution tracks allele frequencies. Need both heritable variation AND differential survival.</div></div></div>
+<div class="fc2" data-ch="misc" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">MISC</div>Additive alleles vs. dominant/recessive</div>
+<div class="fb2"><div class="verdict">Answer</div>Additive: each copy of an allele adds a fixed effect (Aa = midpoint between AA and aa). Dominant: one copy masks the other (Aa looks like AA). Recessive: both copies needed for expression (Aa looks like AA). Additivity = most predictable for quantitative traits.</div></div></div>
+</div></div>
+<div class="fc-chapter" data-ch="trap">
+<h3 style="color:#ef4444"><span style="background:#ef4444;color:#000;border-radius:4px;padding:1px 8px;font-size:11px">⚠ Exam 1 Tra</span> ⚠ Exam 1 Traps</h3>
+<div class="fc-grid">
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: Selection without heritability = no evolution?</div>
+<div class="fb2"><div class="verdict">Answer</div>YES — if h² = 0, R = 0 regardless of how strong selection is. Selection acts on NON-HERITABLE variation → no change in allele frequencies → no evolution. Variation must be GENETIC to produce evolutionary response.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: Which force creates NEW alleles?</div>
+<div class="fb2"><div class="verdict">Answer</div>MUTATION ONLY. Selection, drift, gene flow, and inbreeding only redistribute EXISTING alleles. Mutation = only source of truly novel alleles.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: Inbreeding changes allele frequencies?</div>
+<div class="fb2"><div class="verdict">Answer</div>NO. Inbreeding changes GENOTYPE frequencies (more homozygotes) but allele frequencies p and q remain UNCHANGED. Inbreeding violates HWE but isn't itself a force driving allele frequency change.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: h² = narrow vs. broad sense</div>
+<div class="fb2"><div class="verdict">Answer</div>Narrow-sense h² = V_A/V_P (used in breeder's equation). Broad-sense H² = V_G/V_P (all genetic variance). The SLOPE of parent-offspring regression = h² (narrow-sense). Robbins may ask which is which.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: High h² means environment doesn't matter?</div>
+<div class="fb2"><div class="verdict">Answer</div>NO. h² describes the proportion of VARIATION explained by additive genetics in a SPECIFIC POPULATION. It does NOT mean the trait is unaffected by environment. Human height h² ≈ 0.8 but adequate nutrition is still essential.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: HWE at one locus = population not evolving?</div>
+<div class="fb2"><div class="verdict">Answer</div>NO. HWE at one locus, at one moment, means no detectable deviation at THAT LOCUS. The population could be evolving at hundreds of other loci. Also: meeting HWE doesn't mean ALL 5 assumptions are satisfied — some forces can cancel each other out.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: Who was Wallace?</div>
+<div class="fb2"><div class="verdict">Answer</div>Alfred Russel Wallace INDEPENDENTLY conceived natural selection. He sent Darwin a letter in 1858 describing the theory. This PROMPTED Darwin to publish. Wallace ≠ just a collector — he was a co-discoverer of natural selection.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: DNA methylation acts at which level?</div>
+<div class="fb2"><div class="verdict">Answer</div>PRE-TRANSCRIPTIONAL. Methylation of CpG islands at promoters condenses chromatin, PREVENTING transcription. microRNA acts POST-TRANSCRIPTIONALLY (degrades mRNA or blocks translation). Different levels.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: Drift is always nonadaptive?</div>
+<div class="fb2"><div class="verdict">Answer</div>YES. Drift is random — it has no direction based on fitness. It can INCREASE deleterious alleles or DECREASE beneficial ones by chance. In small populations it can overpower adaptive selection completely.</div></div></div>
+<div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
+<div class="fi2"><div class="ff2"><div class="chip">TRAP</div>TRAP: Excess homozygotes vs. heterozygotes</div>
+<div class="fb2"><div class="verdict">Answer</div>Excess HOMOZYGOTES → suspect inbreeding, population subdivision (Wahlund effect), or selection AGAINST heterozygotes. Excess HETEROZYGOTES → suspect heterozygote advantage (balancing selection). Know which pattern goes with which mechanism.</div></div></div>
+</div></div>
+
+</div>
+</div>
+<script>
+let tc=0,cc=0;
+document.querySelectorAll('.qb').forEach(b=>{
+  const ch=b.querySelector('.ch');if(!ch)return;
+  const cor=parseInt(ch.dataset.correct);
+  const btns=b.querySelectorAll('.cb');
+  const exp=b.querySelector('.exp');
+  tc++;
+  btns.forEach(btn=>{btn.addEventListener('click',()=>{
+    if(btn.disabled)return;
+    btns.forEach(x=>x.disabled=true);
+    if(parseInt(btn.dataset.i)===cor){btn.classList.add('correct');cc++;}
+    else{btn.classList.add('wrong');btns[cor].classList.add('correct');}
+    if(exp){exp.classList.add('show');exp.scrollIntoView({behavior:'smooth',block:'nearest'});}
+    const s=document.getElementById('score-badge');
+    const ans=document.querySelectorAll('.cb.correct,.cb.wrong').length;
+    if(s)s.textContent='Score: '+cc+' / '+ans;
+  });});
+});
+const secs=document.querySelectorAll('[id^="s"]');
+const lks=document.querySelectorAll('#sb a');
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){lks.forEach(l=>l.classList.remove('active'));const lk=document.querySelector('#sb a[href="#'+e.target.id+'"]');if(lk)lk.classList.add('active');}});},{rootMargin:'-20% 0px -70% 0px'});
+secs.forEach(s=>obs.observe(s));
+function setMode(m){
+  document.body.classList.remove('study-mode','card-mode');
+  document.body.classList.add(m+'-mode');
+  document.getElementById('btn-study').classList.toggle('active',m==='study');
+  document.getElementById('btn-card').classList.toggle('active',m==='card');
+  const p=document.getElementById('prog');
+  if(p)p.textContent=m==='card'?document.querySelectorAll('.fc2:not([style*="none"])').length+' cards':'';
+}
+document.body.classList.add('study-mode');
+function filterCards(btn,ch){
+  document.querySelectorAll('.flt-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.fc2').forEach(c=>{c.style.display=(ch==='all'||c.dataset.ch===ch)?'':'none';});
+  document.querySelectorAll('.fc-chapter').forEach(s=>{s.style.display=(ch==='all'||s.dataset.ch===ch)?'':'none';});
+  const vis=document.querySelectorAll('.fc2:not([style*="none"])').length;
+  const p=document.getElementById('prog');if(p)p.textContent=vis+' cards shown';
+}
+</script>
+</body>
+</html>
