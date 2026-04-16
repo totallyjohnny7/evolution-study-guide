@@ -66,7 +66,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .exp.show{display:block}
 /* Flashcard mode */
 body.card-mode #main-content{display:none}
-body.card-mode #fc-wrap{display:block}
+body.card-mode #fc-wrap{display:none}
 body.study-mode #main-content{display:block}
 body.study-mode #fc-wrap{display:none}
 #fc-wrap{display:none;padding:0 34px 80px;overflow-y:auto;flex:1}
@@ -87,6 +87,40 @@ body.study-mode #fc-wrap{display:none}
 .fb2 .verdict{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--green);opacity:.8;margin-bottom:3px}
 strong{color:#fff}
 @media(max-width:768px){#sb{display:none}#main,#fc-wrap{padding:0 12px 60px}}
+/* ── DECK OVERLAY ── */
+#dk-ov{display:none;position:fixed;inset:0;background:rgba(7,8,6,.97);z-index:9999;flex-direction:column;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+#dk-ov.show{display:flex}
+#dk-card{width:min(500px,92vw);perspective:1000px;cursor:pointer;margin:14px 0}
+#dk-inner{position:relative;width:100%;height:270px;transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+#dk-card.flipped #dk-inner{transform:rotateY(180deg)}
+#dk-f,#dk-b{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px;text-align:center}
+#dk-f{background:#141414;border:2px solid #2a2a2a}
+#dk-b{background:#0f1f0f;border:2px solid var(--green);transform:rotateY(180deg)}
+#dk-chip{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px}
+#dk-term{font-size:17px;font-weight:700;color:var(--text);line-height:1.45;overflow:auto;max-height:170px}
+#dk-hint{font-size:11px;color:var(--muted);margin-top:12px;opacity:.6}
+#dk-def{font-size:13px;color:#aee3b8;line-height:1.7;overflow:auto;max-height:210px}
+.dk-head{width:min(500px,92vw);display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.dk-title{font-size:11px;font-weight:700;color:var(--gold);flex:1;text-transform:uppercase;letter-spacing:.8px}
+#dk-close{background:none;border:1.5px solid #333;color:var(--muted);font-size:13px;cursor:pointer;padding:5px 12px;border-radius:20px;transition:all .2s;font-weight:600}
+#dk-close:hover{border-color:var(--red);color:var(--red)}
+.dk-prog-wrap{width:min(500px,92vw);display:flex;align-items:center;gap:10px;margin:8px 0 0}
+.dk-bar-bg{flex:1;height:3px;background:#2a2a2a;border-radius:2px}
+.dk-bar-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .3s;min-width:4px}
+#dk-prog-txt{font-size:11px;color:var(--muted);white-space:nowrap;min-width:50px;text-align:right}
+.dk-nav{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+.dk-btn{padding:9px 20px;border-radius:20px;border:1.5px solid #333;background:#1a1a1a;color:#888;font-size:13px;cursor:pointer;transition:all .2s;font-weight:600}
+.dk-btn:hover{border-color:var(--gold);color:var(--gold)}
+#dk-flip{background:var(--gold);color:#000;border-color:var(--gold)}
+#dk-flip:hover{background:var(--gold2);border-color:var(--gold2)}
+#dk-status{font-size:11px;color:var(--muted);margin-top:8px;height:16px;text-align:center}
+/* Launch bar above flashcard grid */
+#dk-launch-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#111;border:1px solid #222;border-radius:10px;margin-bottom:14px;flex-wrap:wrap}
+#dk-launch-bar>span{color:var(--muted);font-size:12px;margin-right:4px}
+.dk-launch{padding:6px 14px;border-radius:20px;border:1.5px solid #333;background:#1a1a1a;color:#888;font-size:12px;cursor:pointer;font-weight:600;transition:all .2s;white-space:nowrap}
+.dk-launch:hover{border-color:var(--gold);color:var(--gold)}
+.dk-launch-all{border-color:var(--gold);color:var(--gold)}
+.dk-launch-all:hover{background:var(--gold);color:#000}
 </style>
 </head>
 <body>
@@ -1238,6 +1272,62 @@ function filterCards(btn,ch){
   const vis=document.querySelectorAll('.fc2:not([style*="none"])').length;
   const p=document.getElementById('prog');if(p)p.textContent=vis+' cards shown';
 }
+// ── DECK ENGINE ──
+(function(){
+  document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><button id="dk-close" onclick="dkClose()">✕ Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span></div><div id="dk-card" onclick="dkFlip()"><div id="dk-inner"><div id="dk-f"><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip</div></div><div id="dk-b"><div id="dk-def"></div></div></div></div><div class="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">← Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next →</button><button class="dk-btn" onclick="dkShuffle()">⇄ Shuffle</button></div><div id="dk-status"></div></div>');
+  var target=document.getElementById('fc-wrap')||document.getElementById('fc-section');
+  if(target){
+    var chaps={};
+    document.querySelectorAll('.fc-chapter').forEach(function(c){
+      var ch=c.dataset.ch;var h=c.querySelector('h3');
+      if(ch&&h&&!chaps[ch]){var t=h.cloneNode(true);var sp=t.querySelector('span');if(sp)sp.remove();chaps[ch]=t.textContent.trim().replace(/\s+/g,' ').substring(0,28);}
+    });
+    var btns='<button class="dk-launch dk-launch-all" onclick="dkOpen(\'all\')">★ All Cards</button>';
+    Object.keys(chaps).forEach(function(ch){btns+='<button class="dk-launch" onclick="dkOpen(\''+ch+'\')">'+chaps[ch]+'</button>';});
+    target.insertAdjacentHTML('afterbegin','<div id="dk-launch-bar"><span>Practice deck:</span>'+btns+'</div>');
+  }
+  var _deck=[],_idx=0;
+  function buildDeck(filter){
+    _deck=[];
+    document.querySelectorAll('.fc2').forEach(function(el){
+      if(filter!=='all'&&el.dataset.ch!==filter)return;
+      var ff=el.querySelector('.ff2'),fb=el.querySelector('.fb2');
+      if(!ff||!fb)return;
+      var fc=ff.cloneNode(true);var chip=fc.querySelector('.chip');var chipTxt=chip?chip.textContent.trim():'';if(chip)chip.remove();
+      var bc=fb.cloneNode(true);var v=bc.querySelector('.verdict');if(v)v.remove();
+      _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.textContent.trim()});
+    });
+  }
+  window.dkOpen=function(filter){
+    buildDeck(filter||'all');if(!_deck.length)return;_idx=0;
+    document.getElementById('dk-title').textContent=(filter==='all'?'All Cards — '+_deck.length+' cards':chaps&&chaps[filter]?chaps[filter]:filter);
+    dkRender();document.getElementById('dk-ov').classList.add('show');document.body.style.overflow='hidden';
+  };
+  window.dkClose=function(){document.getElementById('dk-ov').classList.remove('show');document.body.style.overflow='';};
+  window.dkFlip=function(){document.getElementById('dk-card').classList.toggle('flipped');};
+  window.dkNav=function(dir){_idx=(_idx+dir+_deck.length)%_deck.length;document.getElementById('dk-card').classList.remove('flipped');setTimeout(dkRender,55);};
+  window.dkShuffle=function(){
+    for(var i=_deck.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=_deck[i];_deck[i]=_deck[j];_deck[j]=t;}
+    _idx=0;document.getElementById('dk-card').classList.remove('flipped');setTimeout(dkRender,55);
+    document.getElementById('dk-status').textContent='Shuffled!';setTimeout(function(){document.getElementById('dk-status').textContent='';},1400);
+  };
+  function dkRender(){
+    var c=_deck[_idx];
+    document.getElementById('dk-chip').textContent=c.chip;
+    document.getElementById('dk-term').textContent=c.term;
+    document.getElementById('dk-def').textContent=c.def;
+    document.getElementById('dk-bar').style.width=((_idx+1)/_deck.length*100)+'%';
+    document.getElementById('dk-prog-txt').textContent=(_idx+1)+' / '+_deck.length;
+    document.getElementById('dk-card').classList.remove('flipped');
+  }
+  document.addEventListener('keydown',function(e){
+    if(!document.getElementById('dk-ov').classList.contains('show'))return;
+    if(e.key==='Escape')dkClose();
+    else if(e.key===' '||e.key==='Enter'){e.preventDefault();dkFlip();}
+    else if(e.key==='ArrowRight'||e.key==='ArrowDown')dkNav(1);
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp')dkNav(-1);
+  });
+})();
 </script>
 </body>
 </html>
