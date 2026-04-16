@@ -121,6 +121,8 @@ strong{color:#fff}
 .dk-launch:hover{border-color:var(--gold);color:var(--gold)}
 .dk-launch-all{border-color:var(--gold);color:var(--gold)}
 .dk-launch-all:hover{background:var(--gold);color:#000}
+#dk-def img{max-width:100%;max-height:100px;border-radius:6px;margin:8px auto 4px;display:block;object-fit:contain;border:1px solid #2a2a2a}
+@media(max-width:520px){#dk-ov{padding:10px 8px}#dk-inner{height:230px}#dk-f,#dk-b{padding:18px 14px}#dk-term{font-size:15px}#dk-def{font-size:12px}#dk-def img{max-height:70px}.dk-btn{padding:10px 12px;font-size:12px;flex:1}#dk-launch-bar{padding:6px 10px;gap:5px}.dk-launch{padding:5px 10px;font-size:11px}.dk-head{flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -594,6 +596,12 @@ strong{color:#fff}
 <li>Compare OBSERVED vs. EXPECTED — excess homozygotes suggests inbreeding/population structure; excess heterozygotes suggests heterozygote advantage</li>
 </ol></div>
 <div class="trap"><div class="tl">&#9888; Trap &mdash; HWE at One Locus &ne; No Evolution</div><p>HWE at one locus means that ONE locus, at ONE moment, shows no deviation. It does NOT mean the entire population is not evolving at other loci. Also: if a population meets HWE, you CANNOT conclude &ldquo;no evolutionary forces are acting&rdquo; &mdash; only that no forces are DETECTABLY altering genotype frequencies at that locus at that moment.</p></div>
+<div class="wb"><div class="bl">F<sub>ST</sub> — Population Differentiation</div><strong>F<sub>ST</sub></strong> = measure of genetic differentiation between populations. Range: 0–1.<br>
+<strong>F<sub>ST</sub> ≈ 0</strong>: populations genetically similar — high gene flow homogenizes them.<br>
+<strong>F<sub>ST</sub> ≈ 1</strong>: populations completely differentiated — fixed for different alleles.<br>
+<strong>Formula: F<sub>ST</sub> = (H<sub>T</sub> − H<sub>S</sub>) / H<sub>T</sub></strong><br>
+H<sub>T</sub> = expected heterozygosity if all populations were one; H<sub>S</sub> = average expected heterozygosity within subpopulations.<br>
+High gene flow → low F<sub>ST</sub>. Drift + isolation → high F<sub>ST</sub>.</div>
 <div class="qb"><div class="qh">Q10</div>
 <div class="qq">In a population of 500 individuals, you observe: AA = 245, Aa = 210, aa = 45. What is the frequency of the A allele (p)?</div>
 <div class="ch" data-correct="2"><button class="cb" data-i="0">A) p = 0.245</button><button class="cb" data-i="1">B) p = 0.49</button><button class="cb" data-i="2">C) p = 0.70</button><button class="cb" data-i="3">D) p = 0.455</button></div>
@@ -674,6 +682,12 @@ strong{color:#fff}
 </ol></div>
 <div class="trap"><div class="tl">&#9888; Trap &mdash; h² = VA/VP, NOT VG/VP</div><p>Broad-sense heritability H² = V<sub>G</sub>/V<sub>P</sub> (includes all genetic variance). NARROW-sense heritability h² = V<sub>A</sub>/V<sub>P</sub> (only ADDITIVE variance). The breeder&apos;s equation uses h², not H². Only additive variance produces predictable parent-offspring resemblance. Dominance and epistasis don&apos;t transfer cleanly across generations.</p></div>
 <div class="trap"><div class="tl">&#9888; Trap &mdash; High Heritability Does NOT Mean Environment Is Unimportant</div><p>h² = 0.9 means 90% of VARIATION in a population is explained by additive genetics &mdash; it does NOT mean environment is unimportant for the trait. Human height h² ≈ 0.8, yet adequate nutrition is essential for achieving genetic potential. Heritability describes variation within a population, not whether a trait can respond to environmental change.</p></div>
+<div class="hb"><div class="bl">Variance Partitioning</div><strong>V<sub>P</sub> = V<sub>A</sub> + V<sub>D</sub> + V<sub>I</sub> + V<sub>E</sub></strong><br>
+V<sub>A</sub> = Additive genetic variance — ONLY component that responds to selection (what h² measures)<br>
+V<sub>D</sub> = Dominance variance (allele interactions at same locus)<br>
+V<sub>I</sub> = Interaction/epistatic variance (interactions between loci)<br>
+V<sub>E</sub> = Environmental variance (non-heritable)<br>
+<strong>h² = V<sub>A</sub>/V<sub>P</sub></strong> — estimated from slope of parent-offspring regression. Only V<sub>A</sub> responds to selection, so V<sub>D</sub> and V<sub>I</sub> do NOT contribute to the Breeder's equation response.</div>
 <div class="qb"><div class="qh">Q13</div>
 <div class="qq">Which component of phenotypic variance is MOST directly responsible for the response to natural selection (R in the breeder's equation)?</div>
 <div class="ch" data-correct="2"><button class="cb" data-i="0">A) VD — dominance variance, because it determines heterozygote expression</button><button class="cb" data-i="1">B) VE — environmental variance, because organisms must match their environment</button><button class="cb" data-i="2">C) VA — additive genetic variance, because it determines parent-offspring resemblance and h²</button><button class="cb" data-i="3">D) VI — epistatic variance, because gene-gene interactions create new combinations</button></div>
@@ -809,6 +823,7 @@ strong{color:#fff}
 <li>NON-PARALLEL lines (crossing or different slopes) = G×E interaction (genotypes differ in HOW they respond to environment)</li>
 </ol></div>
 <div class="trap"><div class="tl">&#9888; Trap &mdash; Polyphenic vs. Continuous Plasticity</div><p>Polyphenic traits = discrete phenotypes from one genotype (e.g., army ant castes, wasp queens vs. workers &mdash; same genes, completely different bodies based on larval conditions). Continuous plasticity = gradual phenotypic change with environment (e.g., plant height increasing with water). Both are phenotypic plasticity, but polypheny produces DISCRETE forms.</p></div>
+<div class="wb"><div class="bl">G×E Interaction</div><strong>Gene-by-Environment interaction (G×E)</strong>: different genotypes respond differently to the same environmental change. On a reaction norm plot: <strong>parallel lines</strong> = no G×E (genotypes maintain same rank order across environments). <strong>Non-parallel / crossing lines</strong> = G×E present (one genotype is best in environment A, another is best in environment B). Crossing reaction norms mean there is NO single universally "best" genotype — selection favors different genotypes in different environments.</div>
 <div class="qb"><div class="qh">Q15</div>
 <div class="qq">A reaction norm graph shows genotype A as a flat horizontal line and genotype B as a steep positive slope across environments 1-4. Which statement is CORRECT?</div>
 <div class="ch" data-correct="2"><button class="cb" data-i="0">A) Genotype A is more plastic than B because it maintains the same phenotype across all environments</button><button class="cb" data-i="1">B) There is no G×E because one genotype is flat</button><button class="cb" data-i="2">C) Genotype B is more plastic than A; there IS G×E (non-parallel lines) because the two genotypes respond differently to the environment</button><button class="cb" data-i="3">D) G×E requires that the reaction norms cross each other; non-crossing non-parallel lines have no G×E</button></div>
@@ -948,6 +963,7 @@ strong{color:#fff}
 <tr><td><strong>Great Chain of Being</strong></td><td>Pre-Darwinian: fixed hierarchical chain of life, humans at top</td><td>No evolution, no extinction in the modern sense. Aristotelian concept. Replaced by evolutionary thinking.</td></tr></tbody></table>
 <div class="trap"><div class="tl">&#9888; Trap &mdash; Who Spurred Darwin to Publish?</div><p><strong>Alfred Russel Wallace</strong> is the answer. Wallace sent Darwin a letter in 1858 describing natural selection independently. Darwin, who had been developing the theory since ~1838, realized he had to publish or lose priority. Darwin and Wallace presented jointly to the Linnean Society in 1858, then Darwin published <em>Origin of Species</em> in 1859.</p></div>
 <div class="mn"><div class="ml">Mnemonic &mdash; Key Figures</div><p>&ldquo;<strong>Lamarck Lifts Wrong Weights; Darwin Wins</strong>&rdquo; = Lamarck (wrong mechanism but evolutionary), Lyell (deep time), William Smith (stratigraphy/extinction), Darwin (natural selection), Wallace (co-discoverer who forced Darwin to publish).</p></div>
+<div class="wb"><div class="bl">Great Chain of Being (pre-Darwinian)</div><strong>Scala Naturae / Great Chain of Being</strong>: pre-Darwinian concept organizing all life in a fixed, ranked hierarchy (minerals → plants → animals → humans → angels). Three key flaws: (1) Species were <strong>fixed and immutable</strong> — no mechanism for change. (2) <strong>No concept of extinction</strong>. (3) <strong>No common ancestry</strong> — each link was separately created. Aristotle and early Linnaeus worked within this framework. Darwin's tree-of-life model replaced this with branching descent from common ancestors.</div>
 <div class="qb"><div class="qh">Q18</div>
 <div class="qq">Alfred Russel Wallace's key contribution to evolutionary biology was:</div>
 <div class="ch" data-correct="2"><button class="cb" data-i="0">A) Discovering the fossil record and demonstrating that species had gone extinct</button><button class="cb" data-i="1">B) Proposing the inheritance of acquired characteristics before Darwin</button><button class="cb" data-i="2">C) Independently conceiving natural selection and prompting Darwin to publish by sending him a letter in 1858</button><button class="cb" data-i="3">D) Providing the geological evidence of deep time that Darwin needed for evolution to work</button></div>
@@ -1086,10 +1102,10 @@ strong{color:#fff}
 <div class="fc-grid">
 <div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH5</div>Natural selection — 3 requirements</div>
-<div class="fb2"><div class="verdict">Answer</div>(1) Phenotypic VARIATION exists. (2) Variation is HERITABLE (genetic). (3) Variation affects FITNESS (differential survival/reproduction). ALL 3 required for selection to cause evolution.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>(1) Phenotypic VARIATION exists. (2) Variation is HERITABLE (genetic). (3) Variation affects FITNESS (differential survival/reproduction). ALL 3 required for selection to cause evolution.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Patterns_of_Natural_Selection.svg/300px-Patterns_of_Natural_Selection.svg.png" alt="Natural selection modes diagram" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH5</div>Breeder's Equation</div>
-<div class="fb2"><div class="verdict">Answer</div>R = h² × S. R = response to selection (change in mean trait value in offspring). h² = narrow-sense heritability (V_A/V_P). S = selection differential (mean of breeders − mean of population).</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>R = h² × S. R = response to selection (change in mean trait value in offspring). h² = narrow-sense heritability (V_A/V_P). S = selection differential (mean of breeders − mean of population).<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Galton_experiment.png/300px-Galton_experiment.png" alt="Parent-offspring heritability regression" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH5</div>Selection differential (S)</div>
 <div class="fb2"><div class="verdict">Answer</div>S = mean of SELECTED BREEDERS − mean of ENTIRE POPULATION. Larger S = more intense selection = faster evolution (if h² &gt; 0).</div></div></div>
@@ -1107,7 +1123,7 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Random changes in allele frequency due to chance. Strongest in SMALL populations. Can fix deleterious alleles or lose beneficial ones by chance. Causes nonadaptive evolution.</div></div></div>
 <div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH5</div>Bottleneck vs. Founder Effect</div>
-<div class="fb2"><div class="verdict">Answer</div>Bottleneck = existing population dramatically shrinks (disaster). Founder Effect = small group colonizes new area. Both = reduced genetic diversity, non-representative allele frequencies. Both are extreme drift events.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Bottleneck = existing population dramatically shrinks (disaster). Founder Effect = small group colonizes new area. Both = reduced genetic diversity, non-representative allele frequencies. Both are extreme drift events.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Population_bottleneck.jpg/300px-Population_bottleneck.jpg" alt="Population bottleneck effect" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch5" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH5</div>Gene flow effect on populations</div>
 <div class="fb2"><div class="verdict">Answer</div>Homogenizes populations (makes allele frequencies MORE SIMILAR). High gene flow → low FST (little differentiation). Can prevent local adaptation.</div></div></div>
@@ -1126,7 +1142,7 @@ strong{color:#fff}
 <div class="fc-grid">
 <div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH6</div>HWE formula</div>
-<div class="fb2"><div class="verdict">Answer</div>p² + 2pq + q² = 1. Where p = freq(A allele), q = freq(a allele), p² = freq(AA), 2pq = freq(Aa), q² = freq(aa). Also p + q = 1.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>p² + 2pq + q² = 1. Where p = freq(A allele), q = freq(a allele), p² = freq(AA), 2pq = freq(Aa), q² = freq(aa). Also p + q = 1.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hardy-Weinberg.svg/300px-Hardy-Weinberg.svg.png" alt="Hardy-Weinberg genotype frequency graph" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH6</div>HWE 5 assumptions</div>
 <div class="fb2"><div class="verdict">Answer</div>(1) No natural selection, (2) No mutation, (3) No gene flow, (4) No genetic drift (infinite population), (5) Random mating. ALL must hold for equilibrium.</div></div></div>
@@ -1147,7 +1163,7 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Narrow-sense heritability h². Steep slope → high h² → offspring resemble parents → trait responds to selection. Flat slope → h² ≈ 0 → no parent-offspring resemblance → no evolutionary response.</div></div></div>
 <div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH6</div>Phenotypic plasticity — definition</div>
-<div class="fb2"><div class="verdict">Answer</div>One genotype produces DIFFERENT phenotypes in DIFFERENT environments. Reaction norm = plot of phenotype vs. environment for one genotype. Sloped reaction norm = plasticity present.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>One genotype produces DIFFERENT phenotypes in DIFFERENT environments. Reaction norm = plot of phenotype vs. environment for one genotype. Sloped reaction norm = plasticity present.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Phenotypic_Plasticity_Genotypes_to_Phenotypes.jpg/300px-Phenotypic_Plasticity_Genotypes_to_Phenotypes.jpg" alt="Reaction norm: one genotype multiple phenotypes" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch6" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH6</div>G×E interaction — what is it?</div>
 <div class="fb2"><div class="verdict">Answer</div>Genotype-by-Environment interaction: different genotypes respond DIFFERENTLY to environmental change. Seen as NON-PARALLEL slopes in reaction norm plots. Contributes V_G×E to phenotypic variance.</div></div></div>
@@ -1295,7 +1311,7 @@ function filterCards(btn,ch){
       if(!ff||!fb)return;
       var fc=ff.cloneNode(true);var chip=fc.querySelector('.chip');var chipTxt=chip?chip.textContent.trim():'';if(chip)chip.remove();
       var bc=fb.cloneNode(true);var v=bc.querySelector('.verdict');if(v)v.remove();
-      _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.textContent.trim()});
+      _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.innerHTML.trim()});
     });
   }
   window.dkOpen=function(filter){
@@ -1315,7 +1331,7 @@ function filterCards(btn,ch){
     var c=_deck[_idx];
     document.getElementById('dk-chip').textContent=c.chip;
     document.getElementById('dk-term').textContent=c.term;
-    document.getElementById('dk-def').textContent=c.def;
+    document.getElementById('dk-def').innerHTML=c.def;
     document.getElementById('dk-bar').style.width=((_idx+1)/_deck.length*100)+'%';
     document.getElementById('dk-prog-txt').textContent=(_idx+1)+' / '+_deck.length;
     document.getElementById('dk-card').classList.remove('flipped');

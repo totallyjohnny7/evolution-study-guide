@@ -121,6 +121,8 @@ strong{color:#fff}
 .dk-launch:hover{border-color:var(--gold);color:var(--gold)}
 .dk-launch-all{border-color:var(--gold);color:var(--gold)}
 .dk-launch-all:hover{background:var(--gold);color:#000}
+#dk-def img{max-width:100%;max-height:100px;border-radius:6px;margin:8px auto 4px;display:block;object-fit:contain;border:1px solid #2a2a2a}
+@media(max-width:520px){#dk-ov{padding:10px 8px}#dk-inner{height:230px}#dk-f,#dk-b{padding:18px 14px}#dk-term{font-size:15px}#dk-def{font-size:12px}#dk-def img{max-height:70px}.dk-btn{padding:10px 12px;font-size:12px;flex:1}#dk-launch-bar{padding:6px 10px;gap:5px}.dk-launch{padding:5px 10px;font-size:11px}.dk-head{flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -145,6 +147,7 @@ strong{color:#fff}
 <div class="sec" id="s_evoeye">
 <h3>10.1 &mdash; Evolution of Complex Traits (Vertebrate Eye)</h3>
 <div class="wb"><div class="bl">What it is</div>Complex traits evolve GRADUALLY via many small mutations, each providing a slight fitness advantage. No single mutation produces a fully-formed complex organ. Darwin himself addressed the eye: every intermediate step from a light-sensitive patch to a camera eye is an improvement over having no light detection. Each step is favored by selection.</div>
+<div class="wb"><div class="bl">Gene Duplication — Engine of Complexity</div><strong>Gene duplication</strong> is a key mechanism for evolving new complex traits: (1) One copy retains original function (no fitness cost). (2) Duplicate copy is free to accumulate mutations and evolve new functions (<strong>neofunctionalization</strong>). Alternatively, both copies can sub-divide the original function (<strong>subfunctionalization</strong>). Examples: globin gene family (hemoglobin α/β), Hox clusters (vertebrates have 4 Hox clusters vs. 1 in invertebrates due to duplication). Gene duplication explains how a complex pathway can evolve incrementally from a simpler ancestral function.</div>
 <div class="hb"><div class="bl">Key Evo Devo Concepts</div><ol>
 <li><strong>Regulatory networks:</strong> Mutations in genes that CONTROL other genes (transcription factors, enhancers) produce large morphological changes from small genetic changes</li>
 <li><strong>Protein promiscuity:</strong> Proteins can adopt NEW functions while retaining old ones &mdash; allows novel traits to evolve from existing proteins</li>
@@ -288,6 +291,7 @@ strong{color:#fff}
 <tr><td><strong>Muller&apos;s Ratchet</strong></td><td>Asexual populations accumulate deleterious mutations irreversibly (ratchet clicks only forward). Recombination can reassemble low-mutation genomes.</td><td>Bacterial pathogens using sexual recombination are more evolvable than obligate asexuals</td></tr>
 <tr><td><strong>Reduces sibling competition</strong></td><td>Asexual offspring are genetically identical &mdash; compete for same niche. Sexual offspring are genetically diverse &mdash; occupy different niches</td><td>Genetically diverse litters compete less intensely than clones</td></tr>
 <tr><td><strong>Red Queen Hypothesis</strong></td><td>Parasites evolve to exploit COMMON host genotypes. Sex generates rare genotypes that parasites can&apos;t easily exploit</td><td>New Zealand snails (Potamopyrgus): sexual populations persist where parasites are common; asexual populations take over where parasites are rare</td></tr></tbody></table>
+<div class="hb"><div class="bl">Muller's Ratchet — Mechanism</div><strong>Muller's Ratchet</strong>: asexual populations irreversibly accumulate deleterious mutations. Mechanism: (1) In asexual reproduction, the "least-loaded" class (fewest mutations) can be lost by drift. (2) Once lost, it cannot be recovered (no recombination). (3) Each loss = one "click" of the ratchet — forward only, never back. (4) Over time, mean fitness declines. <strong>Sexual reproduction prevents this</strong> via recombination: can reassemble low-mutation genomes from two high-mutation parents (recombinational repair).</div>
 <div class="dg"><div class="dg-title">Red Queen Hypothesis &mdash; Why Sex Persists</div>
 <svg viewBox="0 0 500 130" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:500px;display:block;margin:0 auto">
 <rect width="500" height="130" fill="#0d0d0d" rx="6"/>
@@ -510,6 +514,7 @@ strong{color:#fff}
 <div class="sec" id="s_lifehistory">
 <h3>12.1 &mdash; Life History Trade-offs</h3>
 <div class="wb"><div class="bl">What it is</div>Life history = the schedule of an organism&apos;s survival, growth, and reproduction across its lifespan. Energy/time are <strong>finite</strong> → allocation to one function REDUCES available for others. Key trade-offs: current reproduction vs. future survival; offspring number vs. offspring size; age at first reproduction vs. lifespan.</div>
+<div class="wb"><div class="bl">Extrinsic Mortality and Life History</div><strong>Extrinsic mortality</strong> = death from external causes (predation, disease, accidents) — not influenced by the organism's own age or condition. Key rule: <strong>high extrinsic mortality → favor fast life history</strong> (early maturation, high reproductive effort, many offspring). Logic: if you're likely to die young anyway, selection favors getting reproduction done early. <strong>Low extrinsic mortality → favor slow life history</strong> (delayed maturation, low reproductive effort, parental investment). Classic test: island populations with few predators (tortoises, bats) evolve longer lifespans than mainland relatives facing high predation.</div>
 <div class="dg"><div class="dg-title">Life History Trade-off: Reproduction vs. Survival</div>
 <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:500px;display:block;margin:0 auto">
 <rect width="500" height="150" fill="#0d0d0d" rx="6"/>
@@ -666,6 +671,8 @@ strong{color:#fff}
 <tr><td><strong>Mechanism</strong></td><td>Neutral or slightly deleterious late-acting alleles not removed by selection; pile up over generations</td><td>One allele = two effects: + fitness early, &minus; fitness late. Selection favors the net positive early effect.</td></tr>
 <tr><td><strong>Testable prediction</strong></td><td>Genes with late-onset effects should be less constrained by selection</td><td>Genes beneficial early in life should also cause problems late in life (if eliminated, would reduce both)</td></tr>
 <tr><td><strong>Example</strong></td><td>Many age-related diseases with no early-life fitness consequence</td><td>High testosterone: boosts mating success early → increases prostate cancer/heart disease risk late</td></tr></tbody></table>
+<div class="wb"><div class="bl">Antagonistic Pleiotropy Hypothesis</div><strong>Antagonistic pleiotropy</strong>: a single gene has beneficial effects early in life (↑ reproductive success) but harmful effects late in life (↑ aging/disease). These early benefits are strongly selected FOR because they increase fitness before reproduction, even though late-life costs are selected AGAINST only weakly (selection weakens with age). <strong>Prediction:</strong> genes that boost early reproduction should accelerate senescence. Classic example: testosterone — boosts early male fitness but increases cancer risk and reduces immune function later.</div>
+<div class="trap"><div class="tl">Exam Trap</div><p><strong>Mutation accumulation vs. antagonistic pleiotropy:</strong> Both explain why selection can't eliminate aging, but via different mechanisms. Mutation accumulation = neutral/deleterious late-acting mutations drift to fixation because selection is weak late in life. Antagonistic pleiotropy = SAME gene has opposing effects at different life stages. The key distinction: antagonistic pleiotropy requires POSITIVE selection for the allele (because early benefit outweighs late cost); mutation accumulation requires only RELAXED selection (no positive pressure needed).</p></div>
 <div class="qb"><div class="qh">Q10</div>
 <div class="qq">An experiment removes predators from a population of mice for many generations. Evolutionary theory predicts the mice would evolve:</div>
 <div class="ch" data-correct="2"><button class="cb" data-i="0">A) Faster aging — with no predators, they waste energy on survival mechanisms</button><button class="cb" data-i="1">B) Earlier reproduction — safer environment means more food available for rapid reproduction</button><button class="cb" data-i="2">C) Slower aging — with lower extrinsic mortality, individuals survive long enough to experience late-life costs of aging, so selection can now act against deleterious late-acting alleles and antagonistically pleiotropic genes</button><button class="cb" data-i="3">D) No change in aging — aging is genetically fixed and cannot respond to changes in predation</button></div>
@@ -728,6 +735,7 @@ strong{color:#fff}
 <div class="sec" id="s_coevo_basics">
 <h3>15.1 &mdash; Coevolutionary Arms Races &amp; Geographic Mosaic</h3>
 <div class="wb"><div class="bl">What it is</div><strong>Coevolution</strong> = reciprocal evolutionary change between interacting species. Each species acts as a selective agent on the other. An <strong>arms race</strong> is directional escalation: one species evolves better offense, the other evolves better defense, driving each to ever more extreme traits.</div>
+<div class="wb"><div class="bl">Geographic Mosaic Theory of Coevolution</div><strong>Geographic Mosaic Theory (John Thompson)</strong>: coevolution is not uniform across a species' range. Three components: (1) <strong>Hot spots</strong> — locations where reciprocal selection between species is strong and both adapt to each other. (2) <strong>Cold spots</strong> — locations where one species is absent or selection is asymmetric (only one species adapts). (3) <strong>Gene flow</strong> — alleles move between hot spots and cold spots, causing a geographic mosaic of coevolved and non-coevolved populations. Result: populations of the same two interacting species can be at completely different stages of coevolutionary arms races in different locations.</div>
 <div class="wb"><div class="bl">Newt-Garter Snake Arms Race</div>Taricha newts (Pacific Coast) produce tetrodotoxin (TTX) &mdash; one of the most potent neurotoxins known. Garter snakes (Thamnophis sirtalis) have evolved voltage-gated sodium channel mutations that confer TTX resistance. Cost: slower locomotion in resistant snakes. Geography: some populations of snakes are highly resistant (live with toxic newts), others have little resistance (no toxic newts). Classic geographic mosaic.</div>
 <div class="wb"><div class="bl">Geographic Mosaic Theory (Thompson)</div>Coevolution varies across landscapes: <strong>Hotspots</strong> = locations where both species are present and reciprocal selection is intense (e.g., highly toxic newts + highly resistant snakes). <strong>Coldspots</strong> = locations where the interaction is weak or one partner is absent. Gene flow between hotspots and coldspots creates a geographic mosaic of traits.</div>
 <div class="trap"><div class="tl">&#9888; Trap &mdash; Arms Race vs. Red Queen</div><p>Arms race = DIRECTIONAL ESCALATION (both species evolve ever more extreme traits over time). Red Queen = FREQUENCY-DEPENDENT CYCLING (common genotypes are exploited; rare genotypes gain advantage; no directional escalation — traits cycle). Both are coevolutionary dynamics but in different directions. Newt-snake = arms race (escalation). Host-parasite common genotype cycling = Red Queen.</p></div>
@@ -1141,7 +1149,7 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Changing a gene's EXPRESSION (when/where/how much it's made) can produce large morphological changes without altering protein structure. The same gene toolkit (Hox, Pax6) produces radically different body plans by changing REGULATION.</div></div></div>
 <div class="fc2" data-ch="ch10" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH10</div>Hox genes — what do they do?</div>
-<div class="fb2"><div class="verdict">Answer</div>Master regulatory genes that define body segment IDENTITY along the anterior-posterior axis. Highly conserved across bilaterian animals (insects and mice use the same Hox genes). Changes in Hox expression → major body plan evolution (e.g., leg number, segment identity).</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Master regulatory genes that define body segment IDENTITY along the anterior-posterior axis. Highly conserved across bilaterian animals (insects and mice use the same Hox genes). Changes in Hox expression → major body plan evolution (e.g., leg number, segment identity).<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Hoxgenesoffruitfly.svg/300px-Hoxgenesoffruitfly.svg.png" alt="Drosophila Hox gene expression mapped to body segments" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch10" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH10</div>Pax6 — what does it demonstrate?</div>
 <div class="fb2"><div class="verdict">Answer</div>Master regulator of eye development, conserved across animals with radically different eyes (insects, vertebrates). Demonstrates the CONSERVED DEVELOPMENTAL TOOLKIT: same upstream switch, different downstream targets produce different eye types. Ancient deep conservation of genetic modules.</div></div></div>
@@ -1184,7 +1192,7 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Intersexual (mate choice): females choose males with preferred traits → males evolve elaborate displays. Intrasexual (male-male competition): males compete directly for access to females → males evolve larger size, weapons.</div></div></div>
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Why can sexual selection produce 'costly' male traits?</div>
-<div class="fb2"><div class="verdict">Answer</div>Mating success advantage (sexual selection) can outweigh survival cost (natural selection). Peacock tail: reduces survival but increases mating success enough to be maintained. Zahavi's Handicap Principle: costly signals are HONEST — only high-quality males can afford the cost.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Mating success advantage (sexual selection) can outweigh survival cost (natural selection). Peacock tail: reduces survival but increases mating success enough to be maintained. Zahavi's Handicap Principle: costly signals are HONEST — only high-quality males can afford the cost.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Peacock_Flying.jpg/300px-Peacock_Flying.jpg" alt="Peacock tail — honest signal of fitness" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Sperm competition — what is it?</div>
 <div class="fb2"><div class="verdict">Answer</div>Competition between sperm from different males to fertilize the same egg. Occurs when females mate with multiple males. Drives evolution of: larger testes (more sperm), faster sperm, sperm plugs (blocking competitors). Intensifies where female polyandry is common.</div></div></div>
@@ -1228,7 +1236,7 @@ strong{color:#fff}
 <div class="fc-grid">
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Coevolution — definition</div>
-<div class="fb2"><div class="verdict">Answer</div>Reciprocal evolutionary change between two or more species that are ecologically interacting. Each species acts as a selective agent on the other. Can be antagonistic (arms race) or mutualistic (cooperative escalation).</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Reciprocal evolutionary change between two or more species that are ecologically interacting. Each species acts as a selective agent on the other. Can be antagonistic (arms race) or mutualistic (cooperative escalation).<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Reed_warbler_cuckoo.jpg/300px-Reed_warbler_cuckoo.jpg" alt="Reed warbler feeding cuckoo chick — host-parasite coevolution" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Coevolutionary arms race — definition</div>
 <div class="fb2"><div class="verdict">Answer</div>Directional escalation: one species evolves better offense → other evolves better defense → repeat. Both species continuously evolve more extreme traits. Example: newt-garter snake TTX arms race. Escalation is limited by COSTS of extreme traits.</div></div></div>
@@ -1240,7 +1248,7 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Coevolution varies across landscapes. Hotspots = both species present, reciprocal selection intense. Coldspots = weak/absent interaction. Gene flow between hotspots and coldspots creates geographic variation in coevolved traits. No global escalation — patchwork of local coevolutionary states.</div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Batesian mimicry</div>
-<div class="fb2"><div class="verdict">Answer</div>Palatable (harmless) mimic resembles unpalatable (toxic) model. Mimic 'free rides' on model's predator avoidance. Works best when mimics are RARE (if too common, predators learn the signal is unreliable and no longer avoid it).</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Palatable (harmless) mimic resembles unpalatable (toxic) model. Mimic 'free rides' on model's predator avoidance. Works best when mimics are RARE (if too common, predators learn the signal is unreliable and no longer avoid it).<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Batesian_vs_M%C3%BCllerian_Mimicry.svg/300px-Batesian_vs_M%C3%BCllerian_Mimicry.svg.png" alt="Batesian vs Müllerian mimicry comparison" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Müllerian mimicry</div>
 <div class="fb2"><div class="verdict">Answer</div>Two or more UNPALATABLE species all resemble each other. BOTH benefit from sharing the warning pattern — predators learn ONE pattern and avoid ALL species sharing it. Works better when COMMON (more encounters = faster learning). Heliconius butterflies = textbook example.</div></div></div>
@@ -1259,7 +1267,7 @@ strong{color:#fff}
 <div class="fc-grid">
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>ESS — definition</div>
-<div class="fb2"><div class="verdict">Answer</div>Evolutionarily Stable Strategy: a strategy that, when adopted by most of the population, CANNOT be invaded by a rare mutant strategy. Game-theoretic concept (Maynard Smith & Price 1973). Fitness payoffs are FREQUENCY-DEPENDENT.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Evolutionarily Stable Strategy: a strategy that, when adopted by most of the population, CANNOT be invaded by a rare mutant strategy. Game-theoretic concept (Maynard Smith & Price 1973). Fitness payoffs are FREQUENCY-DEPENDENT.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Prisoner%27s_Dilemma_conceptual_numbers_matrix.svg/300px-Prisoner%27s_Dilemma_conceptual_numbers_matrix.svg.png" alt="Prisoner's dilemma payoff matrix" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Hawk-Dove game — when is ESS mixed?</div>
 <div class="fb2"><div class="verdict">Answer</div>When V (resource value) &lt; C (injury cost): pure Hawk not stable (too many injuries when all play Hawk). Pure Dove not stable (Hawks invade). Mixed ESS at frequency of Hawks = V/C. At this equilibrium, both strategies have equal fitness.</div></div></div>
@@ -1280,7 +1288,7 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Total fitness = Direct fitness (own reproduction) + Indirect fitness (reproduction of relatives, weighted by relatedness r). Kin selection maximizes inclusive fitness, not just personal direct reproduction.</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Haplodiploidy and eusociality</div>
-<div class="fb2"><div class="verdict">Answer</div>In haplodiploid Hymenoptera (bees, wasps, ants): females develop from fertilized eggs (diploid); males from unfertilized eggs (haploid). Full sisters share ALL of father's genes + half of mother's genes = r = 0.75. More related to sisters than own offspring (r = 0.5). Facilitates evolution of female worker castes, but is NOT sufficient alone (many haplodiploid species are NOT eusocial).</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>In haplodiploid Hymenoptera (bees, wasps, ants): females develop from fertilized eggs (diploid); males from unfertilized eggs (haploid). Full sisters share ALL of father's genes + half of mother's genes = r = 0.75. More related to sisters than own offspring (r = 0.5). Facilitates evolution of female worker castes, but is NOT sufficient alone (many haplodiploid species are NOT eusocial).<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pheidole2.jpg/300px-Pheidole2.jpg" alt="Pheidole ant colony showing eusocial cooperation" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Worker-to-queen's-son relatedness</div>
 <div class="fb2"><div class="verdict">Answer</div>Workers are related to their full SISTERS at r = 0.75 (haplodiploidy). But related to the QUEEN'S SONS (their brothers) at r = 0.25 only. Workers share queen's genes but not father's genes through brothers (brothers are haploid from unfertilized eggs). This asymmetry explains why workers prefer raising sisters.</div></div></div>
@@ -1397,7 +1405,7 @@ function filterCards(btn,ch){
       if(!ff||!fb)return;
       var fc=ff.cloneNode(true);var chip=fc.querySelector('.chip');var chipTxt=chip?chip.textContent.trim():'';if(chip)chip.remove();
       var bc=fb.cloneNode(true);var v=bc.querySelector('.verdict');if(v)v.remove();
-      _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.textContent.trim()});
+      _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.innerHTML.trim()});
     });
   }
   window.dkOpen=function(filter){
@@ -1417,7 +1425,7 @@ function filterCards(btn,ch){
     var c=_deck[_idx];
     document.getElementById('dk-chip').textContent=c.chip;
     document.getElementById('dk-term').textContent=c.term;
-    document.getElementById('dk-def').textContent=c.def;
+    document.getElementById('dk-def').innerHTML=c.def;
     document.getElementById('dk-bar').style.width=((_idx+1)/_deck.length*100)+'%';
     document.getElementById('dk-prog-txt').textContent=(_idx+1)+' / '+_deck.length;
     document.getElementById('dk-card').classList.remove('flipped');

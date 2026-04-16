@@ -136,6 +136,8 @@ body.card-mode #fc-filter{display:none}
 .dk-launch:hover{border-color:var(--gold);color:var(--gold)}
 .dk-launch-all{border-color:var(--gold);color:var(--gold)}
 .dk-launch-all:hover{background:var(--gold);color:#000}
+#dk-def img{max-width:100%;max-height:100px;border-radius:6px;margin:8px auto 4px;display:block;object-fit:contain;border:1px solid #2a2a2a}
+@media(max-width:520px){#dk-ov{padding:10px 8px}#dk-inner{height:230px}#dk-f,#dk-b{padding:18px 14px}#dk-term{font-size:15px}#dk-def{font-size:12px}#dk-def img{max-height:70px}.dk-btn{padding:10px 12px;font-size:12px;flex:1}#dk-launch-bar{padding:6px 10px;gap:5px}.dk-launch{padding:5px 10px;font-size:11px}.dk-head{flex-wrap:wrap}}
 </style></head>
 <body>
 <nav id="sb">
@@ -909,6 +911,10 @@ body.card-mode #fc-filter{display:none}
 <tr><td><strong>General Lineage</strong></td><td>Metapopulations exchanging alleles frequently enough to be the same evolutionary lineage</td><td>Complex cases; unifies other concepts</td><td>Hard to quantify allele exchange threshold</td></tr></tbody></table>
 <div class="trap"><div class="tl">&#9888; Trap &mdash; BSC Fails in 3 Scenarios</div><p>Know all three for Robbins' scenario questions: (1) FOSSILS &mdash; can't test gene flow; (2) ASEXUAL species &mdash; bacteria, archaea; (3) HYBRIDIZING species &mdash; fertile hybrids exist.</p></div>
 <div class="mn"><div class="ml">Mnemonic</div><p>&ldquo;<strong>BSC = Babies Stop Crossing. Morpho = Looks Different. Phylo = Family Tree Says So. General = Gene Exchange Rate.</strong>&rdquo;</p></div>
+<div class="hb"><div class="bl">Three Species Concepts — Side by Side</div>
+<strong>Biological Species Concept (BSC, Mayr):</strong> species = groups that interbreed and are reproductively isolated from others. Works for sexually reproducing species; fails for asexuals, fossils, allopatric populations.<br><br>
+<strong>Morphospecies Concept:</strong> species = populations distinguishable by morphology. Works on fossils and asexual taxa. Misses cryptic species; over-splits polymorphic species.<br><br>
+<strong>Phylogenetic Species Concept (PSC):</strong> species = smallest diagnosable clade with a unique synapomorphy. Works for any organism. Tends to over-split (recognizes many more species than BSC).</div>
 <div class="qb"><div class="qh">Q11</div><div class="qq">Two bacterial populations look identical but have completely different metabolic genes. BSC is unhelpful because:</div>
 <div class="ch" data-correct="2">
 <button class="cb" data-i="0">A) Bacteria are too small for morphological analysis</button>
@@ -1034,6 +1040,16 @@ body.card-mode #fc-filter{display:none}
 <text x="280" y="226" text-anchor="middle" fill="#fbbf24" font-size="9">for stronger PREZYGOTIC barriers</text>
 </svg>
 </div>
+<div class="hb"><div class="bl">Reproductive Barrier Types with Examples</div>
+<strong>Prezygotic barriers</strong> (prevent zygote formation):<br>
+• <em>Temporal:</em> different breeding seasons (two Rana frog species breed at different times)<br>
+• <em>Behavioral/mate choice:</em> different courtship signals (firefly flash patterns)<br>
+• <em>Mechanical:</em> incompatible reproductive structures (sage flower shapes)<br>
+• <em>Gametic:</em> sperm-egg surface protein incompatibility<br><br>
+<strong>Postzygotic barriers</strong> (reduce hybrid fitness):<br>
+• <em>Hybrid inviability:</em> hybrid embryo fails to develop normally (certain Drosophila crosses)<br>
+• <em>Hybrid sterility:</em> hybrids viable but infertile (mule = horse × donkey)<br>
+• <em>Hybrid breakdown:</em> F2 generation shows reduced fitness (some rice subspecies crosses)</div>
 <div class="qb"><div class="qh">Q12</div><div class="qq">Two frog species in the same pond; one breeds March, the other July. Which barrier applies?</div>
 <div class="ch" data-correct="1">
 <button class="cb" data-i="0">A) Gametic incompatibility &mdash; wrong-species sperm can't fertilize eggs</button>
@@ -2142,6 +2158,14 @@ body.card-mode #fc-filter{display:none}
 <tr><td>6</td><td><strong>Apparent disease is actually adaptation</strong></td><td>Some symptoms ARE defenses, not the disease itself</td><td>Fever = kills pathogens by heat; morning sickness = protects fetus during organogenesis</td></tr></tbody></table>
 <div class="trap"><div class="tl">&#9888; Trap &mdash; Antagonistic Pleiotropy vs. Mutation Accumulation</div><p>Both explain aging. <strong>Antagonistic pleiotropy</strong> = one allele with BOTH early-life BENEFITS AND late-life costs (e.g., testosterone). Selected for early benefits. <strong>Mutation accumulation</strong> = late-acting deleterious mutations accumulate because selection is weak after reproduction &mdash; NO early benefit. Key: does the allele HELP early? Yes = antagonistic pleiotropy.</p></div>
 <div class="mn"><div class="ml">Mnemonic</div><p>&ldquo;<strong>Pathogens Laugh, Trade-offs Really Embarrass Anyone</strong>&rdquo; = Pathogens faster, Lag/mismatch, Trade-offs, Restraints from history, (ant)Agonistic pleiotropy, Apparent disease = adaptation.</p></div>
+<div class="hb"><div class="bl">Nesse &amp; Williams — 6 Evolutionary Reasons We Get Sick</div><ol>
+<li><strong>Defenses</strong> — fever, cough, nausea, pain are ADAPTATIONS not diseases. Suppressing them may worsen outcomes.</li>
+<li><strong>Infection</strong> — pathogens evolve faster than hosts; arms races and Red Queen dynamics.</li>
+<li><strong>Novel environments (Mismatch)</strong> — genome adapted to ancestral environment; modern diet/activity → obesity, T2 diabetes, myopia.</li>
+<li><strong>Genes</strong> — disease alleles may have past benefits (sickle cell = malaria protection; heterozygote advantage preserves them).</li>
+<li><strong>Design compromises</strong> — evolutionary history constrains anatomy: upright walking + large brain = obstetric dilemma; inverted retina = blind spot.</li>
+<li><strong>Slow evolutionary change</strong> — selection is slow; new pathogens and environments arise faster than hosts can adapt.</li>
+</ol></div>
 <div class="qb"><div class="qh">Q26</div><div class="qq">Testosterone increases mating success in young men but raises prostate cancer and heart disease risk in older men. Which concept BEST explains why this allele persists?</div>
 <div class="ch" data-correct="3">
 <button class="cb" data-i="0">A) Evolutionary lag &mdash; testosterone hasn't been eliminated because selection hasn't had enough time</button>
@@ -2944,7 +2968,7 @@ body.card-mode #fc-filter{display:none}
 <div class="fc2" data-ch="ch3" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
 <div class="ff2"><div class="chip">CH3</div>Earth's age?</div>
-<div class="fb2"><div class="verdict">Answer</div>~4.568 billion years old. Confirmed by radiometric dating of oldest minerals (zircons from Australia).</div>
+<div class="fb2"><div class="verdict">Answer</div>~4.568 billion years old. Confirmed by radiometric dating of oldest minerals (zircons from Australia).<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/GeologicTimeScale-WikiLeadImage.svg/300px-GeologicTimeScale-WikiLeadImage.svg.png" alt="Geologic time scale" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div>
 </div></div>
 <div class="fc2" data-ch="ch3" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
@@ -2984,7 +3008,7 @@ body.card-mode #fc-filter{display:none}
 <div class="fc2" data-ch="ch3" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
 <div class="ff2"><div class="chip">CH3</div>Miller-Urey experiment (1953)</div>
-<div class="fb2"><div class="verdict">Answer</div>Simulated early Earth atmosphere + electric sparks → produced 20+ amino acids in ~1 week. Shows building blocks form abiotically. NOT cells, NOT DNA, NOT life.</div>
+<div class="fb2"><div class="verdict">Answer</div>Simulated early Earth atmosphere + electric sparks → produced 20+ amino acids in ~1 week. Shows building blocks form abiotically. NOT cells, NOT DNA, NOT life.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Miller-Urey_experiment-en.svg/300px-Miller-Urey_experiment-en.svg.png" alt="Miller-Urey apparatus" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div>
 </div></div>
 <div class="fc2" data-ch="ch3" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
@@ -3074,7 +3098,7 @@ body.card-mode #fc-filter{display:none}
 <div class="fc2" data-ch="ch4" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
 <div class="ff2"><div class="chip">CH4</div>Synapomorphy definition</div>
-<div class="fb2"><div class="verdict">Answer</div>A SHARED DERIVED character that evolved in the immediate ancestor of a specific clade and was inherited by ALL descendants. Only synapomorphies (not ancestral characters) define clades.</div>
+<div class="fb2"><div class="verdict">Answer</div>A SHARED DERIVED character that evolved in the immediate ancestor of a specific clade and was inherited by ALL descendants. Only synapomorphies (not ancestral characters) define clades.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Synapomorphy.jpg/300px-Synapomorphy.jpg" alt="Synapomorphy on a phylogenetic tree" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div>
 </div></div>
 <div class="fc2" data-ch="ch4" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
@@ -3214,7 +3238,7 @@ body.card-mode #fc-filter{display:none}
 <div class="fc2" data-ch="ch13" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
 <div class="ff2"><div class="chip">CH13</div>Vicariance vs. dispersal</div>
-<div class="fb2"><div class="verdict">Answer</div>Vicariance = organisms STAY PUT, BARRIER appears (e.g., Panama Isthmus splits Atlantic/Pacific populations). Dispersal = organisms MOVE to new area (e.g., Hawaiian cricket colonizing new island). Both produce allopatric speciation.</div>
+<div class="fb2"><div class="verdict">Answer</div>Vicariance = organisms STAY PUT, BARRIER appears (e.g., Panama Isthmus splits Atlantic/Pacific populations). Dispersal = organisms MOVE to new area (e.g., Hawaiian cricket colonizing new island). Both produce allopatric speciation.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pangaea_Breakup.gif/300px-Pangaea_Breakup.gif" alt="Pangaea breakup over geologic time" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div>
 </div></div>
 <div class="fc2" data-ch="ch13" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
@@ -3329,7 +3353,7 @@ body.card-mode #fc-filter{display:none}
 <div class="fc2" data-ch="ch14" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
 <div class="ff2"><div class="chip">CH14</div>Island Biogeography theory (MacArthur & Wilson 1967)</div>
-<div class="fb2"><div class="verdict">Answer</div>Island species richness = dynamic equilibrium between immigration (adds species) and extinction (removes species). Equilibrium number is STABLE; species COMPOSITION turns over. Large + near = more species. Small + far = fewer species.</div>
+<div class="fb2"><div class="verdict">Answer</div>Island species richness = dynamic equilibrium between immigration (adds species) and extinction (removes species). Equilibrium number is STABLE; species COMPOSITION turns over. Large + near = more species. Small + far = fewer species.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/APES_Final.svg/300px-APES_Final.svg.png" alt="Island biogeography species-area curve" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div>
 </div></div>
 <div class="fc2" data-ch="ch14" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
@@ -3464,7 +3488,7 @@ body.card-mode #fc-filter{display:none}
 <div class="fc2" data-ch="ch17" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
 <div class="ff2"><div class="chip">CH17</div>Bipedalism: when did it evolve?</div>
-<div class="fb2"><div class="verdict">Answer</div>~6–7 mya. FIRST major hominin innovation. Preceded brain expansion by millions of years. Australopithecus walked fully upright with ~450cc brain. Bipedalism first → big brain later (not vice versa).</div>
+<div class="fb2"><div class="verdict">Answer</div>~6–7 mya. FIRST major hominin innovation. Preceded brain expansion by millions of years. Australopithecus walked fully upright with ~450cc brain. Bipedalism first → big brain later (not vice versa).<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Great_ape_skeletons_in_the_Museum_of_Zoology%2C_University_of_Cambridge.jpg/300px-Great_ape_skeletons_in_the_Museum_of_Zoology%2C_University_of_Cambridge.jpg" alt="Ape skeleton comparison showing bipedalism" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div>
 </div></div>
 <div class="fc2" data-ch="ch17" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
@@ -3714,7 +3738,7 @@ body.card-mode #fc-filter{display:none}
 <div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
 <div class="ff2"><div class="chip">TRAP</div>TRAP: Miller-Urey produced what?</div>
-<div class="fb2"><div class="verdict">Answer</div>Amino acids (20+ kinds) from inorganic material + simulated lightning. NOT cells. NOT DNA. NOT life. Only proves building blocks can form abiotically. Do NOT say it proved how life originated or that it created life.</div>
+<div class="fb2"><div class="verdict">Answer</div>Amino acids (20+ kinds) from inorganic material + simulated lightning. NOT cells. NOT DNA. NOT life. Only proves building blocks can form abiotically. Do NOT say it proved how life originated or that it created life.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Miller-Urey_experiment-en.svg/300px-Miller-Urey_experiment-en.svg.png" alt="Miller-Urey apparatus" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div>
 </div></div>
 <div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
@@ -3729,7 +3753,7 @@ body.card-mode #fc-filter{display:none}
 <div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
 <div class="ff2"><div class="chip">TRAP</div>TRAP: Synapomorphy vs. ancestral character</div>
-<div class="fb2"><div class="verdict">Answer</div>SYNAPOMORPHY (SHARED DERIVED character) defines clades. Ancestral (plesiomorphic) characters shared by many groups are NOT informative for relationships within those groups. 'Has a backbone' can't diagnose subgroups of vertebrates — ALL vertebrates have it.</div>
+<div class="fb2"><div class="verdict">Answer</div>SYNAPOMORPHY (SHARED DERIVED character) defines clades. Ancestral (plesiomorphic) characters shared by many groups are NOT informative for relationships within those groups. 'Has a backbone' can't diagnose subgroups of vertebrates — ALL vertebrates have it.<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Synapomorphy.jpg/300px-Synapomorphy.jpg" alt="Synapomorphy on a phylogenetic tree" style="max-width:100%;max-height:82px;border-radius:5px;margin:5px auto 0;display:block;border:1px solid #1e3028"></div>
 </div></div>
 <div class="fc2" data-ch="trap" onclick="this.classList.toggle('flipped')">
 <div class="fi2">
@@ -3869,7 +3893,7 @@ document.addEventListener('click', e => {
       if(!ff||!fb)return;
       var fc=ff.cloneNode(true);var chip=fc.querySelector('.chip');var chipTxt=chip?chip.textContent.trim():'';if(chip)chip.remove();
       var bc=fb.cloneNode(true);var v=bc.querySelector('.verdict');if(v)v.remove();
-      _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.textContent.trim()});
+      _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.innerHTML.trim()});
     });
   }
   window.dkOpen=function(filter){
@@ -3889,7 +3913,7 @@ document.addEventListener('click', e => {
     var c=_deck[_idx];
     document.getElementById('dk-chip').textContent=c.chip;
     document.getElementById('dk-term').textContent=c.term;
-    document.getElementById('dk-def').textContent=c.def;
+    document.getElementById('dk-def').innerHTML=c.def;
     document.getElementById('dk-bar').style.width=((_idx+1)/_deck.length*100)+'%';
     document.getElementById('dk-prog-txt').textContent=(_idx+1)+' / '+_deck.length;
     document.getElementById('dk-card').classList.remove('flipped');
