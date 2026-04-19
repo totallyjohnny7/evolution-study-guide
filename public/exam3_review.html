@@ -3850,15 +3850,21 @@ document.addEventListener('click', e => {
 (function(){
   document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><span id="dk-score"></span><button id="dk-close" onclick="dkClose()">✕ Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span></div><div id="dk-card"><div id="dk-inner"><div id="dk-f"><button id="dk-speak" title="Read aloud (S)" aria-label="Read aloud">🔊</button><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip · swipe → pass · ← miss</div></div><div id="dk-b"><div id="dk-def"></div><div class="dk-grade-row"><button class="dk-grade dk-miss" id="dk-miss-btn">✗ Miss</button><button class="dk-grade dk-pass" id="dk-pass-btn">✓ Pass</button></div></div></div><div id="dk-tint-pass"></div><div id="dk-tint-miss"></div><div id="dk-stamp-pass">PASS</div><div id="dk-stamp-miss">MISS</div></div><div class="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">← Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next →</button><button class="dk-btn" onclick="dkShuffle()">⇄ Shuffle</button></div><div id="dk-status"></div></div>');
   var chaps={};
+  // Build chapter label map from existing .fc-chapter blocks
+  document.querySelectorAll('.fc-chapter').forEach(function(c){
+    var ch=c.dataset.ch;var h=c.querySelector('h3');
+    if(ch&&h&&!chaps[ch]){var t=h.cloneNode(true);var sp=t.querySelector('span');if(sp)sp.remove();chaps[ch]=t.textContent.trim().replace(/\s+/g,' ').substring(0,28);}
+  });
+  // Insert launch bar: prefer #fc-wrap/#fc-section, else drop it right before
+  // the first .fc-chapter (which lives inside #main on this site).
+  var firstCh=document.querySelector('.fc-chapter');
   var target=document.getElementById('fc-wrap')||document.getElementById('fc-section');
-  if(target){
-    document.querySelectorAll('.fc-chapter').forEach(function(c){
-      var ch=c.dataset.ch;var h=c.querySelector('h3');
-      if(ch&&h&&!chaps[ch]){var t=h.cloneNode(true);var sp=t.querySelector('span');if(sp)sp.remove();chaps[ch]=t.textContent.trim().replace(/\s+/g,' ').substring(0,28);}
-    });
+  if(target||firstCh){
     var btns='<button class="dk-launch dk-launch-all" onclick="dkOpen(\'all\')">★ All Cards</button>';
     Object.keys(chaps).forEach(function(ch){btns+='<button class="dk-launch" onclick="dkOpen(\''+ch+'\')">'+chaps[ch]+'</button>';});
-    target.insertAdjacentHTML('afterbegin','<div id="dk-launch-bar"><span>Practice deck:</span>'+btns+'</div>');
+    var html='<div id="dk-launch-bar"><span>Practice deck:</span>'+btns+'</div>';
+    if(target)target.insertAdjacentHTML('afterbegin',html);
+    else firstCh.insertAdjacentHTML('beforebegin',html);
   }
   var _deck=[],_idx=0,_score={pass:0,miss:0,streak:0,best:0};
   var _touch={sx:0,sy:0,dx:0,dy:0,active:false,moved:false};
