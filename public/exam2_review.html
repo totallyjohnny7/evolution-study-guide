@@ -122,7 +122,31 @@ strong{color:#fff}
 .dk-launch-all{border-color:var(--gold);color:var(--gold)}
 .dk-launch-all:hover{background:var(--gold);color:#000}
 #dk-def img{max-width:100%;max-height:100px;border-radius:6px;margin:8px auto 4px;display:block;object-fit:contain;border:1px solid #2a2a2a}
-@media(max-width:520px){#dk-ov{padding:10px 8px}#dk-inner{height:230px}#dk-f,#dk-b{padding:18px 14px}#dk-term{font-size:15px}#dk-def{font-size:12px}#dk-def img{max-height:70px}.dk-btn{padding:10px 12px;font-size:12px;flex:1}#dk-launch-bar{padding:6px 10px;gap:5px}.dk-launch{padding:5px 10px;font-size:11px}.dk-head{flex-wrap:wrap}}
+/* ── Grade / swipe / audio additions ── */
+#dk-card{will-change:transform;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+#dk-tint-pass,#dk-tint-miss{position:absolute;inset:0;border-radius:18px;pointer-events:none;opacity:0;transition:opacity .12s linear;z-index:3}
+#dk-tint-pass{background:linear-gradient(135deg,rgba(34,197,94,.5),rgba(34,197,94,.15))}
+#dk-tint-miss{background:linear-gradient(135deg,rgba(239,68,68,.5),rgba(239,68,68,.15))}
+#dk-stamp-pass,#dk-stamp-miss{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%) scale(.3) rotate(-12deg);font-size:52px;font-weight:900;letter-spacing:5px;padding:6px 22px;border:5px solid;border-radius:10px;opacity:0;pointer-events:none;z-index:4;font-family:"Arial Black","Helvetica Neue",sans-serif}
+#dk-stamp-pass{color:#22c55e;border-color:#22c55e;text-shadow:0 0 10px rgba(34,197,94,.6)}
+#dk-stamp-miss{color:#ef4444;border-color:#ef4444;text-shadow:0 0 10px rgba(239,68,68,.6)}
+#dk-stamp-pass.show,#dk-stamp-miss.show{animation:dkStamp .45s cubic-bezier(.34,1.56,.64,1) forwards}
+@keyframes dkStamp{0%{transform:translate(-50%,-50%) scale(.3) rotate(-12deg);opacity:0}60%{transform:translate(-50%,-50%) scale(1.15) rotate(-8deg);opacity:1}100%{transform:translate(-50%,-50%) scale(1) rotate(-6deg);opacity:.95}}
+#dk-speak{position:absolute;top:12px;right:12px;background:rgba(245,197,66,.14);border:1.5px solid var(--gold);color:var(--gold);width:36px;height:36px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;z-index:2;padding:0;line-height:1}
+#dk-speak:hover{background:var(--gold);color:#000;transform:scale(1.08)}
+#dk-speak.speaking{animation:dkPulse .9s infinite;background:var(--gold);color:#000}
+@keyframes dkPulse{0%,100%{box-shadow:0 0 0 0 rgba(245,197,66,.7)}50%{box-shadow:0 0 0 10px rgba(245,197,66,0)}}
+.dk-grade-row{position:absolute;bottom:14px;left:14px;right:14px;display:flex;gap:10px;z-index:2}
+.dk-grade{flex:1;padding:11px 8px;border-radius:10px;border:2px solid;font-size:14px;font-weight:700;cursor:pointer;transition:all .15s;background:transparent;font-family:inherit}
+.dk-miss{color:var(--red,#ef4444);border-color:var(--red,#ef4444)}
+.dk-miss:hover{background:var(--red,#ef4444);color:#fff}
+.dk-pass{color:var(--green);border-color:var(--green)}
+.dk-pass:hover{background:var(--green);color:#000}
+#dk-score{font-size:11px;color:var(--muted);background:#1a1a1a;border:1px solid #2a2a2a;padding:4px 10px;border-radius:20px;font-weight:600;white-space:nowrap}
+#dk-score .sp{color:var(--green)}
+#dk-score .sm{color:var(--red,#ef4444)}
+#dk-score .sk{color:var(--gold);margin-left:6px}
+@media(max-width:520px){#dk-ov{padding:10px 8px}#dk-inner{height:230px}#dk-f,#dk-b{padding:18px 14px 56px}#dk-term{font-size:15px}#dk-def{font-size:12px;max-height:140px}#dk-def img{max-height:70px}.dk-btn{padding:10px 12px;font-size:12px;flex:1}#dk-launch-bar{padding:6px 10px;gap:5px}.dk-launch{padding:5px 10px;font-size:11px}.dk-head{flex-wrap:wrap}#dk-stamp-pass,#dk-stamp-miss{font-size:38px;padding:4px 16px;letter-spacing:3px}#dk-speak{width:32px;height:32px;font-size:14px;top:8px;right:8px}.dk-grade{padding:9px 6px;font-size:13px}.dk-grade-row{bottom:10px;left:10px;right:10px;gap:8px}#dk-score{font-size:10px;padding:3px 8px}}
 </style>
 </head>
 <body>
@@ -1382,12 +1406,12 @@ function filterCards(btn,ch){
   const vis=document.querySelectorAll('.fc2:not([style*="none"])').length;
   const p=document.getElementById('prog');if(p)p.textContent=vis+' cards shown';
 }
-// ── DECK ENGINE ──
+// ── DECK ENGINE (v6: audio + swipe + pass/miss grading) ──
 (function(){
-  document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><button id="dk-close" onclick="dkClose()">✕ Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span></div><div id="dk-card" onclick="dkFlip()"><div id="dk-inner"><div id="dk-f"><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip</div></div><div id="dk-b"><div id="dk-def"></div></div></div></div><div class="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">← Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next →</button><button class="dk-btn" onclick="dkShuffle()">⇄ Shuffle</button></div><div id="dk-status"></div></div>');
+  document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><span id="dk-score"></span><button id="dk-close" onclick="dkClose()">✕ Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span></div><div id="dk-card"><div id="dk-inner"><div id="dk-f"><button id="dk-speak" title="Read aloud (S)" aria-label="Read aloud">🔊</button><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip · swipe → pass · ← miss</div></div><div id="dk-b"><div id="dk-def"></div><div class="dk-grade-row"><button class="dk-grade dk-miss" id="dk-miss-btn">✗ Miss</button><button class="dk-grade dk-pass" id="dk-pass-btn">✓ Pass</button></div></div></div><div id="dk-tint-pass"></div><div id="dk-tint-miss"></div><div id="dk-stamp-pass">PASS</div><div id="dk-stamp-miss">MISS</div></div><div class="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">← Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next →</button><button class="dk-btn" onclick="dkShuffle()">⇄ Shuffle</button></div><div id="dk-status"></div></div>');
+  var chaps={};
   var target=document.getElementById('fc-wrap')||document.getElementById('fc-section');
   if(target){
-    var chaps={};
     document.querySelectorAll('.fc-chapter').forEach(function(c){
       var ch=c.dataset.ch;var h=c.querySelector('h3');
       if(ch&&h&&!chaps[ch]){var t=h.cloneNode(true);var sp=t.querySelector('span');if(sp)sp.remove();chaps[ch]=t.textContent.trim().replace(/\s+/g,' ').substring(0,28);}
@@ -1396,7 +1420,10 @@ function filterCards(btn,ch){
     Object.keys(chaps).forEach(function(ch){btns+='<button class="dk-launch" onclick="dkOpen(\''+ch+'\')">'+chaps[ch]+'</button>';});
     target.insertAdjacentHTML('afterbegin','<div id="dk-launch-bar"><span>Practice deck:</span>'+btns+'</div>');
   }
-  var _deck=[],_idx=0;
+  var _deck=[],_idx=0,_score={pass:0,miss:0,streak:0,best:0};
+  var _touch={sx:0,sy:0,dx:0,dy:0,active:false,moved:false};
+  var _animating=false;
+  function $(id){return document.getElementById(id);}
   function buildDeck(filter){
     _deck=[];
     document.querySelectorAll('.fc2').forEach(function(el){
@@ -1408,34 +1435,144 @@ function filterCards(btn,ch){
       _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.innerHTML.trim()});
     });
   }
+  function updateScore(){
+    var s=$('dk-score');if(!s)return;
+    var total=_score.pass+_score.miss;
+    s.innerHTML=total?'<span class="sp">✓'+_score.pass+'</span> · <span class="sm">✗'+_score.miss+'</span><span class="sk">🔥'+_score.streak+'</span>':'';
+  }
   window.dkOpen=function(filter){
     buildDeck(filter||'all');if(!_deck.length)return;_idx=0;
-    document.getElementById('dk-title').textContent=(filter==='all'?'All Cards — '+_deck.length+' cards':chaps&&chaps[filter]?chaps[filter]:filter);
-    dkRender();document.getElementById('dk-ov').classList.add('show');document.body.style.overflow='hidden';
+    _score={pass:0,miss:0,streak:0,best:0};updateScore();
+    $('dk-title').textContent=(filter==='all'?'All Cards — '+_deck.length+' cards':chaps&&chaps[filter]?chaps[filter]:filter);
+    dkRender();$('dk-ov').classList.add('show');document.body.style.overflow='hidden';
   };
-  window.dkClose=function(){document.getElementById('dk-ov').classList.remove('show');document.body.style.overflow='';};
-  window.dkFlip=function(){document.getElementById('dk-card').classList.toggle('flipped');};
-  window.dkNav=function(dir){_idx=(_idx+dir+_deck.length)%_deck.length;document.getElementById('dk-card').classList.remove('flipped');setTimeout(dkRender,55);};
+  window.dkClose=function(){window.speechSynthesis&&window.speechSynthesis.cancel();$('dk-ov').classList.remove('show');document.body.style.overflow='';resetCardTransform();};
+  window.dkFlip=function(){if(_animating)return;$('dk-card').classList.toggle('flipped');};
+  window.dkNav=function(dir){if(_animating)return;_idx=(_idx+dir+_deck.length)%_deck.length;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);};
   window.dkShuffle=function(){
     for(var i=_deck.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=_deck[i];_deck[i]=_deck[j];_deck[j]=t;}
-    _idx=0;document.getElementById('dk-card').classList.remove('flipped');setTimeout(dkRender,55);
-    document.getElementById('dk-status').textContent='Shuffled!';setTimeout(function(){document.getElementById('dk-status').textContent='';},1400);
+    _idx=0;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);
+    $('dk-status').textContent='Shuffled!';setTimeout(function(){$('dk-status').textContent='';},1400);
   };
+  function resetCardTransform(){
+    var card=$('dk-card');card.style.transition='';card.style.transform='';card.style.opacity='';
+    $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
+  }
   function dkRender(){
     var c=_deck[_idx];
-    document.getElementById('dk-chip').textContent=c.chip;
-    document.getElementById('dk-term').textContent=c.term;
-    document.getElementById('dk-def').innerHTML=c.def;
-    document.getElementById('dk-bar').style.width=((_idx+1)/_deck.length*100)+'%';
-    document.getElementById('dk-prog-txt').textContent=(_idx+1)+' / '+_deck.length;
-    document.getElementById('dk-card').classList.remove('flipped');
+    $('dk-chip').textContent=c.chip;
+    $('dk-term').textContent=c.term;
+    $('dk-def').innerHTML=c.def;
+    $('dk-bar').style.width=((_idx+1)/_deck.length*100)+'%';
+    $('dk-prog-txt').textContent=(_idx+1)+' / '+_deck.length;
+    $('dk-card').classList.remove('flipped');
+    resetCardTransform();
   }
+  // ── Speech synthesis (50ms buffer after cancel to avoid iOS/Chrome clipping) ──
+  window.dkSpeak=function(){
+    if(!window.speechSynthesis||!_deck.length)return;
+    var c=_deck[_idx];if(!c)return;
+    var tmp=document.createElement('div');tmp.innerHTML=c.term;
+    var text=(tmp.textContent||tmp.innerText||'').replace(/\s+/g,' ').trim();
+    if(!text)return;
+    window.speechSynthesis.cancel();
+    var btn=$('dk-speak');btn.classList.add('speaking');
+    setTimeout(function(){
+      var u=new SpeechSynthesisUtterance(text);
+      u.rate=0.95;u.pitch=1;u.lang='en-US';
+      u.onend=function(){btn.classList.remove('speaking');};
+      u.onerror=function(){btn.classList.remove('speaking');};
+      window.speechSynthesis.speak(u);
+    },50);
+  };
+  // ── Pass/Miss grading with off-screen fly animation ──
+  window.flashGrade=function(pass){
+    if(_animating||!_deck.length)return;
+    _animating=true;
+    _score[pass?'pass':'miss']++;
+    _score.streak=pass?_score.streak+1:0;
+    if(_score.streak>_score.best)_score.best=_score.streak;
+    var card=$('dk-card');
+    var stamp=$(pass?'dk-stamp-pass':'dk-stamp-miss');
+    stamp.classList.add('show');
+    $(pass?'dk-tint-pass':'dk-tint-miss').style.opacity='1';
+    card.style.transition='transform .4s cubic-bezier(.4,0,.2,1), opacity .4s ease';
+    card.style.transform='translateX('+(pass?140:-140)+'%) rotate('+(pass?22:-22)+'deg)';
+    card.style.opacity='0';
+    setTimeout(function(){
+      stamp.classList.remove('show');
+      _idx=(_idx+1)%_deck.length;
+      card.classList.remove('flipped');
+      card.style.transition='none';
+      card.style.transform='translateX(0) rotate(0)';
+      card.style.opacity='0';
+      $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
+      setTimeout(function(){
+        dkRender();
+        card.style.transition='transform .3s ease, opacity .3s ease';
+        card.style.opacity='1';
+        updateScore();
+        _animating=false;
+      },30);
+    },400);
+  };
+  // ── Touch / pointer swipe: follow finger, tint, release at 60px threshold ──
+  function pxy(e){var t=e.touches&&e.touches[0]?e.touches[0]:(e.changedTouches&&e.changedTouches[0]?e.changedTouches[0]:e);return{x:t.clientX,y:t.clientY};}
+  function dkStart(e){
+    if(_animating)return;
+    if(e.target.closest('#dk-speak,.dk-grade'))return;
+    var p=pxy(e);_touch.sx=p.x;_touch.sy=p.y;_touch.dx=0;_touch.dy=0;_touch.active=true;_touch.moved=false;
+    var card=$('dk-card');card.style.transition='none';
+  }
+  function dkMove(e){
+    if(!_touch.active)return;
+    var p=pxy(e);_touch.dx=p.x-_touch.sx;_touch.dy=p.y-_touch.sy;
+    if(Math.abs(_touch.dx)>5||Math.abs(_touch.dy)>5)_touch.moved=true;
+    if(Math.abs(_touch.dy)>Math.abs(_touch.dx)*1.5)return;
+    var card=$('dk-card');
+    var rot=_touch.dx/22;
+    card.style.transform='translateX('+_touch.dx+'px) rotate('+rot+'deg)';
+    $('dk-tint-pass').style.opacity=Math.min(Math.max(_touch.dx/120,0),.85);
+    $('dk-tint-miss').style.opacity=Math.min(Math.max(-_touch.dx/120,0),.85);
+  }
+  function dkEnd(e){
+    if(!_touch.active)return;
+    _touch.active=false;
+    var card=$('dk-card');
+    if(Math.abs(_touch.dx)>60&&Math.abs(_touch.dy)<Math.abs(_touch.dx)*1.5){
+      flashGrade(_touch.dx>0);
+    }else{
+      card.style.transition='transform .25s ease, opacity .25s ease';
+      card.style.transform='';
+      $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
+      // Tap = flip (only if no meaningful move)
+      if(!_touch.moved&&!e.target.closest('#dk-speak,.dk-grade,.dk-btn,.dk-launch,#dk-close'))dkFlip();
+    }
+    _touch.dx=0;_touch.dy=0;_touch.moved=false;
+  }
+  var cardEl=$('dk-card');
+  cardEl.addEventListener('touchstart',dkStart,{passive:true});
+  cardEl.addEventListener('touchmove',dkMove,{passive:true});
+  cardEl.addEventListener('touchend',dkEnd);
+  cardEl.addEventListener('touchcancel',function(){_touch.active=false;resetCardTransform();});
+  cardEl.addEventListener('mousedown',dkStart);
+  document.addEventListener('mousemove',function(e){if(_touch.active)dkMove(e);});
+  document.addEventListener('mouseup',function(e){if(_touch.active)dkEnd(e);});
+  // Button wiring (stopPropagation so card swipe/tap doesn't also fire)
+  $('dk-speak').addEventListener('click',function(e){e.stopPropagation();dkSpeak();});
+  $('dk-pass-btn').addEventListener('click',function(e){e.stopPropagation();flashGrade(true);});
+  $('dk-miss-btn').addEventListener('click',function(e){e.stopPropagation();flashGrade(false);});
+  // Keyboard: Esc close · Space/Enter flip · ←/→ or A/D or M/P grade · ↑/↓ prev/next · S speak
   document.addEventListener('keydown',function(e){
-    if(!document.getElementById('dk-ov').classList.contains('show'))return;
-    if(e.key==='Escape')dkClose();
-    else if(e.key===' '||e.key==='Enter'){e.preventDefault();dkFlip();}
-    else if(e.key==='ArrowRight'||e.key==='ArrowDown')dkNav(1);
-    else if(e.key==='ArrowLeft'||e.key==='ArrowUp')dkNav(-1);
+    if(!$('dk-ov').classList.contains('show'))return;
+    var k=e.key;
+    if(k==='Escape')dkClose();
+    else if(k===' '||k==='Enter'){e.preventDefault();dkFlip();}
+    else if(k==='ArrowRight'||k==='d'||k==='D'||k==='p'||k==='P'){e.preventDefault();flashGrade(true);}
+    else if(k==='ArrowLeft'||k==='a'||k==='A'||k==='m'||k==='M'){e.preventDefault();flashGrade(false);}
+    else if(k==='ArrowUp')dkNav(-1);
+    else if(k==='ArrowDown')dkNav(1);
+    else if(k==='s'||k==='S')dkSpeak();
   });
 })();
 </script>
