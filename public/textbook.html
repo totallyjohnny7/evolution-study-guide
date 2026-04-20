@@ -69,7 +69,7 @@ h2.ch-title{color:var(--gold);font-size:22px;margin:0 0 6px;font-weight:700}
 .ch-section{padding-top:12px;border-top:1px solid var(--border);margin-top:24px;scroll-margin-top:60px}
 .ch-section:first-child{border-top:none;margin-top:0}
 /* Full-screen image zoom */
-#zoom{display:none;position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:100;align-items:center;justify-content:center;cursor:zoom-out;opacity:0;transition:opacity .2s var(--ease);padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+#zoom{display:none;position:fixed;inset:0;background:rgba(0,0,0,1);z-index:200;align-items:center;justify-content:center;cursor:zoom-out;opacity:0;transition:opacity .2s var(--ease);padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 #zoom.show{display:flex;opacity:1}
 #zoom img{max-width:95vw;max-height:95vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.8)}
 /* Back link */
@@ -87,6 +87,7 @@ h2.ch-title{color:var(--gold);font-size:22px;margin:0 0 6px;font-weight:700}
 /* Mobile FAB for chapter nav */
 #navFab{display:none;position:fixed;bottom:calc(18px + env(safe-area-inset-bottom));right:calc(18px + env(safe-area-inset-right));width:56px;height:56px;border-radius:50%;background:var(--gold);color:#000;border:none;font-size:24px;cursor:pointer;z-index:30;box-shadow:0 6px 20px rgba(245,197,66,.4);transition:transform .2s var(--ease-spring),box-shadow .15s var(--ease);-webkit-appearance:none}
 #navFab:active{transform:scale(.9)}
+body.zoom-open #navFab{display:none!important}
 #sbBackdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:15;opacity:0;transition:opacity .28s var(--ease);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 #sbBackdrop.show{display:block;opacity:1}
 /* Progress indicator top */
@@ -1943,13 +1944,15 @@ Year | Annual Antibiotic Usage | % Resistant Strains 1978 | 0.84 | 0 1979 | 0.92
       zoom.innerHTML = '<img src="' + e.target.src + '">';
       zoom.classList.add('show');
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('zoom-open');
     } else if (e.target === zoom || (e.target.tagName === 'IMG' && e.target.parentElement === zoom)){
       zoom.classList.remove('show');
       document.body.style.overflow = '';
+      document.body.classList.remove('zoom-open');
     }
   });
   document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape'){ zoom.classList.remove('show'); document.body.style.overflow = ''; closeSb(); }
+    if (e.key === 'Escape'){ zoom.classList.remove('show'); document.body.style.overflow = ''; document.body.classList.remove('zoom-open'); closeSb(); }
   });
 
   // ── Show Answer / Show Original Page buttons on each card ──
