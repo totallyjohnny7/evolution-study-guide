@@ -1,0 +1,928 @@
+Evolution (BIOL 4230) -- Exam 3 Study Guide
+Chapters 3, 4, 8, 13, 14, 17, 18
+1. History of Life
+Key Concepts:
+
+    · Earth's age: 4.568 billion years
+             o Likely formed from a proto-planetary circumstellar disk
+                       Circum stellar disk ­ ring shaped accumulation of matter (dusk, gas,
+                           asteroids) that orbit around a star. This material can form planets
+             o Earth's crust formed as it cooled over millions of years
+             o Vapor and other gasses formed Earth's water and atmosphere
+             o Earth was bombarded with debri from the original stellar disk - moon formed
+             o Special Creation: 6,000 years
+             o Charles Darwin ­ several billion years old
+                       Based on rates of sediment accumulation on river banks, sediment
+                           accumulation and erosion on a stretch of ridges and valleys in England ­
+                           concluded that if formed over ~300 million years
+
+             o Lord Kelvin ­ about 20 million years old
+                       Based on cooling rates of rocks in mines.
+                       Since hot rocks cooled at a steady rate, you can use the current
+                           temperature to estimate how long it was been cooling ­ interior rocks
+                           would be best to look at.
+
+             o Modern physicists ­ 4.568 billion years
+                       Based on raidoactive isotopes
+
+    · Evolutionary Timeline:
+             o Ordovician (488­444 mya): Early bony fishes + land plants
+             o Silurian (444­416 mya): First land animals (e.g., millipedes)
+             o Devonian (416­359 mya): Age of fishes + early tetrapods
+             o Permian (299­251 mya): Origin of reptiles + modern mammals
+· K-T Boundary: Major extinction event caused by asteroid impact
+
+Key Terms:
+
+· Radiometric Dating -- Ages rocks using radioactive decay rates
+
+o Isotopes: variant of a chemical element that differs in neutron number
+
+o Radioactive isotopes
+
+             Unstable
+
+             Emit radioactive particles
+
+             Decay into a daughter isotope at a constant rate
+
+             Decay rate not affected by the environment
+
+o Half life - amount of time it takes for 50% of parent isotope to decay into
+    daughter isotope
+
+             Parent  daughter isotope Half life
+
+             Rubidium  Strontium                         47 billion years
+
+             Uranium  Lead                               4.5 billion years
+
+             Potassium  Argon                            1.3 billion years
+
+             Carbon-14  Nitrogen-14      5,730 years
+
+             In many cases, more than one isotope system can be used on the same
+                rocks or fossils, providing an independent check on the date
+
+                                         To calculate age of rocks, we need
+                                         to know:
+
+                                             1) Half life of parent isotope
+                                             2) Current ratio of
+
+                                                  parent/daughter isotope in
+                                                  the rock
+                                         Assume that the ratio of daughter to
+                                         parent isotopes are known at the
+                                         time the rock was form
+                                         This can be tested with potassium-
+                                         argon dating using volcanic rocks
+                                         (we know when they are formed).
+                                         Data from recent lava flows shows
+                                         that when rocks are formed the ratio
+                                         is 100%:0%
+· Biomarkers -- Earliest chemical signs of life (~3.8 bya) ­
+         Biomarkers are molecular evidence of life.
+             · DNA fragments
+             · Isotopic ratios
+             · Molecules
+            (lipids, pigments like okenane)
+         o The only carbon from early earth (lifeless) would have been from lifeless sources
+             ­ like volcanos
+         o Carbon has a different isotopic composition when formed organically vs
+             inorganically
+         o Rocks in oldest geological formations
+                   Resemble mounds of bacterial colonies alive today in shallow seas
+                   Called stromatolites
+                   Form when aggregations of micro-organisms (biofilms) trap sediment
+                   Stromatolite fossils are common in Precambrian rocks
+                   As early as 3.45 billion years ago
+Last Universal Common ­ Ancestor Probably 3.5 ­ 3.8 bya
+             o History of life is domincated by branchings
+             o Last universal common ancestor all extant species
+
+3.5 billion year old rock with fossil Archaea
+         · Archaea ­ single celled organisms with many forms of metabolism.
+         · Biochemical features not found in bacteria or Eukaryotes
+         · Evidence comes from biologically-produced methane from rocks in Australia
+
+2.6 billion year old rock with fossil bacteria
+         · Resembles photosynthetic cyanobacteria
+         · Coincides with first evidence for atmospheric oxygen
+
+             Turns light energy into chemical energy with oxygen as byproduct
+1.8 billion year old fossil Eukarya
+
+    Eukaryotes -
+         · Single celled, but 100 times larger than bacteria
+         · Eukaryotes diversified over then next 1 billion years
+         · Diverse ways of obtaining energy
+Insights in the evolution of multicellularity
+    o Dictylostelium discoides ­ soil Eukaryote - Slime molds, unicellular organisms that eat
+         bacteria
+    o Many single celled organisms live in clumps of films (Biofilms) and send signals to one
+         another that regulate growth and activity
+    o Slime molds, unicellular organisms that eat bacteria. When prey runs out, it joins with
+         other individuals and forms slug-like mass that crawls through the soil. Produces a stalk
+         with a ball of spores
+
+Early animals
+         First animals ­ Sponges
+                  650-635 MYA
+                  100 million years before Cambrian
+                  Share 1000's of genetic markers with other animals
+         Ediacaran period (575-535 mya)
+                  Earliest definitive animal fossils
+                  Multicellular communities dominated the World's ocean
+                  Some share traits with extant animals, but others may not be animals
+         Many of these animal forms disappeared by the Cambrian period
+Cambrian period (542-488 mya)
+         Appearance of recognizable forms of animals
+         520 million years ago
+         Earliest arthropod fossils
+         Chordate fossils (notochord)
+         Sea squirts (tunicates) | Trilobites endured until 251 MYA
+
+Burgess Shale ­ Canadian rockies
+         · 505 million years ago
+         · Shallow reef next to steep escarpment
+         · Mudslides captured animals
+         · Anoxic conditions favored fossilization of soft tissues
+         · Snapshot of entire ecosystem
+         · >65,000 specimens, 93 species
+                  · Lagerstätte
+         · Cambrian fauna
+
+Ordovician period (488-444 mya) - Early bony fishes and land plants
+         Earliest known fossils of land plants (475 mya)
+         Resemble mosses and liverworts
+
+Silurian period (444-416 mya) - Earliest land animals
+         Earliest known animal fossil on land (428 mya - millipede)
+         But fossilized tracks of invertebrates date by 480 mya
+
+Devonian period (416-359 mya) - Age of fishes, early tetrapods
+         400 mya - earliest known fungus fossils
+         385 mya ­ Tree-like plants
+         370 mya - earliest fossils of vertebrates with legs (tetrapods)
+         380 mya ­ large predatory fish
+Carboniferous period (359-299 mya) - Age of amphibians, origin of mass coal deposits
+         Land plants diversified
+         Land vertebrates (Amphibians) diversified
+Permian period (299-251 mya) ­ First reptiles
+More diversification! - ~300-280 mya ­ divergence of synapsids and sauropsids
+Sauropsida: reptiles (including dinosaurs & birds)
+Synapsida: lineage of tetrapods that gave rise to mammals
+    · Modern looking mammals arose ~200 mya in the Jurassic
+
+                                                            A. Anapsid
+                                                            B. Synapsid
+                                                            C. Diapsid
+
+Triassic Period (250-202 mya)
+         230 mya ­ earliest known fossils of dinosaurs: a new lineages of reptiles
+         Dinosaur fossils dominated up to about 65 mya
+Jurassic Period (202-145 mya)
+         Diversification of dinosaurs
+         Common ancestor of living mammals (200-180 mya)
+         150 mya ­ Birds arose (lineage within Dinosauria)
+
+Cretaceous Period (145-65 mya)
+         ~132 mya - Rise of forests by flowering plants
+         Flowering plants dominated ­ coincided with diversity of insects
+         Coevolution of plants and pollinators likely led to diversification of flowering plants
+         Cretaceous-tertiary
+                  Asteroid crash - Age of rocks ~66 million years old
+                           High levels of iridium (rare on Earth, but rich in asteroids)
+                           Calculated size based on iridium deposits (~10 mile diameter)
+                           Energy of 100 trillion tons of TNT (2 million times greater than most
+                           powerful thermonuclear bomb)
+                           Chicxulub crater matches the size estimate and dating
+                  Completely changed Earth's climate
+                  Extinction of dinosaurs and 2/3 of other species
+
+Cenozoic Era (65 mya to present)
+         Opened new niches resulting in diversification of other lineages
+         50 mya ­ earliest known primate fossils
+         20 mya ­ earliest fossils of Apes and land grasses diversify
+         7 mya ­ earliest known hominin fossils
+         195,000 years ago ­ oldest known fossils of Homo sapiens
+
+How did life orginate?
+· Chemists and physicists are actively working on how life arose from inorganic matter -
+    abiogenesis
+
+· Conditions of the early Earth
+         o No oxygen in the atmosphere - Methane, hydrogen, ammonia, water, CO
+         o Primary inputs of energy - Lightning, Ultraviolet radiation, Volcanic eruptions,
+             Cosmic rays
+                   Cosmic rays ­ high energy charged particles that originate in space and
+                      hit the Earth
+         o Possible extraterrestrial inputs?
+                   Carbon, purines, pyrimidines
+                   Enriched the prebiotic soup?
+
+                                                       Stanley Miller & Harold Urey - Testing the
+                                                       plausibility of the of the prebiotic soup
+                                                       hypothesis
+                                                       Prebiotic soup hypothesis ­ pools of
+                                                       molecules that existed in liquid form before
+                                                       life arose
+                                                       Miller ­ Urey Experiment
+                                                       Production of over 20 common amino
+                                                       acids! Some of the basic building blocks of
+                                                       life - Glycine, alanine, valine
+
+                            Adenine and guanine are purines
+                            Cytosine, thymine and uracil are pyrimidines
+
+· But how were amino acids joined?
+         o Sydney Fox & colleagues (1977):
+                   Mixed different amino acids at high temperatures (120C) and lacking
+                      water
+                   Placed mixture into water
+         o Result:
+                       strung together in a peptide-like structure, but with weak and unstable
+                           bonds
+
+         o Claudia Huber & colleagues (1997)
+                       Bonds are stable if carbon monoxide is used
+
+RNA World Hypothesis
+         o Essential components of RNA likely existed in the prebiotic soup
+                  o Ribose
+                  o Phosphate
+                  o Purines: adenine, guanine
+                  o Pyrimidines: cytocine, uracil
+
+         o Process of life taking place "in a warm little pond, with all sorts of ammonia and
+             phosphoric salts, light, heat, electricity, etc. present, so that a protein compound was
+             chemically formed ready to undergo still more complex changes"
+                           -Darwin 1871
+
+Fossil record provides clues - But it is not perfect!
+    1) Earth is about 4.5 billion years old.
+    2) Simple amino acids can be formed from inorganic material.
+    3) Earliest signs of life (biomarkers) occur about 3.8 billion years ago.
+    4) Multicellularity evolved many independent times, perhaps via "cooperative behaviors"
+
+         among cells.
+    5) Fossil record provides clues to the history of life, but it isn't perfect.
+    6) K-T boundary marks an extinction event due to asteroid crash.
+Potential Exam Qs:
+    1. What is the significance of the K-T boundary?
+    2. How does radiometric dating work?
+    3. Key evolutionary milestones of the Devonian?
+2. Phylogenetics
+Key Concepts:
+
+    · Phylogenetic trees map evolutionary relationships using shared traits (synapomorphies)
+                            Evolution is represented as a branching
+                            pattern (not a ladder of progress)
+
+                            Phylogenetic tree ­ visual
+                            representation of the evolutionary history
+                            of species, populations or genes (or other
+                            taxonomic levels)
+
+                            The evolutionary history of a group is
+                            called its phylogeny
+
+                                 Tree thinking - Components of a
+                                 phylogenetic tree (or phylogeny)
+                                 Tips: terminal ends of an
+                                 evolutionary tree (species,
+                                 populations, molecules)
+                                 Branches: Lineages evolving
+                                 through time between divergence
+                                 events (speciation)
+                                 Nodes: The point where a lineage
+                                 splits (a speciation event)
+                                 Root: Ancestor from which all other
+                                 nodes descend
+                                 Clade: An organism and all of its
+                                 descendents
+                                 Lineages can be removed or
+                                 collapsed without changing
+                                 phylogenetic relationships
+                                 Sister taxa: Lineages that diverged
+                                 from the same immediate ancestral
+                                 node
+                                 Clade: An organism and all of its
+                                 descendents
+
+Hypothetical snail example  Hypothetical snail example
+    · Current island 1 snails are
+         not the ancestors of island 3
+         & 4 snails
+
+    · Evolutionary forces don't
+         stop after a divergence event
+
+    · Populations on island 3 & 4
+         are more closely related to
+         each other than either is to
+         the island 1 population
+
+Phylogenies can be represented in
+many ways
+Might give the impression that
+humans are the endpoint...
+But that is not the case
+                                                                   A tree of life
+
+    Phylogeny and taxonomy
+    Early naturalists (Linnaeus) named and classified organisms
+    Used shared characteristics
+    Essentially what taxonomists do today
+    Systematics: Scientific field devoted to classification of organisms
+· Synapomorphy: A shared derived character. Inherited by all descendents of an ancestor
+· Taxonomy should reflect phylogeny
+
+    Taxonomic groups are legitimate only if they represent the ancestor and all of their
+    descendents
+monophyletic group                          Paraphyletic group
+
+                    monophyletic
+                    group
+
+                    Paraphyletic group
+
+Monophyletic group
+
+    An entire clade is also a monophyletic group
+
+· Monophyletic group: A group that represents all the descendents from a common
+    ancestor
+· Paraphyletic group: A group that includes a common ancestor, but NOT all of its
+    descendents
+                                                             Amniotes ­ group of tetrapods that have
+                                                             a sac in which the embryo develops
+
+    Importance of synapomorphies
+    Shared characters that are ancestral to a group are not informative for defining
+    relationships within that group
+    Synapomorphies are needed
+     - evolved in the immediate ancestor of a clade and were inherited by all descendents
+    Cladistics: phylogenetic methods used to construct phylogenies by using shared derived
+    characteristics (synapomorphies)
+How do we reconstruct phylogenetic
+relationships?
+A hypothetical example using insect
+characters
+1) Create a character matrix showing
+character states for each taxa
+
+Principle of Parsimony: a criterion for
+selecting among alternative patterns
+based on minimizing the total amount of
+change or complexity
+Most parsimonious tree is that with
+the fewest evolutionary steps
+Important! - A phylogenetic tree is a
+hypothesis that can be tested with
+further evidence
+
+             · Such as comparing
+                  molecular versus
+                  morphological trees
+
+Most parsimonious tree is that with
+the fewest evolutionary steps
+T7 virus infects E. coli
+
+Homoplasy: Character state
+similarity, but NOT due to shared
+descent (i.e., not a homology)
+Two types of homoplasies:
+Evolutionary reversals: the reversal
+of a derived character state back to
+its ancestral state
+Convergent evolution: The
+independent origin of similar traits in
+separate evolutionary lineages,
+typically due to similar environmental
+pressures
+                                                          Homoplasy can create the mistaken
+                                                          impression that two species are
+                                                          closely related when they are not
+                                                          T7 virus infects E. coli
+                                          Convergent evolution and parsimony
+Camera eye of vertebrates and octopus
+
+Examples of reversals and convergence
+Examples of reversals and convergence - Limblessness in squamate reptiles
+(snakes & lizards)
+
+Vertebrate transition to land: fins to limbs
+         Coelacanths are one of the closest living relatives of tetrapods
+         Known only as fossils up to 1938
+         Thought to have been extinct in the late Cretaceous
+
+Coelacanth fins are homologous to tetrapod forelimb
+
+Fossil record should document transition from fins to forelimbs
+Other living lobe-finned fish
+
+Phylogenies generate hypotheses
+  Scientists (Ted Daeschler and Neil Shubin) predicted where transitional fossils would
+  be found
+
+        Searched mid-Devonian rocks in Northern Canada
+
+   Appropriate age and habitat
+
+  Tiktaalik: transitional fossil between fish and tetrapods - Tiktaalik forelimbs share
+  more homologies with tetrapods
+
+           Important characters:
+
+· Weight-bearing elbows
+
+· Bending wrist
+
+· Neck
+
+· Loss of bony operculum
+· Species Concepts:
+         o Biological -- based on gene flow
+         o Morphospecies -- based on physical differences
+         o Phylogenetic -- based on evolutionary history
+                              Phylogeny reveals how tetrapod traits evolved
+                              over time
+                              Phylogenies help us track evolutionary
+                              changes in traits
+
+                              Example using the evolution of feathers and
+                              flight in birds
+
+                               Archaeopteryx, discovered in 1860, dates to
+                                                    145 mya
+
+                              Feathers evolved before flight
+                              Living birds share many skeletal similarities
+                              with theropod dinosaurs
+                              Early theropods did not use feathers for
+                              flight (arms too short)
+                              Feathers may have had functions other
+                              than flight
+
+                                  · Species recognition
+                                  · Mate attraction (color)
+                                  · Insulation
+                                  · Egg incubation
+                              Flight stroke may have evolved before they
+                              could even fly, as a means to run faster when
+                              capturing prey or evading predators.
+
+                              Dinosaur nesting behavior suggests possible
+                              use of feathers for insulation
+
+Oviraptor discovered in 1993
+Figure 4.30 A: An arm bone (ulna) from a
+theropod dinosaur called Velociraptor. (The
+portion of bone outlined in the red box is
+magnified in B.) B: Regularly spaced bumps
+on the surface of the bone resemble quill
+nodes (knobs) on the bones of living birds, as
+shown in C. D­F: Details of a turkey vulture
+ulna, with feathers attached to quill nodes.
+
+Velociraptor arm shows feather attachment
+(A)
+
+Flight evolved after feathers
+The function of feathers changed
+Exaptation: A trait that originates
+performing one function, but is later co-
+opted for a new function
+Flight stroke may have evolved to help run
+from predators or capture prey
+
+Another example of an exaptation
+Swim bladders are homologous with lungs.
+Early lung (sac connected to the gut) was
+co-opted into a buoyancy organ.
+
+In early fish, lungs likely functioned as a
+way to gulp air from the surface to
+supplement oxygen intake, especially in
+low-oxygen waters. Tetrapods (amphibians,
+reptiles, birds, and mammals) adapted
+their lungs for respiration, while many fish
+modified their lungs into swim bladders for
+buoyancy.
+Argument over the origin of the lung.
+Key Terms:
+Synapomorphies -- Shared derived traits that define those groups
+
+    1) Phylogenetic relationships are reconstructed using shared derived characteristics
+         (synapomorphies)
+
+    2) A monophyletic group includes all the descendents from a common ancestor.
+    3) Homoplasy is a shared character state, but NOT due to common ancestry (convergence &
+
+         reversal).
+    4) Phylogenies are hypotheses that can be further tested.
+    5) Phylogenies can help us track evolutionary changes in traits.
+
+Potential Exam Qs:
+    1. Advantages/limitations of the biological species concept?
+    2. How do synapomorphies build phylogenetic trees?
+    3. Compare all 3 species concepts
+
+    4. Species Concepts & Reproductive Isolation
+What is a species?
+
+    ~25 different definitions
+Differ somewhat in their assumptions, but generally agree that:
+
+    1. Species consist of groups of interbreeding individuals that share a common ancestry
+    2. Species are evolutionarily independent units ­ different species follow different
+
+         trajectories through time
+Phylogenetic species concept
+
+    · The smallest possible groups whose members are descended from a common ancestor
+         (monophyletic)
+
+    · Possess defining or derived characteristics (synapomorphies) that distinguish them from
+         other groups
+Some problems
+    · Traits that are used don't have to be ecological or physiologically significant
+    · Often divides organisms up into fine-grained species categories
+    · Established phylogenies are not available for most groups
+
+Morphospecies concept
+
+    · Species defined on basis of measurable morphological differences
+    · Difficult to apply in some groups (Bacteria, archaea, fungi)
+    · Used mostly with fossils, but paleontologists need to be careful (no color, soft tissue
+
+         or behavior present)
+    · Some problems
+    · Differences used to classify species can be defined arbitrarily and can very among
+
+         scientists
+VP = VG + VE
+
+Biological species concept
+    · Groups of interbreeding natural populations
+    · Reproductively isolated from other such groups
+    · Useful because definition focuses on the speciation process
+    · Other concepts help recognize species, but this definition focuses on how
+         populations are kept separate
+
+Some problems
+    · Reproductive isolation can't be tested on fossil species
+    · This concept doesn't apply to asexual species
+    · This concept has difficulties with hybridizing species
+
+General lineage species concept
+Species are metapopulations - Group of spatially separated populations that interact at
+some level (genetic exchange)
+Various populations exchange alleles frequently enough to be treated as the same
+evolutionary lineage
+Individuals within the metapopulation all share the same gene pool, which remains fairly
+consistent over time
+Metapopulations
+
+Gene flow: transfer of alleles from one population to another
+No single definition fits all taxa
+Biological species concept: Looks at gene flow
+Morphospecies concept: Looks at morphological differences
+Phylogenetic species concept: Looks at synapomorphies that define monophyletic groups
+General lineage species concept: Looks at allele exchange frequency to define the same
+evolutionary lineages
+In many cases, all concepts will agree on species boundaries
+Key Concepts:
+    · Reproductive isolation = the engine of speciation
+    · Prezygotic Barriers (before fertilization): temporal, behavioral, mechanical
+    · Postzygotic Barriers (after fertilization): hybrid inviability, hybrid sterility
+
+Three step process of speciation
+     1. Creation of a barrier to gene flow
+          between populations
+     2. Genetic and ecological divergence
+     3. Reproductive isolation: Barriers
+          prevent or limit reproduction between
+          populations
+
+Mechanisms of geographic isolation
+         1. Dispersal and colonization
+         Dispersal (movement) splits a species'distribution into two isolated ranges and
+         discourages or prevents gene flow between them
+
+2. Vicariance
+Geological split of a species'distribution into two or more isolated ranges, discouraging or
+preventing gene flow between them
+
+ Reproductive isolating barriers
+     · Prezygotic
+               · Pre-mating
+               · Post-mating
+     · Postzygotic
+
+Prezygotic isolating mechanisms (pre and post mating):
+    · Prevent sperm from one species from fertilizing eggs of another species
+    · Due to differences in genetics, behavior, physiology, ecology
+
+Pre-mating barrier
+Potential mates live sympatrically, but don't encounter one another
+
+    · Habitat isolation (ecological barrier)
+    · Temporal isolation
+ Pre-mating barrier
+
+Post-mating barriers, but before fertilization
+Mechanisms that impede gene flow after sperm or pollen has been transferred, but before
+fertilization
+Courtship dances while mating in insects:
+Sperm less likely to fertilize egg if male carries out the wrong courtship
+Gametic incompatibility:
+Occurs when sperm or pollen from one species fails to penetrate and fertilize the egg of another
+species
+
+    · Biochemistry of sperm and female reproductive tract
+    · Species-specific proteins on sperm affect attachment to egg
+
+Post-zygotic barriers
+Postzygotic isolating mechanisms:
+    · Prevent fertilized zygotes from successfully developing and reproducing
+    · Due to differences in genetics, behavior, physiology, ecology
+
+Hybrids may have reduced fitness
+    · Embryos with 2 species for parents may fail to develop
+    · Even if they have same genes, alleles of those genes may not function together
+    · Hybrids have defective sperm (sterile)
+
+Mule sterility
+    · Hybrid mules are sterile and can't breed with horses or donkeys
+    · Horse genes cannot flow into the donkey population (and vice versa)
+    · Sterility means that horses and donkeys are distinct species
+
+Sympatric speciation in progress
+
+An example of Ecological Speciation
+    · In North America, flies only used fruits from Hawthorn trees
+    · But apple trees were introduced about 400 years ago
+    · Flies first observed using apple trees 140 years ago
+    · Some flies shifted to using apples ­ why?
+Sympatric speciation in progress
+
+Hawthorn flies had pre-existing genetic variation for emergence
+Allowed some individuals to shift to the time when apples are produced
+Benefits of apple laying
+
+    · Reduced competition
+    · Avoided attacks from parasitoid wasps
+Selection favored alleles for earlier emergence, resulting in divergence from Hawthorn flies
+Allopatric speciation by geographic isolation
+Allopatry: populations are in separate, non-overlapping geographic areas
+ General model
+ Step #1: Creation of a barrier to gene flow
+ between populations
+ Step #2: Genetic and ecological divergence
+ Step #3: Reproductive isolation
+ Step #4: Reinforcement: Increases
+ reproductive isolation through selection
+ against hybrid offspring
+Allopatric speciation by dispersal
+1. Dispersal and colonization
+Dispersal (movement) splits a species'distribution into two isolated ranges and discourages or
+prevents gene flow between them
+What would happen under a linearly-ordered history of colonization?
+
+Hawaiian crickets allow us to test what would happen under a linearly-ordered history of
+colonization?
+
+    · 37species of endemic crickets in Hawaii (Laupala sp)
+    · Volcanic islands formed by movement of Earth's crust over a hotspot
+    · Earth's crust moving west across hotspot
+Dispersal and Speciation in Hawaiian crickets
+Key Terms:
+    · Speciation -- Formation of new distinct species
+    · Viable Hybrids -- Offspring that survive but have reduced fitness
+    · There are several different types of isolating barriers to gene flow that can facilitate
+         speciation
+
+    · New species can arise in allopatry and in sympatry
+    · Dispersal and vicariance are two mechanisms of geographic isolation
+    · Historical processes have also influenced present-day distributions of organisms
+    · Phylogeography ties together phylogenetic relationships with geography to understand
+
+         historical influences on distributions of species
+
+Potential Exam Qs:
+    1. Primary mechanisms of reproductive isolation?
+    2. How does isolation lead to speciation?
+    3. Examples of pre vs. postzygotic barriers?
+
+4. Biogeography, Speciation & Extinction
+Key Concepts:
+
+    · Biogeography -- Who lives where and why, across time and space
+             o Biogeography
+             o The study of the spatial & temporal distribution of biodiversity
+             o Field of study initiated by Darwin and Wallace
+             o Integrates multiple fields
+             o Biology (ecology, physiology, evolution)
+             o Geology (continental drift, plate uplifting, volcanism)
+             o Geography
+             o Paleontology
+What accounts for the observed global patterns?
+Historical Biogeography: Study of how historical processes have influenced present-day
+biogeographical patterns
+
+    · Dispersal -- Species move to new locations (Movement from one geographic location
+         to another)
+
+    · Vicariance -- Geographic barriers split populations apart (Formation of geographic
+         barriers to dispersal and gene flow) Common example: Plate tectonics
+· When land masses break apart, lineages become separated
+· Phylogeny of the lineages should reflect the history of the land mass
+
+· Phylogeography: study of historical processes (vicariance & dispersal) that may be
+    responsible for current distributions. Accomplished by merging phylogeny with
+    geography
+
+    Area phylogeny: A phylogenetic comparison of land masses or locations.
+
+· Used to approximate times when lineages separated
+· Both processes account for closely-related species occurring in disjunct locations
+· Tectonic plates and continental drift
+
+· Marsupial evolution
+· Most diverse in Australia
+· Oldest fossils are from China and North America
+ Molecular phylogeny of extant marsupial
+ species
+
+     · Australia marsupials are monophyletic
+     · Australian clade is nested within the
+
+          South American marsupials
+     · North American species also nested
+
+          within South American species
+
+Marsupial phylogeny based on fossil record
+
+Branching pattern reflects order in which continents separated from each other
+                                                                    · Oldest marsupial fossil in China
+                                                                        (150 mya)
+                                                                    · Dispersed to North America (~120
+                                                                        mya)
+                                                                    · New lineages evolved over next
+                                                                        ~55 my
+                                                                    · New species spread back to Europe,
+                                                                        North Africa, and Central Asia
+
+                                                                    · Another group spread to South
+                                                                        America, across Antarctica, and to
+                                                                        Australia
+                                                                             · Arrived in Australia ~55
+                                                                                 mya ­ age of oldest fossil in
+                                                                                 Australia
+
+                                                                    · All northern hemisphere lineages
+                                                                        went extinct between 30-25 mya
+
+                                                                    · Antarctica split from South
+                                                                        America and Australia (vicariance)
+
+                                                                    · 40 million year old fossil in
+                                                                        Antarctica, extinction as Antarctica
+                                                                        drifted to south pole
+
+                                                                    · South American marsupials
+                                                                        diversified
+
+                                                                    · Many (not all) became extinct when
+                                                                        isthmus of Panama formed
+
+                                                                    · One species migrated back to North
+                                                                        America
+
+                                                                    ·
+
+Australia drifted in isolation for >40 million years
+
+    · Australian marsupials diversified
+
+    · No fossil evidence of placental mammals until ~15 million years ago
+
+             · Around same time when Australia was close to Asia ­ bats and rats then arrived
+· Isolated from placental mammals - Convergent evolution occurred as organisms
+    filled similar niches
+Two contributors to species diversity:
+Speciation and Extinction
+How does species diversity change through time?
+When  greatly exceeds 
+Results in rapid speciation and diversification
+Adaptive radiation: Evolutionary lineage that has undergone exceptionally rapid diversification
+into a variety of lifestyles or ecological niches
+Islands are sites of many adaptive radiations
+
+Hawaiian honey creepers
+Ancestors colonized Hawaii ~5 million years ago
+> 50 species
+More than half have gone extinct
+17 species persist
+Adaptive radiation
+Quickly expand to occupy many ecological roles (niches)
+Hypothesized to occur in the absence of competitors
+
+    · Emergence of new habitat (e.g., island, lake)
+    · Extinction removes potential competitor
+    · Novel adaptation (key innovation)
+    · Key innovation: adaptation that allows individuals to occupy habitats that were off limits
+
+         to ancestral clades
+    · Elutherodactylus frogs
+    · >400 species in neotropics
+    · Key innovation: Laying eggs on land and direct development
+    · Larva is free from competition
+Other examples of adaptive radiations
+Other examples of adaptive radiations
+When  greatly exceeds 
+1)
+         Dispersal and vicariance affect patterns of diversity through speciation and
+         extinction
+
+    2) Relative rates of origination and extinction can lead to rapid diversification of
+         species or lead to extinction
+
+    3) Extinction rates typically track origination rates, resulting in relatively stable species
+         diversity through time
+
+    4) Adaptive radiations typically occur in the absence of competitors (new habitat,
+         extinction, key innovation)
+
+    5) There were 5 mass extinctions during the history of life, and we may be on the verge
+         of a 6th mass extinction
+
+Posits that the number of species on an island reflects a balance between immigration and
+extinction, and that this balance is strongly shaped by island size and isolation.
+
+    · In general, larger islands and islands closer to a source of colonists tend to have more
+         species, while smaller and more isolated islands tend to have fewer.
+
+Core idea
+    · MacArthur and Wilson proposed this as a dynamic equilibrium model: as species arrive,
+         immigration slows and extinction rises until the two rates balance. That equilibrium helps
+         explain why islands differ so much in species richness.
+
+Why it matters
+    · The theory is a foundation of ecology and conservation because it predicts that habitat
+         fragments can behave like "islands," with small, isolated patches supporting fewer
+         species.
+
+Key Terms:
+    · Standing Diversity -- # of species in an area at a given time
+    · Turnover Rate -- Speed at which species replace each other
+
+Potential Exam Qs:
+    1. Dispersal vs. vicariance -- how do they affect biogeography?
+    2. What is standing diversity and how is it calculated?
+    3. What drives mass extinction events?
+
+5. Conservation & Humans as a Selective Force
+Key Concepts:
+
+    · Humans drive evolution through: habitat destruction, selective breeding, pollution
+    · Conservation strategies aim to protect biodiversity and reduce human impact
+Key Terms:
+    · Selective Pressure -- Any factor that affects reproductive success
+    · Conservation Biology -- Science of preserving biodiversity
+Potential Exam Qs:
+    1. How do humans act as selective forces?
+    2. Effective conservation strategies for endangered species?
+    3. How does biodiversity relate to ecosystem stability?
+6. Human Evolution
+Key Concepts:
+
+    · Bipedalism began ~6­7 million years ago -- key early hominin adaptation
+    · Tracing the evolutionary path from common ancestors  modern humans
+Key Terms:
+    · Hominids -- Primate family including humans + ancestors
+    · Fossil Evidence -- Primary tool for reconstructing human evolution
+Potential Exam Qs:
+    1. What evidence supports bipedalism evolving in hominids?
+    2. Significance of early hominin fossils found in Chad?
+    3. How did environment shape human evolution?
+
+7. Evolutionary Medicine
+Key Concepts:
+
+    · Diseases shape human biology -- and vice versa
+    · Antibiotic resistance = evolution in real time, driven by human overuse
+Key Terms:
+    · Co-evolution -- Two species influencing each other's evolution (e.g., host + pathogen)
+    · Virulence -- How harmful/deadly a pathogen i
+Potential Exam Qs:
+    1. How do pathogens evolve alongside human hosts?
+    2. Role of natural selection in antibiotic resistance?
+    3. How does our modern lifestyle affect disease evolution?
+Applies genetics to the conservation and restoration of biodiversity
+
