@@ -3893,7 +3893,7 @@ document.addEventListener('click', e => {
     dkRender();$('dk-ov').classList.add('show');document.body.style.overflow='hidden';
   };
   window.dkClose=function(){window.speechSynthesis&&window.speechSynthesis.cancel();$('dk-ov').classList.remove('show');document.body.style.overflow='';resetCardTransform();};
-  window.dkFlip=function(){if(_animating)return;$('dk-card').classList.toggle('flipped');};
+  window.dkFlip=function(){if(_animating)return;var c=$('dk-card');requestAnimationFrame(function(){c.classList.toggle('flipped');});};
   window.dkNav=function(dir){if(_animating)return;_idx=(_idx+dir+_deck.length)%_deck.length;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);};
   window.dkShuffle=function(){
     for(var i=_deck.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=_deck[i];_deck[i]=_deck[j];_deck[j]=t;}
@@ -3966,7 +3966,7 @@ document.addEventListener('click', e => {
   function pxy(e){var t=e.touches&&e.touches[0]?e.touches[0]:(e.changedTouches&&e.changedTouches[0]?e.changedTouches[0]:e);return{x:t.clientX,y:t.clientY};}
   function dkStart(e){
     if(_animating)return;
-    if(e.target.closest('#dk-speak,.dk-grade'))return;
+    if(e.target.closest('#dk-speak,.dk-grade,.dk-btn'))return;
     var p=pxy(e);_touch.sx=p.x;_touch.sy=p.y;_touch.dx=0;_touch.dy=0;_touch.active=true;_touch.moved=false;
     var card=$('dk-card');card.style.transition='none';
   }
