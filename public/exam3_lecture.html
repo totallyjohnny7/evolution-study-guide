@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>BIOL 4340 Exam 3 - Lecture Review</title>
+<style>
+:root{--bg:#0d0d0d;--bg2:#141414;--card:#1e1e1e;--gold:#f5c542;--gold2:#e0a800;--text:#e8e8e8;--muted:#999;--purple:#a78bfa;--purplebg:#1e1235;--yellow:#fbbf24;--yellowbg:#2a1f00;--green:#22c55e;--greenbg:#0d2e1a;--red:#ef4444;--redbg:#2e0d0d;--blue:#60a5fa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:15px;line-height:1.65;display:flex;min-height:100vh}
+#sb{width:248px;min-width:248px;background:var(--bg2);border-right:1px solid #2a2a2a;height:100vh;position:sticky;top:0;overflow-y:auto;padding:0 0 40px}
+#sb::-webkit-scrollbar{width:4px}#sb::-webkit-scrollbar-thumb{background:#333}
+.st{padding:18px 14px 10px;font-size:16px;font-weight:800;color:var(--gold);border-bottom:1px solid #2a2a2a;position:sticky;top:0;background:var(--bg2);z-index:10}
+.st span{font-size:11px;color:var(--muted);display:block;font-weight:400;margin-top:2px}
+.cl{padding:8px 14px 2px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700}
+.cll{display:flex;flex-direction:column;padding:0 0 4px}
+.cll a{padding:4px 14px 4px 24px;color:#bbb;text-decoration:none;font-size:13px;border-left:2px solid transparent;transition:all .15s;display:block}
+.cll a:hover,.cll a.active{color:var(--gold);border-left-color:var(--gold);background:#1e1e1e;font-weight:600}
+#wrap{flex:1;display:flex;flex-direction:column;overflow:hidden}
+#main{overflow-y:auto;padding:0 60px 80px;max-width:940px;margin:0 auto;width:100%;flex:1}
+.ph{padding:30px 0 16px;border-bottom:2px solid var(--gold);margin-bottom:26px}
+.ph h1{font-size:24px;font-weight:900;color:var(--gold)}
+.ph p{color:var(--muted);font-size:13px;margin-top:4px}
+.chh{padding:20px 0 4px;margin:28px 0 0}
+.chh h2{font-size:19px;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:8px}
+.chh h2 .cn{background:var(--gold);color:#000;border-radius:5px;padding:1px 9px;font-size:12px}
+.chh p{color:var(--muted);font-size:13px;margin-top:3px}
+.sec{background:var(--card);border-radius:10px;padding:20px 22px;margin:13px 0;border:1px solid #2a2a2a}
+.sec h3{font-size:15px;font-weight:700;color:var(--gold2);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #2a2a2a}
+.wb,.yb,.hb{margin:8px 0;padding:10px 12px;border-radius:7px}
+.wb{background:#161b22;border-left:3px solid var(--blue)}
+.yb{background:#161b22;border-left:3px solid var(--green)}
+.hb{background:#161b22;border-left:3px solid var(--purple)}
+.bl{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;margin-bottom:4px}
+.wb .bl{color:var(--blue)}.yb .bl{color:var(--green)}.hb .bl{color:var(--purple)}
+.hb ul{padding-left:18px}.hb ul li{margin:3px 0}
+.trap{background:var(--yellowbg);border:1.5px solid var(--yellow);border-radius:7px;padding:10px 12px;margin:10px 0}
+.tl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--yellow);font-weight:800;margin-bottom:4px}
+.trap p{color:#ffe88a;font-size:14px}
+.rem{background:var(--purplebg);border:1.5px solid var(--purple);border-radius:7px;padding:10px 12px;margin:10px 0}
+.rl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--purple);font-weight:800;margin-bottom:4px}
+.rem p{color:#d4b8ff;font-size:14px;font-style:italic}
+.ct{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
+.ct th{background:#252525;color:var(--gold);padding:7px 10px;text-align:left;border:1px solid #333}
+.ct td{padding:7px 10px;border:1px solid #2a2a2a;vertical-align:top}
+.ct tr:nth-child(even) td{background:#191919}
+.qb{background:#111;border:1px solid #2a2a2a;border-radius:10px;padding:15px 16px;margin:14px 0}
+.qh{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:700;margin-bottom:6px}
+.qq{font-size:14px;color:#e0e0e0;margin-bottom:9px;font-weight:500}
+.ch{display:grid;gap:6px}
+.cb{background:#1a1a1a;border:1.5px solid #333;border-radius:7px;padding:8px 12px;text-align:left;color:#ccc;font-size:14px;cursor:pointer;transition:all .2s;width:100%}
+.cb:hover:not(:disabled){border-color:var(--gold);color:var(--gold)}
+.cb.correct{background:var(--greenbg)!important;border-color:var(--green)!important;color:var(--green)!important;font-weight:700}
+.cb.wrong{background:var(--redbg)!important;border-color:var(--red)!important;color:var(--red)!important}
+.cb:disabled{cursor:default}
+.exp{display:none;background:#0f1f0f;border-left:3px solid var(--green);border-radius:0 7px 7px 0;padding:10px 12px;margin-top:7px;font-size:13px;color:#aee3b8}
+.exp.show{display:block}
+#mode-bar{position:sticky;top:0;z-index:200;background:#0d0d0d;border-bottom:2px solid #2a2a2a;padding:10px 20px;display:flex;align-items:center;gap:14px}
+.mode-btn{padding:7px 18px;border-radius:20px;border:1.5px solid #333;background:#1a1a1a;color:#aaa;font-size:13px;cursor:pointer;font-weight:600}
+.mode-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
+.score-badge{font-size:11px;background:#1a1a1a;border:1px solid #333;color:#888;border-radius:12px;padding:3px 10px}
+#fc-section{display:none;padding:0 60px 80px;max-width:940px;margin:0 auto;width:100%}
+#fc-filter{display:flex;flex-wrap:wrap;gap:8px;padding:14px 60px 0;max-width:940px;margin:0 auto;width:100%;align-items:center;display:none}
+.flt-btn{padding:4px 12px;border-radius:14px;border:1px solid #333;background:#1a1a1a;color:#888;font-size:12px;cursor:pointer}
+.flt-btn.on{border-color:var(--gold);color:var(--gold);background:#1e1a00}
+.fc-chapter{margin:24px 0 10px}
+.fc-chapter h3{font-size:15px;font-weight:800;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.fc-chapter h3 span{background:var(--gold);color:#000;border-radius:4px;padding:1px 8px;font-size:11px}
+.fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin-bottom:6px}
+.fc2{perspective:800px;height:120px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.fi2{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+.fc2.flipped .fi2{transform:rotateY(180deg)}
+.ff2,.fb2{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 12px;text-align:center;line-height:1.45}
+.ff2{background:#1a1500;border:1.5px solid var(--yellow);color:var(--yellow);font-size:11px;font-weight:600}
+.ff2 .chip{font-size:9px;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:4px}
+.fb2{background:var(--greenbg);border:1.5px solid var(--green);color:#b5f5c8;font-size:11px;transform:rotateY(180deg)}
+.fb2 .verdict{font-size:9px;text-transform:uppercase;color:var(--green);opacity:.8;margin-bottom:3px}
+#dk-ov{display:none;position:fixed;inset:0;background:rgba(7,8,6,.97);z-index:9999;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+#dk-ov.show{display:flex}
+#dk-card{width:min(500px,92vw);cursor:pointer;margin:14px 0;user-select:none}
+#dk-inner{position:relative;width:100%;height:270px;transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+#dk-card.flipped #dk-inner{transform:rotateY(180deg)}
+#dk-f,#dk-b{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px 70px;text-align:center}
+#dk-f{background:#141414;border:2px solid #2a2a2a}
+#dk-b{background:#0f1f0f;border:2px solid var(--green);transform:rotateY(180deg)}
+#dk-chip{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px}
+#dk-term{font-size:17px;font-weight:700;color:var(--text);line-height:1.45;overflow:auto;max-height:150px}
+#dk-hint{font-size:11px;color:var(--muted);margin-top:12px;opacity:.6}
+#dk-def{font-size:13px;color:#aee3b8;line-height:1.7;overflow:auto;max-height:190px}
+.dk-head{width:min(500px,92vw);display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.dk-title{font-size:11px;font-weight:700;color:var(--gold);flex:1;text-transform:uppercase}
+#dk-close{background:none;border:1.5px solid #333;color:var(--muted);font-size:13px;cursor:pointer;padding:5px 12px;border-radius:20px;font-weight:600}
+.dk-prog-wrap{width:min(500px,92vw);display:flex;align-items:center;gap:10px;margin:8px 0 0}
+.dk-bar-bg{flex:1;height:3px;background:#2a2a2a;border-radius:2px}
+.dk-bar-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .3s;min-width:4px}
+#dk-prog-txt{font-size:11px;color:var(--muted);white-space:nowrap;min-width:50px;text-align:right}
+.dk-nav{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+.dk-btn{padding:9px 20px;border-radius:20px;border:1.5px solid #333;background:#1a1a1a;color:#888;font-size:13px;cursor:pointer;font-weight:600}
+.dk-btn:hover{border-color:var(--gold);color:var(--gold)}
+#dk-flip{background:var(--gold);color:#000;border-color:var(--gold)}
+#dk-status{font-size:11px;color:var(--muted);margin-top:8px;height:16px;text-align:center}
+.dk-launch{padding:6px 14px;border-radius:20px;border:1.5px solid #333;background:#1a1a1a;color:#888;font-size:12px;cursor:pointer;font-weight:600}
+.dk-launch:hover,.dk-launch-all{border-color:var(--gold);color:var(--gold)}
+#dk-tint-pass,#dk-tint-miss{position:absolute;inset:0;border-radius:18px;pointer-events:none;opacity:0;z-index:3;transition:opacity .1s}
+#dk-tint-pass{background:rgba(34,197,94,.3)}
+#dk-tint-miss{background:rgba(239,68,68,.3)}
+.dk-grade-row{position:absolute;bottom:14px;left:14px;right:14px;display:flex;gap:10px;z-index:2}
+.dk-grade{flex:1;padding:11px 8px;border-radius:10px;border:2px solid;font-size:14px;font-weight:700;cursor:pointer;background:transparent;font-family:inherit}
+.dk-miss{color:#ef4444;border-color:#ef4444}
+.dk-pass{color:var(--green);border-color:var(--green)}
+#dk-score{font-size:11px;color:var(--muted);background:#1a1a1a;border:1px solid #2a2a2a;padding:4px 10px;border-radius:20px;font-weight:600;white-space:nowrap}
+strong{color:#fff}
+@media(max-width:768px){#sb{display:none}#main,#fc-section{padding:0 12px 60px}}
+</style></head>
+<body>
+<nav id="sb">
+<div class="st">BIOL 4340 Exam 3<span>Lecture Slides 12-17</span></div>
+<div class="cl">Lec 12 - Life History</div>
+<div class="cll"><a href="#l12a">r/K Selection</a><a href="#l12b">Extrinsic Mortality</a><a href="#l12c">Aging Hypotheses</a><a href="#l12d">Sex Allocation</a></div>
+<div class="cl">Lec 13 - Social Behavior</div>
+<div class="cll"><a href="#l13a">ESS &amp; Game Theory</a><a href="#l13b">Individual vs Group</a><a href="#l13c">Hamilton's Rule</a></div>
+<div class="cl">Lec 14 - History of Life</div>
+<div class="cll"><a href="#l14a">Radiometric Dating</a><a href="#l14b">Origin of Life</a><a href="#l14c">Early Life Timeline</a><a href="#l14d">Geologic Periods</a></div>
+<div class="cl">Lec 15 - Phylogenetics</div>
+<div class="cll"><a href="#l15a">Tree Anatomy</a><a href="#l15b">Mono/Para/Poly</a><a href="#l15c">Parsimony &amp; Homoplasy</a><a href="#l15d">Exaptation</a></div>
+<div class="cl">Lec 16 - Species &amp; Isolation</div>
+<div class="cll"><a href="#l16a">Species Concepts</a><a href="#l16b">Reproductive Barriers</a><a href="#l16c">Allopatric vs Sympatric</a></div>
+<div class="cl">Lec 17 - Biogeography</div>
+<div class="cll"><a href="#l17a">Dispersal vs Vicariance</a><a href="#l17b">Standing Diversity</a><a href="#l17c">Adaptive Radiation</a><a href="#l17d">Mass Extinctions</a></div>
+<div class="cl">Flashcards</div>
+<div class="cll"><a href="#" onclick="setMode('card');return false">All Decks</a></div>
+</nav>
+<div id="wrap">
+<div id="mode-bar">
+<button class="mode-btn active" id="btn-study" onclick="setMode('study')">&#128214; Study Mode</button>
+<button class="mode-btn" id="btn-card" onclick="setMode('card')">&#127183; Flashcard Mode</button>
+<span class="score-badge" id="score-badge">Score: 0 / 0</span>
+</div>
+<main id="main"><div id="main-content">
+<div class="ph"><h1>BIOL 4340 &mdash; Exam 3 Lecture Review</h1><p>Lec 12-17 &bull; Dr. Robbins &bull; Life History &middot; Social Behavior &middot; History of Life &middot; Phylogenetics &middot; Speciation &middot; Biogeography</p></div>
+
+<div class="chh"><h2><span class="cn">Lec 12</span> Life History Evolution (Ch 12)</h2><p>Why organisms trade quantity for quality - and why we age.</p></div>
+<div class="sec" id="l12a"><h3>r/K Selection &amp; Life History Strategies</h3>
+<div class="wb"><div class="bl">Core Idea</div><strong>Life history</strong> = how organisms allocate finite energy to growth, maintenance, and reproduction. Energy devoted to one function cannot go to another - this constraint drives all trade-offs.</div>
+<table class="ct"><thead><tr><th></th><th>r-Selection (Fast Pace)</th><th>K-Selection (Slow Pace)</th></tr></thead><tbody>
+<tr><td>Age at maturity</td><td>Early</td><td>Late</td></tr>
+<tr><td>Offspring</td><td>Many, small</td><td>Few, large</td></tr>
+<tr><td>Lifespan</td><td>Short</td><td>Long</td></tr>
+<tr><td>Examples</td><td>Mayfly, mustard</td><td>Elephant, bristlecone pine</td></tr>
+</tbody></table>
+<div class="trap"><div class="tl">Trap</div><p>Selection favors the OPTIMAL BALANCE for each environment. Different environments select different trade-offs - not always more offspring OR always better quality.</p></div>
+</div>
+<div class="sec" id="l12b"><h3>Extrinsic Mortality &amp; Life-History Predictions</h3>
+<div class="wb"><div class="bl">Extrinsic Mortality</div><strong>Extrinsic mortality</strong> = death from external causes (predation, disease, parasites). High = low probability of surviving to old age = selection favors reproducing early and fast.</div>
+<div class="hb"><div class="bl">High Extrinsic Mortality Predicts</div><ul>
+<li>Rapid growth / early sexual maturation</li>
+<li>Large number of offspring per litter</li>
+<li>Shortened lifespan</li>
+<li>Opposite predictions for low-mortality populations</li>
+</ul></div>
+<div class="yb"><div class="bl">Guppy Experiment - Trinidad (Key Exam Case)</div>High-predation: rapid growth, early maturity, 2x offspring (60% smaller). After 11-year transplant to low-predation: evolved later maturity, fewer but LARGER offspring. <strong>Confirms life-history theory via real-time evolution.</strong></div>
+<div class="yb"><div class="bl">Opossum Island Study (Austad)</div>Sepelo Island (no predators, 5,000 yrs): tendon collagen had fewer cross-links = aging more slowly. Mainland (many predators): aged faster. High extrinsic mortality drives faster senescence.</div>
+<div class="rem"><div class="rl">Key Rule</div><p>Selection acts MORE strongly on mutations expressed early in life. Probability of being alive is highest when young, so late-life mutations accumulate unopposed.</p></div>
+</div>
+<div class="sec" id="l12c"><h3>Why We Age - Two Hypotheses</h3>
+<table class="ct"><thead><tr><th>Hypothesis</th><th>Mechanism</th></tr></thead><tbody>
+<tr><td><strong>Mutation Accumulation</strong></td><td>Late-life deleterious mutations accumulate because selection is too weak to purge them. Early mutations ARE purged because selection is strongest when young.</td></tr>
+<tr><td><strong>Antagonistic Pleiotropy</strong></td><td>One allele = beneficial early-life + detrimental late-life effect. Selected FOR because early benefit outweighs late cost (same gene boosts reproduction at 25, causes disease at 65).</td></tr>
+</tbody></table>
+<div class="trap"><div class="tl">Trap</div><p>Both hypotheses predict faster senescence under higher extrinsic mortality. Mutation accumulation = passive accumulation. Antagonistic pleiotropy = ACTIVE selection FOR the allele despite late costs.</p></div>
+</div>
+<div class="sec" id="l12d"><h3>Parental Investment &amp; Sex Allocation</h3>
+<div class="hb"><div class="bl">Three Sex-Allocation Rules</div><ul>
+<li><strong>OSR bias (Robert et al.):</strong> When one sex is rarer, overproduce that sex to maximize fitness (viviparous lizard example)</li>
+<li><strong>Trivers-Willard (1973):</strong> Good-condition mothers produce sons (higher reproductive variance); poor-condition produce daughters</li>
+<li><strong>Seychelles Warblers (Komdeur):</strong> High-quality territory: daughters (helpers stay). Low-quality: sons (disperse, reduce competition)</li>
+</ul></div>
+</div>
+<div class="qb"><div class="qh">Practice</div><div class="qq">Guppies transplanted from high- to low-predation pools evolved after 11 years to have:</div><div class="ch">
+<button class="cb" data-correct="true" onclick="ans(this)">A. Later maturation, fewer and larger offspring</button>
+<button class="cb" onclick="ans(this)">B. Earlier maturation, more and smaller offspring</button>
+<button class="cb" onclick="ans(this)">C. No change - too short for evolution</button>
+<button class="cb" onclick="ans(this)">D. Earlier maturation, larger but fewer offspring</button>
+</div><div class="exp">Low predation = low extrinsic mortality = K-type favored: later maturation, fewer but larger offspring. The experiment confirmed life-history theory in real time.</div></div>
+
+
+<div class="chh"><h2><span class="cn">Lec 13</span> Evolution of Social Behavior (Ch 16)</h2><p>ESS, selfishness, and the math behind why altruism exists.</p></div>
+<div class="sec" id="l13a"><h3>ESS &amp; Game Theory</h3>
+<div class="wb"><div class="bl">ESS</div><strong>Evolutionarily Stable Strategy:</strong> a behavioral strategy that, if adopted by most, cannot be invaded by any alternative via natural selection alone. Once fixed, mutant alternatives cannot replace it.</div>
+<div class="yb"><div class="bl">Side-Blotched Lizards</div>Three male strategies (Orange = aggressive/large territory; Blue = guard; Yellow = sneaky) maintained by negative frequency-dependent selection (Rock-Paper-Scissors). NONE is an ESS.</div>
+</div>
+<div class="sec" id="l13b"><h3>Individual vs Group Selection</h3>
+<div class="wb"><div class="bl">Individual Selection Wins</div>Selfish mutants in a cooperative group are favored by individual selection and take over. Individual selection = dominant mechanism. Group selection fails in practice.</div>
+<div class="trap"><div class="tl">Trap</div><p>Group living evolves because it benefits INDIVIDUALS (vigilance, dilution, foraging). NEVER say "for the good of the species" - that is group selection logic which individual selection undermines.</p></div>
+</div>
+<div class="sec" id="l13c"><h3>Kin Selection &amp; Hamilton's Rule</h3>
+<div class="wb"><div class="bl">Altruism Problem</div><strong>Altruism</strong> = behavior benefiting another at a COST to the actor's own fitness. Explained by kin selection: helping relatives = passing on your alleles indirectly.</div>
+<div class="hb"><div class="bl">Three Fitness Types</div><ul>
+<li><strong>Direct:</strong> own reproductive success</li>
+<li><strong>Indirect:</strong> relatives' reproductive success (same alleles)</li>
+<li><strong>Inclusive fitness:</strong> direct + indirect combined</li>
+</ul></div>
+<div class="wb"><div class="bl">r Values</div>Full siblings / parent-offspring: <strong>r = 0.5</strong> | Half-sibs / grandchildren: <strong>r = 0.25</strong> | First cousins: <strong>r = 0.125</strong></div>
+<div class="rem"><div class="rl">Hamilton's Rule</div><p><strong>r &times; B &gt; C</strong> - altruism spreads when relatedness &times; benefit to recipient exceeds cost to donor. Haldane: "I would risk my life for two brothers or eight cousins."</p></div>
+<div class="trap"><div class="tl">Trap</div><p>rB > C is about INCLUSIVE fitness. Altruism CAN evolve even when personally costly, as long as rB > C. High r makes altruism much easier to evolve.</p></div>
+</div>
+<div class="qb"><div class="qh">Practice</div><div class="qq">Hamilton's Rule states altruism evolves when:</div><div class="ch">
+<button class="cb" onclick="ans(this)">A. C &gt; r x B</button>
+<button class="cb" data-correct="true" onclick="ans(this)">B. r x B &gt; C</button>
+<button class="cb" onclick="ans(this)">C. B &gt; C regardless of r</button>
+<button class="cb" onclick="ans(this)">D. r must = 0.5</button>
+</div><div class="exp">rB > C: relatedness x benefit to recipient exceeds cost to donor. Low r (cousins = 0.125) requires very high B to justify cost. High r (siblings = 0.5) makes altruism much easier to evolve.</div></div>
+
+
+<div class="chh"><h2><span class="cn">Lec 14</span> History of Life (Ch 3)</h2><p>4.5 billion years from formation to K-T boundary.</p></div>
+<div class="sec" id="l14a"><h3>Radiometric Dating</h3>
+<div class="wb"><div class="bl">Principle</div>Radioactive parent decays to daughter at a constant half-life unaffected by temperature, pressure, or chemistry. Measure parent:daughter ratio to calculate when rock solidified.</div>
+<table class="ct"><thead><tr><th>Parent-Daughter</th><th>Half-Life</th><th>Best For</th></tr></thead><tbody>
+<tr><td>Carbon-14 - Nitrogen-14</td><td>5,730 yrs</td><td>Recent organic material (&lt;50,000 yrs)</td></tr>
+<tr><td>Potassium - Argon</td><td>1.3 billion yrs</td><td>Mid-ancient rocks</td></tr>
+<tr><td>Uranium - Lead</td><td>4.5 billion yrs</td><td>Early Earth rocks</td></tr>
+<tr><td>Rubidium - Strontium</td><td>47 billion yrs</td><td>Oldest rocks</td></tr>
+</tbody></table>
+<div class="trap"><div class="tl">Trap</div><p>C-14 is ONLY useful for &lt;50,000-year-old organic material. It fully decays before deep-time rocks can be measured. For millions/billions of years, use K-Ar or U-Pb.</p></div>
+</div>
+<div class="sec" id="l14b"><h3>Origin of Life</h3>
+<div class="yb"><div class="bl">Miller-Urey Experiment (1953) - KEY EXAM FACT</div>Miller and Urey simulated early Earth (no O2, electrical sparks for lightning, inorganic gases). Result: 20+ amino acids including glycine, alanine, valine. <strong>Proved organic building blocks form abiotically.</strong> Does NOT demonstrate how life itself arose.</div>
+<div class="hb"><div class="bl">Path from Chemistry to Life</div><ul>
+<li><strong>Prebiotic soup:</strong> pools of organic molecules in early oceans/lakes before life</li>
+<li><strong>Murchison meteorite (1989):</strong> contained amino acids, purines, pyrimidines - possible extraterrestrial organic input</li>
+<li><strong>RNA World:</strong> RNA both stores genetic info AND catalyzes reactions (ribozymes). Could be first self-replicating molecule.</li>
+</ul></div>
+</div>
+<div class="sec" id="l14c"><h3>Early Life Timeline</h3>
+<table class="ct"><thead><tr><th>Event</th><th>When</th></tr></thead><tbody>
+<tr><td>Earth forms</td><td>4.568 bya</td></tr>
+<tr><td>Earliest biomarkers of life (carbon isotopes, Greenland)</td><td>3.8 bya</td></tr>
+<tr><td>Fossil stromatolites (bacterial mats)</td><td>3.45 bya</td></tr>
+<tr><td>Great Oxidation Event (cyanobacteria)</td><td>~2.4 bya</td></tr>
+<tr><td>Eukaryotes (100x larger than bacteria)</td><td>1.8 bya</td></tr>
+<tr><td>Multicellularity (multiple independent origins)</td><td>~1.6-2.1 bya</td></tr>
+<tr><td>First animals - sponges</td><td>650-635 mya</td></tr>
+<tr><td>Ediacaran Period (multicellular communities)</td><td>575-535 mya</td></tr>
+<tr><td>Cambrian Explosion</td><td>542-488 mya</td></tr>
+<tr><td>K-T boundary - asteroid extinction</td><td>65 mya</td></tr>
+</tbody></table>
+</div>
+<div class="sec" id="l14d"><h3>Geologic Periods ("Tried Just Couldn't")</h3>
+<table class="ct"><thead><tr><th>Period</th><th>Time (mya)</th><th>Key Events</th></tr></thead><tbody>
+<tr><td>Ordovician</td><td>488-444</td><td>Early bony fish; earliest land plants (475 mya)</td></tr>
+<tr><td>Silurian</td><td>444-416</td><td>First land animals (millipede, 428 mya)</td></tr>
+<tr><td>Devonian</td><td>416-359</td><td>Age of fishes; Tiktaalik (~375 mya); first tetrapods (370 mya)</td></tr>
+<tr><td>Carboniferous</td><td>359-299</td><td>Amphibians diversify; coal swamp forests</td></tr>
+<tr><td>Permian</td><td>299-251</td><td>First reptiles; Great Dying (96% species loss)</td></tr>
+<tr><td>Triassic</td><td>250-202</td><td>Earliest dinosaurs (230 mya)</td></tr>
+<tr><td>Jurassic</td><td>202-145</td><td>Dinosaur diversity; birds (150 mya) within Dinosauria</td></tr>
+<tr><td>Cretaceous</td><td>145-65</td><td>Flowering plants rise; K-T asteroid (65 mya)</td></tr>
+<tr><td>Cenozoic</td><td>65-now</td><td>Mammal radiation; primates 50 mya; Homo sapiens 195,000 ya</td></tr>
+</tbody></table>
+<div class="rem"><div class="rl">K-T Boundary Evidence</div><p>Global iridium layer (rare on Earth, rich in asteroids) + Chicxulub crater (~10 mi diameter). Energy = 100 trillion tons TNT. Killed dinosaurs + 2/3 of species. Opened niches for mammal radiation.</p></div>
+</div>
+<div class="qb"><div class="qh">Practice</div><div class="qq">The Miller-Urey experiment demonstrated that:</div><div class="ch">
+<button class="cb" onclick="ans(this)">A. RNA can self-replicate in warm ponds</button>
+<button class="cb" data-correct="true" onclick="ans(this)">B. Amino acids form abiotically from inorganic molecules under early Earth conditions</button>
+<button class="cb" onclick="ans(this)">C. First cells were archaea near hydrothermal vents</button>
+<button class="cb" onclick="ans(this)">D. C-14 confirms the age of earliest life</button>
+</div><div class="exp">Miller and Urey: simulated early Earth (no O2, lightning, inorganic gases) = 20+ amino acids. This proves organic building blocks arise without life. It does NOT show how life itself originated.</div></div>
+
+
+<div class="chh"><h2><span class="cn">Lec 15</span> Phylogenetics &amp; Tree of Life (Ch 4)</h2><p>Reading trees, synapomorphies, and tracking trait evolution.</p></div>
+<div class="sec" id="l15a"><h3>Phylogenetic Tree Anatomy</h3>
+<div class="hb"><div class="bl">Six Key Components</div><ul>
+<li><strong>Tips:</strong> terminal taxa (species, populations, or genes)</li>
+<li><strong>Branches:</strong> lineages evolving between divergence events</li>
+<li><strong>Nodes:</strong> where a lineage splits = a speciation event</li>
+<li><strong>Root:</strong> oldest ancestor from which all descend</li>
+<li><strong>Clade:</strong> an organism + ALL of its descendants</li>
+<li><strong>Sister taxa:</strong> lineages that diverged from the same immediate node</li>
+</ul></div>
+<div class="trap"><div class="tl">Trap</div><p>Current organisms are NOT ancestors of other current organisms. Rotating branches at a node does NOT change evolutionary relationships (only topology matters, not layout).</p></div>
+</div>
+<div class="sec" id="l15b"><h3>Monophyletic, Paraphyletic &amp; Polyphyletic Groups</h3>
+<table class="ct"><thead><tr><th>Group</th><th>Definition</th><th>Valid?</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>Monophyletic</strong></td><td>Ancestor + ALL descendants</td><td>Yes (= clade)</td><td>Birds; Mammals</td></tr>
+<tr><td><strong>Paraphyletic</strong></td><td>Ancestor + SOME (not all) descendants</td><td>No</td><td>"Reptiles" without birds</td></tr>
+<tr><td><strong>Polyphyletic</strong></td><td>Multiple unrelated ancestors</td><td>No</td><td>"Warm-blooded" animals</td></tr>
+</tbody></table>
+<div class="wb"><div class="bl">Synapomorphy</div>A shared DERIVED character inherited by all descendants of a common ancestor. ONLY synapomorphies define clades in cladistics. Ancestral/plesiomorphic characters (like "has cells") are not informative for building clades.</div>
+</div>
+<div class="sec" id="l15c"><h3>Parsimony &amp; Homoplasy</h3>
+<div class="wb"><div class="bl">Principle of Parsimony</div>Among alternative phylogenies, choose the one requiring the FEWEST total evolutionary changes. The most parsimonious tree is preferred, but not guaranteed to be correct if convergence is common.</div>
+<div class="hb"><div class="bl">Two Types of Homoplasy</div><ul>
+<li><strong>Convergent evolution:</strong> Independent origin of similar traits in unrelated lineages (usually same environmental pressure). Camera eyes: vertebrates vs octopus. Body shape: dolphins vs sharks.</li>
+<li><strong>Evolutionary reversal:</strong> Derived character reverts to ancestral state. Cetaceans returning to aquatic life. Limblessness in snakes, glass lizards, Lerista skinks - independently evolved.</li>
+</ul></div>
+</div>
+<div class="sec" id="l15d"><h3>Exaptation &amp; Transitional Fossils</h3>
+<div class="wb"><div class="bl">Exaptation</div>Trait that <strong>originates for one function, later co-opted for another</strong>. Feathers: evolved for insulation/display/species recognition BEFORE being co-opted for flight. Swim bladders: lungs co-opted into buoyancy organs in fish.</div>
+<div class="yb"><div class="bl">Tiktaalik - Phylogeny as Prediction</div>Phylogeny predicted a fish-tetrapod transitional fossil in mid-Devonian (~375 mya) coastal wetland rocks. Daeschler and Shubin searched Ellesmere Island, Canada, and found Tiktaalik: weight-bearing elbows, bending wrist, neck. Proves phylogenies generate testable predictions.</div>
+<div class="wb"><div class="bl">Feathers Before Flight</div>Theropod dinosaurs had feathers long before birds. Early arms too short for flight. Functions: insulation, display, species recognition, egg incubation. Flight stroke may have evolved to capture prey. Feathers = exaptation for flight.</div>
+</div>
+<div class="qb"><div class="qh">Practice</div><div class="qq">'Reptiles' (excluding birds) is best described as a _____ group.</div><div class="ch">
+<button class="cb" onclick="ans(this)">A. Monophyletic</button>
+<button class="cb" data-correct="true" onclick="ans(this)">B. Paraphyletic</button>
+<button class="cb" onclick="ans(this)">C. Polyphyletic</button>
+<button class="cb" onclick="ans(this)">D. Holophyletic</button>
+</div><div class="exp">Paraphyletic: includes a common ancestor but excludes birds, which evolved from within the dinosaur branch of reptiles. A monophyletic 'Reptilia' would have to include birds.</div></div>
+
+
+<div class="chh"><h2><span class="cn">Lec 16</span> Species Concepts &amp; Reproductive Isolation (Ch 13)</h2><p>What is a species? How do new ones form?</p></div>
+<div class="sec" id="l16a"><h3>Four Species Concepts</h3>
+<table class="ct"><thead><tr><th>Concept</th><th>Key Criterion</th><th>Weakness</th></tr></thead><tbody>
+<tr><td><strong>Biological (BSC)</strong></td><td>Reproductive isolation / gene flow</td><td>Fails for fossils, asexuals, hybridizing species</td></tr>
+<tr><td><strong>Morphospecies</strong></td><td>Morphological differences (VP = VG + VE)</td><td>Environment affects morphology; arbitrary cutoffs</td></tr>
+<tr><td><strong>Phylogenetic</strong></td><td>Smallest monophyletic group with synapomorphies</td><td>Splits too finely; phylogenies unavailable for most groups</td></tr>
+<tr><td><strong>General Lineage</strong></td><td>Shared gene pool (metapopulation)</td><td>Hard to measure gene flow thresholds</td></tr>
+</tbody></table>
+</div>
+<div class="sec" id="l16b"><h3>Reproductive Isolating Barriers</h3>
+<div class="hb"><div class="bl">Three Steps of Speciation</div><ul>
+<li><strong>Step 1:</strong> Creation of a barrier to gene flow</li>
+<li><strong>Step 2:</strong> Genetic and ecological divergence</li>
+<li><strong>Step 3:</strong> Reproductive isolation becomes intrinsic</li>
+</ul></div>
+<table class="ct"><thead><tr><th>Barrier Type</th><th>Timing</th><th>Examples</th></tr></thead><tbody>
+<tr><td><strong>Pre-mating (Prezygotic)</strong></td><td>Before mating attempt</td><td>Habitat isolation (hawthorn vs blueberry flies); Temporal isolation (different flowering times in hummingbird-pollinated plants)</td></tr>
+<tr><td><strong>Post-mating, Pre-fertilization</strong></td><td>After mating, before fertilization</td><td>Gametic incompatibility (sperm proteins fail to bind egg); Wrong courtship dance reduces fertilization</td></tr>
+<tr><td><strong>Postzygotic</strong></td><td>After fertilization</td><td>Hybrid inviability; Hybrid sterility (mules)</td></tr>
+</tbody></table>
+<div class="wb"><div class="bl">Geographic Isolation</div><strong>Dispersal:</strong> organisms move to new area, splitting range. <strong>Vicariance:</strong> geological barrier (mountains, rivers, rising sea) splits existing population.</div>
+<div class="trap"><div class="tl">Trap - Mule Sterility</div><p>Mule sterility is POSTZYGOTIC isolation. Horse and donkey CAN mate but offspring are sterile = genes cannot flow = distinct species, despite being able to interbreed.</p></div>
+</div>
+<div class="sec" id="l16c"><h3>Allopatric vs Sympatric Speciation</h3>
+<div class="wb"><div class="bl">Allopatric</div>New species evolves in geographically SEPARATE (non-overlapping) areas. Most common and best-documented mode. Geographic barrier leads to divergence then reproductive isolation. Reinforcement can increase isolation after secondary contact.</div>
+<div class="wb"><div class="bl">Sympatric</div>New species evolves WITHIN the geographic range of its ancestor. <strong>Rhagoletis pomonella (apple maggot fly):</strong> originally only on hawthorn; shifted to apple trees ~140 years ago. Benefits: reduced competition, avoided parasitoid wasps. Different blossoming times = temporal isolation in progress. Ecological speciation.</div>
+<div class="yb"><div class="bl">Hawaiian Crickets (Laupala)</div>37 endemic species; volcanic islands form sequentially (hotspot moves west). Phylogeny of crickets mirrors island formation order. Confirms allopatric speciation by sequential dispersal + colonization.</div>
+</div>
+<div class="qb"><div class="qh">Practice</div><div class="qq">The Rhagoletis pomonella case is an example of:</div><div class="ch">
+<button class="cb" onclick="ans(this)">A. Allopatric speciation by vicariance</button>
+<button class="cb" onclick="ans(this)">B. Allopatric speciation by dispersal</button>
+<button class="cb" data-correct="true" onclick="ans(this)">C. Sympatric (ecological) speciation</button>
+<button class="cb" onclick="ans(this)">D. Reinforcement after secondary contact</button>
+</div><div class="exp">Sympatric: fly shifted host plants while remaining in the same geographic area. Temporal isolation (different blossoming times for hawthorn vs apple) is developing within one region - the definition of sympatric speciation.</div></div>
+
+
+<div class="chh"><h2><span class="cn">Lec 17</span> Biogeography, Speciation &amp; Extinction (Ch 14)</h2><p>Diversity through time: origination, extinction, and radiation.</p></div>
+<div class="sec" id="l17a"><h3>Dispersal vs Vicariance</h3>
+<div class="wb"><div class="bl">Biogeography</div>Study of the spatial and temporal distribution of biodiversity. Initiated by Darwin and Wallace. Integrates biology, geology, geography, and paleontology.</div>
+<table class="ct"><thead><tr><th>Process</th><th>Definition</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>Dispersal</strong></td><td>Organisms move to a new geographic location</td><td>Marsupials spreading from N. America to S. America to Australia</td></tr>
+<tr><td><strong>Vicariance</strong></td><td>Geological barrier splits existing population</td><td>Continental drift; rising sea level separating island populations</td></tr>
+</tbody></table>
+<div class="yb"><div class="bl">Marsupials Case Study</div>Oldest fossil: China (150 mya). Dispersed to N. America (120 mya) then S. America then across Antarctica to Australia (55 mya). Australian marsupials are monophyletic, nested within S. American marsupials. Isolated &gt;40 my from placental mammals = <strong>convergent evolution</strong> filling the same niches (marsupial wolf, mole, anteater analogs).</div>
+<div class="rem"><div class="rl">Island Biogeography (MacArthur &amp; Wilson)</div><p>Species # = dynamic equilibrium between immigration and extinction. Larger and closer islands = more species. Habitat fragments behave like "islands" - critical conservation insight.</p></div>
+</div>
+<div class="sec" id="l17b"><h3>Standing Diversity Math</h3>
+<div class="wb"><div class="bl">Formula</div><strong>D2 = D1 + originations - extinctions</strong>. Immigration/emigration matter locally but not at global scale. &alpha; = origination rate; &Omega; = extinction rate.</div>
+<div class="hb"><div class="bl">Worked Example from Slides</div><ul>
+<li>Start: 24 species</li>
+<li>Stage A: 10 originate, 6 extinct &rarr; 24 + 10 - 6 = <strong>28 species</strong></li>
+<li>Stage B: 8 originate, 12 extinct &rarr; 28 + 8 - 12 = <strong>24 species</strong></li>
+<li>Total &Omega; = 9/6my = 1.5/my; total &alpha; = 8/6my = 1.33/my</li>
+</ul></div>
+<div class="trap"><div class="tl">Trap</div><p>When &alpha; &gt;&gt; &Omega; for long periods = adaptive radiation. When &Omega; &gt;&gt; &alpha; too long = clade extinction. Usually they track each other closely (high "turnover" but stable diversity).</p></div>
+</div>
+<div class="sec" id="l17c"><h3>Adaptive Radiation</h3>
+<div class="wb"><div class="bl">Definition</div><strong>Adaptive radiation:</strong> &alpha; greatly exceeds &Omega; = rapid speciation into diverse ecological niches. Occurs in absence of competitors.</div>
+<div class="hb"><div class="bl">Three Triggers</div><ul>
+<li><strong>New habitat:</strong> Hawaiian honeycreepers (&gt;50 spp from 1 ancestor ~5 mya). Cichlids in African Great Lakes.</li>
+<li><strong>Extinction removes competitor:</strong> Cenozoic mammal radiation after K-T eliminated dinosaurs.</li>
+<li><strong>Key innovation:</strong> Elutherodactylus frogs (direct-development eggs on land = 400+ spp). Angiosperms (flowers + insect coevolution = massive diversification in Cretaceous).</li>
+</ul></div>
+</div>
+<div class="sec" id="l17d"><h3>Mass Extinctions - The Big Five</h3>
+<table class="ct"><thead><tr><th>Event</th><th>Species Loss</th><th>Cause</th></tr></thead><tbody>
+<tr><td>End-Ordovician</td><td>86%</td><td>Glaciation, atmospheric/ocean chemistry changes</td></tr>
+<tr><td>Late Devonian</td><td>75%</td><td>Global cooling/warming, oceanic anoxia, CO2 fall</td></tr>
+<tr><td>End-Permian (Great Dying)</td><td>96%</td><td>Siberian volcanism, CO2 rise, ocean acidification, marine anoxia</td></tr>
+<tr><td>End-Triassic</td><td>80%</td><td>Elevated CO2, disruption of marine calcification</td></tr>
+<tr><td>End-Cretaceous (K-T)</td><td>76%</td><td>Chicxulub asteroid, elevated CO2, global warming</td></tr>
+</tbody></table>
+<div class="rem"><div class="rl">Sixth Extinction?</div><p>Cause: Humans. At current rate = 75% species loss within centuries. Passenger Pigeon (hunted extinct 1900s), Dodo (sailors), Gastric Brooding Frog (extinct 1980s), Moa (Maori overhunting).</p></div>
+</div>
+<div class="qb"><div class="qh">Practice</div><div class="qq">A clade starts with 40 species. 20 originate and 8 go extinct over 10 million years. Standing diversity =</div><div class="ch">
+<button class="cb" onclick="ans(this)">A. 28 species</button>
+<button class="cb" onclick="ans(this)">B. 32 species</button>
+<button class="cb" data-correct="true" onclick="ans(this)">C. 52 species</button>
+<button class="cb" onclick="ans(this)">D. 60 species</button>
+</div><div class="exp">D2 = D1 + originations - extinctions = 40 + 20 - 8 = 52 species. Simple formula but watch out: you add originations and subtract extinctions FROM the starting total.</div></div>
+
+
+</div></main>
+<div id="fc-filter" style="display:none">
+<span style="color:var(--muted);font-size:12px;font-weight:700;margin-right:4px">FILTER:</span>
+<button class="flt-btn on" onclick="filterDeck(this,'all')">All</button>
+<button class="flt-btn" onclick="filterDeck(this,'lec12')">Lec 12</button>
+<button class="flt-btn" onclick="filterDeck(this,'lec13')">Lec 13</button>
+<button class="flt-btn" onclick="filterDeck(this,'lec14')">Lec 14</button>
+<button class="flt-btn" onclick="filterDeck(this,'lec15')">Lec 15</button>
+<button class="flt-btn" onclick="filterDeck(this,'lec16')">Lec 16</button>
+<button class="flt-btn" onclick="filterDeck(this,'lec17')">Lec 17</button>
+<button class="dk-launch-all dk-launch" style="margin-left:auto" onclick="launchDeck('all')">&#9654; Study All</button>
+</div>
+<div id="fc-section">
+{fc_html}
+</div>
+<div id="dk-ov">
+<div class="dk-head"><span class="dk-title" id="dk-title">Deck</span><span id="dk-score">0 left</span><button id="dk-close" onclick="closeDeck()">X Close</button></div>
+<div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt">0/0</span></div>
+<div id="dk-card"><div id="dk-inner">
+<div id="dk-f">
+<button id="dk-speak" onclick="dkSpeak(event)">&#128266;</button>
+<div id="dk-tint-pass"></div><div id="dk-tint-miss"></div>
+<span id="dk-chip"></span><div id="dk-term"></div><div id="dk-hint">tap to flip</div>
+<div class="dk-grade-row"><button class="dk-grade dk-miss" onclick="dkGrade(false)">X Miss</button><button class="dk-grade dk-pass" onclick="dkGrade(true)">V Pass</button></div>
+</div>
+<div id="dk-b"><div id="dk-def"></div></div>
+</div></div>
+<div class="dk-nav">
+<button class="dk-btn" onclick="dkPrev()">Prev</button>
+<button class="dk-btn" id="dk-flip" onclick="dkFlip()">Flip</button>
+<button class="dk-btn" onclick="dkNext()">Next</button>
+<button class="dk-btn" onclick="dkShuffle()">Shuffle</button>
+<button class="dk-btn" onclick="dkMissedOnly()">Missed Only</button>
+</div><div id="dk-status"></div>
+</div>
+<script>
+var _s=0,_t=0;
+function ans(btn){{var q=btn.closest('.qb');if(q.dataset.done)return;q.dataset.done=1;_t++;var bs=q.querySelectorAll('.cb');bs.forEach(function(b){{b.disabled=true;if(b.dataset.correct)b.classList.add('correct');}});if(!btn.dataset.correct)btn.classList.add('wrong');else _s++;var e=q.querySelector('.exp');if(e)e.classList.add('show');document.getElementById('score-badge').textContent='Score: '+_s+' / '+_t;}}
+function setMode(m){{document.getElementById('btn-study').classList.toggle('active',m==='study');document.getElementById('btn-card').classList.toggle('active',m==='card');var mn=document.getElementById('main'),fcs=document.getElementById('fc-section'),fcf=document.getElementById('fc-filter');if(m==='study'){{mn.style.display='';fcs.style.display='none';if(fcf)fcf.style.display='none';}}else{{mn.style.display='none';fcs.style.display='block';if(fcf)fcf.style.display='flex';}}}}
+function flipTap(el){{requestAnimationFrame(function(){{el.classList.toggle('flipped');}});}}
+function filterDeck(btn,ch){{document.querySelectorAll('.flt-btn').forEach(function(b){{b.classList.remove('on');}});btn.classList.add('on');document.querySelectorAll('.fc-chapter').forEach(function(s){{s.style.display=(ch==='all'||s.dataset.ch===ch)?'':'none';}});}}
+var _deck=[],_idx=0,_missed=[],_anim=false,_pass=0,_fail=0;
+function launchDeck(ch){{var cards=[],sel=ch==='all'?'.fc2':'.fc2[data-ch="'+ch+'"]';document.querySelectorAll(sel).forEach(function(c){{cards.push({{term:c.querySelector('.ff2').innerText.replace(/\n/g,' ').trim(),def:c.querySelector('.fb2').innerText.replace(/\n/g,' ').trim(),ch:c.dataset.ch||''}});}});if(!cards.length)return;_deck=shuf(cards);_idx=0;_missed=[];_pass=0;_fail=0;document.getElementById('dk-title').textContent=ch==='all'?'All Lectures':'Lec '+ch.replace('lec','');document.getElementById('dk-ov').classList.add('show');showC();updS();}}
+function shuf(a){{var b=a.slice();for(var i=b.length-1;i>0;i--){{var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t;}}return b;}}
+function showC(){{if(!_deck.length)return;var c=_deck[_idx];document.getElementById('dk-chip').textContent=c.ch?c.ch.replace('lec','Lec '):'';document.getElementById('dk-term').textContent=c.term;document.getElementById('dk-def').textContent=c.def;document.getElementById('dk-card').classList.remove('flipped');_anim=false;var n=_deck.length,i=_idx+1;document.getElementById('dk-prog-txt').textContent=i+'/'+n;document.getElementById('dk-bar').style.width=((i/n)*100)+'%';document.getElementById('dk-status').textContent='';}}
+function updS(){{document.getElementById('dk-score').textContent=(_deck.length-_idx)+' left | '+_pass+' pass, '+_fail+' miss';}}
+function dkFlip(){{if(_anim)return;_anim=true;var c=document.getElementById('dk-card');requestAnimationFrame(function(){{c.classList.toggle('flipped');setTimeout(function(){{_anim=false;}},550);}});}}
+function dkNext(){{if(_idx<_deck.length-1){{_idx++;showC();}}else document.getElementById('dk-status').textContent='End!';}}
+function dkPrev(){{if(_idx>0){{_idx--;showC();}}}}
+function dkShuffle(){{_deck=shuf(_deck);_idx=0;_pass=0;_fail=0;showC();updS();}}
+function dkMissedOnly(){{if(!_missed.length){{document.getElementById('dk-status').textContent='No missed cards!';return;}}_deck=shuf(_missed);_missed=[];_idx=0;_pass=0;_fail=0;showC();updS();}}
+function dkGrade(pass){{var c=_deck[_idx];var tP=document.getElementById('dk-tint-pass'),tM=document.getElementById('dk-tint-miss');if(pass){{_pass++;tP.style.opacity='.5';setTimeout(function(){{tP.style.opacity='0';dkNext();}},500);}}else{{_fail++;_missed.push(c);tM.style.opacity='.5';setTimeout(function(){{tM.style.opacity='0';dkNext();}},500);}}updS();}}
+document.getElementById('dk-card').addEventListener('click',function(e){{if(e.target.closest('#dk-speak,.dk-grade,.dk-btn'))return;dkFlip();}});
+function closeDeck(){{document.getElementById('dk-ov').classList.remove('show');}}
+function dkSpeak(e){{e.stopPropagation();if(window.speechSynthesis){{speechSynthesis.cancel();var card=document.getElementById('dk-card');var text=card.classList.contains('flipped')?document.getElementById('dk-def').textContent:document.getElementById('dk-term').textContent;var utt=new SpeechSynthesisUtterance(text);utt.rate=0.9;speechSynthesis.speak(utt);}}}}
+document.addEventListener('keydown',function(e){{if(e.key==='Escape')closeDeck();if(e.key==='ArrowRight')dkNext();if(e.key==='ArrowLeft')dkPrev();if(e.key===' '){{e.preventDefault();dkFlip();}}}});
+</script>
+</div></body></html>
