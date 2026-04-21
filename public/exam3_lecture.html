@@ -69,25 +69,83 @@ h3.block-h{font:700 15px/1.3 system-ui;color:#8ec5ff;margin:18px 0 8px;text-tran
 #sbox .sres a:hover{background:#172029;color:#fff}
 #sbox .sres .hit{color:#ffd479}
 mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
-/* Flashcard mode */
-#fcmode{position:fixed;inset:0;background:#0b0f14;z-index:1000;display:none;flex-direction:column;padding:24px}
-#fcmode.on{display:flex}
-#fcmode .hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-#fcmode .stats{color:#8691a0;font:13px system-ui}
-#fcmode .close{background:#172029;color:#cfd6dc;border:1px solid #22303d;padding:6px 12px;border-radius:5px;cursor:pointer}
-#fc-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;max-width:720px;margin:0 auto;width:100%}
-#fc-card{perspective:1200px;width:100%;height:360px;cursor:pointer;margin-bottom:20px}
-#fc-inner{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
-#fc-card.flipped #fc-inner{transform:rotateY(180deg)}
-#fc-front,#fc-back{position:absolute;inset:0;backface-visibility:hidden;background:#172029;border:1px solid #2a3645;border-radius:10px;padding:30px;display:flex;align-items:center;justify-content:center;text-align:center;font:17px/1.5 system-ui;color:#e6edf3;overflow-y:auto}
-#fc-back{transform:rotateY(180deg);background:#1c2b3e;color:#cfe5ff}
-#fc-actions{display:flex;gap:8px}
-#fc-actions button{flex:1;padding:10px 14px;border-radius:6px;border:1px solid #2a3645;background:#172029;color:#cfd6dc;cursor:pointer;font:600 13px system-ui}
-#fc-actions button:hover{background:#22303d}
-#fc-actions .again{border-color:#ff6a5a;color:#ff8a7a}
-#fc-actions .hard{border-color:#e0a13c;color:#ffd479}
-#fc-actions .good{border-color:#5ab26e;color:#8ed49b}
-#fc-actions .easy{border-color:#5a8ac7;color:#8ec5ff}
+/* Flashcard section (grid view) */
+#fc-section{display:none;padding-top:8px}
+#fc-section.show{display:block}
+.fc-chapter{margin:28px 0 10px}
+.fc-chapter h3{font-size:15px;font-weight:800;color:#ffd479;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.fc-chapter h3 span{background:#ffd479;color:#000;border-radius:4px;padding:1px 8px;font-size:11px}
+.fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin-bottom:6px}
+.fc2{perspective:800px;height:120px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.fi2{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+.fc2.flipped .fi2{transform:rotateY(180deg)}
+.ff2,.fb2{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 12px;text-align:center;line-height:1.45}
+.ff2{background:#1a1500;border:1.5px solid #ffd479;color:#ffd479;font-size:11px;font-weight:600}
+.ff2 .chip{font-size:9px;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:4px}
+.fb2{background:#0d2216;border:1.5px solid #5ab26e;color:#b5f5c8;font-size:11px;transform:rotateY(180deg)}
+.fb2 .verdict{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#5ab26e;opacity:.8;margin-bottom:3px}
+/* Filter bar */
+#fc-filter{display:none;flex-wrap:wrap;gap:8px;padding:0 0 14px;align-items:center}
+#fc-filter.show{display:flex}
+.flt-btn{padding:4px 12px;border-radius:14px;border:1px solid #2a3a4a;background:#172029;color:#8691a0;font-size:12px;cursor:pointer;transition:all .2s}
+.flt-btn.on{border-color:#ffd479;color:#ffd479;background:#1a1500}
+/* Deck Overlay */
+#dk-ov{display:none;position:fixed;inset:0;background:rgba(7,9,13,.97);z-index:9999;flex-direction:column;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+#dk-ov.show{display:flex}
+#dk-card{width:min(500px,92vw);perspective:1000px;cursor:pointer;margin:14px 0}
+#dk-inner{position:relative;width:100%;height:270px;transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+#dk-card.flipped #dk-inner{transform:rotateY(180deg)}
+#dk-f,#dk-b{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px;text-align:center}
+#dk-f{background:#131a22;border:2px solid #22303d}
+#dk-b{background:#0d2216;border:2px solid #5ab26e;transform:rotateY(180deg)}
+#dk-chip{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#8691a0;margin-bottom:10px}
+#dk-term{font-size:17px;font-weight:700;color:#cfd6dc;line-height:1.45;overflow:auto;max-height:170px}
+#dk-hint{font-size:11px;color:#8691a0;margin-top:12px;opacity:.6}
+#dk-def{font-size:13px;color:#b5f5c8;line-height:1.7;overflow:auto;max-height:210px}
+.dk-head{width:min(500px,92vw);display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.dk-title{font-size:11px;font-weight:700;color:#ffd479;flex:1;text-transform:uppercase;letter-spacing:.8px}
+#dk-close{background:none;border:1.5px solid #22303d;color:#8691a0;font-size:13px;cursor:pointer;padding:5px 12px;border-radius:20px;transition:all .2s;font-weight:600}
+#dk-close:hover{border-color:#ff6a5a;color:#ff6a5a}
+.dk-prog-wrap{width:min(500px,92vw);display:flex;align-items:center;gap:10px;margin:8px 0 0}
+.dk-bar-bg{flex:1;height:3px;background:#22303d;border-radius:2px}
+.dk-bar-fill{height:100%;background:#ffd479;border-radius:2px;transition:width .3s;min-width:4px}
+#dk-prog-txt{font-size:11px;color:#8691a0;white-space:nowrap;min-width:50px;text-align:right}
+.dk-nav{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+.dk-btn{padding:9px 20px;border-radius:20px;border:1.5px solid #22303d;background:#172029;color:#8691a0;font-size:13px;cursor:pointer;transition:all .2s;font-weight:600}
+.dk-btn:hover{border-color:#ffd479;color:#ffd479}
+#dk-flip{background:#ffd479;color:#000;border-color:#ffd479}
+#dk-flip:hover{background:#e6be6a;border-color:#e6be6a}
+#dk-status{font-size:11px;color:#8691a0;margin-top:8px;height:16px;text-align:center}
+#dk-launch-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#0f151c;border:1px solid #22303d;border-radius:10px;margin-bottom:14px;flex-wrap:wrap}
+#dk-launch-bar>span{color:#8691a0;font-size:12px;margin-right:4px}
+.dk-launch{padding:6px 14px;border-radius:20px;border:1.5px solid #22303d;background:#172029;color:#8691a0;font-size:12px;cursor:pointer;font-weight:600;transition:all .2s;white-space:nowrap}
+.dk-launch:hover{border-color:#ffd479;color:#ffd479}
+.dk-launch-all{border-color:#ffd479;color:#ffd479}
+.dk-launch-all:hover{background:#ffd479;color:#000}
+#dk-card{will-change:transform;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+#dk-tint-pass,#dk-tint-miss{position:absolute;inset:0;border-radius:18px;pointer-events:none;opacity:0;transition:opacity .12s linear;z-index:3}
+#dk-tint-pass{background:linear-gradient(135deg,rgba(90,178,110,.5),rgba(90,178,110,.15))}
+#dk-tint-miss{background:linear-gradient(135deg,rgba(255,106,90,.5),rgba(255,106,90,.15))}
+#dk-stamp-pass,#dk-stamp-miss{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%) scale(.3) rotate(-12deg);font-size:52px;font-weight:900;letter-spacing:5px;padding:6px 22px;border:5px solid;border-radius:10px;opacity:0;pointer-events:none;z-index:4;font-family:"Arial Black","Helvetica Neue",sans-serif}
+#dk-stamp-pass{color:#5ab26e;border-color:#5ab26e;text-shadow:0 0 10px rgba(90,178,110,.6)}
+#dk-stamp-miss{color:#ff6a5a;border-color:#ff6a5a;text-shadow:0 0 10px rgba(255,106,90,.6)}
+#dk-stamp-pass.show,#dk-stamp-miss.show{animation:dkStamp .45s cubic-bezier(.34,1.56,.64,1) forwards}
+@keyframes dkStamp{0%{transform:translate(-50%,-50%) scale(.3) rotate(-12deg);opacity:0}60%{transform:translate(-50%,-50%) scale(1.15) rotate(-8deg);opacity:1}100%{transform:translate(-50%,-50%) scale(1) rotate(-6deg);opacity:.95}}
+#dk-speak{position:absolute;top:12px;right:12px;background:rgba(255,212,121,.14);border:1.5px solid #ffd479;color:#ffd479;width:36px;height:36px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;z-index:2;padding:0;line-height:1}
+#dk-speak:hover{background:#ffd479;color:#000;transform:scale(1.08)}
+#dk-speak.speaking{animation:dkPulse .9s infinite;background:#ffd479;color:#000}
+@keyframes dkPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,212,121,.7)}50%{box-shadow:0 0 0 10px rgba(255,212,121,0)}}
+.dk-grade-row{position:absolute;bottom:14px;left:14px;right:14px;display:flex;gap:10px;z-index:2}
+.dk-grade{flex:1;padding:11px 8px;border-radius:10px;border:2px solid;font-size:14px;font-weight:700;cursor:pointer;transition:all .15s;background:transparent;font-family:inherit}
+.dk-miss{color:#ff6a5a;border-color:#ff6a5a}
+.dk-miss:hover{background:#ff6a5a;color:#fff}
+.dk-pass{color:#5ab26e;border-color:#5ab26e}
+.dk-pass:hover{background:#5ab26e;color:#000}
+#dk-score{font-size:11px;color:#8691a0;background:#172029;border:1px solid #22303d;padding:4px 10px;border-radius:20px;font-weight:600;white-space:nowrap}
+#dk-score .sp{color:#5ab26e}
+#dk-score .sm{color:#ff6a5a}
+#dk-score .sk{color:#ffd479;margin-left:6px}
+@media(max-width:520px){#dk-ov{padding:10px 8px}#dk-inner{height:230px}#dk-f,#dk-b{padding:18px 14px 56px}#dk-term{font-size:15px}#dk-def{font-size:12px;max-height:140px}.dk-btn{padding:10px 12px;font-size:12px;flex:1}#dk-launch-bar{padding:6px 10px;gap:5px}.dk-launch{padding:5px 10px;font-size:11px}.dk-head{flex-wrap:wrap}#dk-stamp-pass,#dk-stamp-miss{font-size:38px;padding:4px 16px;letter-spacing:3px}#dk-speak{width:32px;height:32px;font-size:14px;top:8px;right:8px}.dk-grade{padding:9px 6px;font-size:13px}.dk-grade-row{bottom:10px;left:10px;right:10px;gap:8px}#dk-score{font-size:10px;padding:3px 8px}}
 @media(max-width:800px){.wrap{grid-template-columns:1fr}.side{position:static;height:auto}.main{padding:18px}}
 </style>
 </head>
@@ -96,7 +154,8 @@ mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
   <aside class="side">
     <div class="brand">BIOL 4230 — Exam 3<span class="sub">Verbatim study guide · Chapters 3, 4, 8, 13, 14, 17, 18</span></div>
     <div class="modebar">
-      <button onclick="openFC()" title="Flashcards (F)">Flashcards</button>
+      <button id="btn-study" class="on" onclick="setLMode('study')" title="Study mode">Study</button>
+      <button id="btn-card" onclick="setLMode('card')" title="Flashcard grid">Flashcards</button>
       <button onclick="openSearch()" title="Search (Ctrl+K)">Search</button>
     </div>
     <div class="search-hint"><kbd>Ctrl</kbd>+<kbd>K</kbd> search · <kbd>F</kbd> flashcards · <kbd>Esc</kbd> close</div>
@@ -112,6 +171,9 @@ mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
     </div>
   </aside>
   <main class="main">
+    <div id="fc-filter"></div>
+    <div id="fc-section"></div>
+    <div id="main-study">
     <h1 class="page-title">Evolution (BIOL 4230) — Exam 3 Study Guide
       <span class="sub">Verbatim source: 76 pages · 138 figures · every sentence preserved · OCR'd text included for image-only pages</span>
     </h1>
@@ -5344,32 +5406,13 @@ that contribute to evolutionary changes
 \</pre>
 </figure>
 </div>
+    </div><!-- #main-study -->
   </main>
 </div>
 
 <div id="sbox"><input id="sinput" placeholder="Search verbatim content…" autocomplete="off"><div class="sres" id="sres"></div></div>
 
-<div id="fcmode">
-  <div class="hdr">
-    <div class="stats" id="fc-stats">0 / 0</div>
-    <div style="display:flex;gap:8px">
-      <button class="close" onclick="fcShuffle()">Shuffle</button>
-      <button class="close" onclick="closeFC()">Close</button>
-    </div>
-  </div>
-  <div id="fc-wrap">
-    <div id="fc-card" onclick="fcFlip()"><div id="fc-inner">
-      <div id="fc-front">Click Flashcards to begin</div>
-      <div id="fc-back"></div>
-    </div></div>
-    <div id="fc-actions">
-      <button class="again" onclick="fcGrade(1)">Again</button>
-      <button class="hard" onclick="fcGrade(2)">Hard</button>
-      <button class="good" onclick="fcGrade(3)">Good</button>
-      <button class="easy" onclick="fcGrade(4)">Easy</button>
-    </div>
-  </div>
-</div>
+
 
 <script>
 const FLASH = [
@@ -5657,65 +5700,245 @@ document.querySelectorAll('.tl-era').forEach(el => {
   });
 });
 
-// --- Flashcards ---
-let fcDeck=[], fcIdx=0, fcShow='front', fcStats={again:0,hard:0,good:0,easy:0};
-function openFC(){
-  fcDeck = [...FLASH];
-  fcShuffle();
-  fcIdx = 0; fcStats={again:0,hard:0,good:0,easy:0};
-  document.getElementById('fcmode').classList.add('on');
-  fcRender();
+// --- Mode toggle ---
+const SEC_META = {
+  s1:{label:'History of Life',chip:'S1'},
+  s2:{label:'Phylogenetics',chip:'S2'},
+  s3:{label:'Species & Speciation',chip:'S3'},
+  s4:{label:'Biogeography & Extinction',chip:'S4'},
+  s5:{label:'Conservation & Humans',chip:'S5'},
+  s6:{label:'Human Evolution',chip:'S6'},
+  s7:{label:'Evolutionary Medicine',chip:'S7'}
+};
+function buildFcSection(){
+  const section = document.getElementById('fc-section');
+  const filter = document.getElementById('fc-filter');
+  if(section.dataset.built) return;
+  section.dataset.built = '1';
+  // Group cards by section
+  const bySec = {};
+  FLASH.forEach(c => { (bySec[c.sec] = bySec[c.sec]||[]).push(c); });
+  // Build filter bar
+  let fhtml = '<button class="flt-btn on" onclick="filterLCards(this,'all')">All (' + FLASH.length + ')</button>';
+  Object.keys(SEC_META).forEach(s => {
+    if(!bySec[s]) return;
+    const m = SEC_META[s];
+    fhtml += '<button class="flt-btn" onclick="filterLCards(this,''+s+'')">' + m.chip + ' — ' + m.label + ' (' + bySec[s].length + ')</button>';
+  });
+  filter.innerHTML = fhtml;
+  filter.classList.add('show');
+  // Build card grid
+  let html = '';
+  Object.keys(SEC_META).forEach(s => {
+    if(!bySec[s]) return;
+    const m = SEC_META[s];
+    html += '<div class="fc-chapter" data-ch="'+s+'"><h3>'+m.label+'<span>'+bySec[s].length+' cards</span></h3><div class="fc-grid">';
+    bySec[s].forEach(c => {
+      const esc = t => t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      html += '<div class="fc2" data-ch="'+s+'" onclick="this.classList.toggle('flipped')">'
+        + '<div class="fi2">'
+        + '<div class="ff2"><div class="chip">'+m.chip+'</div>'+esc(c.q)+'</div>'
+        + '<div class="fb2"><div class="verdict">Answer</div>'+esc(c.a)+'</div>'
+        + '</div></div>';
+    });
+    html += '</div></div>';
+  });
+  section.innerHTML = html;
 }
-function closeFC(){
-  document.getElementById('fcmode').classList.remove('on');
-  const c = document.getElementById('fc-card'); c.classList.remove('flipped');
+function filterLCards(btn, ch){
+  document.querySelectorAll('.flt-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.fc-chapter').forEach(el => {
+    el.style.display = (ch==='all' || el.dataset.ch===ch) ? '' : 'none';
+  });
 }
-function fcShuffle(){
-  for(let i=fcDeck.length-1;i>0;i--){
-    const j = Math.floor(Math.random()*(i+1));
-    [fcDeck[i], fcDeck[j]] = [fcDeck[j], fcDeck[i]];
+function setLMode(mode){
+  const study = document.getElementById('main-study');
+  const fc = document.getElementById('fc-section');
+  const filter = document.getElementById('fc-filter');
+  const btnS = document.getElementById('btn-study');
+  const btnC = document.getElementById('btn-card');
+  if(mode === 'card'){
+    buildFcSection();
+    study.style.display = 'none';
+    fc.classList.add('show');
+    btnC.classList.add('on'); btnS.classList.remove('on');
+  } else {
+    study.style.display = '';
+    fc.classList.remove('show');
+    btnS.classList.add('on'); btnC.classList.remove('on');
   }
-  fcIdx = 0; fcRender();
-}
-function fcFlip(){
-  document.getElementById('fc-card').classList.toggle('flipped');
-}
-function fcRender(){
-  if(fcIdx >= fcDeck.length){
-    document.getElementById('fc-front').textContent = 'Done! ' + fcStats.good + ' good, ' + fcStats.easy + ' easy, ' + fcStats.hard + ' hard, ' + fcStats.again + ' again.';
-    document.getElementById('fc-back').textContent = 'Click Shuffle to restart.';
-    document.getElementById('fc-stats').textContent = fcDeck.length + ' / ' + fcDeck.length;
-    return;
-  }
-  const c = fcDeck[fcIdx];
-  document.getElementById('fc-front').textContent = c.q;
-  document.getElementById('fc-back').textContent = c.a;
-  document.getElementById('fc-stats').textContent = (fcIdx+1) + ' / ' + fcDeck.length + ' · ' + (c.sec||'').toUpperCase();
-  document.getElementById('fc-card').classList.remove('flipped');
-}
-function fcGrade(g){
-  const key = ['','again','hard','good','easy'][g];
-  fcStats[key]++;
-  if(g === 1) fcDeck.push(fcDeck[fcIdx]); // again → requeue
-  fcIdx++;
-  fcRender();
 }
 
-// --- Keyboard shortcuts ---
-document.addEventListener('keydown', e => {
-  if((e.ctrlKey || e.metaKey) && e.key === 'k'){ e.preventDefault(); openSearch(); return; }
-  if(e.key === 'Escape'){ closeSearch(); closeFC(); return; }
-  if(document.activeElement && document.activeElement.id === 'sinput') return;
-  if(e.key === 'f' || e.key === 'F'){ openFC(); return; }
-  // Flashcard mode
-  const fcOn = document.getElementById('fcmode').classList.contains('on');
-  if(!fcOn) return;
-  if(e.key === ' '){ e.preventDefault(); fcFlip(); }
-  else if(e.key === '1'){ fcGrade(1); }
-  else if(e.key === '2'){ fcGrade(2); }
-  else if(e.key === '3'){ fcGrade(3); }
-  else if(e.key === '4'){ fcGrade(4); }
-});
+// --- Deck engine (v6: audio + swipe + pass/miss grading) ---
+(function(){
+  document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><span id="dk-score"></span><button id="dk-close" onclick="dkClose()">Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span></div><div id="dk-card"><div id="dk-inner"><div id="dk-f"><button id="dk-speak" title="Read aloud (S)" aria-label="Read aloud">&#x1F50A;</button><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip &middot; swipe right = pass &middot; left = miss</div></div><div id="dk-b"><div id="dk-def"></div><div class="dk-grade-row"><button class="dk-grade dk-miss" id="dk-miss-btn">&#x2717; Miss</button><button class="dk-grade dk-pass" id="dk-pass-btn">&#x2713; Pass</button></div></div></div><div id="dk-tint-pass"></div><div id="dk-tint-miss"></div><div id="dk-stamp-pass">PASS</div><div id="dk-stamp-miss">MISS</div></div><div class="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">&larr; Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next &rarr;</button><button class="dk-btn" onclick="dkShuffle()">Shuffle</button></div><div id="dk-status"></div></div>');
+  var _deck=[],_idx=0,_score={pass:0,miss:0,streak:0,best:0};
+  var _touch={sx:0,sy:0,dx:0,dy:0,active:false,moved:false};
+  var _animating=false;
+  function $(id){return document.getElementById(id);}
+  function buildDeckFromFlash(filter){
+    _deck=[];
+    FLASH.forEach(function(c){
+      if(filter!=='all'&&c.sec!==filter)return;
+      var m=SEC_META[c.sec]||{chip:c.sec.toUpperCase()};
+      _deck.push({chip:m.chip,term:c.q,def:c.a});
+    });
+  }
+  function updateDkScore(){
+    var s=$('dk-score');if(!s)return;
+    var total=_score.pass+_score.miss;
+    s.innerHTML=total?'<span class="sp">&#x2713;'+_score.pass+'</span> &middot; <span class="sm">&#x2717;'+_score.miss+'</span><span class="sk"> &#x1F525;'+_score.streak+'</span>':'';
+  }
+  window.dkOpen=function(filter){
+    buildDeckFromFlash(filter||'all');if(!_deck.length)return;_idx=0;
+    _score={pass:0,miss:0,streak:0,best:0};updateDkScore();
+    var label=filter==='all'?'All Cards — '+_deck.length+' cards':(SEC_META[filter]?SEC_META[filter].label:filter);
+    $('dk-title').textContent=label;
+    dkRender();$('dk-ov').classList.add('show');document.body.style.overflow='hidden';
+  };
+  window.dkClose=function(){window.speechSynthesis&&window.speechSynthesis.cancel();$('dk-ov').classList.remove('show');document.body.style.overflow='';resetCardTransform();};
+  window.dkFlip=function(){if(_animating)return;var c=$('dk-card');requestAnimationFrame(function(){c.classList.toggle('flipped');});};
+  window.dkNav=function(dir){if(_animating)return;_idx=(_idx+dir+_deck.length)%_deck.length;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);};
+  window.dkShuffle=function(){
+    for(var i=_deck.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=_deck[i];_deck[i]=_deck[j];_deck[j]=t;}
+    _idx=0;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);
+    $('dk-status').textContent='Shuffled!';setTimeout(function(){$('dk-status').textContent='';},1400);
+  };
+  function resetCardTransform(){
+    var card=$('dk-card');card.style.transition='';card.style.transform='';card.style.opacity='';
+    $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
+  }
+  function dkRender(){
+    var c=_deck[_idx];
+    $('dk-chip').textContent=c.chip;
+    $('dk-term').textContent=c.term;
+    $('dk-def').textContent=c.def;
+    $('dk-bar').style.width=((_idx+1)/_deck.length*100)+'%';
+    $('dk-prog-txt').textContent=(_idx+1)+' / '+_deck.length;
+    $('dk-card').classList.remove('flipped');
+    resetCardTransform();
+  }
+  window.dkSpeak=function(){
+    if(!window.speechSynthesis||!_deck.length)return;
+    var c=_deck[_idx];if(!c)return;
+    var text=c.term.replace(/\s+/g,' ').trim();if(!text)return;
+    window.speechSynthesis.cancel();
+    var btn=$('dk-speak');btn.classList.add('speaking');
+    setTimeout(function(){
+      var u=new SpeechSynthesisUtterance(text);
+      u.rate=0.95;u.pitch=1;u.lang='en-US';
+      u.onend=function(){btn.classList.remove('speaking');};
+      u.onerror=function(){btn.classList.remove('speaking');};
+      window.speechSynthesis.speak(u);
+    },50);
+  };
+  window.flashGrade=function(pass){
+    if(_animating||!_deck.length)return;
+    _animating=true;
+    _score[pass?'pass':'miss']++;
+    _score.streak=pass?_score.streak+1:0;
+    if(_score.streak>_score.best)_score.best=_score.streak;
+    var card=$('dk-card');
+    var stamp=$(pass?'dk-stamp-pass':'dk-stamp-miss');
+    stamp.classList.add('show');
+    $(pass?'dk-tint-pass':'dk-tint-miss').style.opacity='1';
+    card.style.transition='transform .4s cubic-bezier(.4,0,.2,1), opacity .4s ease';
+    card.style.transform='translateX('+(pass?140:-140)+'%) rotate('+(pass?22:-22)+'deg)';
+    card.style.opacity='0';
+    setTimeout(function(){
+      stamp.classList.remove('show');
+      _idx=(_idx+1)%_deck.length;
+      card.classList.remove('flipped');
+      card.style.transition='none';
+      card.style.transform='translateX(0) rotate(0)';
+      card.style.opacity='0';
+      $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
+      setTimeout(function(){
+        dkRender();
+        card.style.transition='transform .3s ease, opacity .3s ease';
+        card.style.opacity='1';
+        updateDkScore();
+        _animating=false;
+      },30);
+    },400);
+  };
+  function pxy(e){var t=e.touches&&e.touches[0]?e.touches[0]:(e.changedTouches&&e.changedTouches[0]?e.changedTouches[0]:e);return{x:t.clientX,y:t.clientY};}
+  function dkStart(e){
+    if(_animating)return;
+    if(e.target.closest('#dk-speak,.dk-grade,.dk-btn'))return;
+    var p=pxy(e);_touch.sx=p.x;_touch.sy=p.y;_touch.dx=0;_touch.dy=0;_touch.active=true;_touch.moved=false;
+    var card=$('dk-card');card.style.transition='none';
+  }
+  function dkMove(e){
+    if(!_touch.active)return;
+    var p=pxy(e);_touch.dx=p.x-_touch.sx;_touch.dy=p.y-_touch.sy;
+    if(Math.abs(_touch.dx)>12||Math.abs(_touch.dy)>12)_touch.moved=true;
+    if(Math.abs(_touch.dy)>Math.abs(_touch.dx)*1.5)return;
+    var card=$('dk-card');
+    var rot=_touch.dx/22;
+    card.style.transform='translateX('+_touch.dx+'px) rotate('+rot+'deg)';
+    $('dk-tint-pass').style.opacity=Math.min(Math.max(_touch.dx/120,0),.85);
+    $('dk-tint-miss').style.opacity=Math.min(Math.max(-_touch.dx/120,0),.85);
+  }
+  function dkEnd(e){
+    if(!_touch.active)return;
+    _touch.active=false;
+    var card=$('dk-card');
+    if(Math.abs(_touch.dx)>60&&Math.abs(_touch.dy)<Math.abs(_touch.dx)*1.5){
+      flashGrade(_touch.dx>0);
+    }else{
+      card.style.transition='transform .25s ease, opacity .25s ease';
+      card.style.transform='';
+      $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
+      if(!_touch.moved&&!e.target.closest('#dk-speak,.dk-grade,.dk-btn,.dk-launch,#dk-close'))dkFlip();
+    }
+    _touch.dx=0;_touch.dy=0;_touch.moved=false;
+  }
+  var cardEl=$('dk-card');
+  var _touchGuard=0;
+  cardEl.addEventListener('touchstart',dkStart,{passive:true});
+  cardEl.addEventListener('touchmove',dkMove,{passive:true});
+  cardEl.addEventListener('touchend',function(e){_touchGuard=Date.now();dkEnd(e);});
+  cardEl.addEventListener('touchcancel',function(){_touch.active=false;resetCardTransform();});
+  cardEl.addEventListener('mousedown',function(e){if(Date.now()-_touchGuard<600)return;dkStart(e);});
+  document.addEventListener('mousemove',function(e){if(_touch.active)dkMove(e);});
+  document.addEventListener('mouseup',function(e){if(_touch.active)dkEnd(e);});
+  $('dk-speak').addEventListener('click',function(e){e.stopPropagation();dkSpeak();});
+  $('dk-pass-btn').addEventListener('click',function(e){e.stopPropagation();flashGrade(true);});
+  $('dk-miss-btn').addEventListener('click',function(e){e.stopPropagation();flashGrade(false);});
+  // Auto-open deck when entering card mode via F key or from sidebar
+  // Keyboard
+  document.addEventListener('keydown',function(e){
+    if(document.activeElement&&document.activeElement.id==='sinput')return;
+    var deckOpen=$('dk-ov').classList.contains('show');
+    if(e.key==='Escape'){closeSearch();if(deckOpen)dkClose();return;}
+    if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();openSearch();return;}
+    if(!deckOpen){
+      if(e.key==='f'||e.key==='F'){dkOpen('all');return;}
+      return;
+    }
+    if(e.key===' '||e.key==='Enter'){e.preventDefault();dkFlip();}
+    else if(e.key==='ArrowRight'||e.key==='d'||e.key==='D'||e.key==='p'||e.key==='P'){e.preventDefault();flashGrade(true);}
+    else if(e.key==='ArrowLeft'||e.key==='a'||e.key==='A'||e.key==='m'||e.key==='M'){e.preventDefault();flashGrade(false);}
+    else if(e.key==='ArrowUp')dkNav(-1);
+    else if(e.key==='ArrowDown')dkNav(1);
+    else if(e.key==='s'||e.key==='S')dkSpeak();
+  });
+  // Build a quick-launch bar above fc-section
+  document.addEventListener('DOMContentLoaded',function(){});
+  // Add "Open Deck" quick-launch button to sidebar modebar
+  setTimeout(function(){
+    var mb=document.querySelector('.modebar');
+    if(mb){
+      var b=document.createElement('button');
+      b.textContent='Practice Deck';
+      b.title='Open flashcard deck (F)';
+      b.onclick=function(){dkOpen('all');};
+      mb.appendChild(b);
+    }
+  },0);
+})();
 </script>
 </body>
 </html>
