@@ -5719,11 +5719,11 @@ function buildFcSection(){
   const bySec = {};
   FLASH.forEach(c => { (bySec[c.sec] = bySec[c.sec]||[]).push(c); });
   // Build filter bar
-  let fhtml = '<button class="flt-btn on" onclick="filterLCards(this,'all')">All (' + FLASH.length + ')</button>';
+  let fhtml = `<button class="flt-btn on" onclick="filterLCards(this,'all')">All (${FLASH.length})</button>`;
   Object.keys(SEC_META).forEach(s => {
     if(!bySec[s]) return;
     const m = SEC_META[s];
-    fhtml += '<button class="flt-btn" onclick="filterLCards(this,''+s+'')">' + m.chip + ' — ' + m.label + ' (' + bySec[s].length + ')</button>';
+    fhtml += `<button class="flt-btn" onclick="filterLCards(this,'${s}')">${m.chip} — ${m.label} (${bySec[s].length})</button>`;
   });
   filter.innerHTML = fhtml;
   filter.classList.add('show');
@@ -5735,11 +5735,7 @@ function buildFcSection(){
     html += '<div class="fc-chapter" data-ch="'+s+'"><h3>'+m.label+'<span>'+bySec[s].length+' cards</span></h3><div class="fc-grid">';
     bySec[s].forEach(c => {
       const esc = t => t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-      html += '<div class="fc2" data-ch="'+s+'" onclick="this.classList.toggle('flipped')">'
-        + '<div class="fi2">'
-        + '<div class="ff2"><div class="chip">'+m.chip+'</div>'+esc(c.q)+'</div>'
-        + '<div class="fb2"><div class="verdict">Answer</div>'+esc(c.a)+'</div>'
-        + '</div></div>';
+      html += `<div class="fc2" data-ch="${s}" onclick="this.classList.toggle('flipped')"><div class="fi2"><div class="ff2"><div class="chip">${m.chip}</div>${esc(c.q)}</div><div class="fb2"><div class="verdict">Answer</div>${esc(c.a)}</div></div></div>`;
     });
     html += '</div></div>';
   });
