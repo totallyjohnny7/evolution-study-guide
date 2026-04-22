@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<meta name="theme-color" content="#0a0a0a">
+<title>Visual Study Tools — Evolution BIOL 4230</title>
+<style>
+:root{--bg:#0a0a0a;--card:#151515;--muted:#9aa0a6;--text:#e8e8e8;--gold:#f5c542;--gold2:#ffd95c;--green:#22c55e;--red:#ef4444;--amber:#f59e0b;--border:#2a2a2a;--ease:cubic-bezier(.4,0,.2,1)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:0 0 80px}
+
+/* Header */
+.top-bar{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(10,10,10,.95);backdrop-filter:blur(12px);z-index:20}
+.back-link{color:var(--muted);font-size:13px;text-decoration:none;padding:8px 12px;border:1px solid var(--border);border-radius:8px;transition:color .15s}
+.back-link:hover{color:var(--gold)}
+.page-title{font-size:16px;font-weight:700;color:var(--gold)}
+.page-sub{font-size:12px;color:var(--muted);margin-left:auto}
+
+/* Tab bar */
+.tabs{display:flex;gap:6px;padding:16px 20px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tabs button{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:9px 18px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:inherit;transition:all .15s}
+.tabs button.on{background:rgba(245,197,66,.12);border-color:rgba(245,197,66,.45);color:var(--gold)}
+
+/* Activity container */
+.activities{padding:20px}
+.activity{display:none;animation:fadein .25s var(--ease)}
+.activity.on{display:block}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* Activity card */
+.act-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:22px}
+.act-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.act-title{font-size:17px;font-weight:700;color:var(--gold)}
+.act-score{background:#1a1a1a;border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;color:var(--muted);white-space:nowrap;transition:all .2s}
+.act-score.done{border-color:var(--green);color:var(--green);background:rgba(34,197,94,.08)}
+.act-reset{background:transparent;border:1px solid var(--border);color:var(--muted);font-size:11px;padding:5px 12px;border-radius:14px;cursor:pointer;font-family:inherit;margin-left:6px}
+.act-reset:hover{border-color:#555;color:var(--text)}
+
+/* ── VENN DIAGRAM ── */
+.venn-wrap{margin-bottom:14px}
+.venn-labels{display:flex;justify-content:space-between;margin-bottom:8px;gap:8px}
+.venn-lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);flex:1;text-align:center}
+.venn-lbl.left{color:#60a5fa}
+.venn-lbl.both{color:var(--gold)}
+.venn-lbl.right{color:#a78bfa}
+.venn-zones{display:grid;grid-template-columns:1fr 0.85fr 1fr;gap:8px;min-height:120px}
+.venn-zone{border:2px dashed #2a2a2a;border-radius:12px;padding:10px 8px;min-height:110px;display:flex;flex-direction:column;gap:6px;transition:border-color .15s,background .15s;position:relative}
+.venn-zone.left{border-color:rgba(96,165,250,.3);background:rgba(96,165,250,.03)}
+.venn-zone.both{border-color:rgba(245,197,66,.3);background:rgba(245,197,66,.03)}
+.venn-zone.right{border-color:rgba(167,139,250,.3);background:rgba(167,139,250,.03)}
+.venn-zone.accepting{border-style:solid;background:rgba(245,197,66,.07);border-color:var(--gold)}
+.venn-zone-lbl{font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);text-align:center;margin-bottom:2px}
+@media(max-width:600px){.venn-zones{grid-template-columns:1fr;gap:6px}.venn-zone{min-height:60px}}
+
+/* Pool */
+.pool-label{font-size:11px;color:var(--muted);margin:12px 0 6px;text-transform:uppercase;letter-spacing:.8px}
+.chip-pool{display:flex;flex-wrap:wrap;gap:7px;min-height:40px;padding:6px;border:1px solid var(--border);border-radius:10px;background:#0d0d0d}
+
+/* Chips */
+.chip{display:inline-flex;align-items:center;gap:6px;background:#1a1a1a;border:1.5px solid var(--border);border-radius:20px;padding:7px 13px;font-size:13px;cursor:pointer;user-select:none;transition:all .15s var(--ease);line-height:1.3;max-width:100%}
+.chip:hover{border-color:#555}
+.chip.selected{border-color:var(--gold);background:rgba(245,197,66,.1);color:var(--gold)}
+.chip.correct.left{border-color:#60a5fa;background:rgba(96,165,250,.12);color:#bfdbfe;cursor:default}
+.chip.correct.both{border-color:var(--green);background:rgba(34,197,94,.1);color:#d0f0d8;cursor:default}
+.chip.correct.right{border-color:#a78bfa;background:rgba(167,139,250,.12);color:#ddd6fe;cursor:default}
+.chip.wrong{border-color:var(--red);background:rgba(239,68,68,.08);animation:shake .32s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
+/* ── CATEGORY SORTER ── */
+.sorter-buckets{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.bucket{flex:1;min-width:140px;border:2px dashed var(--border);border-radius:12px;padding:10px;min-height:80px;display:flex;flex-direction:column;gap:6px;transition:all .15s}
+.bucket.accepting{border-style:solid;border-color:var(--gold);background:rgba(245,197,66,.05)}
+.bucket-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;margin-bottom:4px;text-align:center}
+.bucket:nth-child(1) .bucket-lbl{color:#60a5fa}
+.bucket:nth-child(2) .bucket-lbl{color:#a78bfa}
+.bucket:nth-child(3) .bucket-lbl{color:#34d399}
+.bucket:nth-child(4) .bucket-lbl{color:#fb923c}
+@media(max-width:500px){.sorter-buckets{flex-direction:column}}
+
+/* Completion banner */
+.complete-banner{display:none;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.3);border-radius:10px;padding:12px 16px;text-align:center;color:var(--green);font-weight:700;margin-top:10px;animation:fadein .3s}
+.complete-banner.show{display:block}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="/" class="back-link">← Home</a>
+  <span class="page-title">🧬 Visual Study Tools</span>
+  <span class="page-sub">BIOL 4230 — Evolution</span>
+</div>
+
+<div class="tabs">
+  <button class="on" onclick="switchTab('venns',this)">Venn Diagrams</button>
+  <button onclick="switchTab('sorters',this)">Category Sorters</button>
+  <button onclick="switchTab('pairs',this)">Concept Pairs</button>
+</div>
+
+<div class="activities">
+
+<!-- ═══════════════ VENN DIAGRAMS ═══════════════ -->
+<div class="activity on" id="tab-venns"></div>
+
+<!-- ═══════════════ CATEGORY SORTERS ═══════════════ -->
+<div class="activity" id="tab-sorters"></div>
+
+<!-- ═══════════════ CONCEPT PAIRS (true/false "does it belong") ═══════════════ -->
+<div class="activity" id="tab-pairs"></div>
+
+</div>
+
+<script>
+/* ─── Tab switching ─── */
+function switchTab(id, btn){
+  document.querySelectorAll('.activity').forEach(function(a){a.classList.remove('on');});
+  document.querySelector('#tab-'+id).classList.add('on');
+  document.querySelectorAll('.tabs button').forEach(function(b){b.classList.remove('on');});
+  btn.classList.add('on');
+}
+
+/* ─────────────────────────────────────
+   DATA
+───────────────────────────────────── */
+var VENNS = [
+  {
+    id:'vn1', title:'Natural Selection vs. Genetic Drift',
+    left:'Natural Selection Only', both:'Both Mechanisms', right:'Genetic Drift Only',
+    items:[
+      {t:'Adapts populations to environment',z:'left'},
+      {t:'Directional — favors specific phenotypes',z:'left'},
+      {t:'Stronger in LARGE populations',z:'left'},
+      {t:'Produces mimicry, camouflage, warning coloration',z:'left'},
+      {t:'Eliminates unfit alleles over time',z:'left'},
+      {t:'Peppered moth industrial melanism',z:'left'},
+      {t:'Changes allele frequencies each generation',z:'both'},
+      {t:'Acts on existing heritable variation',z:'both'},
+      {t:'Causes evolution',z:'both'},
+      {t:'Can reduce genetic diversity',z:'both'},
+      {t:'Operates in every real population',z:'both'},
+      {t:'Random — no fitness component',z:'right'},
+      {t:'Stronger in SMALL populations',z:'right'},
+      {t:'Founder effect',z:'right'},
+      {t:'Bottleneck effect',z:'right'},
+      {t:'Can fix deleterious alleles',z:'right'},
+      {t:'Can eliminate beneficial alleles by chance',z:'right'},
+    ]
+  },
+  {
+    id:'vn2', title:'Allopatric vs. Sympatric Speciation',
+    left:'Allopatric Only', both:'Both Modes', right:'Sympatric Only',
+    items:[
+      {t:'Requires a geographic barrier',z:'left'},
+      {t:'Most common mode in animals',z:'left'},
+      {t:'Kaibab vs. Abert\'s squirrels (Grand Canyon)',z:'left'},
+      {t:'Gene flow severed by physical distance',z:'left'},
+      {t:'Island colonization (Galápagos finches)',z:'left'},
+      {t:'Divergence occurs in isolated populations',z:'both'},
+      {t:'Reproductive isolation eventually develops',z:'both'},
+      {t:'Natural selection drives trait divergence',z:'both'},
+      {t:'Results in new species that cannot interbreed',z:'both'},
+      {t:'Genetic drift can contribute',z:'both'},
+      {t:'No geographic barrier',z:'right'},
+      {t:'Polyploidy (instant speciation — common in plants)',z:'right'},
+      {t:'Host-shift: Rhagoletis pomonella apple fly',z:'right'},
+      {t:'Disruptive selection drives divergence',z:'right'},
+      {t:'Rarer in animals, common in plants',z:'right'},
+    ]
+  },
+  {
+    id:'vn3', title:'Prezygotic vs. Postzygotic Isolation',
+    left:'Prezygotic Only', both:'Both Types', right:'Postzygotic Only',
+    items:[
+      {t:'Habitat isolation',z:'left'},
+      {t:'Temporal isolation (different breeding seasons)',z:'left'},
+      {t:'Behavioral isolation (courtship displays)',z:'left'},
+      {t:'Mechanical isolation (flower/pollinator shape)',z:'left'},
+      {t:'Gametic incompatibility (sea urchin bindin)',z:'left'},
+      {t:'Prevents mating or fertilization from occurring',z:'left'},
+      {t:'Maintains species boundaries',z:'both'},
+      {t:'Prevents gene flow between species',z:'both'},
+      {t:'Can be strengthened by reinforcement',z:'both'},
+      {t:'Part of the speciation continuum',z:'both'},
+      {t:'Hybrid inviability (embryo doesn\'t survive)',z:'right'},
+      {t:'Hybrid sterility (mule = horse × donkey)',z:'right'},
+      {t:'Hybrid breakdown (later-gen hybrids fail)',z:'right'},
+      {t:'Acts after fertilization',z:'right'},
+      {t:'Costly — gametes already wasted',z:'right'},
+    ]
+  },
+  {
+    id:'vn4', title:'Homology vs. Convergent Evolution',
+    left:'Homology Only', both:'Both', right:'Convergence Only',
+    items:[
+      {t:'Similarity due to SHARED ANCESTRY',z:'left'},
+      {t:'Vertebrate forelimb bones (arm/wing/flipper)',z:'left'},
+      {t:'Globin gene family across vertebrates',z:'left'},
+      {t:'Cytochrome c sequence similarities',z:'left'},
+      {t:'Reflects common descent with modification',z:'left'},
+      {t:'Tracked by synapomorphies in cladistics',z:'left'},
+      {t:'Produces similar-looking structures or functions',z:'both'},
+      {t:'Can confuse phylogenetic analysis (homoplasy)',z:'both'},
+      {t:'Shapes morphology over evolutionary time',z:'both'},
+      {t:'Similarity due to INDEPENDENT EVOLUTION',z:'right'},
+      {t:'Dolphin vs. shark streamlined body plan',z:'right'},
+      {t:'Bird, bat, and insect wings for flight',z:'right'},
+      {t:'Vertebrate eye vs. cephalopod (octopus) eye',z:'right'},
+      {t:'Thylacine (marsupial wolf) vs. placental wolf',z:'right'},
+      {t:'Similar selective pressures, different lineages',z:'right'},
+    ]
+  }
+];
+
+var SORTERS = [
+  {
+    id:'s1', title:'Reproductive Isolation — Which Category?',
+    buckets:['Pre-mating\n(Prezygotic)','Post-mating Prezygotic','Postzygotic'],
+    colors:['#60a5fa','#a78bfa','#34d399'],
+    items:[
+      {t:'Habitat isolation',b:0},
+      {t:'Temporal isolation',b:0},
+      {t:'Behavioral isolation (courtship display)',b:0},
+      {t:'Mechanical isolation (flower/body shape)',b:0},
+      {t:'Gametic incompatibility (sea urchin bindin)',b:1},
+      {t:'Hybrid inviability (embryo fails)',b:2},
+      {t:'Hybrid sterility (mule cannot reproduce)',b:2},
+      {t:'Hybrid breakdown (F₂ fitness collapse)',b:2},
+    ]
+  },
+  {
+    id:'s2', title:'Evidence for Evolution — Which Line of Evidence?',
+    buckets:['Biogeography','Fossil Record','Comparative\nAnatomy','Molecular\nBiology'],
+    colors:['#60a5fa','#fb923c','#a78bfa','#34d399'],
+    items:[
+      {t:'Galápagos finch beak diversity',b:0},
+      {t:'Marsupials predominant in Australia',b:0},
+      {t:'Flightless birds on isolated islands',b:0},
+      {t:'Tiktaalik — fish-tetrapod transitional fossil',b:1},
+      {t:'Laetoli bipedal footprints (3.6 mya)',b:1},
+      {t:'Cambrian Burgess Shale fauna',b:1},
+      {t:'Vertebrate forelimb bone homology',b:2},
+      {t:'Vestigial pelvic bones in whale skeletons',b:2},
+      {t:'Recurrent laryngeal nerve detours around aorta',b:2},
+      {t:'Cytochrome c gene similarities across phyla',b:3},
+      {t:'mtDNA → African origin of modern humans',b:3},
+      {t:'Endogenous retroviruses shared across primates',b:3},
+    ]
+  },
+  {
+    id:'s3', title:'Types of Natural Selection — Which Mode?',
+    buckets:['Directional','Stabilizing','Disruptive','Balancing'],
+    colors:['#60a5fa','#34d399','#fb923c','#a78bfa'],
+    items:[
+      {t:'Industrial melanism — peppered moth',b:0},
+      {t:'Antibiotic resistance evolution',b:0},
+      {t:'Bighorn sheep — smaller horns from trophy hunting',b:0},
+      {t:'Atlantic cod smaller size from fishing pressure',b:0},
+      {t:'Human birth weight (extremes have lower survival)',b:1},
+      {t:'Beak length in birds on islands with two food sizes',b:2},
+      {t:'African seedcracker finches (small vs. large seeds)',b:2},
+      {t:'Sickle-cell allele (HbS) in malaria regions',b:3},
+      {t:'MHC gene diversity in human populations',b:3},
+      {t:'White-throated sparrow plumage morphs',b:3},
+    ]
+  },
+  {
+    id:'s4', title:'Geological Eons & Key Milestones',
+    buckets:['Archean\n(4.0–2.5 Bya)','Proterozoic\n(2.5–0.54 Bya)','Paleozoic\n(541–252 Mya)','Mesozoic\n(252–66 Mya)'],
+    colors:['#f87171','#fb923c','#34d399','#60a5fa'],
+    items:[
+      {t:'First prokaryotic life, stromatolites',b:0},
+      {t:'LUCA — Last Universal Common Ancestor',b:0},
+      {t:'Great Oxygenation Event (cyanobacteria)',b:1},
+      {t:'First eukaryotes (membrane-bound nucleus)',b:1},
+      {t:'First multicellular organisms',b:1},
+      {t:'Cambrian Explosion — all major animal phyla',b:2},
+      {t:'First land plants and animals',b:2},
+      {t:'Permian mass extinction (worst ever, 96% marine)',b:2},
+      {t:'First dinosaurs (~230 mya)',b:3},
+      {t:'Archaeopteryx — bird-dinosaur transition (~150 mya)',b:3},
+      {t:'First flowering plants (132 mya)',b:3},
+      {t:'K-Pg Chicxulub impact — non-avian dinosaurs extinct',b:3},
+    ]
+  }
+];
+
+/* ─────────────────────────────────────
+   VENN RENDERER
+───────────────────────────────────── */
+function shuffle(a){var r=a.slice();for(var i=r.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=r[i];r[i]=r[j];r[j]=t;}return r;}
+
+function buildVenn(data, container){
+  var total=data.items.length, correct=0;
+  var selected=null;
+
+  var card=document.createElement('div');
+  card.className='act-card';
+
+  var scoreId='sc-'+data.id;
+  var bannerId='bn-'+data.id;
+
+  card.innerHTML='<div class="act-header">'
+    +'<span class="act-title">'+data.title+'</span>'
+    +'<span style="display:flex;align-items:center;gap:6px">'
+    +'<span class="act-score" id="'+scoreId+'">0 / '+total+'</span>'
+    +'<button class="act-reset" onclick="resetVenn(\''+data.id+'\')">↺ Reset</button>'
+    +'</span></div>'
+    +'<div class="venn-labels">'
+    +'<span class="venn-lbl left">'+data.left+'</span>'
+    +'<span class="venn-lbl both">'+data.both+'</span>'
+    +'<span class="venn-lbl right">'+data.right+'</span>'
+    +'</div>'
+    +'<div class="venn-zones">'
+    +'<div class="venn-zone left" id="'+data.id+'-left" data-zone="left"><div class="venn-zone-lbl">← Left only</div></div>'
+    +'<div class="venn-zone both" id="'+data.id+'-both" data-zone="both"><div class="venn-zone-lbl">↔ Both</div></div>'
+    +'<div class="venn-zone right" id="'+data.id+'-right" data-zone="right"><div class="venn-zone-lbl">Right only →</div></div>'
+    +'</div>'
+    +'<div class="pool-label">Tap a chip, then tap a region to place it</div>'
+    +'<div class="chip-pool" id="'+data.id+'-pool"></div>'
+    +'<div class="complete-banner" id="'+bannerId+'">🎉 All '+total+' placed correctly!</div>';
+
+  container.appendChild(card);
+
+  // Render chips
+  var pool=document.getElementById(data.id+'-pool');
+  var shuffled=shuffle(data.items.map(function(item,i){return{i:i,t:item.t,z:item.z};}));
+
+  shuffled.forEach(function(item){
+    var chip=document.createElement('div');
+    chip.className='chip';
+    chip.id=data.id+'-chip-'+item.i;
+    chip.dataset.zone=item.z;
+    chip.textContent=item.t;
+    chip.addEventListener('click',function(){
+      if(chip.classList.contains('correct')) return;
+      if(selected===chip){
+        chip.classList.remove('selected');
+        selected=null;
+        return;
+      }
+      if(selected) selected.classList.remove('selected');
+      selected=chip;
+      chip.classList.add('selected');
+    });
+    pool.appendChild(chip);
+  });
+
+  // Zone click handlers
+  ['left','both','right'].forEach(function(z){
+    var zone=document.getElementById(data.id+'-'+z);
+    zone.addEventListener('click',function(){
+      if(!selected) return;
+      var correctZone=selected.dataset.zone;
+      if(z===correctZone){
+        selected.classList.remove('selected');
+        selected.classList.add('correct',z);
+        zone.appendChild(selected);
+        selected=null;
+        correct++;
+        var sc=document.getElementById(scoreId);
+        sc.textContent=correct+' / '+total;
+        if(correct===total){sc.classList.add('done');document.getElementById(bannerId).classList.add('show');}
+      } else {
+        selected.classList.add('wrong');
+        setTimeout(function(){if(selected)selected.classList.remove('wrong','selected');selected=null;},380);
+      }
+    });
+  });
+}
+
+window.resetVenn=function(id){
+  var pool=document.getElementById(id+'-pool');
+  var zones=[document.getElementById(id+'-left'),document.getElementById(id+'-both'),document.getElementById(id+'-right')];
+  zones.forEach(function(z){
+    Array.from(z.querySelectorAll('.chip')).forEach(function(c){
+      c.classList.remove('correct','left','both','right','selected','wrong');
+      pool.appendChild(c);
+    });
+  });
+  var data=VENNS.find(function(v){return v.id===id;});
+  var sc=document.getElementById('sc-'+id);
+  var bn=document.getElementById('bn-'+id);
+  if(sc){sc.textContent='0 / '+(data?data.items.length:0);sc.classList.remove('done');}
+  if(bn) bn.classList.remove('show');
+  // Reshuffle pool
+  var chips=Array.from(pool.children);
+  chips.forEach(function(c){pool.removeChild(c);});
+  shuffle(chips).forEach(function(c){pool.appendChild(c);});
+};
+
+/* ─────────────────────────────────────
+   CATEGORY SORTER RENDERER
+───────────────────────────────────── */
+function buildSorter(data, container){
+  var total=data.items.length, correct=0;
+  var selected=null;
+
+  var card=document.createElement('div');
+  card.className='act-card';
+  var scoreId='scs-'+data.id;
+  var bannerId='bns-'+data.id;
+
+  var bucketsHtml=data.buckets.map(function(b,i){
+    return '<div class="bucket" id="'+data.id+'-b'+i+'" data-bi="'+i+'">'
+      +'<div class="bucket-lbl" style="color:'+data.colors[i]+'">'+b.replace(/\n/,'<br>')+'</div>'
+      +'</div>';
+  }).join('');
+
+  card.innerHTML='<div class="act-header">'
+    +'<span class="act-title">'+data.title+'</span>'
+    +'<span style="display:flex;align-items:center;gap:6px">'
+    +'<span class="act-score" id="'+scoreId+'">0 / '+total+'</span>'
+    +'<button class="act-reset" onclick="resetSorter(\''+data.id+'\')">↺ Reset</button>'
+    +'</span></div>'
+    +'<div class="sorter-buckets">'+bucketsHtml+'</div>'
+    +'<div class="pool-label">Tap a chip, then tap the correct category</div>'
+    +'<div class="chip-pool" id="'+data.id+'-pool"></div>'
+    +'<div class="complete-banner" id="'+bannerId+'">🎉 All '+total+' sorted correctly!</div>';
+
+  container.appendChild(card);
+
+  var pool=document.getElementById(data.id+'-pool');
+  var shuffled=shuffle(data.items.map(function(item,i){return{i:i,t:item.t,b:item.b};}));
+
+  shuffled.forEach(function(item){
+    var chip=document.createElement('div');
+    chip.className='chip';
+    chip.id=data.id+'-sc'+item.i;
+    chip.dataset.bi=item.b;
+    chip.textContent=item.t;
+    chip.addEventListener('click',function(){
+      if(chip.classList.contains('correct')) return;
+      if(selected===chip){chip.classList.remove('selected');selected=null;return;}
+      if(selected) selected.classList.remove('selected');
+      selected=chip; chip.classList.add('selected');
+    });
+    pool.appendChild(chip);
+  });
+
+  data.buckets.forEach(function(b,i){
+    var bucket=document.getElementById(data.id+'-b'+i);
+    bucket.addEventListener('click',function(){
+      if(!selected) return;
+      if(parseInt(selected.dataset.bi)===i){
+        selected.classList.remove('selected');
+        selected.classList.add('correct');
+        // color correct chip to match bucket
+        selected.style.borderColor=data.colors[i];
+        selected.style.color=data.colors[i];
+        selected.style.background='rgba(0,0,0,.15)';
+        bucket.appendChild(selected);
+        selected=null;
+        correct++;
+        var sc=document.getElementById(scoreId);
+        sc.textContent=correct+' / '+total;
+        if(correct===total){sc.classList.add('done');document.getElementById(bannerId).classList.add('show');}
+      } else {
+        selected.classList.add('wrong');
+        setTimeout(function(){if(selected)selected.classList.remove('wrong','selected');selected=null;},380);
+      }
+    });
+  });
+}
+
+window.resetSorter=function(id){
+  var pool=document.getElementById(id+'-pool');
+  var data=SORTERS.find(function(s){return s.id===id;});
+  if(!data)return;
+  data.buckets.forEach(function(b,i){
+    var bucket=document.getElementById(id+'-b'+i);
+    Array.from(bucket.querySelectorAll('.chip')).forEach(function(c){
+      c.classList.remove('correct','selected','wrong');
+      c.style.borderColor='';c.style.color='';c.style.background='';
+      pool.appendChild(c);
+    });
+  });
+  var sc=document.getElementById('scs-'+id);
+  var bn=document.getElementById('bns-'+id);
+  if(sc){sc.textContent='0 / '+data.items.length;sc.classList.remove('done');}
+  if(bn) bn.classList.remove('show');
+  var chips=Array.from(pool.children);
+  chips.forEach(function(c){pool.removeChild(c);});
+  shuffle(chips).forEach(function(c){pool.appendChild(c);});
+};
+
+/* ─────────────────────────────────────
+   CONCEPT PAIRS (TRUE / FALSE / WHICH)
+───────────────────────────────────── */
+var PAIRS=[
+  {
+    id:'cp1',title:'Does it apply to Natural Selection?',
+    prompt:'Tap each chip: ✓ YES it applies to natural selection, ✗ NO it does not',
+    yes:['Requires heritable variation','Differential reproductive success','Adapts population to environment','Non-random allele frequency change','Acts on phenotype not genotype directly','Directional in response to environment'],
+    no:['Requires small population size','Random allele loss','Founder effect','Fixes alleles by chance','Operates faster when population is tiny']
+  },
+  {
+    id:'cp2',title:'Monophyletic, Paraphyletic, or Polyphyletic?',
+    prompt:'Tap a chip, then tap the correct grouping type below',
+    buckets:['Monophyletic ✓','Paraphyletic ✗','Polyphyletic ✗'],
+    colors:['#34d399','#fb923c','#f87171'],
+    items:[
+      {t:'Mammals (all descendants of one ancestor)',b:0},
+      {t:'Birds (= Aves, a clade of dinosaurs)',b:0},
+      {t:'"Reptiles" excluding birds',b:1},
+      {t:'"Fish" excluding tetrapods',b:1},
+      {t:'"Pachydermata" = elephants + rhinos + hippos',b:2},
+      {t:'Warm-blooded animals (birds + mammals combined)',b:2},
+      {t:'Primates = monkeys + apes + humans',b:0},
+      {t:'"Invertebrates" = all animals without backbones',b:2},
+    ]
+  }
+];
+
+function buildConceptPair(data, container){
+  if(data.yes){
+    // YES/NO style
+    var card=document.createElement('div');
+    card.className='act-card';
+    var total=data.yes.length+data.no.length, correct=0;
+    var scoreId='cps-'+data.id;
+    var bannerId='cpb-'+data.id;
+    var allItems=shuffle(
+      data.yes.map(function(t){return{t:t,is:true};}).concat(
+      data.no.map(function(t){return{t:t,is:false};}))
+    );
+    card.innerHTML='<div class="act-header"><span class="act-title">'+data.title+'</span>'
+      +'<span class="act-score" id="'+scoreId+'">0 / '+total+'</span></div>'
+      +'<p style="font-size:13px;color:var(--muted);margin-bottom:12px">'+data.prompt+'</p>'
+      +'<div style="display:flex;gap:10px;margin-bottom:12px">'
+      +'<div style="flex:1;border:2px dashed rgba(34,197,94,.3);border-radius:10px;padding:10px;min-height:60px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start" id="'+data.id+'-yes"><div style="font-size:10px;color:var(--green);text-transform:uppercase;letter-spacing:.8px;width:100%;margin-bottom:4px">✓ YES</div></div>'
+      +'<div style="flex:1;border:2px dashed rgba(239,68,68,.3);border-radius:10px;padding:10px;min-height:60px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start" id="'+data.id+'-no"><div style="font-size:10px;color:var(--red);text-transform:uppercase;letter-spacing:.8px;width:100%;margin-bottom:4px">✗ NO</div></div>'
+      +'</div>'
+      +'<div class="chip-pool" id="'+data.id+'-pool"></div>'
+      +'<div class="complete-banner" id="'+bannerId+'">🎉 Perfect — all '+total+' correct!</div>';
+    container.appendChild(card);
+
+    var pool=document.getElementById(data.id+'-pool');
+    var yZone=document.getElementById(data.id+'-yes');
+    var nZone=document.getElementById(data.id+'-no');
+    var selected=null;
+
+    allItems.forEach(function(item,i){
+      var chip=document.createElement('div');
+      chip.className='chip'; chip.dataset.is=item.is?'1':'0';
+      chip.textContent=item.t;
+      chip.addEventListener('click',function(){
+        if(chip.classList.contains('correct')||chip.classList.contains('wrong-placed')) return;
+        if(selected===chip){chip.classList.remove('selected');selected=null;return;}
+        if(selected) selected.classList.remove('selected');
+        selected=chip; chip.classList.add('selected');
+      });
+      pool.appendChild(chip);
+    });
+
+    function addZoneClick(zone, isYes){
+      zone.addEventListener('click',function(){
+        if(!selected) return;
+        var correct_choice = (selected.dataset.is==='1') === isYes;
+        selected.classList.remove('selected');
+        if(correct_choice){
+          selected.classList.add('correct', isYes?'both':'right');
+          zone.appendChild(selected);
+          selected=null; correct++;
+          var sc=document.getElementById(scoreId);
+          sc.textContent=correct+' / '+total;
+          if(correct===total){sc.classList.add('done');document.getElementById(bannerId).classList.add('show');}
+        } else {
+          selected.classList.add('wrong');
+          setTimeout(function(){if(selected)selected.classList.remove('wrong','selected');selected=null;},380);
+        }
+      });
+    }
+    addZoneClick(yZone,true); addZoneClick(nZone,false);
+
+  } else if(data.buckets){
+    // Multi-bucket style (reuse sorter logic)
+    var sd={id:data.id,title:data.title,buckets:data.buckets,colors:data.colors,items:data.items};
+    buildSorter(sd,container);
+  }
+}
+
+/* ─────────────────────────────────────
+   INIT
+───────────────────────────────────── */
+var vennCon=document.getElementById('tab-venns');
+VENNS.forEach(function(v){buildVenn(v,vennCon);});
+
+var sortCon=document.getElementById('tab-sorters');
+SORTERS.forEach(function(s){buildSorter(s,sortCon);});
+
+var pairCon=document.getElementById('tab-pairs');
+PAIRS.forEach(function(p){buildConceptPair(p,pairCon);});
+</script>
+</body>
+</html>
