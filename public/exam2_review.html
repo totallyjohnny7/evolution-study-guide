@@ -15,12 +15,12 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .cll a{padding:4px 14px 4px 24px;color:#bbb;text-decoration:none;font-size:13px;border-left:2px solid transparent;transition:all .15s;display:block}
 .cll a:hover,.cll a.active{color:var(--gold);border-left-color:var(--gold);background:#1e1e1e;font-weight:600}
 #wrap{flex:1;display:flex;flex-direction:column;overflow:hidden}
-#mode-bar{background:#0d0d0d;border-bottom:2px solid #2a2a2a;padding:10px 20px;display:flex;align-items:center;gap:14px;flex-shrink:0;position:sticky;top:0;z-index:100}
+#mode-bar{background:#0d0d0d;border-bottom:2px solid #2a2a2a;padding:10px 20px;display:flex;align-items:center;gap:14px;flex-shrink:0;position:-webkit-sticky;position:sticky;top:0;z-index:100}
 .mode-btn{padding:7px 18px;border-radius:20px;border:1.5px solid #333;background:#1a1a1a;color:#aaa;font-size:13px;cursor:pointer;transition:all .2s;font-weight:600}
 .mode-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
 .score-badge{font-size:11px;background:#1a1a1a;border:1px solid #333;color:#888;border-radius:12px;padding:3px 10px;margin-left:auto}
 #prog{font-size:12px;color:var(--muted)}
-#main{overflow-y:auto;padding:0 34px 80px;flex:1}
+#main{overflow-y:auto;padding:0 34px 80px;flex:1;-webkit-overflow-scrolling:touch}
 #main::-webkit-scrollbar{width:6px}#main::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
 .ph{padding:28px 0 14px;border-bottom:2px solid var(--gold);margin-bottom:24px}
 .ph h1{font-size:24px;font-weight:900;color:var(--gold)}
@@ -69,7 +69,7 @@ body.card-mode #main-content{display:none}
 body.card-mode #fc-wrap{display:none}
 body.study-mode #main-content{display:block}
 body.study-mode #fc-wrap{display:none}
-#fc-wrap{display:none;padding:0 34px 80px;overflow-y:auto;flex:1}
+#fc-wrap{display:none;padding:0 34px 80px;overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
 #fc-wrap::-webkit-scrollbar{width:6px}#fc-wrap::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
 #fc-filter{display:flex;flex-wrap:wrap;gap:8px;padding:14px 0 6px}
 .flt-btn{padding:4px 12px;border-radius:14px;border:1px solid #333;background:#1a1a1a;color:#888;font-size:12px;cursor:pointer;transition:all .2s}
@@ -88,9 +88,9 @@ body.study-mode #fc-wrap{display:none}
 strong{color:#fff}
 @media(max-width:768px){#sb{display:none}#main,#fc-wrap{padding:0 12px 60px}}
 /* ── DECK OVERLAY ── */
-#dk-ov{display:none;position:fixed;inset:0;background:rgba(7,8,6,.97);z-index:9999;flex-direction:column;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+#dk-ov{display:none;position:fixed;inset:0;background:rgba(7,8,6,.97);z-index:9999;flex-direction:column;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);overscroll-behavior:none;-webkit-overflow-scrolling:touch}
 #dk-ov.show{display:flex}
-#dk-card{width:min(500px,92vw);perspective:1000px;cursor:pointer;margin:14px 0}
+#dk-card{width:min(500px,92vw);perspective:1000px;cursor:pointer;margin:14px 0;touch-action:pan-y;will-change:transform;-webkit-user-select:none;user-select:none}
 #dk-inner{position:relative;width:100%;height:270px;transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
 #dk-card.flipped #dk-inner{transform:rotateY(180deg)}
 #dk-f,#dk-b{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px;text-align:center}
@@ -1195,22 +1195,22 @@ strong{color:#fff}
 <div class="fc-grid">
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Twofold cost of sex</div>
-<div class="fb2"><div class="verdict">Answer</div>In a sexual population, ~50% are males who don't produce offspring directly. An asexual mutant doubles in frequency every generation. Sexual reproduction must confer benefits &gt; 2× disadvantage to persist.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>In a sexual population, ~50% are males who don't produce offspring directly. An asexual mutant <b>doubles in frequency every generation</b>. Sexual reproduction must confer benefits <b>&gt; 2× disadvantage</b> to persist.</div></div></div>
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Red Queen hypothesis for sex</div>
-<div class="fb2"><div class="verdict">Answer</div>Parasites/pathogens evolve to exploit COMMON host genotypes. Sexual reproduction constantly generates RARE genotype combinations that parasites haven't caught up with. Rare genotypes have higher fitness → sex maintains rare genotypes → advantage to sex in parasite-rich environments.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Parasites evolve to exploit <b>COMMON host genotypes</b>. Sex constantly generates <b>RARE genotype combinations</b> that parasites haven't caught up with. Rare genotypes have higher fitness → sex maintains rare genotypes → advantage to sex in <b>parasite-rich environments</b>.</div></div></div>
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Muller's Ratchet — what is it?</div>
-<div class="fb2"><div class="verdict">Answer</div>Asexual lineages irreversibly accumulate deleterious mutations. The genotype with FEWEST mutations can only be LOST, never restored, without recombination. Like a ratchet clicking only forward (toward more mutations). Sex allows recombination to reconstruct low-mutation genomes.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Asexual lineages <b>irreversibly accumulate</b> deleterious mutations. The genotype with <b>FEWEST mutations</b> can only be <b>LOST, never restored</b>, without recombination. Like a ratchet clicking only forward. Sex allows recombination to <b>reconstruct low-mutation genomes</b>.</div></div></div>
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Combining beneficial mutations — why sex helps</div>
 <div class="fb2"><div class="verdict">Answer</div>In asexual populations, two beneficial mutations that occur in DIFFERENT individuals compete (Clonal Interference). In sexual populations, recombination can PUT BOTH in the same offspring genome. Sex speeds adaptation when multiple beneficial mutations are segregating simultaneously.</div></div></div>
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Anisogamy — definition and consequences</div>
-<div class="fb2"><div class="verdict">Answer</div>Unequal gamete sizes: large, costly eggs (females) vs. small, cheap sperm (males). Creates asymmetry: females invest more per gamete → female reproductive rate is the LIMITING RESOURCE → males compete for females, females choose males. Drives sexual dimorphism.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Unequal gamete sizes: <b>large, costly eggs</b> (females) vs. <b>small, cheap sperm</b> (males). Females invest more per gamete → female reproductive rate is the <b>LIMITING RESOURCE</b> → males compete for females, females choose males. Drives <b>sexual dimorphism</b>.</div></div></div>
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Sexual selection — two types</div>
-<div class="fb2"><div class="verdict">Answer</div>Intersexual (mate choice): females choose males with preferred traits → males evolve elaborate displays. Intrasexual (male-male competition): males compete directly for access to females → males evolve larger size, weapons.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div><b>Intersexual</b> (mate choice): females choose males with preferred traits → males evolve elaborate displays. <b>Intrasexual</b> (male-male competition): males compete directly for access to females → males evolve larger size, weapons.</div></div></div>
 <div class="fc2" data-ch="ch11" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH11</div>Why can sexual selection produce 'costly' male traits?</div>
 <div class="fb2"><div class="verdict">Answer</div>Mating success advantage (sexual selection) can outweigh survival cost (natural selection). Peacock tail: reduces survival but increases mating success enough to be maintained. Zahavi's Handicap Principle: costly signals are HONEST — only high-quality males can afford the cost.</div></div></div>
@@ -1244,7 +1244,7 @@ strong{color:#fff}
 <div class="fc-grid">
 <div class="fc2" data-ch="ch12" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH12</div>Life history trade-off — fundamental cause</div>
-<div class="fb2"><div class="verdict">Answer</div>Energy and time are FINITE. Allocation to one function (growth, current reproduction, survival) REDUCES availability for others. Trade-offs are universal — no organism can maximize everything simultaneously.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Energy and time are <b>FINITE</b>. Allocation to one function (growth, current reproduction, survival) <b>REDUCES availability</b> for others. Trade-offs are <b>universal</b> — no organism can maximize everything simultaneously.</div></div></div>
 <div class="fc2" data-ch="ch12" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH12</div>High extrinsic mortality → what life history?</div>
 <div class="fb2"><div class="verdict">Answer</div>Favors FAST life history: early reproduction (may not survive to reproduce later), more offspring per bout, less investment per offspring. Selected because organisms may die before getting another chance to reproduce.</div></div></div>
@@ -1256,10 +1256,10 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Guppies transplanted from high- to low-predation streams evolved LATER maturation, LARGER body size at maturity, FEWER offspring per litter in ~30 generations. Demonstrated rapid evolutionary change in life history traits under altered selective pressure.</div></div></div>
 <div class="fc2" data-ch="ch12" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH12</div>Mutation accumulation theory of aging</div>
-<div class="fb2"><div class="verdict">Answer</div>Deleterious mutations with LATE-ACTING effects accumulate because selection cannot see them — most organisms die of predation/accident before old age. Late-acting harmful alleles are nearly neutral from selection's perspective; they pile up over evolutionary time.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Deleterious mutations with <b>LATE-ACTING effects accumulate</b> because selection cannot see them — most organisms die before old age. Late-acting harmful alleles are <b>nearly neutral</b> from selection's perspective; they pile up over evolutionary time.</div></div></div>
 <div class="fc2" data-ch="ch12" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH12</div>Antagonistic pleiotropy theory of aging</div>
-<div class="fb2"><div class="verdict">Answer</div>A gene that BENEFITS early reproduction can HARM survival later. Selection maintains it for the early benefit even though it causes late-life harm. Example: testosterone (early mating success → late prostate cancer). The gene has two effects in opposite directions at different life stages.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>A gene that <b>BENEFITS early reproduction</b> can <b>HARM survival later</b>. Selection maintains it for the early benefit despite late-life harm. Example: <b>testosterone</b> (early mating success → late prostate cancer). Two effects in <b>opposite directions</b> at different life stages.</div></div></div>
 <div class="fc2" data-ch="ch12" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH12</div>r-selection vs. K-selection</div>
 <div class="fb2"><div class="verdict">Answer</div>r-selected: many small offspring, early reproduction, short lifespan, unstable environments (e.g., insects, weeds, oysters). K-selected: few large offspring, late reproduction, long lifespan, stable environments near carrying capacity (e.g., elephants, humans). Most organisms fall somewhere in between.</div></div></div>
@@ -1293,19 +1293,19 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Reciprocal evolutionary change between two or more species that are ecologically interacting. Each species acts as a selective agent on the other. Can be antagonistic (arms race) or mutualistic (cooperative escalation).</div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Coevolutionary arms race — definition</div>
-<div class="fb2"><div class="verdict">Answer</div>Directional escalation: one species evolves better offense → other evolves better defense → repeat. Both species continuously evolve more extreme traits. Example: newt-garter snake TTX arms race. Escalation is limited by COSTS of extreme traits.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div><b>Directional escalation</b>: one species evolves better offense → other evolves better defense → repeat. Both continuously evolve more extreme traits. Example: <b>newt-garter snake TTX arms race</b>. Escalation is limited by <b>COSTS</b> of extreme traits.</div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Newt-garter snake system</div>
 <div class="fb2"><div class="verdict">Answer</div>Taricha newts produce tetrodotoxin (TTX). Thamnophis sirtalis snakes evolved TTX-resistant voltage-gated Na⁺ channel mutations. Resistance has a COST (slower locomotion). Different populations show different levels of toxicity/resistance — geographic mosaic theory.</div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Geographic Mosaic Theory (Thompson)</div>
-<div class="fb2"><div class="verdict">Answer</div>Coevolution varies across landscapes. Hotspots = both species present, reciprocal selection intense. Coldspots = weak/absent interaction. Gene flow between hotspots and coldspots creates geographic variation in coevolved traits. No global escalation — patchwork of local coevolutionary states.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Coevolution varies across landscapes. <b>Hotspots</b> = both species present, reciprocal selection intense. <b>Coldspots</b> = weak/absent interaction. Gene flow between hotspots and coldspots creates geographic variation. <b>No global escalation</b> — patchwork of local coevolutionary states.</div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Batesian mimicry</div>
-<div class="fb2"><div class="verdict">Answer</div>Palatable (harmless) mimic resembles unpalatable (toxic) model. Mimic 'free rides' on model's predator avoidance. Works best when mimics are RARE (if too common, predators learn the signal is unreliable and no longer avoid it).</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div><b>Palatable (harmless) mimic</b> resembles <b>unpalatable (toxic) model</b>. Mimic 'free rides' on model's predator avoidance. Works best when mimics are <b>RARE</b> — if too common, predators learn the signal is unreliable.</div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Müllerian mimicry</div>
-<div class="fb2"><div class="verdict">Answer</div>Two or more UNPALATABLE species all resemble each other. BOTH benefit from sharing the warning pattern — predators learn ONE pattern and avoid ALL species sharing it. Works better when COMMON (more encounters = faster learning). Heliconius butterflies = textbook example.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Two or more <b>UNPALATABLE species</b> all resemble each other. <b>BOTH benefit</b> from sharing the warning pattern — predators learn ONE pattern, avoid ALL. Works better when <b>COMMON</b> (more encounters = faster learning). <b>Heliconius butterflies</b> = textbook example.</div></div></div>
 <div class="fc2" data-ch="ch15" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH15</div>Endosymbiotic theory — evidence</div>
 <div class="fb2"><div class="verdict">Answer</div>Mitochondria and chloroplasts evolved from engulfed bacteria. Evidence: (1) circular DNA like bacteria, (2) double membranes, (3) 70S ribosomes (bacterial type, inhibited by bacterial antibiotics), (4) binary fission, (5) phylogenetics places them inside bacterial clades. Proposed by Lynn Margulis.</div></div></div>
@@ -1330,7 +1330,7 @@ strong{color:#fff}
 <div class="fc-grid">
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>ESS — definition</div>
-<div class="fb2"><div class="verdict">Answer</div>Evolutionarily Stable Strategy: a strategy that, when adopted by most of the population, CANNOT be invaded by a rare mutant strategy. Game-theoretic concept (Maynard Smith & Price 1973). Fitness payoffs are FREQUENCY-DEPENDENT.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div><b>Evolutionarily Stable Strategy</b>: a strategy that, when adopted by most of the population, <b>CANNOT be invaded</b> by a rare mutant strategy. Game-theoretic concept (Maynard Smith & Price 1973). Fitness payoffs are <b>FREQUENCY-DEPENDENT</b>.</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Hawk-Dove game — when is ESS mixed?</div>
 <div class="fb2"><div class="verdict">Answer</div>When V (resource value) &lt; C (injury cost): pure Hawk not stable (too many injuries when all play Hawk). Pure Dove not stable (Hawks invade). Mixed ESS at frequency of Hawks = V/C. At this equilibrium, both strategies have equal fitness.</div></div></div>
@@ -1342,22 +1342,22 @@ strong{color:#fff}
 <div class="fb2"><div class="verdict">Answer</div>Behavior that REDUCES the actor's direct fitness while INCREASING the recipient's direct fitness. Does NOT require conscious intent. Defined purely by fitness consequences.</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Hamilton's Rule</div>
-<div class="fb2"><div class="verdict">Answer</div>rB &gt; C. r = relatedness (fraction of alleles shared by descent). B = benefit to recipient (extra offspring). C = cost to actor (lost offspring). If rB &gt; C: altruistic act is favored by kin selection. ONLY B is multiplied by r (not C).</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div><b>rB &gt; C</b>. r = relatedness. B = benefit to recipient (extra offspring). C = cost to actor (lost offspring). If rB &gt; C → altruistic act favored by <b>kin selection</b>. <b>ONLY B is multiplied by r</b> (not C).</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Why only B is multiplied by r (not C)</div>
 <div class="fb2"><div class="verdict">Answer</div>The actor always pays 100% of the cost — it's to THEMSELVES (r = 1 to yourself). Only the BENEFIT needs to be discounted by r to account for how much of the benefit reaches shared alleles. Discounting C by r would undercount actual cost.</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Inclusive fitness — definition</div>
-<div class="fb2"><div class="verdict">Answer</div>Total fitness = Direct fitness (own reproduction) + Indirect fitness (reproduction of relatives, weighted by relatedness r). Kin selection maximizes inclusive fitness, not just personal direct reproduction.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div><b>Inclusive fitness = Direct fitness</b> (own reproduction) <b>+ Indirect fitness</b> (reproduction of relatives, weighted by r). Kin selection maximizes <b>inclusive fitness</b>, not just personal direct reproduction.</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Haplodiploidy and eusociality</div>
-<div class="fb2"><div class="verdict">Answer</div>In haplodiploid Hymenoptera (bees, wasps, ants): females develop from fertilized eggs (diploid); males from unfertilized eggs (haploid). Full sisters share ALL of father's genes + half of mother's genes = r = 0.75. More related to sisters than own offspring (r = 0.5). Facilitates evolution of female worker castes, but is NOT sufficient alone (many haplodiploid species are NOT eusocial).</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Hymenoptera: females diploid (fertilized), males haploid (unfertilized). Full sisters share ALL of father's genes + half of mother's = <b>r = 0.75</b> between sisters. More related to sisters than to own offspring (<b>r = 0.5</b>). Facilitates female worker castes, but <b>NOT sufficient alone</b> (many haplodiploid species NOT eusocial).</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Worker-to-queen's-son relatedness</div>
 <div class="fb2"><div class="verdict">Answer</div>Workers are related to their full SISTERS at r = 0.75 (haplodiploidy). But related to the QUEEN'S SONS (their brothers) at r = 0.25 only. Workers share queen's genes but not father's genes through brothers (brothers are haploid from unfertilized eggs). This asymmetry explains why workers prefer raising sisters.</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Group selection — why it's usually weak</div>
-<div class="fb2"><div class="verdict">Answer</div>Within-group selection consistently favors SELFISH individuals — they have higher fitness than cooperators within the same group. Even if cooperative groups do better than selfish groups, selfish mutants spread WITHIN cooperative groups. Within-group individual selection usually overcomes between-group selection.</div></div></div>
+<div class="fb2"><div class="verdict">Answer</div>Within-group selection consistently favors <b>SELFISH individuals</b> — they have higher fitness than cooperators in the same group. Even if cooperative groups outperform selfish groups, <b>selfish mutants spread WITHIN</b> cooperative groups. Within-group selection <b>usually overcomes</b> between-group selection.</div></div></div>
 <div class="fc2" data-ch="ch16" onclick="this.classList.toggle('flipped')">
 <div class="fi2"><div class="ff2"><div class="chip">CH16</div>Meerkat sentinel behavior — kin selection</div>
 <div class="fb2"><div class="verdict">Answer</div>Sentinels stand guard and alarm-call while family members forage (costly: lost foraging time, predation risk). The group consists largely of close relatives. By Hamilton's Rule, indirect fitness gained through protecting kin exceeds the direct cost. Classic kin-selected altruism.</div></div></div>
