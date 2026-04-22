@@ -160,6 +160,7 @@ strong{color:#fff}
 <div id="mode-bar">
   <button class="mode-btn active" id="btn-study" onclick="setMode('study')">📖 Study Mode</button>
   <button class="mode-btn" id="btn-card" onclick="setMode('card')">🃏 Flashcard Mode</button>
+  <button class="mode-btn" onclick="showStats()" style="border-color:#555;color:#aaa">📊 Stats</button>
   <span class="score-badge" id="score-badge">Score: 0 / 0</span>
   <span id="prog"></span>
 </div>
@@ -1333,15 +1334,18 @@ document.querySelectorAll('.qb').forEach(b=>{
   const btns=b.querySelectorAll('.cb');
   const exp=b.querySelector('.exp');
   tc++;
+  const _qid='exam1_q_'+tc;const _qtxt=((b.querySelector('.qq')||{}).textContent||'Q'+tc).substring(0,80);
   btns.forEach(btn=>{btn.addEventListener('click',()=>{
     if(btn.disabled)return;
     btns.forEach(x=>x.disabled=true);
     answered++;
-    if(parseInt(btn.dataset.i)===cor){btn.classList.add('correct');cc++;}
+    const isCorr=parseInt(btn.dataset.i)===cor;
+    if(isCorr){btn.classList.add('correct');cc++;}
     else{btn.classList.add('wrong');btns[cor].classList.add('correct');}
     if(exp){exp.classList.add('show');exp.scrollIntoView({behavior:'smooth',block:'nearest'});}
     const s=document.getElementById('score-badge');
     if(s)s.textContent='Score: '+cc+' / '+answered;
+    _trackCard(_qid,_qtxt,'Quiz',isCorr);
   });});
 });
 const secs=document.querySelectorAll('[id^="s_"]');
@@ -1393,13 +1397,15 @@ function filterCards(btn,ch){
   function $(id){return document.getElementById(id);}
   function buildDeck(filter){
     _deck=[];
+    var _chIdx={};
     document.querySelectorAll('.fc2').forEach(function(el){
+      var ch=el.dataset.ch||'none';if(!(ch in _chIdx))_chIdx[ch]=0;var _cid='exam1_'+ch+'_'+_chIdx[ch]++;
       if(filter!=='all'&&el.dataset.ch!==filter)return;
       var ff=el.querySelector('.ff2'),fb=el.querySelector('.fb2');
       if(!ff||!fb)return;
       var fc=ff.cloneNode(true);var chip=fc.querySelector('.chip');var chipTxt=chip?chip.textContent.trim():'';if(chip)chip.remove();
       var bc=fb.cloneNode(true);var v=bc.querySelector('.verdict');if(v)v.remove();
-      _deck.push({chip:chipTxt,term:fc.textContent.trim(),def:bc.innerHTML.trim()});
+      _deck.push({id:_cid,chip:chipTxt,term:fc.textContent.trim(),def:bc.innerHTML.trim()});
     });
   }
   function updateScore(){
@@ -1513,6 +1519,7 @@ function filterCards(btn,ch){
     _score[pass?'pass':'miss']++;
     _score.streak=pass?_score.streak+1:0;
     if(_score.streak>_score.best)_score.best=_score.streak;
+    if(_deck[_idx]&&_deck[_idx].id)_trackCard(_deck[_idx].id,_deck[_idx].term,_deck[_idx].chip,pass);
     var card=$('dk-card');
     var stamp=$(pass?'dk-stamp-pass':'dk-stamp-miss');
     stamp.classList.add('show');
@@ -1606,6 +1613,41 @@ function filterCards(btn,ch){
     else if(k==='s'||k==='S')dkSpeak();
   });
 })();
+</script>
+<script>
+/* ── STUDY STATS ENGINE v1 — tracks flashcards + quiz questions across all pages ── */
+function _trackCard(id,term,chip,pass){try{var st=JSON.parse(localStorage.getItem('evo_stats_v1')||'{}');if(!st.c)st.c={};var e=st.c[id]||{p:0,m:0,s:0};e.t=(term||'').substring(0,80);e.ch=chip||'';if(pass){e.p=(e.p||0)+1;e.s=(e.s||0)+1;}else{e.m=(e.m||0)+1;e.s=0;}e.l=Date.now();st.c[id]=e;localStorage.setItem('evo_stats_v1',JSON.stringify(st));}catch(x){}}
+function _clsCard(e){var t=(e.p||0)+(e.m||0);if(!t)return'new';var r=(e.p||0)/t;if((e.p||0)>=3&&r>=0.75)return'mastered';if((e.p||0)>=2&&r>=0.5)return'mastering';if((e.m||0)>(e.p||0)&&t>=3)return'struggling';return'learning';}
+window.showStats=function(){
+  var st;try{st=JSON.parse(localStorage.getItem('evo_stats_v1')||'{}');}catch(x){st={};}
+  var cards=st.c||{},ids=Object.keys(cards);
+  var cnt={mastered:0,mastering:0,learning:0,struggling:0};
+  var tpc={},sl=[];
+  ids.forEach(function(id){var e=cards[id],cls=_clsCard(e);cnt[cls]=(cnt[cls]||0)+1;var chip=e.ch||'Other';if(!tpc[chip])tpc[chip]={mastered:0,mastering:0,learning:0,struggling:0,total:0};tpc[chip][cls]++;tpc[chip].total++;if((e.m||0)>(e.p||0)&&((e.p||0)+(e.m||0))>=2)sl.push({term:e.t||'',chip:e.ch||'',pass:e.p||0,miss:e.m||0});});
+  sl.sort(function(a,b){return b.miss-a.miss;});
+  var total=ids.length,pct=total?Math.round(cnt.mastered/total*100):0;
+  var ta=Object.keys(tpc).map(function(k){return{name:k,d:tpc[k]};});
+  ta.sort(function(a,b){return(a.d.mastered/Math.max(a.d.total,1))-(b.d.mastered/Math.max(b.d.total,1));});
+  var ov=document.createElement('div');ov.id='evo-stats-ov';ov.tabIndex=-1;
+  ov.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:99999;overflow-y:auto;font-family:system-ui,sans-serif';
+  var h='<div style="max-width:680px;width:100%;margin:0 auto;padding:24px 16px 60px">';
+  h+='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px"><h2 style="color:#f5c542;font-size:22px;font-weight:900;margin:0">&#x1F4CA; Study Stats</h2>';
+  h+='<div style="display:flex;gap:8px"><button id="st-clear" style="background:0;border:1px solid #444;color:#888;border-radius:8px;padding:5px 12px;cursor:pointer;font-size:12px">&#x1F5D1; Clear</button>';
+  h+='<button id="st-close" style="background:#333;border:none;color:#fff;border-radius:8px;padding:6px 16px;cursor:pointer;font-size:15px;font-weight:700">&#x2715;</button></div></div>';
+  h+='<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px">';
+  [{k:'mastered',col:'#22c55e',l:'Mastered'},{k:'mastering',col:'#60a5fa',l:'Mastering'},{k:'learning',col:'#f5c542',l:'Learning'},{k:'struggling',col:'#ef4444',l:'Struggling'}].forEach(function(p){h+='<div style="background:'+p.col+'1a;border:1.5px solid '+p.col+'44;border-radius:12px;padding:14px 6px;text-align:center"><div style="color:'+p.col+';font-size:28px;font-weight:900">'+(cnt[p.k]||0)+'</div><div style="color:'+p.col+';font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:2px">'+p.l+'</div></div>';});
+  h+='</div><div style="background:#1a1a1a;border-radius:10px;padding:13px 14px;margin-bottom:14px">';
+  if(total){h+='<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="color:#888;font-size:12px">'+total+' items tracked across all exams</span><span style="color:#f5c542;font-size:12px;font-weight:700">'+pct+'% mastered</span></div><div style="height:7px;background:#333;border-radius:4px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:linear-gradient(90deg,#22c55e,#60a5fa);border-radius:4px"></div></div><div style="display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:#555"><span>Need work: '+(cnt.struggling+cnt.learning)+' items</span><span>Well done: '+(cnt.mastered+cnt.mastering)+' items</span></div>';}
+  else{h+='<div style="color:#555;text-align:center;font-size:13px;padding:8px">No data yet &#x2014; grade flashcards or answer questions to start tracking!</div>';}
+  h+='</div>';
+  if(sl.length){h+='<div style="background:#1a1a1a;border-radius:10px;padding:14px;margin-bottom:14px"><div style="color:#ef4444;font-weight:800;font-size:13px;margin-bottom:10px">&#x26A0;&#xFE0F; Focus On These ('+Math.min(sl.length,12)+')</div>';sl.slice(0,12).forEach(function(c){var rt=c.pass+c.miss?Math.round(c.pass/(c.pass+c.miss)*100):0;h+='<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #252525"><span style="background:#1a0505;border:1px solid #ef444433;color:#ef4444;border-radius:5px;padding:2px 7px;font-size:10px;font-weight:700;flex-shrink:0">&#x2717;'+c.miss+'</span><span style="background:#051505;border:1px solid #22c55e33;color:#22c55e;border-radius:5px;padding:2px 7px;font-size:10px;font-weight:700;flex-shrink:0">&#x2713;'+c.pass+'</span><span style="flex:1;color:#ccc;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+c.term.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span><span style="color:#555;font-size:10px;flex-shrink:0">'+rt+'%</span></div>';});h+='</div>';}
+  if(ta.length){h+='<div style="background:#1a1a1a;border-radius:10px;padding:14px"><div style="color:#f5c542;font-weight:800;font-size:13px;margin-bottom:10px">&#x1F4DA; By Topic</div>';ta.forEach(function(t){var d=t.d,r=d.total?Math.round(d.mastered/d.total*100):0;var col=r>=75?'#22c55e':r>=40?'#f5c542':'#ef4444';h+='<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #252525"><span style="flex:1;color:#ddd;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+t.name+'</span><span style="color:#22c55e;font-size:11px;min-width:28px;text-align:center">&#x2713;'+d.mastered+'</span><span style="color:#f5c542;font-size:11px;min-width:28px;text-align:center">~'+(d.learning||0)+'</span><span style="color:#ef4444;font-size:11px;min-width:28px;text-align:center">&#x2717;'+(d.struggling||0)+'</span><div style="width:60px;height:5px;background:#333;border-radius:3px;overflow:hidden;flex-shrink:0"><div style="height:100%;width:'+r+'%;background:'+col+';border-radius:3px"></div></div><span style="color:'+col+';font-size:11px;font-weight:700;min-width:34px;text-align:right">'+r+'%</span></div>';});h+='</div>';}
+  h+='</div>';ov.innerHTML=h;document.body.appendChild(ov);
+  ov.querySelector('#st-close').onclick=function(){ov.remove();};
+  ov.querySelector('#st-clear').onclick=function(){if(confirm('Clear all study stats?')){try{localStorage.removeItem('evo_stats_v1');}catch(x){}ov.remove();}};
+  ov.focus();
+};
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var ov=document.getElementById('evo-stats-ov');if(ov)ov.remove();}});
 </script>
 </body>
 </html>
