@@ -3129,7 +3129,7 @@ function setLMode(mode){
   document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><span id="dk-score"></span><button id="dk-close" onclick="dkClose()">Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span><span id="dk-timer-cnt" style="font-size:11px;color:#f5c542;font-weight:700;min-width:20px;text-align:center;display:inline-block;margin-left:4px"></span></div><div id="dk-timer-bar"><div id="dk-timer-fill"></div></div><div id="dk-card"><div id="dk-inner"><div id="dk-f"><button id="dk-speak" title="Read aloud (S)" aria-label="Read aloud">&#x1F50A;</button><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip &middot; swipe &rarr; pass &middot; &larr; miss</div></div><div id="dk-b"><div id="dk-def"></div><img id="dk-img" class="dk-img" src="" alt="" style="display:none"><div class="dk-grade-row"><button class="dk-grade dk-miss" id="dk-miss-btn" title="Fail (1 or ←)">&#x2717; Miss (1)</button><button class="dk-grade dk-pass" id="dk-pass-btn" title="Pass (2 or →)">&#x2713; Pass (2)</button></div></div></div><div id="dk-tint-pass"></div><div id="dk-tint-miss"></div><div id="dk-stamp-pass">PASS</div><div id="dk-stamp-miss">MISS</div></div><div class="dk-nav" id="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">&larr; Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next &rarr;</button><button class="dk-btn" onclick="dkShuffle()">Shuffle</button></div><div id="dk-status"></div><div id="dk-done" style="display:none;flex-direction:column;align-items:center;text-align:center;padding:20px;gap:14px"><div style="font-size:48px">&#x1F389;</div><div style="font-size:22px;font-weight:800;color:#ffd479">Deck Complete!</div><div id="dk-done-stats" style="font-size:14px;color:#8691a0;line-height:1.6;margin:4px 0 10px"></div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><button class="dk-btn" onclick="dkRetryMissed()">&#x21A9; Retry Missed</button><button class="dk-btn" onclick="dkRestart()">&#x21BA; Restart</button><button class="dk-btn" onclick="dkClose()">&#x2715; Close</button></div></div></div>');
   var _deck=[],_idx=0,_score={pass:0,miss:0,streak:0,best:0};
   var _missedCards=[],_filterActive='all';
-  var _touch={sx:0,sy:0,dx:0,dy:0,active:false,moved:false};
+  var _touch={sx:0,sy:0,dx:0,dy:0,active:false,moved:false,dir:null};
   var _animating=false;
   var _autoTimer=null,_autoFlipTimer=null,_autoCountIv=null;
   var _cardShownAt=Date.now();
@@ -3320,14 +3320,20 @@ function setLMode(mode){
     if(_animating)return;
     cancelAutoTimer();
     if(e.target.closest('#dk-speak,.dk-grade,.dk-btn'))return;
-    var p=pxy(e);_touch.sx=p.x;_touch.sy=p.y;_touch.dx=0;_touch.dy=0;_touch.active=true;_touch.moved=false;
+    var p=pxy(e);_touch.sx=p.x;_touch.sy=p.y;_touch.dx=0;_touch.dy=0;_touch.active=true;_touch.moved=false;_touch.dir=null;
     var card=$('dk-card');card.style.transition='none';
   }
   function dkMove(e){
     if(!_touch.active)return;
     var p=pxy(e);_touch.dx=p.x-_touch.sx;_touch.dy=p.y-_touch.sy;
-    if(Math.abs(_touch.dx)>5||Math.abs(_touch.dy)>5)_touch.moved=true;
-    if(Math.abs(_touch.dy)>Math.abs(_touch.dx)*1.5)return;
+    var adx=Math.abs(_touch.dx),ady=Math.abs(_touch.dy);
+    if(adx>5||ady>5)_touch.moved=true;
+    // Lock direction after 6px movement — prevents diagonal jitter
+    if(!_touch.dir&&(adx>6||ady>6)){_touch.dir=adx>=ady?'h':'v';}
+    // Vertical scroll — let browser handle it, don't move card
+    if(_touch.dir==='v')return;
+    // Horizontal swipe — prevent page from also scrolling sideways
+    if(e.cancelable)e.preventDefault();
     var card=$('dk-card');
     var rot=_touch.dx/22;
     card.style.transform='translateX('+_touch.dx+'px) rotate('+rot+'deg)';
@@ -3338,7 +3344,7 @@ function setLMode(mode){
     if(!_touch.active)return;
     _touch.active=false;
     var card=$('dk-card');
-    if(Math.abs(_touch.dx)>60&&Math.abs(_touch.dy)<Math.abs(_touch.dx)*1.5){
+    if(Math.abs(_touch.dx)>60&&_touch.dir==='h'){
       flashGrade(_touch.dx>0);
     }else{
       card.style.transition='transform .25s ease, opacity .25s ease';
@@ -3346,12 +3352,12 @@ function setLMode(mode){
       $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
       if(!_touch.moved&&!e.target.closest('#dk-speak,.dk-grade,.dk-btn,.dk-launch,#dk-close'))dkFlip();
     }
-    _touch.dx=0;_touch.dy=0;_touch.moved=false;
+    _touch.dx=0;_touch.dy=0;_touch.moved=false;_touch.dir=null;
   }
   var cardEl=$('dk-card');
   var _touchGuard=0;
   cardEl.addEventListener('touchstart',dkStart,{passive:true});
-  cardEl.addEventListener('touchmove',dkMove,{passive:true});
+  cardEl.addEventListener('touchmove',dkMove,{passive:false});
   cardEl.addEventListener('touchend',function(e){_touchGuard=Date.now();dkEnd(e);});
   cardEl.addEventListener('touchcancel',function(){_touch.active=false;resetCardTransform();});
   cardEl.addEventListener('mousedown',function(e){if(Date.now()-_touchGuard<600)return;dkStart(e);});
