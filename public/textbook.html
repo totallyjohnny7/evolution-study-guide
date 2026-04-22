@@ -128,6 +128,34 @@ body.zoom-open #navFab{display:none!important}
 @media(prefers-reduced-motion:reduce){
   *,html{animation:none!important;transition:none!important;scroll-behavior:auto}
 }
+/* ── Mini Matching Widget ── */
+.match-widget{margin:4px 0}
+.match-header-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.match-title{font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.8px}
+.match-score-pill{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:20px;padding:4px 12px;font-size:12px;color:var(--muted);transition:all .2s}
+.match-score-pill.done{border-color:var(--green);color:var(--green)}
+.match-score-pill.perfect{background:rgba(34,197,94,.1)}
+/* Individual term: show term then definition buttons */
+.match-term-badge{display:inline-block;background:rgba(245,197,66,.12);border:1.5px solid rgba(245,197,66,.4);border-radius:8px;padding:10px 16px;margin-bottom:12px;font-size:16px;font-weight:700;color:var(--gold)}
+.match-def-list{display:flex;flex-direction:column;gap:6px}
+.match-def-btn{background:#0f0f0f;border:1.5px solid #1d1d1d;border-radius:9px;padding:11px 14px;font-size:14px;color:#ccc;text-align:left;cursor:pointer;line-height:1.45;transition:border-color .15s,background .15s,color .15s;min-height:46px;font-family:inherit;width:100%}
+.match-def-btn:hover:not(:disabled){border-color:#444;background:#161616}
+.match-def-btn.correct{border-color:var(--green)!important;background:rgba(34,197,94,.1);color:#d0f0d8;pointer-events:none}
+.match-def-btn.wrong{border-color:var(--red)!important;background:rgba(239,68,68,.08);color:#f4cfcf;animation:mshake .32s}
+.match-def-btn:disabled{opacity:.4;cursor:default}
+.match-def-btn .dl{color:var(--gold);font-weight:700;margin-right:8px;font-size:12px;flex-shrink:0}
+/* Full table matching: two-column grid */
+.match-two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+@media(max-width:640px){.match-two-col{grid-template-columns:1fr}}
+.match-col-hd{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:6px;font-weight:600}
+.match-chip{display:block;width:100%;background:#0f0f0f;border:1.5px solid #1d1d1d;border-radius:9px;padding:9px 12px;font-size:13px;color:#ccc;text-align:left;cursor:pointer;line-height:1.4;transition:all .15s;margin-bottom:5px;font-family:inherit}
+.match-chip:hover:not([disabled]){border-color:#444}
+.match-chip.selected{border-color:var(--gold);color:var(--gold);background:rgba(245,197,66,.07)}
+.match-chip.correct{border-color:var(--green);background:rgba(34,197,94,.09);color:#d0f0d8;pointer-events:none;cursor:default}
+.match-chip.wrong{border-color:var(--red);animation:mshake .32s}
+.match-chip[disabled]{opacity:.35;cursor:default;pointer-events:none}
+.match-chip .mk{color:var(--muted);font-weight:700;margin-right:6px;font-size:11px}
+@keyframes mshake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
 </style>
 </head><body>
 <div id="progress"></div>
@@ -2022,6 +2050,224 @@ Year | Annual Antibiotic Usage | % Resistant Strains 1978 | 0.84 | 0 1979 | 0.92
   $$('#sb a[href^="#"]').forEach(function(a){
     a.addEventListener('click', function(){ if (window.innerWidth <= 900) closeSb(); });
   });
+
+  // ── Mini Matching Widgets ──
+  (function(){
+    function shuffle(arr){var a=arr.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+    // Parse a definition bank from stem text (handles "a) text" or "a. text")
+    function parseBank(txt){
+      var defs={};
+      // Split on letter markers at start of segment
+      var re=/(?:^|\n)([a-z])[).]\s+/g, m, lastIdx=0, lastLetter='';
+      // Build array of [letter, start] positions
+      var markers=[];
+      var match;
+      while((match=re.exec(txt))!==null){markers.push({letter:match[1],idx:match.index+match[0].length-match[0].trimLeft().length+match[0].length,start:re.lastIndex});}
+      for(var i=0;i<markers.length;i++){
+        var letter=markers[i].letter;
+        var start=markers[i].start;
+        var end=i+1<markers.length?markers[i+1].start-markers[i+1].letter.length-2:txt.length;
+        var def=txt.substring(start,end).replace(/\n──.*$/,'').trim().replace(/\n/g,' ');
+        if(def) defs[letter]=def;
+      }
+      return defs;
+    }
+
+    // Individual term matching (one term, definition bank, answer = letter)
+    function buildIndividual(card){
+      var stemEl=card.querySelector('.stem');
+      if(!stemEl) return;
+      var txt=stemEl.textContent||'';
+
+      // Extract term name
+      var tm=txt.match(/[Mm]atch (?:the )?term ["'\u201c\u2018]?([^"'\u201d\u2019\n]+)["'\u201d\u2019]?/);
+      var termName=tm?tm[1].trim():'Term';
+
+      // Parse definitions
+      var bankIdx=txt.indexOf('DEFINITION BANK');
+      var bankTxt=bankIdx>=0?txt.substring(bankIdx+16):txt;
+      var defs=parseBank(bankTxt);
+      var letters=Object.keys(defs).sort();
+      if(!letters.length) return;
+
+      // Get correct letter from answer label
+      var ansLbl=card.querySelector('.answer-box .lbl');
+      var lblTxt=ansLbl?(ansLbl.textContent||''):'';
+      var cm=lblTxt.match(/[Aa]nswer[:\s]+([a-z])\b/i);
+      if(!cm) return;
+      var correct=cm[1].toLowerCase();
+      if(!defs[correct]) return;
+
+      // Build widget
+      var scoreId='ms-'+card.id;
+      var html='<div class="match-widget">'
+        +'<div class="match-header-row">'
+        +'<span class="match-title">Match the term</span>'
+        +'<span class="match-score-pill" id="'+scoreId+'">Click the correct definition</span>'
+        +'</div>'
+        +'<div class="match-term-badge">'+termName+'</div>'
+        +'<div class="match-def-list">';
+      var shuffled=shuffle(letters);
+      shuffled.forEach(function(l){
+        html+='<button class="match-def-btn" data-letter="'+l+'">'
+          +'<span class="dl">'+l+')</span>'+defs[l]
+          +'</button>';
+      });
+      html+='</div></div>';
+      stemEl.innerHTML=html;
+
+      var done=false;
+      card.querySelectorAll('.match-def-btn').forEach(function(btn){
+        btn.addEventListener('click',function(){
+          if(done) return;
+          if(btn.dataset.letter===correct){
+            done=true;
+            btn.classList.add('correct');
+            card.querySelectorAll('.match-def-btn').forEach(function(b){if(b!==btn)b.disabled=true;});
+            var sp=card.querySelector('#'+scoreId);
+            if(sp){sp.textContent='✓ Correct!';sp.classList.add('done');}
+            card.classList.add('show-answer');
+            var ab=card.querySelector('.btn-answer');
+            if(ab) ab.textContent='✓ Hide answer';
+          } else {
+            btn.classList.add('wrong');
+            setTimeout(function(){btn.classList.remove('wrong');},380);
+            var sp=card.querySelector('#'+scoreId);
+            if(sp) sp.textContent='✗ Try again';
+          }
+        });
+      });
+    }
+
+    // Full-table matching (Terms: 1. … + Definitions: a. …)
+    function buildFullTable(card){
+      var stemEl=card.querySelector('.stem');
+      if(!stemEl) return;
+      var txt=stemEl.textContent||'';
+
+      // Parse terms
+      var terms=[];
+      var tmSec=txt.match(/Terms:\s*\n([\s\S]*?)\n\s*\nDefinitions:/);
+      if(!tmSec) return;
+      tmSec[1].split('\n').forEach(function(line){
+        var m=line.match(/^\s*(\d+)\.\s+(.+)/);
+        if(m) terms.push({num:m[1],text:m[2].trim()});
+      });
+      if(!terms.length) return;
+
+      // Parse definitions
+      var defs={};
+      var dfSec=txt.match(/Definitions:\s*\n([\s\S]*)$/);
+      if(!dfSec) return;
+      defs=parseBank(dfSec[1]);
+      var defLetters=Object.keys(defs).sort();
+      if(!defLetters.length) return;
+
+      // Parse answer map from answer-box text (format: "1, k; 2, g; …")
+      var ansBox=card.querySelector('.answer-box .text');
+      var ansMap={};
+      if(ansBox){
+        var am=(ansBox.textContent||'').match(/["""]([\d\w\s,;]+)["""]/);
+        if(am){
+          am[1].split(';').forEach(function(pair){
+            var p=pair.trim().split(',');
+            if(p.length===2) ansMap[p[0].trim()]=p[1].trim();
+          });
+        }
+      }
+
+      var matched=0, total=terms.length, selectedTerm=null;
+      var scoreId='fts-'+card.id;
+      var shuffledDefs=shuffle(defLetters);
+
+      var html='<div class="match-widget">'
+        +'<div class="match-header-row">'
+        +'<span class="match-title">Match '+total+' terms to definitions</span>'
+        +'<span class="match-score-pill" id="'+scoreId+'">0 / '+total+'</span>'
+        +'</div>'
+        +'<div class="match-two-col">'
+        +'<div>'
+        +'<div class="match-col-hd">Terms</div>';
+      terms.forEach(function(t){
+        html+='<button class="match-chip term-chip" data-num="'+t.num+'" id="tc-'+card.id+'-'+t.num+'">'
+          +'<span class="mk">'+t.num+'.</span>'+t.text
+          +'</button>';
+      });
+      html+='</div><div>'
+        +'<div class="match-col-hd">Definitions (shuffled)</div>';
+      shuffledDefs.forEach(function(l){
+        html+='<button class="match-chip def-chip" data-letter="'+l+'" id="dc-'+card.id+'-'+l+'">'
+          +'<span class="mk">'+l+'.</span>'+defs[l]
+          +'</button>';
+      });
+      html+='</div></div></div>';
+      stemEl.innerHTML=html;
+
+      function updScore(){
+        var sp=card.querySelector('#'+scoreId);
+        if(!sp) return;
+        sp.textContent=matched+' / '+total;
+        if(matched===total){
+          sp.classList.add('done');
+          card.classList.add('show-answer');
+          var ab=card.querySelector('.btn-answer');
+          if(ab) ab.textContent='✓ Hide answer';
+        }
+      }
+
+      card.querySelectorAll('.term-chip').forEach(function(chip){
+        chip.addEventListener('click',function(){
+          if(chip.classList.contains('correct')) return;
+          var wasSelected=chip.classList.contains('selected');
+          card.querySelectorAll('.term-chip.selected').forEach(function(c){c.classList.remove('selected');});
+          if(!wasSelected){chip.classList.add('selected'); selectedTerm=chip;}
+          else selectedTerm=null;
+        });
+      });
+
+      card.querySelectorAll('.def-chip').forEach(function(chip){
+        chip.addEventListener('click',function(){
+          if(chip.classList.contains('correct')) return;
+          if(!selectedTerm) return;
+          var num=selectedTerm.dataset.num;
+          var letter=chip.dataset.letter;
+          var correct=ansMap[num];
+          if(letter===correct){
+            selectedTerm.classList.remove('selected');
+            selectedTerm.classList.add('correct');
+            chip.classList.add('correct');
+            selectedTerm=null;
+            matched++;
+            updScore();
+          } else {
+            selectedTerm.classList.add('wrong');
+            chip.classList.add('wrong');
+            setTimeout(function(){
+              if(selectedTerm) selectedTerm.classList.remove('wrong');
+              chip.classList.remove('wrong');
+            },380);
+          }
+        });
+      });
+    }
+
+    // Initialize all matching cards
+    document.querySelectorAll('.q-card').forEach(function(card){
+      var metas=card.querySelectorAll('.meta span');
+      var isMatch=Array.from(metas).some(function(s){return s.textContent.trim()==='Matching';});
+      if(!isMatch) return;
+      if(card.querySelector('.opts')) return; // already MCQ-format
+      var stemEl=card.querySelector('.stem');
+      if(!stemEl) return;
+      var txt=stemEl.textContent||'';
+      if(/Terms:\s*\n\s*1\./.test(txt)){
+        buildFullTable(card);
+      } else if(/DEFINITION BANK|[a-z][).]\s+[A-Z]/.test(txt)){
+        buildIndividual(card);
+      }
+    });
+  })();
 
   // ── Swipe gesture on chapter sections: left = next chapter, right = prev ──
   var touch = {x:0,y:0,active:false};
