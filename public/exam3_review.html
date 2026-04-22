@@ -170,6 +170,7 @@ body.card-mode #fc-filter{display:none}
 #dk-score .sm{color:var(--red,#ef4444)}
 #dk-score .sk{color:var(--gold);margin-left:6px}
 @media(max-width:520px){#dk-ov{padding:10px 8px}#dk-inner{height:230px}#dk-f,#dk-b{padding:18px 14px 56px}#dk-term{font-size:15px}#dk-def{font-size:12px;max-height:140px}#dk-def img{max-height:70px}.dk-btn{padding:10px 12px;font-size:12px;flex:1}#dk-launch-bar{padding:6px 10px;gap:5px}.dk-launch{padding:5px 10px;font-size:11px}.dk-head{flex-wrap:wrap}#dk-stamp-pass,#dk-stamp-miss{font-size:38px;padding:4px 16px;letter-spacing:3px}#dk-speak{width:32px;height:32px;font-size:14px;top:8px;right:8px}.dk-grade{padding:9px 6px;font-size:13px}.dk-grade-row{bottom:10px;left:10px;right:10px;gap:8px}#dk-score{font-size:10px;padding:3px 8px}}
+#dk-timer-bar{width:min(500px,92vw);height:3px;background:#333;border-radius:2px;margin:3px 0 0}#dk-timer-fill{height:100%;background:var(--gold);border-radius:2px;width:100%}
 
 /* ── TEST MODE ── */
 body.test-mode #main-content{display:none!important}
@@ -3947,7 +3948,7 @@ document.addEventListener('click', e => {
 });
 // ── DECK ENGINE (v6: audio + swipe + pass/miss grading) ──
 (function(){
-  document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><span id="dk-score"></span><button id="dk-close" onclick="dkClose()">✕ Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span></div><div id="dk-card"><div id="dk-inner"><div id="dk-f"><button id="dk-speak" title="Read aloud (S)" aria-label="Read aloud">🔊</button><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip · swipe → pass · ← miss</div></div><div id="dk-b"><div id="dk-def"></div><div class="dk-grade-row"><button class="dk-grade dk-miss" id="dk-miss-btn" title="Fail (1 or ←)">✗ Miss (1)</button><button class="dk-grade dk-pass" id="dk-pass-btn" title="Pass (2 or →)">✓ Pass (2)</button></div></div></div><div id="dk-tint-pass"></div><div id="dk-tint-miss"></div><div id="dk-stamp-pass">PASS</div><div id="dk-stamp-miss">MISS</div></div><div class="dk-nav" id="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">← Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next →</button><button class="dk-btn" onclick="dkShuffle()">⇄ Shuffle</button></div><div id="dk-status"></div><div id="dk-done" style="display:none;flex-direction:column;align-items:center;text-align:center;padding:20px;gap:14px"><div style="font-size:48px">🎉</div><div style="font-size:22px;font-weight:800;color:#f5c542">Deck Complete!</div><div id="dk-done-stats" style="font-size:14px;color:#aaa;line-height:1.6;margin:4px 0 10px"></div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><button class="dk-btn" onclick="dkRetryMissed()">↩ Retry Missed</button><button class="dk-btn" onclick="dkRestart()">↺ Restart</button><button class="dk-btn" onclick="dkClose()">✕ Close</button></div></div></div>');
+  document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><span id="dk-score"></span><button id="dk-close" onclick="dkClose()">✕ Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span><span id="dk-timer-cnt" style="font-size:11px;color:var(--gold);font-weight:700;min-width:20px;text-align:center;display:inline-block;margin-left:4px"></span></div><div id="dk-timer-bar"><div id="dk-timer-fill"></div></div><div id="dk-card"><div id="dk-inner"><div id="dk-f"><button id="dk-speak" title="Read aloud (S)" aria-label="Read aloud">🔊</button><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip · swipe → pass · ← miss</div></div><div id="dk-b"><div id="dk-def"></div><div class="dk-grade-row"><button class="dk-grade dk-miss" id="dk-miss-btn" title="Fail (1 or ←)">✗ Miss (1)</button><button class="dk-grade dk-pass" id="dk-pass-btn" title="Pass (2 or →)">✓ Pass (2)</button></div></div></div><div id="dk-tint-pass"></div><div id="dk-tint-miss"></div><div id="dk-stamp-pass">PASS</div><div id="dk-stamp-miss">MISS</div></div><div class="dk-nav" id="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">← Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next →</button><button class="dk-btn" onclick="dkShuffle()">⇄ Shuffle</button></div><div id="dk-status"></div><div id="dk-done" style="display:none;flex-direction:column;align-items:center;text-align:center;padding:20px;gap:14px"><div style="font-size:48px">🎉</div><div style="font-size:22px;font-weight:800;color:#f5c542">Deck Complete!</div><div id="dk-done-stats" style="font-size:14px;color:#aaa;line-height:1.6;margin:4px 0 10px"></div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><button class="dk-btn" onclick="dkRetryMissed()">↩ Retry Missed</button><button class="dk-btn" onclick="dkRestart()">↺ Restart</button><button class="dk-btn" onclick="dkClose()">✕ Close</button></div></div></div>');
   var chaps={};
   // Build chapter label map from existing .fc-chapter blocks
   document.querySelectorAll('.fc-chapter').forEach(function(c){
@@ -3970,6 +3971,7 @@ document.addEventListener('click', e => {
   var _missedCards=[],_filterActive='all';
   var _touch={sx:0,sy:0,dx:0,dy:0,active:false,moved:false};
   var _animating=false;
+  var _autoTimer=null,_autoFlipTimer=null,_autoCountIv=null;
   var _cardShownAt=Date.now();
   var ROUTE_NAME='review';
   function $(id){return document.getElementById(id);}
@@ -4187,10 +4189,10 @@ document.addEventListener('click', e => {
     $('dk-title').textContent=(_filterActive==='all_pages'?'All Decks (Lecture + Review) — '+_deck.length+' cards':_filterActive==='all'?'All Cards — '+_deck.length+' cards':chaps&&chaps[_filterActive]?chaps[_filterActive]:_filterActive);
     showDeckCard();dkRender();$('dk-ov').classList.add('show');document.body.style.overflow='hidden';
   };
-  window.dkClose=function(){window.speechSynthesis&&window.speechSynthesis.cancel();$('dk-ov').classList.remove('show');document.body.style.overflow='';resetCardTransform();};
-  window.dkFlip=function(){if(_animating)return;var c=$('dk-card');requestAnimationFrame(function(){c.classList.toggle('flipped');});};
-  window.dkNav=function(dir){if(_animating)return;_idx=(_idx+dir+_deck.length)%_deck.length;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);saveDeckState();};
-  window.dkShuffle=function(){
+  window.dkClose=function(){cancelAutoTimer();window.speechSynthesis&&window.speechSynthesis.cancel();$('dk-ov').classList.remove('show');document.body.style.overflow='';resetCardTransform();};
+  window.dkFlip=function(){if(_animating)return;cancelAutoTimer();var c=$('dk-card');requestAnimationFrame(function(){c.classList.toggle('flipped');});};
+  window.dkNav=function(dir){if(_animating)return;cancelAutoTimer();_idx=(_idx+dir+_deck.length)%_deck.length;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);saveDeckState();};
+  window.dkShuffle=function(){cancelAutoTimer();
     for(var i=_deck.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=_deck[i];_deck[i]=_deck[j];_deck[j]=t;}
     _idx=0;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);
     $('dk-status').textContent='Shuffled!';setTimeout(function(){$('dk-status').textContent='';},1400);
@@ -4198,6 +4200,25 @@ document.addEventListener('click', e => {
   function resetCardTransform(){
     var card=$('dk-card');card.style.transition='';card.style.transform='';card.style.opacity='';
     $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
+  }
+  function cancelAutoTimer(){
+    clearTimeout(_autoTimer);clearTimeout(_autoFlipTimer);_autoTimer=null;_autoFlipTimer=null;
+    if(_autoCountIv){clearInterval(_autoCountIv);_autoCountIv=null;}
+    var fill=$('dk-timer-fill');if(fill){fill.style.transition='none';fill.style.width='100%';}
+    var cnt=$('dk-timer-cnt');if(cnt)cnt.textContent='';
+  }
+  function startAutoTimer(){
+    cancelAutoTimer();if(!_deck.length)return;
+    var fill=$('dk-timer-fill');var cnt=$('dk-timer-cnt');
+    if(fill){fill.style.transition='none';fill.style.width='100%';fill.offsetWidth;fill.style.transition='width 10s linear';fill.style.width='0';}
+    var secs=10;if(cnt)cnt.textContent=secs;
+    _autoCountIv=setInterval(function(){secs--;if(secs>0){if(cnt)cnt.textContent=secs;}else{clearInterval(_autoCountIv);_autoCountIv=null;if(cnt)cnt.textContent='';}},1000);
+    _autoTimer=setTimeout(function(){
+      if(_autoCountIv){clearInterval(_autoCountIv);_autoCountIv=null;}if(cnt)cnt.textContent='';
+      if(_animating||!$('dk-ov').classList.contains('show'))return;
+      $('dk-card').classList.add('flipped');
+      _autoFlipTimer=setTimeout(function(){if($('dk-ov').classList.contains('show'))flashGrade(false);},1500);
+    },10000);
   }
   function dkRender(){
     var c=_deck[_idx];
@@ -4212,6 +4233,7 @@ document.addEventListener('click', e => {
     $('dk-card').classList.remove('flipped');
     resetCardTransform();
     _cardShownAt=Date.now();
+    startAutoTimer();
   }
   function saveDeckState(){
     if(!_deck.length)return;
@@ -4227,12 +4249,12 @@ document.addEventListener('click', e => {
   function showDeckCard(){
     $('dk-card').style.display='';$('dk-nav').style.display='';$('dk-status').style.display='';$('dk-done').style.display='none';
   }
-  window.dkRetryMissed=function(){
+  window.dkRetryMissed=function(){cancelAutoTimer();
     if(!_missedCards.length){$('dk-status').textContent='No missed cards!';showDeckCard();return;}
     _deck=_missedCards.slice();_missedCards=[];_idx=0;_score={pass:0,miss:0,streak:0,best:0};
     updateScore();showDeckCard();dkRender();
   };
-  window.dkRestart=function(){
+  window.dkRestart=function(){cancelAutoTimer();
     buildDeck(_filterActive);_idx=0;_score={pass:0,miss:0,streak:0,best:0};_missedCards=[];
     updateScore();showDeckCard();dkRender();
   };
@@ -4254,7 +4276,7 @@ document.addEventListener('click', e => {
     },50);
   };
   // ── Pass/Miss grading with off-screen fly animation ──
-  window.flashGrade=function(pass){
+  window.flashGrade=function(pass){cancelAutoTimer();
     if(_animating||!_deck.length)return;
     _animating=true;
     // Persist rating to ESG (Dexie) — non-blocking, does not gate UI.
@@ -4308,6 +4330,7 @@ document.addEventListener('click', e => {
   function pxy(e){var t=e.touches&&e.touches[0]?e.touches[0]:(e.changedTouches&&e.changedTouches[0]?e.changedTouches[0]:e);return{x:t.clientX,y:t.clientY};}
   function dkStart(e){
     if(_animating)return;
+    cancelAutoTimer();
     if(e.target.closest('#dk-speak,.dk-grade,.dk-btn'))return;
     var p=pxy(e);_touch.sx=p.x;_touch.sy=p.y;_touch.dx=0;_touch.dy=0;_touch.active=true;_touch.moved=false;
     var card=$('dk-card');card.style.transition='none';
