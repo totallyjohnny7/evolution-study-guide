@@ -3296,7 +3296,7 @@ function setLMode(mode){
     if(saved&&saved.d&&saved.d.length===_deck.length){
       var _tm={};_deck.forEach(function(c){_tm[c.term]=c;});
       var _ro=[];saved.d.forEach(function(t){if(_tm[t])_ro.push(_tm[t]);});
-      if(_ro.length===_deck.length){_deck=_ro;_idx=Math.min(saved.i||0,_deck.length-1);_score=saved.s||{pass:0,miss:0,streak:0,best:0};}
+      if(_ro.length===_deck.length){_deck=_ro;_idx=Math.min(saved.i||0,_deck.length-1);var _ss=saved.s||{};_score={pass:_ss.pass||0,miss:_ss.miss||0,streak:_ss.streak||0,best:_ss.best||0};}
       else{_idx=0;_score={pass:0,miss:0,streak:0,best:0};}
     }else{_idx=0;_score={pass:0,miss:0,streak:0,best:0};}
     updateDkScore();
@@ -3304,7 +3304,7 @@ function setLMode(mode){
     $('dk-title').textContent=label;
     showDeckCard();dkRender();$('dk-ov').classList.add('show');document.body.style.overflow='hidden';
   };
-  window.dkClose=function(){cancelAutoTimer();window.speechSynthesis&&window.speechSynthesis.cancel();$('dk-ov').classList.remove('show');document.body.style.overflow='';resetCardTransform();};
+  window.dkClose=function(){saveDeckState();cancelAutoTimer();window.speechSynthesis&&window.speechSynthesis.cancel();$('dk-ov').classList.remove('show');document.body.style.overflow='';resetCardTransform();};
   window.dkFlip=function(){if(_animating)return;cancelAutoTimer();var c=$('dk-card');requestAnimationFrame(function(){c.classList.toggle('flipped');});};
   window.dkNav=function(dir){if(_animating)return;cancelAutoTimer();_idx=(_idx+dir+_deck.length)%_deck.length;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);saveDeckState();};
   window.dkShuffle=function(){cancelAutoTimer();
@@ -3432,9 +3432,12 @@ function setLMode(mode){
         card.style.transition='none';card.style.transform='translateX(0) rotate(0)';card.style.opacity='0';
         setTimeout(function(){
           dkRender();
-          card.style.transition='transform .3s ease, opacity .3s ease';
-          card.style.opacity='1';
-          updateDkScore();_animating=false;
+          card.style.opacity='0';
+          requestAnimationFrame(function(){
+            card.style.transition='transform .3s ease, opacity .3s ease';
+            card.style.opacity='1';
+            updateDkScore();_animating=false;
+          });
         },30);
       }
     },400);
