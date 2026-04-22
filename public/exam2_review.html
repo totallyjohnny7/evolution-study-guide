@@ -66,7 +66,8 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .exp.show{display:block}
 /* Flashcard mode */
 body.card-mode #main-content{display:none}
-body.card-mode #fc-wrap{display:none}
+body.card-mode #fc-wrap{display:block}
+body.card-mode #main{display:none}
 body.study-mode #main-content{display:block}
 body.study-mode #fc-wrap{display:none}
 #fc-wrap{display:none;padding:0 34px 80px;overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
@@ -164,7 +165,7 @@ strong{color:#fff}
 </div>
 <main id="main">
 <div id="main-content">
-<div class="ph"><h1>BIOL 4230 — Exam 2 Review</h1><p>Chapters 10, 11, 12, 15, 16 | Dr. Robbins &bull; Dr. Robbins &bull; Read block &rarr; answer &rarr; flip cards</p></div>
+<div class="ph"><h1>BIOL 4230 — Exam 2 Review</h1><p>Chapters 10, 11, 12, 15, 16 | Dr. Robbins &bull; Read block &rarr; answer &rarr; flip cards</p></div>
 
 <div class="chh" id="s_ch10"><h2><span class="cn">Ch 10</span> Complex Adaptations &amp; Evo Devo</h2>
 <p>How do complex traits evolve? Molecular mechanisms of morphological change.</p></div>
@@ -1440,7 +1441,7 @@ strong{color:#fff}
 </div>
 </div>
 <script>
-let tc=0,cc=0;
+let tc=0,cc=0,answered=0;
 document.querySelectorAll('.qb').forEach(b=>{
   const ch=b.querySelector('.ch');if(!ch)return;
   const cor=parseInt(ch.dataset.correct);
@@ -1450,15 +1451,15 @@ document.querySelectorAll('.qb').forEach(b=>{
   btns.forEach(btn=>{btn.addEventListener('click',()=>{
     if(btn.disabled)return;
     btns.forEach(x=>x.disabled=true);
+    answered++;
     if(parseInt(btn.dataset.i)===cor){btn.classList.add('correct');cc++;}
     else{btn.classList.add('wrong');btns[cor].classList.add('correct');}
     if(exp){exp.classList.add('show');exp.scrollIntoView({behavior:'smooth',block:'nearest'});}
     const s=document.getElementById('score-badge');
-    const ans=document.querySelectorAll('.cb.correct,.cb.wrong').length;
-    if(s)s.textContent='Score: '+cc+' / '+ans;
+    if(s)s.textContent='Score: '+cc+' / '+answered;
   });});
 });
-const secs=document.querySelectorAll('[id^="s"]');
+const secs=document.querySelectorAll('[id^="s_"]');
 const lks=document.querySelectorAll('#sb a');
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){lks.forEach(l=>l.classList.remove('active'));const lk=document.querySelector('#sb a[href="#'+e.target.id+'"]');if(lk)lk.classList.add('active');}});},{rootMargin:'-20% 0px -70% 0px'});
 secs.forEach(s=>obs.observe(s));
@@ -1468,7 +1469,7 @@ function setMode(m){
   document.getElementById('btn-study').classList.toggle('active',m==='study');
   document.getElementById('btn-card').classList.toggle('active',m==='card');
   const p=document.getElementById('prog');
-  if(p)p.textContent=m==='card'?document.querySelectorAll('.fc2:not([style*="none"])').length+' cards':'';
+  if(p)p.textContent=m==='card'?Array.from(document.querySelectorAll('.fc2')).filter(c=>c.style.display!=='none').length+' cards':'';
 }
 document.body.classList.add('study-mode');
 function filterCards(btn,ch){
@@ -1476,7 +1477,7 @@ function filterCards(btn,ch){
   btn.classList.add('on');
   document.querySelectorAll('.fc2').forEach(c=>{c.style.display=(ch==='all'||c.dataset.ch===ch)?'':'none';});
   document.querySelectorAll('.fc-chapter').forEach(s=>{s.style.display=(ch==='all'||s.dataset.ch===ch)?'':'none';});
-  const vis=document.querySelectorAll('.fc2:not([style*="none"])').length;
+  const vis=Array.from(document.querySelectorAll('.fc2')).filter(c=>c.style.display!=='none').length;
   const p=document.getElementById('prog');if(p)p.textContent=vis+' cards shown';
 }
 // ── DECK ENGINE (v6: audio + swipe + pass/miss grading) ──
@@ -1647,9 +1648,12 @@ function filterCards(btn,ch){
         card.style.transition='none';card.style.transform='translateX(0) rotate(0)';card.style.opacity='0';
         setTimeout(function(){
           dkRender();
-          card.style.transition='transform .3s ease, opacity .3s ease';
-          card.style.opacity='1';
-          updateScore();_animating=false;
+          card.style.opacity='0';
+          requestAnimationFrame(function(){
+            card.style.transition='transform .3s ease, opacity .3s ease';
+            card.style.opacity='1';
+            updateScore();_animating=false;
+          });
         },30);
       }
     },400);
@@ -1697,6 +1701,9 @@ function filterCards(btn,ch){
   cardEl.addEventListener('mousedown',dkStart);
   document.addEventListener('mousemove',function(e){if(_touch.active)dkMove(e);});
   document.addEventListener('mouseup',function(e){if(_touch.active)dkEnd(e);});
+  window.addEventListener('blur',function(){if(_touch.active){_touch.active=false;resetCardTransform();}});
+  document.addEventListener('mouseleave',function(){if(_touch.active){_touch.active=false;resetCardTransform();}});
+  cardEl.addEventListener('pointercancel',function(){if(_touch.active){_touch.active=false;resetCardTransform();}});
   // Button wiring (stopPropagation so card swipe/tap doesn't also fire)
   $('dk-speak').addEventListener('click',function(e){e.stopPropagation();dkSpeak();});
   $('dk-pass-btn').addEventListener('click',function(e){e.stopPropagation();flashGrade(true);});
@@ -1709,8 +1716,8 @@ function filterCards(btn,ch){
     else if(k===' '||k==='Enter'){e.preventDefault();dkFlip();}
     else if(k==='ArrowRight'||k==='d'||k==='D'||k==='p'||k==='P'){e.preventDefault();flashGrade(true);}
     else if(k==='ArrowLeft'||k==='a'||k==='A'||k==='m'||k==='M'){e.preventDefault();flashGrade(false);}
-    else if(k==='ArrowUp')dkNav(-1);
-    else if(k==='ArrowDown')dkNav(1);
+    else if(k==='ArrowUp'){e.preventDefault();dkNav(-1);}
+    else if(k==='ArrowDown'){e.preventDefault();dkNav(1);}
     else if(k==='s'||k==='S')dkSpeak();
   });
 })();
