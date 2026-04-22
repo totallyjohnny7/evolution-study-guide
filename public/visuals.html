@@ -39,7 +39,6 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,B
 .act-reset:hover{border-color:#555;color:var(--text)}
 
 /* ── VENN DIAGRAM ── */
-.venn-wrap{margin-bottom:14px}
 .venn-labels{display:flex;justify-content:space-between;margin-bottom:8px;gap:8px}
 .venn-lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);flex:1;text-align:center}
 .venn-lbl.left{color:#60a5fa}
@@ -73,15 +72,26 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,B
 .bucket{flex:1;min-width:140px;border:2px dashed var(--border);border-radius:12px;padding:10px;min-height:80px;display:flex;flex-direction:column;gap:6px;transition:all .15s}
 .bucket.accepting{border-style:solid;border-color:var(--gold);background:rgba(245,197,66,.05)}
 .bucket-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;margin-bottom:4px;text-align:center}
-.bucket:nth-child(1) .bucket-lbl{color:#60a5fa}
-.bucket:nth-child(2) .bucket-lbl{color:#a78bfa}
-.bucket:nth-child(3) .bucket-lbl{color:#34d399}
-.bucket:nth-child(4) .bucket-lbl{color:#fb923c}
 @media(max-width:500px){.sorter-buckets{flex-direction:column}}
 
 /* Completion banner */
 .complete-banner{display:none;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.3);border-radius:10px;padding:12px 16px;text-align:center;color:var(--green);font-weight:700;margin-top:10px;animation:fadein .3s}
 .complete-banner.show{display:block}
+
+/* Exam badge */
+.ebadge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:middle;border:1px solid}
+.ebadge.e1{background:rgba(56,189,248,.12);color:#38bdf8;border-color:rgba(56,189,248,.3)}
+.ebadge.e2{background:rgba(167,139,250,.12);color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.ebadge.e3{background:rgba(251,146,60,.12);color:#fb923c;border-color:rgba(251,146,60,.3)}
+
+/* Exam filter bar */
+.exam-filters{display:flex;gap:6px;padding:10px 20px 4px;flex-wrap:wrap}
+.ef-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:6px 16px;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .15s}
+.ef-btn.on{background:rgba(245,197,66,.08);border-color:var(--gold);color:var(--gold)}
+.ef-btn.e1.on{background:rgba(56,189,248,.08);border-color:#38bdf8;color:#38bdf8}
+.ef-btn.e2.on{background:rgba(167,139,250,.08);border-color:#a78bfa;color:#a78bfa}
+.ef-btn.e3.on{background:rgba(251,146,60,.08);border-color:#fb923c;color:#fb923c}
+.act-card.ef-hide{display:none!important}
 </style>
 </head>
 <body>
@@ -98,35 +108,57 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,B
   <button onclick="switchTab('pairs',this)">Concept Pairs</button>
 </div>
 
+<div class="exam-filters">
+  <button class="ef-btn on" data-ef="all" onclick="filterExam('all',this)">All Exams</button>
+  <button class="ef-btn e1" data-ef="e1" onclick="filterExam('e1',this)">Exam 1</button>
+  <button class="ef-btn e2" data-ef="e2" onclick="filterExam('e2',this)">Exam 2</button>
+  <button class="ef-btn e3" data-ef="e3" onclick="filterExam('e3',this)">Exam 3</button>
+</div>
+
 <div class="activities">
-
-<!-- ═══════════════ VENN DIAGRAMS ═══════════════ -->
 <div class="activity on" id="tab-venns"></div>
-
-<!-- ═══════════════ CATEGORY SORTERS ═══════════════ -->
 <div class="activity" id="tab-sorters"></div>
-
-<!-- ═══════════════ CONCEPT PAIRS (true/false "does it belong") ═══════════════ -->
 <div class="activity" id="tab-pairs"></div>
-
 </div>
 
 <script>
 /* ─── Tab switching ─── */
-function switchTab(id, btn){
+function switchTab(id,btn){
   document.querySelectorAll('.activity').forEach(function(a){a.classList.remove('on');});
   document.querySelector('#tab-'+id).classList.add('on');
   document.querySelectorAll('.tabs button').forEach(function(b){b.classList.remove('on');});
   btn.classList.add('on');
+  var active=document.querySelector('.ef-btn.on');
+  if(active) applyFilter(active.dataset.ef);
 }
 
-/* ─────────────────────────────────────
-   DATA
-───────────────────────────────────── */
-var VENNS = [
+/* ─── Exam filter ─── */
+function filterExam(ef,btn){
+  document.querySelectorAll('.ef-btn').forEach(function(b){b.classList.remove('on');});
+  btn.classList.add('on');
+  applyFilter(ef);
+}
+function applyFilter(ef){
+  document.querySelectorAll('.act-card').forEach(function(c){
+    if(ef==='all'||!c.dataset.exam||c.dataset.exam===ef){
+      c.classList.remove('ef-hide');
+    } else {
+      c.classList.add('ef-hide');
+    }
+  });
+}
+
+/* ─── Helpers ─── */
+function shuffle(a){var r=a.slice();for(var i=r.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=r[i];r[i]=r[j];r[j]=t;}return r;}
+function badge(exam){if(!exam)return'';var n=exam==='e1'?'E1':exam==='e2'?'E2':'E3';return'<span class="ebadge '+exam+'">'+n+'</span>';}
+
+/* ═══════════════════════════════════════
+   VENN DATA
+═══════════════════════════════════════ */
+var VENNS=[
   {
-    id:'vn1', title:'Natural Selection vs. Genetic Drift',
-    left:'Natural Selection Only', both:'Both Mechanisms', right:'Genetic Drift Only',
+    id:'vn1',title:'Natural Selection vs. Genetic Drift',exam:'e1',
+    left:'Natural Selection Only',both:'Both Mechanisms',right:'Genetic Drift Only',
     items:[
       {t:'Adapts populations to environment',z:'left'},
       {t:'Directional — favors specific phenotypes',z:'left'},
@@ -144,12 +176,12 @@ var VENNS = [
       {t:'Founder effect',z:'right'},
       {t:'Bottleneck effect',z:'right'},
       {t:'Can fix deleterious alleles',z:'right'},
-      {t:'Can eliminate beneficial alleles by chance',z:'right'},
+      {t:'Can eliminate beneficial alleles by chance',z:'right'}
     ]
   },
   {
-    id:'vn2', title:'Allopatric vs. Sympatric Speciation',
-    left:'Allopatric Only', both:'Both Modes', right:'Sympatric Only',
+    id:'vn2',title:'Allopatric vs. Sympatric Speciation',exam:'e3',
+    left:'Allopatric Only',both:'Both Modes',right:'Sympatric Only',
     items:[
       {t:'Requires a geographic barrier',z:'left'},
       {t:'Most common mode in animals',z:'left'},
@@ -161,16 +193,16 @@ var VENNS = [
       {t:'Natural selection drives trait divergence',z:'both'},
       {t:'Results in new species that cannot interbreed',z:'both'},
       {t:'Genetic drift can contribute',z:'both'},
-      {t:'No geographic barrier',z:'right'},
+      {t:'No geographic barrier required',z:'right'},
       {t:'Polyploidy (instant speciation — common in plants)',z:'right'},
       {t:'Host-shift: Rhagoletis pomonella apple fly',z:'right'},
       {t:'Disruptive selection drives divergence',z:'right'},
-      {t:'Rarer in animals, common in plants',z:'right'},
+      {t:'Rarer in animals, common in plants',z:'right'}
     ]
   },
   {
-    id:'vn3', title:'Prezygotic vs. Postzygotic Isolation',
-    left:'Prezygotic Only', both:'Both Types', right:'Postzygotic Only',
+    id:'vn3',title:'Prezygotic vs. Postzygotic Isolation',exam:'e3',
+    left:'Prezygotic Only',both:'Both Types',right:'Postzygotic Only',
     items:[
       {t:'Habitat isolation',z:'left'},
       {t:'Temporal isolation (different breeding seasons)',z:'left'},
@@ -186,12 +218,12 @@ var VENNS = [
       {t:'Hybrid sterility (mule = horse × donkey)',z:'right'},
       {t:'Hybrid breakdown (later-gen hybrids fail)',z:'right'},
       {t:'Acts after fertilization',z:'right'},
-      {t:'Costly — gametes already wasted',z:'right'},
+      {t:'Costly — gametes already wasted',z:'right'}
     ]
   },
   {
-    id:'vn4', title:'Homology vs. Convergent Evolution',
-    left:'Homology Only', both:'Both', right:'Convergence Only',
+    id:'vn4',title:'Homology vs. Convergent Evolution',exam:'e3',
+    left:'Homology Only',both:'Both',right:'Convergence Only',
     items:[
       {t:'Similarity due to SHARED ANCESTRY',z:'left'},
       {t:'Vertebrate forelimb bones (arm/wing/flipper)',z:'left'},
@@ -207,14 +239,99 @@ var VENNS = [
       {t:'Bird, bat, and insect wings for flight',z:'right'},
       {t:'Vertebrate eye vs. cephalopod (octopus) eye',z:'right'},
       {t:'Thylacine (marsupial wolf) vs. placental wolf',z:'right'},
-      {t:'Similar selective pressures, different lineages',z:'right'},
+      {t:'Similar selective pressures, different lineages',z:'right'}
+    ]
+  },
+  {
+    id:'vn5',title:'Sexual Selection vs. Natural Selection',exam:'e1',
+    left:'Sexual Selection Only',both:'Both Apply',right:'Natural Selection Only',
+    items:[
+      {t:'Driven by mate choice (intersexual selection)',z:'left'},
+      {t:'Driven by male-male competition (intrasexual)',z:'left'},
+      {t:'Can produce extravagant traits that reduce survival',z:'left'},
+      {t:'Peacock tail — costly ornament preferred by females',z:'left'},
+      {t:'Operates through differential MATING success',z:'left'},
+      {t:'Runaway selection (Fisher\'s sexy son hypothesis)',z:'left'},
+      {t:'Changes allele frequencies over generations',z:'both'},
+      {t:'Acts on heritable phenotypic variation',z:'both'},
+      {t:'Differential reproductive success is the engine',z:'both'},
+      {t:'Can produce rapid trait change',z:'both'},
+      {t:'Driven by differential SURVIVAL',z:'right'},
+      {t:'Adapts population to ecological environment',z:'right'},
+      {t:'Industrial melanism — peppered moth',z:'right'},
+      {t:'Eliminates unfit variants regardless of sex',z:'right'},
+      {t:'Strongest when the environment changes',z:'right'}
+    ]
+  },
+  {
+    id:'vn6',title:'Dispersal vs. Vicariance Biogeography',exam:'e3',
+    left:'Dispersal Only',both:'Both Explain',right:'Vicariance Only',
+    items:[
+      {t:'Species actively or passively crosses an existing barrier',z:'left'},
+      {t:'Colonization of oceanic islands (Galápagos finches)',z:'left'},
+      {t:'Rare long-distance dispersal events',z:'left'},
+      {t:'Single founding population colonizes new area',z:'left'},
+      {t:'Predicts asymmetric distribution patterns',z:'left'},
+      {t:'Closely related species on different landmasses',z:'both'},
+      {t:'Used with phylogenetics to reconstruct distribution history',z:'both'},
+      {t:'Produces allopatric speciation',z:'both'},
+      {t:'Explains disjunct distributions of related taxa',z:'both'},
+      {t:'Population split by a NEW geographic barrier',z:'right'},
+      {t:'No dispersal across barrier required',z:'right'},
+      {t:'Marsupials in Australia & S. America (Gondwana split)',z:'right'},
+      {t:'Both populations isolated simultaneously',z:'right'},
+      {t:'Predicts reciprocal monophyly between regions',z:'right'}
+    ]
+  },
+  {
+    id:'vn7',title:'Microevolution vs. Macroevolution',exam:'e3',
+    left:'Microevolution Only',both:'Both Levels',right:'Macroevolution Only',
+    items:[
+      {t:'Changes in allele frequencies within a population',z:'left'},
+      {t:'Hardy-Weinberg as the no-change null model',z:'left'},
+      {t:'Natural selection, drift, mutation, gene flow act here',z:'left'},
+      {t:'Measurable over years or decades',z:'left'},
+      {t:'Operates within a single species',z:'left'},
+      {t:'Driven by mutation creating raw variation',z:'both'},
+      {t:'Cumulative change produces biological diversity',z:'both'},
+      {t:'Natural selection is a key driver',z:'both'},
+      {t:'Changes above the species level',z:'right'},
+      {t:'Speciation and extinction events',z:'right'},
+      {t:'Patterns visible only in the fossil record',z:'right'},
+      {t:'Punctuated equilibrium vs. gradualism debate',z:'right'},
+      {t:'Origins of major body plans (Cambrian Explosion)',z:'right'},
+      {t:'Adaptive radiation after mass extinction',z:'right'}
+    ]
+  },
+  {
+    id:'vn8',title:'Australopithecus vs. Homo Anatomy',exam:'e3',
+    left:'Australopithecus Only',both:'Both Genera',right:'Homo Only',
+    items:[
+      {t:'Small brain (400–550 cc)',z:'left'},
+      {t:'Long curved fingers adapted for tree climbing',z:'left'},
+      {t:'Funnel-shaped (ape-like) chest',z:'left'},
+      {t:'Long arms relative to legs',z:'left'},
+      {t:'Still used trees for sleeping or refuge',z:'left'},
+      {t:'Bipedal locomotion (walked on two legs)',z:'both'},
+      {t:'Foramen magnum positioned below skull',z:'both'},
+      {t:'Reduced canine teeth compared to other apes',z:'both'},
+      {t:'Part of the hominin lineage (after chimp split)',z:'both'},
+      {t:'Large brain (1,000–1,450 cc in H. sapiens)',z:'right'},
+      {t:'Barrel-shaped chest (modern proportions)',z:'right'},
+      {t:'Short arms relative to legs',z:'right'},
+      {t:'Lost climbing adaptations — flat calcaneus',z:'right'},
+      {t:'Tool manufacture (Oldowan → Acheulean → beyond)',z:'right'},
+      {t:'Control of fire and symbolic language',z:'right'}
     ]
   }
 ];
 
-var SORTERS = [
+/* ═══════════════════════════════════════
+   SORTER DATA
+═══════════════════════════════════════ */
+var SORTERS=[
   {
-    id:'s1', title:'Reproductive Isolation — Which Category?',
+    id:'s1',title:'Reproductive Isolation — Which Category?',exam:'e3',
     buckets:['Pre-mating\n(Prezygotic)','Post-mating Prezygotic','Postzygotic'],
     colors:['#60a5fa','#a78bfa','#34d399'],
     items:[
@@ -225,11 +342,11 @@ var SORTERS = [
       {t:'Gametic incompatibility (sea urchin bindin)',b:1},
       {t:'Hybrid inviability (embryo fails)',b:2},
       {t:'Hybrid sterility (mule cannot reproduce)',b:2},
-      {t:'Hybrid breakdown (F₂ fitness collapse)',b:2},
+      {t:'Hybrid breakdown (F₂ fitness collapse)',b:2}
     ]
   },
   {
-    id:'s2', title:'Evidence for Evolution — Which Line of Evidence?',
+    id:'s2',title:'Evidence for Evolution — Which Line of Evidence?',exam:'e1',
     buckets:['Biogeography','Fossil Record','Comparative\nAnatomy','Molecular\nBiology'],
     colors:['#60a5fa','#fb923c','#a78bfa','#34d399'],
     items:[
@@ -244,11 +361,11 @@ var SORTERS = [
       {t:'Recurrent laryngeal nerve detours around aorta',b:2},
       {t:'Cytochrome c gene similarities across phyla',b:3},
       {t:'mtDNA → African origin of modern humans',b:3},
-      {t:'Endogenous retroviruses shared across primates',b:3},
+      {t:'Endogenous retroviruses shared across primates',b:3}
     ]
   },
   {
-    id:'s3', title:'Types of Natural Selection — Which Mode?',
+    id:'s3',title:'Types of Natural Selection — Which Mode?',exam:'e1',
     buckets:['Directional','Stabilizing','Disruptive','Balancing'],
     colors:['#60a5fa','#34d399','#fb923c','#a78bfa'],
     items:[
@@ -261,11 +378,11 @@ var SORTERS = [
       {t:'African seedcracker finches (small vs. large seeds)',b:2},
       {t:'Sickle-cell allele (HbS) in malaria regions',b:3},
       {t:'MHC gene diversity in human populations',b:3},
-      {t:'White-throated sparrow plumage morphs',b:3},
+      {t:'White-throated sparrow plumage morphs',b:3}
     ]
   },
   {
-    id:'s4', title:'Geological Eons & Key Milestones',
+    id:'s4',title:'Geological Eons & Key Milestones',exam:'e3',
     buckets:['Archean\n(4.0–2.5 Bya)','Proterozoic\n(2.5–0.54 Bya)','Paleozoic\n(541–252 Mya)','Mesozoic\n(252–66 Mya)'],
     colors:['#f87171','#fb923c','#34d399','#60a5fa'],
     items:[
@@ -280,31 +397,158 @@ var SORTERS = [
       {t:'First dinosaurs (~230 mya)',b:3},
       {t:'Archaeopteryx — bird-dinosaur transition (~150 mya)',b:3},
       {t:'First flowering plants (132 mya)',b:3},
-      {t:'K-Pg Chicxulub impact — non-avian dinosaurs extinct',b:3},
+      {t:'K-Pg Chicxulub impact — non-avian dinosaurs extinct',b:3}
+    ]
+  },
+  {
+    id:'s5',title:'Forces of Evolution — Which Mechanism?',exam:'e1',
+    buckets:['Natural\nSelection','Genetic\nDrift','Gene\nFlow','Mutation'],
+    colors:['#60a5fa','#a78bfa','#34d399','#fb923c'],
+    items:[
+      {t:'Peppered moth color change in industrial England',b:0},
+      {t:'Antibiotic resistance in bacteria',b:0},
+      {t:'Non-random — fitness determines which alleles spread',b:0},
+      {t:'Directional pressure on phenotypes',b:0},
+      {t:'Bottleneck — small surviving group',b:1},
+      {t:'Founder effect — colonizing a new area',b:1},
+      {t:'Random — stronger in small populations',b:1},
+      {t:'Can fix deleterious alleles by chance',b:1},
+      {t:'Migration brings new alleles into population',b:2},
+      {t:'Reduces genetic differences between populations',b:2},
+      {t:'Can oppose local adaptation by selection',b:2},
+      {t:'Only source of entirely NEW alleles',b:3},
+      {t:'Point substitutions, insertions, deletions',b:3},
+      {t:'Usually neutral or harmful, rarely beneficial',b:3}
+    ]
+  },
+  {
+    id:'s6',title:'Hominin Species — Which Time Period?',exam:'e3',
+    buckets:['~6–4 mya\n(Earliest)','~3–2 mya\n(Australopiths)','~2–0.5 mya\n(Early Homo)','<500 kya\n(Recent Homo)'],
+    colors:['#f87171','#fb923c','#34d399','#60a5fa'],
+    items:[
+      {t:'Sahelanthropus tchadensis (oldest proposed hominin)',b:0},
+      {t:'Ardipithecus ramidus (Ardi, ~4.4 mya)',b:0},
+      {t:'Australopithecus afarensis (Lucy, ~3.2 mya)',b:1},
+      {t:'Australopithecus africanus (~3–2 mya)',b:1},
+      {t:'Paranthropus robustus (robust australopith)',b:1},
+      {t:'Homo habilis (first Homo, Oldowan tools)',b:2},
+      {t:'Homo erectus (first out of Africa, ~1.8 mya)',b:2},
+      {t:'Homo heidelbergensis (~600 kya)',b:3},
+      {t:'Homo neanderthalensis (~300–40 kya)',b:3},
+      {t:'Homo sapiens (anatomically modern, ~300 kya)',b:3}
+    ]
+  },
+  {
+    id:'s7',title:'Evolutionary Medicine — Nesse\'s Reasons for Vulnerability',exam:'e3',
+    buckets:['Evolved\nDefenses','Evolutionary\nConflict','Evolutionary\nNovelty','Trade-offs &\nConstraints'],
+    colors:['#34d399','#a78bfa','#fb923c','#f87171'],
+    items:[
+      {t:'Fever — adaptive thermal response to infection',b:0},
+      {t:'Nausea in pregnancy — protects embryo from toxins',b:0},
+      {t:'Cough — pathogen expulsion mechanism',b:0},
+      {t:'Pathogens evolving to evade host immunity (arms race)',b:1},
+      {t:'Genomic imprinting — Haig\'s parent-offspring conflict',b:1},
+      {t:'Antibiotic overuse disrupting microbiome',b:1},
+      {t:'Obesity epidemic — mismatch with ancestral diet',b:2},
+      {t:'Type 2 diabetes linked to sedentary modern lifestyle',b:2},
+      {t:'Allergies and autoimmunity (hygiene hypothesis)',b:2},
+      {t:'Sickle-cell trait — malaria protection vs. anemia',b:3},
+      {t:'Senescence — body maintenance vs. reproduction trade-off',b:3},
+      {t:'Large hominin brain vs. narrow female pelvis',b:3}
+    ]
+  },
+  {
+    id:'s8',title:'Phylogenetic Concepts — Classify the Example',exam:'e3',
+    buckets:['Monophyletic\n(Clade)','Paraphyletic','Polyphyletic','Homoplasy\n(Convergence)'],
+    colors:['#34d399','#fb923c','#f87171','#a78bfa'],
+    items:[
+      {t:'Birds (Aves) — all descendants of one ancestor',b:0},
+      {t:'Primates — monkeys, apes, and humans',b:0},
+      {t:'Mammals — all descendants of synapsid ancestor',b:0},
+      {t:'"Reptiles" excluding birds',b:1},
+      {t:'"Fish" — all aquatic vertebrates excluding tetrapods',b:1},
+      {t:'"Warm-blooded" animals = birds + mammals',b:2},
+      {t:'"Pachyderms" = elephants + rhinos + hippos',b:2},
+      {t:'Wings in birds, bats, and insects (flight)',b:3},
+      {t:'Camera eye in vertebrates and cephalopods',b:3},
+      {t:'Streamlined body in dolphins and sharks',b:3}
     ]
   }
 ];
 
-/* ─────────────────────────────────────
+/* ═══════════════════════════════════════
+   PAIRS DATA
+═══════════════════════════════════════ */
+var PAIRS=[
+  {
+    id:'cp1',title:'Does it apply to Natural Selection?',exam:'e1',
+    prompt:'Tap each chip: ✓ YES it applies to natural selection, ✗ NO it does not',
+    yes:['Requires heritable variation','Differential reproductive success','Adapts population to environment','Non-random allele frequency change','Acts on phenotype not genotype directly','Directional in response to environment'],
+    no:['Requires small population size','Random allele loss','Founder effect','Fixes alleles by chance','Operates faster when population is tiny']
+  },
+  {
+    id:'cp2',title:'Monophyletic, Paraphyletic, or Polyphyletic?',exam:'e3',
+    prompt:'Tap a chip, then tap the correct grouping type below',
+    buckets:['Monophyletic ✓','Paraphyletic','Polyphyletic ✗'],
+    colors:['#34d399','#fb923c','#f87171'],
+    items:[
+      {t:'Mammals (all descendants of one ancestor)',b:0},
+      {t:'Birds (= Aves, a clade of dinosaurs)',b:0},
+      {t:'"Reptiles" excluding birds',b:1},
+      {t:'"Fish" excluding tetrapods',b:1},
+      {t:'"Pachydermata" = elephants + rhinos + hippos',b:2},
+      {t:'Warm-blooded animals (birds + mammals combined)',b:2},
+      {t:'Primates = monkeys + apes + humans',b:0},
+      {t:'"Invertebrates" = all animals without backbones',b:2}
+    ]
+  },
+  {
+    id:'cp3',title:'Does this violate Hardy-Weinberg Equilibrium?',exam:'e1',
+    prompt:'Tap each chip: ✓ YES this violates HW (evolution occurs), ✗ NO this is an HW assumption being met',
+    yes:['Small isolated population (genetic drift occurs)','Non-random mating (inbreeding or assortative mating)','Natural selection on the trait','Immigrants bringing new allele frequencies','Elevated mutation rate altering allele frequencies','Bottleneck drastically reducing population size'],
+    no:['Very large panmictic population','Completely random mating','No fitness differences between genotypes','Closed population — no immigration or emigration','Negligible mutation rate']
+  },
+  {
+    id:'cp4',title:'Does it demonstrate coevolution?',exam:'e3',
+    prompt:'Tap each chip: ✓ YES this is coevolution, ✗ NO it is not coevolution',
+    yes:['Host-parasite arms race (immunity vs. evasion)','Flowering plant and its specialist pollinator','Brood parasitism — cuckoo egg mimicry + host egg rejection','Yucca plant and yucca moth mutualism','Acacia thorns and Pseudomyrmex ants (mutualism)'],
+    no:['Industrial melanism in peppered moths','Antibiotic resistance in a bacterial population','Genetic drift reducing diversity on a small island','Sexual selection for peacock tail length','Disruptive selection in Darwin\'s finches (one species)']
+  },
+  {
+    id:'cp5',title:'Life History Strategy — Fast (r) or Slow (K)?',exam:'e2',
+    prompt:'Tap a chip, then tap the correct strategy below',
+    buckets:['Fast / r-selected','Slow / K-selected'],
+    colors:['#f87171','#60a5fa'],
+    items:[
+      {t:'Many offspring, little parental care per offspring',b:0},
+      {t:'Early reproductive maturity (short generation time)',b:0},
+      {t:'Small body size, short lifespan',b:0},
+      {t:'High extrinsic mortality risk (predation, disease)',b:0},
+      {t:'Annual plants, insects, small rodents',b:0},
+      {t:'Few offspring, intense parental investment',b:1},
+      {t:'Delayed reproductive maturity',b:1},
+      {t:'Large body size, long lifespan',b:1},
+      {t:'Low extrinsic mortality, stable environment',b:1},
+      {t:'Elephants, whales, humans, great apes',b:1}
+    ]
+  }
+];
+
+/* ═══════════════════════════════════════
    VENN RENDERER
-───────────────────────────────────── */
-function shuffle(a){var r=a.slice();for(var i=r.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=r[i];r[i]=r[j];r[j]=t;}return r;}
-
-function buildVenn(data, container){
-  var total=data.items.length, correct=0;
-  var selected=null;
-
+═══════════════════════════════════════ */
+function buildVenn(data,container){
+  var total=data.items.length,correct=0,selected=null;
   var card=document.createElement('div');
   card.className='act-card';
-
-  var scoreId='sc-'+data.id;
-  var bannerId='bn-'+data.id;
+  if(data.exam) card.dataset.exam=data.exam;
+  var scoreId='sc-'+data.id, bannerId='bn-'+data.id;
 
   card.innerHTML='<div class="act-header">'
-    +'<span class="act-title">'+data.title+'</span>'
+    +'<span class="act-title">'+data.title+badge(data.exam)+'</span>'
     +'<span style="display:flex;align-items:center;gap:6px">'
     +'<span class="act-score" id="'+scoreId+'">0 / '+total+'</span>'
-    +'<button class="act-reset" onclick="resetVenn(\''+data.id+'\')">↺ Reset</button>'
+    +'<button class="act-reset" onclick="resetVenn(\''+data.id+'\')">&#8635; Reset</button>'
     +'</span></div>'
     +'<div class="venn-labels">'
     +'<span class="venn-lbl left">'+data.left+'</span>'
@@ -312,55 +556,36 @@ function buildVenn(data, container){
     +'<span class="venn-lbl right">'+data.right+'</span>'
     +'</div>'
     +'<div class="venn-zones">'
-    +'<div class="venn-zone left" id="'+data.id+'-left" data-zone="left"><div class="venn-zone-lbl">← Left only</div></div>'
-    +'<div class="venn-zone both" id="'+data.id+'-both" data-zone="both"><div class="venn-zone-lbl">↔ Both</div></div>'
-    +'<div class="venn-zone right" id="'+data.id+'-right" data-zone="right"><div class="venn-zone-lbl">Right only →</div></div>'
+    +'<div class="venn-zone left" id="'+data.id+'-left" data-zone="left"><div class="venn-zone-lbl">\u2190 Left only</div></div>'
+    +'<div class="venn-zone both" id="'+data.id+'-both" data-zone="both"><div class="venn-zone-lbl">\u2194 Both</div></div>'
+    +'<div class="venn-zone right" id="'+data.id+'-right" data-zone="right"><div class="venn-zone-lbl">Right only \u2192</div></div>'
     +'</div>'
     +'<div class="pool-label">Tap a chip, then tap a region to place it</div>'
     +'<div class="chip-pool" id="'+data.id+'-pool"></div>'
-    +'<div class="complete-banner" id="'+bannerId+'">🎉 All '+total+' placed correctly!</div>';
-
+    +'<div class="complete-banner" id="'+bannerId+'">\uD83C\uDF89 All '+total+' placed correctly!</div>';
   container.appendChild(card);
 
-  // Render chips
   var pool=document.getElementById(data.id+'-pool');
-  var shuffled=shuffle(data.items.map(function(item,i){return{i:i,t:item.t,z:item.z};}));
-
-  shuffled.forEach(function(item){
+  shuffle(data.items.map(function(item,i){return{i:i,t:item.t,z:item.z};})).forEach(function(item){
     var chip=document.createElement('div');
-    chip.className='chip';
-    chip.id=data.id+'-chip-'+item.i;
-    chip.dataset.zone=item.z;
-    chip.textContent=item.t;
+    chip.className='chip'; chip.id=data.id+'-chip-'+item.i; chip.dataset.zone=item.z; chip.textContent=item.t;
     chip.addEventListener('click',function(){
       if(chip.classList.contains('correct')) return;
-      if(selected===chip){
-        chip.classList.remove('selected');
-        selected=null;
-        return;
-      }
+      if(selected===chip){chip.classList.remove('selected');selected=null;return;}
       if(selected) selected.classList.remove('selected');
-      selected=chip;
-      chip.classList.add('selected');
+      selected=chip; chip.classList.add('selected');
     });
     pool.appendChild(chip);
   });
 
-  // Zone click handlers
   ['left','both','right'].forEach(function(z){
-    var zone=document.getElementById(data.id+'-'+z);
-    zone.addEventListener('click',function(){
+    document.getElementById(data.id+'-'+z).addEventListener('click',function(){
       if(!selected) return;
-      var correctZone=selected.dataset.zone;
-      if(z===correctZone){
-        selected.classList.remove('selected');
-        selected.classList.add('correct',z);
-        zone.appendChild(selected);
-        selected=null;
-        correct++;
-        var sc=document.getElementById(scoreId);
-        sc.textContent=correct+' / '+total;
-        if(correct===total){sc.classList.add('done');document.getElementById(bannerId).classList.add('show');}
+      if(z===selected.dataset.zone){
+        selected.classList.remove('selected'); selected.classList.add('correct',z);
+        document.getElementById(data.id+'-'+z).appendChild(selected); selected=null; correct++;
+        document.getElementById(scoreId).textContent=correct+' / '+total;
+        if(correct===total){document.getElementById(scoreId).classList.add('done');document.getElementById(bannerId).classList.add('show');}
       } else {
         selected.classList.add('wrong');
         setTimeout(function(){if(selected)selected.classList.remove('wrong','selected');selected=null;},380);
@@ -371,64 +596,53 @@ function buildVenn(data, container){
 
 window.resetVenn=function(id){
   var pool=document.getElementById(id+'-pool');
-  var zones=[document.getElementById(id+'-left'),document.getElementById(id+'-both'),document.getElementById(id+'-right')];
-  zones.forEach(function(z){
-    Array.from(z.querySelectorAll('.chip')).forEach(function(c){
-      c.classList.remove('correct','left','both','right','selected','wrong');
-      pool.appendChild(c);
+  ['left','both','right'].forEach(function(z){
+    var zone=document.getElementById(id+'-'+z);
+    if(!zone) return;
+    Array.from(zone.querySelectorAll('.chip')).forEach(function(c){
+      c.classList.remove('correct','left','both','right','selected','wrong'); pool.appendChild(c);
     });
   });
   var data=VENNS.find(function(v){return v.id===id;});
-  var sc=document.getElementById('sc-'+id);
-  var bn=document.getElementById('bn-'+id);
+  var sc=document.getElementById('sc-'+id), bn=document.getElementById('bn-'+id);
   if(sc){sc.textContent='0 / '+(data?data.items.length:0);sc.classList.remove('done');}
   if(bn) bn.classList.remove('show');
-  // Reshuffle pool
   var chips=Array.from(pool.children);
   chips.forEach(function(c){pool.removeChild(c);});
   shuffle(chips).forEach(function(c){pool.appendChild(c);});
 };
 
-/* ─────────────────────────────────────
-   CATEGORY SORTER RENDERER
-───────────────────────────────────── */
-function buildSorter(data, container){
-  var total=data.items.length, correct=0;
-  var selected=null;
-
+/* ═══════════════════════════════════════
+   SORTER RENDERER
+═══════════════════════════════════════ */
+function buildSorter(data,container){
+  var total=data.items.length,correct=0,selected=null;
   var card=document.createElement('div');
   card.className='act-card';
-  var scoreId='scs-'+data.id;
-  var bannerId='bns-'+data.id;
+  if(data.exam) card.dataset.exam=data.exam;
+  var scoreId='scs-'+data.id, bannerId='bns-'+data.id;
 
   var bucketsHtml=data.buckets.map(function(b,i){
     return '<div class="bucket" id="'+data.id+'-b'+i+'" data-bi="'+i+'">'
-      +'<div class="bucket-lbl" style="color:'+data.colors[i]+'">'+b.replace(/\n/,'<br>')+'</div>'
-      +'</div>';
+      +'<div class="bucket-lbl" style="color:'+data.colors[i]+'">'+b.replace(/\n/g,'<br>')+'</div></div>';
   }).join('');
 
   card.innerHTML='<div class="act-header">'
-    +'<span class="act-title">'+data.title+'</span>'
+    +'<span class="act-title">'+data.title+badge(data.exam)+'</span>'
     +'<span style="display:flex;align-items:center;gap:6px">'
     +'<span class="act-score" id="'+scoreId+'">0 / '+total+'</span>'
-    +'<button class="act-reset" onclick="resetSorter(\''+data.id+'\')">↺ Reset</button>'
+    +'<button class="act-reset" onclick="resetSorter(\''+data.id+'\')">&#8635; Reset</button>'
     +'</span></div>'
     +'<div class="sorter-buckets">'+bucketsHtml+'</div>'
     +'<div class="pool-label">Tap a chip, then tap the correct category</div>'
     +'<div class="chip-pool" id="'+data.id+'-pool"></div>'
-    +'<div class="complete-banner" id="'+bannerId+'">🎉 All '+total+' sorted correctly!</div>';
-
+    +'<div class="complete-banner" id="'+bannerId+'">\uD83C\uDF89 All '+total+' sorted correctly!</div>';
   container.appendChild(card);
 
   var pool=document.getElementById(data.id+'-pool');
-  var shuffled=shuffle(data.items.map(function(item,i){return{i:i,t:item.t,b:item.b};}));
-
-  shuffled.forEach(function(item){
+  shuffle(data.items.map(function(item,i){return{i:i,t:item.t,b:item.b};})).forEach(function(item){
     var chip=document.createElement('div');
-    chip.className='chip';
-    chip.id=data.id+'-sc'+item.i;
-    chip.dataset.bi=item.b;
-    chip.textContent=item.t;
+    chip.className='chip'; chip.id=data.id+'-sc'+item.i; chip.dataset.bi=item.b; chip.textContent=item.t;
     chip.addEventListener('click',function(){
       if(chip.classList.contains('correct')) return;
       if(selected===chip){chip.classList.remove('selected');selected=null;return;}
@@ -439,22 +653,14 @@ function buildSorter(data, container){
   });
 
   data.buckets.forEach(function(b,i){
-    var bucket=document.getElementById(data.id+'-b'+i);
-    bucket.addEventListener('click',function(){
+    document.getElementById(data.id+'-b'+i).addEventListener('click',function(){
       if(!selected) return;
       if(parseInt(selected.dataset.bi)===i){
-        selected.classList.remove('selected');
-        selected.classList.add('correct');
-        // color correct chip to match bucket
-        selected.style.borderColor=data.colors[i];
-        selected.style.color=data.colors[i];
-        selected.style.background='rgba(0,0,0,.15)';
-        bucket.appendChild(selected);
-        selected=null;
-        correct++;
-        var sc=document.getElementById(scoreId);
-        sc.textContent=correct+' / '+total;
-        if(correct===total){sc.classList.add('done');document.getElementById(bannerId).classList.add('show');}
+        selected.classList.remove('selected'); selected.classList.add('correct');
+        selected.style.borderColor=data.colors[i]; selected.style.color=data.colors[i]; selected.style.background='rgba(0,0,0,.15)';
+        document.getElementById(data.id+'-b'+i).appendChild(selected); selected=null; correct++;
+        document.getElementById(scoreId).textContent=correct+' / '+total;
+        if(correct===total){document.getElementById(scoreId).classList.add('done');document.getElementById(bannerId).classList.add('show');}
       } else {
         selected.classList.add('wrong');
         setTimeout(function(){if(selected)selected.classList.remove('wrong','selected');selected=null;},380);
@@ -465,124 +671,86 @@ function buildSorter(data, container){
 
 window.resetSorter=function(id){
   var pool=document.getElementById(id+'-pool');
-  var data=SORTERS.find(function(s){return s.id===id;});
-  if(!data)return;
+  var data=SORTERS.find(function(s){return s.id===id;})||PAIRS.find(function(p){return p.id===id;});
+  if(!data) return;
   data.buckets.forEach(function(b,i){
     var bucket=document.getElementById(id+'-b'+i);
+    if(!bucket) return;
     Array.from(bucket.querySelectorAll('.chip')).forEach(function(c){
-      c.classList.remove('correct','selected','wrong');
-      c.style.borderColor='';c.style.color='';c.style.background='';
-      pool.appendChild(c);
+      c.classList.remove('correct','selected','wrong'); c.style.borderColor=''; c.style.color=''; c.style.background=''; pool.appendChild(c);
     });
   });
-  var sc=document.getElementById('scs-'+id);
-  var bn=document.getElementById('bns-'+id);
-  if(sc){sc.textContent='0 / '+data.items.length;sc.classList.remove('done');}
+  var sc=document.getElementById('scs-'+id), bn=document.getElementById('bns-'+id);
+  if(sc){sc.textContent='0 / '+data.items.length; sc.classList.remove('done');}
   if(bn) bn.classList.remove('show');
   var chips=Array.from(pool.children);
   chips.forEach(function(c){pool.removeChild(c);});
   shuffle(chips).forEach(function(c){pool.appendChild(c);});
 };
 
-/* ─────────────────────────────────────
-   CONCEPT PAIRS (TRUE / FALSE / WHICH)
-───────────────────────────────────── */
-var PAIRS=[
-  {
-    id:'cp1',title:'Does it apply to Natural Selection?',
-    prompt:'Tap each chip: ✓ YES it applies to natural selection, ✗ NO it does not',
-    yes:['Requires heritable variation','Differential reproductive success','Adapts population to environment','Non-random allele frequency change','Acts on phenotype not genotype directly','Directional in response to environment'],
-    no:['Requires small population size','Random allele loss','Founder effect','Fixes alleles by chance','Operates faster when population is tiny']
-  },
-  {
-    id:'cp2',title:'Monophyletic, Paraphyletic, or Polyphyletic?',
-    prompt:'Tap a chip, then tap the correct grouping type below',
-    buckets:['Monophyletic ✓','Paraphyletic ✗','Polyphyletic ✗'],
-    colors:['#34d399','#fb923c','#f87171'],
-    items:[
-      {t:'Mammals (all descendants of one ancestor)',b:0},
-      {t:'Birds (= Aves, a clade of dinosaurs)',b:0},
-      {t:'"Reptiles" excluding birds',b:1},
-      {t:'"Fish" excluding tetrapods',b:1},
-      {t:'"Pachydermata" = elephants + rhinos + hippos',b:2},
-      {t:'Warm-blooded animals (birds + mammals combined)',b:2},
-      {t:'Primates = monkeys + apes + humans',b:0},
-      {t:'"Invertebrates" = all animals without backbones',b:2},
-    ]
+/* ═══════════════════════════════════════
+   CONCEPT PAIR RENDERER
+═══════════════════════════════════════ */
+function buildConceptPair(data,container){
+  if(data.buckets){
+    buildSorter({id:data.id,title:data.title,exam:data.exam,buckets:data.buckets,colors:data.colors,items:data.items},container);
+    return;
   }
-];
+  // YES/NO style
+  var card=document.createElement('div');
+  card.className='act-card';
+  if(data.exam) card.dataset.exam=data.exam;
+  var total=data.yes.length+data.no.length,correct=0,selected=null;
+  var scoreId='cps-'+data.id, bannerId='cpb-'+data.id;
+  var allItems=shuffle(data.yes.map(function(t){return{t:t,is:true};}).concat(data.no.map(function(t){return{t:t,is:false};})));
 
-function buildConceptPair(data, container){
-  if(data.yes){
-    // YES/NO style
-    var card=document.createElement('div');
-    card.className='act-card';
-    var total=data.yes.length+data.no.length, correct=0;
-    var scoreId='cps-'+data.id;
-    var bannerId='cpb-'+data.id;
-    var allItems=shuffle(
-      data.yes.map(function(t){return{t:t,is:true};}).concat(
-      data.no.map(function(t){return{t:t,is:false};}))
-    );
-    card.innerHTML='<div class="act-header"><span class="act-title">'+data.title+'</span>'
-      +'<span class="act-score" id="'+scoreId+'">0 / '+total+'</span></div>'
-      +'<p style="font-size:13px;color:var(--muted);margin-bottom:12px">'+data.prompt+'</p>'
-      +'<div style="display:flex;gap:10px;margin-bottom:12px">'
-      +'<div style="flex:1;border:2px dashed rgba(34,197,94,.3);border-radius:10px;padding:10px;min-height:60px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start" id="'+data.id+'-yes"><div style="font-size:10px;color:var(--green);text-transform:uppercase;letter-spacing:.8px;width:100%;margin-bottom:4px">✓ YES</div></div>'
-      +'<div style="flex:1;border:2px dashed rgba(239,68,68,.3);border-radius:10px;padding:10px;min-height:60px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start" id="'+data.id+'-no"><div style="font-size:10px;color:var(--red);text-transform:uppercase;letter-spacing:.8px;width:100%;margin-bottom:4px">✗ NO</div></div>'
-      +'</div>'
-      +'<div class="chip-pool" id="'+data.id+'-pool"></div>'
-      +'<div class="complete-banner" id="'+bannerId+'">🎉 Perfect — all '+total+' correct!</div>';
-    container.appendChild(card);
+  card.innerHTML='<div class="act-header"><span class="act-title">'+data.title+badge(data.exam)+'</span>'
+    +'<span class="act-score" id="'+scoreId+'">0 / '+total+'</span></div>'
+    +'<p style="font-size:13px;color:var(--muted);margin-bottom:12px">'+data.prompt+'</p>'
+    +'<div style="display:flex;gap:10px;margin-bottom:12px">'
+    +'<div style="flex:1;border:2px dashed rgba(34,197,94,.3);border-radius:10px;padding:10px;min-height:60px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start" id="'+data.id+'-yes"><div style="font-size:10px;color:var(--green);text-transform:uppercase;letter-spacing:.8px;width:100%;margin-bottom:4px">\u2713 YES</div></div>'
+    +'<div style="flex:1;border:2px dashed rgba(239,68,68,.3);border-radius:10px;padding:10px;min-height:60px;display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start" id="'+data.id+'-no"><div style="font-size:10px;color:var(--red);text-transform:uppercase;letter-spacing:.8px;width:100%;margin-bottom:4px">\u2717 NO</div></div>'
+    +'</div>'
+    +'<div class="chip-pool" id="'+data.id+'-pool"></div>'
+    +'<div class="complete-banner" id="'+bannerId+'">\uD83C\uDF89 Perfect \u2014 all '+total+' correct!</div>';
+  container.appendChild(card);
 
-    var pool=document.getElementById(data.id+'-pool');
-    var yZone=document.getElementById(data.id+'-yes');
-    var nZone=document.getElementById(data.id+'-no');
-    var selected=null;
-
-    allItems.forEach(function(item,i){
-      var chip=document.createElement('div');
-      chip.className='chip'; chip.dataset.is=item.is?'1':'0';
-      chip.textContent=item.t;
-      chip.addEventListener('click',function(){
-        if(chip.classList.contains('correct')||chip.classList.contains('wrong-placed')) return;
-        if(selected===chip){chip.classList.remove('selected');selected=null;return;}
-        if(selected) selected.classList.remove('selected');
-        selected=chip; chip.classList.add('selected');
-      });
-      pool.appendChild(chip);
+  var pool=document.getElementById(data.id+'-pool');
+  allItems.forEach(function(item){
+    var chip=document.createElement('div');
+    chip.className='chip'; chip.dataset.is=item.is?'1':'0'; chip.textContent=item.t;
+    chip.addEventListener('click',function(){
+      if(chip.classList.contains('correct')) return;
+      if(selected===chip){chip.classList.remove('selected');selected=null;return;}
+      if(selected) selected.classList.remove('selected');
+      selected=chip; chip.classList.add('selected');
     });
+    pool.appendChild(chip);
+  });
 
-    function addZoneClick(zone, isYes){
-      zone.addEventListener('click',function(){
-        if(!selected) return;
-        var correct_choice = (selected.dataset.is==='1') === isYes;
-        selected.classList.remove('selected');
-        if(correct_choice){
-          selected.classList.add('correct', isYes?'both':'right');
-          zone.appendChild(selected);
-          selected=null; correct++;
-          var sc=document.getElementById(scoreId);
-          sc.textContent=correct+' / '+total;
-          if(correct===total){sc.classList.add('done');document.getElementById(bannerId).classList.add('show');}
-        } else {
-          selected.classList.add('wrong');
-          setTimeout(function(){if(selected)selected.classList.remove('wrong','selected');selected=null;},380);
-        }
-      });
-    }
-    addZoneClick(yZone,true); addZoneClick(nZone,false);
-
-  } else if(data.buckets){
-    // Multi-bucket style (reuse sorter logic)
-    var sd={id:data.id,title:data.title,buckets:data.buckets,colors:data.colors,items:data.items};
-    buildSorter(sd,container);
+  function addZoneClick(zone,isYes){
+    zone.addEventListener('click',function(){
+      if(!selected) return;
+      var ok=(selected.dataset.is==='1')===isYes;
+      selected.classList.remove('selected');
+      if(ok){
+        selected.classList.add('correct',isYes?'both':'right');
+        zone.appendChild(selected); selected=null; correct++;
+        document.getElementById(scoreId).textContent=correct+' / '+total;
+        if(correct===total){document.getElementById(scoreId).classList.add('done');document.getElementById(bannerId).classList.add('show');}
+      } else {
+        selected.classList.add('wrong');
+        setTimeout(function(){if(selected)selected.classList.remove('wrong','selected');selected=null;},380);
+      }
+    });
   }
+  addZoneClick(document.getElementById(data.id+'-yes'),true);
+  addZoneClick(document.getElementById(data.id+'-no'),false);
 }
 
-/* ─────────────────────────────────────
+/* ═══════════════════════════════════════
    INIT
-───────────────────────────────────── */
+═══════════════════════════════════════ */
 var vennCon=document.getElementById('tab-venns');
 VENNS.forEach(function(v){buildVenn(v,vennCon);});
 
