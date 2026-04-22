@@ -82,9 +82,7 @@ strong{color:#fff}
 .mode-btn.active{background:var(--gold);color:#000;border-color:var(--gold)}
 #mode-bar .progress{margin-left:auto;font-size:12px;color:var(--muted)}
 /* ── FLASHCARD SECTION ── */
-#fc-section{display:none;padding:0 60px 80px;max-width:940px;margin:0 auto;width:100%}
-#fc-section.show{display:block}
-.fc-chapter{margin:24px 0 10px}
+.fc-chapter{display:none;margin:24px 0 10px}
 .fc-chapter h3{font-size:15px;font-weight:800;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .fc-chapter h3 span{background:var(--gold);color:#000;border-radius:4px;padding:1px 8px;font-size:11px}
 .fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;margin-bottom:6px}
@@ -100,14 +98,13 @@ strong{color:#fff}
 #fc-filter{display:flex;flex-wrap:wrap;gap:8px;padding:14px 60px 0;max-width:940px;margin:0 auto;width:100%;align-items:center}
 .flt-btn{padding:4px 12px;border-radius:14px;border:1px solid #333;background:#1a1a1a;color:#888;font-size:12px;cursor:pointer;transition:all .2s}
 .flt-btn.on{border-color:var(--gold);color:var(--gold);background:#1e1a00}
-/* Study mode hides fc section */
-body.study-mode #fc-section{display:none}
-body.study-mode #fc-filter{display:none}
+/* Study mode: show notes, hide cards + filter */
 body.study-mode #main-content{display:block}
-/* Card mode hides main content */
+body.study-mode #fc-filter{display:none}
+/* Card mode: show filter + chapters, hide notes + test */
 body.card-mode #main-content{display:none}
-body.card-mode #fc-section{display:none}
-body.card-mode #fc-filter{display:none}
+body.card-mode #fc-filter{display:flex}
+body.card-mode .fc-chapter{display:block}
 /* Score badge */
 .score-badge{font-size:11px;background:#1a1a1a;border:1px solid #333;color:#888;border-radius:12px;padding:3px 10px}
 /* Extra question blocks already in html */
@@ -174,8 +171,8 @@ body.card-mode #fc-filter{display:none}
 
 /* ── TEST MODE ── */
 body.test-mode #main-content{display:none!important}
-body.test-mode #fc-section{display:none!important}
 body.test-mode #fc-filter{display:none!important}
+body.test-mode .fc-chapter{display:none!important}
 body.test-mode #test-section{display:flex!important}
 #test-section{display:none;flex-direction:column;padding:0 60px 80px;max-width:940px;margin:0 auto;width:100%;flex:1}
 @media(max-width:768px){#test-section{padding:0 12px 60px}}
@@ -3888,7 +3885,7 @@ function updateScore(){
 }
 
 // ── SIDEBAR ACTIVE LINK ──
-const secs = document.querySelectorAll('[id^="c"]');
+const secs = document.querySelectorAll('#main-content .sec[id]');
 const links = document.querySelectorAll('#sb a');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -3910,6 +3907,14 @@ function setMode(mode){
   var btnT=document.getElementById('btn-test');
   if(btnT) btnT.classList.toggle('active', mode==='test');
   if(mode==='study'){ window.scrollTo(0,0); }
+  if(mode==='card'){
+    // Clear any leftover inline display styles from filtering so CSS rules take over
+    document.querySelectorAll('.fc-chapter,.fc2').forEach(function(el){el.style.display='';});
+    // Reset filter buttons to "All"
+    document.querySelectorAll('.flt-btn').forEach(function(b){b.classList.remove('on');});
+    var allBtn=document.querySelector('.flt-btn[data-ch="all"]');
+    if(allBtn)allBtn.classList.add('on');
+  }
   const prog = document.getElementById('prog');
   if(prog){ prog.textContent = mode==='card'? Object.keys(window._cardSeen||{}).length+' seen' : ''; }
 }
@@ -3960,8 +3965,8 @@ document.addEventListener('click', e => {
   var firstCh=document.querySelector('.fc-chapter');
   var target=document.getElementById('fc-wrap')||document.getElementById('fc-section');
   if(target||firstCh){
-    var btns='<button class="dk-launch dk-launch-all" onclick="dkOpen(\'all\')">★ All Cards</button>'
-      +'<button class="dk-launch" style="border-color:#ffd479;color:#ffd479;background:#1a1500" onclick="dkOpen(\'all_pages\')">★★ All Decks (L+R)</button>';
+    var btns='<button class="dk-launch dk-launch-all" onclick="dkOpen(\'all\')">★ All Cards</button>';
+    try{if(localStorage.getItem('flash_lecture_v1'))btns+='<button class="dk-launch" style="border-color:#ffd479;color:#ffd479;background:#1a1500" onclick="dkOpen(\'all_pages\')">★★ All Decks (L+R)</button>';}catch(e){}
     Object.keys(chaps).forEach(function(ch){btns+='<button class="dk-launch" onclick="dkOpen(\''+ch+'\')">'+chaps[ch]+'</button>';});
     var html='<div id="dk-launch-bar"><span>Practice deck:</span>'+btns+'</div>';
     if(target)target.insertAdjacentHTML('afterbegin',html);
