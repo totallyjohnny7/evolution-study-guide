@@ -1390,7 +1390,7 @@ function filterCards(btn,ch){
 }
 // ── DECK ENGINE (v6: audio + swipe + pass/miss grading) ──
 (function(){
-  document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><span id="dk-score"></span><button id="dk-close" onclick="dkClose()">✕ Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span></div><div id="dk-card"><div id="dk-inner"><div id="dk-f"><button id="dk-speak" title="Read aloud (S)" aria-label="Read aloud">🔊</button><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip · swipe → pass · ← miss</div></div><div id="dk-b"><div id="dk-def"></div><div class="dk-grade-row"><button class="dk-grade dk-miss" id="dk-miss-btn">✗ Miss</button><button class="dk-grade dk-pass" id="dk-pass-btn">✓ Pass</button></div></div></div><div id="dk-tint-pass"></div><div id="dk-tint-miss"></div><div id="dk-stamp-pass">PASS</div><div id="dk-stamp-miss">MISS</div></div><div class="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">← Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next →</button><button class="dk-btn" onclick="dkShuffle()">⇄ Shuffle</button></div><div id="dk-status"></div></div>');
+  document.body.insertAdjacentHTML('beforeend','<div id="dk-ov"><div class="dk-head"><span class="dk-title" id="dk-title">Flashcards</span><span id="dk-score"></span><button id="dk-close" onclick="dkClose()">✕ Close</button></div><div class="dk-prog-wrap"><div class="dk-bar-bg"><div class="dk-bar-fill" id="dk-bar"></div></div><span id="dk-prog-txt"></span></div><div id="dk-card"><div id="dk-inner"><div id="dk-f"><button id="dk-speak" title="Read aloud (S)" aria-label="Read aloud">🔊</button><div id="dk-chip"></div><div id="dk-term"></div><div id="dk-hint">tap to flip · swipe → pass · ← miss</div></div><div id="dk-b"><div id="dk-def"></div><div class="dk-grade-row"><button class="dk-grade dk-miss" id="dk-miss-btn">✗ Miss</button><button class="dk-grade dk-pass" id="dk-pass-btn">✓ Pass</button></div></div></div><div id="dk-tint-pass"></div><div id="dk-tint-miss"></div><div id="dk-stamp-pass">PASS</div><div id="dk-stamp-miss">MISS</div></div><div class="dk-nav" id="dk-nav"><button class="dk-btn" onclick="dkNav(-1)">← Prev</button><button id="dk-flip" class="dk-btn" onclick="dkFlip()">Flip</button><button class="dk-btn" onclick="dkNav(1)">Next →</button><button class="dk-btn" onclick="dkShuffle()">⇄ Shuffle</button></div><div id="dk-status"></div><div id="dk-done" style="display:none;flex-direction:column;align-items:center;text-align:center;padding:20px;gap:14px"><div style="font-size:48px">🎉</div><div style="font-size:22px;font-weight:800;color:#f5c542">Deck Complete!</div><div id="dk-done-stats" style="font-size:14px;color:#aaa;line-height:1.6;margin:4px 0 10px"></div><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><button class="dk-btn" onclick="dkRetryMissed()">↩ Retry Missed</button><button class="dk-btn" onclick="dkRestart()">↺ Restart</button><button class="dk-btn" onclick="dkClose()">✕ Close</button></div></div></div>');
   var chaps={};
   // Build chapter label map from existing .fc-chapter blocks
   document.querySelectorAll('.fc-chapter').forEach(function(c){
@@ -1409,6 +1409,7 @@ function filterCards(btn,ch){
     else firstCh.insertAdjacentHTML('beforebegin',html);
   }
   var _deck=[],_idx=0,_score={pass:0,miss:0,streak:0,best:0};
+  var _missedCards=[],_filterActive='all';
   var _touch={sx:0,sy:0,dx:0,dy:0,active:false,moved:false};
   var _animating=false;
   function $(id){return document.getElementById(id);}
@@ -1429,14 +1430,24 @@ function filterCards(btn,ch){
     s.innerHTML=total?'<span class="sp">✓'+_score.pass+'</span> · <span class="sm">✗'+_score.miss+'</span><span class="sk">🔥'+_score.streak+'</span>':'';
   }
   window.dkOpen=function(filter){
-    buildDeck(filter||'all');if(!_deck.length)return;_idx=0;
-    _score={pass:0,miss:0,streak:0,best:0};updateScore();
-    $('dk-title').textContent=(filter==='all'?'All Cards — '+_deck.length+' cards':chaps&&chaps[filter]?chaps[filter]:filter);
-    dkRender();$('dk-ov').classList.add('show');document.body.style.overflow='hidden';
+    _filterActive=filter||'all';
+    buildDeck(_filterActive);if(!_deck.length)return;
+    _missedCards=[];
+    var saved=null;
+    try{var _sv=localStorage.getItem('dk_state_exam2_'+_filterActive);if(_sv)saved=JSON.parse(_sv);}catch(e){}
+    if(saved&&saved.d&&saved.d.length===_deck.length){
+      var _tm={};_deck.forEach(function(c){_tm[c.term]=c;});
+      var _ro=[];saved.d.forEach(function(t){if(_tm[t])_ro.push(_tm[t]);});
+      if(_ro.length===_deck.length){_deck=_ro;_idx=Math.min(saved.i||0,_deck.length-1);_score=saved.s||{pass:0,miss:0,streak:0,best:0};}
+      else{_idx=0;_score={pass:0,miss:0,streak:0,best:0};}
+    }else{_idx=0;_score={pass:0,miss:0,streak:0,best:0};}
+    updateScore();
+    $('dk-title').textContent=(_filterActive==='all'?'All Cards — '+_deck.length+' cards':chaps&&chaps[_filterActive]?chaps[_filterActive]:_filterActive);
+    showDeckCard();dkRender();$('dk-ov').classList.add('show');document.body.style.overflow='hidden';
   };
   window.dkClose=function(){window.speechSynthesis&&window.speechSynthesis.cancel();$('dk-ov').classList.remove('show');document.body.style.overflow='';resetCardTransform();};
   window.dkFlip=function(){if(_animating)return;$('dk-card').classList.toggle('flipped');};
-  window.dkNav=function(dir){if(_animating)return;_idx=(_idx+dir+_deck.length)%_deck.length;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);};
+  window.dkNav=function(dir){if(_animating)return;_idx=(_idx+dir+_deck.length)%_deck.length;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);saveDeckState();};
   window.dkShuffle=function(){
     for(var i=_deck.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=_deck[i];_deck[i]=_deck[j];_deck[j]=t;}
     _idx=0;$('dk-card').classList.remove('flipped');setTimeout(dkRender,55);
@@ -1456,6 +1467,29 @@ function filterCards(btn,ch){
     $('dk-card').classList.remove('flipped');
     resetCardTransform();
   }
+  function saveDeckState(){
+    if(!_deck.length)return;
+    try{localStorage.setItem('dk_state_exam2_'+_filterActive,JSON.stringify({d:_deck.map(function(c){return c.term;}),i:_idx,s:_score}));}catch(e){}
+  }
+  function showDoneScreen(){
+    $('dk-card').style.display='none';$('dk-nav').style.display='none';$('dk-status').style.display='none';
+    var total=_score.pass+_score.miss;var pct=total?Math.round(_score.pass/total*100):0;
+    $('dk-done-stats').innerHTML='<b>'+_score.pass+'</b> pass · <b>'+_score.miss+'</b> miss · <b>'+pct+'%</b> correct<br>'+(_missedCards.length?_missedCards.length+' card(s) to review':'All cards known! 🎯');
+    $('dk-done').style.display='flex';
+    try{localStorage.removeItem('dk_state_exam2_'+_filterActive);}catch(e){}
+  }
+  function showDeckCard(){
+    $('dk-card').style.display='';$('dk-nav').style.display='';$('dk-status').style.display='';$('dk-done').style.display='none';
+  }
+  window.dkRetryMissed=function(){
+    if(!_missedCards.length){$('dk-status').textContent='No missed cards!';showDeckCard();return;}
+    _deck=_missedCards.slice();_missedCards=[];_idx=0;_score={pass:0,miss:0,streak:0,best:0};
+    updateScore();showDeckCard();dkRender();
+  };
+  window.dkRestart=function(){
+    buildDeck(_filterActive);_idx=0;_score={pass:0,miss:0,streak:0,best:0};_missedCards=[];
+    updateScore();showDeckCard();dkRender();
+  };
   // ── Speech synthesis (50ms buffer after cancel to avoid iOS/Chrome clipping) ──
   window.dkSpeak=function(){
     if(!window.speechSynthesis||!_deck.length)return;
@@ -1477,6 +1511,7 @@ function filterCards(btn,ch){
   window.flashGrade=function(pass){
     if(_animating||!_deck.length)return;
     _animating=true;
+    if(!pass)_missedCards.push(_deck[_idx]);
     _score[pass?'pass':'miss']++;
     _score.streak=pass?_score.streak+1:0;
     if(_score.streak>_score.best)_score.best=_score.streak;
@@ -1487,21 +1522,24 @@ function filterCards(btn,ch){
     card.style.transition='transform .4s cubic-bezier(.4,0,.2,1), opacity .4s ease';
     card.style.transform='translateX('+(pass?140:-140)+'%) rotate('+(pass?22:-22)+'deg)';
     card.style.opacity='0';
+    var isLast=(_idx+1>=_deck.length);
     setTimeout(function(){
       stamp.classList.remove('show');
-      _idx=(_idx+1)%_deck.length;
-      card.classList.remove('flipped');
-      card.style.transition='none';
-      card.style.transform='translateX(0) rotate(0)';
-      card.style.opacity='0';
       $('dk-tint-pass').style.opacity='0';$('dk-tint-miss').style.opacity='0';
-      setTimeout(function(){
-        dkRender();
-        card.style.transition='transform .3s ease, opacity .3s ease';
-        card.style.opacity='1';
-        updateScore();
-        _animating=false;
-      },30);
+      if(isLast){
+        card.style.transition='none';card.style.opacity='0';
+        updateScore();showDoneScreen();_animating=false;
+      }else{
+        _idx++;saveDeckState();
+        card.classList.remove('flipped');
+        card.style.transition='none';card.style.transform='translateX(0) rotate(0)';card.style.opacity='0';
+        setTimeout(function(){
+          dkRender();
+          card.style.transition='transform .3s ease, opacity .3s ease';
+          card.style.opacity='1';
+          updateScore();_animating=false;
+        },30);
+      }
     },400);
   };
   // ── Touch / pointer swipe: follow finger, tint, release at 60px threshold ──
