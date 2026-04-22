@@ -448,8 +448,7 @@ mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
 .rg-tbtn.primary{background:#ffd479;color:#000}
 .rg-tbtn.primary:hover{background:#ffe999}
 #rg-content{max-width:8.5in;margin:0 auto;padding:0.4in 0.5in}
-.rg-page{min-height:11in;page-break-after:always;padding-bottom:0.3in;position:relative}
-.rg-page:last-child{page-break-after:auto}
+.rg-page{padding-bottom:0.3in;position:relative}
 .rg-page-hd{text-align:center;border-bottom:3px solid #c9922d;padding-bottom:8px;margin-bottom:18px}
 .rg-page-hd h1{font:800 20px/1.2 system-ui;color:#111;margin-bottom:2px}
 .rg-page-hd p{font:400 11px system-ui;color:#555}
@@ -465,7 +464,7 @@ mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
   #rg-toolbar{display:none!important}
   #rg-content{padding:.5in .5in}
   @page{size:8.5in 11in portrait;margin:0}
-  .rg-page{min-height:0!important;padding-bottom:0!important}
+  .rg-page{padding-bottom:0!important}
   .rg-footer{position:relative!important;bottom:auto!important;margin-top:10px}
 }
 </style>
@@ -4044,35 +4043,22 @@ window.qzSelectOpt=selectOpt;
     if(typeof FLASH==='undefined')return;
     FLASH.forEach(function(c){(bySec[c.sec]=bySec[c.sec]||[]).push(c);});
     var secKeys=Object.keys(typeof SEC_META!=='undefined'?SEC_META:{});
-    var CARDSPERPAGE=28;
-    var allCards=[];
+    var html='<div class="rg-page">';
+    html+='<div class="rg-page-hd"><h1>BIOL 4230 Exam 3 — Lecture Review Guide</h1>'
+      +'<p>Chapters 3, 4, 8, 13, 14, 17, 18 · '+FLASH.length+' cards · Generated '+new Date().toLocaleDateString()+'</p></div>';
     secKeys.forEach(function(s){
-      (bySec[s]||[]).forEach(function(c){allCards.push({s:s,c:c});});
-    });
-    var pageCount=Math.ceil(allCards.length/CARDSPERPAGE);
-    var html='';
-    for(var pg=0;pg<pageCount;pg++){
-      var slice=allCards.slice(pg*CARDSPERPAGE,(pg+1)*CARDSPERPAGE);
-      var isFirst=(pg===0);
-      html+='<div class="rg-page">';
-      if(isFirst){
-        html+='<div class="rg-page-hd"><h1>BIOL 4230 Exam 3 — Lecture Review Guide</h1>'
-          +'<p>Chapters 3, 4, 8, 13, 14, 17, 18 · '+FLASH.length+' cards · Generated '+new Date().toLocaleDateString()+'</p></div>';
-      } else {
-        html+='<div class="rg-page-hd" style="margin-bottom:10px"><h1 style="font-size:14px">BIOL 4230 — Exam 3 Lecture (continued)</h1></div>';
-      }
-      var curSec='';
-      slice.forEach(function(item){
-        var s=item.s,c=item.c;
-        var sm=(typeof SEC_META!=='undefined'&&SEC_META[s])||{label:s,chip:s};
-        if(s!==curSec){html+='<div class="rg-sec-h">'+sm.chip+' — '+sm.label+'</div>';curSec=s;}
+      var sm=(typeof SEC_META!=='undefined'&&SEC_META[s])||{label:s,chip:s};
+      var sCards=bySec[s]||[];
+      if(!sCards.length)return;
+      html+='<div class="rg-sec-h">'+sm.chip+' — '+sm.label+'</div>';
+      sCards.forEach(function(c){
         var wx=c.ex||(typeof WORKED_EX!=='undefined'?WORKED_EX[c.q]:'')||'';
         html+='<div class="rg-card"><div class="rg-q">'+esc(c.q)+'</div><div class="rg-a">'+esc(c.a)+'</div>'
           +(wx?'<div class="rg-ex">📝 '+esc(wx)+'</div>':'')
           +'</div>';
       });
-      html+='<div class="rg-footer">Page '+(pg+1)+' of '+pageCount+' · BIOL 4230 Exam 3 Lecture</div></div>';
-    }
+    });
+    html+='</div>';
     content.innerHTML=html;
   }
   window.openPrintGuide=function(){
