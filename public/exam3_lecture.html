@@ -3481,6 +3481,9 @@ function setLMode(mode){
   cardEl.addEventListener('mousedown',function(e){if(Date.now()-_touchGuard<600)return;dkStart(e);});
   document.addEventListener('mousemove',function(e){if(_touch.active)dkMove(e);});
   document.addEventListener('mouseup',function(e){if(_touch.active)dkEnd(e);});
+  window.addEventListener('blur',function(){if(_touch.active){_touch.active=false;resetCardTransform();}});
+  document.addEventListener('mouseleave',function(){if(_touch.active){_touch.active=false;resetCardTransform();}});
+  cardEl.addEventListener('pointercancel',function(){if(_touch.active){_touch.active=false;resetCardTransform();}});
   $('dk-speak').addEventListener('click',function(e){e.stopPropagation();dkSpeak();});
   $('dk-pass-btn').addEventListener('click',function(e){e.stopPropagation();flashGrade(true);});
   $('dk-miss-btn').addEventListener('click',function(e){e.stopPropagation();flashGrade(false);});
