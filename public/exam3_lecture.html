@@ -11,6 +11,7 @@
 <script src="https://unpkg.com/dexie@4.0.8/dist/dexie.min.js" defer onerror="window.__dexieLoadFailed=true" crossorigin="anonymous"></script>
 <script src="/js/esg-db.js" defer></script>
 <style>
+:root{--acc:#f5c542;--bg:#0d0d0d;--bg2:#1c1c1c}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:#0d0d0d;color:#cfd6dc;font:15px/1.55 -apple-system,Segoe UI,Roboto,system-ui,sans-serif;min-height:100vh}
@@ -259,36 +260,22 @@ mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
   }
 
   /* Flashcard grid: 1 column on phones */
-  .grid { grid-template-columns: 1fr !important; gap: 12px; }
+  .fc-grid { grid-template-columns: 1fr !important; gap: 12px; }
 
   /* Flashcard cards: touch-friendly */
-  .card {
-    min-height: 80px;
-    padding: 14px 12px;
-    font-size: 0.9rem;
-    cursor: pointer;
-  }
+  .fc2 { min-height: 140px; font-size: 0.9rem; }
 
   /* Deck overlay: full screen */
-  #deck-overlay {
+  #dk-ov {
     padding: 12px 8px 8px;
     overflow-y: auto;
   }
-  #deck-card {
-    min-height: 200px;
-    font-size: clamp(0.9rem, 3vw, 1.1rem);
-    padding: 20px 16px;
-  }
-  #deck-front, #deck-back {
-    font-size: clamp(0.85rem, 2.8vw, 1rem);
-    padding: 16px;
-  }
 
   /* Deck control buttons: touch targets ≥ 44px */
-  #deck-overlay button,
-  .deck-btn,
-  #btn-pass, #btn-miss,
-  #btn-flip, #btn-shuffle, #btn-close-deck {
+  #dk-ov button,
+  .dk-btn, .dk-grade,
+  #dk-pass-btn, #dk-miss-btn,
+  #dk-flip, #dk-close {
     min-height: 44px;
     min-width: 44px;
     padding: 10px 16px;
@@ -296,12 +283,10 @@ mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
     border-radius: 8px;
   }
 
-  /* Deck progress bar */
-  #deck-progress { font-size: 0.85rem; }
-
-  /* Section filter pills: wrap nicely */
-  #section-filter { flex-wrap: wrap; gap: 6px; }
-  #section-filter button {
+  /* Deck progress + quiz filter pills */
+  #dk-prog-txt { font-size: 0.85rem; }
+  #qz-filter-bar { flex-wrap: wrap; gap: 6px; }
+  #qz-filter-bar button {
     min-height: 36px;
     padding: 6px 12px;
     font-size: 0.85rem;
@@ -472,7 +457,7 @@ mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
 </head>
 <body><button aria-label="Open menu" id="menu-toggle" onclick="toggleSidebar()">☰</button><div id="sidebar-backdrop" onclick="toggleSidebar()"></div>
 <div class="wrap">
-<aside class="side">
+<aside class="side sidebar">
 <div class="brand">BIOL 4230 — Exam 3<span class="sub">Verbatim study guide · Chapters 3, 4, 8, 13, 14, 17, 18</span></div>
 <div class="modebar">
 <button class="on" id="btn-study" onclick="setLMode('study')" title="Study mode">Study</button>
@@ -504,7 +489,7 @@ mark.hl{background:#ffd479;color:#000;padding:0 2px;border-radius:2px}
 <div class="mnemonic"><span class="pin">📌 Memory Aid:</span>Precambrian slimy stromatolites · Cambrian explosion of body plans · Ordovician fish &amp; plants invade · Silurian first legs · Devonian fish-apocalypse + tetrapods emerge · Carboniferous coal forests · Permian great dying → mammals arise · Triassic dinosaurs · Jurassic/Cretaceous dinosaur reign ends at K-T</div>
 <div class="timeline" id="geo-timeline">
 <div class="title">Geologic Timeline — click an era to jump</div>
-<div class="tl-bar"><div class="tl-era" data-era="precamb"><b>Precambrian</b>4600–541 mya<span>stromatolites, LUCA, eukaryotes</span></div><div class="tl-era" data-era="ediacaran"><b>Ediacaran</b>575–535 mya<span>earliest definitive animal fossils</span></div><div class="tl-era" data-era="cambrian"><b>Cambrian</b>542–488 mya<span>appearance of recognizable animals</span></div><div class="tl-era" data-era="ordovician"><b>Ordovician</b>488–444 mya<span>early bony fishes + land plants</span></div><div class="tl-era" data-era="silurian"><b>Silurian</b>444–416 mya<span>first land animals (millipedes)</span></div><div class="tl-era" data-era="devonian"><b>Devonian</b>416–359 mya<span>age of fishes + early tetrapods</span></div><div class="tl-era" data-era="carb"><b>Carboniferous</b>359–299 mya<span>age of amphibians, coal deposits</span></div><div class="tl-era" data-era="permian"><b>Permian</b>299–251 mya<span>origin of reptiles + modern mammals</span></div><div class="tl-era" data-era="triassic"><b>Triassic</b>250–202 mya<span>earliest dinosaurs</span></div><div class="tl-era" data-era="jurassic"><b>Jurassic</b>202–145 mya<span>dinosaur diversification, birds arose</span></div><div class="tl-era" data-era="cretaceous"><b>Cretaceous</b>145–65 mya<span>flowering plants, K-T extinction</span></div><div class="tl-era" data-era="cenozoic"><b>Cenozoic</b>65 mya–present<span>mammals, primates, hominins</span></div></div>
+<div class="tl-bar"><div class="tl-era" data-era="precambrian"><b>Precambrian</b>4600–541 mya<span>stromatolites, LUCA, eukaryotes</span></div><div class="tl-era" data-era="ediacaran"><b>Ediacaran</b>575–535 mya<span>earliest definitive animal fossils</span></div><div class="tl-era" data-era="cambrian"><b>Cambrian</b>542–488 mya<span>appearance of recognizable animals</span></div><div class="tl-era" data-era="ordovician"><b>Ordovician</b>488–444 mya<span>early bony fishes + land plants</span></div><div class="tl-era" data-era="silurian"><b>Silurian</b>444–416 mya<span>first land animals (millipedes)</span></div><div class="tl-era" data-era="devonian"><b>Devonian</b>416–359 mya<span>age of fishes + early tetrapods</span></div><div class="tl-era" data-era="carboniferous"><b>Carboniferous</b>359–299 mya<span>age of amphibians, coal deposits</span></div><div class="tl-era" data-era="permian"><b>Permian</b>299–251 mya<span>origin of reptiles + modern mammals</span></div><div class="tl-era" data-era="triassic"><b>Triassic</b>250–202 mya<span>earliest dinosaurs</span></div><div class="tl-era" data-era="jurassic"><b>Jurassic</b>202–145 mya<span>dinosaur diversification, birds arose</span></div><div class="tl-era" data-era="cretaceous"><b>Cretaceous</b>145–65 mya<span>flowering plants, K-T extinction</span></div><div class="tl-era" data-era="cenozoic"><b>Cenozoic</b>65 mya–present<span>mammals, primates, hominins</span></div></div>
 </div>
 <div class="pg" data-page="1" data-sec="s1">
 <div class="pgn">Page 1</div>
@@ -3517,6 +3502,10 @@ function setLMode(mode){
     else if(e.key==='ArrowDown'){e.preventDefault();dkNav(1);}
     else if(e.key==='s'||e.key==='S')dkSpeak();
   });
+  // Pause auto-timer when tab loses focus — don't auto-MISS while user is away
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden)cancelAutoTimer();
+  });
   // Build a quick-launch bar above fc-section
   document.addEventListener('DOMContentLoaded',function(){});
   // Add quick-launch buttons to sidebar modebar
@@ -4040,7 +4029,7 @@ function showResults(){
   document.getElementById('qz-area').style.display='none';
   var res=document.getElementById('qz-results');
   res.style.display='';
-  var pct=Math.round(_correct/_q.length*100);
+  var pct=_q.length?Math.round(_correct/_q.length*100):0;
   var emoji=pct>=90?'🏆':pct>=70?'📚':pct>=50?'💪':'🔄';
   res.innerHTML='<div class="qz-results"><h2>Quiz Complete '+emoji+'</h2>'
     +'<div class="qz-final-score">'+_correct+' / '+_q.length+'</div>'
