@@ -111,7 +111,7 @@ body.card-mode .fc-chapter{display:block}
 /* ── DECK OVERLAY ── */
 #dk-ov{display:none;position:fixed;inset:0;background:rgba(7,8,6,.97);z-index:9999;flex-direction:column;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);overscroll-behavior:none;-webkit-overflow-scrolling:touch}
 #dk-ov.show{display:flex}
-#dk-card{width:min(500px,92vw);perspective:1000px;cursor:pointer;margin:14px 0;touch-action:pan-y;will-change:transform;-webkit-user-select:none;user-select:none}
+#dk-card{width:min(500px,92vw);perspective:1000px;cursor:pointer;margin:14px 0;touch-action:none;will-change:transform;-webkit-user-select:none;user-select:none}
 #dk-inner{position:relative;width:100%;height:270px;transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
 #dk-card.flipped #dk-inner{transform:rotateY(180deg)}
 #dk-f,#dk-b{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px;text-align:center}
@@ -143,7 +143,7 @@ body.card-mode .fc-chapter{display:block}
 .dk-launch-all:hover{background:var(--gold);color:#000}
 #dk-def img{max-width:100%;max-height:100px;border-radius:6px;margin:8px auto 4px;display:block;object-fit:contain;border:1px solid #2a2a2a}
 /* ── Grade / swipe / audio additions ── */
-#dk-card{will-change:transform;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+#dk-card{will-change:transform;user-select:none;-webkit-user-select:none;touch-action:none}
 #dk-tint-pass,#dk-tint-miss{position:absolute;inset:0;border-radius:18px;pointer-events:none;opacity:0;transition:opacity .12s linear;z-index:3}
 #dk-tint-pass{background:linear-gradient(135deg,rgba(34,197,94,.5),rgba(34,197,94,.15))}
 #dk-tint-miss{background:linear-gradient(135deg,rgba(239,68,68,.5),rgba(239,68,68,.15))}
@@ -4372,7 +4372,7 @@ document.addEventListener('click', e => {
   var cardEl=$('dk-card');
   var _touchGuard=0; // prevent synthetic mouse events after touch
   cardEl.addEventListener('touchstart',dkStart,{passive:true});
-  cardEl.addEventListener('touchmove',dkMove,{passive:true});
+  cardEl.addEventListener('touchmove',dkMove,{passive:false});
   cardEl.addEventListener('touchend',function(e){_touchGuard=Date.now();dkEnd(e);});
   cardEl.addEventListener('touchcancel',function(){_touch.active=false;resetCardTransform();});
   cardEl.addEventListener('mousedown',function(e){if(Date.now()-_touchGuard<600)return;dkStart(e);});
