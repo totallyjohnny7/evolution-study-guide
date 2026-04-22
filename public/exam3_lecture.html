@@ -4139,7 +4139,7 @@ window.qzSelectOpt=selectOpt;
 </script>
 <script>
 /* ── STUDY STATS ENGINE v1 — tracks flashcards + quiz questions across all pages ── */
-function _trackCard(id,term,chip,pass){try{var st=JSON.parse(localStorage.getItem('evo_stats_v1')||'{}');if(!st.c)st.c={};var e=st.c[id]||{p:0,m:0,s:0};e.t=(term||'').substring(0,80);e.ch=chip||'';if(pass){e.p=(e.p||0)+1;e.s=(e.s||0)+1;}else{e.m=(e.m||0)+1;e.s=0;}e.l=Date.now();st.c[id]=e;localStorage.setItem('evo_stats_v1',JSON.stringify(st));}catch(x){}}
+function _trackCard(id,term,chip,pass){if(!id)return;try{var raw=localStorage.getItem('evo_stats_v1');var st;try{st=JSON.parse(raw);}catch(_){st=null;}if(!st||typeof st.c!=='object')st={c:{}};var e=st.c[id]||{p:0,m:0,s:0};e.t=(term||'').substring(0,80);e.ch=chip||'';if(pass){e.p=(e.p||0)+1;e.s=(e.s||0)+1;}else{e.m=(e.m||0)+1;e.s=0;}e.l=Date.now();st.c[id]=e;st.saved=Date.now();localStorage.setItem('evo_stats_v1',JSON.stringify(st));}catch(x){console.warn('[evo-stats] save failed:',x);}}
 function _clsCard(e){var t=(e.p||0)+(e.m||0);if(!t)return'new';var r=(e.p||0)/t;if((e.p||0)>=3&&r>=0.75)return'mastered';if((e.p||0)>=2&&r>=0.5)return'mastering';if((e.m||0)>(e.p||0)&&t>=3)return'struggling';return'learning';}
 window.showStats=function(){
   var st;try{st=JSON.parse(localStorage.getItem('evo_stats_v1')||'{}');}catch(x){st={};}
