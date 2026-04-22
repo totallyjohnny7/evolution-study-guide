@@ -124,6 +124,33 @@ body.zoom-open #navFab{display:none!important}
   .q-card{padding:12px 14px}
   h2.ch-title{font-size:18px}
 }
+/* ── Self-grade buttons ── */
+.sg-row{display:none;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center}
+.q-card.show-answer .sg-row{display:flex}
+.sg-btn{font-size:12px;border:1.5px solid;border-radius:18px;padding:7px 15px;cursor:pointer;font-family:inherit;min-height:36px;font-weight:600;background:transparent;transition:all .15s var(--ease)}
+.sg-btn.pass{color:var(--green);border-color:rgba(34,197,94,.4)}
+.sg-btn.pass:hover,.sg-btn.pass.sel{background:var(--green);color:#000;border-color:var(--green)}
+.sg-btn.miss{color:#f59e0b;border-color:rgba(245,158,11,.4)}
+.sg-btn.miss:hover,.sg-btn.miss.sel{background:#f59e0b;color:#000;border-color:#f59e0b}
+.sg-note{font-size:11px;color:var(--muted);letter-spacing:.3px}
+/* Card graded left-border */
+.q-card.gp{border-left:3px solid var(--green)!important}
+.q-card.gm{border-left:3px solid #f59e0b!important}
+/* Chapter progress bar */
+.ch-prog-row{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.ch-prog-outer{flex:1;height:5px;background:#1a1a1a;border-radius:3px;overflow:hidden}
+.ch-prog-fill{height:100%;background:var(--green);width:0%;transition:width .5s var(--ease);border-radius:3px}
+.ch-prog-label{font-size:11px;color:var(--muted);flex-shrink:0;white-space:nowrap}
+/* Sidebar progress badge */
+.qcnt.prog{background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.3)}
+/* Keyboard hints bar */
+#kb-hints{position:fixed;bottom:env(safe-area-inset-bottom,0);left:280px;right:0;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);border-top:1px solid #1a1a1a;padding:7px 20px;font-size:11px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;z-index:10;transition:opacity .3s}
+#kb-hints span{display:flex;align-items:center;gap:5px}
+#kb-hints kbd{background:#222;border:1px solid #333;border-radius:4px;padding:1px 6px;font-family:monospace;font-size:10px;color:#ccc}
+@media(max-width:900px){#kb-hints{left:0;display:none}}
+/* Floating "Jump to first unanswered" chip */
+#jump-btn{display:none;position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 44px);right:20px;background:var(--gold);color:#000;border:none;border-radius:24px;padding:10px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;z-index:15;box-shadow:0 4px 16px rgba(245,197,66,.4);transition:opacity .2s,transform .2s}
+#jump-btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(245,197,66,.5)}
 /* Reduce motion preference */
 @media(prefers-reduced-motion:reduce){
   *,html{animation:none!important;transition:none!important;scroll-behavior:auto}
@@ -162,6 +189,12 @@ body.zoom-open #navFab{display:none!important}
 <a href="/" class="back-link">← Back</a>
 <div id="sb"><h1>📖 Evolution Textbook</h1><div class="sub">Zimmer &amp; Emlen (2nd ed.) — Study Guide</div><input id="q-search" class="search" placeholder="Filter chapters…" inputmode="search" autocomplete="off" autocapitalize="off"><a href="#ch01"><span class="num">Ch 01</span><span class="label">The Whale and the Virus: How Sci…</span><span class="qcnt">44Q</span></a><a href="#ch02"><span class="num">Ch 02</span><span class="label">From Natural Philosophy to Darwi…</span><span class="qcnt">25Q</span></a><a href="#ch03"><span class="num">Ch 03</span><span class="label">What the Rocks Say: How Geology …</span><span class="qcnt">38Q</span></a><a href="#ch04"><span class="num">Ch 04</span><span class="label">The Tree of Life: How Biologists…</span><span class="qcnt">30Q</span></a><a href="#ch05"><span class="num">Ch 05</span><span class="label">Raw Material: Heritable Variatio…</span><span class="qcnt">30Q</span></a><a href="#ch06"><span class="num">Ch 06</span><span class="label">The Ways of Change: Drift and Se…</span><span class="qcnt">28Q</span></a><a href="#ch07"><span class="num">Ch 07</span><span class="label">Beyond Alleles: Quantitative Gen…</span><span class="qcnt">26Q</span></a><a href="#ch08"><span class="num">Ch 08</span><span class="label">Natural Selection: Empirical Stu…</span><span class="qcnt">48Q</span></a><a href="#ch09"><span class="num">Ch 09</span><span class="label">The History in Our Genes</span><span class="qcnt">32Q</span></a><a href="#ch10"><span class="num">Ch 10</span><span class="label">Adaptation: From Genes to Traits</span><span class="qcnt">20Q</span></a><a href="#ch11"><span class="num">Ch 11</span><span class="label">Sex: Causes and Consequences</span><span class="qcnt">31Q</span></a><a href="#ch12"><span class="num">Ch 12</span><span class="label">After Conception: The Evolution …</span><span class="qcnt">45Q</span></a><a href="#ch13"><span class="num">Ch 13</span><span class="label">The Origin of Species</span><span class="qcnt">20Q</span></a><a href="#ch14"><span class="num">Ch 14</span><span class="label">Macroevolution: The Long Run</span><span class="qcnt">27Q</span></a><a href="#ch15"><span class="num">Ch 15</span><span class="label">Intimate Partnerships: How Speci…</span><span class="qcnt">27Q</span></a><a href="#ch16"><span class="num">Ch 16</span><span class="label">Brains and Behavior</span><span class="qcnt">49Q</span></a><a href="#ch17"><span class="num">Ch 17</span><span class="label">Human Evolution: A New Kind of A…</span><span class="qcnt">23Q</span></a><a href="#ch18"><span class="num">Ch 18</span><span class="label">Evolutionary Medicine</span><span class="qcnt">23Q</span></a></div><div id="sbBackdrop"></div>
 <button id="navFab" aria-label="Toggle chapter navigation">☰</button>
+<div id="kb-hints">
+  <span><kbd>Space</kbd> show/hide answer</span>
+  <span><kbd>J</kbd><kbd>K</kbd> next / prev question</span>
+  <span><kbd>1</kbd> got it &nbsp;<kbd>2</kbd> review</span>
+</div>
+<button id="jump-btn">→ Next unanswered</button>
 <div id="main">
 <div class="summary">
   <h2>📖 Evolution: Making Sense of Life — Study Guide</h2>
@@ -2267,6 +2300,208 @@ Year | Annual Antibiotic Usage | % Resistant Strains 1978 | 0.84 | 0 1979 | 0.92
         buildIndividual(card);
       }
     });
+  })();
+
+  // ── Progress tracking + self-grade system ──
+  (function(){
+    var STORE='evo_tb_v1';
+    function load(){try{return JSON.parse(localStorage.getItem(STORE))||{};}catch(e){return {};}}
+    function save(d){try{localStorage.setItem(STORE,JSON.stringify(d));}catch(e){}}
+    var prog=load();
+
+    function getChId(cardEl){return cardEl.closest('.ch-section')?cardEl.closest('.ch-section').id:'';}
+
+    function gradeCard(cardId,result){
+      prog[cardId]=result;
+      save(prog);
+      var card=$('#'+cardId);
+      if(card){
+        card.classList.remove('gp','gm');
+        card.classList.add(result==='pass'?'gp':'gm');
+        $$('.sg-btn',card).forEach(function(b){b.classList.toggle('sel',b.dataset.g===result);});
+      }
+      refreshSidebar();
+      var chId=card?getChId(card):'';
+      if(chId)refreshChBar(chId);
+      refreshJumpBtn();
+    }
+
+    function refreshChBar(chId){
+      var sec=$('#'+chId);
+      if(!sec)return;
+      var cards=$$('.q-card',sec);
+      var total=cards.length,pass=0;
+      cards.forEach(function(c){if(prog[c.id]==='pass')pass++;});
+      var fill=sec.querySelector('.ch-prog-fill');
+      var lbl=sec.querySelector('.ch-prog-label');
+      if(fill)fill.style.width=(total>0?Math.round(pass/total*100):0)+'%';
+      if(lbl)lbl.textContent=pass+' / '+total+' correct';
+    }
+
+    function refreshSidebar(){
+      $$('#sb a[href^="#ch"]').forEach(function(a){
+        var chId=a.getAttribute('href').substring(1);
+        var sec=$('#'+chId);
+        if(!sec)return;
+        var cards=$$('.q-card',sec);
+        var total=cards.length,done=0,pass=0;
+        cards.forEach(function(c){if(prog[c.id]){done++;if(prog[c.id]==='pass')pass++;}});
+        var badge=a.querySelector('.qcnt');
+        if(!badge)return;
+        if(done===0){badge.textContent=total+'Q';badge.classList.remove('prog');}
+        else{badge.textContent=pass+'/'+total;badge.classList.toggle('prog',pass>0);}
+      });
+    }
+
+    function refreshJumpBtn(){
+      var btn=$('#jump-btn');
+      if(!btn)return;
+      var cards=$$('.q-card');
+      var first=null;
+      for(var i=0;i<cards.length;i++){if(!prog[cards[i].id]){first=cards[i];break;}}
+      if(first){btn.style.display='block';btn._target=first;}
+      else{btn.style.display='none';}
+    }
+
+    // Self-grade buttons for non-MCQ cards
+    function addSelfGrade(card){
+      if(card.querySelector('.sg-row'))return;
+      if(card.querySelector('.opts'))return;
+      var aw=card.querySelector('.answer-wrap');
+      if(!aw)return;
+      var row=document.createElement('div');
+      row.className='sg-row';
+      row.innerHTML='<button class="sg-btn pass" data-g="pass">✓ Got it</button>'
+        +'<button class="sg-btn miss" data-g="miss">↩ Still learning</button>'
+        +'<span class="sg-note">or press <kbd style="background:#222;border:1px solid #333;border-radius:3px;padding:1px 5px;font-size:10px">1</kbd> / <kbd style="background:#222;border:1px solid #333;border-radius:3px;padding:1px 5px;font-size:10px">2</kbd></span>';
+      aw.appendChild(row);
+      $$('.sg-btn',row).forEach(function(btn){
+        btn.addEventListener('click',function(e){
+          e.stopPropagation();
+          gradeCard(card.id,btn.dataset.g);
+        });
+      });
+    }
+
+    // Auto-grade MCQ on first click
+    function wireMcq(card){
+      var graded=false;
+      card.addEventListener('click',function(e){
+        if(graded)return;
+        var li=e.target.closest('.opts li');
+        if(!li)return;
+        setTimeout(function(){
+          if($$('.opts li',card).some(function(c){return c.classList.contains('revealed');})){
+            graded=true;
+            gradeCard(card.id,li.dataset.correct==='true'?'pass':'miss');
+          }
+        },30);
+      },{capture:false});
+    }
+
+    // Auto-grade full-table matching on completion
+    function wireFullTableMatch(card){
+      card.addEventListener('click',function(){
+        setTimeout(function(){
+          var chips=$$('.term-chip',card);
+          if(chips.length>0&&Array.from(chips).every(function(c){return c.classList.contains('correct');})){
+            gradeCard(card.id,'pass');
+          }
+        },50);
+      });
+    }
+
+    // Auto-grade individual matching on correct click
+    function wireIndividualMatch(card){
+      card.addEventListener('click',function(e){
+        var btn=e.target.closest('.match-def-btn');
+        if(btn&&btn.classList.contains('correct')){
+          setTimeout(function(){gradeCard(card.id,'pass');},50);
+        }
+      });
+    }
+
+    // Restore grades on load
+    function restore(){
+      Object.keys(prog).forEach(function(id){
+        var card=$('#'+id);
+        if(!card)return;
+        var r=prog[id];
+        card.classList.add(r==='pass'?'gp':'gm');
+        $$('.sg-btn',card).forEach(function(b){b.classList.toggle('sel',b.dataset.g===r);});
+      });
+    }
+
+    // Add progress bars to chapter headers
+    function addProgressBars(){
+      $$('.ch-section').forEach(function(sec){
+        var meta=sec.querySelector('.ch-meta');
+        if(!meta||sec.querySelector('.ch-prog-row'))return;
+        var row=document.createElement('div');
+        row.className='ch-prog-row';
+        row.innerHTML='<div class="ch-prog-outer"><div class="ch-prog-fill"></div></div>'
+          +'<span class="ch-prog-label">0 / '+$$('.q-card',sec).length+' correct</span>';
+        meta.insertAdjacentElement('afterend',row);
+      });
+    }
+
+    // Keyboard navigation
+    var _cur=null;
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.intersectionRatio>=0.35)_cur=e.target;});
+    },{threshold:[0,.35,.7]});
+    $$('.q-card').forEach(function(c){io.observe(c);});
+
+    document.addEventListener('keydown',function(e){
+      var tag=(document.activeElement||{}).tagName||'';
+      if(tag==='INPUT'||tag==='TEXTAREA')return;
+      var cards=Array.from($$('.q-card'));
+      var idx=_cur?cards.indexOf(_cur):-1;
+      if(e.key===' '||e.key==='Spacebar'){
+        e.preventDefault();
+        if(!_cur)return;
+        _cur.classList.toggle('show-answer');
+        var ab=_cur.querySelector('.btn-answer');
+        if(ab)ab.textContent=_cur.classList.contains('show-answer')?'✓ Hide answer':'✓ Show answer';
+      }
+      if(e.key==='j'||e.key==='J'){
+        e.preventDefault();
+        if(idx<cards.length-1)cards[idx+1].scrollIntoView({behavior:'smooth',block:'center'});
+      }
+      if(e.key==='k'||e.key==='K'){
+        e.preventDefault();
+        if(idx>0)cards[idx-1].scrollIntoView({behavior:'smooth',block:'center'});
+      }
+      if(e.key==='1'){if(_cur)gradeCard(_cur.id,'pass');}
+      if(e.key==='2'){if(_cur)gradeCard(_cur.id,'miss');}
+    });
+
+    // Jump button
+    var jb=$('#jump-btn');
+    if(jb)jb.addEventListener('click',function(){
+      if(jb._target)jb._target.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+
+    // Init
+    $$('.q-card').forEach(function(card){
+      addSelfGrade(card);
+      if(card.querySelector('.opts'))wireMcq(card);
+      // Matching wiring
+      var stem=card.querySelector('.stem');
+      if(stem){
+        var metas=card.querySelectorAll('.meta span');
+        var isMatch=Array.from(metas).some(function(s){return s.textContent.trim()==='Matching';});
+        if(isMatch&&!card.querySelector('.opts')){
+          if(/Terms:\s*\n\s*1\./.test(stem.textContent)){wireFullTableMatch(card);}
+          else{wireIndividualMatch(card);}
+        }
+      }
+    });
+    addProgressBars();
+    restore();
+    refreshSidebar();
+    $$('.ch-section').forEach(function(sec){refreshChBar(sec.id);});
+    refreshJumpBtn();
   })();
 
   // ── Swipe gesture on chapter sections: left = next chapter, right = prev ──
