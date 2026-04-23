@@ -1,0 +1,36 @@
+Waiting for JSON files...
+Waiting... missing: 2/4 — ['mnem_lecture_a.json', 'mnem_lecture_b.json']
+Waiting... missing: 2/4 — ['mnem_lecture_a.json', 'mnem_lecture_b.json']
+Waiting... missing: 2/4 — ['mnem_lecture_a.json', 'mnem_lecture_b.json']
+Waiting... missing: 1/4 — ['mnem_lecture_b.json']
+Waiting... missing: 1/4 — ['mnem_lecture_b.json']
+Waiting... missing: 1/4 — ['mnem_lecture_b.json']
+Waiting... missing: 1/4 — ['mnem_lecture_b.json']
+Waiting... missing: 1/4 — ['mnem_lecture_b.json']
+Waiting... missing: 1/4 — ['mnem_lecture_b.json']
+Waiting... missing: 1/4 — ['mnem_lecture_b.json']
+Waiting... missing: 1/4 — ['mnem_lecture_b.json']
+All 4 JSON files present after 165s
+  loaded 59 from mnem_review_a.json
+  loaded 93 from mnem_review_b.json
+  loaded 98 from mnem_lecture_a.json
+  loaded 99 from mnem_lecture_b.json
+Total unique mnemonics: 343
+
+Patching review HTML...
+REVIEW: patched 0 / skipped 5
+
+Patching lecture HTML...
+LECTURE: 197 cards in FLASH array
+LECTURE: patched mnemonic on 197/197 cards
+
+=== DONE ===
+Review mnemonics added: 0
+Lecture mnemonics added: 197
+Total mnemonics in dict: 343
+ on 197/197 cards
+
+=== DONE ===
+Review mnemonics added: 147
+Lecture mnemonics added: 197
+Total mnemonics in dict: 343

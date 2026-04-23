@@ -1,0 +1,91 @@
+======================================================
+  EVOLUTION STUDY GUIDE — AUTO-TIMER DECK FEATURE
+  Added to all 4 HTML files (exam1_review, exam2_review,
+  exam3_review, exam3_lecture)
+======================================================
+
+--- CSS ADDED (after @media 520px block) ---
+
+#dk-timer-bar{width:min(500px,92vw);height:3px;background:#333;border-radius:2px;margin:3px 0 0}
+#dk-timer-fill{height:100%;background:var(--gold);border-radius:2px;width:100%}
+
+
+--- HTML ADDED (in insertAdjacentHTML, after dk-prog-txt, before dk-card) ---
+
+<span id="dk-timer-cnt" style="font-size:11px;color:var(--gold);font-weight:700;min-width:20px;text-align:center;display:inline-block;margin-left:4px"></span>
+</div>
+<div id="dk-timer-bar"><div id="dk-timer-fill"></div></div>
+<div id="dk-card">
+
+
+--- JS VARIABLES ADDED (after var _animating=false;) ---
+
+var _autoTimer=null,_autoFlipTimer=null,_autoCountIv=null;
+
+
+--- JS FUNCTIONS ADDED (after resetCardTransform, before dkRender) ---
+
+function cancelAutoTimer(){
+  clearTimeout(_autoTimer);clearTimeout(_autoFlipTimer);_autoTimer=null;_autoFlipTimer=null;
+  if(_autoCountIv){clearInterval(_autoCountIv);_autoCountIv=null;}
+  var fill=$('dk-timer-fill');if(fill){fill.style.transition='none';fill.style.width='100%';}
+  var cnt=$('dk-timer-cnt');if(cnt)cnt.textContent='';
+}
+function startAutoTimer(){
+  cancelAutoTimer();if(!_deck.length)return;
+  var fill=$('dk-timer-fill');var cnt=$('dk-timer-cnt');
+  if(fill){fill.style.transition='none';fill.style.width='100%';fill.offsetWidth;fill.style.transition='width 10s linear';fill.style.width='0';}
+  var secs=10;if(cnt)cnt.textContent=secs;
+  _autoCountIv=setInterval(function(){secs--;if(secs>0){if(cnt)cnt.textContent=secs;}else{clearInterval(_autoCountIv);_autoCountIv=null;if(cnt)cnt.textContent='';}},1000);
+  _autoTimer=setTimeout(function(){
+    if(_autoCountIv){clearInterval(_autoCountIv);_autoCountIv=null;}if(cnt)cnt.textContent='';
+    if(_animating||!$('dk-ov').classList.contains('show'))return;
+    $('dk-card').classList.add('flipped');
+    _autoFlipTimer=setTimeout(function(){if($('dk-ov').classList.contains('show'))flashGrade(false);},1500);
+  },10000);
+}
+
+
+--- MODIFICATIONS TO EXISTING FUNCTIONS ---
+
+dkRender()     → add startAutoTimer(); at end (before closing brace)
+dkClose()      → add cancelAutoTimer(); at start
+dkFlip()       → add cancelAutoTimer(); after animating check
+dkNav()        → add cancelAutoTimer(); after animating check
+dkShuffle()    → add cancelAutoTimer(); at start
+dkRetryMissed()→ add cancelAutoTimer(); at start
+dkRestart()    → add cancelAutoTimer(); at start
+flashGrade()   → add cancelAutoTimer(); at very start (before animating check)
+dkStart()      → add cancelAutoTimer(); after animating check
+
+
+--- HOW IT WORKS ---
+
+1. Every time a new card is shown (dkRender called), the 10-second timer starts.
+2. A gold bar below the progress bar shrinks from 100% → 0% over 10 seconds.
+3. A countdown number (10, 9, 8...) appears next to the card counter.
+4. If the user does ANYTHING (touch, swipe, flip, grade, nav, shuffle, close) the timer
+   cancels instantly.
+5. If the timer reaches 0: card auto-flips to show the answer, then after 1.5 seconds
+   automatically grades as MISS and advances to the next card.
+
+
+--- FILES MODIFIED ---
+
+public/exam1_review.html
+public/exam2_review.html
+public/exam3_review.html
+public/exam3_lecture.html
+
+
+--- IMAGES COMMITTED ---
+
+168 files committed including all SVGs in public/img/fc/ and JPGs/PNGs
+in public/images/wiki/ — these were previously untracked and not deploying
+to Cloudflare Pages. Now they will render on the live site.
+
+
+--- LIVE SITE ---
+
+https://evolution-study-guide.pages.dev
+(Cloudflare Pages deploys ~1-2 min after git push)

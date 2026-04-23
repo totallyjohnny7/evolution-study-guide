@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>BIOL 4230 — Evolution Study Guide</title>
+<style>
+:root{--bg:#0d0d0d;--bg2:#141414;--card:#1e1e1e;--gold:#f5c542;--gold2:#e0a800;--text:#e8e8e8;--muted:#999}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
+.hero{text-align:center;margin-bottom:48px}
+.hero h1{font-size:32px;font-weight:900;color:var(--gold);margin-bottom:8px}
+.hero p{color:var(--muted);font-size:15px}
+.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:900px}
+.card{background:var(--card);border:1px solid #2a2a2a;border-radius:14px;padding:32px 28px;width:260px;text-decoration:none;color:var(--text);transition:all .2s;display:flex;flex-direction:column;gap:12px}
+.card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 32px rgba(245,197,66,.12)}
+.card .num{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);background:#2a2000;border-radius:20px;padding:3px 12px;width:fit-content}
+.card h2{font-size:18px;font-weight:800;color:var(--gold)}
+.card p{font-size:13px;color:var(--muted);line-height:1.55}
+.card .arrow{color:var(--gold2);font-size:18px;margin-top:auto}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>BIOL 4230 — Evolution</h1>
+  <p>Select an exam review to study</p>
+</div>
+<div class="cards">
+  <a class="card" href="/exam1_review.html">
+    <span class="num">Exam 1</span>
+    <h2>Exam 1 Review</h2>
+    <p>Origins of evolutionary theory, natural selection, adaptation, and population genetics fundamentals.</p>
+    <span class="arrow">→</span>
+  </a>
+  <a class="card" href="/exam2_review.html">
+    <span class="num">Exam 2</span>
+    <h2>Exam 2 Review</h2>
+    <p>Speciation, phylogenetics, macroevolution, and the fossil record.</p>
+    <span class="arrow">→</span>
+  </a>
+  <a class="card" href="/exam3_review.html">
+    <span class="num">Exam 3 / Final</span>
+    <h2>Exam 3 Review</h2>
+    <p>Sexual selection, coevolution, evo-devo, and integrative evolutionary topics.</p>
+    <span class="arrow">→</span>
+  </a>
+  <a class="card" href="/exam3_lecture.html">
+    <span class="num">Exam 3 Lectures · Verbatim PDF</span>
+    <h2>Exam 3 Lecture (PDF verbatim)</h2>
+    <p>Full BIOL 4230 Exam 3 PDF study guide — every sentence, all 138 figures, OCR'd text from image-only pages. Search, flashcards, timeline.</p>
+    <span class="arrow">→</span>
+  </a>
+  <a class="card" href="/textbook.html">
+    <span class="num">📖 Textbook</span>
+    <h2>Textbook Browser</h2>
+    <p>Zimmer &amp; Emlen study guide — all 18 chapters, 175 questions, 776 diagrams. Searchable sidebar navigation.</p>
+    <span class="arrow">→</span>
+  </a>
+  <a class="card" href="/visuals.html">
+    <span class="num">🧠 Visual Tools</span>
+    <h2>Interactive Visuals</h2>
+    <p>Venn diagrams, category sorters, and concept pairs — tap-to-place activities for natural selection, speciation, isolation, and more.</p>
+    <span class="arrow">→</span>
+  </a>
+</div>
+</body>
+</html>

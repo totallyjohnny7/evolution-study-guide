@@ -4,64 +4,396 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BIOL 4230 — Evolution Study Guide</title>
+<meta name="description" content="Evolution study guide · Dr. Robbins · 3 exams, a verbatim lecture, the full textbook, and visual tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d0d0d;--bg2:#141414;--card:#1e1e1e;--gold:#f5c542;--gold2:#e0a800;--text:#e8e8e8;--muted:#999}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
-.hero{text-align:center;margin-bottom:48px}
-.hero h1{font-size:32px;font-weight:900;color:var(--gold);margin-bottom:8px}
-.hero p{color:var(--muted);font-size:15px}
-.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:900px}
-.card{background:var(--card);border:1px solid #2a2a2a;border-radius:14px;padding:32px 28px;width:260px;text-decoration:none;color:var(--text);transition:all .2s;display:flex;flex-direction:column;gap:12px}
-.card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 32px rgba(245,197,66,.12)}
-.card .num{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);background:#2a2000;border-radius:20px;padding:3px 12px;width:fit-content}
-.card h2{font-size:18px;font-weight:800;color:var(--gold)}
-.card p{font-size:13px;color:var(--muted);line-height:1.55}
-.card .arrow{color:var(--gold2);font-size:18px;margin-top:auto}
+:root{
+  --bg: #0b0b0c;
+  --bg2: #121214;
+  --card: #16161a;
+  --card-h: #1c1c21;
+  --line: #26262b;
+  --line-2: #32323a;
+  --gold: #f5c542;
+  --gold-2: #ffd966;
+  --gold-dim: #9c7c20;
+  --text: #ececee;
+  --text-dim: #b6b6bd;
+  --muted: #8a8a94;
+  --green: #34d399;
+  --blue: #7cc4ff;
+  --purple: #b197fc;
+  --ease: cubic-bezier(.4,0,.2,1);
+}
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+html{ -webkit-text-size-adjust: 100%; }
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+::selection{ background: var(--gold); color: #000; }
+a{ color: inherit; text-decoration: none; }
+
+/* Background grain */
+body::before{
+  content: "";
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(245,197,66,.08), transparent 70%),
+    radial-gradient(800px 400px at 90% 30%, rgba(124,196,255,.04), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== Top bar ===== */
+.topbar{
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(11, 11, 12, .82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 32px;
+  display: flex; align-items: center;
+}
+.brand{
+  display: flex; align-items: center; gap: 10px;
+  font-family: "Source Serif 4", serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+.brand .mark{
+  width: 24px; height: 24px;
+  background: var(--gold);
+  color: #000;
+  border-radius: 5px;
+  display: inline-grid; place-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 13px;
+}
+.brand .course{
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  padding-left: 10px;
+  border-left: 1px solid var(--line-2);
+  margin-left: 6px;
+}
+.topbar-right{
+  margin-left: auto;
+  font-size: 12.5px;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ===== Hero ===== */
+.hero{
+  position: relative; z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 72px 32px 40px;
+}
+.hero .eyebrow{
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.hero h1{
+  font-family: "Source Serif 4", serif;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  color: var(--text);
+  max-width: 880px;
+}
+.hero h1 .g{ color: var(--gold); }
+.hero h1 em{
+  font-style: italic;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+.hero p.lede{
+  color: var(--text-dim);
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 640px;
+  margin-top: 22px;
+}
+.hero .stats{
+  display: flex; flex-wrap: wrap;
+  gap: 28px 40px;
+  margin-top: 38px;
+}
+.hero .stat{
+  display: flex; flex-direction: column; gap: 2px;
+}
+.hero .stat .num{
+  font-family: "Source Serif 4", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.hero .stat .lbl{
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ===== Cards grid ===== */
+.section{
+  position: relative; z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 32px 48px;
+}
+.section-head{
+  display: flex; align-items: baseline;
+  gap: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.section-head h2{
+  font-family: "Source Serif 4", serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.section-head .tag{
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.cards.tight{
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 22px 20px;
+  display: flex; flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .2s var(--ease), transform .2s var(--ease);
+  cursor: pointer;
+}
+.card:hover{
+  border-color: var(--gold-dim);
+  background: var(--card-h);
+  transform: translateY(-2px);
+}
+.card:hover .arrow{ transform: translateX(4px); color: var(--gold); }
+
+.card .num{
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.card .num::before{
+  content: "";
+  display: inline-block;
+  width: 5px; height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.card h3{
+  font-family: "Source Serif 4", serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+.card p{
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+.card .meta{
+  margin-top: auto;
+  padding-top: 14px;
+  display: flex; align-items: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.card .arrow{
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 18px;
+  transition: all .2s var(--ease);
+}
+
+/* Accent colors per card group */
+.card[data-accent="blue"] .num{ color: var(--blue); }
+.card[data-accent="blue"] .num::before{ background: var(--blue); }
+.card[data-accent="blue"]:hover{ border-color: rgba(124,196,255,.4); }
+.card[data-accent="green"] .num{ color: var(--green); }
+.card[data-accent="green"] .num::before{ background: var(--green); }
+.card[data-accent="green"]:hover{ border-color: rgba(52,211,153,.4); }
+.card[data-accent="purple"] .num{ color: var(--purple); }
+.card[data-accent="purple"] .num::before{ background: var(--purple); }
+.card[data-accent="purple"]:hover{ border-color: rgba(177,151,252,.4); }
+.card[data-accent="gold"]{ border-color: rgba(245,197,66,.35); background: linear-gradient(180deg, rgba(245,197,66,0.06), transparent 40%); }
+.card[data-accent="gold"] .num{ color: var(--gold); }
+.card[data-accent="gold"] .num::before{ background: var(--gold); }
+.card[data-accent="gold"]:hover{ border-color: rgba(245,197,66,.6); }
+
+/* Secondary cards — smaller */
+.card.small{
+  padding: 18px 20px;
+}
+.card.small h3{ font-size: 17px; }
+.card.small p{ font-size: 12.5px; }
+
+/* ===== Footer ===== */
+.footer{
+  position: relative; z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 32px 60px;
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  display: flex; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+}
+.footer a{ color: var(--text-dim); border-bottom: 1px dotted var(--line-2); }
+.footer a:hover{ color: var(--gold); }
+
+@media (max-width: 640px){
+  .topbar{ padding: 12px 18px; }
+  .hero{ padding: 48px 18px 28px; }
+  .hero h1{ font-size: 36px; }
+  .section{ padding: 24px 18px 36px; }
+  .cards{ grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
-<div class="hero">
-  <h1>BIOL 4230 — Evolution</h1>
-  <p>Select an exam review to study</p>
-</div>
-<div class="cards">
-  <a class="card" href="/exam1_review.html">
-    <span class="num">Exam 1</span>
-    <h2>Exam 1 Review</h2>
-    <p>Origins of evolutionary theory, natural selection, adaptation, and population genetics fundamentals.</p>
-    <span class="arrow">→</span>
-  </a>
-  <a class="card" href="/exam2_review.html">
-    <span class="num">Exam 2</span>
-    <h2>Exam 2 Review</h2>
-    <p>Speciation, phylogenetics, macroevolution, and the fossil record.</p>
-    <span class="arrow">→</span>
-  </a>
-  <a class="card" href="/exam3_review.html">
-    <span class="num">Exam 3 / Final</span>
-    <h2>Exam 3 Review</h2>
-    <p>Sexual selection, coevolution, evo-devo, and integrative evolutionary topics.</p>
-    <span class="arrow">→</span>
-  </a>
-  <a class="card" href="/exam3_lecture.html">
-    <span class="num">Exam 3 Lectures · Verbatim PDF</span>
-    <h2>Exam 3 Lecture (PDF verbatim)</h2>
-    <p>Full BIOL 4230 Exam 3 PDF study guide — every sentence, all 138 figures, OCR'd text from image-only pages. Search, flashcards, timeline.</p>
-    <span class="arrow">→</span>
-  </a>
-  <a class="card" href="/textbook.html">
-    <span class="num">📖 Textbook</span>
-    <h2>Textbook Browser</h2>
-    <p>Zimmer &amp; Emlen study guide — all 18 chapters, 175 questions, 776 diagrams. Searchable sidebar navigation.</p>
-    <span class="arrow">→</span>
-  </a>
-  <a class="card" href="/visuals.html">
-    <span class="num">🧠 Visual Tools</span>
-    <h2>Interactive Visuals</h2>
-    <p>Venn diagrams, category sorters, and concept pairs — tap-to-place activities for natural selection, speciation, isolation, and more.</p>
-    <span class="arrow">→</span>
-  </a>
-</div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="mark">E</span>
+    <span>Evolution</span>
+    <span class="course">BIOL 4230 · Dr. Robbins</span>
+  </div>
+  <div class="topbar-right">study guide</div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Exam prep · Spring</div>
+  <h1>Three exams. <span class="g">One study guide.</span><br><em>Read. Drill. Ship.</em></h1>
+  <p class="lede">Every review is structured as <strong>block → question → trap</strong>. Learn what it is, why it matters, how it works — then break it with a scenario MCQ. Flashcard mode schedules your review automatically; test mode scores you.</p>
+  <div class="stats">
+    <div class="stat"><span class="num">56</span><span class="lbl">Sections</span></div>
+    <div class="stat"><span class="num">322</span><span class="lbl">MCQs</span></div>
+    <div class="stat"><span class="num">87</span><span class="lbl">Flashcards</span></div>
+    <div class="stat"><span class="num">18</span><span class="lbl">Chapters</span></div>
+    <div class="stat"><span class="num">3</span><span class="lbl">Exams</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Exam reviews</h2>
+    <span class="tag">Block · Question · Trap</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="final_review.html" data-accent="gold">
+      <span class="num">⭐ Final Exam — Everything</span>
+      <h3>Exam 1 + 2 + 3 · All Content · Visuals</h3>
+      <p>One consolidated view: all 56 sections, every MCQ, every flashcard, all 170+ lecture diagrams, and the interactive visuals. Progress carries over from the individual exam pages.</p>
+      <div class="meta">56 sections · 322 MCQs · 87 cards · 170+ diagrams · visuals<span class="arrow">→</span></div>
+    </a>
+    <a class="card" href="exam1_review.html" data-accent="blue">
+      <span class="num">Exam 1</span>
+      <h3>Mechanisms, Genetics &amp; History</h3>
+      <p>Natural selection, Hardy-Weinberg, drift, gene flow, mutation. The five forces of evolution and the people who discovered them.</p>
+      <div class="meta">12 sections · 68 MCQs<span class="arrow">→</span></div>
+    </a>
+    <a class="card" href="exam2_review.html" data-accent="purple">
+      <span class="num">Exam 2</span>
+      <h3>Evo-Devo, Sex &amp; Behavior</h3>
+      <p>Complex adaptations, sexual selection, life history trade-offs, coevolution, and the evolution of social behavior.</p>
+      <div class="meta">10 sections · 74 MCQs<span class="arrow">→</span></div>
+    </a>
+    <a class="card" href="exam3_review.html" data-accent="green">
+      <span class="num">Exam 3 / Final</span>
+      <h3>History, Phylogeny &amp; Humans</h3>
+      <p>History of life, phylogenetics, species concepts, biogeography, mass extinctions, human evolution, evolutionary medicine.</p>
+      <div class="meta">34 sections · 180 MCQs · 62 cards · 164 diagrams<span class="arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Deeper resources</h2>
+    <span class="tag">Lecture · Textbook · Visuals</span>
+  </div>
+  <div class="cards tight">
+    <a class="card small" href="textbook.html">
+      <span class="num">Textbook</span>
+      <h3>Zimmer &amp; Emlen Browser</h3>
+      <p>All 18 chapters, 175 practice questions, 776 diagrams. Searchable sidebar nav.</p>
+      <div class="meta">chapters 1–18<span class="arrow">→</span></div>
+    </a>
+    <a class="card small" href="visuals.html">
+      <span class="num">Visuals</span>
+      <h3>Interactive Tools</h3>
+      <p>Venn diagrams, category sorters, concept pairs. Tap-to-place activities for selection, speciation, isolation.</p>
+      <div class="meta">tap &amp; drag<span class="arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>Evolution Study Guide · BIOL 4230</span>
+  <span style="margin-left:auto">Data in IndexedDB · <a href="#" onclick="if(confirm('Wipe all card schedules, reviews, and settings?')){ESG&&ESG.clearAll().then(function(){location.reload();});}return false;">reset</a></span>
+</footer>
+
+<script src="https://unpkg.com/dexie@4.0.8/dist/dexie.min.js" defer crossorigin="anonymous" onerror="window.__dexieLoadFailed=true"></script>
+<script src="js/esg-db.js" defer></script>
+
 </body>
 </html>

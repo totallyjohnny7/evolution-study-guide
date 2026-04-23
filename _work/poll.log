@@ -1,0 +1,83 @@
+[poll 1/25 15:46:42] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 2/25 15:47:28] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 3/25 15:48:13] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 4/25 15:48:58] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 5/25 15:49:44] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 6/25 15:50:29] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 7/25 15:51:14] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 8/25 15:52:00] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 9/25 15:52:45] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 10/25 15:53:30] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 11/25 15:54:16] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 12/25 15:55:01] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 13/25 15:55:48] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 14/25 15:56:34] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 15/25 15:57:20] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 16/25 15:58:05] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 17/25 15:58:50] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 18/25 15:59:36] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 19/25 16:00:22] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+[poll 20/25 16:01:11] review fc-mn=0 | lecture fc-mn=0 mnemonic=9
+nemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 11/25 15:52:59] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 12/25 15:53:44] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 13/25 15:54:29] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 14/25 15:55:14] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 15/25 15:56:00] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 16/25 15:56:46] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 17/25 15:57:31] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 18/25 15:58:16] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 19/25 15:59:01] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 20/25 15:59:47] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 21/25 16:00:33] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected
+[poll 22/25 16:01:18] review fc-mn=0
+0 | lecture fc-mn=0
+0 mnemonic=9
+_work/poll_mnemonics.sh: line 14: [: 0
+0: integer expression expected

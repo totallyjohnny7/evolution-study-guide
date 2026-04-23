@@ -1,0 +1,494 @@
+{
+  "cards": [
+    {
+      "q": "Radiometric Dating",
+      "analogy": "Hourglass whose sand grains are radioactive parent atoms falling at a fixed, physics-locked rate into the daughter-atom chamber below.",
+      "why": "The ratio of sand in the top (parent isotope) vs. bottom (daughter isotope) tells you how long the hourglass has been running, which is exactly how geologists calculate a rock's absolute age from isotope ratios."
+    },
+    {
+      "q": "Half-life",
+      "analogy": "A candy jar where every fixed interval, exactly half of the remaining candies vanish — 100, then 50, then 25, then 12.5.",
+      "why": "Radioactive decay never finishes off the sample in one go; each half-life removes half the remaining parent atoms, producing the characteristic exponential curve used to date rocks."
+    },
+    {
+      "q": "Isotopes",
+      "analogy": "Identical-twin siblings who weigh different amounts because one ate extra breakfast — same last name, different mass on the scale.",
+      "why": "Isotopes of an element share the same proton number (chemical identity) but differ in neutron count (mass), so they behave chemically alike but can be told apart by a mass spectrometer."
+    },
+    {
+      "q": "Biomarkers",
+      "analogy": "Chemical fingerprints left at a crime scene — the suspect is gone but their unique molecular signature remains in the dust.",
+      "why": "Biomarkers are stable organic molecules (like sterols or hopanes) that persist in rocks long after the organism decayed, letting scientists identify which lineages were present billions of years ago."
+    },
+    {
+      "q": "Stromatolites",
+      "analogy": "Layered lasagna built by generations of microbial chefs, each new sheet of cyanobacteria trapping sediment on top of the previous one.",
+      "why": "Stromatolites form when sticky microbial mats trap and bind sediment in daily/seasonal layers, producing dome-shaped laminated rocks that preserve evidence of the oldest photosynthetic life."
+    },
+    {
+      "q": "K-T Boundary",
+      "analogy": "A thin, dark line of iridium-rich dust visible in road cuts like a soot streak left by a house fire — below it dinosaurs, above it only mammals and birds.",
+      "why": "The Chicxulub asteroid impact 66 Ma scattered an iridium-rich ash layer worldwide that sharply divides Cretaceous from Paleogene strata, marking the extinction of non-avian dinosaurs."
+    },
+    {
+      "q": "Miller–Urey Experiment",
+      "analogy": "Kitchen pressure cooker wired with spark plugs — sealed flask of 'early-Earth soup' (methane, ammonia, hydrogen, water) zapped with lightning until brown goo of amino acids forms.",
+      "why": "The apparatus simulated a reducing primitive atmosphere plus electrical storms and produced amino acids abiotically, showing that life's building blocks can arise from nonliving chemistry."
+    },
+    {
+      "q": "RNA World Hypothesis",
+      "analogy": "A Swiss Army knife that was around before specialized tools — one molecule that could both carry the blueprint and do the cutting.",
+      "why": "RNA can both store genetic information (like DNA) and catalyze reactions (like proteins), so a self-replicating RNA could have predated the DNA-protein division of labor."
+    },
+    {
+      "q": "Earth's age",
+      "analogy": "A 24-hour clock where Earth formed at midnight, life appeared around 4 a.m., and humans show up in the last fraction of a second before the next midnight.",
+      "why": "Meteorite and zircon radiometric dates place Earth's formation at ~4.54 billion years ago, which compressed into a day highlights how recent complex life and humans are."
+    },
+    {
+      "q": "Okenane",
+      "analogy": "Purple grape-juice stain on a white shirt that only comes from one brand of juice — if you find the stain, you know that brand was there.",
+      "why": "Okenane is a diagenetic biomarker derived exclusively from purple sulfur bacteria (Chromatiaceae), so finding it in ancient rocks proves anoxygenic photosynthesis and euxinic (sulfidic) water columns existed."
+    },
+    {
+      "q": "Endosymbiotic theory",
+      "analogy": "A small food-truck company gets swallowed by a corporate campus and ends up running the cafeteria forever — keeping its own logo, books, and staff inside the larger building.",
+      "why": "A free-living aerobic bacterium was engulfed by an ancestral eukaryote and kept running its own metabolism, becoming the mitochondrion; the same story with a cyanobacterium produced the chloroplast."
+    },
+    {
+      "q": "Great Oxygenation Event",
+      "analogy": "Cyanobacteria pollute the entire planet's atmosphere with their waste gas the way a factory dumps exhaust into a river — and that pollution becomes the new breathable air.",
+      "why": "Around 2.4 Ga, oxygenic photosynthesis by cyanobacteria flooded the oceans and atmosphere with O2, causing a mass extinction of anaerobes and rusting the seas into banded iron formations."
+    },
+    {
+      "q": "Cambrian Explosion",
+      "analogy": "A design studio that spent billions of years making blobs suddenly prototypes every major body plan in a rapid 20-million-year brainstorm session.",
+      "why": "During the early Cambrian (~541–520 Ma), nearly all modern animal phyla appear in the fossil record with hard parts, eyes, and novel body plans within a geologically brief window."
+    },
+    {
+      "q": "Permian Mass Extinction",
+      "analogy": "The 'Great Dying' house fire that burned down 95% of the library — the most catastrophic loss in life's history, leaving only charred index cards behind.",
+      "why": "At the end of the Permian (~252 Ma), Siberian Traps volcanism triggered runaway greenhouse, ocean anoxia, and acidification that killed ~96% of marine species and ~70% of terrestrial vertebrates."
+    },
+    {
+      "q": "Devonian Period highlights",
+      "analogy": "'Age of Fishes' — giant fish-mall where placoderms are the sharks patrolling, lobe-fins are about to leave the food court on foot, and forests grow the first real trees outside.",
+      "why": "The Devonian (419–359 Ma) saw fish diversify explosively, the first forests with Archaeopteris, the earliest tetrapods (Tiktaalik, Acanthostega), and ended with a major extinction."
+    },
+    {
+      "q": "How does radiometric dating work?",
+      "analogy": "Two-bin hourglass where parent atoms trickle into the daughter bin at a constant, temperature-proof rate set by nuclear physics.",
+      "why": "Measuring the parent-to-daughter ratio in a closed mineral system and plugging into the decay equation N = N0·(1/2)^(t/half-life) yields the absolute age since the mineral crystallized."
+    },
+    {
+      "q": "What is the K-T boundary?",
+      "analogy": "A coffee-stained page in the geologic book that abruptly cuts the dinosaur chapter from the mammal chapter — rimmed with iridium ash.",
+      "why": "It is the thin global clay layer at ~66 Ma marking the Chicxulub impact; above it, non-avian dinosaurs, ammonites, and many marine reptiles vanish from the record."
+    },
+    {
+      "q": "Evidence for endosymbiosis",
+      "analogy": "A tenant inside your house who still pays their old utility bills, keeps their own keys, and divides independently of the landlord.",
+      "why": "Mitochondria and chloroplasts have their own circular DNA, 70S (bacterial) ribosomes, double membranes, and reproduce by binary fission independently of the host cell, matching a formerly free-living bacterium."
+    },
+    {
+      "q": "Devonian tetrapod transition evidence",
+      "analogy": "Walking-fish staircase of fossils — Eusthenopteron, Panderichthys, Tiktaalik, Acanthostega, Ichthyostega — each step adding a wrist, a neck, or a digit.",
+      "why": "This Devonian fossil sequence shows incremental acquisition of tetrapod features (flat skull, neck, wrist, digits, weight-bearing limbs) in shallow-water sarcopterygians, documenting the fish-to-tetrapod transition."
+    },
+    {
+      "q": "What makes a good biomarker?",
+      "analogy": "A product-specific barcode that survives the dishwasher — uniquely identifies the brand, doesn't wash off, and can't be counterfeited by other products.",
+      "why": "A good biomarker is taxonomically specific (made only by one lineage), chemically stable over geologic time, and cannot be produced abiotically, so its presence diagnostically indicates that lineage was alive."
+    },
+    {
+      "q": "Natural selection vs. genetic drift",
+      "analogy": "Natural selection is a hiring manager picking the best candidates; genetic drift is a coin flip deciding who gets the job when candidates are equally qualified.",
+      "why": "Selection is deterministic and fitness-driven, producing adaptation; drift is random sampling error in allele frequencies, dominant in small populations and for neutral variants."
+    },
+    {
+      "q": "Evidence that life has a single common ancestor",
+      "analogy": "Every car on Earth using the same weirdly specific 23-letter steering wheel — not the obvious design choice, so they all came from one factory.",
+      "why": "All life shares the same DNA/RNA, near-universal genetic code, same ~20 L-amino acids, ATP energy currency, and homologous ribosomes — these arbitrary, frozen details imply one LUCA."
+    },
+    {
+      "q": "Precambrian timeline",
+      "analogy": "The 7/8 of a pizza nobody talks about — Hadean crust, Archean prokaryotes, Proterozoic oxygenation and eukaryotes — before the Cambrian slice everyone orders.",
+      "why": "The Precambrian (~4.54 Ga–541 Ma) encompasses Earth's formation, LUCA, prokaryotic dominance, the GOE, eukaryogenesis, Snowball Earth, and the Ediacaran — about 88% of Earth's history."
+    },
+    {
+      "q": "Earliest undisputed life evidence",
+      "analogy": "A child's handprint pressed in wet cement and then fossilized — the shape proves someone was there, even without the body.",
+      "why": "~3.5 Ga stromatolites from the Pilbara (Western Australia) and similar Archean formations are the oldest widely-accepted biogenic structures, left by microbial mats that trapped sediment."
+    },
+    {
+      "q": "Ribozymes",
+      "analogy": "An RNA molecule moonlighting as a protein enzyme — the messenger that also cooks the meal.",
+      "why": "Ribozymes are catalytic RNA molecules (e.g., the peptidyl transferase in the ribosome, self-splicing introns) — living proof that RNA can perform enzymatic chemistry, supporting the RNA World."
+    },
+    {
+      "q": "K-Ar dating (Potassium-Argon)",
+      "analogy": "Leaky helium balloon that starts full the moment a volcano pops it open — the gas that escapes into the rock vs. what's left tells you how long ago the eruption happened.",
+      "why": "Radioactive 40K in igneous minerals decays to 40Ar gas, which is trapped at crystallization (the clock 'starts' at solidification); the 40Ar/40K ratio gives the eruption age, ideal for dating volcanic ash layers around fossils."
+    },
+    {
+      "q": "Burgess Shale",
+      "analogy": "A photo album accidentally dropped into wet concrete — exquisitely preserved snapshots of soft-bodied Cambrian weirdos that would normally rot without a trace.",
+      "why": "The Burgess Shale (BC, Canada, ~508 Ma) is a Lagerstätte preserving soft tissues of bizarre Cambrian fauna (Anomalocaris, Opabinia, Hallucigenia), revealing the true diversity of the Cambrian Explosion."
+    },
+    {
+      "q": "Why is the RNA World hypothesis compelling?",
+      "analogy": "A universal dual-use tool sitting at the bottom of every living toolbox, even though modern life has replaced it with specialized versions.",
+      "why": "RNA is the only known molecule that both stores information and catalyzes reactions; the ribosome's catalytic core is RNA, and essential cofactors (ATP, NAD, FAD) are ribonucleotides — fossils of an RNA-based metabolism."
+    },
+    {
+      "q": "Ordovician extinction cause",
+      "analogy": "A thermostat that crashes from tropical to arctic — oceans freeze over, sea level drops, and shallow-shelf residents lose their homes.",
+      "why": "The end-Ordovician extinction (~445 Ma) was driven by rapid Gondwanan glaciation that lowered sea level and cooled oceans, eliminating shallow-marine habitats and their endemic faunas."
+    },
+    {
+      "q": "What makes fossils form?",
+      "analogy": "Winning a multi-step lottery — die in the right mud, get buried fast before scavengers find you, have hard parts, and stay undisturbed for millions of years.",
+      "why": "Fossilization requires rapid burial in anoxic sediment, presence of durable tissues (bone, shell, wood), mineral replacement or permineralization, and escape from later erosion/metamorphism."
+    },
+    {
+      "q": "Three Domains of Life",
+      "analogy": "Three high-school friend groups identified by their group-chat 16S hashtag — Bacteria, Archaea, Eukarya — sharing some vocabulary but unmistakably distinct cliques.",
+      "why": "Woese's ribosomal RNA comparisons split prokaryotes into Bacteria and Archaea, which are as different from each other as either is from Eukarya; archaea actually share some traits (ribosomes, transcription) with eukaryotes."
+    },
+    {
+      "q": "Ediacaran Biota",
+      "analogy": "Garden of strange quilted air-mattresses and fronds in the sand — soft, frond-like, non-animal-looking creatures that don't fit any modern phylum.",
+      "why": "The Ediacaran biota (~575–541 Ma) are the oldest large, complex multicellular organisms, with frond and disc-shaped bodies of uncertain affinity; most disappeared before or during the Cambrian."
+    },
+    {
+      "q": "Geological Period Timeline",
+      "analogy": "A bookshelf ordered Cambrian → Ordovician → Silurian → Devonian → Carboniferous → Permian | Triassic → Jurassic → Cretaceous | Paleogene → Neogene → Quaternary, with mass-extinction bookends.",
+      "why": "The Phanerozoic is divided into Paleozoic, Mesozoic, and Cenozoic eras based on faunal turnover at the big five mass extinctions, giving a standard global sequence for placing fossils and events."
+    },
+    {
+      "q": "Circumstellar Disk and Earth's Formation",
+      "analogy": "Pizza dough spinning in the air — a flat disk of gas and dust around the young sun where dust bunnies clumped into pebbles, pebbles into planetesimals, and planetesimals collided into planets.",
+      "why": "The solar nebula collapsed into a rotating protoplanetary disk; dust grains accreted into planetesimals that merged into Earth ~4.54 Ga, with a Mars-sized impactor (Theia) later forming the Moon."
+    },
+    {
+      "q": "Synapomorphy",
+      "analogy": "Family-crest tattoo that every member of the clade inherited from one ancestor — shared + derived + unique to that group.",
+      "why": "The tattoo is derived (newly added), shared (all descendants carry it), and absent in outgroups, which is exactly what synapomorphies do on a cladogram."
+    },
+    {
+      "q": "Symplesiomorphy",
+      "analogy": "Having two eyes — every vertebrate in the room shares it, but it doesn't tell you who's cousins with whom because grandpa already had them.",
+      "why": "A symplesiomorphy is a shared ancestral trait inherited from a deeper ancestor; because it predates the group of interest, it gives no information about internal relationships."
+    },
+    {
+      "q": "Monophyletic group (clade)",
+      "analogy": "A single scoop of ice cream cut cleanly from the tub — an ancestor plus every one of its descendants, nobody left behind.",
+      "why": "A monophyletic group includes a common ancestor and ALL its descendants (e.g., Mammalia, Aves); this is the only kind of group cladistics accepts as 'natural.'"
+    },
+    {
+      "q": "Paraphyletic group",
+      "analogy": "A family reunion photo where you invited Grandpa and his descendants but deliberately excluded one grandkid who became a celebrity — 'reptiles' minus birds.",
+      "why": "A paraphyletic group includes the ancestor and some but not all descendants (e.g., 'Reptilia' excluding birds, 'fish' excluding tetrapods); cladists reject these because they're defined by absence of a derived trait."
+    },
+    {
+      "q": "Polyphyletic group",
+      "analogy": "A club called 'Flying Things' that lumps bats, birds, and butterflies together without their common ancestor — grouping by trait, not by heritage.",
+      "why": "A polyphyletic group is based on convergent traits and excludes the most recent common ancestor (e.g., 'warm-blooded animals,' 'homoiotherms'); these are invalid taxa under cladistics."
+    },
+    {
+      "q": "Homoplasy",
+      "analogy": "Two unrelated students arriving at the final exam wearing identical shirts — same look, no shared closet.",
+      "why": "Homoplasy is similarity not due to common ancestry — arising from convergence, parallelism, or reversal — and it misleads phylogenetic inference if not filtered out by parsimony or likelihood."
+    },
+    {
+      "q": "Convergent evolution",
+      "analogy": "Sharks, dolphins, and ichthyosaurs all sculpted into torpedoes by the same ocean — a fish, a mammal, and a reptile landing on the same streamlined shape.",
+      "why": "Unrelated lineages independently evolve similar traits because they face the same selective environment; the shared shape is analogous, not homologous, and arose multiple times."
+    },
+    {
+      "q": "Principle of Parsimony",
+      "analogy": "Occam's Razor in a courtroom — the verdict that requires the fewest unlikely coincidences wins.",
+      "why": "Given competing trees, the one requiring the fewest evolutionary changes (character-state transitions) is preferred, because independent origination of the same trait is less probable than single inheritance."
+    },
+    {
+      "q": "Exaptation",
+      "analogy": "A car stereo originally installed for the radio that turns out to be perfect for streaming podcasts — hardware co-opted for a new use it wasn't selected for.",
+      "why": "An exaptation is a trait that evolved for one function (or no function) and was later co-opted for a different role, like feathers (insulation/display) later enabling flight."
+    },
+    {
+      "q": "Tiktaalik",
+      "analogy": "The 'fishapod' — a fish with a neck, wrists, and flat crocodile-head that looks like it's about to climb out of the water to attend a press conference.",
+      "why": "Tiktaalik roseae (~375 Ma, Ellesmere Island) has a mosaic of fish traits (scales, fin rays) and tetrapod traits (mobile neck, wrist bones, robust ribs), documenting the fish-to-tetrapod transition."
+    },
+    {
+      "q": "Cladistics",
+      "analogy": "Genealogy done only by shared new mutations — you're siblings if and only if you both inherited Dad's weird chin, not if you both happen to have two arms.",
+      "why": "Cladistics groups organisms strictly by shared derived characters (synapomorphies) to recover monophyletic clades, rejecting groupings based on overall similarity or ancestral traits."
+    },
+    {
+      "q": "Tree components",
+      "analogy": "A subway map — stations (nodes) where lines split, tracks (branches) connecting them, terminals (tips/taxa) at the ends, and a root where the whole system originates.",
+      "why": "Nodes represent common ancestors (speciation events), branches show evolutionary lineages, tips are the sampled taxa, and the root orients the direction of time in the phylogeny."
+    },
+    {
+      "q": "Homology",
+      "analogy": "The same Lego baseplate reused in a house, a spaceship, and a boat — modified for different jobs but built on the shared original piece.",
+      "why": "Homologous structures share the same evolutionary origin (same ancestral blueprint) even if modified for different functions — like the one-bone-two-bones-wrist pattern in bat wings, whale flippers, and human arms."
+    },
+    {
+      "q": "Molecular phylogenetics",
+      "analogy": "Reconstructing family trees from 23andMe instead of family photos — using the DNA text itself as the character matrix.",
+      "why": "Molecular phylogenetics uses DNA, RNA, or protein sequence differences as characters; abundant sites and known mutation models make it especially powerful for relationships among living organisms."
+    },
+    {
+      "q": "Outgroup",
+      "analogy": "The neighbor you invite to your family reunion so you can tell which features are 'normal' vs. which ones are unique to your relatives.",
+      "why": "The outgroup is a taxon known to have diverged before the ingroup; comparing it polarizes character states (ancestral vs. derived) and provides the root for the tree."
+    },
+    {
+      "q": "How do synapomorphies build phylogenetic trees?",
+      "analogy": "Nested clothing tags — whoever shares the 'innermost' brand label is most closely related; the more deeply nested tags you share, the tighter your clade.",
+      "why": "Each synapomorphy diagnoses a monophyletic clade at the node where it arose; nested sets of synapomorphies produce nested clades, and the pattern of shared derived traits determines tree topology."
+    },
+    {
+      "q": "Why are paraphyletic groups problematic?",
+      "analogy": "A 'non-college' friend group where someone becomes problematic the instant they enroll — membership defined by absence, not by shared heritage.",
+      "why": "Paraphyletic groups are defined by the absence of a derived trait rather than shared ancestry, they don't reflect a real evolutionary unit, and they obscure relationships (e.g., grouping crocs with lizards excludes their closer relatives, birds)."
+    },
+    {
+      "q": "Convergence vs. homology — how to distinguish?",
+      "analogy": "Two novels that share a plot twist: if they share the same rare typos and sentence structure (deep detail), they had the same author; if only the plot matches, two authors stumbled on the same idea.",
+      "why": "Homology shows detailed structural/developmental/genetic correspondence and congruence with independent characters on the tree; convergence agrees only at a superficial functional level and conflicts with other data."
+    },
+    {
+      "q": "Swim bladder → lungs exaptation",
+      "analogy": "An old pool-float repurposed as a breathing tube — same gas-filled sac, now hooked up to the airway.",
+      "why": "Lungs evolved first in bony fishes as gas-exchange pouches off the gut; in many ray-finned fish they were co-opted into swim bladders for buoyancy, while in tetrapod ancestors they were retained and elaborated for air breathing."
+    },
+    {
+      "q": "What is a transitional fossil?",
+      "analogy": "A photo of your middle-school self — half kid, half teenager — proving the change actually happened gradually.",
+      "why": "A transitional fossil exhibits a mosaic of ancestral and derived traits linking two groups (Archaeopteryx between theropods and birds; Tiktaalik between fish and tetrapods), documenting large-scale evolutionary transitions."
+    },
+    {
+      "q": "Phylogeny and classification",
+      "analogy": "Building a filing cabinet where every folder must be a complete branch of the family tree, not a set of unrelated documents stapled together.",
+      "why": "Modern classification (phylogenetic systematics) requires named taxa to be monophyletic, so the taxonomic hierarchy mirrors actual evolutionary history rather than arbitrary similarity."
+    },
+    {
+      "q": "Convergent evolution examples",
+      "analogy": "Wings on bats, birds, pterosaurs, and insects — four independent engineering firms all inventing the same airfoil.",
+      "why": "Classic convergences include streamlined body in sharks/dolphins/ichthyosaurs, camera eyes in vertebrates and cephalopods, succulence in cacti and euphorbs, and echolocation in bats and toothed whales — same selective pressure, different ancestry."
+    },
+    {
+      "q": "Molecular clock",
+      "analogy": "A steady-ticking wristwatch of random mutations — the number of ticks (substitutions) since two lineages parted roughly equals the time since they split.",
+      "why": "Neutral mutations accumulate at an approximately constant rate per lineage, so sequence divergence calibrated with fossils estimates divergence times for nodes lacking direct fossil evidence."
+    },
+    {
+      "q": "Bootstrap support",
+      "analogy": "Re-shuffling your deck of evidence cards 1000 times and seeing how often the same winning hand (clade) reappears — if it shows up 95% of the time, you trust it.",
+      "why": "Bootstrapping resamples character columns with replacement and rebuilds the tree each time; the percentage of replicates recovering a given clade is its support value, indicating robustness to sampling."
+    },
+    {
+      "q": "Morphological vs. molecular phylogenetics — conflicts",
+      "analogy": "Two detectives disagreeing: the morphologist reads the facial features, the geneticist reads the DNA swab, and sometimes makeup (convergence) fools one of them.",
+      "why": "Morphology can be misled by convergence and limited character numbers but works for fossils; molecules give huge datasets but only for living taxa and can be misled by saturation and rate variation — total-evidence analyses combine both."
+    },
+    {
+      "q": "Tree topology vs. branch length",
+      "analogy": "A subway map shows topology (which stops connect); a subway schedule adds the branch lengths (how many minutes between stops).",
+      "why": "Topology is the branching pattern (who's related to whom); branch length encodes either amount of evolutionary change (substitutions/site) or elapsed time, depending on whether the tree is a phylogram or chronogram."
+    },
+    {
+      "q": "Maximum likelihood phylogenetics",
+      "analogy": "Picking the tree under which the observed DNA sequences would be the least surprising outcome, given a specific mutation model.",
+      "why": "ML evaluates candidate trees by computing the probability of the data under an explicit substitution model (e.g., GTR+Γ) and selects the tree+parameters that maximize that probability, outperforming parsimony when rates vary."
+    },
+    {
+      "q": "Feathers as exaptation",
+      "analogy": "Dinosaur down jacket that was great for warmth and courtship displays long before anyone thought to jump off a cliff in it.",
+      "why": "Feathers originated in non-avian theropod dinosaurs for insulation and display; asymmetric flight feathers and powered flight evolved later, making flight an exaptation from thermoregulatory/signaling feathers."
+    },
+    {
+      "q": "Rooting a tree",
+      "analogy": "Hanging a mobile from a hook — the hook (root) tells you which way is 'up' (older) and 'down' (younger) along every branch.",
+      "why": "Rooting orients the tree in time; methods include outgroup rooting (most common), midpoint rooting (assumes clock), or molecular-clock rooting — without it, the tree is only a branching pattern, not a history."
+    },
+    {
+      "q": "Character state matrix",
+      "analogy": "A spreadsheet where rows are species, columns are traits, and each cell is a 0 or 1 saying 'has it' or 'doesn't have it.'",
+      "why": "The data matrix encodes character states for each taxon; it is the raw input from which parsimony, ML, or Bayesian methods reconstruct the phylogeny."
+    },
+    {
+      "q": "Whale evolution — exaptation example",
+      "analogy": "Pakicetus → Ambulocetus → Rodhocetus → Dorudon → modern whales — a wolf-sized land mammal whose nostrils slide to the top of its head and whose hind legs shrink into pelvis stubs.",
+      "why": "The artiodactyl ancestor's terrestrial limbs, tail, and lungs were exapted for aquatic life: forelimbs became flippers, tails became flukes, nostrils migrated to blowholes, and hindlimbs were lost — documented in a dense fossil sequence."
+    },
+    {
+      "q": "Biological Species Concept (BSC)",
+      "analogy": "A gated mating club — members are those who can (and do) interbreed and produce fertile offspring with each other, non-members can't get past the bouncer.",
+      "why": "Mayr's BSC defines species as groups of actually or potentially interbreeding populations reproductively isolated from other such groups; reproductive isolation, not similarity, is the criterion."
+    },
+    {
+      "q": "Morphospecies Concept",
+      "analogy": "Sorting socks by how they look — same shape and pattern go in the same pile, regardless of who wore them.",
+      "why": "Morphospecies are delimited by consistent morphological differences; it is the default for fossils and for organisms whose mating behavior is unknown, but it can miss cryptic species and oversplit variable ones."
+    },
+    {
+      "q": "Phylogenetic Species Concept (PSC)",
+      "analogy": "The smallest, single-twig branch on the family tree that has its own unique tip-signature mutation — cut the tree at every diagnostic branch and each leaf is a species.",
+      "why": "Under the PSC, a species is the smallest monophyletic group diagnosable by shared derived characters; it applies to asexuals and fossils but tends to oversplit populations with local apomorphies."
+    },
+    {
+      "q": "General Lineage Species Concept",
+      "analogy": "A river delta where distributaries have clearly separated — multiple criteria (interbreeding, ecology, diagnosability) are just different ways of noticing the same diverging channel.",
+      "why": "De Queiroz unifies species concepts by defining species as separately evolving metapopulation lineages; different concepts (BSC, PSC, ecological) are just operational criteria for detecting lineage separation at different stages."
+    },
+    {
+      "q": "Three-step speciation",
+      "analogy": "Divorce proceedings — (1) the couple is physically separated, (2) they develop different habits independently, (3) they can no longer stand/breed with each other if reunited.",
+      "why": "Speciation typically requires (1) isolation of populations (geographic or ecological), (2) independent divergence via selection/drift, and (3) evolution of reproductive isolation, making the split permanent."
+    },
+    {
+      "q": "Prezygotic barriers (pre-mating)",
+      "analogy": "The bouncers at the door — ecological, temporal, behavioral, or mechanical filters stopping mating from even starting.",
+      "why": "Pre-mating prezygotic barriers (habitat, temporal, behavioral, mechanical isolation) prevent individuals of different species from encountering or successfully copulating, blocking gamete union altogether."
+    },
+    {
+      "q": "Prezygotic barriers (post-mating)",
+      "analogy": "The gametes show up to the wedding but the rings don't fit — sperm and egg meet but fusion fails at the molecular level.",
+      "why": "Post-mating prezygotic isolation (gametic incompatibility, conspecific sperm precedence) occurs after copulation but before fertilization, as when sea-urchin bindin proteins fail to recognize the wrong species' egg receptors."
+    },
+    {
+      "q": "Postzygotic barriers",
+      "analogy": "A mule — the wedding worked, the baby was born, but the baby has broken factory software and can't produce grandkids.",
+      "why": "Postzygotic barriers reduce hybrid viability or fertility (hybrid inviability, sterility like mules, or F2 breakdown), usually from Dobzhansky–Muller genetic incompatibilities between diverged parental genomes."
+    },
+    {
+      "q": "Allopatric speciation",
+      "analogy": "Noah's Ark in reverse — a river or mountain range splits one population into two, and centuries of separate evolution leave them unable to interbreed when the barrier drops.",
+      "why": "A geographic barrier prevents gene flow; the two isolated populations accumulate independent genetic and ecological differences by selection and drift until reproductive isolation evolves — the most common speciation mode."
+    },
+    {
+      "q": "Sympatric speciation",
+      "analogy": "A high school where the jocks and the nerds stop dating each other despite sharing the same hallway — divergence inside a single geographic space.",
+      "why": "Sympatric speciation occurs without geographic isolation via disruptive selection on ecology or assortative mating; examples include host-race formation in Rhagoletis and polyploid speciation in plants."
+    },
+    {
+      "q": "Reinforcement",
+      "analogy": "Doubling down on locks after a bad relationship — selection strengthens prezygotic barriers because hybrid offspring keep turning out poorly.",
+      "why": "When two populations that have diverged in allopatry come into secondary contact and produce unfit hybrids, selection favors individuals who avoid heterospecific mating, strengthening prezygotic isolation and completing speciation."
+    },
+    {
+      "q": "Rhagoletis pomonella",
+      "analogy": "The apple-maggot fly switching cafeterias — some flies prefer hawthorn fruit (their native menu), others the newly introduced apple, and they mate on their preferred fruit.",
+      "why": "Rhagoletis is the textbook example of sympatric host-race speciation: host preference + mating on host + host-dependent timing produce assortative mating and divergence between apple and hawthorn races since ~1860s."
+    },
+    {
+      "q": "Peripatric speciation",
+      "analogy": "A tiny lifeboat drifting away from the main cruise ship — a small founder group on the edge of the range rapidly becomes a new species via drift and founder effects.",
+      "why": "Peripatric speciation is a special case of allopatric speciation where a small peripheral population is isolated; strong genetic drift and founder effects accelerate divergence, as in island colonizations."
+    },
+    {
+      "q": "Primary mechanisms of reproductive isolation?",
+      "analogy": "A nightclub with progressively tighter security: different bars across town (habitat), different nights (temporal), different dress codes (behavioral), different key shapes (mechanical), wrong password at the door (gametic), dead on the dance floor (inviability), or sterile (mule).",
+      "why": "Reproductive isolation is the sum of prezygotic (habitat, temporal, behavioral, mechanical, gametic) and postzygotic (hybrid inviability, sterility, breakdown) barriers that prevent gene flow between species."
+    },
+    {
+      "q": "Why can't the BSC apply to fossils?",
+      "analogy": "You can't set up a blind date between two skeletons — interbreeding potential isn't preserved in stone.",
+      "why": "The BSC depends on observing (or inferring) successful fertile interbreeding; fossils preserve only morphology, so paleontologists use morphospecies or lineage-based concepts instead."
+    },
+    {
+      "q": "Rhagoletis — mechanism of sympatric speciation",
+      "analogy": "Two food trucks parked next to each other — each fly eats, mates, and lays eggs on its preferred truck, so romance happens on the sandwich, not in the open street.",
+      "why": "Host-fidelity + mating-on-host causes assortative mating; host-specific emergence timing adds temporal isolation; disruptive selection on host-preference alleles completes sympatric divergence without any geographic barrier."
+    },
+    {
+      "q": "Tempo of evolution: gradualism vs. punctuated equilibrium",
+      "analogy": "Escalator vs. elevator — gradualism rises smoothly over millions of years; punctuated equilibrium parks on one floor for ages, then jumps abruptly to the next.",
+      "why": "Phyletic gradualism predicts slow, continuous morphological change across fossil sequences; Eldredge & Gould's punctuated equilibrium predicts long stasis interrupted by rapid speciation events, producing 'jumps' at bedding planes."
+    },
+    {
+      "q": "Character displacement",
+      "analogy": "Two roommates buying different-sized microwaves because they kept fighting over the same one — sympatric species exaggerate trait differences to avoid competition.",
+      "why": "When two species overlap in range, selection against competition (or hybridization) causes their traits (e.g., beak size in Darwin's finches on Daphne Major) to diverge more than in allopatric populations."
+    },
+    {
+      "q": "Hybrid zone",
+      "analogy": "A linguistic border town where two dialects blur — narrow ribbon of interbreeding between two otherwise distinct species.",
+      "why": "A hybrid zone is a geographic region where divergent populations meet, mate, and produce hybrids; its width and stability reveal how strong postzygotic selection is against hybrids, and whether the species will fuse, reinforce, or persist as a tension zone."
+    },
+    {
+      "q": "Polyploidy — instant sympatric speciation",
+      "analogy": "Photocopying the whole chromosome library twice — the duplicate-genome offspring can only mate with other duplicates, reproductively isolated in a single generation.",
+      "why": "Autopolyploidy (same-species genome doubling) or allopolyploidy (hybrid + doubling, e.g., wheat, cotton, Tragopogon) instantly produces offspring that can't cross with diploid parents due to unbalanced meiosis — speciation in one mitosis."
+    },
+    {
+      "q": "Reproductive isolation continuum",
+      "analogy": "A dimmer switch, not an on/off — isolation builds gradually from 0% to 100% as barriers stack up.",
+      "why": "Reproductive isolation is quantitative and cumulative: populations pass through stages (partial, strong, complete) as prezygotic and postzygotic barriers accumulate, so 'species' often sit somewhere on the continuum rather than at a binary endpoint."
+    },
+    {
+      "q": "Temporal isolation example",
+      "analogy": "Two bakeries on the same street — one opens only in the morning, the other only at night — customers (gametes) never cross paths.",
+      "why": "Temporal isolation occurs when species breed at different times: 13- and 17-year periodical cicadas emerge in non-overlapping years; corals on the Great Barrier Reef spawn on different nights; spring vs. fall Chinook salmon runs."
+    },
+    {
+      "q": "Gametic incompatibility mechanism",
+      "analogy": "Wrong USB plug shape — the sperm's connector doesn't match the egg's port, so no data transfer.",
+      "why": "Gametic incompatibility arises when species-specific sperm-surface proteins (e.g., bindin in sea urchins, lysin in abalone) fail to bind their matching egg-coat receptors; rapid coevolution of these proteins drives post-mating prezygotic isolation."
+    },
+    {
+      "q": "Parapatric speciation",
+      "analogy": "Two neighborhoods sharing a fence line — no barrier, but a sharp environmental gradient (soil, temperature) across a narrow contact zone drives divergence even with some gene flow.",
+      "why": "Parapatric speciation occurs in adjacent populations along an environmental cline; divergent selection strong enough to overcome limited gene flow produces reproductive isolation across the boundary, as in grasses on mine tailings."
+    },
+    {
+      "q": "Biogeography",
+      "analogy": "A world map color-coded by which species lives where — the atlas of life's addresses.",
+      "why": "Biogeography studies the geographic distribution of taxa over space and time, asking why species live where they do by integrating ecology, geology, dispersal history, and phylogeny."
+    },
+    {
+      "q": "Dispersal",
+      "analogy": "A coconut drifting across the ocean or a spider ballooning on silk — the organism itself moves across a pre-existing barrier to a new area.",
+      "why": "In dispersal, a lineage actively or passively crosses a barrier (ocean, mountain) to colonize a new region; the barrier pre-existed, and the organism moved — explaining oceanic island biotas."
+    },
+    {
+      "q": "Vicariance",
+      "analogy": "Pangaea splitting a single continent into two — the organisms stayed put, the landmass ripped apart underneath them.",
+      "why": "In vicariance, a geographic barrier arises within an ancestral range (continental drift, mountain uplift, river formation) and splits one population into two; the lineage didn't move, the Earth did."
+    },
+    {
+      "q": "Phylogeography",
+      "analogy": "Overlaying the family tree on Google Maps — each branch pinned to where its populations live, so you can read history off the map.",
+      "why": "Phylogeography uses intraspecific gene genealogies (often mtDNA) mapped onto geography to infer historical demography: refugia, colonization routes, population splits, and recent vicariance vs. dispersal events."
+    },
+    {
+      "q": "Area phylogeny",
+      "analogy": "A family tree where tip labels are place names instead of species names — Madagascar, Australia, South America — so you can read the geological history directly.",
+      "why": "An area cladogram replaces taxa with their geographic regions; congruence across many independent clades indicates a shared vicariance history (e.g., Gondwanan breakup) while incongruence implies dispersal."
+    },
+    {
+      "q": "Adaptive radiation",
+      "analogy": "Darwin's finches — one ancestral finch lands on the Galápagos and its descendants fan out into ground, tree, cactus, and warbler finches, each with a custom beak for a different job.",
+      "why": "Adaptive radiation is rapid diversification of a single lineage into many ecologically distinct species, driven by ecological opportunity (open niches, new habitat, extinction-emptied landscapes) plus often a key innovation."
+    },
+    {
+      "q": "Key innovation",
+      "analogy": "The iPhone moment for a clade — one new trait (jaws, flowers, wings, powered flight) unlocks a whole new market of niches previously out of reach.",
+      "why": "A key innovation is an evolutionary novelty that opens access to new resources or habitats, triggering adaptive radiation — e.g., pharyngeal jaws in cichlids, nectar spurs in columbines, feathers-plus-flight in birds."
+    },
+    {
+      "q": "Standing Diversity equation",
+      "analogy": "A bathtub where speciation is the tap filling it and extinction is the drain emptying it — the water level (standing diversity) depends on the balance.",
+      "why": "Standing diversity at any time equals the cumulative difference between origination (speciation) rate and extinction rate; diversity rises when speciation > extinction, declines during mass extinctions, and rebounds during radiations."
+    },
+    {
+      "q": "Island Biogeography Theory",
+      "analogy": "MacArthur and Wilson's balance beam — on one side immigration (higher for big, near islands), on the other extinction (higher for small islands); species richness settles where they balance.",
+      "why": "The equilibrium number of species on an island is set by the intersection of immigration (decreases with distance from mainland) and extinction (decreases with island area) curves, explaining why big, near islands hold more species than small, remote ones."
+    }
+  ]
+}

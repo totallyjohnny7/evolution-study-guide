@@ -1,0 +1,469 @@
+{
+  "cards": [
+    {
+      "q": "Biogeography — definition",
+      "analogy": "A detective mapping crime scenes across a city — where species live tells you their history, not just their biology.",
+      "why": "Biogeography is the study of species distributions in space and time; the spatial pattern is the evidence, and evolutionary/geological history is the cause."
+    },
+    {
+      "q": "Continental drift — Pangaea timeline",
+      "analogy": "A giant puzzle that started whole ~335 Mya, split into two halves (Laurasia north, Gondwana south) around 200 Mya, and finished breaking into today's seven pieces by ~65 Mya.",
+      "why": "The puzzle metaphor captures the sequential fragmentation of Pangaea and explains why southern-hemisphere lineages (marsupials, ratites) share ancestry despite ocean gaps."
+    },
+    {
+      "q": "Vicariance biogeography — principle",
+      "analogy": "A river cuts through a farmer's field, splitting one herd of cattle into two separate herds without any animal moving.",
+      "why": "In vicariance, a geographic barrier arises and divides a single ancestral range; the organisms stay put while the landscape splits them."
+    },
+    {
+      "q": "Dispersal biogeography — principle",
+      "analogy": "A coconut floating across the ocean to colonize a new island while the continents stay fixed.",
+      "why": "In dispersal, barriers are stable and organisms actively cross them to found new populations, the opposite of vicariance."
+    },
+    {
+      "q": "Island biogeography — MacArthur & Wilson equilibrium",
+      "analogy": "A bathtub where water flows in (immigration) and drains out (extinction) — the water level (species richness) stabilizes where the two rates cross.",
+      "why": "Species number on an island is a dynamic equilibrium between immigration and extinction; identity turns over, but total count stays roughly constant."
+    },
+    {
+      "q": "Island biogeography — distance + area effects",
+      "analogy": "A food truck parked near a stadium (near + large) draws more and keeps more customers than one far out in a tiny parking lot (far + small).",
+      "why": "Near islands get more immigrants (distance effect) and large islands have lower extinction (area effect), so near-large islands hold the most species."
+    },
+    {
+      "q": "Adaptive radiation — what, conditions, examples",
+      "analogy": "A Swiss Army knife unfolding — one ancestor rapidly diversifies into many specialized tools when new ecological opportunity opens.",
+      "why": "Radiations happen when a lineage encounters empty niches (new habitat, key innovation, mass extinction); Darwin's finches, Hawaiian silverswords, and cichlids are the textbook cases."
+    },
+    {
+      "q": "Wallace Line — what, significance",
+      "analogy": "An invisible fence between Bali and Lombok — tigers and monkeys to the west, cockatoos and marsupials to the east, even though the islands are miles apart.",
+      "why": "The deep-water strait kept Asian and Australasian faunas separate despite near proximity, showing that geological history (ocean depth during ice ages) trumps present-day distance."
+    },
+    {
+      "q": "Species-area relationship (SAR)",
+      "analogy": "Bigger pizzas feed more people — double the area and you get roughly a predictable bump in species, following S = cA^z.",
+      "why": "Species richness scales as a power function of area because larger patches hold more habitats and larger populations; z typically ranges 0.2–0.35 for islands."
+    },
+    {
+      "q": "Species-area relationship — habitat fragmentation consequences",
+      "analogy": "Breaking one large pizza into ten slivers — total crust area shrinks, and the number of species each sliver can feed plummets.",
+      "why": "Fragmentation reduces effective area, and by the SAR this causes extinction debt — many species will be lost even after habitat loss stops."
+    },
+    {
+      "q": "Metapopulation dynamics",
+      "analogy": "A network of small towns connected by highways — individual towns go extinct (ghost towns) and get recolonized, but the regional population persists as long as dispersal continues.",
+      "why": "A metapopulation is a set of local populations linked by migration; regional persistence depends on the balance of local extinction and recolonization, not any one patch."
+    },
+    {
+      "q": "Conservation genetics — 50/500 rule",
+      "analogy": "A retirement fund rule of thumb — 50 is enough to pay this month's bills (avoid inbreeding), 500 is enough to stay solvent long-term (retain evolutionary potential).",
+      "why": "Ne = 50 prevents short-term inbreeding depression; Ne = 500 preserves enough additive genetic variance to respond to selection over evolutionary timescales."
+    },
+    {
+      "q": "Inbreeding depression — mechanism",
+      "analogy": "A family secret becoming everyone's problem — when close relatives mate, recessive disease alleles that were hidden in heterozygotes get exposed as homozygotes.",
+      "why": "Inbreeding increases homozygosity, unmasking deleterious recessives and reducing heterozygote advantage, so fitness drops in offspring of close kin."
+    },
+    {
+      "q": "Area phylogeny — what it is",
+      "analogy": "A family tree where the tips are places, not species — each branch represents the splitting of geographic regions inferred from the branching of their endemic lineages.",
+      "why": "By mapping phylogenies onto geography, an area cladogram reveals the sequence of vicariance events that shaped a biota."
+    },
+    {
+      "q": "Phylogeography — definition",
+      "analogy": "A genealogy plotted on a map — tracing gene lineages across landscapes to see how populations spread, split, and came back together.",
+      "why": "Phylogeography links intraspecific gene trees to geographic distribution, revealing recent history (refugia, expansions, barriers) that deeper phylogenies miss."
+    },
+    {
+      "q": "Gondwana vs. Laurasia — what each contained",
+      "analogy": "A southern team jersey (Gondwana = South America, Africa, Antarctica, Australia, India, Madagascar) vs. a northern team jersey (Laurasia = North America, Europe, Asia).",
+      "why": "Pangaea split along an east-west seam into these two supercontinents; today's southern biotas (marsupials, ratites, southern beeches) share Gondwanan ancestry, northern biotas share Laurasian ancestry."
+    },
+    {
+      "q": "Humans as selective force — 4 key examples",
+      "analogy": "A plant breeder who never planted a seed — trophy hunting (bighorn horns), poaching (elephant tusks), fishing (cod size), and antibiotics all act as unintended artificial selection.",
+      "why": "Whenever humans kill non-randomly based on a heritable trait, we impose strong directional selection — the same mechanism as breeding, just with death instead of breeding choice."
+    },
+    {
+      "q": "Trophy hunting evolution — bighorn sheep example",
+      "analogy": "A reverse beauty pageant where the winners get shot — Ram Mountain hunters removed rams with the biggest horns for 30 years, and average horn size shrank ~20%.",
+      "why": "Selective removal of large-horned individuals before they reproduced favored small-horned survivors; horn size is heritable, so the population evolved smaller horns."
+    },
+    {
+      "q": "Tusklessness in African elephants",
+      "analogy": "Gorongosa elephants that lost their dental jewelry during the civil war — poachers killed tusked elephants for ivory, so tuskless females (rare before, up to 50% after) were the survivors who reproduced.",
+      "why": "Ivory poaching was directional selection against the tusk allele; because tusklessness is X-linked dominant and lethal in males, female tusklessness rose rapidly in one generation."
+    },
+    {
+      "q": "Antibiotic resistance — how it evolves",
+      "analogy": "Bacteria running a natural-selection gauntlet — antibiotics don't CAUSE resistance mutations, they just kill off everyone who didn't already happen to have them. Survivors reproduce, population evolves.",
+      "why": "The gauntlet framing corrects the common misconception that the drug 'teaches' bacteria; selection acts on pre-existing variation just like Darwin's finches."
+    },
+    {
+      "q": "4 mechanisms of antibiotic resistance",
+      "analogy": "Four ways a burglar defeats a lock — pump it out (efflux), chew it up (enzymatic degradation, e.g., beta-lactamase), change the lock (target modification), or never let it in (reduced permeability).",
+      "why": "These four strategies — efflux, degradation, target alteration, and permeability — cover nearly all molecular resistance phenotypes bacteria deploy against antibiotics."
+    },
+    {
+      "q": "Atlantic cod — fishing-driven evolution",
+      "analogy": "A size-selective vacuum cleaner that sucks up every big fish — after decades of net fishing, cod mature earlier at smaller body sizes.",
+      "why": "Fishing gear kills large, late-maturing fish before they spawn, favoring genotypes that mature early and small; this heritable shift is why cod stocks don't recover even after moratoriums."
+    },
+    {
+      "q": "Industrial melanism — peppered moth",
+      "analogy": "Lichen-covered bark turned into coal-black soot — the typica (pale) moth that once hid on clean trees became conspicuous, while the carbonaria (dark) morph now vanished against sooty bark.",
+      "why": "Soot from the Industrial Revolution killed lichens and darkened trees, flipping which morph bird predators could see; allele frequency tracked pollution levels up and back down."
+    },
+    {
+      "q": "Habitat fragmentation + genetic consequences",
+      "analogy": "A shattered mirror — each shard holds a smaller, more isolated reflection, and over time the pieces drift apart and lose their shine (diversity).",
+      "why": "Fragmentation reduces Ne per patch, increasing drift and inbreeding while reducing gene flow; the result is lost heterozygosity and divergence among patches."
+    },
+    {
+      "q": "Selective breeding vs. natural selection",
+      "analogy": "A dog show judge picking winners by eye vs. a marathon where only finishers reproduce — both weed out variation, but the judge has a goal and nature just has survival.",
+      "why": "Artificial selection has a human-chosen target and is usually faster; natural selection is goalless and filters whatever affects survival/reproduction in the current environment. Mechanism is identical."
+    },
+    {
+      "q": "Why fishing-driven evolution is real evolution, not plasticity",
+      "analogy": "Common-garden experiments with cod — raise harvested and unharvested lineages in identical tanks and the harvested fish STILL mature early and small.",
+      "why": "Because the trait persists in a standardized environment, the change must be heritable (genetic), not a flexible response to conditions — that is the textbook definition of evolution."
+    },
+    {
+      "q": "Why Linnaeus classified humans as primates",
+      "analogy": "A cataloger who grouped items by anatomy without reading the labels — forward-facing eyes, grasping hands with nails, large brain-to-body ratio, and clavicle put Homo in with the apes long before evolution was accepted.",
+      "why": "Linnaeus used shared morphological features (synapomorphies in hindsight) to place humans among primates in 1735, anticipating Darwin by a century based on pure anatomy."
+    },
+    {
+      "q": "Molecular evidence of human-chimp kinship",
+      "analogy": "Two textbooks that share 98–99% of their sentences, including the typos — shared SINEs, pseudogenes, and chromosome 2 fusion (two ape chromosomes fused into one in humans) are copy errors no independent author would produce.",
+      "why": "Shared derived molecular 'errors' cannot be explained by common design; they require common ancestry, placing humans and chimps as sister taxa ~6–7 Mya."
+    },
+    {
+      "q": "Did humans evolve FROM chimpanzees? Why not?",
+      "analogy": "You and your cousin share grandparents, not each other — humans and chimps both descend from a common ancestor that was neither human nor modern chimp.",
+      "why": "Both lineages have been evolving independently for ~6–7 My; modern chimps are our sister group, not our ancestors, and they have their own derived traits we lack."
+    },
+    {
+      "q": "Sahelanthropus tchadensis — key features",
+      "analogy": "The earliest candidate on the hominin resume (~7 Mya, Chad) — chimp-sized brain (~350 cc) but a foramen magnum centered under the skull hinting at bipedalism.",
+      "why": "Near the human-chimp split, Sahelanthropus shows the first possible bipedal signal (foramen position) with otherwise ape-like anatomy — a transitional mosaic."
+    },
+    {
+      "q": "Ardipithecus ramidus — key features",
+      "analogy": "'Ardi' — a 4.4 Mya woodland walker with a grasping big toe for climbing AND a bipedal pelvis, like wearing hiking boots on one foot and climbing shoes on the other.",
+      "why": "Ardi shows bipedalism evolved in a forested (not savanna) setting and coexisted with arboreal adaptations, overturning the classic savanna hypothesis."
+    },
+    {
+      "q": "Australopithecus — key facts",
+      "analogy": "'Lucy' (A. afarensis, 3.2 Mya) — a fully bipedal ape from ~3–4 feet tall with a chimp-sized brain (~400 cc) and the Laetoli footprints proving upright walking.",
+      "why": "Australopithecines had committed to bipedalism long before brain expansion, directly contradicting the myth that big brains came first."
+    },
+    {
+      "q": "Homo erectus — key facts",
+      "analogy": "The first global backpacker (~1.9 Mya–110 kya) — modern-proportioned body, brain ~900 cc, Acheulean hand axes, controlled fire, first hominin out of Africa.",
+      "why": "H. erectus is the first hominin with human-like body proportions and the first to leave Africa; long persistence and broad range mark it as a major success story."
+    },
+    {
+      "q": "Homo neanderthalensis — key facts",
+      "analogy": "Ice-age cousins (~400–40 kya, Europe/W. Asia) — stockier, cold-adapted, BIGGER brain (~1600 cc) than us, Mousterian tools, buried their dead, interbred with sapiens.",
+      "why": "Neanderthals were not 'dumb brutes' — bigger-brained and culturally sophisticated, they contributed ~1–4% of non-African modern human DNA before going extinct."
+    },
+    {
+      "q": "Homo sapiens — origin + timeline",
+      "analogy": "A family that left home late — anatomically modern humans arose in Africa ~300 kya (Jebel Irhoud), behaviorally modern ~70–50 kya, expanded globally after ~60 kya.",
+      "why": "The pan-African origin with gradual behavioral modernity (beads, art, projectile weapons) replaced the old 'Eve' replacement model with a more complex structured-population picture."
+    },
+    {
+      "q": "Bipedalism — when did it evolve?",
+      "analogy": "Long before the brain got big — Sahelanthropus (7 Mya), Ardipithecus (4.4 Mya), and Lucy (3.2 Mya) were all bipedal with chimp-sized brains.",
+      "why": "The fossil record places bipedalism near the base of the hominin lineage, millions of years before brain enlargement in Homo — order matters for the exam."
+    },
+    {
+      "q": "4 anatomical markers of bipedalism",
+      "analogy": "A bipedal checklist — foramen magnum underneath the skull, S-shaped spine, short/wide pelvis (basin-shaped), valgus knee (angled inward), non-grasping big toe.",
+      "why": "Each feature redirects weight down a vertical column: skull balances on top, spine absorbs shock, pelvis supports viscera, knee centers mass, foot forms a propulsive lever."
+    },
+    {
+      "q": "Why did bipedalism evolve? 2 main hypotheses",
+      "analogy": "Hands-free shopping (carrying hypothesis — free hands for food/infants) vs. staying cool (thermoregulation — less solar area, catch the breeze on savanna).",
+      "why": "Both hypotheses identify selective advantages of upright posture; neither excludes the other, and the forested Ardi discovery complicated the pure savanna thermoregulation story."
+    },
+    {
+      "q": "Bipedalism costs — maladaptations",
+      "analogy": "The price of standing upright — back pain, knee problems, hernias, difficult childbirth (obstetric dilemma), and varicose veins.",
+      "why": "Selection favored bipedal benefits despite structural compromises; these ailments are the evolutionary tax on a body plan retrofitted from a quadruped ancestor."
+    },
+    {
+      "q": "Hominin tool traditions in chronological order",
+      "analogy": "A tech upgrade timeline — Oldowan (flakes, 2.6 Mya, Homo habilis) → Acheulean (hand axes, 1.7 Mya, H. erectus) → Mousterian (prepared cores, 300 kya, Neanderthals) → Upper Paleolithic (blades/art, 50 kya, H. sapiens).",
+      "why": "Each industry reflects both cognitive and cultural advances; the progression maps onto expanding brain size and increasing behavioral complexity."
+    },
+    {
+      "q": "FOXP2 gene — what it is, why it matters",
+      "analogy": "A transcription-factor conductor — it doesn't play the language symphony itself, but coordinates hundreds of downstream genes needed for fine motor control of speech.",
+      "why": "FOXP2 mutations (KE family) cause severe speech apraxia; humans have two derived amino acid changes vs. chimps, but FOXP2 is a regulator, not 'the' language gene."
+    },
+    {
+      "q": "Out of Africa hypothesis — evidence",
+      "analogy": "A genetic GPS pointing back to Africa — highest genetic diversity in Africa, all non-African lineages nested within African diversity, serial founder effects with distance from Africa.",
+      "why": "mtDNA, Y-chromosome, and genome-wide data all converge on an African origin with expansion ~60 kya; diversity declines with distance because each migration was a bottleneck."
+    },
+    {
+      "q": "Neanderthal DNA in modern humans",
+      "analogy": "A few souvenirs from a fling — non-Africans carry ~1–4% Neanderthal DNA from interbreeding ~50–60 kya in the Middle East.",
+      "why": "Introgression was limited but real; some introgressed alleles (immune HLA, skin/hair) were adaptive, others were selected against, and sub-Saharan Africans have near-zero Neanderthal ancestry."
+    },
+    {
+      "q": "Denisovans — who, where, legacy",
+      "analogy": "Ghost cousins known mostly from a pinky bone and a tooth from Denisova Cave (Siberia) — genome reveals a distinct archaic human that interbred with sapiens in Asia/Oceania.",
+      "why": "Melanesians/Papuans carry up to 4–6% Denisovan DNA, including the EPAS1 altitude allele passed to Tibetans — a classic case of adaptive introgression from a ghost lineage."
+    },
+    {
+      "q": "Adaptive introgression — definition + examples",
+      "analogy": "Borrowing a neighbor's already-tested genetic toolkit — EPAS1 from Denisovans to Tibetans for high-altitude oxygen, HLA variants from Neanderthals to non-Africans for immunity.",
+      "why": "Introgression = gene flow between lineages via hybridization; when the introduced allele is favored by selection, it can sweep to high frequency in the recipient population."
+    },
+    {
+      "q": "Anatomically vs. behaviorally modern H. sapiens",
+      "analogy": "A computer that has modern hardware at 300 kya but modern software at ~70–50 kya — the brain shape existed before the full suite of symbolic behavior appeared.",
+      "why": "Anatomically modern = skeletal traits of today's humans; behaviorally modern = symbolic thought, art, projectile tech, long-distance trade; they do NOT appear simultaneously."
+    },
+    {
+      "q": "Cooking hypothesis (Wrangham)",
+      "analogy": "An external stomach — fire pre-digests food, so the gut can shrink and the brain (a metabolically expensive organ) can grow.",
+      "why": "Cooking raises caloric yield and reduces chewing/digestion costs, freeing energy for brain expansion; this correlates with gut reduction and brain growth in Homo erectus."
+    },
+    {
+      "q": "MHC and human mate choice",
+      "analogy": "T-shirt smell tests (Wedekind) — women rated MHC-dissimilar men's body odor as more attractive, an unconscious way to avoid inbreeding and boost offspring immune diversity.",
+      "why": "MHC heterozygosity improves pathogen resistance, and olfactory preferences for dissimilar MHC provide a mechanism to avoid kin and produce immunocompetent offspring."
+    },
+    {
+      "q": "Evolutionary medicine — definition + why it matters",
+      "analogy": "Asking 'why' a body is vulnerable, not just 'how' it breaks — evolutionary medicine applies Darwinian thinking to disease, asking why natural selection left us susceptible.",
+      "why": "Proximate (mechanism) explanations are insufficient; ultimate (evolutionary) explanations reveal trade-offs, mismatches, and constraints that inform treatment and prevention."
+    },
+    {
+      "q": "Nesse's 6 reasons we get sick",
+      "analogy": "A six-point defect list — (1) pathogens evolve faster, (2) mismatch, (3) trade-offs, (4) constraints, (5) antagonistic pleiotropy, (6) defenses mistaken for disease.",
+      "why": "Nesse and Williams' framework organizes all evolutionary explanations for vulnerability; any given disease usually reflects one or more of these six."
+    },
+    {
+      "q": "Reason 1: Pathogens evolve faster",
+      "analogy": "An arms race where one side reloads in minutes and the other reloads in decades — bacteria double in 20 minutes while humans take 20 years per generation.",
+      "why": "Short generation times and huge population sizes let pathogens out-evolve host defenses, explaining why we're chronically behind in the Red Queen race."
+    },
+    {
+      "q": "Reason 2: Evolutionary mismatch",
+      "analogy": "Paleolithic software running on a Twinkie — bodies tuned for scarcity now face abundance, leading to obesity, diabetes, myopia, and back pain.",
+      "why": "Rapid cultural/environmental change outpaces genetic adaptation; traits adaptive in ancestral environments are maladaptive in modern ones."
+    },
+    {
+      "q": "Reason 3: Trade-offs",
+      "analogy": "A sports car that's fast but fragile — high testosterone boosts male reproduction but raises prostate cancer and immunosuppression risk.",
+      "why": "Selection optimizes lifetime reproductive success, not health; genes that boost one fitness component often impose costs elsewhere."
+    },
+    {
+      "q": "Reason 4: Evolutionary constraints",
+      "analogy": "A vertebrate eye wired backwards — photoreceptors behind the blood vessels create a blind spot, but selection can't start over, only tinker.",
+      "why": "Path dependency means evolution can only modify what exists; historically contingent solutions (e.g., recurrent laryngeal nerve, appendix) persist even when suboptimal."
+    },
+    {
+      "q": "Reason 5: Antagonistic pleiotropy (aging)",
+      "analogy": "A loan with a youth bonus and late-life payment — genes that boost early reproduction at the cost of late-life health are favored because selection is weak after reproduction.",
+      "why": "Williams' theory of aging: pleiotropic alleles with early benefits and late costs accumulate because late-life fitness effects are discounted; result is senescence."
+    },
+    {
+      "q": "Reason 6: Apparent disease = adaptation",
+      "analogy": "A smoke alarm, not a fire — fever, cough, nausea, and anxiety are defenses, not diseases; suppressing them sometimes makes outcomes worse.",
+      "why": "Many 'symptoms' are evolved host responses (Nesse's smoke detector principle); blocking them removes protective function unless costs of false alarms exceed benefits."
+    },
+    {
+      "q": "Antagonistic pleiotropy vs. mutation accumulation (aging)",
+      "analogy": "Two roommates who both trash the apartment — AP has a benefit upfront (early reproduction) then damage later; MA just lets late-acting bad mutations pile up because selection ignores them.",
+      "why": "Both theories explain senescence via weakening selection with age; AP requires positive early effects linked to late costs, MA only requires neutrality in youth."
+    },
+    {
+      "q": "p53 — antagonistic pleiotropy example",
+      "analogy": "An overzealous security guard — p53 suppresses tumors when young (good) but accelerates stem cell depletion and aging when old (bad).",
+      "why": "p53 illustrates AP: the same allele that prevents cancer early in life contributes to tissue aging later, selected because early cancer prevention boosts fitness more than late-life vigor."
+    },
+    {
+      "q": "Virulence — definition + trade-off",
+      "analogy": "A parasite walking a tightrope — exploit the host too little and you don't transmit, too much and you kill the host before transmitting.",
+      "why": "Virulence = host damage caused by a pathogen; transmission-virulence trade-off predicts intermediate virulence, modulated by transmission mode."
+    },
+    {
+      "q": "Why cholera maintains high virulence",
+      "analogy": "A sick carrier bed that spreads the disease — waterborne transmission means an immobile, dying patient still contaminates the water supply for others.",
+      "why": "When transmission doesn't require host mobility, selection permits higher virulence; clean water infrastructure breaks transmission and selects for less virulent strains (Ewald)."
+    },
+    {
+      "q": "Antibiotic resistance — evolutionary medicine angle",
+      "analogy": "A treadmill of our own making — every prescription is a selection event, and stockpiling antibiotics in livestock feed is running the treadmill at full speed.",
+      "why": "Resistance is not a mystery but a predictable outcome of selection; evolutionary medicine prescribes stewardship, cycling, combination therapy, and reserving last-line drugs."
+    },
+    {
+      "q": "Cancer as somatic evolution",
+      "analogy": "Darwin inside your body — tumor cells mutate, compete, and are selected for growth and evasion; metastasis is a range expansion by the fittest clones.",
+      "why": "Cancer satisfies all three conditions for evolution (variation, heritability, differential survival) at the cellular level; treatment resistance is evolution in real time."
+    },
+    {
+      "q": "Sickle cell — fitness ranking in malaria-endemic Africa",
+      "analogy": "A classic heterozygote advantage — AS (carrier) > AA (normal, dies of malaria) > SS (sickle, dies of anemia).",
+      "why": "Heterozygotes resist malaria without severe anemia, so HbS is maintained at intermediate frequencies by balancing selection in malarial regions."
+    },
+    {
+      "q": "Sickle cell — fitness ranking in NON-malarial regions",
+      "analogy": "Remove malaria and the ranking flips — AA > AS > SS, because there's no malaria benefit to offset anemia costs.",
+      "why": "Without the malarial pressure maintaining the heterozygote, the S allele is purely deleterious and slowly declines by selection in non-endemic populations."
+    },
+    {
+      "q": "Hygiene hypothesis",
+      "analogy": "An immune system raised in a bubble — without childhood exposure to microbes, the body mistakes dust mites and peanuts for threats.",
+      "why": "The modern deficit of immune 'training' by parasites and commensals is associated with rising allergies, asthma, and autoimmunity — a mismatch disease."
+    },
+    {
+      "q": "Myxoma virus — evolutionary case study",
+      "analogy": "Australian rabbits and myxoma running a virulence race — the virus started at 99% lethal, dropped toward intermediate virulence within years, and the rabbits evolved resistance.",
+      "why": "Classic coevolution: selection for transmission favored less lethal strains (dead rabbits don't transmit via mosquitoes) while host resistance evolved simultaneously."
+    },
+    {
+      "q": "Mismatch disease examples",
+      "analogy": "A museum of modern afflictions — obesity, type 2 diabetes, myopia, flat feet, wisdom tooth impaction, lower back pain — each reflects a novel environment.",
+      "why": "Each condition arises where ancestral adaptations (fat storage, close-focus visual plasticity, unshod feet, large jaws) collide with modern diets, screens, shoes, and soft foods."
+    },
+    {
+      "q": "Evolutionary mismatch — back pain",
+      "analogy": "A quadrupedal chassis running upright software — the spine evolved as a horizontal beam and was retrofitted into a vertical column, stressing lumbar discs.",
+      "why": "Bipedalism is only ~6 My old, not enough for full skeletal redesign; combined with sedentary modern posture, this produces near-universal lower back pain."
+    },
+    {
+      "q": "Peto's paradox — cancer resistance in large animals",
+      "analogy": "A Costco freezer with fewer fires than a kitchen — elephants and whales have vastly more cells yet don't have vastly more cancer (elephants carry ~20 copies of TP53).",
+      "why": "Big, long-lived animals should have more cancer, but they evolved enhanced tumor suppression; Peto's paradox reveals that cancer resistance evolves with body size."
+    },
+    {
+      "q": "Conserved gene networks in evolutionary medicine",
+      "analogy": "The same toolkit, reused across species — insulin signaling, Hox genes, p53 pathways are ancient, so fly and mouse studies illuminate human disease.",
+      "why": "Deep homology means model organisms reveal conserved disease mechanisms; evolutionary medicine leverages comparative biology to find drug targets."
+    },
+    {
+      "q": "TRAP: Using C-14 to date dinosaur fossils",
+      "analogy": "A stopwatch that only counts the last 50,000 seconds being used to time the Ice Age — C-14's half-life is 5,730 years, useless for 65-million-year-old dinosaurs.",
+      "why": "C-14 is exhausted after ~10 half-lives (~50 ky); dinosaurs require long-half-life isotopes like U-Pb or K-Ar in associated volcanic rocks."
+    },
+    {
+      "q": "TRAP: 'Reptiles' are a valid taxonomic group",
+      "analogy": "A pizza with a slice missing — 'Reptilia' excludes birds even though birds are nested inside Archosauria, making the traditional group paraphyletic.",
+      "why": "Valid clades are monophyletic (ancestor + all descendants); Sauropsida (includes birds) is monophyletic, 'reptiles' in the old sense is not."
+    },
+    {
+      "q": "TRAP: K-Pg was the largest mass extinction",
+      "analogy": "The dinosaur extinction gets the movie poster, but the Permian-Triassic (~252 Mya) was the real apocalypse — ~96% marine species lost.",
+      "why": "K-Pg killed ~75% of species (and non-avian dinosaurs), but the P-Tr 'Great Dying' was far more severe; K-Pg is famous, not largest."
+    },
+    {
+      "q": "TRAP: Antibiotics cause bacteria to mutate",
+      "analogy": "A gauntlet, not a classroom — antibiotics don't teach bacteria to mutate; mutations already exist, and the drug just kills the non-resistant ones.",
+      "why": "Resistance mutations arise spontaneously (Luria-Delbrück fluctuation test proved this in 1943); antibiotics select for pre-existing variation, they don't induce it."
+    },
+    {
+      "q": "TRAP: Humans evolved from chimpanzees",
+      "analogy": "Cousins with shared grandparents — humans and chimps both descend from a common ancestor ~6–7 Mya, not from each other.",
+      "why": "Modern chimps are a sister lineage that has been evolving just as long as we have; calling them our ancestors confuses sister taxa with ancestral taxa."
+    },
+    {
+      "q": "TRAP: Bipedalism evolved AFTER large brains",
+      "analogy": "Lucy walked upright with a chimp-sized brain — bipedalism at ~4 Mya, brain expansion only after ~2 Mya in Homo.",
+      "why": "Fossils (Sahelanthropus, Ardipithecus, Australopithecus) all show bipedal anatomy with small brains; brain size explodes millions of years later."
+    },
+    {
+      "q": "TRAP: BSC works for all organisms",
+      "analogy": "A relationship-status rule that only works on people who date — the Biological Species Concept needs sexual reproduction, so asexuals, fossils, and ring species break it.",
+      "why": "BSC defines species by reproductive isolation, which requires sexual reproduction and living individuals; morphological, phylogenetic, or ecological concepts are needed for the rest."
+    },
+    {
+      "q": "TRAP: Mule is an example of hybrid inviability",
+      "analogy": "A mule is alive and kicking — it's hybrid STERILITY (postzygotic), not inviability (which would mean the zygote dies).",
+      "why": "Hybrid inviability = offspring doesn't survive; hybrid sterility = offspring survives but can't reproduce. Mules are healthy but sterile due to chromosomal mismatch between horse (2n=64) and donkey (2n=62)."
+    },
+    {
+      "q": "TRAP: Island biogeography equilibrium never changes",
+      "analogy": "A bathtub with the same water level but a constant turnover — equilibrium species NUMBER stays roughly constant while species IDENTITY keeps changing.",
+      "why": "Equilibrium is dynamic: immigration and extinction continue, just at equal rates; predictions include turnover, not frozen composition."
+    },
+    {
+      "q": "TRAP: Virulence always evolves lower over time",
+      "analogy": "Cholera shows the opposite — waterborne transmission keeps virulence high, so evolution doesn't always trend toward avirulence.",
+      "why": "Virulence evolution depends on the transmission-virulence trade-off; mobile hosts favor mild pathogens, but vector-borne or waterborne pathogens can stay highly virulent."
+    },
+    {
+      "q": "TRAP: FOXP2 is 'the language gene'",
+      "analogy": "A conductor, not a musician — FOXP2 is a transcription factor that regulates hundreds of downstream genes involved in motor control, not a language-encoding gene.",
+      "why": "Mutations cause speech apraxia, but language is a polygenic, multi-system capacity; FOXP2 is necessary, not sufficient, and the 'language gene' label is a media oversimplification."
+    },
+    {
+      "q": "TRAP: Global species diversity = immigration + extinction",
+      "analogy": "Islands receive immigrants from a mainland pool, but the GLOBAL pool has no mainland — global diversity is speciation minus extinction, not immigration.",
+      "why": "MacArthur-Wilson equilibrium is ISLAND-scale. At a global scale, immigration isn't a source (there's nowhere to immigrate from); diversity is governed by origination minus extinction."
+    },
+    {
+      "q": "TRAP: In vicariance, organisms MOVE; in dispersal, barriers move",
+      "analogy": "Flip it — in VICARIANCE, the barrier forms and splits stationary organisms; in DISPERSAL, the barrier is stable and organisms cross it.",
+      "why": "The trap reverses the definitions. Vicariance: barrier arises, organisms stay put. Dispersal: barrier stays put, organisms move."
+    },
+    {
+      "q": "TRAP: Neanderthal brain was smaller than modern human brain",
+      "analogy": "Neanderthals had BIGGER brains on average (~1600 cc) than modern humans (~1400 cc) — big brain didn't guarantee winning.",
+      "why": "Neanderthal cranial capacity exceeded ours; shape and wiring (esp. parietal/temporal lobes and cerebellum) mattered more than raw volume, and cultural networks may have decided the outcome."
+    },
+    {
+      "q": "TRAP: Miller-Urey experiment produced living cells",
+      "analogy": "A kitchen that made flour, not bread — Miller-Urey produced amino acids and organic molecules, not living cells.",
+      "why": "The 1953 experiment demonstrated abiotic synthesis of organic monomers under early-Earth conditions; generating life requires polymerization, compartmentalization, and replication, none of which occurred."
+    },
+    {
+      "q": "TRAP: Feathers evolved for flight",
+      "analogy": "Feathers appear on ground-dwelling theropods long before flight — insulation and display came first, flight was a later exaptation.",
+      "why": "Feathered non-flying dinosaurs (Sinosauropteryx, Anchiornis) show feathers originated for thermoregulation/display; flight co-opted an existing structure (classic exaptation)."
+    },
+    {
+      "q": "TRAP: Antagonistic pleiotropy = one gene with two pleiotropic effects",
+      "analogy": "Not just two effects — it's two OPPOSING fitness effects at different life stages (early benefit, late cost).",
+      "why": "Pleiotropy alone = one gene, multiple traits. Antagonistic pleiotropy requires the effects to be in OPPOSITE fitness directions across age, which is what drives its role in senescence."
+    },
+    {
+      "q": "TRAP: Synapomorphies = any shared character",
+      "analogy": "A shared DERIVED character (new in the common ancestor of the group), not just any shared trait — the latter are synapomorphies OR symplesiomorphies.",
+      "why": "Synapomorphies are shared DERIVED characters that define clades; shared ancestral characters (symplesiomorphies) are uninformative for grouping."
+    },
+    {
+      "q": "TRAP: Allopolyploidy requires geographic isolation",
+      "analogy": "Polyploid speciation creates its own reproductive isolation via chromosome doubling — no mountain range needed.",
+      "why": "Allopolyploidy = hybridization + genome doubling between two species in sympatry; it produces instant reproductive isolation (sympatric speciation), not allopatric speciation."
+    },
+    {
+      "q": "TRAP: Sickle cell heterozygote fitness in malaria region",
+      "analogy": "AS is the FITTEST, not the least fit — AS > AA > SS where malaria is common.",
+      "why": "Heterozygote advantage: AS carriers resist malaria without severe anemia; AA suffers malaria, SS suffers anemia. Missing this inverts the balancing selection logic."
+    },
+    {
+      "q": "TRAP: Cancer is not evolution",
+      "analogy": "A tumor is a Galápagos in your tissue — variation (mutation), heritability (cell division), and differential survival (clonal selection) all satisfy Darwin's criteria.",
+      "why": "Somatic cells in a tumor meet all requirements for evolution by natural selection; drug resistance in cancer is literal evolution in real time."
+    },
+    {
+      "q": "TRAP: Anatomically modern = behaviorally modern",
+      "analogy": "Modern hardware at 300 kya, modern software at ~70–50 kya — skull shape and symbolic culture appear at very different times.",
+      "why": "Anatomically modern H. sapiens predates the full suite of symbolic behavior (art, projectile weapons, long-distance trade) by tens of thousands of years."
+    },
+    {
+      "q": "TRAP: Denisovan DNA = same distribution as Neanderthal",
+      "analogy": "Two different souvenirs — Neanderthal DNA is pan-non-African (~1–4%), Denisovan DNA is concentrated in Melanesians/Papuans (up to ~4–6%).",
+      "why": "Different interbreeding events in different places produced different modern distributions; Denisovan admixture is geographically restricted to Asia/Oceania, not shared uniformly with all non-Africans."
+    }
+  ]
+}

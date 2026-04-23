@@ -1,0 +1,35 @@
+# ───── Evolution Study Guide — caching policy ─────
+# Cloudflare Pages _headers format
+
+# SVG concept diagrams — content-addressed, safe to cache forever
+/img/fc/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Other cacheable images
+/img/fc/*
+  Cache-Control: public, max-age=31536000, immutable
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+/textbook_images/*
+  Cache-Control: public, max-age=31536000, immutable
+/exam3/figures/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Shared JS module — content changes, refresh every hour
+/js/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Minisearch lib — changes rarely
+/minisearch.min.js
+  Cache-Control: public, max-age=2592000, immutable
+
+# HTML pages — short cache so updates ship fast
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Everything else — sensible default
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin

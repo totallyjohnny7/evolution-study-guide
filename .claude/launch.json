@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "autoPort": true,
+  "configurations": [
+    {
+      "name": "study-guide",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "public", "--no-clipboard"],
+      "port": 4200
+    }
+  ]
+}

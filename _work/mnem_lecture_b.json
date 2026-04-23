@@ -1,0 +1,499 @@
+{
+  "cards": [
+    {
+      "q": "Species\u2013area relationship",
+      "analogy": "A bigger parking lot holds more different car models \u2014 double the asphalt and you roughly add about 25% more distinct makes, because larger lots attract rarer brands and give niche vehicles room to park.",
+      "why": "The lot is habitat area and the car models are species; the power-law S = cA^z (z \u2248 0.25) captures how larger areas sample more habitats and sustain more rare species, so species richness rises but at a decelerating rate."
+    },
+    {
+      "q": "Big Five mass extinctions",
+      "analogy": "Earth's biosphere has been rebooted five times \u2014 Ordovician, Devonian, Permian (\"the Great Dying\"), Triassic, Cretaceous (K-Pg) \u2014 like five hard crashes that wiped the operating system and forced a slow reinstall.",
+      "why": "Each event eliminated \u226550% of species within a geologically brief window from causes like glaciation, anoxia, volcanism, or impact; the slow 'reinstall' is the millions of years of adaptive radiation that refilled empty niches afterward."
+    },
+    {
+      "q": "Background extinction rate",
+      "analogy": "The baseline drip of species loss is like a leaky faucet \u2014 about one species per million species per year \u2014 always dripping but never flooding the house.",
+      "why": "The faucet drip is the normal extinction rate from routine bad luck and competition, measured from the fossil record; current rates 100\u20131000x higher reveal the 'flood' of the sixth mass extinction."
+    },
+    {
+      "q": "Hawaiian honeycreepers",
+      "analogy": "A single finch ancestor arrived on Hawai'i and bloomed into a Swiss Army knife of beaks \u2014 long curved probes for nectar, stout nutcrackers for seeds, thin tweezers for insects \u2014 over 50 species carved from one blade.",
+      "why": "The ancestral finch colonized empty niches with no competitors; divergent natural selection on beak morphology for different food sources produced one of the most spectacular adaptive radiations, paralleling Darwin's finches but more extreme."
+    },
+    {
+      "q": "Marsupial biogeography",
+      "analogy": "Australia is a biological Galapagos the size of a continent \u2014 when Gondwana broke up it sailed off with a cargo of pouched mammals and no placental competitors, so kangaroos filled the 'deer' role and Tasmanian wolves filled the 'dog' role.",
+      "why": "Geographic isolation from placentals let marsupials radiate into convergent ecological equivalents; the distribution is best explained by vicariance (continental drift) rather than dispersal, making biogeography a key piece of evidence for plate tectonics."
+    },
+    {
+      "q": "Turnover rate",
+      "analogy": "An island's species list is like a hotel guest registry \u2014 rooms stay full at equilibrium, but every week new guests check in (immigration) while others check out (extinction).",
+      "why": "MacArthur and Wilson's model predicts species richness reaches dynamic equilibrium where immigration equals extinction; the identity of species keeps changing (turnover) even when total number stays constant."
+    },
+    {
+      "q": "Dispersal vs. vicariance \u2014 how to distinguish?",
+      "analogy": "Two cousins live on different continents \u2014 did one hop a boat (dispersal) or did the family mansion split down the middle in an earthquake (vicariance)? Check the dates: if the split predates the geologic break, it was a boat.",
+      "why": "Molecular clocks dating lineage divergence are compared to the geologic timing of barrier formation; if taxa diverged after the barrier arose, dispersal over it is implicated, whereas divergence matching the barrier's age implicates vicariance."
+    },
+    {
+      "q": "Why do islands support adaptive radiations?",
+      "analogy": "An island is an empty mall on opening day \u2014 a few lucky colonists walk in to find every storefront unrented, so one clothing shop splits into ten specialty boutiques overnight.",
+      "why": "Low competition, open niches, and geographic isolation between sub-populations let a founder lineage split into many ecologically specialized daughter species; this is why the Gal\u00e1pagos, Hawai'i, and Cichlid-rich Great Lakes host textbook radiations."
+    },
+    {
+      "q": "Island biogeography \u2014 conservation applications",
+      "analogy": "A habitat fragment in a sea of farmland behaves exactly like an oceanic island \u2014 smaller and more distant patches bleed species through extinction the way a tiny atoll far from the mainland supports few birds.",
+      "why": "MacArthur\u2013Wilson's S = cA^z and the distance effect predict which reserves will hemorrhage biodiversity; managers design larger, closer, better-connected reserves with corridors to raise immigration and lower extinction."
+    },
+    {
+      "q": "Continental drift and biogeography",
+      "analogy": "Pangaea was a biotic salad bowl \u2014 when the bowl shattered 180 million years ago, identical ingredients were carried off on drifting plates, which is why lungfish live in both South America and Africa and ratite birds in both Australia and South America.",
+      "why": "Vicariance from continental breakup split ancestral populations onto separate plates; matching disjunct distributions on once-connected landmasses match the timing and geography predicted by plate tectonics, making biogeography historical evidence of drift."
+    },
+    {
+      "q": "Darwin's finches adaptive radiation",
+      "analogy": "One stray finch on the Gal\u00e1pagos became 13\u201318 species, each with a beak tool sized for a different job \u2014 heavy pliers for hard seeds, fine needles for cactus, even a twig held like a woodpecker's tongue.",
+      "why": "The founder lineage diverged under disruptive selection on beak morphology tied to food type; reproductive isolation among islands produced ecological specialists, making it the founding case study in Darwin's 'On the Origin of Species.'"
+    },
+    {
+      "q": "East African cichlid radiation",
+      "analogy": "Lake Victoria is a fish factory that cranked out 500+ cichlid species in under 15,000 years \u2014 faster than any vertebrate radiation on record \u2014 with algae-scrapers, snail-crushers, and even scale-eating models.",
+      "why": "Lake formation created a blank slate with open niches; sexual selection on color plus trophic niche specialization drove explosive speciation, making cichlids the evolutionary biologist's equivalent of Cambrian explosion in miniature."
+    },
+    {
+      "q": "Metapopulation dynamics",
+      "analogy": "A patchwork of habitat fragments is a regional 'population of populations' \u2014 some patches wink out like lightbulbs burning, others flicker back on as recolonizers wander in, and the whole grid stays lit only because migration connects them.",
+      "why": "Levins' model treats patches as occupied or empty with rates of local extinction and colonization; the metapopulation persists when colonization exceeds extinction, so dispersal corridors are critical for regional survival even when individual patches fail."
+    },
+    {
+      "q": "SLOSS debate",
+      "analogy": "Single Large Or Several Small reserves \u2014 should you put all your retirement savings in one megafund or spread it across many accounts? One big reserve captures wide-ranging predators, but several small ones survive if a single fire or disease hits.",
+      "why": "One big reserve holds viable populations of large species but risks catastrophic loss; many small reserves hedge against disturbance and capture habitat heterogeneity; modern consensus favors networks of reserves connected by corridors to get both benefits."
+    },
+    {
+      "q": "Taxon cycle",
+      "analogy": "An island species is like an immigrant's career arc \u2014 arrive as a coastal generalist, spread widely, specialize into mountain niches, contract into relict populations, and finally go extinct \u2014 each generation of colonists repeats the cycle.",
+      "why": "E. O. Wilson's model describes sequential stages of colonization, range expansion, contraction, and extinction on islands; it explains why island faunas contain species at different cycle stages, with continuous turnover driven by incoming colonists."
+    },
+    {
+      "q": "Endemism",
+      "analogy": "An endemic species is the 'native only here' specialty \u2014 lemurs to Madagascar, tuatara to New Zealand, kiwi to New Zealand \u2014 each a flag-planting species found nowhere else on Earth.",
+      "why": "Endemism arises from isolation (islands, mountaintops, ancient lakes) that let lineages evolve in place without gene flow; high endemism marks biodiversity hotspots and is the primary criterion for conservation prioritization."
+    },
+    {
+      "q": "Origination vs. extinction rates",
+      "analogy": "Biodiversity is a bathtub \u2014 the speciation faucet fills it, the extinction drain empties it, and current diversity reflects the running balance of millions of years of gains minus losses.",
+      "why": "Net diversification = origination \u2212 extinction; during mass extinctions the drain widens catastrophically, and during adaptive radiations the faucet surges; fossil record ratios of these rates reveal the pulse of life's history."
+    },
+    {
+      "q": "Great American Biotic Interchange",
+      "analogy": "When the Panama land bridge closed ~3 million years ago, North and South America became a two-way immigration lane \u2014 armadillos and opossums drove north, while cats, bears, and horses drove south, and the southern marsupials mostly lost the interstate war.",
+      "why": "Vicariance ended and dispersal began; asymmetric outcomes (more North American lineages succeeded in South America) reflect competitive advantages of placental predators and community-level disequilibrium after isolation."
+    },
+    {
+      "q": "Laupala Hawaiian Crickets",
+      "analogy": "Hawaiian Laupala crickets speciate by love songs \u2014 each island's males chirp at a different tempo and females only mate with the hometown beat, so 38 species diverged in under 5 million years, the fastest known animal speciation rate.",
+      "why": "Sexual selection on male pulse rate produces reproductive isolation before ecological divergence; the Kaneshiro/Mendelson/Shaw work makes Laupala the textbook case of speciation by mating signal divergence on islands."
+    },
+    {
+      "q": "Selective Pressure",
+      "analogy": "A selective pressure is the environmental sieve that decides which versions get through \u2014 the drought that spares deep-rooted plants, the predator that eats the slow, the antibiotic that kills susceptible bacteria.",
+      "why": "Any agent that causes differential survival or reproduction among variants imposes selection; the strength and direction of the pressure determine allele frequency change per generation, making it the engine of adaptive evolution."
+    },
+    {
+      "q": "Conservation Biology",
+      "analogy": "Conservation biology is triage medicine for ecosystems \u2014 a crisis discipline where biologists diagnose threatened populations, prescribe interventions, and race against extinction with finite resources.",
+      "why": "Soul\u00e9 defined it as a mission-oriented science combining ecology, genetics, and evolution to preserve biodiversity; it treats species and communities as 'patients' and evaluates evolutionary potential alongside demographic persistence."
+    },
+    {
+      "q": "Artificial selection (domestication)",
+      "analogy": "Artificial selection is natural selection with a human breeder choosing the survivors \u2014 the same pressure that made wolves into chihuahuas, teosinte into corn, and Brassica oleracea into broccoli, cabbage, and kale.",
+      "why": "Humans intensely select for desired phenotypes (docility, yield, aesthetics), concentrating alleles faster than nature; Darwin's 'On the Origin' opened with domestication because it makes the logic of selection visible within a breeder's lifetime."
+    },
+    {
+      "q": "Extinction vortex",
+      "analogy": "An extinction vortex is a demographic toilet flush \u2014 small population loses genetic variation, inbreeding drops fitness, numbers fall further, stochastic events deepen the spiral, and the population circles the drain until it disappears.",
+      "why": "Gilpin and Soul\u00e9 described how small populations enter positive feedback loops where genetic drift, inbreeding depression, demographic stochasticity, and Allee effects reinforce each other; escape requires intervention (genetic rescue, habitat restoration) before the spiral is irreversible."
+    },
+    {
+      "q": "Inbreeding depression",
+      "analogy": "Inbreeding depression is what Habsburg royalty discovered the hard way \u2014 mate with close relatives and recessive defects like Charles II's deformed jaw pair up at every locus, dragging fitness into the basement.",
+      "why": "Breeding between relatives increases homozygosity, exposing deleterious recessive alleles that heterozygotes had masked; small populations are particularly vulnerable because mate choice is forced among kin, accelerating the extinction vortex."
+    },
+    {
+      "q": "Greater prairie chicken case study",
+      "analogy": "Illinois prairie chickens crashed from millions to fewer than 50 by 1994 \u2014 eggs wouldn't hatch, chicks died young \u2014 until biologists trucked in birds from Kansas, Minnesota, and Nebraska and the population rebounded within a decade.",
+      "why": "The Illinois population had lost genetic diversity (fertility fell to 38%) from a severe bottleneck; genetic rescue with outside birds restored heterozygosity and hatching success to 94%, making it the textbook demonstration of inbreeding rescue."
+    },
+    {
+      "q": "Four anthropogenic causes of biodiversity loss",
+      "analogy": "Remember HIPPO \u2014 Habitat loss, Invasive species, Pollution, human Population, Overharvesting \u2014 the five horsemen of the biodiversity apocalypse, with habitat loss as the biggest scythe.",
+      "why": "E. O. Wilson's HIPPO mnemonic ranks the dominant drivers of modern extinction by impact; habitat destruction alone accounts for the majority of threatened species listings, and climate change is increasingly added as a sixth driver."
+    },
+    {
+      "q": "Fishing and life-history evolution",
+      "analogy": "Commercial fishing nets act as reverse natural selection \u2014 big fish get caught, small fish slip through, so after decades of this filter the gene pool shifts toward fish that mature earlier, smaller, and reproduce young like teenage runaways.",
+      "why": "Size-selective harvest imposes strong directional selection on maturation timing; cod and other heavily fished stocks show heritable shifts toward earlier maturation at smaller sizes, reducing yield and population productivity \u2014 an evolutionary collapse on top of a demographic one."
+    },
+    {
+      "q": "Sixth mass extinction",
+      "analogy": "Humans are the meteor this time \u2014 background extinction rates are 100 to 1,000 times above normal, driven by one species burning forests, emptying oceans, and rearranging the climate in just a geological eye-blink.",
+      "why": "Species loss rates measured from IUCN lists and background fossil rates exceed the Big Five threshold; unlike past extinctions caused by impacts or volcanism, this one is driven by a single lineage (Homo sapiens) through the HIPPO pressures."
+    },
+    {
+      "q": "Trophy hunting and evolution",
+      "analogy": "Trophy hunters act like inverse Darwin \u2014 shoot the biggest-horned rams and lions with blackest manes, and within generations the genes for big horns and black manes disappear, leaving a population of runts.",
+      "why": "Selective removal of males with exaggerated ornaments imposes strong directional selection against the very traits hunters prize; Coltman's bighorn sheep study and African lion work show measurable declines in trait values within 20\u201330 years."
+    },
+    {
+      "q": "Pesticide resistance evolution",
+      "analogy": "Spray a crop with pesticide and you run an evolution experiment \u2014 the 99% of susceptible insects die, the 1% with a resistant allele inherit the field, and within a few seasons the spray is water.",
+      "why": "Strong directional selection favors resistance alleles that were rare in the starting population; rapid generation times and massive population sizes in pest insects make resistance almost inevitable, exemplifying natural selection in human-dominated landscapes."
+    },
+    {
+      "q": "Genetic rescue",
+      "analogy": "Genetic rescue is a blood transfusion for inbred populations \u2014 bring in a handful of unrelated breeders and the next generation hatches eggs that wouldn't hatch, because fresh heterozygosity masks the defects.",
+      "why": "Introducing migrants from a different population restores allelic diversity and masks deleterious recessives; Florida panther rescue with Texas cougars and prairie chicken rescue both demonstrate dramatic fitness recovery after small transfusions of outside genes."
+    },
+    {
+      "q": "How do humans act as selective forces?",
+      "analogy": "Humans are walking selection experiments \u2014 fishing boats, trophy rifles, antibiotics, pesticides, vaccines, cities, and warming climates all act as novel sieves that reshape wild gene pools within decades instead of millennia.",
+      "why": "Human activities impose unusually strong and fast directional selection on nontarget species; documented examples include fishing-induced early maturation, antibiotic resistance, pesticide resistance, urban darkening in moths, and fearfulness toward humans, all measurable within human lifetimes."
+    },
+    {
+      "q": "Conservation genetics \u2014 why genetic diversity matters",
+      "analogy": "Genetic diversity is a population's insurance policy \u2014 many alleles are like a diverse stock portfolio that can weather novel pathogens, climate swings, and habitat shifts, while a monoculture of clones goes bankrupt in the first market crash.",
+      "why": "Diversity provides the raw material for adaptation and buffers against inbreeding; populations with low heterozygosity have higher extinction risk because they cannot evolve in response to change and already suffer fitness costs from inbreeding depression."
+    },
+    {
+      "q": "Minimum viable population (MVP)",
+      "analogy": "MVP is the species' financial break-even point \u2014 below about 500 breeding adults the account bleeds genetic diversity faster than mutation can deposit new variants, and the population goes bankrupt within 40 generations.",
+      "why": "Franklin's 50/500 rule: at least 50 individuals to avoid immediate inbreeding depression, 500 to retain evolutionary potential long-term; MVP estimates combine demographic and genetic stochasticity to set lower limits for management targets."
+    },
+    {
+      "q": "Population bottleneck effects",
+      "analogy": "A bottleneck is a genetic hourglass \u2014 a million cheetahs squeezed through a narrow neck around 10,000 years ago, and today all cheetahs are so genetically identical you can skin-graft between unrelated individuals without rejection.",
+      "why": "Sharp reductions in population size randomly purge alleles; the surviving gene pool reflects whoever happened to make it through, often leaving low diversity, high inbreeding load, and reduced adaptive potential \u2014 cheetahs and northern elephant seals are classic cases."
+    },
+    {
+      "q": "Why conservation matters evolutionarily",
+      "analogy": "Each species is a 3.8-billion-year-old library of tested genetic text \u2014 burn it and you don't just lose the book, you lose the evolutionary experiments encoded in it that humans could use for medicine, agriculture, and basic understanding.",
+      "why": "Extinction eliminates unique evolutionary lineages that took millions of years to generate and cannot be recreated; conservation preserves not only species but evolutionary history, phylogenetic diversity, and future adaptive potential for ecosystems."
+    },
+    {
+      "q": "Human population growth and extinction",
+      "analogy": "The human population chart looks like a rocket launch \u2014 1 billion in 1800, 8 billion today \u2014 and the extinction curve tracks it like a shadow, because more humans means more HIPPO pressure on every other species.",
+      "why": "Per-capita environmental impact times population size gives total impact; exponential human growth has driven proportional expansions of habitat conversion, resource use, and pollution, making demographic trajectory the single biggest driver of biodiversity loss."
+    },
+    {
+      "q": "Habitat fragmentation effects",
+      "analogy": "Fragmenting habitat is like smashing a stained-glass window \u2014 the total glass is there but the picture is gone; small isolated shards can't support wide-ranging species and edge effects erode even the shards.",
+      "why": "Breaking large habitats into small pieces reduces effective area, isolates populations, exposes more edge to invasives and microclimatic stress, and disrupts metapopulation dynamics; the total habitat loss matters less than the connectivity lost."
+    },
+    {
+      "q": "Allee effect",
+      "analogy": "The Allee effect is 'too lonely to party' \u2014 below a critical density, potential mates can't find each other, cooperative hunting fails, and group vigilance collapses, so per-capita growth actually turns negative as the population shrinks further.",
+      "why": "Positive density-dependence at low numbers drives populations into the extinction vortex because small size itself reduces reproduction or survival; passenger pigeons needed huge flocks to breed and crashed once reduced below threshold even with habitat remaining."
+    },
+    {
+      "q": "Ex situ conservation",
+      "analogy": "Ex situ conservation is the Noah's Ark backup \u2014 zoos, seed banks, and frozen gamete libraries keep copies off-site when the original habitat is on fire, waiting for the day reintroduction becomes possible.",
+      "why": "Preserving species outside their natural habitat buys time when in situ protection fails; California condor, black-footed ferret, and Arabian oryx all recovered through captive breeding followed by reintroduction, though ex situ cannot preserve ecosystem context or coevolved interactions."
+    },
+    {
+      "q": "Pollution and evolution",
+      "analogy": "The peppered moth is pollution's evolution poster child \u2014 soot blackened English tree trunks, dark moths hid while light moths got eaten, and within decades 98% of moths were black; clean air reversed the shift.",
+      "why": "Pollutants alter selective landscapes on contemporary timescales; industrial melanism in Biston betularia is the textbook example, but heavy-metal tolerance in plants near mines and organochlorine resistance in fish show the same pattern across many taxa."
+    },
+    {
+      "q": "Climate change and biodiversity",
+      "analogy": "Climate change is a conveyor belt moving climate zones poleward and uphill \u2014 species must run, adapt, or step off; alpine plants get pushed off the mountaintop, corals bleach, and synchronized phenologies like flower-pollinator timing fall apart.",
+      "why": "Rapid warming outpaces most species' dispersal and evolutionary rates; extinction risk rises via range contraction, phenological mismatch with prey or pollinators, and physiological limits, with an estimated one-third of species threatened by 2100 under high-emission scenarios."
+    },
+    {
+      "q": "Effective population size (Ne)",
+      "analogy": "Effective population size is the genetic headcount, not the census count \u2014 a herd of 1,000 elk with one breeding bull and 999 spectators has Ne closer to 4, because only the bull passes genes forward.",
+      "why": "Ne measures the size of an idealized population losing genetic variation at the same rate as the real one; unequal sex ratios, variance in reproductive success, and bottlenecks all push Ne well below census size, and Ne (not N) governs drift and inbreeding rates."
+    },
+    {
+      "q": "Trophy hunting evolution \u2014 bighorn sheep",
+      "analogy": "At Ram Mountain, Alberta, 30 years of hunting the biggest-horned rams shrank average horn size and body mass by 20% \u2014 the hunters bred a population of smaller sheep the same way breeders shrink toy poodles, only backward.",
+      "why": "Coltman et al. (2003) showed heritable horn length and body weight declined under selective harvest of trophy males before breeding age; it's the cleanest documented case of human-induced evolutionary change eroding the very trait humans sought."
+    },
+    {
+      "q": "Hominids",
+      "analogy": "Hominids are the 'great ape' family photo \u2014 gorillas, chimps, orangutans, bonobos, and humans \u2014 all members of Hominidae sharing a large-bodied, big-brained, tail-less common ancestor.",
+      "why": "Modern taxonomy places all great apes including humans in family Hominidae; this replaced the older usage where 'hominid' meant only humans, and 'hominin' is now the term for humans and our extinct bipedal relatives on our branch."
+    },
+    {
+      "q": "Bipedalism",
+      "analogy": "Bipedalism is the human signature move \u2014 walking on two legs freed our hands for tool-carrying the way standing up at a buffet lets you hold a plate and a fork.",
+      "why": "Habitual upright walking evolved in hominins starting ~6 Ma and is diagnostic of our lineage; it preceded brain expansion by millions of years and is reflected in pelvic, knee, foot, and spinal modifications visible in australopith fossils."
+    },
+    {
+      "q": "Fossil Evidence (human evolution)",
+      "analogy": "The hominin fossil record is a scrapbook with most pages torn out \u2014 a partial skull in Chad, a pelvis in Ethiopia, a footprint in Tanzania \u2014 each rare specimen patches together 7 million years of our family's past.",
+      "why": "Fossils like Sahelanthropus, Lucy, Turkana Boy, and the Laetoli prints provide direct morphological evidence of hominin evolution; their ages, anatomies, and geographic spread constrain models of when bipedalism, brain expansion, and Out-of-Africa dispersal occurred."
+    },
+    {
+      "q": "Sahelanthropus tchadensis",
+      "analogy": "Sahelanthropus is hominin evolution's smoking-gun skull from Chad \u2014 at 7 million years old and with a forward foramen magnum suggesting upright posture, it dates from right around the human-chimp split.",
+      "why": "Discovered by Brunet in 2001\u20132002, its near-split age and anteriorly placed foramen magnum imply early bipedalism; it suggests hominin origins extended into central Africa, not just the Rift Valley, and pushed bipedal origins back near the chimp divergence."
+    },
+    {
+      "q": "Australopithecus afarensis",
+      "analogy": "Lucy is the 3.2-million-year-old celebrity fossil \u2014 small-brained like a chimp, upright-walking like a human \u2014 proof that bipedalism came long before the big brain.",
+      "why": "The ~40% complete A. afarensis skeleton discovered by Johanson in 1974 has a valgus knee and human-like pelvis confirming bipedality, yet a ~400 cc brain; it nails down that upright walking evolved first and brain expansion followed much later."
+    },
+    {
+      "q": "Laetoli footprints",
+      "analogy": "At Laetoli, Tanzania, two Australopithecus walkers stepped through fresh volcanic ash 3.6 million years ago \u2014 a fossilized stroll that recorded heel strike, arched foot, and striding gait like wet concrete preserving our ancestor's commute.",
+      "why": "The preserved trackway discovered by Mary Leakey in 1976 shows fully modern bipedal gait in a hominin contemporary with Lucy; behavioral evidence of bipedalism complements skeletal evidence from A. afarensis."
+    },
+    {
+      "q": "Homo habilis",
+      "analogy": "Homo habilis is 'handy man' \u2014 2.4\u20131.4 Ma in East Africa \u2014 the first of our genus, distinguished by a slightly bigger brain and the Oldowan stone tools found beside its bones.",
+      "why": "Discovered by the Leakeys at Olduvai Gorge, H. habilis's ~600\u2013700 cc brain and association with simple cobble tools mark the beginning of the Homo trend toward brain expansion and technology, though its Homo status is still debated."
+    },
+    {
+      "q": "Homo erectus",
+      "analogy": "Homo erectus is the first true globetrotter \u2014 left Africa by 1.9 Ma, reached Java and China, made hand-axes, possibly used fire, and had a near-modern body plan below a smaller skull.",
+      "why": "Turkana Boy and the Dmanisi fossils show fully modern postcranial anatomy, brain size ~900 cc, Acheulean tool culture, and the first global dispersal of any hominin; H. erectus is our bridge from australopiths to modern humans."
+    },
+    {
+      "q": "Homo sapiens",
+      "analogy": "Homo sapiens is the end of the hominin story \u2014 anatomically modern by ~300,000 years ago in Africa, behaviorally modern with art and complex tools by ~100,000, and spread across every continent by ~15,000 years ago.",
+      "why": "The oldest H. sapiens fossils at Jebel Irhoud (Morocco, 315 ka) show modern face shape; genomic evidence confirms African origin with subsequent dispersal and limited interbreeding with Neanderthals and Denisovans on the way out."
+    },
+    {
+      "q": "Out of Africa model",
+      "analogy": "The Out of Africa model says all living humans descend from an African population that walked out ~60,000 years ago, with Neanderthals and Denisovans as cousins we briefly mated with and then replaced.",
+      "why": "Mitochondrial DNA (Cann 1987), Y-chromosome data, and whole-genome analyses point to an African origin with recent expansion; fossil dates at Omo Kibish and Jebel Irhoud, plus declining genetic diversity with distance from Africa, support replacement (with limited admixture) over multiregional evolution."
+    },
+    {
+      "q": "Neanderthals",
+      "analogy": "Neanderthals were the Ice Age cousins \u2014 stocky, cold-adapted, big-brained Europeans and West Asians who buried their dead, made complex tools, and left 1\u20132% of their DNA in every non-African alive today before going extinct ~40,000 years ago.",
+      "why": "H. neanderthalensis diverged from our lineage ~600 ka, persisted until ~40 ka, and interbred with incoming H. sapiens; introgressed genes affect immunity, skin, and hair in modern humans, disproving strict replacement models."
+    },
+    {
+      "q": "What evidence supports bipedalism evolving first?",
+      "analogy": "The fossil record shows Lucy (3.2 Ma) walked upright on a chimp-sized brain \u2014 upright first, smart later \u2014 while even Sahelanthropus at 7 Ma hints at bipedalism with a near-chimp-sized skull.",
+      "why": "Skeletal markers of bipedality (foramen magnum position, valgus knee, pelvic shape, arched foot) appear in A. afarensis and earlier hominins long before brain expansion; brain size stayed chimp-like until ~2 Ma, demonstrating mosaic evolution with bipedalism preceding encephalization."
+    },
+    {
+      "q": "Significance of early hominin fossils in Chad",
+      "analogy": "Sahelanthropus in Chad blew up the Rift Valley monopoly \u2014 hominin origins weren't just an East African phenomenon but extended 2,500 km west, suggesting a Pan-African distribution of our earliest ancestors.",
+      "why": "Brunet's 2002 discovery of Toumai (S. tchadensis) at ~7 Ma west of the Rift Valley broadened the geographic stage for hominin origins; it forced revision of models that placed human origins strictly in the East African Rift and dated early bipedalism near the human-chimp split."
+    },
+    {
+      "q": "How did environment shape human evolution?",
+      "analogy": "African climate cycled between forest and savanna like a slow strobe light \u2014 each flicker winnowed hominins toward bipedalism, larger bodies, dietary flexibility, and eventually big brains and tools to survive the unpredictability.",
+      "why": "Variability selection (deMenocal, Potts) proposes that fluctuating Plio-Pleistocene climates favored generalists who could handle changing resources; key hominin transitions align with periods of increased climatic variability preserved in deep-sea dust records."
+    },
+    {
+      "q": "Hominin brain size evolution",
+      "analogy": "Hominin brains inflated like a slow-motion balloon \u2014 400 cc in Lucy, 650 cc in habilis, 900 cc in erectus, 1,350 cc in sapiens \u2014 tripling in 3 million years to become a metabolically expensive luxury organ.",
+      "why": "Encephalization accelerated after ~2 Ma with Homo, fueled by meat-eating, cooking, and social complexity; brain tissue burns ~20% of our energy budget, which is why the expensive-tissue hypothesis links gut reduction (from cooked food) to brain expansion."
+    },
+    {
+      "q": "Cooking hypothesis (Wrangham)",
+      "analogy": "Wrangham argues cooking was the spark that lit modern humans \u2014 fire turned tough calories into bioavailable energy, shrunk our guts, fed our ballooning brains, and freed social time once we stopped chewing raw food eight hours a day.",
+      "why": "Cooking denatures proteins and gelatinizes starches, raising caloric yield; Wrangham ties this dietary shift at ~1.8 Ma to Homo erectus's smaller teeth, smaller gut, and expanded brain, framing fire control as the enabling technology of our genus."
+    },
+    {
+      "q": "Molecular clock and human-chimp divergence",
+      "analogy": "The molecular clock is a ticking DNA metronome \u2014 mutations accumulate at a roughly constant rate, so counting differences between human and chimp genomes clocks our last common ancestor at about 6\u20137 million years ago.",
+      "why": "Neutral substitutions accumulate roughly linearly with time; ~1.2% genome-wide divergence between Homo and Pan calibrated against fossil apes dates our split to 6\u20138 Ma, matching the age of Sahelanthropus and Orrorin."
+    },
+    {
+      "q": "Multiregional vs. Out of Africa",
+      "analogy": "Multiregional says modern humans cooked up in parallel pots across the Old World with gene flow stirring the batches; Out of Africa says Africa was the only kitchen and everyone else got takeout delivered 60,000 years ago.",
+      "why": "Multiregional predicts continuity between regional archaic humans (like Peking Man) and modern regional populations; genetic data showing all non-Africans descend from a small African-origin lineage favor Out of Africa, with the addition of limited archaic admixture (Neanderthal, Denisovan)."
+    },
+    {
+      "q": "Denisovans",
+      "analogy": "Denisovans are the ghost lineage known almost entirely from DNA in a pinky bone from a Siberian cave \u2014 Asian cousins of Neanderthals who left genes for high-altitude life (EPAS1) in modern Tibetans.",
+      "why": "Identified in 2010 from ancient DNA at Denisova Cave, they diverged from Neanderthals ~400 ka and interbred with ancestors of Melanesians and Tibetans; introgressed EPAS1 allele from Denisovans helps Tibetans function at altitude, a textbook adaptive introgression."
+    },
+    {
+      "q": "Skeletal adaptations for bipedalism",
+      "analogy": "Bipedalism rewrote the skeleton from the ground up \u2014 arched foot, straight big toe, angled (valgus) knee, bowl-shaped pelvis, S-curved spine, and centrally placed foramen magnum \u2014 a head-to-toe engineering overhaul for balancing on two columns.",
+      "why": "Each feature solves a mechanical problem of upright stance: arched foot for shock absorption, valgus knee to place weight under body midline, short broad pelvis for gluteal lever arms, spinal curves for balance, central foramen magnum for forward-facing gaze; all appear mosaic-like in the fossil record."
+    },
+    {
+      "q": "Oldowan vs. Acheulean tools",
+      "analogy": "Oldowan tools are improvised rock hammers \u2014 one cobble smashed against another \u2014 while Acheulean hand-axes are the artisanal version, bifacially flaked into a symmetric teardrop that required a mental template.",
+      "why": "Oldowan (2.6\u20131.7 Ma, H. habilis) produced simple flakes and choppers; Acheulean (1.76 Ma \u2013 200 ka, H. erectus/heidelbergensis) introduced standardized bifacial hand-axes implying forethought and teaching; the transition marks cognitive and cultural escalation in the Lower Paleolithic."
+    },
+    {
+      "q": "Hominins vs. Hominids",
+      "analogy": "Hominids is the whole great-ape family album; hominins is just the human branch after the chimp split \u2014 Homo, Australopithecus, Paranthropus, Sahelanthropus \u2014 every bipedal cousin on our side of the family tree.",
+      "why": "Modern taxonomy: Hominidae (all great apes), Homininae (African apes + humans), Hominini (humans + extinct bipedal relatives); the distinction matters for reading primary literature, which assumes 'hominin' means post-LCA-with-chimp lineage."
+    },
+    {
+      "q": "Bipedalism trade-offs",
+      "analogy": "Walking upright is the mixed blessing of humanity \u2014 gained free hands, endurance, and a view over tall grass, but paid with back pain, knee arthritis, fallen arches, and obstructed childbirth through a pelvis rebuilt for balance not babies.",
+      "why": "Pelvic reorganization for bipedal efficiency narrowed the birth canal just as fetal heads grew, creating the obstetric dilemma; vertical loading of lumbar discs causes chronic back pain; hernias and varicose veins reflect abdominal and venous adaptations left incomplete by the transition."
+    },
+    {
+      "q": "Ardipithecus",
+      "analogy": "Ardi was a 4.4-million-year-old forest-dweller in Ethiopia \u2014 grasping big toe for climbing, upright pelvis for walking, small canines for reduced male combat \u2014 the transitional package between ape and human.",
+      "why": "Ardipithecus ramidus described by White and colleagues shows bipedality in a woodland (not savanna) setting, undermining the 'savanna hypothesis' of bipedal origins; its mosaic of arboreal and terrestrial features fills the gap between Pan-like ancestors and australopiths."
+    },
+    {
+      "q": "Australopithecus \u2014 key species",
+      "analogy": "The Australopithecus species set is a Rift Valley casting call \u2014 anamensis, afarensis (Lucy), africanus (Taung Child), garhi, sediba \u2014 each a bipedal ape filling in the 4.2\u20132 Ma middle chapter between Ardi and Homo.",
+      "why": "Successive or overlapping species document sustained bipedality, chimp-sized brains, and dietary diversification across East and South Africa; they provide the morphological substrate from which genus Homo emerged ~2.5 Ma, possibly via A. garhi or A. sediba."
+    },
+    {
+      "q": "Homo floresiensis and Homo heidelbergensis",
+      "analogy": "Floresiensis is the 3-foot 'Hobbit' on an Indonesian island, an island-dwarf H. erectus descendant; heidelbergensis is the big-bodied, big-brained European and African ancestor of both Neanderthals and modern humans.",
+      "why": "H. floresiensis (LB1, ~60 ka) illustrates island dwarfism within Homo; H. heidelbergensis (~700\u2013200 ka) with ~1,200 cc brain and Acheulean tools is the likely common ancestor of the Neanderthal-sapiens split around 600 ka, making it the stem of our final radiation."
+    },
+    {
+      "q": "Co-evolution",
+      "analogy": "Hosts and parasites, plants and pollinators, predators and prey are locked in a tango \u2014 every step by one partner forces a counter-step by the other, shaping each lineage's morphology and genetics over generations.",
+      "why": "Reciprocal evolutionary change occurs when two species impose selection on each other; classic examples include orchid-moth flower tubes, Heliconius butterflies and passionflowers, and host-pathogen immune arms races, producing the coordinated adaptations Ehrlich and Raven described."
+    },
+    {
+      "q": "Virulence",
+      "analogy": "Virulence is the pathogen's damage level \u2014 from a mild cold that lets you go to work to Ebola that liquefies organs in a week \u2014 the biological cost the host pays per infection.",
+      "why": "Virulence measures fitness reduction imposed on hosts by a pathogen; it is shaped by transmission mode, host resistance, and selection on the pathogen's replication rate, and is the key variable traded off against transmission in evolutionary epidemiology."
+    },
+    {
+      "q": "Virulence\u2013transmission trade-off",
+      "analogy": "A pathogen that kills its host too fast burns its own bridge \u2014 too gentle and it doesn't replicate enough; optimal virulence is the Goldilocks zone where replication maximizes spread before the host collapses, like a diner who eats fast but not so fast she chokes.",
+      "why": "Replicating harder inside a host transmits more virus but kills the host sooner; Ewald's framework predicts higher virulence when transmission doesn't require host mobility (mosquitoes, water) and lower virulence when it does (droplet spread), explaining why malaria is worse than the common cold."
+    },
+    {
+      "q": "Antibiotic resistance",
+      "analogy": "Antibiotics run a natural selection experiment in every hospital \u2014 susceptible bacteria die off, rare resistant mutants inherit the ward, and MRSA takes the throne \u2014 a textbook case of strong selection producing rapid evolution.",
+      "why": "Mutations or horizontally transferred genes conferring resistance have enormous fitness advantages under antibiotic pressure; resistant lineages spread within patients, hospitals, and populations, exemplifying natural selection on human-relevant timescales and driving a public health crisis."
+    },
+    {
+      "q": "Red Queen hypothesis",
+      "analogy": "The evolutionary arms race where hosts and pathogens run as fast as they can just to stay in place \u2014 you evolve resistance, they evolve virulence, round and round.",
+      "why": "Like Lewis Carroll's Red Queen telling Alice she must run to stay still, neither host nor pathogen can pull ahead permanently because each adaptation triggers the other's counter."
+    },
+    {
+      "q": "Mismatch theory",
+      "analogy": "Our Paleolithic bodies are like SUVs built for dirt roads forced to drive a freeway \u2014 genes tuned for scarcity, exercise, and pathogens now meet abundance, couches, and sterile air, producing obesity, diabetes, myopia, and allergies.",
+      "why": "Evolution works slowly but environments changed in centuries; traits that were adaptive in ancestral conditions (fat storage, sugar craving, strong inflammation) become maladaptive in modern environments, producing diseases of civilization that are not genetic failures but environmental mismatches."
+    },
+    {
+      "q": "Antagonistic pleiotropy",
+      "analogy": "Antagonistic pleiotropy is the genetic devil's bargain \u2014 a gene that helps you win early pays you back with disease late, like a credit card with a signup bonus and 30% interest that hits after retirement.",
+      "why": "Williams' theory posits that genes with beneficial effects on early reproduction can have harmful late-life effects and still be favored because selection's power wanes after reproduction; BRCA variants, testosterone-driven prostate aging, and p53 cancer dynamics fit this trade-off logic."
+    },
+    {
+      "q": "Fever as adaptive response",
+      "analogy": "Fever is the body's scorched-earth defense \u2014 raising core temp a few degrees slows pathogen replication and boosts immune cell activity, like cranking the thermostat in a room full of cold-loving intruders.",
+      "why": "Fever is an evolved, regulated response (not a symptom to suppress): elevated temperature inhibits many pathogens, accelerates leukocyte function, and is conserved across vertebrates; Kluger and others show that blocking fever worsens infection outcomes in animal models."
+    },
+    {
+      "q": "MHC diversity and disease resistance",
+      "analogy": "MHC genes are the immune system's lock pattern \u2014 pathogens are burglars trying to match keys \u2014 and populations with many different locks (high MHC diversity) make it hard for any one burglar to hit every house.",
+      "why": "Major Histocompatibility Complex alleles present pathogen peptides to T cells; heterozygote advantage and frequency-dependent selection maintain extraordinary MHC polymorphism, and populations with low MHC diversity (cheetahs, Tasmanian devils) suffer epidemic vulnerability."
+    },
+    {
+      "q": "Why do pathogens evolve resistance to antibiotics?",
+      "analogy": "Antibiotics are a pathogen genocide with 0.0001% survivors \u2014 the few mutants with efflux pumps, altered targets, or enzymes like beta-lactamase inherit the empty field and pass resistance on, often via plasmids like trading recipes between microbes.",
+      "why": "Strong directional selection on huge populations with short generation times rapidly enriches resistance alleles; horizontal gene transfer accelerates spread across species, and incomplete treatment courses select for the most resistant survivors, turning medicine cabinets into evolution engines."
+    },
+    {
+      "q": "How do pathogens evolve alongside human hosts?",
+      "analogy": "Pathogens and humans run a never-ending Red Queen race \u2014 HIV mutates faster than vaccines can be designed, influenza rewrites its surface every season, and sickle-cell alleles rose in Africa because malaria was selecting us right back.",
+      "why": "Pathogens evolve virulence, transmission, and immune evasion in response to host defenses, and hosts evolve resistance alleles in response to pathogens; outcomes include antigenic drift/shift, balancing selection on resistance genes, and coevolutionary lags that maintain disease over generations."
+    },
+    {
+      "q": "Role of natural selection in antibiotic resistance",
+      "analogy": "Natural selection writes every antibiotic resistance story \u2014 mutation provides the lottery tickets, the antibiotic is the draw, and winners (resistant cells) reproduce while losers die, with the jackpot paid in thousands of generations per day.",
+      "why": "Selection is the mechanism, not a metaphor: differential survival and reproduction of resistant genotypes under drug pressure directly increases allele frequency each generation; Lenski's long-term E. coli experiments and hospital epidemiology both make the allele-frequency math explicit."
+    },
+    {
+      "q": "Modern lifestyle and disease evolution",
+      "analogy": "Modern life is a buffet with no tigers \u2014 calories without chasing, hygiene without parasites, chairs without walking \u2014 and bodies tuned for the opposite become diabetic, myopic, autoimmune, and allergic within a generation.",
+      "why": "Abundance, sanitation, inactivity, and reduced microbial exposure create environments our Paleolithic genotypes never faced; the resulting mismatch produces rising rates of obesity, type 2 diabetes, asthma, allergies, and autoimmune disease captured by the 'hygiene hypothesis' and broader mismatch framework."
+    },
+    {
+      "q": "Sickle-cell anemia and malaria \u2014 evolutionary medicine",
+      "analogy": "The sickle-cell allele is a balancing act \u2014 two copies kill you with anemia, one copy saves you from malaria, so in malarial regions the heterozygote advantage keeps the allele at ~10\u201340% despite the deadly homozygotes.",
+      "why": "HbS heterozygotes are protected against Plasmodium falciparum because the parasite can't thrive in sickled red cells; balancing selection via heterozygote advantage maintains the allele at frequencies determined by the malaria death toll versus the sickle-cell death toll \u2014 a textbook case in any evolutionary medicine course."
+    },
+    {
+      "q": "Why sexual reproduction maintains allele diversity",
+      "analogy": "Sex is nature's card shuffler \u2014 recombination deals each offspring a novel hand, so parasites tracking last generation's deck find this generation's hand unfamiliar, which is why asexual clones get overwhelmed by pathogens.",
+      "why": "The Red Queen hypothesis for sex posits that parasites evolve to infect common host genotypes; sexual recombination produces rare genotype combinations that escape current parasite adaptation, maintaining genetic diversity and giving sex a twofold fitness advantage despite its twofold cost."
+    },
+    {
+      "q": "Antagonistic pleiotropy aging theory",
+      "analogy": "Aging is the delayed bill for genes that paid early \u2014 testosterone-fueled young-male strength becomes late-life prostate cancer, strong inflammation fighting young infections becomes late-life arthritis \u2014 selection paid the bonus and left future-you the invoice.",
+      "why": "Williams (1957) argued selection favors alleles with positive early-life and negative late-life effects because reproduction happens early; the force of selection declines with age, so late-acting harms accumulate, producing senescence as a byproduct of maximizing early fitness."
+    },
+    {
+      "q": "Evolutionary medicine definition",
+      "analogy": "Evolutionary medicine asks the 'why' instead of just the 'how' \u2014 not just how does a fever work, but why did our ancestors evolve to run one; not just how does obesity happen, but why does the body store fat so eagerly.",
+      "why": "Coined by Williams and Nesse (1991), evolutionary medicine applies evolutionary reasoning (natural selection, trade-offs, coevolution, mismatch, phylogenetic constraints) to understand disease susceptibility, symptoms as adaptations, and pathogen dynamics, turning medicine into a branch of applied evolutionary biology."
+    },
+    {
+      "q": "Hypertension and evolutionary mismatch",
+      "analogy": "Our kidneys evolved as salt misers in a low-sodium savanna \u2014 cling to every crystal \u2014 but in a world of french fries and soy sauce that same stinginess blows up blood pressure, a savanna kidney trying to cope with a grocery store.",
+      "why": "Ancestral Homo had sodium-conserving physiology adapted to sodium-poor diets; modern high-sodium diets overwhelm these mechanisms, raising plasma volume and blood pressure, especially in populations of recent tropical African ancestry whose kidneys retain salt most tightly \u2014 a paradigmatic mismatch disease."
+    },
+    {
+      "q": "Vestigial structures in medicine",
+      "analogy": "The appendix, wisdom teeth, and palmaris longus are evolutionary hand-me-downs \u2014 leftover furniture from an ancestor's apartment that still takes up space and occasionally catches fire (appendicitis, impacted molars).",
+      "why": "Reduced structures inherited from ancestors retain developmental pathways but have lost primary function; they cause disease when they fail (appendicitis, impacted wisdom teeth) and are evidence of descent with modification, illustrating how history constrains medical anatomy."
+    },
+    {
+      "q": "Pathogen evolution toward lower virulence?",
+      "analogy": "The classic textbook said pathogens 'should' evolve to be gentle so as not to kill their taxi-driver host \u2014 but Ewald showed that's only true when transmission requires a mobile host; mosquito-borne malaria gets nastier, droplet-borne colds get milder.",
+      "why": "Older 'conventional wisdom' claimed pathogens always evolve avirulence; modern theory shows direction depends on transmission mode \u2014 vector-, water-, or sit-and-wait transmission favors high virulence; mobile-host transmission favors low virulence \u2014 explaining why cholera stays deadly while cold viruses stay tame."
+    },
+    {
+      "q": "Why do we get sick? Evolutionary framework",
+      "analogy": "Nesse and Williams' six reasons \u2014 pathogens coevolve faster than us, environments mismatch our evolution, trade-offs limit perfection, constraints trap us with suboptimal designs, some symptoms are defenses we misread, and selection never designs for individual well-being.",
+      "why": "Their framework organizes disease causation into evolutionary categories: coevolution (infection), mismatch (chronic disease), trade-offs (antagonistic pleiotropy), constraints (vestigial structures, choking risk), defenses (fever, cough), and reproductive compromises; it replaces 'design flaws' thinking with evolutionary logic."
+    },
+    {
+      "q": "Horizontal gene transfer and drug resistance",
+      "analogy": "Bacteria swap resistance genes like teenagers trade Pok\u00e9mon cards \u2014 conjugation hands a plasmid across a cell bridge, transformation grabs naked DNA from the environment, transduction lets a virus deliver it \u2014 so one resistant strain can arm every bug in the gut overnight.",
+      "why": "Three mechanisms (conjugation, transformation, transduction) move genes across lineages, often on plasmids carrying multiple resistance cassettes; HGT explains the rapid global spread of resistance from one clinical strain to unrelated species, overwhelming any pace set by point mutation alone."
+    },
+    {
+      "q": "Nausea in pregnancy \u2014 evolutionary function",
+      "analogy": "Morning sickness is a built-in prenatal food inspector \u2014 peaks during organogenesis, triggers aversion to bitter, smelly, and high-pathogen foods, and correlates with lower miscarriage rates, as if evolution installed a dietary bouncer during the fetus's most vulnerable weeks.",
+      "why": "Profet and Flaxman\u2013Sherman propose nausea and vomiting of pregnancy evolved to protect the embryo from teratogens and pathogens; its timing coincides with organogenesis, its triggers match categories of risky foods, and its presence is associated with better pregnancy outcomes, making it a protective adaptation rather than a bug."
+    },
+    {
+      "q": "Evolution of immune specificity",
+      "analogy": "The adaptive immune system is a within-body evolution experiment \u2014 B and T cells undergo random gene shuffling, clones that bind pathogens proliferate while useless ones die, producing a mini Darwinian arms race inside your lymph nodes.",
+      "why": "Somatic V(D)J recombination and affinity maturation use mutation and selection on lymphocyte clones to generate targeted antibodies; this within-host selection, combined with long-term coevolution of innate immunity, reflects the Red Queen pressure exerted by rapidly evolving pathogens on a slow-evolving host."
+    },
+    {
+      "q": "Five evolutionary reasons we get sick",
+      "analogy": "We get sick because (1) pathogens outrun us, (2) our bodies mismatch modernity, (3) every adaptation has trade-offs, (4) evolution is trapped by constraints, and (5) some 'symptoms' (fever, cough, pain) are defenses, not diseases.",
+      "why": "This is the Nesse-Williams framework: coevolution, mismatch, trade-offs, constraints, and defenses explain why a 3.8-billion-year process produced bodies that still suffer; recognizing the category of a disease determines whether to suppress symptoms, change environments, or accept inherited limitations."
+    },
+    {
+      "q": "Evolutionary constraints in medicine",
+      "analogy": "Why does our trachea cross our esophagus so we can choke? Because evolution had to retrofit a breathing-eating tube from a fish ancestor \u2014 it's a house remodel where the plumbing was laid before anyone imagined a second story.",
+      "why": "Historical constraints mean selection works only on available variation and past designs; the laryngeal nerve's detour around the aorta, the blind spot in vertebrate eyes, and our narrow birth canal all reflect phylogenetic history the body cannot un-make, producing persistent medical vulnerabilities."
+    },
+    {
+      "q": "Obesity, Type 2 Diabetes, and Mismatch",
+      "analogy": "Neel's 'thrifty gene' fat storage was a feast-or-famine adaptation \u2014 store every calorie because winter is coming \u2014 now plugged into a 24-hour drive-through where winter never comes, so the savanna thermostat runs at maximum and pancreatic beta cells burn out.",
+      "why": "Ancestral energy-storage alleles favored under food scarcity cause chronic hyperinsulinemia and visceral fat deposition in modern caloric surplus; insulin resistance and T2D are mismatch diseases where a once-adaptive phenotype (Pima Indians, Pacific Islanders especially) is now pathological."
+    },
+    {
+      "q": "Inflammation as an adaptive defense \u2014 and mismatch",
+      "analogy": "Inflammation is a fire crew \u2014 rushes to infection, burns out pathogens, clears debris \u2014 but in a modern low-pathogen, high-stress environment the crew never stands down, and chronic low-grade inflammation smolders into heart disease, depression, and cancer.",
+      "why": "Acute inflammation is an evolved defense; chronic inflammation arises when ancestral triggers (parasites, wounds) are replaced by modern ones (sedentary life, processed diets, chronic stress) the system wasn't tuned for, producing 'inflammaging' and its associated chronic diseases \u2014 defense plus mismatch."
+    },
+    {
+      "q": "Parapatric speciation",
+      "analogy": "Parapatric speciation happens along a zipper \u2014 two populations occupy adjacent habitats with a narrow contact zone, gene flow continues at the seam, but divergent selection on each side still pulls them apart into two species, like neighborhoods on either side of a busy street growing distinct accents.",
+      "why": "With partial (not complete) geographic separation, strong habitat-specific selection overrides limited gene flow; grass populations on mine tailings versus adjacent clean soil diverge in metal tolerance and flowering time, producing reproductive isolation along an environmental gradient without full allopatry."
+    }
+  ]
+}
