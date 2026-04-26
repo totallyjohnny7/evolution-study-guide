@@ -2,7 +2,7 @@
 window.COURSE = {
   "id": "final",
   "title": "BIOL 4230 — Final Exam · Everything",
-  "subtitle": "Exam 1 + 2 + 3 consolidated · 56 sections · 407 MCQs · 378 flashcards · 170+ diagrams",
+  "subtitle": "Exam 1 + 2 + 3 consolidated · 56 sections · 407 MCQs · 412 flashcards · 170+ diagrams",
   "hasVisuals": true,
   "chapters": [
     {
@@ -12761,6 +12761,312 @@ window.COURSE = {
       "source": "final_review",
       "analogy": "A Formula 1 car is \"badly designed\" for grocery runs — but it's perfectly designed for its actual job. We're Pleistocene F1 cars stuck in traffic.",
       "hint": ""
+    },
+    {
+      "q": "Molecular clocks — what are they and how are they calibrated?",
+      "a": "A MOLECULAR CLOCK uses the rate of NEUTRAL MUTATIONS (which accumulate roughly constantly via drift) to estimate divergence times between lineages. CALIBRATION: anchor at least one node in the tree to a known fossil age, then extrapolate other split times from sequence differences. Different genes tick at different rates — cytochrome b is fast, rRNA is slow.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Like dating a tree by counting rings — but each species ticks at a different rate, so you need at least one known date (a fossil) to calibrate the clock.",
+      "hint": "TRAP: Molecular clocks aren't universal — different genes evolve at different rates and rates can vary across lineages. Always calibrated against fossils."
+    },
+    {
+      "q": "Long-branch attraction — what is it and why is it a parsimony pitfall?",
+      "a": "LONG-BRANCH ATTRACTION = when two unrelated lineages evolve rapidly (long branches), parsimony incorrectly groups them together because their many independent changes happen to overlap by chance. Misleads phylogenies. FIX: use maximum likelihood / Bayesian methods that model rate variation, or add more taxa to break up long branches.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Two strangers who both have many tattoos are NOT related — they just both have lots of ink. Parsimony sees overlap and falsely groups them.",
+      "hint": "KEY: Parsimony assumes few changes per branch. Long branches violate this — high rate of change means many parallel changes happen by chance."
+    },
+    {
+      "q": "Outgroup rooting — what is it and why is it needed?",
+      "a": "An OUTGROUP is a taxon known to be OUTSIDE the clade of interest, used to ROOT the tree (give it a direction) and POLARIZE characters (decide which states are ancestral vs. derived). Without an outgroup, a tree is unrooted — you can't tell ancestor from descendant. EX: when building a primate tree, use a non-primate mammal (e.g., tree shrew) as outgroup.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Tree without a root is like a sentence without word order — you don't know which way to read it. Outgroup gives the arrow of time.",
+      "hint": "KEY: Outgroup must be CLOSE ENOUGH to share homologies but OUTSIDE the focal clade."
+    },
+    {
+      "q": "Cladogram vs. phylogram — what's the difference?",
+      "a": "CLADOGRAM = shows only branching pattern (relationships); branch lengths are arbitrary. PHYLOGRAM = branch lengths represent amount of evolutionary change OR amount of time (chronogram). Cladograms answer \"who is related to whom\"; phylograms add \"how much has changed\" or \"how long ago\".",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Cladogram = subway map (shows connections, not distances). Phylogram = scaled subway map with actual mile distances drawn to scale.",
+      "hint": "TRAP: Both are valid; choose based on what you want to communicate. Cladogram for relationships only; phylogram for rate or time."
+    },
+    {
+      "q": "Trophy hunting paradox — why does it shrink the desired trait?",
+      "a": "Trophy hunters target the LARGEST horns / tusks / bodies — exactly the trait they want to harvest. By killing carriers BEFORE they reproduce, hunters remove \"big-trait\" alleles from the gene pool. Result: average trait size DECREASES across generations. The very feature trophy hunters value is the one their behavior eliminates.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Imagine cutting down every tall tree before it produces seeds — within a few generations the forest is short. Same logic for big-horn alleles.",
+      "hint": "KEY: Bighorn sheep ~20% horn-size drop in 30 years. Mozambique elephants 18% → 33% tuskless in ~15 years."
+    },
+    {
+      "q": "Pleiotropic costs of antibiotic resistance — what happens when the drug is removed?",
+      "a": "Many resistance alleles carry a FITNESS COST in the absence of the antibiotic — they slow growth, reduce competitiveness, or break a pathway. When the drug is withdrawn, susceptible bacteria OUT-COMPETE the resistant ones, and resistance frequency may DROP back over time. This is the rationale for \"drug rotation\" and \"drug holidays\" in clinical management.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Resistant bacteria are wearing armor — protective in battle (drug present), but weighs them down when there's no fighting (no drug).",
+      "hint": "KEY: Cost of resistance can drive REVERSION when antibiotic pressure is removed — but cost-free compensatory mutations often arise, locking resistance in."
+    },
+    {
+      "q": "Refugia strategy — what is it and why does it slow resistance evolution?",
+      "a": "In agriculture, leave UNTREATED PATCHES (refugia) within Bt-crop fields where SUSCEPTIBLE pests can still thrive. Susceptibles mate with the rare resistant survivors → most offspring are heterozygous and STILL killed by Bt → resistance allele can't fix. Required by EPA for Bt corn growers (~20% of acreage as refugia).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Like keeping a crowd of \"honest\" players in the casino — the few cheaters get diluted out, can't take over the table.",
+      "hint": "KEY: Refugia work because Bt resistance is recessive. Heterozygotes die from Bt → resistant allele stays rare."
+    },
+    {
+      "q": "Vertical vs. horizontal gene transfer in bacteria — why does HGT speed resistance?",
+      "a": "VERTICAL = parent → offspring (slow, generation-by-generation). HORIZONTAL = bacterium → unrelated bacterium via plasmids (conjugation), free DNA (transformation), or phage (transduction). HGT can spread resistance ACROSS species boundaries in days. A resistance gene from a soil microbe can jump to a hospital pathogen overnight, bypassing reproduction entirely.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Vertical = passing a recipe down through your family. Horizontal = posting it in a public group chat where strangers grab it.",
+      "hint": "KEY: HGT crosses species boundaries — that's why hospital MRSA can pick up new resistance genes from completely unrelated bacteria."
+    },
+    {
+      "q": "Antagonistic pleiotropy in evo-devo — what is it?",
+      "a": "A SINGLE gene affects MULTIPLE traits (pleiotropy). When effects pull in opposite directions (good for trait A, bad for trait B), selection can't optimize both. Constrains evolution. EX: testosterone — boosts mating early, increases prostate cancer late. EX: developmental genes that build the eye also affect immune function.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "A radio knob that controls both volume AND treble — turn it up for one, mess up the other. Selection has to compromise.",
+      "hint": "KEY: Pleiotropy is one of the constraints that prevents selection from designing organisms optimally — every gene has side effects."
+    },
+    {
+      "q": "Genetic drift can fix non-adaptive traits — example?",
+      "a": "In small populations, DRIFT can fix alleles regardless of fitness. A trait need not be adaptive to become universal — it can fix by chance. EX: many morphological details (vertebrate skeletal proportions, molecular sequence variants) are likely the result of drift, NOT selection. The \"neutral theory\" (Kimura) argues most molecular evolution is drift-driven.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "A coin landing heads 100 times in a row in a tiny sample doesn't mean heads is \"better\" — just lucky. Same with traits in small populations.",
+      "hint": "KEY: Not every trait is an adaptation. Some are \"frozen accidents\" — drift fixed them, selection never tested them."
+    },
+    {
+      "q": "Spandrels (Gould & Lewontin 1979) — what are they?",
+      "a": "NON-ADAPTIVE BYPRODUCTS of selection on something else. Named after architectural spandrels — the triangular spaces left over when arches meet. Builders didn't plan them; they're a structural consequence. Similarly, biological \"spandrels\" are traits that arise as side effects, not adaptations. EX: human chin (byproduct of jaw evolution), red blood color (byproduct of hemoglobin chemistry).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Triangular gap between two arches in a cathedral — nobody designed it, it's what's left when the arches were built. Some biological traits are like this.",
+      "hint": "TRAP: Don't assume every trait has an adaptive explanation. The \"adaptationist program\" (Gould's critique) over-attributes design."
+    },
+    {
+      "q": "Atavisms — what are they and what do they reveal?",
+      "a": "OCCASIONAL REAPPEARANCE of an ancestral trait that the lineage normally suppresses. EX: rare whales born with hindlimbs (ancestral tetrapod legs). Snakes occasionally born with leg buds. Humans rarely born with vestigial tails. Reveals that ancestral developmental programs are STILL ENCODED in the genome — just usually silenced.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Like accidentally pulling up old code from a hidden git branch — the program was still there, just not normally executed.",
+      "hint": "KEY: Atavisms are evidence of common ancestry — modern species still carry the genetic toolkit for ancestral structures."
+    },
+    {
+      "q": "Cryptic female choice — what is it?",
+      "a": "CRYPTIC FEMALE CHOICE = the female reproductive tract biases which sperm fertilize the egg, AFTER mating has occurred. Females can store sperm selectively, expel it, or use uterine contractions to favor certain males' sperm. Adds a layer of female mate choice that's invisible at the behavioral level. Documented in birds, insects, mammals.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "A bouncer who lets everyone IN the club but selectively guides them to the VIP room. The visible part of mate choice isn't the whole story.",
+      "hint": "KEY: Female choice doesn't end at copulation — it continues inside her tract."
+    },
+    {
+      "q": "Fisherian sex ratio theory — why is 1:1 the ESS?",
+      "a": "R.A. FISHER (1930): equal sex ratio is evolutionarily stable because of FREQUENCY-DEPENDENT selection. If males become rare, each male has higher fitness (more mating opportunities) → parents producing sons gain → male frequency rises. If females become rare, same logic in reverse. Equilibrium at 50:50. NOTE: assumes equal cost to produce each sex; biased ratios appear when costs differ.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "Like a job market — if engineers are scarce, salaries rise, more people become engineers. Sex ratio settles where neither sex has an advantage.",
+      "hint": "KEY: 1:1 ratio is ESS, not optimal \"for the species.\" It's individual-level selection on parents."
+    },
+    {
+      "q": "Optimal clutch size — Lack's hypothesis (1947).",
+      "a": "DAVID LACK proposed selection favors the clutch size that maximizes the NUMBER OF SURVIVING OFFSPRING, not number of EGGS LAID. Adding eggs beyond optimum: parent can't feed all chicks → some starve → fitness DECREASES. Optimal clutch = peak of the curve trading offspring number against per-offspring survival. Tested in great tits, swallows.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "A delivery driver: more packages per trip ISN'T always better — too many means some get late, lost, or damaged. Optimum maximizes successful deliveries.",
+      "hint": "KEY: Selection optimizes # surviving offspring, not # produced. More eggs ≠ more fitness."
+    },
+    {
+      "q": "Cost of reproduction experiments — what do they show?",
+      "a": "Manipulate clutch size or reproductive effort experimentally, measure parental survival/future reproduction. CONSISTENT FINDING: parents that invest more in current reproduction have LOWER future fitness — confirms the \"current vs. future\" trade-off central to life-history theory. Demonstrated in birds (clutch enlargement), reptiles (egg removal), insects.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "Burning the candle at both ends — each year you push reproduction harder, you have less left for next year. Trade-off is REAL, not just theoretical.",
+      "hint": "KEY: Experimental proof that reproductive effort has a survival/future-reproduction cost."
+    },
+    {
+      "q": "Bet-hedging — what is it and when does it evolve?",
+      "a": "In UNPREDICTABLE environments, an organism may sacrifice maximum expected fitness for REDUCED VARIANCE — better to do \"OK\" every year than \"great\" sometimes and \"zero\" other years. EX: desert annuals stagger seed germination across years; some seeds wait through good years to germinate in bad ones, ensuring SOME offspring survive any given year. Geometric mean fitness > arithmetic mean fitness when environments fluctuate.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "Investment portfolio diversification — don't put all your eggs in one stock. In nature, don't germinate all seeds in one year if next year's weather is unpredictable.",
+      "hint": "KEY: Selection optimizes GEOMETRIC mean fitness across generations, not arithmetic mean. Hedge against bad years."
+    },
+    {
+      "q": "Dobzhansky-Muller incompatibilities — what are they?",
+      "a": "When two populations diverge in allopatry, each accumulates mutations at DIFFERENT loci that are individually neutral within their population but INCOMPATIBLE when combined. In hybrids, the mismatched alleles produce sterility / inviability. Explains how reproductive isolation evolves WITHOUT either lineage going through a fitness valley. NAMED FOR Dobzhansky (1937) + Muller (1942).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "Two software teams independently update different parts of a shared codebase. Each version works on its own, but merging them produces conflicts that crash the program.",
+      "hint": "KEY: Hybrid sterility doesn't require either parent to be unfit — only that their accumulated changes don't mix."
+    },
+    {
+      "q": "Ring species — Ensatina salamanders example.",
+      "a": "A \"RING SPECIES\" forms a chain of populations around a geographic barrier, with neighboring populations interbreeding but the END populations of the ring REPRODUCTIVELY ISOLATED where they meet. ENSATINA ESCHSCHOLTZII salamanders ring California's Central Valley — Northern + Southern populations meet in the south but can't interbreed, while intermediate populations all interbreed locally. Demonstrates speciation as a CONTINUUM.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "A game of telephone around a circle — each whisper sounds like the last one, but the start and end of the chain are completely different.",
+      "hint": "KEY: Shows speciation isn't binary. Same chain can include both \"same species\" and \"different species\" depending on which populations meet."
+    },
+    {
+      "q": "Survivorship bias in the fossil record — what does it mean?",
+      "a": "Only certain organisms FOSSILIZE WELL — those with hard parts (shells, bones, teeth), those buried quickly in low-oxygen sediments, those abundant enough that some chance specimens survive. Soft-bodied animals, terrestrial species in dry climates, rare lineages — all DRAMATICALLY UNDERSAMPLED. The fossil record is not a random sample of past life; it's biased toward the easily preserved.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "Like trying to reconstruct popular culture from only what's in the city dump — heavily skewed toward beer cans and broken glass, missing songs, conversations, ideas.",
+      "hint": "KEY: Diversity curves built from fossils underestimate true past diversity, especially for soft-bodied and rare groups."
+    },
+    {
+      "q": "Pull of the Recent — what is it?",
+      "a": "Lineages still ALIVE TODAY are EASIER TO SAMPLE than extinct ones at any given past depth — more recent fossils are more abundant and better preserved. This INFLATES apparent diversity in recent geologic time, making it look like diversity has been climbing when it may just be a sampling artifact.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "Looking at a beach with a metal detector — you find more coins from this year than from 1900, not because more coins were dropped, but because newer ones haven't corroded yet.",
+      "hint": "TRAP: Don't take fossil diversity curves at face value — recent times are over-sampled."
+    },
+    {
+      "q": "Cope's rule — what is it and is it real?",
+      "a": "COPE'S RULE: lineages tend to evolve toward LARGER body size over time. Documented in horses, dinosaurs, mammals, foraminifera. EXPLANATIONS: larger = better predator/prey dynamics, thermoregulation, longevity. CRITIQUES: may be statistical artifact (lineages start small because there's nowhere smaller to go); not universal — some lineages shrink (insular dwarfism, parasites).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "Like startups growing into mega-corps — many do, but it's not a law, just a tendency. Some shrink (boutique stores), some go extinct.",
+      "hint": "KEY: Cope's rule is a TENDENCY, not a universal law. Counter-examples (dwarfism, parasitism) abound."
+    },
+    {
+      "q": "Dollo's law — what does it say?",
+      "a": "DOLLO'S LAW: complex adaptations, once LOST, are RARELY RE-EVOLVED in the same form. EX: snakes lost legs → almost never re-evolved them (a few atavisms aside). Birds lost teeth → never re-evolved them. The genetic and developmental machinery decays once unused, making re-evolution unlikely.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "Tearing down a building is easy; rebuilding the EXACT same building from scratch is nearly impossible. Same with complex adaptations.",
+      "hint": "KEY: Re-evolution of LOST complex traits is rare because regulatory networks decay once unused."
+    },
+    {
+      "q": "Mutualism instability — why is cheating a constant threat?",
+      "a": "In any mutualism, \"CHEATERS\" can gain benefits without paying costs (e.g., orchids that mimic bee mates without offering nectar; gut bacteria that exploit hosts without providing services). CHEATERS HAVE FITNESS ADVANTAGE OVER COOPERATORS in the short term. Stable mutualisms require ENFORCEMENT: punishment, partner choice, or sanctions. EX: legumes shut down nitrogen-fixing nodules that don't deliver enough N.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Cooperative dinner where everyone's supposed to bring a dish. The freeloader who shows up empty-handed eats well — until the host stops inviting them.",
+      "hint": "KEY: Mutualism isn't automatically stable. Selection always favors cheaters; mechanisms to punish cheating must evolve."
+    },
+    {
+      "q": "Wolbachia — what is it and why is it evolutionarily famous?",
+      "a": "WOLBACHIA = endosymbiotic bacterium infecting >50% of insect species. Manipulates HOST REPRODUCTION to favor its own transmission (mother → egg only): induces CYTOPLASMIC INCOMPATIBILITY (uninfected females × infected males = dead embryos), feminizes genetic males, kills male offspring, induces parthenogenesis. One of the most successful intracellular parasites — and an active tool in mosquito-borne disease control (releases of Wolbachia-infected Aedes block dengue/Zika transmission).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "A backseat driver who hijacks the steering wheel — Wolbachia takes over reproduction so only its own carriers spread.",
+      "hint": "KEY: Wolbachia's cytoplasmic incompatibility is being used to release sterile mosquitoes and control dengue."
+    },
+    {
+      "q": "Greenbeard genes — what are they?",
+      "a": "A \"GREENBEARD GENE\" (Hamilton 1964; Dawkins 1976) is a single locus that simultaneously: (1) produces a recognizable PHENOTYPIC marker, (2) makes the carrier RECOGNIZE the marker in others, (3) makes the carrier TREAT marked individuals altruistically. Special case of kin selection without true kinship — recognition is based on the marker, not relatedness. EX: Gp9 gene in fire ants; csA in Dictyostelium slime molds.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "Imagine a genetic uniform that helps you spot fellow uniform-wearers AND makes you help them. The uniform IS the gene that codes for the helping.",
+      "hint": "KEY: Rare in nature because greenbeard genes are vulnerable to \"false beards\" — cheaters who carry the marker without the helping behavior."
+    },
+    {
+      "q": "Spite — definition and why is it rare?",
+      "a": "SPITE = behavior that REDUCES BOTH actor and recipient fitness. Should be selected against (actor pays a cost for nothing). RARE BUT REAL: occurs when the recipient is NEGATIVELY related (less related than average to the population), so harming them benefits the actor's genes indirectly. EX: bacterial bacteriocins that kill non-self strains, even at producer cost.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "Punching a stranger in a crowd while breaking your own hand — only makes sense if \"stranger\" was about to compete with your relatives for resources.",
+      "hint": "KEY: Hamilton's rule extends to spite when r is NEGATIVE: -|r|·B > C means harming the unrelated is favored."
+    },
+    {
+      "q": "Cooperative breeding — what is it and where is it seen?",
+      "a": "COOPERATIVE BREEDING = social system where non-breeding adult \"HELPERS\" assist a breeding pair raise young. EX: Florida scrub-jays, meerkats, Seychelles warblers, naked mole-rats, African wild dogs. Helpers gain INCLUSIVE FITNESS (helping kin) and may gain TERRITORY INHERITANCE or experience for future breeding. Common when ecological constraints (limited territories, harsh environments) make independent breeding hard.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "A multigenerational household where the older sibling helps raise the younger ones — they help when independent housing isn't available.",
+      "hint": "KEY: Cooperative breeding evolves when (1) ecological constraints limit dispersal AND (2) helpers can gain inclusive fitness from kin."
+    },
+    {
+      "q": "CCR5-Δ32 — what is it and what does it do?",
+      "a": "A 32-base-pair DELETION in the CCR5 gene (chemokine receptor). Homozygotes (Δ32/Δ32) are highly RESISTANT to HIV infection because HIV uses CCR5 as a co-receptor to enter cells. Allele frequency ~10% in Northern Europeans, near 0% in Africans/East Asians. Origin debated: possibly selected by historical bubonic plague or smallpox epidemics in Europe.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "HIV needs a key that fits a specific lock (CCR5). Δ32 mutation breaks the lock — virus can't get in.",
+      "hint": "KEY: First gene therapy \"cure\" of HIV (Berlin patient) used a bone marrow transplant from a CCR5-Δ32/Δ32 donor."
+    },
+    {
+      "q": "Ghost lineages in human evolution — what are they?",
+      "a": "GENETIC SIGNALS in modern human DNA that point to interbreeding with ARCHAIC POPULATIONS we have NO FOSSILS for. EX: West African genomes carry ~2-19% DNA from an unknown archaic hominin (\"Ghost X\"); some Asian populations show signal of a second Denisovan-like population. The fossil record is incomplete — DNA reveals lineages we've never seen bones from.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Like finding email threads in your inbox from someone whose phone number you never had — DNA reveals contacts the archaeology missed.",
+      "hint": "KEY: Modern genomes are a more complete record of past human contact than the fossil record itself."
+    },
+    {
+      "q": "Homo floresiensis — the \"Hobbit\" species.",
+      "a": "H. FLORESIENSIS, discovered 2003 on Flores, Indonesia. ~1m tall, ~400 cc brain (chimp-sized), but used STONE TOOLS and survived to ~50 kya. Likely descended from Asian H. erectus that underwent INSULAR DWARFISM on Flores. Coexisted with modern humans. Demonstrates that small brain ≠ no tools and that human evolution had MULTIPLE concurrent lineages until very recently.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Pygmy elephants on islands shrink for the same reason — limited resources favor smaller bodies. Even hominins shrunk on islands.",
+      "hint": "KEY: Brain SIZE alone doesn't determine cognitive capacity — H. floresiensis made tools with 400 cc brain."
+    },
+    {
+      "q": "Drug holidays — what are they and why do they help manage resistance?",
+      "a": "INTENTIONALLY STOPPING an antibiotic for a period to let SUSCEPTIBLE bacteria recover and out-compete resistant ones (which carry fitness costs). Used in HIV, TB, and agricultural antibiotic management. Works best when resistance has a MEASURABLE COST — without selection pressure, resistant strains lose ground.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Letting a field lie fallow — periodically removing the selective pressure (the crop / the drug) lets the pre-resistant population rebound.",
+      "hint": "KEY: Only works if resistance is COSTLY without the drug. Cost-free resistance won't revert."
+    },
+    {
+      "q": "Microbiome dysbiosis — what is it and what diseases is it linked to?",
+      "a": "DYSBIOSIS = disruption of the normal gut microbiome — loss of diversity, overgrowth of pathogens, or shifted community composition. CAUSES: antibiotic overuse, low-fiber Western diet, c-section birth (bypasses vaginal microbiome transfer). LINKED TO: inflammatory bowel disease, obesity, type 2 diabetes, autoimmune disorders, depression (gut-brain axis). Mismatch disease — modern hygiene/diet disrupts a microbiome we co-evolved with for millennia.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "A rainforest cleared and replanted with one crop — loses resilience and gets diseases the diverse forest never had. Same with the gut.",
+      "hint": "KEY: We co-evolved with our gut microbiome. Modern lifestyle disrupts it → cascading health effects."
+    },
+    {
+      "q": "Crick's central dogma exceptions — epigenetic inheritance.",
+      "a": "CENTRAL DOGMA: DNA → RNA → protein (information flows one way, not back into the genome). EXCEPTIONS: (1) reverse transcription (RNA → DNA, retroviruses); (2) PRIONS (protein → protein conformational templating); (3) EPIGENETIC INHERITANCE — DNA methylation patterns and histone modifications can be inherited transgenerationally without changing the DNA sequence. EX: Dutch Hunger Winter survivors' grandchildren show metabolic effects via epigenetics.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Imagine a cookbook where dog-eared pages and sticky notes (epigenetic marks) get passed to the next generation along with the recipes (DNA). Marks shape which recipes get cooked.",
+      "hint": "KEY: Epigenetic inheritance is real but LIMITED — most marks reset between generations. Doesn't resurrect Lamarckism wholesale."
     }
   ]
 };
