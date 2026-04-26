@@ -2,7 +2,7 @@
 window.COURSE = {
   "id": "final",
   "title": "BIOL 4230 — Final Exam · Everything",
-  "subtitle": "Exam 1 + 2 + 3 consolidated · 56 sections · 407 MCQs · 0 flashcards · 170+ diagrams",
+  "subtitle": "Exam 1 + 2 + 3 consolidated · 56 sections · 407 MCQs · 378 flashcards · 170+ diagrams",
   "hasVisuals": true,
   "chapters": [
     {
@@ -9359,5 +9359,3408 @@ window.COURSE = {
       "textbookRef": "ch18"
     }
   ],
-  "flashcards": []
+  "flashcards": [
+    {
+      "q": "Lamarck — right & wrong",
+      "a": "- RIGHT: species change over time; first serious evolutionary framework. WRONG: mechanism (inheritance of acquired characteristics / use-disuse). Acquired traits aren't heritable.\n- Analogies: Bodybuilder dad's kids aren't born jacked. Editing a printed book ≠ changing publisher's master file. Instagram filter ≠ original photo.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Bodybuilder dad's kids aren't born jacked. Editing a printed book ≠ changing publisher's master file. Instagram filter ≠ original photo.",
+      "hint": ""
+    },
+    {
+      "q": "Charles Lyell",
+      "a": "- **UNIFORMITARIANISM** — present geological processes acting slowly explain past. Gave Darwin the TIME he needed.\n- Analogies: Drip carving Grand Canyon. Compound interest. Saving $1/day across a lifetime.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Drip carving Grand Canyon. Compound interest. Saving $1/day across a lifetime.",
+      "hint": ""
+    },
+    {
+      "q": "William Smith",
+      "a": "- **STRATIGRAPHY** — different rock layers contain different fossil assemblages. Established (1) extinction is real, (2) Earth has biotic eras. Used fossils to date and correlate strata.\n- Analogies: Tree rings for the planet. Layered cake with different sprinkles. Backyard archaeological dig.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Tree rings for the planet. Layered cake with different sprinkles. Backyard archaeological dig.",
+      "hint": ""
+    },
+    {
+      "q": "Darwin — actual content of his theory",
+      "a": "- Descent with modification by natural selection. (1) VARIATION (2) HERITABILITY (3) DIFFERENTIAL SURVIVAL/REPRODUCTION. Origin of Species 1859.\n- Analogy: 3-ingredient recipe — same as Ch I's V-H-F triangle.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "3-ingredient recipe — same as Ch I's V-H-F triangle.",
+      "hint": ""
+    },
+    {
+      "q": "Wallace",
+      "a": "- Independently conceived natural selection in Malay Archipelago. Sent Darwin a letter 1858 → forced publication. Joint Linnean Society presentation 1858. Origin 1859.\n- Analogies: Two scientists racing to patent. Newton vs. Leibniz with calculus. Procrastinator's coworker emails draft of same essay.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Two scientists racing to patent. Newton vs. Leibniz with calculus. Procrastinator's coworker emails draft of same essay.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP: Who SPURRED Darwin to publish?",
+      "a": "- **WALLACE.** 1858 letter. Not Lyell, not Smith, not Malthus (Malthus *inspired*; Wallace *forced*).\n- Mnemonic: \"Wallace's Wake-up call.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"Wallace's Wake-up call.\""
+    },
+    {
+      "q": "Great Chain of Being",
+      "a": "- Pre-Darwinian fixed hierarchy: minerals→plants→animals→humans→angels. Aristotelian. Three flaws: (1) species FIXED (2) NO extinction (3) NO common ancestry.\n- Analogies: Corporate org chart welded shut. Library nobody edits. Tier list with welded tiers.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Corporate org chart welded shut. Library nobody edits. Tier list with welded tiers.",
+      "hint": ""
+    },
+    {
+      "q": "Mnemonic for the original five",
+      "a": "- \"**Lamarck Lifts Wrong Weights; Darwin Wins**\"\n- LAMARCK = use/disuse | LYELL = deep time | SMITH = stratigraphy + extinction | DARWIN = natural selection | WALLACE = co-discoverer + the letter.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Steps that led Darwin to natural selection",
+      "a": "- (1) Beagle 1831–1836 — geographic variation (Galápagos finches/tortoises). (2) Lyell's geology = deep time. (3) Malthus = populations grow geometrically, resources don't. (4) Synthesis = V + H + competition = NS. (5) Theory ~1838, sat on it. (6) Wallace 1858 letter forces publication. Joint 1858; Origin 1859.\n- Analogy: Cooking show — Darwin had ingredients on counter for 20 years. Wallace pressed \"go.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Cooking show — Darwin had ingredients on counter for 20 years. Wallace pressed \"go.\"",
+      "hint": ""
+    },
+    {
+      "q": "Hypothesis",
+      "a": "- Tentative, testable explanation for specific observation. Provisional. Falsifiable. Generates predictions.\n- Example: \"Bacteria survive penicillin because of pre-existing resistance mutations.\"\n- Analogy: Defendant's alibi — checkable.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Defendant's alibi — checkable.",
+      "hint": ""
+    },
+    {
+      "q": "Scientific Theory",
+      "a": "- Well-substantiated explanation of broad phenomenon, supported by extensive evidence from multiple independent lines, survived repeated testing, generates many testable hypotheses.\n- Examples: evolution, germ, cell, gravity, atomic theories.\n- Analogy: Skyscraper that's been stress-tested by 150 years of earthquakes/hurricanes/engineers.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Skyscraper that's been stress-tested by 150 years of earthquakes/hurricanes/engineers.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP: \"It's just a theory.\"",
+      "a": "- Everyday \"theory\" = guess. Scientific \"theory\" = HIGHEST level of explanatory framework. Opposites.\n- Analogies: Like \"literally\" — meaning flipped. Black-belt vs. kid in karate uniform. Heavyweight champ vs. \"guy who shows up to gym.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Like \"literally\" — meaning flipped. Black-belt vs. kid in karate uniform. Heavyweight champ vs. \"guy who shows up to gym.\"",
+      "hint": ""
+    },
+    {
+      "q": "Hypothesis vs. Theory comparison",
+      "a": "| Feature | Hypothesis | Theory |\n| Scope | Specific observation | Broad phenomenon |\n| Support | Provisional | Massive, converging |\n| Number | Many; theories generate them | Few; emerge from many surviving hypotheses |\n| Status | Could be wrong | Could in principle be falsified, rarely is |\n| Example | \"Resistance heritable in this strain\" | Theory of evolution |",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Scientific reasoning chain (antibiotic resistance)",
+      "a": "- (1) Observation: some bacteria survive penicillin. (2) Hypothesis: pre-existing mutations confer resistance. (3) Prediction: offspring of survivors resistant. (4) Experiment: culture, test. (5) Result: supported (not \"proven\"). (6) After many independent replications → part of theory.\n- Analogy: Crime investigation — observation/hypothesis/prediction/experiment/theory.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Crime investigation — observation/hypothesis/prediction/experiment/theory.",
+      "hint": ""
+    },
+    {
+      "q": "Lines of evidence supporting evolution",
+      "a": "- (1) GENETICS — DNA similarity tracks predicted relationships. (2) PALEONTOLOGY — fossil succession matches predictions. (3) COMPARATIVE ANATOMY — homologous structures. (4) BIOGEOGRAPHY — related species cluster geographically. (5) DIRECT OBSERVATION — antibiotic resistance, peppered moths, Galápagos finches.\n- Analogy: 5 unrelated witnesses describing same suspect.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "5 unrelated witnesses describing same suspect.",
+      "hint": ""
+    },
+    {
+      "q": "Could evolution be falsified in principle?",
+      "a": "- YES — that's what makes it scientific. Haldane's \"rabbit fossils in the Precambrian\" example. 165+ years of looking has not produced such evidence.\n- Analogy: Locked safe with millions of failing combos — every failed crack = more confidence.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Locked safe with millions of failing combos — every failed crack = more confidence.",
+      "hint": ""
+    },
+    {
+      "q": "Carolus Linnaeus (1707–1778)",
+      "a": "- Father of modern TAXONOMY. (1) **Binomial nomenclature** (Genus species, e.g., *Homo sapiens*). (2) **Nested hierarchy** (Kingdom→Phylum→Class→Order→Family→Genus→Species). Believed species FIXED & created by God; system *accidentally* mirrored common descent.\n- Analogies: Folders inside folders on a computer. First+last name system. Librarian who invented his own system that runs every library 250 years later.\n- TRAP: Linnaeus was a CREATIONIST. His system survived because the *pattern* it captured was real.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Folders inside folders on a computer. First+last name system. Librarian who invented his own system that runs every library 250 years later.",
+      "hint": "Linnaeus was a CREATIONIST. His system survived because the *pattern* it captured was real."
+    },
+    {
+      "q": "Georges-Louis Buffon (1707–1788)",
+      "a": "- Earliest serious evolutionary thinker. (1) Earth way older than ~6,000 yrs (calculated ~70,000 — short, but radical). (2) Species in different regions can change via \"organic particles.\" (3) Life and planet have a HISTORY. Did NOT propose a real mechanism.\n- Analogies: Pre-alpha version of evolution. The guy who first whispers \"the king isn't divine.\"\n- KEY: His \"populations change over time\" claim survived into modern theory.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Pre-alpha version of evolution. The guy who first whispers \"the king isn't divine.\"",
+      "hint": "His \"populations change over time\" claim survived into modern theory."
+    },
+    {
+      "q": "James Hutton (1726–1797). ⚠ CONFUSED WITH LYELL",
+      "a": "- ORIGINATOR of UNIFORMITARIANISM. \"The present is the key to the past.\" Same slow processes acting today acted in past → Earth vastly older than thought. Lyell *popularized and extended* via *Principles of Geology* (1830-33), which Darwin carried on the Beagle.\n- Analogies: Hutton wrote the album, Lyell made it platinum. Inventor vs. salesman.\n- TRAP: \"Who PROPOSED uniformitarianism\" → HUTTON. \"Who gave Darwin deep-time on the Beagle\" → LYELL.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Hutton wrote the album, Lyell made it platinum. Inventor vs. salesman.",
+      "hint": "\"Who PROPOSED uniformitarianism\" → HUTTON. \"Who gave Darwin deep-time on the Beagle\" → LYELL."
+    },
+    {
+      "q": "Georges Cuvier (1769–1832)",
+      "a": "- Established **EXTINCTION** as a scientific fact via comparative anatomy (mammoths/mastodons distinct from living elephants). Founder of paleontology. Proposed **CATASTROPHISM**. **Anti-evolutionist** — opposed Lamarck.\n- Analogies: Detective who proves the murder happened but blames wrong killer. Right about data, wrong about explanation.\n- KEY: Cuvier and Lamarck were colleagues who hated each other's ideas.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Detective who proves the murder happened but blames wrong killer. Right about data, wrong about explanation.",
+      "hint": "Cuvier and Lamarck were colleagues who hated each other's ideas."
+    },
+    {
+      "q": "Catastrophism vs. Uniformitarianism",
+      "a": "| Catastrophism | Uniformitarianism |\n| Cuvier | Hutton → Lyell |\n| Sudden violent events | Slow steady processes always |\n| Compatible with young Earth | Requires deep time |\n| New species after each catastrophe (≈ creation events) | Life can change gradually |\n| Largely rejected | WON, foundation of modern geology |\n- Analogies: Movie with explosions every 10 min vs. same movie at 0.1× for billions of years. Boss-fight model vs. grinding XP.\n- MODERN: catastrophes happen (Chicxulub) but baseline is uniformitarian.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Movie with explosions every 10 min vs. same movie at 0.1× for billions of years. Boss-fight model vs. grinding XP.",
+      "hint": ""
+    },
+    {
+      "q": "Nicolaus Steno (1638–1686)",
+      "a": "- 1666 realized \"tongue stones\" = fossilized shark teeth (first formal recognition fossils = once-living things). Founded **STRATIGRAPHY**. **PRINCIPLE OF SUPERPOSITION**: undisturbed strata, oldest at bottom, youngest at top.\n- Analogies: Layered laundry pile. Sediment in glass after stirring. Snow layers.\n- KEY: Steno = tongue stones + superposition. Smith built fossil-correlation on top.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Layered laundry pile. Sediment in glass after stirring. Snow layers.",
+      "hint": "Steno = tongue stones + superposition. Smith built fossil-correlation on top."
+    },
+    {
+      "q": "Mary Anning (1799–1847)",
+      "a": "- Working-class British paleontologist; collected spectacular **marine reptile fossils** (ichthyosaurs, plesiosaurs) + first complete pterosaur in Britain. Made extinction undeniable to the public.\n- Analogies: Receipts for Cuvier's claims. Crime scene photographer whose work convicts.\n- KEY: Data-collector, not theorist. Her finds settled an argument she wasn't formally part of.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Receipts for Cuvier's claims. Crime scene photographer whose work convicts.",
+      "hint": "Data-collector, not theorist. Her finds settled an argument she wasn't formally part of."
+    },
+    {
+      "q": "William Paley (1743–1805)",
+      "a": "- *Natural Theology* (1802). **WATCHMAKER ARGUMENT**: complex anatomy implies divine designer. Darwin literally occupied Paley's old rooms at Cambridge, READ the book, was impressed — then showed natural selection produces apparent design without a designer.\n- Analogies: Paley said \"this iPhone clearly has an inventor.\" Darwin: \"what if iPhones evolved from rocks via 4 billion years of competition?\" Magician's trick — Paley said no human could explain it; Darwin found out how.\n- TRAP: Paley wasn't a contemporary opponent — he died before Darwin was born; Darwin engaged with his BOOK.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Paley said \"this iPhone clearly has an inventor.\" Darwin: \"what if iPhones evolved from rocks via 4 billion years of competition?\" Magician's trick — Paley said no human could explain it; Darwin found out how.",
+      "hint": "Paley wasn't a contemporary opponent — he died before Darwin was born; Darwin engaged with his BOOK."
+    },
+    {
+      "q": "Thomas Malthus (1766–1834)",
+      "a": "- *Essay on Population* (1798): populations grow **geometrically** (1→2→4→8); food **arithmetically** (1→2→3→4) → inevitable competition. Both Darwin AND Wallace independently read Malthus → applied universal struggle to organisms with heritable variation = engine of natural selection.\n- Analogies: Geometric vs. arithmetic = compound interest vs. simple savings. Spark plug vs. fuel. Starting pistol both Darwin and Wallace heard from opposite ends of world.\n- KEY: Malthus INSPIRED. Wallace TRIGGERED. Different roles.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Geometric vs. arithmetic = compound interest vs. simple savings. Spark plug vs. fuel. Starting pistol both Darwin and Wallace heard from opposite ends of world.",
+      "hint": "Malthus INSPIRED. Wallace TRIGGERED. Different roles."
+    },
+    {
+      "q": "Mayr's \"Five Facts, Three Inferences\" (textbook Fig 2.19). ⚠ HIGH-VALUE ROBBINS",
+      "a": "- **5 FACTS:** F1: huge potential fertility. F2: pop sizes roughly stable. F3: resources limited. F4: individuals VARY. F5: variation HERITABLE.\n- **3 INFERENCES:** I1 (F1+F2+F3): STRUGGLE FOR EXISTENCE. I2 (I1+F4+F5): survival NON-RANDOM = NATURAL SELECTION. I3 (I2 over time): EVOLUTION + new species.\n- Analogies: 5 axioms → 3 theorems forced by them. Lego instructions: 5 pieces → 3 assembly steps → spaceship.\n- TRAP: Robbins loves \"which is NOT one of Darwin's five facts\" or \"which inference depends on which facts.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "5 axioms → 3 theorems forced by them. Lego instructions: 5 pieces → 3 assembly steps → spaceship.",
+      "hint": "Robbins loves \"which is NOT one of Darwin's five facts\" or \"which inference depends on which facts.\""
+    },
+    {
+      "q": "Artificial selection — Darwin's secret weapon",
+      "a": "- Pigeon/dog/livestock breeders produced wild variation by selecting heritable traits over centuries. Darwin: nature does the same, slower, no goal. Artificial selection PROVES the mechanism works.\n- Analogies: Sped-up time-lapse of evolution. Cooking show vs. natural fermentation. Lab experiment proving NS mechanism.\n- TRAP: \"Artificial and natural differ in MECHANISM\" → WRONG. They differ in AGENT (human vs. environment) and GOAL (intentional vs. blind), not mechanism.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Sped-up time-lapse of evolution. Cooking show vs. natural fermentation. Lab experiment proving NS mechanism.",
+      "hint": "\"Artificial and natural differ in MECHANISM\" → WRONG. They differ in AGENT (human vs. environment) and GOAL (intentional vs. blind), not mechanism."
+    },
+    {
+      "q": "Sexual selection. ⚠ Don't conflate with natural selection",
+      "a": "- *Descent of Man* (1871). Selection from differential MATING success. (1) **Intrasexual**: male-male competition (antlers, fights). (2) **Intersexual**: female choice (peacock tails, songs). Can favor traits that REDUCE survival.\n- Analogies: NS = \"don't die.\" Sexual selection = \"get a date.\" Peacock tail = sports car you can barely afford. Antlers = boxing trophy that also slows you from wolves.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "NS = \"don't die.\" Sexual selection = \"get a date.\" Peacock tail = sports car you can barely afford. Antlers = boxing trophy that also slows you from wolves.",
+      "hint": ""
+    },
+    {
+      "q": "Homology vs. Analogy",
+      "a": "- **HOMOLOGY** = similarity from shared ancestry. Same underlying structure, possibly different function. Example: human arm + bat wing + whale flipper (humerus + radius/ulna + carpals + 5 digits).\n- **ANALOGY** = similarity from shared selective pressure, INDEPENDENT origin. Example: bird wing vs. insect wing.\n- Analogies: Homology = cousins inherited grandma's nose. Analogy = strangers with same nose job. Two iPhones from different years vs. iPhone and flip phone.\n- TRAP: SAME FUNCTION ≠ HOMOLOGY. SAME UNDERLYING STRUCTURE = HOMOLOGY.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Homology = cousins inherited grandma's nose. Analogy = strangers with same nose job. Two iPhones from different years vs. iPhone and flip phone.",
+      "hint": "SAME FUNCTION ≠ HOMOLOGY. SAME UNDERLYING STRUCTURE = HOMOLOGY."
+    },
+    {
+      "q": "Modern Synthesis",
+      "a": "- Darwin had no inheritance theory. Mendel published 1866, IGNORED until ~1900. 1930s–40s: geneticists (Dobzhansky, Mayr, Simpson, Fisher, Haldane, Wright) fused Mendelian + population genetics + paleontology + systematics with NS. Result = **MODERN EVOLUTIONARY SYNTHESIS** = framework biology still uses.\n- Analogies: Darwin built engine, Mendel built fuel, Synthesis put fuel in engine. Two halves of treasure map nobody realized fit for 70 years.\n- TRAP: \"Mendel was Darwin's collaborator\" → WRONG. Contemporaries who never connected.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Darwin built engine, Mendel built fuel, Synthesis put fuel in engine. Two halves of treasure map nobody realized fit for 70 years.",
+      "hint": "\"Mendel was Darwin's collaborator\" → WRONG. Contemporaries who never connected."
+    },
+    {
+      "q": "Steno's Superposition + Smith's Faunal Succession",
+      "a": "- SUPERPOSITION (Steno): undisturbed strata, oldest = lower, youngest = higher. The ORDER.\n- FAUNAL SUCCESSION (Smith): specific fossil assemblages identify specific strata across geographic distances. The IDENTITY.\n- Together: date layers AND correlate them across continents → foundation of geological time scale.\n- Analogies: Steno = \"this stack is in date order.\" Smith = \"and this Starbucks logo means it's specifically 2017.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "Steno = \"this stack is in date order.\" Smith = \"and this Starbucks logo means it's specifically 2017.\"",
+      "hint": ""
+    },
+    {
+      "q": "Pre-Darwin chronological timeline",
+      "a": "- 1638 STENO → fossils, superposition\n- 1707 LINNAEUS → taxonomy\n- 1707 BUFFON → old earth, populations change *(same year as Linnaeus)*\n- 1726 HUTTON → uniformitarianism (originator)\n- 1743 PALEY → natural theology\n- 1744 LAMARCK → use/disuse\n- 1766 MALTHUS → population pressure\n- 1769 CUVIER → extinction, catastrophism\n- 1769 WILLIAM SMITH → fossil correlation *(same year as Cuvier)*\n- 1797 LYELL → popularized uniformitarianism\n- 1799 ANNING → marine reptiles\n- 1809 DARWIN → natural selection\n- 1822 MENDEL → genetics (rediscovered ~1900)\n- 1823 WALLACE → co-discoverer\n- Mnemonic: Two pairs of birth-year buddies → Linnaeus & Buffon (1707), Cuvier & Smith (1769).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3keyfigs",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Two pairs of birth-year buddies → Linnaeus & Buffon (1707), Cuvier & Smith (1769)."
+    },
+    {
+      "q": "What is natural selection?",
+      "a": "Differential survival and reproduction of individuals based on heritable traits. The NON-RANDOM mechanism of evolution.\nANALOGIES:\n- Filter on a coffee machine: variation goes in, only certain particles get through, those particles are what shows up next round.\n- Bouncer at a club: the door (environment) keeps letting in the same kind of person → over time the room (population) reflects who the bouncer prefers.\n- Weighted dice that aren't fair: certain outcomes keep coming up because the dice are rigged toward fitness.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "Filter on a coffee machine: variation goes in, only certain particles get through, those particles are what shows up next round.",
+      "hint": ""
+    },
+    {
+      "q": "Three required conditions for natural selection to cause evolution.",
+      "a": "(1) Phenotypic VARIATION among individuals. (2) Variation must be HERITABLE (genetic). (3) Variation must affect FITNESS (survival/reproduction).\nMNEMONIC: \"V-H-F\" → Variation, Heritable, Fitness-affecting. If any leg is missing, the stool falls.\nANALOGY: Three-legged stool — pull one leg, no evolution. Selection still might \"act\" but allele frequencies don't move.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"V-H-F\" → Variation, Heritable, Fitness-affecting. If any leg is missing, the stool falls. ANALOGY: Three-legged stool — pull one leg, no evolution. Selection still might \"act\" but allele frequencies don't move."
+    },
+    {
+      "q": "The Breeder's Equation.",
+      "a": "R = h² × S\n- R = Response (how much the mean shifts next generation)\n- h² = narrow-sense heritability (VA/VP)\n- S = Selection differential (mean of breeders − population mean)\nANALOGIES:\n- Volume knob (h²) on a stereo: S is the song playing, R is what you actually hear. Knob at zero = silence no matter how loud the source.\n- Tax rate analogy: S is your gross income, h² is what % you keep, R is take-home pay.\n- Filter coffee strength: ground beans = S, filter density = h², coffee in cup = R.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "Volume knob (h²) on a stereo: S is the song playing, R is what you actually hear. Knob at zero = silence no matter how loud the source.",
+      "hint": ""
+    },
+    {
+      "q": "Why can natural selection act on a trait yet produce ZERO evolution?",
+      "a": "Because if h² = 0 (variation is purely environmental, not genetic), then R = h² × S = 0. Selection culls individuals but allele frequencies don't change.\nANALOGIES:\n- Photoshop a photo: doesn't change the original file. Environmental variation gets selected against, but the genome (the \"original file\") is untouched.\n- Gym membership doesn't make your kids muscular. If \"tall plants\" are tall because of soil, killing them doesn't reduce \"tall genes.\"\n- Spray-painting cars red and selecting reds — doesn't make future cars factory-red.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "Photoshop a photo: doesn't change the original file. Environmental variation gets selected against, but the genome (the \"original file\") is untouched.",
+      "hint": ""
+    },
+    {
+      "q": "Selection is non-random — but is the OUTCOME guaranteed?",
+      "a": "No. Selection consistently favors higher-fitness genotypes (non-random direction), but in small populations DRIFT can overpower selection. A beneficial allele can still be lost by chance.\nANALOGY: Loaded dice in a small game — the bias is real, but if you only roll twice, fluke outcomes still happen. Roll 10,000 times (large N) and the bias dominates.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Three modes of natural selection.",
+      "a": "- STABILIZING: extremes culled, mean unchanged, variance ↓ (e.g., human birth weight).\n- DIRECTIONAL: one tail favored, mean shifts (e.g., antibiotic resistance, beak size during drought).\n- DISRUPTIVE: both extremes favored, mean unchanged but variance ↑, can lead to bimodal distribution (e.g., African seedcracker finches with two beak sizes).\nANALOGY: Stabilizing = trimming a bush flat. Directional = pushing a bush sideways. Disruptive = hollowing out the middle of the bush.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why does a rare beneficial RECESSIVE allele spread slowly?",
+      "a": "When rare, almost every copy sits inside a heterozygote (Aa). The recessive phenotype is masked → selection literally can't \"see\" it → it can't act on it. Only when q gets high enough do aa homozygotes appear frequently for selection to favor.\nANALOGY: A genius with stage fright at a karaoke bar — talent's there, but no one ever hears it because it never gets a solo. Selection is the audience; it can only judge what's expressed.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Selection acts on ___, but evolution occurs in ___.",
+      "a": "Selection acts on PHENOTYPES. Evolution occurs in ALLELE FREQUENCIES. The bridge between them is HERITABILITY (h²).\nANALOGY: Selection grades students on the test (phenotype), but only changes the school's curriculum (gene pool) if grades are linked to teaching method (heritable).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "What is genetic drift?",
+      "a": "Random fluctuation of allele frequencies due to chance sampling each generation. Strongest in small populations. Non-adaptive — can fix or lose alleles regardless of fitness.\nANALOGIES:\n- Flipping a coin 4 times vs. 4,000 times. Small sample = wild swings from 50/50. Big sample = stays near 50/50. Each generation is a \"sample\" of the gene pool.\n- Drawing M&Ms from a bag without replacement: if there are only 10 M&Ms and you grab 3, color ratios shift dramatically. If there are 10,000, the ratio barely budges.\n- A small startup: one person quitting changes the company culture. At Google, one person quitting is invisible.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "Flipping a coin 4 times vs. 4,000 times. Small sample = wild swings from 50/50. Big sample = stays near 50/50. Each generation is a \"sample\" of the gene pool.",
+      "hint": ""
+    },
+    {
+      "q": "Bottleneck Effect.",
+      "a": "Catastrophic reduction in population size (disease, disaster, habitat loss) → survivors carry only a random subset of original alleles → genetic diversity drops, frequencies skew. Even after recovery, lost alleles stay lost.\nEXAMPLE: Tasmanian devils + facial tumor disease; cheetahs (ancient bottleneck → near-clones today).\nANALOGY: A library catches fire; the few books that survive are random — not the \"best\" books, just whatever was near the door. Rebuild the library and you can never restore what burned.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Founder Effect.",
+      "a": "A small, non-representative group colonizes a new isolated area. Their allele frequencies (by chance) differ from the source → the new population diverges.\nEXAMPLE: Pennsylvania Amish + Ellis-van Creveld syndrome (one founder happened to carry the allele; isolation preserved its high frequency).\nANALOGY: Starting a Discord server with 5 friends — the vibe of the whole future server depends on who those 5 happened to be. Doesn't reflect the broader internet.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Bottleneck vs. Founder Effect — the key difference.",
+      "a": "- BOTTLENECK = existing population SHRINKS catastrophically; same location, fewer people.\n- FOUNDER = small group LEAVES and starts a new isolated population; new location.\nBoth reduce diversity and skew frequencies; the difference is GEOGRAPHY + TRIGGER.\nANALOGY: Bottleneck = layoffs at a company. Founder = a few employees quit and start a startup elsewhere.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why does drift OVERWHELM selection in small populations?",
+      "a": "Selection's deterministic push (≈ s, the selection coefficient) is overwhelmed by random sampling noise (≈ 1/Ne) when Ne is tiny. Rule of thumb: if s < 1/(2Ne), drift dominates.\nANALOGY: Whispering \"go left\" (selection) at a hurricane (drift in small N) — your voice doesn't matter. Whisper at a calm field (large N) and people hear you.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why is genetic drift a CONSERVATION concern?",
+      "a": "Small populations lose genetic diversity fast → can't respond to disease, climate change, new predators. Deleterious alleles can also fix by chance, lowering fitness (\"mutational meltdown\" risk).\nANALOGY: A diversified investment portfolio (high genetic variation) survives market crashes; a single-stock portfolio (low variation) goes bankrupt on one bad event.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Gene Flow — definition and effect.",
+      "a": "Movement of alleles between populations via migration. EFFECT: homogenizes — populations become MORE similar. High gene flow → low FST. Can also PREVENT local adaptation by importing maladapted alleles.\nANALOGIES:\n- Mixing two paint colors with a tube between them: the longer they connect, the more they blend.\n- Two playlists on shuffle that share songs: keep adding shared songs and they start sounding identical.\n- Foreign exchange students at two schools: more exchanges = more cultural similarity between schools.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "Mixing two paint colors with a tube between them: the longer they connect, the more they blend.",
+      "hint": ""
+    },
+    {
+      "q": "Mutation — definition and what makes it unique.",
+      "a": "Changes in DNA sequence. THE ONLY source of NEW alleles that didn't previously exist. Random with respect to fitness — not directed by need. Rare per generation, so mutation pressure ALONE changes frequencies very slowly.\nANALOGIES:\n- Typos when copying a manuscript: most are bad, some are neutral, occasionally one improves the text. Typist isn't TRYING to improve — typos are random.\n- Lottery tickets: every mutation is a random ticket. Almost all lose. Selection is the prize-claiming step.\n- Genetic mutation = the only mechanism that actually MINTS new coins. Drift, gene flow, selection just MOVE existing coins around.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "Typos when copying a manuscript: most are bad, some are neutral, occasionally one improves the text. Typist isn't TRYING to improve — typos are random.",
+      "hint": ""
+    },
+    {
+      "q": "FST — what it measures.",
+      "a": "Genetic differentiation BETWEEN populations. FST near 0 = populations are genetically similar (high gene flow OR recent split). FST near 1 = populations are highly diverged (isolation, drift, divergent selection).\nANALOGY: Accent thickness between two towns. Connected by a highway (gene flow) → accents stay similar (low FST). Separated by a mountain for centuries → accents diverge (high FST).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Antibiotics do NOT cause bacteria to mutate toward resistance.",
+      "a": "Pre-existing random mutations conferred resistance BEFORE the antibiotic was introduced. The antibiotic SELECTS by killing susceptibles; resistant variants reproduce. Mutation = random. Selection = directional/non-random.\nANALOGIES:\n- Forest fire doesn't make trees fire-resistant. It just kills the non-resistant ones; the resistant ones (already there) repopulate.\n- A spelling bee doesn't teach kids to spell — it filters for kids who already could.\n- Antibiotics aren't a tutor; they're a final exam that flunks the unprepared.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "Forest fire doesn't make trees fire-resistant. It just kills the non-resistant ones; the resistant ones (already there) repopulate.",
+      "hint": ""
+    },
+    {
+      "q": "Of the five evolutionary forces, which is the ULTIMATE source of new variation?",
+      "a": "MUTATION. Every other force (drift, gene flow, selection, non-random mating) only redistributes pre-existing alleles. Without mutation, the gene pool eventually stagnates.\nMNEMONIC: \"Mutation MINTS the coins; everyone else just SHUFFLES the change.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"Mutation MINTS the coins; everyone else just SHUFFLES the change.\""
+    },
+    {
+      "q": "Antibiotic Resistance — full mechanism.",
+      "a": "(1) Random mutations in bacterial population create standing variation, including some resistance alleles. (2) Antibiotic introduced → kills susceptibles. (3) Resistant variants survive, reproduce. (4) Resistance allele frequency rises across generations.\nANALOGY: Hunger Games arena — variation in skills exists before the games; the arena (antibiotic) is the selection event; survivors define the next \"population.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Influenza Virulence Evolution — why flu changes every year.",
+      "a": "RNA viruses have HIGH mutation rate (sloppy RNA polymerase) → huge standing variation. Selection: host immune response + antiviral drugs + transmission dynamics. Hemagglutinin/neuraminidase mutations evade prior immunity. Virulence can go up OR down depending on what improves transmission.\nANALOGY: Fashion industry on fast-forward. The \"in\" style (fittest variant) changes every season because consumers (immune systems) get bored of last year's look.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Domestication (e.g., greyhounds) — same logic as natural selection?",
+      "a": "Yes — identical mechanism, different selector. Standing genetic variation in wild ancestors → human breeders pick traits (speed, tameness, morphology) → allele frequencies shift fast at selected loci. \"Artificial\" only because the selecting agent is human, not the environment.\nANALOGY: Natural selection = wilderness reality TV (environment votes off contestants). Artificial selection = a producer with a clipboard (human picks who advances). Same elimination game.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "What's the COMMON LOGIC across antibiotic resistance, flu evolution, and domestication?",
+      "a": "All three require: (1) heritable variation present BEFORE selection begins, (2) non-random selection consistently favoring one variant, (3) allele frequency change across generations. The selective AGENT differs (drug / immune system / human breeder); the MECHANISM is identical.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Inbreeding — definition.",
+      "a": "Mating between closely related individuals. Increases probability that offspring inherit two alleles IDENTICAL BY DESCENT (IBD). Increases HOMOZYGOSITY, decreases HETEROZYGOSITY.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Does inbreeding change allele frequencies?",
+      "a": "NO. Inbreeding only changes GENOTYPE frequencies (more AA + more aa, fewer Aa). Calculate p before and p after — same value. Inbreeding violates HWE genotype expectations but is NOT itself an evolutionary force that shifts p or q.\nANALOGIES:\n- Reorganizing a deck of cards: 4 aces still exist, you just stacked them. Allele \"count\" unchanged; how they're paired up changed.\n- Salt + pepper in two shakers vs. mixed in one: same total salt, different distribution.\n- Marrying your cousin doesn't add or remove alleles from the gene pool — it just clumps the same ones together.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "Reorganizing a deck of cards: 4 aces still exist, you just stacked them. Allele \"count\" unchanged; how they're paired up changed.",
+      "hint": ""
+    },
+    {
+      "q": "Inbreeding Depression — mechanism.",
+      "a": "Related individuals share alleles by descent. Their offspring have elevated chance of being homozygous for the SAME deleterious recessive (which was hidden in heterozygotes in the broader population). aa homozygotes get expressed → bad recessive phenotypes show up → mean fitness drops.\nANALOGY: Cousins both inherited the same buggy software from grandma. When their kid runs both copies (homozygote), the bug crashes the system. In the wider population, most people had a bug-free backup copy (heterozygote) so the bug never ran.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "How does inbreeding INDIRECTLY cause evolution even though it doesn't change allele frequencies directly?",
+      "a": "By exposing recessive alleles to selection. Hidden q alleles in heterozygotes are now expressed in aa homozygotes → selection can purge them → allele frequencies THEN shift (but via selection, not via inbreeding itself).\nANALOGY: Inbreeding doesn't fire anyone — it just promotes the hidden underperformers to public-facing roles. THEN management (selection) fires them.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Wahlund Effect — why a \"panmictic\" population can show excess homozygotes without actual inbreeding.",
+      "a": "If you sample two genuinely separate subpopulations with different allele frequencies and pool them, the COMBINED sample shows more homozygotes than HWE predicts — even though each subpop is in HWE on its own. Looks like inbreeding; isn't.\nANALOGY: Mix a bag of all red M&Ms with a bag of all blue M&Ms. The combined bag has zero \"purple.\" Looks weirdly homozygous, but it's just hidden structure.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Excess homozygotes vs. HWE — what could cause it (and what couldn't)?",
+      "a": "CAUSES: inbreeding, Wahlund effect (population subdivision), assortative mating, directional selection removing one homozygote class is a maybe but more nuanced. NOT a cause: heterozygote advantage / overdominance — that DECREASES homozygotes.\nMNEMONIC: \"If Aa is winning, it eats both AAs and aas.\" Heterozygote advantage = fewer homozygotes, not more.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch1mech",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"If Aa is winning, it eats both AAs and aas.\" Heterozygote advantage = fewer homozygotes, not more."
+    },
+    {
+      "q": "What is Hardy-Weinberg Equilibrium and what is it used for?",
+      "a": "The NULL HYPOTHESIS of population genetics. In a large, randomly \nmating population with NO selection, NO mutation, NO gene flow, \nNO drift → genotype frequencies stay constant: p² + 2pq + q² = 1.\n\nUsed to DETECT evolution by testing for deviations.\n\nANALOGIES:\n- \"Empty courtroom\" — HWE is the baseline of \"nothing happening.\" \n  Any deviation = evidence a force showed up.\n- \"Idle engine\" — frequencies just sitting there, no acceleration. \n  A deviation = somebody hit the gas (selection, drift, etc.).\n- \"Stopped clock\" — alleles frozen in place. Move? Something \n  pushed them.\n\n⚠ TRAP: HWE at one locus ≠ population not evolving. It only \nmeans THAT locus, at THAT moment, looks undisturbed.\n\n──────────────────────────────────────────────\nCARD 02 — The 5 HWE Assumptions",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Empty courtroom\" — HWE is the baseline of \"nothing happening.",
+      "hint": "HWE at one locus ≠ population not evolving. It only  means THAT locus, at THAT moment, looks undisturbed."
+    },
+    {
+      "q": "List the 5 assumptions of Hardy-Weinberg.",
+      "a": "1. Large population (no drift)\n2. Random mating (no assortative mating, no inbreeding)\n3. No selection\n4. No mutation\n5. No gene flow / migration\n\nMNEMONIC: \"Large Random Snakes Munch Grass\" \n(Large, Random mating, No Selection, No Mutation, No Gene flow)\n\nANALOGY:\n- \"Sealed beaker, perfectly stirred, no chemistry\" — the molecules \n  (alleles) just bounce around. Open the lid (gene flow), heat \n  it (selection), or change a molecule (mutation) and the \n  equilibrium breaks.\n\n──────────────────────────────────────────────\nCARD 03 — Calculating Allele Frequency from Genotypes",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Sealed beaker, perfectly stirred, no chemistry\" — the molecules",
+      "hint": "\"Large Random Snakes Munch Grass\"  (Large, Random mating, No Selection, No Mutation, No Gene flow)"
+    },
+    {
+      "q": "Formula for p (allele frequency) from genotype counts?",
+      "a": "p = (2 × AA + Aa) / (2N)\nq = 1 − p\n\nEach AA = 2 copies of A. Each Aa = 1 copy of A. \nTotal copies in population = 2N (everyone has 2 alleles).\n\nEXAMPLE: 500 people, AA=245, Aa=210, aa=45\np = (2×245 + 210) / (2×500) = 700/1000 = 0.70\n\nANALOGY:\n- \"Counting ballots\" — every person has 2 ballots (alleles). \n  AA people put in 2 \"A\" votes, Aa puts in 1 A + 1 a, aa puts \n  in 2 \"a\" votes. p = A votes / total votes.\n- \"Coin pouches\" — each person carries 2 coins. Total coins = 2N.\n\n──────────────────────────────────────────────\nCARD 04 — Why Rare Recessives Hide From Selection",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Counting ballots\" — every person has 2 ballots (alleles).",
+      "hint": ""
+    },
+    {
+      "q": "Why do beneficial RECESSIVE alleles spread slowly when rare?",
+      "a": "When q is small:\n- Heterozygotes Aa = 2pq ≈ 2q (lots of them)\n- Homozygotes aa = q² (almost none — q² << 2q)\n\nAlmost every copy of the rare allele is HIDING in Aa where it's \nmasked. Selection acts on phenotype, and Aa looks identical to AA.\nNo homozygotes → no expression → no selection traction.\n\nANALOGIES:\n- \"Witness protection\" — recessive allele is in disguise (Aa) \n  living next door to AA. Cops (selection) can't find it.\n- \"Spy in a trench coat\" — the allele exists, but you can't see \n  what it's doing because the dominant allele is wearing the \n  outer coat.\n- \"Two-key safe\" — you need BOTH copies (aa) to \"unlock\" the \n  phenotype. With only one key floating around, the safe stays \n  shut and selection never sees what's inside.\n\nEX: q=0.001 → Aa = 0.002 (0.2%); aa = 0.000001 (0.0001%). \nThe allele is invisible until q rises.\n\n──────────────────────────────────────────────\nCARD 05 — Recessive Disorder Carrier Frequency Trick",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Witness protection\" — recessive allele is in disguise (Aa)",
+      "hint": ""
+    },
+    {
+      "q": "A recessive disorder hits 1/10,000. What's the carrier frequency?",
+      "a": "q² = 1/10,000  →  q = 1/100\nCarrier freq = 2pq ≈ 2q (when q small) = 2/100 = ~1/50\n\nKEY: Carriers (Aa) FAR outnumber affected (aa) when allele rare.\n\nANALOGY:\n- \"Iceberg\" — the affected (aa) is the visible tip; carriers \n  (Aa) are the massive underwater bulk. ~200× more carriers \n  than affected at this frequency.\n\n──────────────────────────────────────────────\nCARD 06 — FST (Fixation Index)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Iceberg\" — the affected (aa) is the visible tip; carriers",
+      "hint": "Carriers (Aa) FAR outnumber affected (aa) when allele rare."
+    },
+    {
+      "q": "What is FST and what do its values mean?",
+      "a": "FST = measure of genetic differentiation BETWEEN populations.\nRange: 0 to 1.\n\nFST ≈ 0 → populations genetically identical (gene flow homogenizing)\nFST ≈ 1 → populations completely differentiated (fixed for \n          different alleles)\n\nFormula: FST = (HT − HS) / HT\nHT = heterozygosity if all pops were one\nHS = avg heterozygosity within subpopulations\n\nHigh gene flow → low FST. Drift + isolation → high FST.\n\nANALOGIES:\n- \"Salt water mixing\" — two beakers (populations). Pour back \n  and forth (gene flow) → same salinity (low FST). Seal them off \n  (isolation) → drift carries them apart → different salinities \n  (high FST).\n- \"Dialect distance\" — neighborhoods talking constantly = same \n  slang (FST=0). Cut off mountain villages = each invents its \n  own words (FST→1).\n\n──────────────────────────────────────────────\nCARD 07 — Excess Homozygotes — What Causes It?",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Salt water mixing\" — two beakers (populations). Pour back",
+      "hint": ""
+    },
+    {
+      "q": "Which HWE violations produce EXCESS HOMOZYGOTES?",
+      "a": "1. INBREEDING — relatives mating concentrate identical alleles\n2. POPULATION SUBDIVISION (Wahlund effect) — pooling 2 pops with \n   different allele freqs creates \"fake\" homozygote excess\n3. POSITIVE ASSORTATIVE MATING — like phenotypes mate (tall × tall)\n\nNOT: Heterozygote advantage → that produces EXCESS HETEROZYGOTES.\n\nANALOGY:\n- \"Sorting laundry by color\" — if reds only mix with reds and \n  blues with blues (assortative/inbreeding), you get more pure \n  piles (homozygotes) and fewer mixed piles (heterozygotes).\n\n──────────────────────────────────────────────\nCARD 08 — Phenotypic Variance Decomposition",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Sorting laundry by color\" — if reds only mix with reds and",
+      "hint": ""
+    },
+    {
+      "q": "What is the equation for partitioning phenotypic variance?",
+      "a": "VP = VA + VD + VI + VE\n\nVA = ADDITIVE genetic variance (each allele copy adds fixed amount)\n     ✓ THE ONLY component that responds predictably to selection\nVD = DOMINANCE variance (interactions WITHIN a locus, Aa vs AA)\nVI = INTERACTION/EPISTATIC variance (interactions BETWEEN loci)\nVE = ENVIRONMENTAL variance (non-genetic)\n\nANALOGIES:\n- \"Recipe metaphor\": \n  - VA = ingredients each adding flavor independently (sugar \n    tastes sweet whether or not flour is there)\n  - VD = ingredient pairings within one bowl (egg+oil = mayo, \n    not just egg+oil flavors)\n  - VI = ingredient pairings ACROSS dishes (the wine you drink \n    changes how the steak tastes)\n  - VE = the kitchen (oven temp, humidity, who's cooking)\n- \"Stock portfolio\": VA = each stock's independent return; \n  VD/VI = stocks affecting each other; VE = the market mood.\n\n⚠ TRAP: Only VA flows cleanly to offspring. Dominance and \nepistasis get scrambled by recombination each generation.\n\n──────────────────────────────────────────────\nCARD 09 — Narrow-Sense vs Broad-Sense Heritability",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Recipe metaphor\":",
+      "hint": "Only VA flows cleanly to offspring. Dominance and  epistasis get scrambled by recombination each generation."
+    },
+    {
+      "q": "Difference between h² and H²?",
+      "a": "h² (NARROW-sense)  = VA / VP\n   - ONLY additive genetic variance\n   - What slope of parent-offspring regression measures\n   - What you USE in the breeder's equation R = h²S\n\nH² (BROAD-sense)   = VG / VP  =  (VA + VD + VI) / VP\n   - Includes dominance + epistasis too\n   - Higher than h² (or equal)\n   - NOT used for predicting selection response\n\nANALOGY:\n- \"Inheritance vs total genes\" — h² is what KIDS actually inherit \n  reliably from parents (the predictable, transmissible part). \n  H² is the total genetic story including stuff that scrambles \n  every generation (dominance, gene×gene combos that don't \n  transmit cleanly).\n- \"Bank transfer vs whole estate\" — h² = the cash you can wire \n  to your kid. H² = the whole estate including paintings whose \n  value depends on which other paintings hang next to them.\n\n⚠ TRAP: Robbins will swap these on the breeder's equation. \nALWAYS use h² (narrow), not H².\n\n──────────────────────────────────────────────\nCARD 10 — Breeder's Equation",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Inheritance vs total genes\" — h² is what KIDS actually inherit",
+      "hint": "Robbins will swap these on the breeder's equation.  ALWAYS use h² (narrow), not H²."
+    },
+    {
+      "q": "State the Breeder's Equation. Define each term.",
+      "a": "R = h² × S\n\nR = RESPONSE to selection (how much offspring mean shifts)\nS = SELECTION DIFFERENTIAL (mean of breeders − mean of pop)\nh² = narrow-sense heritability\n\nWORKFLOW:\n1. Measure trait in population\n2. Pick top breeders → calculate S = mean(breeders) − mean(pop)\n3. Predict R = h² × S\n4. Cross breeders → measure offspring mean → should ≈ pop mean + R\n\nANALOGY:\n- \"Tax pass-through rate\" — S is the tax you collected (selection \n  pressure). h² is the rate that actually gets transferred to \n  the next budget. R is what shows up in the kids' wallets.\n- \"Volume knob\" — h² is a dial from 0 to 1. h²=0 → selection has \n  zero effect on next gen (R=0, twist S all you want). h²=1 → \n  full pass-through, kids = breeders.\n\nEXAMPLE: Beak length, h²=0.65, S=2mm (you bred from beaks 2mm \nabove average). Predicted R = 0.65 × 2 = 1.3mm shift in offspring.\n\n──────────────────────────────────────────────\nCARD 11 — Parent-Offspring Regression Slope",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Tax pass-through rate\" — S is the tax you collected (selection",
+      "hint": ""
+    },
+    {
+      "q": "What does the slope of a parent-offspring regression equal?",
+      "a": "SLOPE = h² (narrow-sense heritability)\n\nPlot: midparent phenotype (x) vs. offspring phenotype (y)\n- Slope ≈ 1 → trait highly heritable, offspring closely match \n  parents\n- Slope ≈ 0 → trait mostly environmental, offspring random\n\nANALOGY:\n- \"Photocopy fidelity\" — slope = how faithful the copy is. Slope 1 \n  = perfect xerox. Slope 0 = the copier's printing random pages.\n- \"Echo strength\" — yell across the canyon (parent trait); echo \n  back is the offspring trait. Loud echo (steep slope) = high h². \n  Faint mumble (flat slope) = low h².\n\n──────────────────────────────────────────────\nCARD 12 — High Heritability ≠ Environment Doesn't Matter",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Photocopy fidelity\" — slope = how faithful the copy is. Slope 1",
+      "hint": ""
+    },
+    {
+      "q": "Does h² = 0.9 mean environment is unimportant?",
+      "a": "NO. h² describes VARIATION WITHIN A POPULATION, not whether \nenvironment can change the trait.\n\nEX: Human height h² ≈ 0.8, but you still need adequate nutrition \nto reach genetic potential. Starve a population → all heights \ndrop, but variation among them might still be 80% genetic.\n\nANALOGY:\n- \"Race car drivers\" — variation in lap times might be 90% due \n  to driver skill (h²=0.9), but every car still NEEDS gas. \n  Take fuel away (environment) and nobody finishes. h² describes \n  why some drivers beat others, NOT whether the car needs fuel.\n- \"Plant pots\" — among well-watered plants, height variation \n  might be 90% genetic. But stop watering and they all shrivel. \n  Heritability says nothing about how much water trees need.\n\n──────────────────────────────────────────────\nCARD 13 — Dominant vs Recessive vs Additive Alleles",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Race car drivers\" — variation in lap times might be 90% due",
+      "hint": ""
+    },
+    {
+      "q": "Compare the Aa heterozygote phenotype under dominant, recessive, and additive inheritance.",
+      "a": "DOMINANT: Aa = AA phenotype (one copy enough; recessive masked)\nRECESSIVE: needs aa for expression; Aa looks like AA (hidden)\nADDITIVE: Aa = midpoint between AA and aa (each copy adds equally)\n\nIf AA=10, aa=0:\n- Dominant model → Aa = 10 (looks dominant)\n- Additive model → Aa = 5 (perfect midpoint)\n- Codominant model → Aa shows BOTH phenotypes simultaneously\n\nANALOGIES:\n- ADDITIVE = \"paint mixing\" — 1 cup white + 1 cup black = gray. \n  Each cup contributes its share linearly.\n- DOMINANT = \"mute button\" — one mute button silences the whole \n  audio. A single dominant copy = full effect.\n- RECESSIVE = \"two-factor authentication\" — phenotype only \n  expressed when BOTH copies confirm (aa). One copy = no entry.\n\n──────────────────────────────────────────────\nCARD 14 — Why Additive Alleles Drive h²",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "ADDITIVE = \"paint mixing\" — 1 cup white + 1 cup black = gray.",
+      "hint": ""
+    },
+    {
+      "q": "Why is the ADDITIVE model the basis of quantitative genetics and h²?",
+      "a": "Because additive effects SUM CLEANLY across loci and across \ngenerations. Each copy adds a fixed amount → effects predict \nthe offspring midpoint exactly. Dominance/epistasis get reshuffled \nby recombination, so they don't pass cleanly to offspring.\n\nVA captures this linear sum. h² = VA/VP. R = h² × S only works \nbecause additive effects transmit predictably.\n\nANALOGY:\n- \"LEGO blocks\" — additive alleles are individual bricks. Stack \n  them and the height just adds up. Dominance/epistasis are like \n  glue between specific bricks — when you take the structure \n  apart and rebuild (meiosis + recombination), the glue effects \n  don't transfer.\n\n──────────────────────────────────────────────\nCARD 15 — Reaction Norm",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "LEGO blocks\" — additive alleles are individual bricks. Stack",
+      "hint": ""
+    },
+    {
+      "q": "What is a reaction norm?",
+      "a": "A plot of PHENOTYPE (y) vs. ENVIRONMENT (x) for a SINGLE genotype.\nShows how that genotype expresses itself across environments.\n\n- FLAT line → no plasticity (same phenotype in all environments)\n- SLOPED line → plasticity (phenotype changes with environment)\n\nANALOGY:\n- \"Thermostat profile\" — plot a thermostat's behavior across \n  outdoor temperatures. A \"dumb\" thermostat is flat (always 70°F \n  regardless). A \"smart\" one has a slope (adjusts to outside).\n- \"Recipe across kitchens\" — same genotype = same recipe; bake \n  it in different ovens (environments) and see how the cake \n  comes out. Reaction norm = the cake's response curve.\n\n──────────────────────────────────────────────\nCARD 16 — Phenotypic Plasticity",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Thermostat profile\" — plot a thermostat's behavior across",
+      "hint": ""
+    },
+    {
+      "q": "What is phenotypic plasticity?",
+      "a": "ONE genotype produces DIFFERENT phenotypes in different \nenvironments. Detected by a non-flat reaction norm.\n\nANALOGIES:\n- \"Chameleon\" — same animal, different colors per environment.\n- \"Tan in summer\" — same skin, different pigmentation by season.\n- \"Plant grows tall in shade, short in sun\" — same seed, \n  environment-tuned output.\n\n──────────────────────────────────────────────\nCARD 17 — Genotype × Environment Interaction (G×E)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Chameleon\" — same animal, different colors per environment.",
+      "hint": ""
+    },
+    {
+      "q": "What does G×E look like on a reaction norm plot?",
+      "a": "NON-PARALLEL reaction norm lines for different genotypes.\n- Parallel lines → plasticity but NO G×E (genotypes respond same)\n- Non-parallel / crossing lines → G×E (genotypes respond differently)\n\nIf lines CROSS: no universally \"best\" genotype — environment \ndetermines which wins.\n\nANALOGIES:\n- \"Athletes on different surfaces\" — Player A dominates on grass, \n  Player B dominates on clay. Their performance lines CROSS by \n  surface = G×E. There's no \"best player,\" it depends on the court.\n- \"Software on different OSes\" — App 1 runs fast on Mac, slow on \n  Linux; App 2 the opposite. Crossing reaction norms.\n- \"Plants & water levels\" — drought-resistant cultivar wins in \n  dry years; lush cultivar wins in wet years. Crossing lines = G×E.\n\n⚠ TRAP: Parallel sloped lines = plasticity but NOT G×E.\n\n──────────────────────────────────────────────\nCARD 18 — Polyphenic vs Continuous Plasticity",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Athletes on different surfaces\" — Player A dominates on grass,",
+      "hint": "Parallel sloped lines = plasticity but NOT G×E."
+    },
+    {
+      "q": "Difference between polyphenism and continuous plasticity?",
+      "a": "POLYPHENISM: ONE genotype → DISCRETE alternative phenotypes \n  (developmental switch flips at a threshold)\n  EX: Honeybee queen vs worker (same DNA, larval food triggers fate)\n       Army ant castes\n       Locust solitary vs swarming forms\n\nCONTINUOUS plasticity: ONE genotype → GRADUAL phenotypic change \n  along environment gradient\n  EX: Plant height increasing smoothly with water availability\n\nANALOGY:\n- POLYPHENISM = \"light switch\" — flicks ON or OFF, no in-between. \n  Larval food crosses a threshold → queen develops; below it → \n  worker.\n- CONTINUOUS = \"dimmer knob\" — turn it gradually, brightness \n  changes smoothly with input.\n\nMECHANISM (polyphenism): cue (nutrition, temperature, density) \nhits during a CRITICAL DEVELOPMENTAL WINDOW → triggers gene \nexpression switch → discrete divergent body plans.\n\n──────────────────────────────────────────────\nCARD 19 — Eukaryotic Genome Composition",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "POLYPHENISM = \"light switch\" — flicks ON or OFF, no in-between.",
+      "hint": ""
+    },
+    {
+      "q": "What's in the human genome?",
+      "a": "- Protein-coding genes: ~1.5%\n- Mobile genetic elements (transposons): ~45%\n- Pseudogenes: non-functional copies of genes\n- Introns, regulatory sequences, other non-coding DNA: most of \n  the rest\n\nC-VALUE PARADOX: Genome SIZE does NOT correlate with organismal \ncomplexity. Lungfish, onions, amoebas have larger genomes than \nhumans.\n\nANALOGY:\n- \"Library\" — only ~1.5% of the books are useful textbooks \n  (genes). About 45% is junk mail and old catalogs that someone \n  keeps photocopying (transposons). The rest is filing tabs, \n  cross-references, and broken duplicates (pseudogenes).\n- \"Hard drive\" — coding region is the OS files. The rest is \n  decades of cached downloads, broken installers, and \n  self-replicating viruses.\n\n──────────────────────────────────────────────\nCARD 20 — Pseudogenes",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Library\" — only ~1.5% of the books are useful textbooks",
+      "hint": ""
+    },
+    {
+      "q": "What is a pseudogene?",
+      "a": "NON-FUNCTIONAL copy of a gene that has accumulated mutations \n(frameshifts, premature stop codons) preventing functional \nprotein production. Often arise via:\n- Gene duplication (then one copy decays)\n- Retrotransposition (mRNA reverse-transcribed back into genome \n  WITHOUT introns/regulatory elements → \"processed pseudogene\")\n\nEVOLUTIONARY EVIDENCE: shows ancestor had a working version.\nEX: Humans have a broken vitamin C synthesis gene (GULOP) — \nproves our ancestors made their own vitamin C.\n\nANALOGIES:\n- \"Fossil gene\" — a gene that died but left its skeleton in the DNA.\n- \"Photocopy that smudged\" — copied a gene, but the copy got \n  smudged (mutation) and now nobody can read it.\n- \"Abandoned factory\" — used to make a product, now sits there \n  with broken machinery.\n\n⚠ NOT actively producing functional proteins. That's the whole \npoint.\n\n──────────────────────────────────────────────\nCARD 21 — Four Levels of Gene Expression Regulation",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Fossil gene\" — a gene that died but left its skeleton in the DNA.",
+      "hint": ""
+    },
+    {
+      "q": "Name the 4 levels of eukaryotic gene regulation, in order.",
+      "a": "1. PRE-TRANSCRIPTIONAL — controls DNA accessibility\n   Mechanisms: DNA methylation, histone modification, chromatin \n   remodeling\n   \n2. TRANSCRIPTIONAL — controls mRNA synthesis\n   Mechanisms: transcription factors at promoters/enhancers\n   \n3. POST-TRANSCRIPTIONAL — acts on mRNA after it's made\n   Mechanisms: alternative splicing, miRNA, mRNA degradation\n   \n4. POST-TRANSLATIONAL — acts on protein after it's made\n   Mechanisms: phosphorylation, ubiquitination, glycosylation, \n   cleavage\n\nMNEMONIC: \"DNA → RNA → Protein → Active protein\"\nEach arrow has a regulatory layer.\n\nANALOGY:\n- \"Factory line\":\n  - PRE-transcriptional = locking the blueprint vault (DNA)\n  - Transcriptional = how many blueprints get printed (mRNA)\n  - Post-transcriptional = editing/shredding blueprints in \n    transit (mRNA processing & destruction)\n  - Post-translational = activating/deactivating finished \n    products (proteins)\n\n──────────────────────────────────────────────\nCARD 22 — DNA Methylation vs miRNA (THE TRAP)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Factory line\":",
+      "hint": "\"DNA → RNA → Protein → Active protein\" Each arrow has a regulatory layer."
+    },
+    {
+      "q": "At what level do DNA methylation and miRNA each act?",
+      "a": "DNA METHYLATION → PRE-TRANSCRIPTIONAL\n- Adds methyl groups to cytosines (CpG islands in promoter)\n- Recruits methyl-binding proteins → histone deacetylases\n- Chromatin condenses to heterochromatin\n- RNA polymerase can't access DNA → gene silenced BEFORE \n  transcription begins\n\nmiRNA → POST-TRANSCRIPTIONAL\n- Small RNA binds to existing mRNA\n- Either blocks translation OR triggers mRNA degradation\n- Acts AFTER mRNA is made\n\n⚠ ROBBINS WILL TEST THIS. Different stages, easy to confuse.\n\nANALOGIES:\n- DNA methylation = \"padlock on the library door\" — book never \n  gets read because nobody can enter the library.\n- miRNA = \"shredder at the printer's desk\" — books print fine, \n  but get shredded before they can be used.\n\n──────────────────────────────────────────────\nCARD 23 — DNA Methylation Mechanism (Step-by-step)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "DNA methylation = \"padlock on the library door\" — book never",
+      "hint": ""
+    },
+    {
+      "q": "Walk through how DNA methylation silences a gene.",
+      "a": "1. Methyltransferase enzymes add methyl groups (-CH3) to cytosines \n   at CpG islands in the gene's PROMOTER region\n2. Methyl-CpG-binding proteins recognize and bind the methylated DNA\n3. These proteins recruit HISTONE DEACETYLASES (HDACs)\n4. Histones get deacetylated → tighter wrapping\n5. Chromatin condenses into HETEROCHROMATIN\n6. RNA polymerase + transcription factors can no longer access \n   the promoter\n7. Gene is silenced — BEFORE transcription begins (pre-transcriptional)\n\nANALOGY:\n- \"Sealing a book in shrink wrap\" — methyl groups are tags \n  (\"don't read this\"). Workers (HDACs) come and tighten the \n  wrapping until the book is unreadable. The text is still \n  there, just inaccessible.\n\n──────────────────────────────────────────────\nCARD 24 — Match Mechanisms to Levels (Drill)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "Sealing a book in shrink wrap\" — methyl groups are tags",
+      "hint": ""
+    },
+    {
+      "q": "Match each to its regulatory level: DNA methylation | Transcription factor binding | miRNA | Ubiquitin-mediated protein degradation",
+      "a": "DNA methylation              → PRE-transcriptional\nTranscription factor binding → TRANSCRIPTIONAL\nmiRNA degradation of mRNA    → POST-transcriptional\nUbiquitin-mediated protein \ndegradation                  → POST-translational\n\nANALOGY for ubiquitination:\n- \"Tagging trash for pickup\" — ubiquitin is a tag the cell sticks \n  on a protein meaning \"destroy this.\" Proteasome (the recycling \n  truck) picks it up and shreds it.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch2gen",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "How old is the Earth, and how do we know?",
+      "a": "~4.568 BILLION years old.\n\nDETERMINED BY: radiometric dating of the OLDEST minerals — \nincluding meteorites and zircon crystals from the Jack Hills \nof Australia (4.4 bya zircons preserve evidence of early crust).\n\nHISTORICAL ESTIMATES:\n- Lord Kelvin (1860s) → ~20 million years (assumed Earth \n  was just cooling from a hot ball; calculated cooling time)\n- Darwin → \"billions\" inferred from sediment accumulation rates\n- Modern physics → 4.568 ± 0.001 bya (multiple isotope systems \n  agree)\n\nWHY KELVIN WAS WRONG: he didn't know about RADIOACTIVE DECAY, \nwhich generates heat continuously inside Earth. His passive \ncooling model gave way too short an estimate. Radioactivity \n(discovered ~1896) keeps Earth warm internally.\n\nANALOGIES:\n- \"Reading the kitchen oven temperature wrong\" — Kelvin saw \n  Earth was warm and assumed it was cooling from a hot start \n  with no internal heater. Turns out there's a furnace running \n  inside (radioactive decay). His timer said \"20 minutes from \n  warm\"; he didn't know the oven was still ON.\n- \"Estimating a candle's age by its height\" — but only if you \n  ignore that it's still burning.\n\n──────────────────────────────────────────────\nCARD 02 — Radiometric Dating Principle",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Reading the kitchen oven temperature wrong\" — Kelvin saw",
+      "hint": "he didn't know about RADIOACTIVE DECAY,  which generates heat continuously inside Earth. His passive  cooling model gave way too short an estimate. Radioactivity"
+    },
+    {
+      "q": "How does radiometric dating work?",
+      "a": "Each radioactive isotope (PARENT) decays into a stable isotope \n(DAUGHTER) at a CONSTANT rate. The HALF-LIFE = time for 50% \nof parent atoms to decay.\n\nSTEPS:\n1. When a rock crystallizes, the \"clock starts\" — typically \n   only parent isotope is present (no daughter)\n2. Over time, parent decays into daughter at constant rate\n3. Measure the current PARENT:DAUGHTER ratio in the rock\n4. Apply the known half-life to back-calculate the age\n\nCRUCIAL PROPERTY: half-life is INVARIANT — unaffected by \ntemperature, pressure, chemistry, or anything else. That's \nwhat makes it a reliable clock.\n\nRATIO RULE:\n- 1 half-life: 50% parent / 50% daughter\n- 2 half-lives: 25% / 75%\n- 3 half-lives: 12.5% / 87.5%\n- n half-lives: (1/2)ⁿ parent\n\nANALOGIES:\n- \"Hourglass that never tips\" — sand always falls at the same \n  rate regardless of where you put it. Look at how much sand \n  is in the bottom (daughter) vs. top (parent), do the math, \n  get elapsed time.\n- \"Radioactive popcorn\" — kernels pop at a steady statistical \n  rate. Count popped vs unpopped, calculate how long the bag's \n  been in the microwave.\n\n──────────────────────────────────────────────\nCARD 03 — Half-Life Properties (Trap-Heavy)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Hourglass that never tips\" — sand always falls at the same",
+      "hint": ""
+    },
+    {
+      "q": "Key facts about half-life — what's TRUE and what sounds true but ISN'T?",
+      "a": "TRUE:\n- After 1 half-life: 50% parent remains\n- After 2 half-lives: 25% remains\n- After 3 half-lives: 12.5%\n- Half-life is INDEPENDENT of initial quantity\n- Half-life is independent of temperature, pressure, chemistry\n\nFALSE (common traps):\n- ✗ \"Half-life decreases as parent concentration decreases\" — \n  NO. Half-life is FIXED. It's a property of the isotope.\n- ✗ \"Decay rate speeds up at high temperature\" — NO.\n- ✗ \"Daughter isotopes escape over time\" — NO (assumes the \n  rock is a closed system).\n- ✗ \"Parent isotopes are replenished by cosmic rays\" — NO \n  (with one exception: C-14 in living tissue is replenished \n  by atmospheric exchange UNTIL the organism dies).\n\nANALOGY:\n- \"Random coin flips\" — each radioactive atom has a fixed \n  probability of decaying per unit time. The \"decay rate\" of \n  a population of atoms slows in absolute count (fewer atoms \n  left), but each individual atom's odds never change. Half-\n  life is the population-level constant.\n\n──────────────────────────────────────────────\nCARD 04 — Major Isotope Systems (MEMORIZE)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Random coin flips\" — each radioactive atom has a fixed",
+      "hint": ""
+    },
+    {
+      "q": "Match each isotope system to its half-life and best use.",
+      "a": "PARENT → DAUGHTER         HALF-LIFE       BEST FOR\n─────────────────────────────────────────────────────────────────\nC-14 → N-14              5,730 yrs       Recent organic \n                                          (<50,000 yrs)\nK-40 → Ar-40             1.3 billion yrs Volcanic rocks; \n                                          hominin fossils \n                                          (million-year range)\nU-238 → Pb-206           4.5 billion yrs Ancient rocks \n                                          (100s of millions to \n                                          billions of years; \n                                          zircons!)\nRb-87 → Sr-87            47 billion yrs  Very ancient formations\n                                          (solar system age)\n\nMNEMONIC: \"COOL KIDS USUALLY ROCK\"\nC-14 (recent) → K-Ar (medium) → U-Pb (old) → Rb-Sr (ancient)\n\nGENERAL RULE: short half-life = recent; long half-life = ancient.\n\nANALOGY:\n- \"Different stopwatches for different races\" — C-14 is a \n  millisecond timer (sprints, recent things). U-Pb is a \n  cosmic-scale calendar (geological eons). Use the right \n  clock for the timescale.\n\n──────────────────────────────────────────────\nCARD 05 — C-14 and Dinosaurs (THE TRAP)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Different stopwatches for different races\" — C-14 is a",
+      "hint": "\"COOL KIDS USUALLY ROCK\" C-14 (recent) → K-Ar (medium) → U-Pb (old) → Rb-Sr (ancient)"
+    },
+    {
+      "q": "Can you use carbon-14 dating on dinosaur fossils?",
+      "a": "NO — and Robbins LOVES this question.\n\nC-14 half-life = 5,730 years. After ~10 half-lives (~57,000 \nyears) there's so little C-14 left it can't be reliably \nmeasured. After ~250,000 years it's essentially undetectable.\n\nDinosaurs went extinct ~66 MILLION years ago. That's ~11,500 \nhalf-lives — every C-14 atom decayed eons ago.\n\nTO DATE DINOSAURS: use volcanic ash layers above/below the \nfossil with K-Ar (potassium-argon) or U-Pb (uranium-lead). \nYou don't date the bone directly — you date the rock layers \nthat bracket it.\n\nANALOGIES:\n- \"Stopwatch that maxes out at 5 minutes\" — useless for timing \n  a marathon. C-14 is a short-cycle clock.\n- \"Daylight hours for measuring centuries\" — wrong tool.\n\n⚠ TRAP STATEMENT to reject: \"C-14 can date dinosaur bones.\" \nFALSE.\n\n──────────────────────────────────────────────\nCARD 06 — Picking the Right Isotope for the Job",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Stopwatch that maxes out at 5 minutes\" — useless for timing",
+      "hint": "\"C-14 can date dinosaur bones.\"  FALSE."
+    },
+    {
+      "q": "A paleontologist finds a 2-million-year-old hominin fossil in volcanic ash. Which isotope system?",
+      "a": "K-Ar (POTASSIUM-ARGON) — works on volcanic rock in the \nmillion-year range.\n\nREASONING:\n- C-14 → too short (limit 50,000 yrs); fails\n- K-Ar → 1.3 byr half-life; perfect for million-year scale; \n  WORKS ON VOLCANIC ROCK (which is what's actually datable \n  near hominin fossils)\n- U-Pb → 4.5 byr half-life; works but resolution is worse for \n  recent (million-year) samples — better suited for very old \n  rocks\n- Rb-Sr → 47 byr half-life; way overkill, low resolution at \n  million-year scale\n\nKEY INSIGHT: you usually can't date the FOSSIL directly — you \ndate the volcanic ash above and below it. K-Ar is the workhorse \nfor hominin paleontology in East Africa.\n\n──────────────────────────────────────────────\nCARD 07 — Why K-Ar Works (Reset Mechanism)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "you usually can't date the FOSSIL directly — you  date the volcanic ash above and below it. K-Ar is the workhorse  for hominin paleontology in East Africa."
+    },
+    {
+      "q": "When a volcanic rock crystallizes, what \"resets\" the K-Ar clock?",
+      "a": "At the moment of LAVA CRYSTALLIZATION, all previously \naccumulated radiogenic Ar-40 ESCAPES AS A GAS — Ar is a noble \ngas and won't stay in molten rock. The mineral starts with \nZERO Ar-40.\n\nAfter crystallization, K-40 begins decaying to Ar-40, which \ngets trapped in the new crystal lattice. The Ar-40 that \naccumulates after crystallization is a direct measure of how \nmuch time has passed.\n\nANALOGY:\n- \"Resetting a stopwatch\" — pour out all the sand (Ar gas), \n  then start the clock when the crystal solidifies. Whatever \n  Ar-40 is in the rock now must have built up since \n  solidification.\n- \"Empty water bottle\" — start with nothing. Watch it fill \n  drip-by-drip. Measure the level → calculate elapsed time.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Ar-40 is trapped at known initial concentration\" → FALSE \n  (it starts at zero)\n- \"K-40 concentration is set by temperature\" → FALSE\n- \"Cosmic rays convert K-40 to Ar-40\" → FALSE (it's internal \n  decay)\n\n──────────────────────────────────────────────\nCARD 08 — Abiogenesis (definition)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Resetting a stopwatch\" — pour out all the sand (Ar gas),",
+      "hint": "- \"Ar-40 is trapped at known initial concentration\" → FALSE    (it starts at zero) - \"K-40 concentration is set by temperature\" → FALSE"
+    },
+    {
+      "q": "What is abiogenesis?",
+      "a": "The origin of life from NON-LIVING chemistry. The hypothesis \nthat early Earth's organic molecules formed from inorganic \nchemistry, then progressed to self-replicating systems.\n\nPREBIOTIC SOUP HYPOTHESIS (Oparin-Haldane):\n- Early Earth's pools/oceans contained simple organic molecules\n- Energy sources: lightning, UV radiation, volcanic heat\n- KEY: NO O2 in the early atmosphere (would oxidize organics)\n- Reducing atmosphere of CH4, NH3, H2, H2O\n\nANALOGIES:\n- \"Cosmic kitchen\" — the early Earth was a giant chemistry lab. \n  Pour in raw ingredients (gases), apply energy (lightning), \n  let it simmer (millions of years), and chemistry alone can \n  make the building blocks.\n- \"Self-organizing soup\" — given the right ingredients and \n  enough stirring, complex molecules emerge from simpler ones \n  without any designer.\n\n──────────────────────────────────────────────\nCARD 09 — Miller-Urey Experiment (1953)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Cosmic kitchen\" — the early Earth was a giant chemistry lab.",
+      "hint": ""
+    },
+    {
+      "q": "What did the Miller-Urey experiment show, and what's its scope?",
+      "a": "SETUP: Stanley Miller (with Harold Urey, 1953) sealed a glass \napparatus with:\n- Water (to simulate ocean)\n- CH4 (methane), NH3 (ammonia), H2 (hydrogen) — early \n  atmosphere proxies\n- ELECTRIC SPARKS (to simulate lightning)\n- NO oxygen\n\nRESULT (after ~1 week): 20+ AMINO ACIDS formed spontaneously, \nincluding some used in modern biology.\n\nWHAT IT PROVED: amino acids — the BUILDING BLOCKS of proteins \n— can form ABIOTICALLY under early Earth conditions.\n\n⚠ TRAP — WHAT IT DIDN'T PROVE:\n- Did NOT make cells\n- Did NOT make DNA\n- Did NOT make life\n- Only showed building blocks form spontaneously\n\nANALOGIES:\n- \"Made the bricks, not the building\" — Miller-Urey showed you \n  can spontaneously generate the LEGOs. Doesn't prove the LEGO \n  set will assemble itself into a castle.\n- \"Lightning in a bottle\" — literally. Sparks + gases + water = \n  amino acids.\n\n──────────────────────────────────────────────\nCARD 10 — Other Abiogenesis Evidence",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Made the bricks, not the building\" — Miller-Urey showed you",
+      "hint": "- Did NOT make cells - Did NOT make DNA - Did NOT make life"
+    },
+    {
+      "q": "Beyond Miller-Urey, what other evidence supports abiogenesis?",
+      "a": "1. FOX et al. (1977): Heated dry amino acids at 120°C → \n   peptide-like polymer chains (\"proteinoids\"). Shows \n   POLYMERIZATION can happen abiotically.\n\n2. MURCHISON METEORITE (fell in Australia, 1969): contains \n   PURINES, PYRIMIDINES, and over 70 amino acids of \n   extraterrestrial origin. Suggests organic molecules can \n   form in SPACE and may have seeded early Earth (panspermia \n   ingredients, not panspermia of life itself).\n\n3. HYDROTHERMAL VENTS: alternative origin site — chemical \n   gradients at deep-sea vents may provide energy and \n   templates for prebiotic chemistry.\n\nANALOGIES:\n- Murchison meteorite = \"delivery from space\" — the universe \n  is making amino acids out there, too. Earth wasn't the only \n  kitchen.\n- Fox proteinoids = \"spontaneous knitting\" — give amino acids \n  heat, they start linking up on their own.\n\n──────────────────────────────────────────────\nCARD 11 — RNA World Hypothesis",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Murchison meteorite = \"delivery from space\" — the universe",
+      "hint": ""
+    },
+    {
+      "q": "What is the RNA World hypothesis and why is RNA the candidate for first life-molecule?",
+      "a": "HYPOTHESIS: before DNA and proteins specialized, RNA did BOTH \njobs — it stored genetic information AND catalyzed chemical \nreactions. RNA was the first self-replicating functional \nmolecule.\n\nWHY RNA IS UNIQUELY SUITED:\n- Can STORE information (sequence of bases) like DNA\n- Can CATALYZE reactions as RIBOZYMES (RNA enzymes)\n- BIFUNCTIONAL — fills both informational and catalytic roles \n  with a single molecule type\n\nEVOLUTION:\n1. RNA World — RNA does everything\n2. DNA evolves as more stable info storage → takes over \n   info role\n3. Proteins evolve → take over catalytic role (more \n   versatile chemistry)\n4. RNA becomes intermediate (mRNA, tRNA, rRNA)\n\nMOLECULAR FOSSIL: the RIBOSOME's catalytic core is rRNA — not \nprotein. Even today, the most fundamental cellular machinery \nuses RNA as the catalyst, a relic of the RNA World.\n\nANALOGIES:\n- \"Swiss army knife\" — RNA was the multi-tool that did \n  everything. Later, specialized tools (DNA = filing cabinet, \n  protein = power drill) replaced individual functions.\n- \"Founder of a startup\" — RNA was the early CEO doing every \n  job. As the company grew, specialists were hired (DNA for \n  storage, proteins for action), and the founder retired into \n  a more limited role.\n\n⚠ TRAP STATEMENTS to reject:\n- \"RNA is more stable than DNA\" → FALSE (DNA is more stable)\n- \"RNA replicates without enzymes\" → FALSE (modern RNA needs \n  enzymes, though early RNA may have been self-replicating)\n- \"RNA uses thymine\" → FALSE (RNA uses URACIL; DNA uses \n  THYMINE)\n\n──────────────────────────────────────────────\nCARD 12 — Relative Dating: Stratigraphy",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Swiss army knife\" — RNA was the multi-tool that did",
+      "hint": "- Can STORE information (sequence of bases) like DNA - Can CATALYZE reactions as RIBOZYMES (RNA enzymes) - BIFUNCTIONAL — fills both informational and catalytic roles"
+    },
+    {
+      "q": "What are the principles of relative dating with rock layers?",
+      "a": "1. PRINCIPLE OF SUPERPOSITION: in undisturbed sedimentary \n   rocks, lower layers = OLDER, upper layers = YOUNGER.\n   ⚠ Only valid when rocks haven't been overturned or \n   metamorphosed.\n\n2. CROSS-CUTTING RELATIONSHIPS: any feature (fault, \n   intrusion) that CUTS through a rock is YOUNGER than the \n   rock it cuts. EXAMPLE: a fault cutting layers 1-3 but \n   stopping below layer 4 → the fault formed AFTER layers \n   1-3 but BEFORE layer 4.\n\n3. INDEX FOSSILS: organisms that lived for SHORT time spans \n   (so age is precise) and were GEOGRAPHICALLY WIDESPREAD \n   (so they appear in many places). Used to correlate strata \n   across the world.\n\n4. UNCONFORMITIES: gaps in the rock record from erosion or \n   non-deposition. Indicate missing time.\n\n5. CORRELATION: matching strata across geographic locations \n   using index fossils + lithology.\n\n⚠ TRAP — INDEX FOSSILS: must be SHORT-LIVED + WIDESPREAD. The \nopposite (long-lived + narrow distribution) is bad — Robbins \nwill offer this as a wrong answer.\n\nANALOGY:\n- \"Layers of paint on a wall\" — the bottom paint is oldest \n  (superposition). A nail driven through 3 layers but covered \n  by the 4th was hammered in between layer 3 and layer 4 \n  (cross-cutting). A scratch with no paint above = unconformity.\n\n──────────────────────────────────────────────\nCARD 13 — Fossil Transitional Forms",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Layers of paint on a wall\" — the bottom paint is oldest",
+      "hint": "must be SHORT-LIVED + WIDESPREAD. The  opposite (long-lived + narrow distribution) is bad — Robbins  will offer this as a wrong answer."
+    },
+    {
+      "q": "What is a \"transitional fossil\" and what are the classic examples?",
+      "a": "A fossil exhibiting a MOSAIC OF ANCESTRAL AND DERIVED \nCHARACTERS that links two major groups. Shows the gradual \nevolutionary transition between body plans.\n\nCLASSIC EXAMPLES:\n- ARCHAEOPTERYX (~150 mya, Jurassic) — reptilian teeth, claws, \n  bony tail PLUS avian feathers, wishbone. Bridges dinosaurs \n  and birds.\n- TIKTAALIK (~375 mya, late Devonian) — lobe-finned fish with \n  a NECK, wrists, proto-limb fins, ribs. Bridges fish and \n  tetrapods.\n- PAKICETUS → AMBULOCETUS → RODHOCETUS (50–47 mya) — early \n  whale relatives with functional legs, gradually reducing \n  hind limbs. Documents the land-to-water whale transition.\n- THRINAXODON (Triassic) — synapsid with both reptilian and \n  mammalian jaw bone features. Bridges to mammals.\n\nNOT a transitional form: DIMETRODON (the sail-backed Permian \nsynapsid) — it's NOT between fish and amphibians (often \nmiscategorized).\n\nANALOGIES:\n- \"Half-built bridge\" — a transitional fossil is a snapshot \n  of evolution mid-transition. Has features of both shores.\n- \"Time-lapse photo\" — shows the species mid-jump between \n  body plans.\n\n──────────────────────────────────────────────\nCARD 14 — Whale Evolution Sequence (Memorize)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Half-built bridge\" — a transitional fossil is a snapshot",
+      "hint": ""
+    },
+    {
+      "q": "What does the cetacean (whale) fossil sequence show?",
+      "a": "TERRESTRIAL ARTIODACTYL ANCESTORS (deer/hippo-like, 4 legs) \n→ Pakicetus (early whale, still walked on land, ~50 mya) \n→ Ambulocetus (\"walking whale,\" semi-aquatic, ~49 mya) \n→ Rodhocetus (further reduced hind limbs, more aquatic) \n→ Basilosaurus (essentially aquatic, vestigial pelvis, \n  ~40 mya) \n→ Modern whales (fully aquatic, vestigial pelvis still \n  present internally).\n\nSEQUENCE: terrestrial 4-legged ancestor → semi-aquatic with \nreduced hind limbs → fully aquatic with vestigial pelvis.\n\nKEY: closest LIVING relatives of whales = HIPPOS. Confirmed \nby molecular phylogenetics matching the fossil sequence.\n\nANALOGY:\n- \"Slowly walking into the pool\" — each transitional form is \n  a step further into the water, and a step away from working \n  legs. The pelvis lingers as a vestigial souvenir of the \n  walking past.\n\n──────────────────────────────────────────────\nCARD 15 — Earliest Life Milestones (Sequence)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Slowly walking into the pool\" — each transitional form is",
+      "hint": "closest LIVING relatives of whales = HIPPOS. Confirmed  by molecular phylogenetics matching the fossil sequence."
+    },
+    {
+      "q": "List the major early life milestones in chronological order with dates.",
+      "a": "~3.8 BYA — BIOMARKERS (molecular evidence: carbon isotope \nratios suggesting biological carbon fixation; lipid \nbiomarkers in ancient rocks)\n\n~3.5–3.8 BYA — LUCA (Last Universal Common Ancestor) — single-\ncelled, prokaryotic\n\n~3.45 BYA — STROMATOLITES (layered mounds from cyanobacterial \nbiofilms; oldest definitive cellular fossils)\n\n~2.4 BYA — GREAT OXYGENATION EVENT (cyanobacteria pumped O2 \ninto atmosphere; Earth's first major pollution event)\n\n~1.8 BYA — FOSSIL EUKARYOTES (cells with nuclei and \norganelles)\n\n~1.2 BYA — MULTICELLULAR EUKARYOTES (red algae — oldest \nknown multicellular eukaryote)\n\n~575 MYA — EDIACARAN BIOTA (earliest definitive animal \nfossils; soft-bodied)\n\n~542 MYA — CAMBRIAN EXPLOSION (most major animal phyla appear)\n\nPATTERN: simpler comes first. ~2.5 billion years of just \nmicrobes before complex life shows up.\n\nANALOGY:\n- \"Stage building before the show\" — Earth spent BILLIONS of \n  years building the basics (single cells, then complex \n  cells) before animals showed up at the last second.\n\n⚠ TRAP — Robbins may scramble this order. Memorize: \nbiomarkers → stromatolites → eukaryotes → multicellular \neukaryotes → Ediacaran → Cambrian.\n\n──────────────────────────────────────────────\nCARD 16 — Three Domains of Life",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Stage building before the show\" — Earth spent BILLIONS of",
+      "hint": "biomarkers → stromatolites → eukaryotes → multicellular  eukaryotes → Ediacaran → Cambrian."
+    },
+    {
+      "q": "What are the three domains of life and their key features?",
+      "a": "1. BACTERIA — prokaryotes; peptidoglycan cell wall; 70S \n   ribosomes; circular DNA. Earliest evidence ~3.5 bya \n   (cyanobacteria → produced first atmospheric O2).\n\n2. ARCHAEA — prokaryotes BUT distinct biochemistry; UNIQUE \n   membrane lipids (ether linkages, isoprenoid chains, NOT \n   ester linkages like Bacteria); often extremophiles \n   (thermophiles, halophiles, methanogens). Earliest evidence \n   from biologically-produced methane in Australian rocks.\n\n3. EUKARYA — cells with NUCLEAR ENVELOPE; 80S ribosomes; \n   organelles (mitochondria, sometimes chloroplasts); ~100× \n   larger than bacteria. Earliest fossils ~1.8 bya. Includes \n   plants, animals, fungi, protists.\n\nKEY POINT: Archaea are MORE CLOSELY RELATED to Eukarya than \nto Bacteria, despite \"looking\" prokaryotic. Three domains, \nnot two.\n\nANALOGIES:\n- \"Three branches of the family tree\" — early life split into \n  three lineages. Bacteria + Archaea share prokaryotic \n  appearance but are deeply distinct biochemically.\n- \"Three operating systems\" — Linux (Bacteria), BSD (Archaea), \n  Windows (Eukarya). They look similar at high level but the \n  internals are very different.\n\n──────────────────────────────────────────────\nCARD 17 — Multicellularity Evolved Many Times",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Three branches of the family tree\" — early life split into",
+      "hint": "Archaea are MORE CLOSELY RELATED to Eukarya than  to Bacteria, despite \"looking\" prokaryotic. Three domains,  not two."
+    },
+    {
+      "q": "How many times did multicellularity evolve?",
+      "a": "AT LEAST 25 SEPARATE TIMES. NOT a single event.\n\nIndependent origins: plants, animals, fungi, brown algae, red \nalgae, green algae, slime molds, and more.\n\nOLDEST MULTICELLULAR EUKARYOTE: red algae ~1.2 bya.\n\nDICTYOSTELIUM (cellular slime mold) — modern model for how \nmulticellularity might emerge:\n1. Starved cells release cAMP signal\n2. Cells aggregate into a \"slug\"\n3. Slug differentiates: some cells form a STALK (sacrifice \n   themselves), others form SPORES at the top\n4. Spores disperse → restart cycle\n\nThis shows altruism, differentiation, and cooperation can \nevolve incrementally from single-celled ancestors.\n\n⚠ TRAP — Robbins TRAP: never say \"multicellularity evolved \nin [one event].\" It's CONVERGENT. Each lineage solved the \npuzzle independently.\n\nANALOGIES:\n- \"Apartment buildings invented independently in many cities\" \n  — same engineering problem (efficient living) solved in \n  parallel by different cultures.\n- \"Wheels on a luggage\" — convergent across many designs.\n\n──────────────────────────────────────────────\nCARD 18 — Geologic Period Mnemonic",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Apartment buildings invented independently in many cities",
+      "hint": "never say \"multicellularity evolved  in [one event].\" It's CONVERGENT. Each lineage solved the  puzzle independently."
+    },
+    {
+      "q": "Memorize the geologic periods from Cambrian onward.",
+      "a": "ROBBINS' MNEMONIC: \"OLD SALAMANDERS DON'T CLIMB POORLY \nTRAVELED JUNGLE CRAGS\"\n= Ordovician, Silurian, Devonian, Carboniferous, Permian, \n   Triassic, Jurassic, Cretaceous\n\nFULL SEQUENCE (oldest first):\nEDIACARAN → Cambrian → Ordovician → Silurian → Devonian → \nCarboniferous → Permian → Triassic → Jurassic → Cretaceous \n→ Cenozoic\n\nALTERNATE MNEMONIC: \"Camels Often Sit Down Carefully; Perhaps \nTheir Joints Creak.\"\n\nDATES (rough):\n- Ediacaran: 575–542 mya\n- Cambrian: 542–488 mya\n- Ordovician: 488–444 mya\n- Silurian: 444–416 mya\n- Devonian: 416–359 mya\n- Carboniferous: 359–299 mya\n- Permian: 299–252 mya\n- Triassic: 252–202 mya\n- Jurassic: 202–145 mya\n- Cretaceous: 145–66 mya\n- Cenozoic: 66 mya–present\n\n──────────────────────────────────────────────\nCARD 19 — Ediacaran Biota",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "What's the Ediacaran period known for?",
+      "a": "Ediacaran (~575–542 mya): EARLIEST DEFINITIVE ANIMAL FOSSILS.\n\nKEY FEATURES:\n- Soft-bodied multicellular organisms\n- Many bizarre body plans (Dickinsonia, Spriggina)\n- Lacked mineralized skeletons (so preservation rare)\n- Some may not even fit into modern animal phyla — many \n  body plans went extinct BEFORE the Cambrian\n\nKEY POINT: animal life existed in Ediacaran but had NOT yet \n\"exploded\" into the diverse phyla seen later. Many Ediacaran \nforms have no living descendants.\n\nANALOGY:\n- \"Beta version of life\" — Ediacaran is the buggy pre-release. \n  Many designs shipped and got abandoned. Cambrian = the \n  v1.0 launch with the body plans that stuck.\n\n──────────────────────────────────────────────\nCARD 20 — Cambrian Explosion",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Beta version of life\" — Ediacaran is the buggy pre-release.",
+      "hint": "- Soft-bodied multicellular organisms - Many bizarre body plans (Dickinsonia, Spriggina) - Lacked mineralized skeletons (so preservation rare)"
+    },
+    {
+      "q": "What was the Cambrian Explosion and why is it important?",
+      "a": "~542–520 mya: most major animal PHYLA appeared in the fossil \nrecord within a geologically brief interval. Sudden rise of \ndiverse body plans: arthropods, chordates, mollusks, \nechinoderms, etc.\n\nCAUSES (multiple, debated):\n- Rising O2 levels enabled active animal metabolism\n- Evolution of mineralized skeletons (shells, exoskeletons) — \n  improved fossilization potential\n- Development of predator-prey arms races (Anomalocaris was \n  a big predator)\n- Pre-existing genetic toolkit (Hox genes) allowed rapid \n  body-plan diversification\n\nCRUCIAL CAVEAT: molecular clock data suggests these lineages \ndiverged DEEPER in the Precambrian — the \"explosion\" is \npartly an artifact of fossilization (skeletons appeared, so \nsuddenly things preserved well).\n\n⚠ TRAP — does NOT refute evolution. The Cambrian Explosion \nis rapid diversification FROM common ancestors, not creation \nwithout ancestry. Molecular phylogenies confirm shared \ndescent.\n\nANALOGY:\n- \"Fireworks finale\" — looks like everything exploded at \n  once, but the fuses were lit much earlier (Precambrian). \n  Mineralized skeletons turned the fuses visible.\n\n──────────────────────────────────────────────\nCARD 21 — Burgess Shale",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Fireworks finale\" — looks like everything exploded at",
+      "hint": "- \"Fireworks finale\" — looks like everything exploded at    once, but the fuses were lit much earlier (Precambrian).    Mineralized skeletons turned the fuses visible."
+    },
+    {
+      "q": "What is the Burgess Shale and why is it scientifically important?",
+      "a": "LOCATION: British Columbia, Canada (Canadian Rockies)\nAGE: ~505 mya (mid-Cambrian)\nSIGNIFICANCE: Lagerstätte — exceptionally preserved fossil \nsite with both hard and SOFT tissues. Over 65,000 specimens \nrepresenting 93+ species.\n\nFAMOUS RESIDENTS:\n- Anomalocaris — apex predator with grasping appendages\n- Hallucigenia — spiny worm-like creature, hard to interpret\n- Opabinia — five-eyed creature with frontal \"nozzle\"\n- Marrella — small arthropod, most abundant fossil\n\nPRESERVATION MECHANISM: ANOXIC UNDERWATER MUDSLIDES rapidly \nburied organisms in fine-grained sediment. No oxygen → no \ndecomposers → soft tissues preserved instead of rotting.\n\nWHY IT MATTERS: many Burgess organisms have NO MODERN \nRELATIVES. Shows Cambrian body-plan disparity was greater \nthan today — many experimental designs went extinct.\n\nANALOGY:\n- \"Pompeii for animals\" — sudden burial under volcanic ash \n  preserved Pompeii citizens; sudden burial under anoxic mud \n  preserved Burgess Shale animals.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Preserved by hydrothermal vent mineralization\" — FALSE\n- \"Preserved by glacial freezing\" — FALSE\n- \"Only mineralized skeletons preserved\" — FALSE (soft \n  tissue is the whole point)\n\n──────────────────────────────────────────────\nCARD 22 — Devonian (Age of Fishes)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Pompeii for animals\" — sudden burial under volcanic ash",
+      "hint": "many Burgess organisms have NO MODERN  RELATIVES. Shows Cambrian body-plan disparity was greater  than today — many experimental designs went extinct."
+    },
+    {
+      "q": "Why is the Devonian called \"Age of Fishes\" — and what other key event happened?",
+      "a": "Devonian (~416–359 mya): predatory fish dominated the seas.\n- DUNKLEOSTEUS — 6-meter armored fish predator (~380 mya)\n- Both jawless and jawed fish diversified\n- First ammonoids\n\nALSO IN THE DEVONIAN:\n- FIRST TETRAPODS (~370 mya) — vertebrates with legs \n  transitioning from water to land\n- TIKTAALIK (~375 mya) — the iconic fish-tetrapod \n  transitional fossil\n- First TREES appeared (~385 mya) — Earth's first forests\n\n⚠ TRAP — \"Age of X\" means PERIOD WHEN X DOMINATES, not when \nX first appeared. Fish originated in the Ordovician but \ndominated in the Devonian.\n\nANALOGY:\n- \"Golden age of TV\" — TV existed before, but a specific era \n  was its dominance. Same with \"Age of Fishes.\"\n\n──────────────────────────────────────────────\nCARD 23 — Carboniferous (Coal Forests + Giant Insects)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Golden age of TV\" — TV existed before, but a specific era",
+      "hint": "- \"Golden age of TV\" — TV existed before, but a specific era    was its dominance. Same with \"Age of Fishes.\""
+    },
+    {
+      "q": "Why is the Carboniferous famous?",
+      "a": "Carboniferous (~359–299 mya): \"AGE OF AMPHIBIANS\"\n\nKEY FEATURES:\n- Vast LUSH COAL SWAMPS — when trees fell into anoxic swamps, \n  they didn't decompose; they compressed into COAL over \n  millions of years (today's fossil fuels)\n- Atmospheric O2 reached ~35% (highest ever in Earth's \n  history)\n- HIGH O2 → GIANT INSECTS (e.g., dragonflies with 70cm \n  wingspans, Meganeura)\n  — insects breathe by passive diffusion, so larger bodies \n  need higher O2 saturation\n- First AMNIOTIC EGG evolved → ancestors of reptiles, \n  birds, mammals\n- SYNAPSID/SAUROPSID SPLIT (~300–280 mya):\n   - Synapsids → mammal lineage\n   - Sauropsids → reptile, dinosaur, bird lineage\n\nANALOGY:\n- \"Earth's coal bank deposit\" — Carboniferous coal is the \n  fossilized leftovers of a 60-million-year forest party \n  that didn't get decomposed.\n- \"Insect kaiju era\" — high O2 supported giant invertebrates \n  that couldn't exist today.\n\n⚠ TRAP — synapsid ≠ reptile. The phrase \"mammal-like reptile\" \nis OUTDATED. Synapsids and sauropsids split into separate \nlineages.\n\n──────────────────────────────────────────────\nCARD 24 — End-Permian Extinction (THE GREAT DYING)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Earth's coal bank deposit\" — Carboniferous coal is the",
+      "hint": "- Vast LUSH COAL SWAMPS — when trees fell into anoxic swamps,    they didn't decompose; they compressed into COAL over    millions of years (today's fossil fuels)"
+    },
+    {
+      "q": "What happened at the end of the Permian and why does it matter?",
+      "a": "END-PERMIAN EXTINCTION (~252 mya): the LARGEST mass \nextinction in Earth's history.\n\nSCALE:\n- ~96% of marine species lost\n- ~70% of terrestrial vertebrate species lost\n- Trilobites went extinct (after dominating for 300 myr)\n- Took ~10 million years for ecosystems to recover\n\nCAUSE (leading hypothesis): SIBERIAN TRAPS — massive \nvolcanic eruptions over ~1 million km². Cascading effects:\n- CO2 release → rapid global warming (greenhouse)\n- Sulfur aerosols → acid rain\n- Ocean acidification → carbonate shells dissolved\n- Anoxic ocean zones expanded → marine die-off\n\nNOT a single kill mechanism — a cascading environmental \ncatastrophe.\n\n⚠ ROBBINS TRAP — END-PERMIAN VS K-T:\n- \"MOST SEVERE mass extinction?\" → END-PERMIAN (~96%)\n- \"Killed the non-avian dinosaurs?\" → K-T (Cretaceous-\n  Paleogene, asteroid)\n- \"Most famous?\" → K-T (everybody knows the dinosaur story)\n- \"Largest?\" → PERMIAN\n\nANALOGY:\n- \"Civilization-ending world war for life\" — Permian is \n  apocalypse-tier. K-T is bad but Permian was worse.\n\n──────────────────────────────────────────────\nCARD 25 — Triassic & Jurassic (Dinosaur Origins)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Civilization-ending world war for life\" — Permian is",
+      "hint": ""
+    },
+    {
+      "q": "When did dinosaurs and mammals first appear?",
+      "a": "TRIASSIC (~252–202 mya):\n- First DINOSAURS appeared ~230 mya\n- First MAMMALS appeared (small, shrew-like)\n- Recovery from Permian extinction\n- Ended with another mass extinction (End-Triassic) that \n  wiped out competitors and let dinosaurs dominate\n\nJURASSIC (~202–145 mya):\n- Dinosaur diversification (sauropods, theropods, etc.)\n- BIRDS appear within Dinosauria (~150 mya, Archaeopteryx)\n- Mammal ancestor diversification ~200–180 mya (still small)\n- Pangaea began breaking up\n\nKEY POINT: birds didn't evolve from \"reptiles\" in general. \nBirds evolved from THEROPOD DINOSAURS (the bipedal carnivore \nlineage that includes T. rex). Birds are dinosaurs.\n\nANALOGY:\n- \"Dinosaurs go big\" (Triassic origins → Jurassic \n  diversification → Cretaceous peak)\n- \"Mammals stay small\" — for ~150 myr mammals were the \n  small, nocturnal underdogs while dinosaurs ran the show.\n\n──────────────────────────────────────────────\nCARD 26 — Cretaceous & K-T Extinction",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Dinosaurs go big\" (Triassic origins → Jurassic",
+      "hint": "birds didn't evolve from \"reptiles\" in general.  Birds evolved from THEROPOD DINOSAURS (the bipedal carnivore  lineage that includes T. rex). Birds are dinosaurs."
+    },
+    {
+      "q": "What ended the Cretaceous, and what's the evidence?",
+      "a": "CRETACEOUS (~145–66 mya):\n- Flowering plants (angiosperms) appeared ~132 mya — \n  diversified rapidly\n- Diverse non-avian dinosaurs (T. rex, Triceratops, etc.)\n- Modern mammal lineages established (still small)\n\nEND-CRETACEOUS / K-T (or K-Pg) EXTINCTION (~66 mya):\n- ~76% of species lost\n- Wiped out non-avian dinosaurs\n- Avian dinosaurs (birds) survived\n\nCAUSE: ASTEROID IMPACT (Chicxulub crater, Yucatán, Mexico, \n~10 km diameter)\n\nEVIDENCE:\n1. GLOBAL IRIDIUM-RICH LAYER at the K-T boundary — iridium \n   is rare on Earth's surface but common in asteroids. Walter \n   and Luis Alvarez (1980) discovered this worldwide spike.\n2. CHICXULUB CRATER (~180 km diameter) matches estimated \n   impactor size and date.\n3. SHOCKED QUARTZ — formed only by extreme impact pressure\n4. TEKTITES — glassy beads from melted rock ejected by impact\n5. Layer of soot and ash from global wildfires\n\n⚠ TRAP — don't confuse with Permian. K-T = asteroid + \ndinosaurs. Permian = volcanism + everything.\n\nANALOGY:\n- \"Chicxulub = Earth's bullet wound\" — the smoking gun is \n  literally a 180-km crater plus the iridium it left like \n  gunshot residue around the world.\n\n──────────────────────────────────────────────\nCARD 27 — BIRDS ARE DINOSAURS (THE TRAP)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Chicxulub = Earth's bullet wound\" — the smoking gun is",
+      "hint": "- \"Chicxulub = Earth's bullet wound\" — the smoking gun is    literally a 180-km crater plus the iridium it left like    gunshot residue around the world."
+    },
+    {
+      "q": "Are birds dinosaurs?",
+      "a": "YES. Birds are AVIAN THEROPOD DINOSAURS.\n\nPHYLOGENY:\nDinosauria\n├── Ornithischia (Triceratops, Stegosaurus)\n└── Saurischia\n     ├── Sauropodomorpha (long-necked giants, e.g., \n     │    Brachiosaurus)\n     └── Theropoda (T. rex, Velociraptor, etc.)\n          └── Aves (BIRDS — modern representatives)\n\nNON-AVIAN DINOSAURS = went extinct at K-T (66 mya)\nAVIAN DINOSAURS = birds — survived → 10,000+ living species \ntoday.\n\nSo: dinosaurs are NOT extinct. There are more living dinosaur \nspecies (birds) than living mammal species.\n\n⚠ ROBBINS TRAP: question may say \"all dinosaurs went extinct \nat K-T\" → FALSE (avian dinosaurs survived). \"Dinosaurs went \nextinct\" → strictly false; \"non-avian dinosaurs went extinct\" \n→ true.\n\nANALOGY:\n- \"Whales are mammals\" — even though whales swim like fish, \n  they're mammals. Birds fly and have feathers, but they're \n  dinosaurs. Don't let appearances fool you.\n\n──────────────────────────────────────────────\nCARD 28 — Cenozoic (Mammal Era + Hominins)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Whales are mammals\" — even though whales swim like fish,",
+      "hint": ""
+    },
+    {
+      "q": "What happened in the Cenozoic?",
+      "a": "CENOZOIC (~66 mya–present): \"Age of Mammals\"\n\nKEY EVENTS:\n- Mammals radiated into the niches dinosaurs left empty\n- Primates appear ~50 mya\n- Apes (Hominoidea) ~20 mya\n- Hominins (the human lineage) ~7 mya (Sahelanthropus)\n- Homo genus ~2.5 mya\n- Homo sapiens ~300 kya\n- Behaviorally modern humans ~50–100 kya\n- Agriculture ~10 kya\n\nKEY POINT: humans are RECENT. If Earth's history were \ncompressed to 24 hours, modern humans show up in the last \nfew seconds.\n\nANALOGY:\n- \"Closing credits\" — if Earth's history is the movie, \n  humans don't show up until literally the last frame. \n  Dinosaurs got 165 million years; we've had ~300,000.\n\n──────────────────────────────────────────────\nCARD 29 — Mass Extinctions Overview",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Closing credits\" — if Earth's history is the movie,",
+      "hint": "- Mammals radiated into the niches dinosaurs left empty - Primates appear ~50 mya - Apes (Hominoidea) ~20 mya"
+    },
+    {
+      "q": "Name the \"Big Five\" mass extinctions.",
+      "a": "1. END-ORDOVICIAN (~444 mya) — ~85% species. Cause: glaciation \n   and sea level drop.\n2. LATE DEVONIAN (~375–360 mya) — ~75% species. Multiple \n   pulses; cause unclear (possibly anoxia).\n3. END-PERMIAN (~252 mya) — ~96% marine species. THE GREAT \n   DYING. Cause: Siberian Traps volcanism. ←LARGEST\n4. END-TRIASSIC (~201 mya) — ~80% species. Cause: volcanism \n   from Pangaea breakup. Cleared the way for dinosaur \n   dominance.\n5. END-CRETACEOUS / K-T (~66 mya) — ~76% species. Cause: \n   Chicxulub asteroid impact. ←KILLED NON-AVIAN DINOSAURS\n\nPOSSIBLE 6TH (modern) — current human-caused extinction event \n(\"Anthropocene extinction\"). Rates 100–1000× background.\n\n⚠ DON'T CONFUSE:\n- Largest = Permian\n- Most famous = K-T\n- Most recent = K-T (until possibly the modern one)\n\nANALOGY:\n- \"Five great resets\" — each mass extinction wiped the slate \n  enough that surviving lineages exploded into emptied \n  niches. K-T cleared dinosaurs → mammals rise. Permian \n  cleared trilobites/synapsids → reptile rise.\n\n──────────────────────────────────────────────\nCARD 30 — Cladistics & Monophyly Quick Hit",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Five great resets\" — each mass extinction wiped the slate",
+      "hint": ""
+    },
+    {
+      "q": "Define monophyletic, paraphyletic, and polyphyletic groups.",
+      "a": "MONOPHYLETIC (a CLADE): an ancestor and ALL of its \ndescendants. Valid in modern systematics.\nEX: Mammalia (all mammals), Aves (all birds), Tetrapoda \n(all tetrapods including birds and us).\n\nPARAPHYLETIC: an ancestor PLUS SOME but NOT ALL descendants. \nExcludes some lineages.\nEX: \"Reptilia\" excluding birds = paraphyletic (because birds \ndescended from reptilian ancestors). \"Fish\" excluding \ntetrapods = paraphyletic.\n\nPOLYPHYLETIC: includes taxa from multiple independent \norigins, NO single common ancestor for the group.\nEX: \"Warm-blooded animals\" lumping mammals + birds = \npolyphyletic (warm-bloodedness evolved twice).\n\nCLADISTICS REJECTS paraphyletic and polyphyletic groups in \nfavor of strictly monophyletic clades.\n\nKEY CLADISTIC TERMS:\n- SYNAPOMORPHY = shared DERIVED character (defines a clade)\n- SYMPLESIOMORPHY = shared ANCESTRAL character (NOT useful \n  for grouping)\n- OUTGROUP = a taxon outside the group of interest used to \n  POLARIZE characters (determine which states are ancestral \n  vs derived)\n- PARSIMONY = preferred tree requires the FEWEST evolutionary \n  changes\n\nANALOGIES:\n- Monophyletic = \"complete branch of family tree\" (ancestor + \n  every descendant)\n- Paraphyletic = \"branch of family tree with some kids cut \n  off\" (Reptilia minus birds)\n- Polyphyletic = \"people who all happen to wear red shirts\" \n  (no common ancestor for the trait)\n\n⚠ TRAP STATEMENT to reject: \"Symplesiomorphies are useful \nfor grouping into clades\" → FALSE. Only synapomorphies group \nclades.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch3hist",
+      "source": "final_review",
+      "analogy": "Monophyletic = \"complete branch of family tree\" (ancestor +",
+      "hint": "- SYNAPOMORPHY = shared DERIVED character (defines a clade) - SYMPLESIOMORPHY = shared ANCESTRAL character (NOT useful    for grouping)"
+    },
+    {
+      "q": "What is a phylogenetic tree?",
+      "a": "A HYPOTHESIS about evolutionary relationships among taxa. Not a fact, not a fixed truth — a testable model that gets revised as new evidence comes in (especially molecular data).\nANALOGY: A family tree drawn from old letters. New letters arrive → tree gets redrawn. Phylogenies are the same — DNA evidence keeps revising what we thought from morphology alone.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Tree parts — vocabulary.",
+      "a": "- TIPS (terminal taxa) = the species or groups at the end of branches\n- BRANCHES = lineages through time\n- NODES = speciation events (where one ancestor splits into two)\n- ROOT = most recent common ancestor of EVERYTHING shown\n- CLADE = a node + ALL of its descendants\n- SISTER TAXA = lineages that diverged from the same immediate node — each other's closest relatives\nANALOGIES:\n- Family reunion org chart: tips = current relatives, nodes = ancestors who had two kids, root = oldest known relative.\n- Subway map: branches = train lines, nodes = transfer stations, tips = end-of-line stops.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Family reunion org chart: tips = current relatives, nodes = ancestors who had two kids, root = oldest known relative.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Reading relatedness on a tree.",
+      "a": "Tip ORDER (left-to-right or top-to-bottom on the page) DOES NOT show relatedness. Trace BACK to the SHARED NODE — whichever pair shares the MOST RECENT common node is most closely related. Rotating branches around a node changes nothing about the tree's meaning.\nANALOGIES:\n- Mobile hanging from the ceiling — you can spin any arm around without changing who's connected to whom.\n- A door swinging on its hinge — its position changes, but its hinge doesn't move. Branches swing on their nodes.\n- Thinking your seating order at a wedding indicates how related you are. It doesn't — your shared grandparent does.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Mobile hanging from the ceiling — you can spin any arm around without changing who's connected to whom.",
+      "hint": ""
+    },
+    {
+      "q": "Evolution is NOT a ladder.",
+      "a": "Trees are BRANCHING BUSHES, not progressive ladders climbing toward humans. Humans are ONE tip among thousands; we're not the \"endpoint\" or \"goal\" of evolution. Every living species is equally \"evolved\" — we all have the same time-depth from the last common ancestor.\nANALOGY: A river delta with a million branches reaching the ocean. No branch is \"the destination\" — they all arrived at \"now\" simultaneously.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Synapomorphy — definition.",
+      "a": "A SHARED DERIVED character that evolved in the immediate ancestor of a clade and was inherited by ALL its descendants. The KEY building block of cladistics — defines clades.\nANALOGIES:\n- A unique surname inherited by all descendants of one ancestor. Tracing it back identifies the family.\n- A new feature (e.g., a phone with face-ID) that appears in one product line and gets passed to every model afterward — defines that lineage.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "A unique surname inherited by all descendants of one ancestor. Tracing it back identifies the family.",
+      "hint": ""
+    },
+    {
+      "q": "Why are ANCESTRAL (plesiomorphic) traits NOT useful for grouping?",
+      "a": "Because they're shared with a much wider group. Example: \"having a backbone\" doesn't help group humans + chimps because reptiles, fish, and rats also have backbones. Only DERIVED traits (synapomorphies) tell you about within-group structure. Cladistics uses synapomorphies ONLY.\nANALOGY: \"Has a smartphone\" doesn't distinguish iPhone users from Android users in 2026. \"Has Face ID\" might.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Three group types — definitions.",
+      "a": "- MONOPHYLETIC ✓ = common ancestor + ALL descendants. The ONLY VALID kind of group in modern systematics.\n- PARAPHYLETIC ✗ = common ancestor + SOME but not all descendants. Invalid.\n- POLYPHYLETIC ✗ = group does NOT include the common ancestor of its members. Invalid.\nMNEMONIC: \"MONO = All Kids Come Home. PARA = Some Kids Left. POLY = Different Parents Showed Up.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"MONO = All Kids Come Home. PARA = Some Kids Left. POLY = Different Parents Showed Up.\""
+    },
+    {
+      "q": "TRAP — \"Reptiles\" is PARAPHYLETIC.",
+      "a": "Traditional \"reptiles\" excludes BIRDS. But birds ARE theropod dinosaurs (a reptile lineage). Crocodilians are MORE closely related to birds than to lizards. So \"reptiles without birds\" excludes some descendants of the reptile ancestor → paraphyletic → invalid.\nTO MAKE IT MONOPHYLETIC: include birds. The valid clade is \"Sauropsida\" (or \"Reptilia\" inclusive of Aves).\nANALOGY: A family reunion that includes Grandpa and his kids but deliberately excludes the cousin who became famous. The \"family\" you defined is paraphyletic — you cherry-picked who counted.\nROBBINS WILL TEST THIS. Memorize.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why is \"warm-blooded animals\" POLYPHYLETIC?",
+      "a": "Birds and mammals are both endothermic, but they evolved endothermy INDEPENDENTLY (their common ancestor was not endothermic). Grouping them as \"warm-bloodeds\" picks descendants without including their actual common ancestor's state. Convergent evolution → polyphyly.\nANALOGY: Grouping people by \"wearing red shoes today\" — they have different parents, different stories, just happen to share a feature.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "\"Fish\" — is it monophyletic?",
+      "a": "NO — paraphyletic in the traditional sense. \"Fish\" includes lobe-finned fish (coelacanths, lungfish) but excludes their tetrapod descendants (us). To be monophyletic, \"fish\" would have to include all tetrapods. Often you'll see this written as Osteichthyes inclusive of tetrapods.\nKEY: You are technically a fish in cladistic terms.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "You are technically a fish in cladistic terms."
+    },
+    {
+      "q": "Parsimony — what is it?",
+      "a": "Principle: of multiple competing tree topologies, prefer the one requiring the FEWEST evolutionary changes. Default assumption when building trees from character data.\nANALOGIES:\n- Occam's razor for trees. Fewer steps = better explanation.\n- Detective work: fewer suspects + simpler narrative > convoluted conspiracy. But occasionally, the convoluted story is true.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Occam's razor for trees. Fewer steps = better explanation.",
+      "hint": ""
+    },
+    {
+      "q": "Homology vs. Homoplasy.",
+      "a": "- HOMOLOGY = similarity due to SHARED ANCESTRY. Useful for phylogenies. Example: human arm + whale flipper + bat wing = same bones, modified.\n- HOMOPLASY = similarity NOT due to shared ancestry. MISLEADS phylogenies. Example: dolphin + shark body shape (similar streamline shape, totally different ancestors).\nANALOGIES:\n- Homology = two cousins both have grandma's nose (true kinship trace).\n- Homoplasy = two strangers who happen to look alike (no kinship; coincidence or convergence).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Homology = two cousins both have grandma's nose (true kinship trace).",
+      "hint": ""
+    },
+    {
+      "q": "Two types of homoplasy.",
+      "a": "1. CONVERGENT EVOLUTION: similar trait evolves INDEPENDENTLY in unrelated lineages from similar selective pressures. (Dolphin and shark body shape; camera eye in vertebrates and octopus.)\n2. EVOLUTIONARY REVERSAL: a derived trait reverts back to its ancestral state. (Some snakes losing limbs; secondary loss of feathers.)\nBoth create false groupings if mistaken for synapomorphies.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Convergent vs. Parallel evolution.",
+      "a": "Both produce homoplasy.\n- CONVERGENT: similar traits via DIFFERENT genetic mechanisms in DISTANT lineages. (Vertebrate eye vs. octopus eye — totally different developmental pathways.)\n- PARALLEL: similar traits via THE SAME genetic mechanism in CLOSELY RELATED lineages. (Repeated limb reduction in skinks using similar HOX gene changes.)\nKEY: Convergent = different genetic routes; Parallel = same genetic route.\nANALOGY: Convergent = two chefs in different countries inventing the same dish independently with different ingredients. Parallel = two chefs from the same culinary school making the same dish with the same recipe.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Convergent = different genetic routes; Parallel = same genetic route. ANALOGY: Convergent = two chefs in different countries inventing the same dish independently with different ingredients. Parallel = two chefs from the same culinary school making the same dish with the same recipe."
+    },
+    {
+      "q": "Camera eye — convergent or homologous?",
+      "a": "CONVERGENT (homoplasy). The vertebrate eye and octopus eye are both camera-style with lens, retina, etc. — but they evolved INDEPENDENTLY. Evidence: vertebrate retinas are INVERTED (creating a blind spot); octopus retinas are NON-INVERTED (no blind spot). Different developmental origins. Same selective pressure (good vision) → similar end product.\nANALOGY: Two engineers in different companies independently designing similar phones. Same problem (clear vision) → similar engineering solution. Internal wiring tells you they didn't copy each other.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Exaptation — definition.",
+      "a": "A trait that evolved for FUNCTION A and was later co-opted for FUNCTION B. Evolution doesn't engineer from scratch — it tinkers with existing parts.\nANALOGIES:\n- Repurposing an old factory into apartments. Wasn't built for living, but it works.\n- A spoon used as a bottle opener. Original function: scoop soup. Co-opted: pop caps.\n- A rubber band used as a hair tie. Wasn't designed for hair; coopted because it works.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "Repurposing an old factory into apartments. Wasn't built for living, but it works.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Feathers did NOT evolve FOR flight.",
+      "a": "FALSE that feathers evolved for flight. Feathers FIRST evolved in NON-FLYING THEROPOD DINOSAURS for:\n- Insulation (thermoregulation)\n- Display / mate attraction\n- Species recognition\n- Egg incubation (brooding behavior)\nLATER, in the bird lineage, feathers were CO-OPTED for powered flight = textbook EXAPTATION. Evidence: Velociraptor arm bones show QUILL KNOBS (feather attachment points), but its arms were too short for flight.\nANALOGY: Wool sweater wasn't invented \"for fashion\" — for warmth. Later it became fashionable. Same item, repurposed function.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Tiktaalik — why is it famous?",
+      "a": "A predicted-and-found fossil. Phylogenetic analysis predicted that a fish-tetrapod transitional form should exist in MID-DEVONIAN COASTAL WETLAND ROCKS. Scientists searched northern Canada specifically targeting that age + environment → found Tiktaalik roseae (~375 million years ago).\nKEY FEATURES of Tiktaalik (transitional traits):\n- Weight-bearing forelimb bones (could push up against substrate)\n- Bending wrist\n- Mobile NECK (lost the bony fish operculum that connected skull to shoulders)\n- Still had fins, scales, gills (fish features)\nWHY IT MATTERS: The prediction was made BEFORE the fossil was found. Confirmed prediction = strong support for evolutionary theory. Falsifiable hypothesis that wasn't falsified.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "- Weight-bearing forelimb bones (could push up against substrate) - Bending wrist - Mobile NECK (lost the bony fish operculum that connected skull to shoulders)"
+    },
+    {
+      "q": "Swim bladder = exaptation example.",
+      "a": "Fish swim bladders are HOMOLOGOUS to tetrapod LUNGS. The ancestral organ was a LUNG (used for breathing in early fish in low-oxygen waters). In many fish lineages, the lung was CO-OPTED into a SWIM BLADDER (used for buoyancy regulation). Tetrapods kept the lung for breathing.\nKEY: Tetrapod lungs are ANCESTRAL, not derived from swim bladders. Fish swim bladders are the DERIVED structure. (This often gets stated backward.)\nANALOGY: Old gas tank in a building → some buildings repurposed it into a water tank → others kept it as a fuel tank. The water-tank version is the modified one.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Tetrapod lungs are ANCESTRAL, not derived from swim bladders. Fish swim bladders are the DERIVED structure. (This often gets stated backward.) ANALOGY: Old gas tank in a building → some buildings repurposed it into a water tank → others kept it as a fuel tank. The water-tank version is the modified one."
+    },
+    {
+      "q": "Why is exaptation philosophically important to evolutionary theory?",
+      "a": "It explains how COMPLEX TRAITS can evolve without \"knowing\" the future. Each step served a current function; later steps repurposed existing structures. Counters the creationist \"what good is half a wing\" argument — half a wing was great for insulation, gliding, threat displays, etc. before it was used for full powered flight.\nANALOGY: Smartphones evolved from phones via cameras (originally added for fun) + GPS (for navigation) + apps (for utility). Nobody designed each step toward \"future smartphone\" — each addition served a current purpose; integration emerged later.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch4phylo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why are humans considered the most powerful selective force on Earth today?",
+      "a": "Humans impose INTENSE, CONSISTENT, DIRECTIONAL selection on \nother species through hunting, medicine, agriculture, and \nhabitat alteration.\n\nBecause the selection is STRONG and REPEATABLE across millions \nof patients/fields/oceans, evolution can be tracked in REAL \nTIME — years to decades, not millions of years.\n\nTIMESCALE EXAMPLES:\n- Antibiotic resistance in bacteria: DAYS\n- Pesticide resistance in insects: SEASONS\n- Fish body size: DECADES\n- Tusklessness in elephants: ~15 years (Mozambique civil war)\n- Bighorn horn size: 30 years (~20% decline)\n\nANALOGIES:\n- \"Unplanned global evolution experiment\" — humans are running \n  the largest selection experiment in history, just by \n  existing and using technology.\n- \"Selection on full blast\" — natural selection often ticks \n  along weakly. Humans crank up the selection coefficient to \n  near maximum, compressing what would normally take millennia \n  into decades.\n\nKEY: Strong selection = fast evolution. Humans = strongest \nselection. Therefore, fastest evolution we've ever measured.\n\n──────────────────────────────────────────────\nCARD 02 — Six Categories of Human-Driven Selection (MEMORIZE)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Unplanned global evolution experiment\" — humans are running",
+      "hint": "Strong selection = fast evolution. Humans = strongest  selection. Therefore, fastest evolution we've ever measured."
+    },
+    {
+      "q": "What are the six major categories of human-driven selection and their evolutionary consequences?",
+      "a": "1. TROPHY HUNTING → smaller traits (horns, tusks)\n   Bighorn sheep horns ↓20% in 30 years\n   African elephants → tusklessness\n\n2. ANTIBIOTIC USE → resistance spread (MRSA, drug-resistant TB)\n   Mechanism: kills susceptibles, selects pre-existing \n   resistant variants\n\n3. PESTICIDE USE → resistance in insects\n   DDT-resistant mosquitoes, Bt-resistant pests\n\n4. SIZE-SELECTIVE FISHING → smaller body, earlier maturation\n   Atlantic cod: shifted over decades\n\n5. HABITAT FRAGMENTATION → loss of diversity, inbreeding\n   Reduced gene flow → drift dominates → extinction risk\n\n6. SELECTIVE BREEDING (intentional) → domesticated traits\n   Dog breeds, corn from teosinte, dairy cattle\n\nANALOGY:\n- \"Six different sieves filtering the gene pool\" — each human \n  activity removes a specific subset of phenotypes from \n  reproduction. The leftover genes shape the next generation.\n\n──────────────────────────────────────────────\nCARD 03 — Antibiotics DON'T CAUSE Mutations (THE BIG TRAP)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Six different sieves filtering the gene pool\" — each human",
+      "hint": ""
+    },
+    {
+      "q": "Do antibiotics cause bacteria to mutate and develop resistance?",
+      "a": "NO. This is THE trap of the chapter. Robbins WILL test it.\n\nCORRECT MECHANISM:\n1. Mutations arise RANDOMLY in bacterial populations all the \n   time — BEFORE any antibiotic is present\n2. Some mutations happen to confer resistance (pure chance)\n3. When antibiotics are applied, SUSCEPTIBLE bacteria die\n4. Pre-existing RESISTANT bacteria survive and reproduce\n5. Resistance allele frequency increases in the population\n\nANTIBIOTICS ARE A SELECTIVE FILTER, NOT A MUTAGEN. They don't \n\"teach\" bacteria to resist — they kill those that can't \nalready resist.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Bacteria evolved resistance BECAUSE OF antibiotics\" \n  → wrong implication of directed mutation\n- \"Bacteria sense antibiotics and induce protective mutations\" \n  → NEO-LAMARCKIAN ERROR\n- \"Antibiotic exposure caused the resistance gene to appear\" \n  → wrong; the gene was already there\n\nANALOGIES:\n- \"Lottery tickets\" — antibiotics don't print winning tickets. \n  They reveal who already had one. Bacteria that \"already \n  played the lottery\" with the right mutation win when the \n  drawing happens.\n- \"Trial by fire\" — fire doesn't make some people fireproof. \n  It just kills the flammable ones. The fireproof ones were \n  fireproof before the fire started.\n- \"Forest fire & tall trees\" — fire doesn't grow tall trees. \n  It kills small ones. The survivors were already tall.\n\n──────────────────────────────────────────────\nCARD 04 — Why \"Finishing the Antibiotic Course\" Matters",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Lottery tickets\" — antibiotics don't print winning tickets.",
+      "hint": "- \"Bacteria evolved resistance BECAUSE OF antibiotics\"    → wrong implication of directed mutation - \"Bacteria sense antibiotics and induce protective mutations\""
+    },
+    {
+      "q": "A patient stops antibiotics after 3 days feeling better. What happens next?",
+      "a": "The ALMOST-killed-but-not-quite resistant bacteria survive \nand multiply unchecked.\n\nSTEP-BY-STEP:\n1. Antibiotic kills the most susceptible bacteria first → \n   patient feels better\n2. Pre-existing resistant variants (or partially resistant) \n   were NOT yet eliminated\n3. Patient stops antibiotic prematurely\n4. The surviving resistant bacteria multiply without \n   competition (susceptible ones are gone)\n5. Worst-case: resistance allele dominates the new bacterial \n   population → spreads to others via direct transmission OR \n   horizontal gene transfer\n\nKEY: feeling better ≠ infection cleared. The most resistant \nbacteria survive longest and are exactly what you DON'T want \nto leave behind.\n\nANALOGY:\n- \"Half-mowed lawn\" — you mow the grass quickly but stop when \n  it looks shorter. The tallest weeds you didn't reach now \n  have NO competition. Next week, your lawn is all weeds.\n- \"Stopping a mafia raid halfway\" — you arrest the easy \n  targets, then go home. The hardened criminals remaining \n  now run the city unchecked.\n\n⚠ This is the practical reason public health pushes \"finish \nyour full course\" — it's evolutionary management.\n\n──────────────────────────────────────────────\nCARD 05 — Four Mechanisms of Antibiotic Resistance (MEMORIZE)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Half-mowed lawn\" — you mow the grass quickly but stop when",
+      "hint": "feeling better ≠ infection cleared. The most resistant  bacteria survive longest and are exactly what you DON'T want  to leave behind."
+    },
+    {
+      "q": "What are the four main mechanisms by which bacteria acquire antibiotic resistance?",
+      "a": "1. TARGET MODIFICATION — mutation alters the antibiotic's \n   binding site so it can't bind effectively\n   EX: ribosome changes block tetracycline binding; altered \n   penicillin-binding protein (PBP2a/mecA gene) in MRSA\n\n2. ENZYMATIC DEGRADATION — bacteria produce enzymes that \n   destroy the antibiotic molecule\n   EX: BETA-LACTAMASES break the beta-lactam ring of \n   penicillin and ampicillin\n\n3. EFFLUX PUMPS — membrane proteins actively pump the \n   antibiotic OUT of the cell before it can do damage\n   EX: tetracycline efflux pumps; multi-drug resistance pumps\n\n4. HORIZONTAL GENE TRANSFER (HGT) — resistance genes (often \n   on plasmids) passed BETWEEN bacterial cells, even across \n   species\n   Three modes:\n   - CONJUGATION — direct cell-to-cell plasmid transfer\n   - TRANSFORMATION — uptake of free DNA from environment\n   - TRANSDUCTION — bacteriophage carries DNA between hosts\n\n⚠ TRAP — answer choices that say \"bacteria sense the \nantibiotic and induce directed mutations\" are WRONG (no \ndirected mutation; mutations are random).\n\nANALOGIES:\n- Target modification = \"changing the lock\" so the key (drug) \n  doesn't fit\n- Enzymatic degradation = \"shredder at the door\" destroying \n  the drug on arrival\n- Efflux pump = \"bouncer kicking the drug out\"\n- HGT = \"bacteria swapping cheat codes\" — sharing resistance \n  recipes like Bluetooth file transfers\n\n──────────────────────────────────────────────\nCARD 06 — Horizontal Gene Transfer (HGT) Detail",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Target modification = \"changing the lock\" so the key (drug)",
+      "hint": "- Target modification = \"changing the lock\" so the key (drug)    doesn't fit - Enzymatic degradation = \"shredder at the door\" destroying"
+    },
+    {
+      "q": "Why is horizontal gene transfer especially dangerous for antibiotic resistance?",
+      "a": "HGT lets resistance genes spread BETWEEN species — not just \nparent to offspring (vertical), but bacterium to bacterium \nlaterally, even across species lines.\n\nTHREE MODES:\n1. CONJUGATION — bacteria connect via a sex pilus → plasmid \n   (small circular DNA carrying resistance) is copied across \n2. TRANSFORMATION — a bacterium takes up free DNA from a \n   dead bacterium in the environment\n3. TRANSDUCTION — bacteriophage (virus) accidentally packages \n   bacterial DNA, then injects it into a new host\n\nWHY DANGEROUS:\n- A resistance gene that evolved in one harmless soil \n  bacterium can jump to a pathogen overnight\n- Multi-drug resistance plasmids carry resistance to MANY \n  antibiotics simultaneously — one transfer event = pathogen \n  becomes resistant to several drugs at once\n- Speeds up resistance spread enormously vs. relying only on \n  reproduction\n\nANALOGIES:\n- \"Bacterial Bluetooth\" — bacteria can wirelessly transfer \n  files (genes) to nearby bacteria, even if they're \"different \n  brands\" (species).\n- \"USB stick of resistance\" — one plasmid plugs into many \n  bacteria, each gaining the same resistance instantly.\n- \"Cheat codes spreading on a forum\" — bacteria post their \n  resistance recipes; any bacterium can download them.\n\n──────────────────────────────────────────────\nCARD 07 — Bighorn Sheep Trophy Hunting (Ram Mountain)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Bacterial Bluetooth\" — bacteria can wirelessly transfer",
+      "hint": "- A resistance gene that evolved in one harmless soil    bacterium can jump to a pathogen overnight - Multi-drug resistance plasmids carry resistance to MANY"
+    },
+    {
+      "q": "What did 30 years of trophy hunting do to bighorn sheep horn size?",
+      "a": "RAM MOUNTAIN, CANADIAN ROCKIES study:\n- 30 years of trophy hunting\n- Trophy hunters target the LARGEST horns (most desirable trophy)\n- Result: average horn size declined ~20%\n\nMECHANISM:\n1. Large-horned males are killed before they can maximize \n   reproduction\n2. Small-horned males (avoid hunters) survive and reproduce \n   more\n3. Small-horn alleles increase in frequency over generations\n\nTHIS IS HUMAN-IMPOSED DIRECTIONAL SELECTION — and it goes \nOPPOSITE the direction of natural selection.\n\nNATURAL SELECTION favors LARGE horns (bigger horns win male-\nmale combat → more matings → more offspring).\nTROPHY HUNTING favors SMALL horns (large-horned males die \nbefore reproducing).\n\nWhen the two pressures collide, trophy hunting WINS because \nit kills large-horned males before they finish reproducing.\n\n⚠ KEY: this change may be hard to REVERSE — alleles for very \nlarge horns have been DEPLETED from the gene pool.\n\nANALOGIES:\n- \"Always picking the tallest flowers\" — eventually the garden \n  is short flowers only.\n- \"Voting out the alpha males before they have kids\" — next \n  generation is genetically less alpha.\n\n──────────────────────────────────────────────\nCARD 08 — Elephant Tusklessness (Mozambique)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Always picking the tallest flowers\" — eventually the garden",
+      "hint": ""
+    },
+    {
+      "q": "How did decades of ivory poaching evolve tuskless elephants?",
+      "a": "MOZAMBIQUE CIVIL WAR (1977–1992): intense ivory poaching \nkilled tusked elephants for ivory funding.\n\nNUMBERS:\n- BEFORE the war: ~18% of females naturally tuskless\n- AFTER intense poaching: ~33% tuskless in heavily poached \n  populations\n\nGENETICS:\n- Tusklessness is HERITABLE\n- Linked to a DOMINANT allele on the X chromosome\n- Selection coefficient extremely strong — tusked females \n  killed at high rates → small genetic minority became the \n  majority within ~15 years\n\nWHY ONLY FEMALES SHOW IT:\n- The trait is sex-linked (X chromosome) and the dominant \n  tuskless allele is LETHAL in males during development\n- So the \"tuskless\" phenotype is essentially restricted to \n  females in this lineage\n- Males that inherit the allele die before birth — meaning \n  selection for tusklessness ALSO reduces male survival\n\nCLASSIC EXAMPLE of:\n- Human-imposed directional selection\n- Real-time evolution in a long-lived species\n- Heritable trait shifting frequency in just a few generations\n\nANALOGY:\n- \"Targeting the ones with diamonds\" — if every diamond-\n  wearing person gets robbed and killed, soon the population \n  is mostly people without diamonds. Same logic for tusks.\n\n──────────────────────────────────────────────\nCARD 09 — Atlantic Cod Fishing (Size-Selective Pressure)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Targeting the ones with diamonds\" — if every diamond-",
+      "hint": "- The trait is sex-linked (X chromosome) and the dominant    tuskless allele is LETHAL in males during development - So the \"tuskless\" phenotype is essentially restricted to"
+    },
+    {
+      "q": "How has commercial fishing changed Atlantic cod over decades?",
+      "a": "COMMERCIAL FISHING uses minimum size limits and gear that \ncatches LARGE fish, letting small ones escape.\n\nEVOLUTIONARY RESPONSE (over decades):\n- SMALLER body size at maturity\n- EARLIER MATURATION — fish reproduce before reaching catch \n  size\n- Increased reproductive investment at smaller sizes\n- Faster growth to reproductive size\n\nMECHANISM:\n1. Nets preferentially capture LARGE fish\n2. Small-bodied, early-maturing fish escape and reproduce\n3. Their alleles dominate the next generation\n4. Repeat over many generations → measurable genetic shift\n\n⚠ This is DIRECTIONAL SELECTION imposed by humans, not \nphenotypic plasticity. Even when fishing pressure is reduced, \nrecovery is slow because the gene pool has shifted.\n\nKEY POINT: ANSWER PROBABLY \"directional selection.\" Wrong \nanswers Robbins offers:\n- \"Phenotypic plasticity — fish grow smaller because of less \n  food\" → FALSE (it's heritable genetic change)\n- \"Sexual selection\" → FALSE\n- \"Stabilizing selection\" → FALSE (it's directional, not \n  stabilizing)\n- \"Genetic drift\" → FALSE (this is selection, not chance)\n\nANALOGY:\n- \"Always cutting the tallest plants\" — survivors and their \n  offspring are short. Stop cutting and the genes for tall \n  may be gone.\n- \"Pre-college reproduction\" — if everyone reproduces in high \n  school because adults get drafted, the population evolves \n  to mature earlier.\n\n──────────────────────────────────────────────\nCARD 10 — Pesticide Resistance (Same Story, Different Pest)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Always cutting the tallest plants\" — survivors and their",
+      "hint": "ANSWER PROBABLY \"directional selection.\" Wrong  answers Robbins offers: - \"Phenotypic plasticity — fish grow smaller because of less"
+    },
+    {
+      "q": "How does pesticide resistance evolve, and what's a classic example?",
+      "a": "SAME MECHANISM AS ANTIBIOTIC RESISTANCE:\n1. Random mutations in insect populations → some confer \n   resistance (pre-existing, by chance)\n2. Pesticide kills susceptible insects\n3. Resistant survivors reproduce\n4. Within a few generations (often a single growing season), \n   the population is dominated by resistant individuals\n\nCLASSIC EXAMPLES:\n- DDT resistance in MOSQUITOES — emerged within years of DDT \n  introduction; major reason DDT lost effectiveness\n- HOUSEFLIES — evolved resistance to 10+ insecticides in \n  succession from 1940–1975 (each new pesticide rapidly \n  failed)\n- Bt RESISTANCE in crop pests — pests evolving resistance to \n  Bt toxin in genetically modified crops\n\n⚠ TRAP — pesticide does NOT cause the mutation. Same as \nantibiotics.\n\nANALOGY:\n- \"Whack-a-mole that learns\" — every new chemical works for \n  a few seasons, then fails as resistance evolves. Companies \n  scramble to invent new chemicals; pests scramble to evolve \n  resistance to those. Endless treadmill (similar to a Red \n  Queen dynamic).\n\n──────────────────────────────────────────────\nCARD 11 — Selective Breeding / Domestication",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Whack-a-mole that learns\" — every new chemical works for",
+      "hint": "- \"Whack-a-mole that learns\" — every new chemical works for    a few seasons, then fails as resistance evolves. Companies    scramble to invent new chemicals; pests scramble to evolve"
+    },
+    {
+      "q": "What is artificial selection and what does it demonstrate?",
+      "a": "ARTIFICIAL SELECTION = humans intentionally choose which \nindividuals reproduce based on desired traits. Identical \nmechanism to natural selection — just human-directed.\n\nDARWIN used domesticated species as his EVIDENCE FOR EVOLUTION \nin The Origin of Species (1859). If breeders can produce \nextreme variation in decades through selective breeding, \nnature can do similar in millennia through natural selection.\n\nKEY EXAMPLES:\n- DOG BREEDS — all from grey wolf ancestor; ~15,000 years; \n  Chihuahua to Great Dane = same species despite extreme \n  morphological divergence\n- WILD CABBAGE (Brassica oleracea) → ONE ancestral plant \n  selectively bred into broccoli, cauliflower, kale, brussels \n  sprouts, kohlrabi, cabbage. Each crop is an extreme form of \n  one organ (flower buds, leaves, stem, etc.)\n- CORN FROM TEOSINTE — a small grass with hard kernels \n  selectively bred over ~9,000 years into modern corn \n  (massive cob with edible kernels)\n- DAIRY CATTLE — selected for milk yield; modern Holsteins \n  produce ~10× more milk than ancestors\n\nANALOGIES:\n- \"Sculpting from a gene pool\" — breeders chip away at \n  unwanted phenotypes by not letting them reproduce. The \n  gene pool gradually conforms to the breeder's chisel.\n- \"Selective DJ\" — only the songs the DJ likes get played \n  again. Soon the whole library is the DJ's taste.\n\n⚠ KEY POINT: artificial selection works ONLY because heritable \nvariation already exists. The breeder picks; the genes carry \nthe trait to the next generation.\n\n──────────────────────────────────────────────\nCARD 12 — Habitat Fragmentation & Conservation Genetics",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Sculpting from a gene pool\" — breeders chip away at",
+      "hint": "- DOG BREEDS — all from grey wolf ancestor; ~15,000 years;    Chihuahua to Great Dane = same species despite extreme    morphological divergence"
+    },
+    {
+      "q": "How does habitat fragmentation affect evolution?",
+      "a": "FRAGMENTATION breaks large continuous populations into small \nisolated ones. Consequences:\n\n1. REDUCED GENE FLOW — populations no longer share alleles\n2. INCREASED GENETIC DRIFT — small populations lose alleles \n   randomly each generation\n3. LOSS OF GENETIC DIVERSITY — fewer alleles available; \n   reduced adaptive potential\n4. INBREEDING DEPRESSION — relatives mating exposes \n   deleterious recessives → reduced fitness\n5. EXTINCTION RISK — small populations are vulnerable to \n   stochastic events (disease, environment)\n\nCLASSIC CASE — GREATER PRAIRIE CHICKENS (Illinois):\n- Massive habitat loss → population dropped to ~50 birds\n- Lost most alleles via drift\n- Egg hatching success dropped to ~38%\n- Genetic rescue: introduced birds from larger populations \n  → restored genetic diversity → hatching success returned \n  to ~94%\n\nCHEETAH BOTTLENECK (~10,000 years ago): a near-extinction \nevent left modern cheetahs so genetically uniform that \nunrelated cheetahs accept skin grafts from each other (no \nimmune rejection). Severe vulnerability to disease.\n\nFLORIDA PANTHER GENETIC RESCUE (1995): population had heart \ndefects and reproductive failure from inbreeding. 8 Texas \ncougars were introduced → restored heterozygosity → \npopulation recovered.\n\n50/500 RULE:\n- Effective population size (Ne) ≥50 prevents short-term \n  inbreeding\n- Ne ≥500 maintains long-term evolutionary potential\n\nANALOGIES:\n- \"Genetic library running out of books\" — each generation, \n  small populations lose a few alleles to drift. With no new \n  alleles incoming (no gene flow), the library shrinks.\n- \"Inbred royal families\" — Habsburg jaw and hemophilia in \n  European royalty — result of relatives marrying to keep \n  power, exposing recessive disorders.\n\n⚠ TRAP — Robbins may ask about OUTBREEDING DEPRESSION: \nmixing very distant populations can disrupt locally adapted \ngene combinations. Genetic rescue must use carefully chosen \nsource populations.\n\n──────────────────────────────────────────────\nCARD 13 — HWE & Human-Driven Selection (Connection)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Genetic library running out of books\" — each generation,",
+      "hint": "mixing very distant populations can disrupt locally adapted  gene combinations. Genetic rescue must use carefully chosen  source populations."
+    },
+    {
+      "q": "Why does human-driven selection always cause HWE violations?",
+      "a": "HWE assumptions: large population, random mating, no \nselection, no mutation, no gene flow.\n\nEVERY human-driven evolution example violates the \"NO \nSELECTION\" assumption. Therefore, every example of human-\ndriven evolution shows a population OUT OF HWE.\n\nIf a population is in HWE, you can conclude no detectable \nevolutionary force is altering allele frequencies AT THAT \nLOCUS AT THAT MOMENT — but this does NOT mean human selection \nisn't happening at OTHER loci.\n\nQUICK HWE FORMULAS:\n- p + q = 1\n- Genotype frequencies: p² + 2pq + q² = 1\n- Carriers (Aa) when q is small: 2pq ≈ 2q (lots of carriers; \n  few aa)\n\nEXAMPLE:\n- Albinism allele q = 0.1 → carriers = 2pq = 2(0.9)(0.1) = \n  0.18 (18% of population are carriers)\n- Affected (aa) = q² = 0.01 (1% affected)\n- Way more carriers than affected.\n\n⚠ TRAP — \"A population in HWE is evolving rapidly\" → FALSE. \nHWE is the NULL of NO EVOLUTION at that locus.\n\nANALOGY:\n- \"Empty courtroom (HWE) means nothing's happening at this \n  trial. Doesn't mean no crimes are happening in town at \n  other locations.\"\n\n──────────────────────────────────────────────\nCARD 14 — Step-by-Step: Evolution of Resistance (Universal \nTemplate)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Empty courtroom (HWE) means nothing's happening at this",
+      "hint": "- \"Empty courtroom (HWE) means nothing's happening at this    trial. Doesn't mean no crimes are happening in town at    other locations.\""
+    },
+    {
+      "q": "Walk through the universal step-by-step mechanism by which resistance evolves to ANY human-imposed kill agent (antibiotic, pesticide, herbicide).",
+      "a": "1. PRE-EXISTING VARIATION — random mutations in the population \n   create a small minority of resistant individuals BEFORE \n   the kill agent is applied\n2. APPLICATION — humans apply the kill agent (antibiotic, \n   pesticide, etc.)\n3. DIFFERENTIAL SURVIVAL — susceptible individuals die at \n   high rates; resistant individuals survive\n4. REPRODUCTION — surviving resistant individuals produce \n   offspring that inherit the resistance allele\n5. ALLELE FREQUENCY SHIFT — over generations, the resistance \n   allele becomes common; population is now resistant\n6. POSSIBLE HGT (bacteria) — resistance plasmids spread \n   laterally to other species, accelerating the problem\n\nThis is DARWIN'S ALGORITHM:\n- Variation (heritable)\n- Selection (differential survival/reproduction)\n- Inheritance (offspring inherit traits)\n- Time (allele frequencies shift)\n\nSame logic for trophy hunting, fishing, pesticides — just \nswap \"kill agent\" for \"selective removal mechanism.\"\n\nANALOGY:\n- \"Spam filter evolution\" — spammers get filtered, the few \n  emails that slip through (different format) get to inboxes \n  and they reply. Spammers learn what slips through. Filter \n  evolves; spam evolves. But here humans = filter, organisms \n  = spam evolving past us.\n\n──────────────────────────────────────────────\nCARD 15 — Why Resistance is \"Reverse-Engineered\" Evolution \nAfter Pressure Stops",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Spam filter evolution\" — spammers get filtered, the few",
+      "hint": ""
+    },
+    {
+      "q": "When humans stop applying pesticides/antibiotics/ hunting, do populations rapidly revert?",
+      "a": "USUALLY NO — and this is a key point.\n\nREASONS:\n1. Resistance/changed traits are now FIXED or near-fixed in \n   the population\n2. The original (susceptible/large-horned/late-maturing) \n   alleles may have been DEPLETED from the gene pool\n3. Without those original alleles, the population can't \n   evolve back without new mutations or migration\n4. Sometimes the new traits have NO COST in the absence of \n   pressure (so no selection to reverse them)\n5. Even when there IS a small fitness cost, removing it takes \n   many generations\n\nEXCEPTION: sometimes resistance has a MEASURABLE FITNESS COST \n(e.g., resistant bacteria reproduce slightly slower). If the \npressure is fully removed, frequencies may slowly drift back \ntoward the original — but this is slow and incomplete.\n\nANALOGIES:\n- \"You can't unscramble an egg\" — once alleles are lost, \n  you can't recover them without a fresh source.\n- \"Demolished building\" — easier to tear down than to rebuild. \n  Hunting can crash horn alleles in 30 years; rebuilding \n  could take centuries.\n\n──────────────────────────────────────────────\nCARD 16 — Identify NOT a Human-Driven Evolution Example",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "You can't unscramble an egg\" — once alleles are lost,",
+      "hint": ""
+    },
+    {
+      "q": "Which scenarios DON'T count as human-driven directional selection?",
+      "a": "NOT human-driven evolution:\n- A wild deer population in a NO-HUNTING national park \n  evolving over 50 years — could be natural selection, drift, \n  or environmental change, but no human selection pressure\n- Random environmental change (storms, climate) acting on \n  wildlife with no human cause\n- Genetic drift in a naturally small population\n\nYES human-driven evolution:\n- Antibiotics → resistant bacteria\n- Pesticides → resistant insects\n- Trophy hunting → smaller horns/tusks\n- Selective breeding → domesticated traits\n- Size-selective fishing → smaller, earlier-maturing fish\n\nKEY TEST: is there a CONSISTENT, DIRECTIONAL human pressure \non a heritable trait?\n- YES → human-driven evolution\n- NO → not human-driven (could still be evolution from \n  natural causes)\n\n⚠ ROBBINS may offer \"wild population evolves over time\" as a \ndistractor in a list of human-driven examples. Pick that one \nas the NOT example.\n\n──────────────────────────────────────────────\nCARD 17 — The Real-Time Evolution Argument",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "is there a CONSISTENT, DIRECTIONAL human pressure  on a heritable trait? - YES → human-driven evolution"
+    },
+    {
+      "q": "Why do biologists cite human-driven evolution as PROOF of evolution?",
+      "a": "Creationists sometimes argue evolution is unobservable because \nit takes millions of years. Human-driven examples DIRECTLY \nREFUTE this:\n\nOBSERVABLE EVOLUTION ON HUMAN TIMESCALES:\n- Antibiotic resistance: emerging within DAYS to YEARS in \n  controlled hospital settings\n- Insecticide resistance: documented within SEASONS in field \n  populations\n- Bighorn sheep horns: 20% decline in 30 years (~6 generations)\n- Mozambique elephants: 18% → 33% tuskless in ~15 years\n- Atlantic cod: measurable genetic shift over decades\n- Domesticated animals: extreme morphological divergence in \n  centuries to millennia\n\nThese are measurable allele frequency shifts in real \npopulations, observed in real time, by real scientists. \nEvolution is not just historical theory — it's an ongoing \nobservable process.\n\nANALOGY:\n- \"Time-lapse photography of selection\" — humans speed up \n  evolution so much that what would normally take eons can \n  be filmed in real time. We have movies of evolution \n  happening.\n\n──────────────────────────────────────────────\nCARD 18 — Summary Trade-Off: Strong Selection vs Genetic \nDiversity",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Time-lapse photography of selection\" — humans speed up",
+      "hint": ""
+    },
+    {
+      "q": "What's the long-term cost of human-driven selection on biodiversity?",
+      "a": "Strong directional selection — even if humans are blind to \nthis consequence — DEPLETES genetic diversity:\n\n1. Selection FIXES one allele and REMOVES alternatives\n2. Bottlenecked populations (heavy hunting/fishing) lose \n   alleles to drift\n3. Habitat fragmentation isolates populations and reduces \n   gene flow\n4. Reduced genetic diversity → reduced ADAPTIVE POTENTIAL \n   for future challenges (climate change, novel pathogens)\n\nCONSERVATION IMPLICATIONS:\n- Even if a species survives current pressures, depleted \n  diversity reduces ability to respond to NEXT pressure\n- Genetic rescue (introducing individuals from other \n  populations) can restore diversity\n- Maintaining habitat connectivity preserves gene flow\n\nKEY: humans often impose BOTH directional selection AND \ndiversity loss simultaneously, doubling the long-term cost.\n\nANALOGY:\n- \"Burning the library to win the current debate\" — \n  selecting hard for one trait can wipe out the genetic \n  variation needed to adapt to ANY future challenge. We're \n  spending genetic capital we'll need later.\n- \"Drying up your savings to pay rent today\" — short-term \n  selection wins, long-term flexibility lost.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch8humans",
+      "source": "final_review",
+      "analogy": "Burning the library to win the current debate\" —",
+      "hint": "humans often impose BOTH directional selection AND  diversity loss simultaneously, doubling the long-term cost."
+    },
+    {
+      "q": "How do complex traits like the vertebrate eye evolve if no single mutation produces a fully-formed organ?",
+      "a": "GRADUALLY — through many small mutations, each providing a \nslight fitness advantage. Every intermediate stage is itself a \nWORKING eye AND an improvement over the previous step:\n\n1. Flat patch of photosensitive cells (detect light/dark)\n2. Eye cup (crude direction detection)\n3. Pinhole (narrow aperture, crude image)\n4. Primitive lens (transparent cell mass focuses light)\n5. Camera eye (adjustable iris + corneal lens)\n\nEach step is favored by selection. No \"irreducible complexity\" — \nselection climbs a continuous fitness gradient.\n\nANALOGIES:\n- \"Staircase, not leap\" — you don't jump from ground floor to \n  the roof. Each stair (each mutation) is a small step, and \n  every landing is a stable place to stand.\n- \"Photo zoom levels\" — even a blurry low-res image beats no \n  image at all when something is trying to eat you. Each \n  upgrade (cup → pinhole → lens) is a meaningful resolution bump.\n- \"Phone camera evolution\" — flip-phone VGA cam < iPhone 1 < \n  iPhone 15 Pro. Every step was useful in its day; nobody had \n  to invent the iPhone 15 from scratch.\n\nROBBINS HOOK: Darwin himself addressed the eye in Origin to \ncounter the \"what good is half an eye?\" objection. Half an eye \nis excellent — beats no eye.\n\n──────────────────────────────────────────────\nCARD 02 — Gene Duplication: Neofunctionalization vs Subfunctionalization",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Staircase, not leap\" — you don't jump from ground floor to",
+      "hint": ""
+    },
+    {
+      "q": "How does gene duplication enable evolution of new functions?",
+      "a": "Step 1: A gene gets DUPLICATED (mutation makes 2 copies)\nStep 2: One copy keeps the original function (no fitness cost)\nStep 3: The duplicate is FREE to mutate without breaking anything\n\nTwo outcomes:\n- NEOFUNCTIONALIZATION → duplicate evolves a brand-new function\n- SUBFUNCTIONALIZATION → both copies divide up the original job\n\nEXAMPLES:\n- Globin gene family — hemoglobin α and β arose from duplication\n- Hox clusters — vertebrates have 4 clusters (2 rounds of whole-\n  genome duplication); invertebrates have 1\n- Color vision opsins — duplicated and tuned to different \n  wavelengths in primates\n\nANALOGIES:\n- \"Spare key\" — original key still opens the front door. The \n  spare can be reground into a new shape (different lock) without \n  losing access to the house.\n- \"Photocopy a recipe, then experiment\" — original stays in the \n  cookbook. The photocopy gets scribbled on, ingredients swapped, \n  and eventually it's a totally new dish.\n- \"Backup employee\" — keeps doing the original job while the \n  duplicate is free to retrain for a different role at the company.\n\n──────────────────────────────────────────────\nCARD 03 — Evo Devo Mechanisms (5 Big Ones)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Spare key\" — original key still opens the front door. The",
+      "hint": ""
+    },
+    {
+      "q": "List the major mechanisms of Evo Devo morphological change.",
+      "a": "1. REGULATORY NETWORK CHANGES — small mutations in genes that \n   CONTROL other genes (transcription factors, enhancers) cause \n   BIG morphological changes\n2. PROTEIN PROMISCUITY — proteins adopt new functions while \n   retaining old ones\n3. HETEROCHRONY — change WHEN/HOW FAST genes are expressed \n   (timing/rate), not the genes themselves\n4. HOX GENES — master regulators of body segment identity along \n   the anterior-posterior axis; conserved across all animals\n5. PAX6 — master regulator of eye development; conserved from \n   flies to humans\n\nTHE BIG IDEA: It's not new GENES that build new bodies — it's \nnew REGULATION of old genes. Change WHERE, WHEN, or HOW MUCH a \ngene is turned on.\n\nANALOGY:\n- \"Same orchestra, different conductor\" — the musicians (genes) \n  are the same across animals. Hand a different score to the \n  conductor (regulatory changes) and you get Mozart instead of \n  metal. Body plans differ because the conductor's instructions \n  differ, not because the musicians changed.\n\n──────────────────────────────────────────────\nCARD 04 — Hox Genes",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Same orchestra, different conductor\" — the musicians (genes)",
+      "hint": ""
+    },
+    {
+      "q": "What are Hox genes and why are they important?",
+      "a": "Master REGULATORY genes that define body SEGMENT IDENTITY along \nthe anterior-posterior (head-to-tail) axis.\n\nKEY FACTS:\n- HIGHLY CONSERVED — same Hox genes in flies, mice, humans\n- Arranged in CLUSTERS on chromosomes; their order on the \n  chromosome matches the order of segments they specify (colinearity)\n- Vertebrates: 4 Hox clusters (from whole-genome duplications)\n- Invertebrates: 1 Hox cluster\n- Small change in Hox expression = MAJOR body plan change \n  (e.g., legs growing where antennae should be — \"Antennapedia\")\n\nANALOGIES:\n- \"Address labels for body parts\" — Hox genes tell each segment \n  \"you are the thorax, you are the abdomen, you are the head.\" \n  Mix up the labels and the body builds parts in wrong places.\n- \"Highway exit signs\" — the cells migrating down the embryo \n  read the Hox signs to know where to get off and what to build.\n- \"Chapter headers in a book\" — every animal uses the same \n  chapter system (Ch1=head, Ch2=neck, Ch3=thorax...), but the \n  contents of each chapter differ between species.\n\n⚠ TRAP: Hox genes define SEGMENT IDENTITY, not cell type. They \ndon't make eyes — they tell the body where to put eyes.\n\n──────────────────────────────────────────────\nCARD 05 — Pax6 (Master Eye Regulator)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Address labels for body parts\" — Hox genes tell each segment",
+      "hint": "- HIGHLY CONSERVED — same Hox genes in flies, mice, humans - Arranged in CLUSTERS on chromosomes; their order on the    chromosome matches the order of segments they specify (colinearity)"
+    },
+    {
+      "q": "What does Pax6 do and what does its conservation tell us?",
+      "a": "Pax6 = master regulatory gene that triggers eye development.\n\nEVIDENCE OF CONSERVATION:\n- Same gene in fruit flies AND mice AND humans\n- Mouse Pax6 inserted into a fly will trigger fly eyes to form\n- Express Pax6 ectopically (e.g., on a fly's leg) → ectopic \n  EYES form on the leg\n\nWHAT THIS MEANS:\n- Pax6 is a SWITCH. It activates a tissue-appropriate downstream \n  cascade. In a fly it builds compound eyes; in a mouse it \n  builds camera eyes — same switch, different downstream targets.\n- Eyes evolved ONCE deep in animal ancestry (using Pax6), then \n  diversified into very different forms.\n\nANALOGIES:\n- \"Power button\" — Pax6 is the on-switch. Press it on a fly \n  motherboard, you boot up fly eyes. Press it on a vertebrate, \n  you boot up vertebrate eyes. Same switch, different OS.\n- \"Order in\" — Pax6 says \"eye, please.\" The local kitchen (cell \n  context) decides whether you get pizza or sushi.\n\n⚠ TRAP: Pax6 doesn't ENCODE eye structures — it triggers a \nprogram. The program details differ by species.\n\n──────────────────────────────────────────────\nCARD 06 — Heterochrony",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Power button\" — Pax6 is the on-switch. Press it on a fly",
+      "hint": "Pax6 doesn't ENCODE eye structures — it triggers a  program. The program details differ by species."
+    },
+    {
+      "q": "What is heterochrony?",
+      "a": "Changes in the TIMING or RATE of gene expression during \ndevelopment — without changing the gene's coding sequence — \nthat produce new phenotypes.\n\nTYPES:\n- Earlier vs later onset of expression\n- Faster vs slower rate of development\n- Extension or shortening of growth phases\n\nEXAMPLES:\n- Axolotl = neoteny (retains larval/juvenile traits as an adult)\n- Human skull = retains juvenile chimp-like proportions into \n  adulthood (paedomorphosis)\n- Giraffe neck = same 7 vertebrae as us, but each grows for longer\n\nANALOGIES:\n- \"Hitting pause vs play earlier\" — same movie (genes), different \n  scene cuts. Stretch a scene = giraffe neck. Stop the movie \n  early = baby-faced adult (neoteny).\n- \"Slow cooker vs pressure cooker\" — same ingredients, same \n  recipe. Different cook times = different final dish.\n- \"Rewind/fast-forward\" — change when the developmental tape plays \n  certain sections; you don't change the words on the tape.\n\n⚠ TRAP: Heterochrony does NOT change the coding sequence. It \nchanges WHEN/HOW FAST genes are turned on.\n\n──────────────────────────────────────────────\nCARD 07 — Protein Promiscuity",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Hitting pause vs play earlier\" — same movie (genes), different",
+      "hint": "Heterochrony does NOT change the coding sequence. It  changes WHEN/HOW FAST genes are turned on."
+    },
+    {
+      "q": "What is protein promiscuity in evolution?",
+      "a": "Many proteins can perform MULTIPLE functions. A protein keeps \nits original job while a side activity gets co-opted and \ngradually optimized for a new function. Allows new traits to \nevolve from existing parts without needing a brand-new gene.\n\nEXAMPLE: Crystallin proteins in the eye lens are recruited \nmetabolic/heat-shock enzymes — proteins that already existed for \nother purposes got pressed into service as transparent lens \nmaterial.\n\nANALOGY:\n- \"Swiss army knife\" — the screwdriver tool can also pry open \n  paint cans. Both functions exist; selection can favor \n  improving the prying without losing the screwdriving.\n- \"Side hustle becomes the main job\" — protein has a day job \n  (enzyme), moonlights as something else (lens crystallin), and \n  eventually the side gig becomes its primary identity.\n\n──────────────────────────────────────────────\nCARD 08 — Why Complex Traits Are NOT Perfect (Blind Spot)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Swiss army knife\" — the screwdriver tool can also pry open",
+      "hint": ""
+    },
+    {
+      "q": "Why does the human eye have a blind spot when the octopus eye doesn't?",
+      "a": "Evolution produces traits that are \"GOOD ENOUGH,\" not optimal.\nComplex traits are CONSTRAINED by historical contingency — \nselection works with what existed before, not from scratch.\n\nVERTEBRATE EYE: photoreceptors point AWAY from the light, so \nnerves and blood vessels run in front of the retina. The optic \nnerve has to exit through the retina → BLIND SPOT (no \nphotoreceptors there).\n\nOCTOPUS EYE: evolved INDEPENDENTLY (convergent). Photoreceptors \npoint TOWARD the light, optic nerve exits the back. NO blind spot.\n\nKEY POINT: Both eyes work great, but neither is the \"best \npossible design\" — each is locked in by its developmental history.\n\nANALOGIES:\n- \"Tinkerer vs engineer\" (Jacob's metaphor) — evolution is a \n  tinkerer working with junk in the garage, not an engineer \n  starting fresh. You can only modify what's already there.\n- \"House renovation vs new build\" — the vertebrate eye is like \n  a 200-year-old house with quirky pipes running through awkward \n  walls. Octopus eye is a different builder's house from scratch. \n  Both work, both have different layouts.\n- \"QWERTY keyboard\" — not the most efficient layout, but locked \n  in by history. Same with the blind spot.\n\n⚠ TRAP: Robbins will offer \"natural selection produces optimal \ndesigns given enough time\" — FALSE. Constrained by history.\n\n──────────────────────────────────────────────\nCARD 09 — Regulatory vs Coding Mutations (Evo Devo Punchline)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Tinkerer vs engineer\" (Jacob's metaphor) — evolution is a",
+      "hint": "Both eyes work great, but neither is the \"best  possible design\" — each is locked in by its developmental history."
+    },
+    {
+      "q": "Why are regulatory mutations more important than coding mutations for morphological evolution?",
+      "a": "A mutation in a CODING sequence changes one protein's function \n— usually small effect, often deleterious because the protein \ndoes the same job in many tissues.\n\nA mutation in a REGULATORY sequence (enhancer, promoter) changes \nWHERE, WHEN, or HOW MUCH a gene is expressed — can cause large \nmorphological changes WITHOUT breaking the protein anywhere else.\n\nThat's why animals as different as flies and mice share most \ngenes — the genes are the same, the REGULATION differs.\n\nANALOGY:\n- \"Edit the script vs hire new actors\" — coding mutations = \n  rewriting an actor's lines (might not work). Regulatory \n  mutations = changing the stage directions (\"enter stage left, \n  speak louder, hold for 5 seconds\"). Same actors, very different \n  play.\n- \"Same software, different settings\" — Photoshop on your laptop \n  vs your friend's laptop is the same code; different preferences \n  produce different output. That's regulatory evolution.\n\n──────────────────────────────────────────────\nCARD 10 — Homology (definition)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Edit the script vs hire new actors\" — coding mutations =",
+      "hint": ""
+    },
+    {
+      "q": "What are homologous traits?",
+      "a": "Similar structures INHERITED from a common ancestor.\n- SAME developmental origin (same embryonic tissue, same genes)\n- MAY differ in function\n- Evidence of COMMON ANCESTRY → useful for phylogenetics\n\nCLASSIC EXAMPLE — tetrapod forelimb:\nHuman arm (manipulate) | Bat wing (fly) | Whale flipper (swim) \n| Horse leg (run) | Mole forelimb (dig)\n\nAll built from the SAME bones: humerus, radius, ulna, carpals, \nphalanges. Inherited from common tetrapod ancestor.\n\nANALOGIES:\n- \"Family heirloom\" — same antique chair, passed to different \n  cousins, who each refurbish it differently. Same chair \n  underneath; different upholstery.\n- \"Same engine, different cars\" — Toyota uses one engine block \n  in a sedan, an SUV, and a truck. The \"function\" of each \n  vehicle differs, but the engine is genuinely shared.\n\n──────────────────────────────────────────────\nCARD 11 — Analogy / Convergence (definition)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Family heirloom\" — same antique chair, passed to different",
+      "hint": ""
+    },
+    {
+      "q": "What are analogous (convergent) traits?",
+      "a": "Similar in FUNCTION, evolved INDEPENDENTLY in separate lineages.\n- DIFFERENT developmental origin (different genes, tissues)\n- Same selective pressure → similar solution\n- MISLEADING for phylogenetics if mistaken for homology\n\nCLASSIC EXAMPLES:\n- Bat wing (modified vertebrate forelimb with bones) vs insect \n  wing (chitinous outgrowth, NO bones) — both fly, totally \n  different origin\n- Dolphin (mammal) and shark (fish) streamlined body — convergent \n- Eyes of vertebrates and octopuses — convergent camera eyes\n- Wings of birds, bats, and pterosaurs — all modified forelimbs \n  but each evolved independently from a non-flying ancestor\n\nANALOGIES:\n- \"Different inventors, same invention\" — Ford and Toyota both \n  build cars. They didn't copy each other; both responded to \n  the same need (transportation).\n- \"Submarines and dolphins\" — both streamlined for moving \n  through water. Designed independently. Function = same; \n  internals = totally different.\n\n──────────────────────────────────────────────\nCARD 12 — Homology vs Analogy (Side-by-Side)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Different inventors, same invention\" — Ford and Toyota both",
+      "hint": ""
+    },
+    {
+      "q": "Compare homology and analogy on cause, origin, example, and phylogenetic value.",
+      "a": "HOMOLOGY              ANALOGY (Convergence)\n─────────────────────────────────────────────────────────────────\nCause:              Common ancestry       Same selective pressure,\n                                          independent evolution\nDevelopmental\norigin:             SAME                   DIFFERENT\n                    (same genes,           (different genes,\n                    same tissue)           different tissue)\nExample:            Human arm + bat wing  Bat wing + insect wing\n                    + whale flipper       (both fly, diff. structure)\nPhylogenetic\nvalue:              ✓ Evidence of         ✗ MISLEADING — looks\n                    shared ancestry       like ancestry but isn't\n\nKEY TEST QUESTION: \"What's the developmental origin?\"\n- Same → homology\n- Different → analogy\n\nANALOGY for the distinction:\n- \"Family resemblance vs lookalikes\" — siblings look alike \n  because they share parents (homology). Two strangers in line \n  at a coffee shop happen to have similar haircuts (analogy).\n\n──────────────────────────────────────────────\nCARD 13 — Bat Wing vs Insect Wing (Classic Analogy Example)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"What's the developmental origin?\" - Same → homology - Different → analogy"
+    },
+    {
+      "q": "Are bat wings and insect wings homologous or analogous?",
+      "a": "ANALOGOUS (convergent).\n- Both fly, but evolved INDEPENDENTLY\n- Bat wing = modified vertebrate forelimb with bones (humerus, \n  radius, ulna, elongated finger phalanges) and skin membrane\n- Insect wing = chitinous cuticular outgrowth — NO internal bones\n- Different developmental origin entirely\n- Same FUNCTION (flight) — different STRUCTURE\n\nANALOGY:\n- \"Plane vs jet ski with wings\" — both move you through air, \n  but one is built from a bird's chassis and the other from a \n  motorcycle. Same job, totally different builds.\n\n⚠ TRAP: Don't be fooled by shared function. Function ≠ ancestry.\n\n──────────────────────────────────────────────\nCARD 14 — Bat Wing vs Human Arm (Classic Homology Example)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Plane vs jet ski with wings\" — both move you through air,",
+      "hint": "Don't be fooled by shared function. Function ≠ ancestry."
+    },
+    {
+      "q": "Are bat wings and human arms homologous or analogous?",
+      "a": "HOMOLOGOUS.\n- Same bones in the same order: humerus → radius/ulna → carpals \n  → phalanges\n- Same embryonic limb-bud origin\n- Inherited from a shared tetrapod ancestor\n- DIFFERENT functions (flying vs manipulation), but that's fine \n  — homology is about shared ancestry, NOT shared function.\n\nANALOGY:\n- \"Same Lego baseplate, different builds\" — your arm and the \n  bat's wing are built on the same bone-by-bone blueprint. \n  Function differs because the proportions and surrounding \n  tissue differ.\n\n──────────────────────────────────────────────\nCARD 15 — How Convergent Evolution Produces Analogies",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Same Lego baseplate, different builds\" — your arm and the",
+      "hint": ""
+    },
+    {
+      "q": "Walk through the step-by-step process of convergent evolution.",
+      "a": "1. SAME SELECTIVE PRESSURE acts independently in two unrelated \n   lineages (e.g., need to fly, need to swim fast)\n2. Each lineage starts from DIFFERENT ancestral structures and \n   evolves toward a similar phenotype via DIFFERENT genetic / \n   developmental pathways\n3. Result: structures that LOOK similar superficially but have \n   different molecular and developmental basis\n4. = ANALOGOUS structure / convergent evolution\n\nANALOGY:\n- \"Two startup founders solving the same problem in different \n  garages\" — both end up making a ride-share app, both products \n  look similar to the user, but the codebases share zero lines.\n\n──────────────────────────────────────────────\nCARD 16 — Parallel Evolution (subtle relative)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Two startup founders solving the same problem in different",
+      "hint": ""
+    },
+    {
+      "q": "How is parallel evolution different from convergent evolution?",
+      "a": "PARALLEL evolution: closely related lineages independently \nevolve the same trait, often using the SAME or SIMILAR genetic \npathways (because they share the genetic toolkit).\n\nCONVERGENT evolution: distantly related lineages evolve similar \ntraits using DIFFERENT genetic/developmental pathways.\n\nEXAMPLE: Repeated independent evolution of armor-loss in \nfreshwater stickleback fish populations — uses the SAME Pitx1 \ngene each time (parallel). Bat wings vs insect wings = \nconvergent.\n\nANALOGY:\n- \"Cousins coming up with the same recipe\" (parallel) vs \n  \"strangers from different countries coming up with similar \n  dishes from different ingredients\" (convergent).\n\n⚠ TRAP: Robbins might offer \"parallel evolution → homologous \nstructures.\" That's incorrect — independently evolved means NOT \nhomologous, even if the same gene was used.\n\n──────────────────────────────────────────────\nCARD 17 — Why Mistaking Analogy for Homology Wrecks Phylogenies",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Cousins coming up with the same recipe\" (parallel) vs",
+      "hint": "Robbins might offer \"parallel evolution → homologous  structures.\" That's incorrect — independently evolved means NOT  homologous, even if the same gene was used."
+    },
+    {
+      "q": "Why does it matter to distinguish homology from analogy when building phylogenies?",
+      "a": "Phylogenies use shared traits to infer common ancestry. If you \ntreat an ANALOGOUS trait as if it were homologous, you'll group \nunrelated species together based on convergent features.\n\nEXAMPLE: Grouping bats with birds because both fly = wrong. \nBats are mammals (closer to humans than to birds).\n\nCRITERIA for true homology:\n- Same developmental origin\n- Same position relative to other body parts\n- Same detailed structure (e.g., same bone arrangement)\n- Same gene expression patterns during development\n\nANALOGY:\n- \"DNA test for relatives\" — looking similar isn't enough. \n  Genuine ancestry requires shared underlying lineage. Two \n  blondes from different families aren't siblings just because \n  they have the same hair color.\n\n──────────────────────────────────────────────\nCARD 18 — The \"Genetic Toolkit\" Concept",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "DNA test for relatives\" — looking similar isn't enough.",
+      "hint": ""
+    },
+    {
+      "q": "What is the genetic toolkit and what does its conservation imply?",
+      "a": "A small set of HIGHLY CONSERVED regulatory genes (Hox, Pax6, \nDistal-less, hedgehog, etc.) shared across nearly all animals.\n\n- Same genes used to build vastly different bodies\n- Differences in body plan come from differences in REGULATION \n  (when, where, how much these genes are expressed) — not from \n  evolving new genes\n- Implies DEEP COMMON ANCESTRY of all animals — the toolkit \n  evolved once, before the major animal lineages diversified\n\nANALOGIES:\n- \"Same Lego set, different builds\" — every kid gets the same \n  bricks. The instruction booklet (regulation) decides whether \n  you build a castle or a spaceship.\n- \"Photoshop with different presets\" — same software, wildly \n  different output depending on settings.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch10evodevo",
+      "source": "final_review",
+      "analogy": "Same Lego set, different builds\" — every kid gets the same",
+      "hint": ""
+    },
+    {
+      "q": "What is the \"twofold cost of sex\"? (a.k.a. cost of males)",
+      "a": "In an asexual population, EVERY individual makes offspring. In a sexual population, only ~half (females) directly produce offspring — males don't birth. So an asexual mutant in a sexual population doubles in frequency every generation. Sex is paying a 2× tax. The benefits MUST outweigh this to maintain sex.\nANALOGIES:\n- Two startups: Asexual Inc has 100% of staff producing widgets. Sexual Inc has 50% of staff making widgets and 50% just chasing the widget-makers. Sexual Inc has to be 2× better per unit to break even.\n- Carpool lane vs. solo driver: solo (asexual) gets full output per person. Sexual reproduction = you have to drive a buddy who can't drive itself.\n- Mitosis is photocopying; sex is two people writing a document together — half the room is just providing input, not pages.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "Two startups: Asexual Inc has 100% of staff producing widgets. Sexual Inc has 50% of staff making widgets and 50% just chasing the widget-makers. Sexual Inc has to be 2× better per unit to break even.",
+      "hint": ""
+    },
+    {
+      "q": "Why does sex persist despite this 2× disadvantage?",
+      "a": "Four major benefits, all centered on GENERATING VARIATION FAST:\n1. Combines beneficial mutations (escapes clonal interference)\n2. Prevents Muller's Ratchet (purges deleterious mutations via recombination)\n3. Reduces sibling competition (diverse offspring, different niches)\n4. Red Queen — outruns parasites by making rare genotypes\nMNEMONIC: \"Combine, Clean, Compete-less, Counter-parasites\" → the 4 C's of sex.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"Combine, Clean, Compete-less, Counter-parasites\" → the 4 C's of sex."
+    },
+    {
+      "q": "Clonal Interference — what is it and how does sex fix it?",
+      "a": "In asexual populations, two beneficial mutations in different individuals CAN'T be combined — they have to compete with each other until one wins. Sex (recombination) lets BOTH beneficial mutations end up in the same offspring.\nANALOGIES:\n- Two coworkers each invent half of a great product. Asexual = they can never merge ideas; one has to lose. Sexual = they collaborate and ship the full product.\n- Two players in a game with separate power-ups. Asexual = only one can use both. Sexual = recombination lets them share builds.\n- Two cooks each perfecting a different ingredient — asexual restaurants serve only one. Sexual restaurants combine both into a better dish.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "Two coworkers each invent half of a great product. Asexual = they can never merge ideas; one has to lose. Sexual = they collaborate and ship the full product.",
+      "hint": ""
+    },
+    {
+      "q": "Muller's Ratchet — the mechanism.",
+      "a": "Asexual lineages IRREVERSIBLY accumulate deleterious mutations.\n1. Random deleterious mutations arise each generation.\n2. The \"least-loaded class\" (genomes with the fewest mutations) is small and can be lost by drift.\n3. Once lost, it CAN'T be reconstructed without recombination.\n4. Each loss = one click forward of the ratchet.\n5. Mean fitness slowly declines.\nSex prevents this: recombination can reassemble a low-mutation genome from two mutated parents.\nANALOGIES:\n- A ratchet wrench: only turns one direction. Mutations only ACCUMULATE in asexuals; can't unwind.\n- A photocopy of a photocopy of a photocopy — quality only goes downhill, never uphill.\n- Asexual genome is a Word doc with track-changes ON forever, accept-only, never reject. Errors stack permanently. Sex is \"merge two clean drafts together to get a clean third.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "A ratchet wrench: only turns one direction. Mutations only ACCUMULATE in asexuals; can't unwind.",
+      "hint": ""
+    },
+    {
+      "q": "Red Queen Hypothesis — what & why named that?",
+      "a": "Named after the Red Queen in Alice in Wonderland: \"It takes all the running you can do, just to stay in the same place.\" Parasites evolve to exploit COMMON host genotypes (the most abundant target). Sex generates RARE host genotypes that parasites haven't adapted to → frequency-dependent advantage. Constant genotype reshuffling = parasites can't lock on.\nEXAMPLE: New Zealand mud snails (Potamopyrgus antipodarum) — sexual where parasites are abundant, asexual where parasites are rare.\nANALOGIES:\n- Computer security: hackers (parasites) write malware targeting Windows (the most common OS). Switching OS frequently = harder to hack. Sex = a population that \"rebrands\" its OS every generation.\n- A spy changing disguises every day. Parasites are agents trained to recognize last week's outfit; new disguise = they're useless.\n- Lock changing: the parasite's key (last gen's adaptation) doesn't fit this gen's lock.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "Computer security: hackers (parasites) write malware targeting Windows (the most common OS). Switching OS frequently = harder to hack. Sex = a population that \"rebrands\" its OS every generation.",
+      "hint": ""
+    },
+    {
+      "q": "Why is the Red Queen \"frequency-dependent\"?",
+      "a": "Because it's the COMMON genotype that pays the cost. When a host genotype is rare, parasites haven't evolved to exploit it → it has high fitness → it spreads. As it spreads, parasites adapt to it → it becomes the new \"common\" target → its fitness drops. Then a different rare genotype rises. Endless cycling.\nANALOGY: Whichever music genre is most popular is also the most pirated. Niche genres get ignored — until they become popular, then they're the new target.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Reduced sibling competition — how is this a benefit of sex?",
+      "a": "Asexual offspring are CLONES — they all need the exact same niche, food, microhabitat → intense intra-sibling competition. Sexual offspring are GENETICALLY DIVERSE → they spread across slightly different niches → less direct competition. Higher overall sibling survival.\nANALOGY: One family with 5 kids who all want to be doctors competing for the same med school spot, vs. 5 kids in different careers. Same family, way less head-butting.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Sex's metabolic cost is NOT one of the asexual disadvantages.",
+      "a": "Asexual reproduction is actually METABOLICALLY CHEAPER than sex (no meiosis, no mate-finding, no males). The asexual costs the exam will test are:\n- Clonal interference (can't combine beneficials)\n- Muller's Ratchet (mutation accumulation)\n- Red Queen disadvantage (parasites lock on)\n- Lower offspring diversity\nNOT a cost of asex: \"metabolic inefficiency\" — that's a cost of SEX.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Anisogamy — definition and why it matters.",
+      "a": "Production of UNEQUAL gamete sizes. Females = few, large, energetically expensive eggs. Males = many, small, cheap sperm. In humans, the volume ratio is roughly 10,000,000 : 1.\nTHIS asymmetry is the ROOT CAUSE of: female choosiness, male competition, sexual dimorphism, the Bateman gradient — everything in sexual selection.\nANALOGIES:\n- Real estate: females build a mansion (egg). Males print flyers (sperm). The mansion-builder is selective about tenants; the flyer-printer hands them out everywhere.\n- Investment portfolio: females put $10,000 into one stock; males put $0.001 into a million stocks. Different optimal strategies.\n- Females are the rare resource (limited factory output); males are abundant supply (mass production).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "Real estate: females build a mansion (egg). Males print flyers (sperm). The mansion-builder is selective about tenants; the flyer-printer hands them out everywhere.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Anisogamy is the ROOT CAUSE, not an arbitrary social pattern.",
+      "a": "Female choosiness and male competition are NOT cultural or arbitrary — they trace mechanistically to gamete size asymmetry. Whichever sex INVESTS MORE per gamete becomes the limiting resource. The other sex competes for access. In sex-role-reversed species (e.g., seahorses, jacanas where males do all the parental care), the LOGIC reverses: females compete, males get choosy.\nKEY: It's not \"sex\" that determines choosiness — it's INVESTMENT.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "It's not \"sex\" that determines choosiness — it's INVESTMENT."
+    },
+    {
+      "q": "Bateman Gradient — what it shows.",
+      "a": "A graph of reproductive success vs. number of mates.\n- MALES: STEEP slope. Each additional mate = many more offspring. Limited by mate access.\n- FEMALES: FLAT slope. Extra mates ≠ many more offspring. Limited by egg production.\nThis asymmetry drives male-male competition and female choosiness.\nANALOGIES:\n- A bakery (female) with limited oven capacity — extra customers don't help if you can only bake X cakes/day. A salesman (male) — more customers = more commission, no cap.\n- YouTube creator (female) with one upload per week — extra subscribers doesn't change output. Spammer (male) sending infinite cold emails — more recipients = more replies.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "A bakery (female) with limited oven capacity — extra customers don't help if you can only bake X cakes/day. A salesman (male) — more customers = more commission, no cap.",
+      "hint": ""
+    },
+    {
+      "q": "Step-by-step: How does anisogamy drive the Bateman gradient?",
+      "a": "1. Eggs are large and costly → females produce few of them.\n2. Female reproductive output is capped by egg production time/resources.\n3. Sperm are tiny and cheap → males can produce billions.\n4. Male reproductive output is capped by ACCESS TO FEMALES, not sperm supply.\n5. Each extra mate gives a male huge fitness gain; gives a female little.\n6. Result: Males compete for mate access (intrasexual selection); females become choosy (intersexual selection).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Sexual selection — definition.",
+      "a": "Selection arising from differential MATING success. Distinct from natural selection (which acts on survival). Two flavors:\n- INTERSEXUAL (mate choice): one sex evaluates the other (usually females picking males).\n- INTRASEXUAL (same-sex competition): members of one sex fight each other for access (usually males vs. males).\nANALOGY: Intersexual = American Idol audition (judges pick winner). Intrasexual = WWE cage match (fighters eliminate each other; winner gets the prize).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Sexual selection vs. Natural selection.",
+      "a": "They can CONFLICT.\n- Natural selection maximizes SURVIVAL.\n- Sexual selection maximizes MATINGS.\nPeacock's tail = predation hazard (natural selection wants it gone) but mating advantage (sexual selection keeps it). Trait persists when mating advantage > survival cost.\nANALOGIES:\n- A flashy sports car: terrible for fuel economy and crash-survival, but pulls dates. Cost worth it if it gets you a partner.\n- Designer clothes that ruin your wallet but raise your status. Status > savings if mating depends on status.\n- Loud nightclub bass that damages hearing but attracts attention. Hearing < attention if attention = mates.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "A flashy sports car: terrible for fuel economy and crash-survival, but pulls dates. Cost worth it if it gets you a partner.",
+      "hint": ""
+    },
+    {
+      "q": "Why doesn't natural selection just eliminate the peacock's tail?",
+      "a": "Because peacocks WITHOUT big tails don't reproduce — peahens won't pick them. A short-tailed peacock might live longer but leaves zero offspring. A long-tailed peacock might die younger but leaves many offspring. Fitness = lifetime reproductive success, not lifespan. Long tail wins.\nANALOGY: Doesn't matter if you live to 90 if you have zero descendants — your genes still go extinct. Better to live to 50 with 10 kids.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Sexual dimorphism — what is it and what causes it?",
+      "a": "Phenotypic differences between sexes BEYOND just gamete production — body size, color, ornaments, weapons, behavior. Caused by sex-specific selection: one sex (usually males) faces strong sexual selection for traits that increase mating success. Common patterns: males larger, showier, with weapons (antlers, horns) or ornaments (peacock tail, bird-of-paradise plumage).\nANALOGY: Two trees of the same species growing under different sunlight conditions — different shapes despite shared genome. Different selection regimes → different shapes despite shared species.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Sex-role reversal — what is it?",
+      "a": "When the standard pattern flips because the standard INVESTMENT pattern flips. If males do all the parental care (e.g., seahorses, pipefish, jacanas, emus), males become the limiting resource → FEMALES compete and males are choosy. Sometimes females are larger/more ornamented.\nKEY: Confirms anisogamy theory — it's investment, not gamete size alone, that drives selection.\nANALOGY: A reversal of who's running the daycare. Whoever's stuck with the kids is the limiting resource everyone else competes for.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Confirms anisogamy theory — it's investment, not gamete size alone, that drives selection. ANALOGY: A reversal of who's running the daycare. Whoever's stuck with the kids is the limiting resource everyone else competes for."
+    },
+    {
+      "q": "Sperm competition — definition.",
+      "a": "Competition between sperm from DIFFERENT MALES to fertilize the same female's eggs. Occurs when females mate with multiple males before fertilization. Selection extends past the mating event into the female's reproductive tract.\nDRIVES EVOLUTION OF:\n1. Larger testes relative to body size (more sperm volume)\n2. Faster, longer-flagellum sperm\n3. Anti-sperm-displacement mechanisms (e.g., dragonfly genitalia that scoop out previous male's sperm)\nANALOGIES:\n- A relay race where multiple teams' runners are on the track simultaneously — speed and tactics matter.\n- A bidding war where multiple buyers compete after the auction has technically \"ended\" — most aggressive bid still wins.\n- Marathon with a final sprint — the actual fertilization is decided in the female's tract, not at copulation.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "A relay race where multiple teams' runners are on the track simultaneously — speed and tactics matter.",
+      "hint": ""
+    },
+    {
+      "q": "Testis size as evidence for sperm competition.",
+      "a": "Comparative test: species where females are PROMISCUOUS (multiple mates) → males have BIGGER testes for body size (e.g., chimps). Species with MONOGAMY or harems with exclusive access → SMALLER testes (e.g., gorillas, humans intermediate). This pattern across species is strong evidence sperm competition shapes male anatomy.\nANALOGY: Bigger ammo magazines in a battle vs. fewer bullets if you're the only shooter.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Sexual conflict — definition.",
+      "a": "When the evolutionary INTERESTS of males and females DIVERGE within a species → coevolutionary arms race BETWEEN THE SEXES. Same gene pool, different reproductive optima. Each sex evolves traits that benefit IT at the OTHER sex's expense; the other sex evolves counter-resistance.\nANALOGIES:\n- A married couple who share finances but have different spending priorities — constant negotiation.\n- Two roommates on the same lease (shared gene pool) but with opposing thermostat preferences (different optima). Endless thermostat war.\n- Business partners who must split profit but want different cuts. They keep renegotiating the contract forever.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "A married couple who share finances but have different spending priorities — constant negotiation.",
+      "hint": ""
+    },
+    {
+      "q": "Drosophila SFP (seminal fluid protein) example — full mechanism.",
+      "a": "1. Male SFPs bind to female reproductive tract.\n2. SFPs REDUCE female remating (good for THIS male — no rival sperm) and INCREASE egg-laying rate (good for male — more offspring).\n3. But SFPs are TOXIC to females — they reduce female lifespan and immune function.\n4. Selection favors females with RESISTANCE to SFP toxicity.\n5. Selection favors males with MORE POTENT SFPs to overcome resistance.\n6. Endless coevolutionary arms race WITHIN the species.\nANALOGY: Drug companies (males) make stronger pesticide; pests (females) evolve resistance; companies make stronger pesticide; etc. Except both are members of the same species.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Sexual conflict is INTRASPECIFIC, not interspecific.",
+      "a": "Predator-prey arms races (lion vs. gazelle) = BETWEEN species.\nSexual conflict (male Drosophila vs. female Drosophila) = WITHIN species. Both sexes share the same gene pool but have DIFFERENT reproductive optima. Called INTERLOCUS sexual conflict (different loci favored in each sex).\nANALOGY: Civil war (within country) vs. international war (between countries). Same nation, opposing interests.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Genital coevolution — what it is.",
+      "a": "Male genitalia evolve features that improve THEIR fertilization success (e.g., grippers, sperm scoops, spines). Female reproductive tracts evolve countermeasures that retain mate choice (e.g., complex chambers, expulsion mechanisms). This is sexual conflict expressed in anatomy. Often produces the FASTEST-EVOLVING anatomical structures known.\nANALOGY: Lock-and-key arms race — locksmiths design tougher locks, lockpickers design better picks. Genitalia diverge fast even between closely related species — often used by taxonomists to distinguish species.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch11sex",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "What is \"life history\"?",
+      "a": "The schedule of an organism's survival, growth, and reproduction across its lifespan. WHEN to be born, mature, breed, and die. Energy/time are FINITE → allocating to one function REDUCES what's available for another. Life history is fundamentally about TRADE-OFFS.\nANALOGIES:\n- Personal budget: every dollar spent on rent isn't available for groceries. Energy spent growing isn't available for reproducing.\n- Video game skill points: limited points to spread across attack, defense, speed. Max one stat = others suffer.\n- Calendar/work-life balance: 24 hours a day. Time at work = time not with kids. There's no escape from the trade-off.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "Personal budget: every dollar spent on rent isn't available for groceries. Energy spent growing isn't available for reproducing.",
+      "hint": ""
+    },
+    {
+      "q": "Three key life history trade-offs.",
+      "a": "1. CURRENT vs. FUTURE reproduction (reproduce now, possibly die sooner)\n2. Offspring NUMBER vs. offspring SIZE (many small or few large)\n3. AGE AT FIRST REPRODUCTION vs. lifespan (reproduce early or grow longer)\nMNEMONIC: \"When, how big, how many\" — the three knobs evolution turns.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"When, how big, how many\" — the three knobs evolution turns."
+    },
+    {
+      "q": "Extrinsic mortality — definition and the master rule.",
+      "a": "Death from EXTERNAL causes (predation, disease, accidents, weather) that are NOT influenced by the organism's age or condition. THE MASTER RULE: high extrinsic mortality favors FAST life history; low extrinsic mortality favors SLOW life history.\nANALOGIES:\n- Random sniper in a war zone vs. peacetime: in war (high extrinsic mortality), people marry young, have kids fast — there might not be a tomorrow. In peacetime, delay marriage, plan careers, retire late.\n- Spending vs. saving: if your account might be wiped tomorrow (high extrinsic risk), spend it all NOW. If safe, invest long-term.\n- Meal at a buffet about to close vs. open all day. Buffet closing = stuff your face fast. Open all day = pace yourself.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "Random sniper in a war zone vs. peacetime: in war (high extrinsic mortality), people marry young, have kids fast — there might not be a tomorrow. In peacetime, delay marriage, plan careers, retire late.",
+      "hint": ""
+    },
+    {
+      "q": "WHY does high extrinsic mortality favor fast reproduction? (step by step)",
+      "a": "1. In a high-predation environment, most individuals die before old age.\n2. Alleles for LATE reproduction are rarely expressed — their carriers usually die first.\n3. Selection can't favor late-reproducing alleles (they don't get the chance to act).\n4. Alleles for EARLY, fast reproduction confer higher fitness — carriers reproduce at all.\n5. Population evolves a fast life history.\nANALOGY: A doomsday scenario forecasts the world ends in 5 years. People who delay having kids until age 40 leave no descendants. People who breed at 18 do. Future generations descend from the early breeders.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "r-selection vs. K-selection — what they mean.",
+      "a": "A continuum (not a binary).\n- r-SELECTED (\"fast\"): many small offspring, no parental care, early maturation, short life, high mortality tolerated. UNSTABLE/disturbed environments. Examples: mosquitoes, weeds, mice.\n- K-SELECTED (\"slow\"): few large offspring, heavy parental care, late maturation, long life. STABLE environments near carrying capacity. Examples: elephants, whales, humans, albatrosses.\nANALOGIES:\n- Spam emails (r) vs. handcrafted personal letters (K). Spam = quantity, low effort each. Letter = quality, high effort.\n- Lottery tickets (r) — buy thousands, hope one wins. Real estate investment (K) — one big property, nurtured for decades.\n- Startup throwing 100 features at the wall (r) vs. Apple shipping one polished product (K).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "Spam emails (r) vs. handcrafted personal letters (K). Spam = quantity, low effort each. Letter = quality, high effort.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Reznick's guppy experiment — KEY NUMBERS to memorize.",
+      "a": "Reznick transplanted guppies from HIGH-predation streams to LOW-predation streams. After ~30 GENERATIONS (NOT 18, NOT 100), detectable evolution occurred:\n- LATER maturation\n- LARGER body size at maturity\n- FEWER offspring per litter\nANALOGY: Like moving troops from a war zone (high mortality) to a peaceful country — within 30 generations the population shifts to slower-living, larger-bodied lifestyle.\nKEY: Robbins WILL test the number \"~30 generations.\" Lock it in.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Robbins WILL test the number \"~30 generations.\" Lock it in."
+    },
+    {
+      "q": "TRAP — Current vs. future reproduction (Austad opossum experiment).",
+      "a": "Austad's opossum study — opossums on a PREDATOR-FREE ISLAND evolved SLOWER aging (longer lifespan, delayed senescence) compared to MAINLAND opossums facing high predation. Less predation = more \"future\" worth investing in = selection can afford to maintain late-life function.\nANALOGY: An employee promised 40 years of stable employment plans for retirement. A gig worker on weekly contracts spends every paycheck — no future to plan for.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Seychelles Warbler — what's the key takeaway?",
+      "a": "Cooperative breeding bird showing CONDITION-DEPENDENT life history. Females choose between (a) helping at parents' nest, (b) dispersing to claim a territory, (c) breeding independently. The choice depends on TERRITORY QUALITY:\n- HIGH-quality territory: stay and help (helping pays better than dispersing to a poor territory)\n- LOW-quality territory: disperse or suppress reproduction (no point helping for low return)\nKEY: Same individual will switch strategies if environmental quality changes.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Same individual will switch strategies if environmental quality changes."
+    },
+    {
+      "q": "TRAP — Seychelles Warbler helpers are NOT pure altruists.",
+      "a": "Helpers are NOT selfless kin-sacrificers. They help when helping in a high-quality territory yields HIGHER inclusive fitness than dispersing to a poor territory. If a high-quality territory opens nearby, helpers LEAVE to claim it. This is a CONDITIONAL LIFE HISTORY STRATEGY, not altruism.\nANALOGY: An adult child living at home rent-free in a great neighborhood — not \"selfless,\" it's a calculated decision. As soon as a better apartment opens up at the right price, they move.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why don't Seychelles Warbler helpers help on LOW-quality territories?",
+      "a": "Hamilton's Rule: rB > C. On a poor territory:\n- B (extra offspring produced with helper assistance) is SMALL — breeders barely produce more even with help.\n- So rB stays small even if r (relatedness) is high.\n- C (cost = lost own reproduction) might still exceed rB.\n- Net inclusive fitness from helping < dispersing/suppressing.\nANALOGY: Volunteering at a thriving food bank pays off in social capital and impact. Volunteering at a defunct one with no donations or visitors gets nothing. Your hours have a meaningful return only where the operation can convert effort into outcome.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "The aging puzzle — why doesn't selection eliminate it?",
+      "a": "Aging is universally bad for the individual (declining function, death). Naive expectation: selection should remove it. Why doesn't it?\nANSWER: Because SELECTION WEAKENS WITH AGE. Most organisms die of external causes (predation, disease) before old age, so late-acting bad effects are nearly invisible to selection. Two formal theories explain the rest: mutation accumulation and antagonistic pleiotropy.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "MUTATION ACCUMULATION theory of aging.",
+      "a": "Random late-acting deleterious mutations arise → most carriers die from external causes BEFORE expressing the late effect → selection rarely acts against these alleles → they accumulate by drift → late-life function deteriorates.\nKEY: Selection here is RELAXED, not actively favoring anything. The bad alleles are essentially neutral early in life.\nANALOGIES:\n- A landlord who never inspects vacant retirement-floor apartments (because no one lives there long enough). Trash piles up. Same with the \"late-life genome\" — selection just doesn't visit.\n- Software bugs in code paths nobody runs. They build up because no one ever notices them.\n- Junk drawer in the garage — old broken stuff piles up because no one needs that drawer.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "A landlord who never inspects vacant retirement-floor apartments (because no one lives there long enough). Trash piles up. Same with the \"late-life genome\" — selection just doesn't visit.",
+      "hint": "Selection here is RELAXED, not actively favoring anything. The bad alleles are essentially neutral early in life. ANALOGIES: - A landlord who never inspects vacant retirement-floor apartments (because no one lives there long enough). Trash piles up. Same with the \"late-life genome\" — selection just doesn't visit."
+    },
+    {
+      "q": "ANTAGONISTIC PLEIOTROPY theory of aging.",
+      "a": "A SINGLE gene has TWO effects: BENEFICIAL early in life (boosts reproduction) but HARMFUL late in life (causes disease, aging). Selection FAVORS the early benefit because early-life fitness matters MORE; late-life cost is paid after most reproduction is done. Selection actively MAINTAINS these alleles despite late-life damage.\nCLASSIC EXAMPLE: Testosterone — boosts mating success and muscle mass early; increases prostate cancer, heart disease, immune suppression late. Castrated males often live longer.\nANALOGIES:\n- Credit card with great rewards points but a balloon payment at age 60. Most people die before 60 anyway, so they take the rewards.\n- Energy drink: alert and productive now; chronic kidney damage decades later. Worth it if \"decades later\" rarely arrives.\n- Stock that pays huge dividends for 20 years then crashes to zero. If you only need it for 20 years, take the deal.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "Credit card with great rewards points but a balloon payment at age 60. Most people die before 60 anyway, so they take the rewards.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Mutation Accumulation vs. Antagonistic Pleiotropy.",
+      "a": "| FEATURE                | MUTATION ACCUMULATION         | ANTAGONISTIC PLEIOTROPY        |\n| Selection on the gene  | RELAXED (not actively for it) | POSITIVE (actively favored)    |\n| Number of effects      | One (late-life harm)          | Two (early + late, opposite)   |\n| Why allele exists      | Drift; selection can't see it | Active selection for early gain|\n| Removable to stop aging?| In principle yes              | NO — early benefit lost too    |\nKEY: Antagonistic pleiotropy CANNOT be deleted to \"fix aging\" because you'd lose the early benefit. Mutation accumulation alleles, in principle, could be cleaned up.\nANALOGY: Mut Acc = junk emails piling up unread. Antag Pleio = a Faustian bargain you signed for early gain.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Antagonistic pleiotropy CANNOT be deleted to \"fix aging\" because you'd lose the early benefit. Mutation accumulation alleles, in principle, could be cleaned up. ANALOGY: Mut Acc = junk emails piling up unread. Antag Pleio = a Faustian bargain you signed for early gain."
+    },
+    {
+      "q": "Both theories share which prediction?",
+      "a": "BOTH predict: lower extrinsic mortality → SLOWER evolved aging. Why? Because lower extrinsic mortality means more individuals reach old age → late-life selection becomes stronger → both deleterious accumulation and antagonistic pleiotropy alleles get pushed back / removed.\nEVIDENCE:\n- Bats (low predation due to flight) live MUCH longer than ground mammals their size.\n- Island tortoises, opossums (Austad).\n- Naked mole-rats (eusocial, protected, 30+ year lifespan despite small body).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why does selection STRENGTH decline with age? (the foundational concept)",
+      "a": "A deleterious allele expressed at age 5 affects MOST of an organism's potential reproductive output. The same allele expressed at age 70 (post-reproduction) affects almost NONE of its reproductive output. Selection acts only through reproductive consequences → late-acting alleles barely register.\nANALOGY: A bug in a website that crashes the homepage (visited by everyone) gets fixed instantly. A bug in a single archived page nobody visits stays forever. Aging genes live in the \"archived\" part of life.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "What experimental result CONFIRMS evolutionary theories of aging?",
+      "a": "Bringing low-predation populations into the lab and finding LONGER LIFESPANS, DELAYED senescence, and reduced reproductive rates compared to high-predation source populations. Reverse experiments (high → low predation) work too. Reznick's guppies and Austad's opossums are the canonical evidence.\nKEY: Aging is EVOLVABLE. It's not a fixed biological constant — populations evolve faster or slower aging based on their extrinsic mortality.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Aging is EVOLVABLE. It's not a fixed biological constant — populations evolve faster or slower aging based on their extrinsic mortality."
+    },
+    {
+      "q": "TRAP — \"Could removing all late-acting deleterious mutations completely eliminate aging?\"",
+      "a": "NO. That would address mutation accumulation, but ANTAGONISTIC PLEIOTROPY would still cause aging — those alleles are POSITIVELY selected for their early benefit. Removing them costs you the early-life advantage.\nKEY: Aging is multi-causal. Both theories operate simultaneously. Both predicting the same result (lower extrinsic mortality → slower aging) doesn't mean they're the same theory.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch12life",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Aging is multi-causal. Both theories operate simultaneously. Both predicting the same result (lower extrinsic mortality → slower aging) doesn't mean they're the same theory."
+    },
+    {
+      "q": "Why do we have ~25 species concepts instead of one?",
+      "a": "Because no single criterion works for all life. Sexual animals, asexual bacteria, fossils, hybridizing plants, and ecologically distinct populations each break a different definition. ALL CONCEPTS AGREE on one thing: species are groups sharing common ancestry that are EVOLUTIONARILY INDEPENDENT — following different trajectories through time.\nANALOGY: Defining \"country\" — by language? government? borders? religion? No single criterion works globally. Same problem with \"species.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Biological Species Concept (BSC) — Mayr.",
+      "a": "Species = groups of populations that INTERBREED with each other and are REPRODUCTIVELY ISOLATED from other groups. The criterion is gene flow.\nWORKS FOR: Sexually reproducing animals where gene flow can be tested.\nANALOGIES:\n- Defining a club by who can attend its meetings. If you can't attend, you're not in.\n- Defining a \"compatible plug\" by whether it fits the socket. Doesn't matter how it looks.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "Defining a club by who can attend its meetings. If you can't attend, you're not in.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — BSC FAILS in 3 scenarios. (Robbins will test this.)",
+      "a": "1. FOSSILS — can't test gene flow on dead things in rocks.\n2. ASEXUAL species — bacteria, archaea, asexual lineages don't \"interbreed\" at all.\n3. HYBRIDIZING species — fertile hybrids exist (oaks, ducks, some cichlids). If they interbreed and produce fertile offspring, BSC says they're the same species — but morphology and ecology say different.\nMNEMONIC: \"BSC fails on the dead, the celibate, and the promiscuous.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"BSC fails on the dead, the celibate, and the promiscuous.\""
+    },
+    {
+      "q": "Morphospecies Concept.",
+      "a": "Species = populations distinguishable by MORPHOLOGY (measurable physical traits).\nWORKS FOR: Fossils, asexual taxa, field identification.\nFAILS WHEN:\n- CRYPTIC species (look identical but are reproductively isolated — mosquitoes, fungi)\n- Phenotypically PLASTIC species (one species, multiple appearances)\n- Sexual dimorphism (males and females can look like different species)\nANALOGY: Identifying twins by photo — fails when they look identical but have totally different lives.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Phylogenetic Species Concept (PSC) — Cracraft.",
+      "a": "Species = the SMALLEST diagnosable monophyletic clade with at least one DEFINING SYNAPOMORPHY.\nWORKS FOR: Any reproducing group; uses evolutionary history.\nPROBLEMS:\n- Requires a phylogeny (often unavailable or contested)\n- TENDS TO OVER-SPLIT — recognizes way more species than BSC (every diagnosable lineage = species).\nANALOGY: Defining a family by checking the family tree for a unique mutation. Precise, but you might call every grandkid a \"new family.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Ecological Species Concept (ESC) — Van Valen.",
+      "a": "Species = a lineage occupying a distinct ADAPTIVE ZONE (ecological niche). Boundaries maintained by ECOLOGICAL SELECTION, not just reproductive isolation.\nWORKS FOR: Ecologically divergent populations; bacteria; asexual taxa.\nFAILS WHEN: Niche boundaries are fuzzy; generalist species with overlapping niches.\nANALOGY: Defining \"industries\" by what business they're in. Tech vs. agriculture is clear; \"tech-with-a-farm-app\" is fuzzy.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "General Lineage Concept.",
+      "a": "Species = metapopulations exchanging alleles frequently enough to be the same evolutionary lineage. Tries to UNIFY the other concepts under one umbrella (\"evolutionary independence\").\nPROBLEM: Hard to operationalize — what counts as \"frequently enough\"?\nANALOGY: A philosophical compromise — combines everyone's definition into something everyone can sort of live with, but hard to use in practice.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Master mnemonic for the four concepts.",
+      "a": "\"BSC = Babies Stop Crossing. Morpho = Looks Different. Phylo = Family Tree Says So. General = Gene Exchange Rate.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Prezygotic vs. Postzygotic — basic split.",
+      "a": "- PREZYGOTIC = barrier acts BEFORE the zygote forms. Either prevents mating OR prevents fertilization after mating.\n- POSTZYGOTIC = barrier acts AFTER the zygote forms. The zygote forms but is doomed (inviable, sterile, or low fitness).\nRULE OF THUMB: Prezygotic is \"cheaper\" evolutionarily — no gametes wasted. Postzygotic is the costly version.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Prezygotic — PRE-MATING barriers.",
+      "a": "1. HABITAT ISOLATION — same area, different microhabitats; populations don't meet. (Hawthorn vs. apple maggot flies — different host plants.)\n2. TEMPORAL ISOLATION — different breeding/flowering times. (Two Rana frog species breeding in March vs. July; staggered flowering in Stiles 1977 hummingbird-pollinated plants.)\nANALOGY: Two coworkers who never run into each other because one is on day shift and one is on night shift. Same building, different times — never collide.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Prezygotic — POST-MATING, PRE-FERTILIZATION barriers.",
+      "a": "1. BEHAVIORAL/MECHANICAL — wrong courtship signals, incompatible genitalia. (Insect species-specific courtship dances; firefly flash patterns.)\n2. GAMETIC INCOMPATIBILITY — sperm/pollen fails to penetrate or fuse with egg of another species. (Species-specific surface proteins on sperm.)\nANALOGY: Walking into the wrong company and trying to use your old keycard. Mating happened (you got in the door); fertilization didn't (the badge doesn't work).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "POSTZYGOTIC barriers — three flavors.",
+      "a": "1. HYBRID INVIABILITY — embryo fails to develop; dies before reproducing. (Some Drosophila crosses.)\n2. HYBRID STERILITY — hybrid survives, looks healthy, but can't reproduce. (Mule = horse 64 chr × donkey 62 chr → mule 63 chr; meiosis fails.)\n3. HYBRID BREAKDOWN — F1 generation fertile, but F2 and beyond progressively less fit. (Some cotton hybrids; some rice subspecies.)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Mule = Sterility, NOT Inviability.",
+      "a": "Mules are HEALTHY, vigorous, strong. They live full lives. The barrier is they CAN'T REPRODUCE because 63 chromosomes don't pair properly in meiosis.\n- INVIABILITY = doesn't survive at all.\n- STERILITY = survives fine, can't make gametes.\n- Mules are the textbook example of HYBRID STERILITY (postzygotic).\nANALOGY: Mule has the engine but no transmission for offspring. Runs great, just can't pass on the design.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Mule sterility is NOT prezygotic gametic isolation.",
+      "a": "The mule already EXISTS. The zygote already formed. The horse and donkey successfully mated and fertilized. The barrier kicks in AFTER the mule is alive — its OWN gametes can't form. This is POSTZYGOTIC, not prezygotic gametic. (Robbins commonly tests this distinction.)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Reinforcement — definition.",
+      "a": "When secondary contact happens between previously isolated populations and HYBRIDS HAVE LOW FITNESS, natural selection STRENGTHENS prezygotic barriers. Why? Because individuals who avoid heterospecific mating waste fewer gametes on doomed hybrids → higher fitness → spread.\nKEY: Reinforcement is selection AGAINST hybridization, expressed through STRONGER prezygotic isolation. It's step 4 of the allopatric speciation model.\nANALOGY: After a few disastrous blind dates with people from a particular dating app, you stop using that app. Your \"prezygotic filter\" gets stronger because the cost of the failed meetings was high.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Reinforcement is selection AGAINST hybridization, expressed through STRONGER prezygotic isolation. It's step 4 of the allopatric speciation model. ANALOGY: After a few disastrous blind dates with people from a particular dating app, you stop using that app. Your \"prezygotic filter\" gets stronger because the cost of the failed meetings was high."
+    },
+    {
+      "q": "Step-by-step: how reinforcement strengthens prezygotic isolation.",
+      "a": "1. Two populations diverge in allopatry.\n2. Secondary contact happens.\n3. Hybrids form but have LOW FITNESS (sterile, inviable, or unfit).\n4. Individuals who happen to AVOID heterospecific mating leave more offspring (no wasted gametes).\n5. Alleles for stronger species recognition / preference / habitat choice spread.\n6. Prezygotic barriers strengthen → species become more reliably distinct → speciation completes.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "ALLOPATRIC speciation — definition and the 4-step model.",
+      "a": "\"Allopatric\" = \"other place.\" Species form in DIFFERENT, non-overlapping geographic ranges.\n4-step model:\n1. BARRIER FORMS (or organisms disperse) → gene flow stops.\n2. POPULATIONS DIVERGE genetically (drift + different selection).\n3. REPRODUCTIVE ISOLATION evolves as a byproduct.\n4. SECONDARY CONTACT → reinforcement may strengthen isolation.\nKEY: Considered the MOST COMMON mode of speciation in animals.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Considered the MOST COMMON mode of speciation in animals."
+    },
+    {
+      "q": "TRAP — Dispersal vs. Vicariance (within allopatric speciation).",
+      "a": "- DISPERSAL = organisms ACTIVELY MOVE to a new area, isolating themselves from the source. (Hawaiian crickets [Laupala] colonizing new volcanic islands. Founder events.)\n- VICARIANCE = organisms STAY PUT, the BARRIER appears in the middle of the existing range. (Isthmus of Panama rising ~3 mya, splitting Caribbean and Pacific marine species. Continental drift splitting marsupials.)\nMNEMONIC: \"Dispersal = the FROG MOVES. Vicariance = the WALL appears.\"\nANALOGY: Dispersal = some employees quit and start a new branch elsewhere. Vicariance = a wall gets built down the middle of HQ.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"Dispersal = the FROG MOVES. Vicariance = the WALL appears.\" ANALOGY: Dispersal = some employees quit and start a new branch elsewhere. Vicariance = a wall gets built down the middle of HQ."
+    },
+    {
+      "q": "SYMPATRIC speciation — definition.",
+      "a": "\"Sympatric\" = \"same place.\" A new species evolves WITHIN the same geographic range as its parent species. No physical barrier required. Gene flow is reduced by ECOLOGICAL DIVERGENCE, RESOURCE SHIFTS, or POLYPLOIDY.\n3-step pattern:\n1. Ecological divergence within the population.\n2. Assortative mating (similar phenotypes mating preferentially).\n3. Genetic divergence accumulates → reproductive isolation.\nKEY: Once controversial; now accepted with multiple solid examples (host-race shifts, polyploidy, cichlid fish).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Once controversial; now accepted with multiple solid examples (host-race shifts, polyploidy, cichlid fish)."
+    },
+    {
+      "q": "Apple maggot fly (Rhagoletis pomonella) — case study.",
+      "a": "Sympatric speciation IN PROGRESS.\n- ~400 years ago, apple trees introduced to N. America.\n- ~140 years ago, hawthorn flies started shifting to apples.\n- Apples fruit EARLIER than hawthorns → selection for earlier emergence in apple-using flies.\n- Flies MATE ON THEIR HOST TREE → host shift = mating isolation.\n- Two populations now genetically diverging despite no geographic separation.\nANALOGY: Two friend groups in the same school start eating in different cafeterias. Over time they only date within their cafeteria. No one moved buildings — the social barrier became reproductive.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why does the Rhagoletis system work for sympatric speciation?",
+      "a": "Because \"where they mate\" = \"where they eat.\" The host plant choice IS the mating venue. Once a fly chooses apples, it only meets other apple-flies. The ecological choice creates the reproductive barrier without any geography.\nKEY: This is ECOLOGICAL SPECIATION.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "This is ECOLOGICAL SPECIATION."
+    },
+    {
+      "q": "Allopolyploidy — what is it?",
+      "a": "HYBRIDIZATION between two different species + WHOLE-GENOME DUPLICATION → new species in ONE GENERATION. The offspring has complete chromosome sets from BOTH parents. Different ploidy from either parent → immediately reproductively isolated. ~50% of all flowering plants have polyploid ancestry.\nKEY: This is the FASTEST possible speciation. No geography needed.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "This is the FASTEST possible speciation. No geography needed."
+    },
+    {
+      "q": "Step-by-step: how allopolyploidy creates a new species.",
+      "a": "1. Species A (2n=14) × Species B (2n=14) → hybrid offspring with 14 unpaired chromosomes (7 from each parent). Meiosis fails — STERILE.\n2. ACCIDENT: cell division failure causes whole-genome duplication → allotetraploid (2n=28: two complete sets each from A and B).\n3. Now every chromosome HAS a partner → meiosis works → FERTILE.\n4. Crossing this allotetraploid back to either parent species → ploidy mismatch → sterile offspring → REPRODUCTIVELY ISOLATED.\n5. New species formed in 1 generation, no geographic separation needed.\nANALOGY: Two incompatible LEGO sets that won't snap together. Photocopy each set so you have TWO of each. Now everything has a partner — works perfectly. But it's no longer either original set.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Allopolyploidy vs. Autopolyploidy.",
+      "a": "- ALLO = TWO DIFFERENT SPECIES hybridize, then duplicate. Different parents.\n- AUTO = ONE SPECIES duplicates its own genome. Same parent species.\nAllo is FAR MORE COMMON and evolutionarily important — different chromosome sets pair properly in meiosis after duplication.\nMNEMONIC: \"ALLO = OTHER (two different species). AUTO = SELF (one species).\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"ALLO = OTHER (two different species). AUTO = SELF (one species).\""
+    },
+    {
+      "q": "TRAP — Does allopolyploidy require geographic isolation?",
+      "a": "NO. Allopolyploidy creates reproductive isolation IN A SINGLE GENERATION without any geographic separation. It is THE BEST-DOCUMENTED route to SYMPATRIC speciation. Plants tolerate polyploidy way better than animals — that's why ~50% of flowering plants have polyploid origins but it's rare in animals.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Tragopogon (goatsbeard) — why it's famous.",
+      "a": "Two new allopolyploid species formed in the PACIFIC NORTHWEST within the last ~80 YEARS from European species introduced to North America. Speciation observed IN REAL TIME — among the most direct evidence we have for sympatric polyploid speciation in plants.\nKEY: New species in a human lifetime. Evolution isn't slow when polyploidy is involved.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "New species in a human lifetime. Evolution isn't slow when polyploidy is involved."
+    },
+    {
+      "q": "Bread wheat (Triticum aestivum) — the polyploidy story.",
+      "a": "Hexaploid (6n=42) — derived from THREE ancestral diploid grass species (genomes AA + BB + DD) via TWO sequential allopolyploidy events over ~8,000 years. AA × BB → AABB (tetraploid emmer wheat) → AABB × DD → AABBDD (hexaploid bread wheat).\nANALOGY: A musical mashup made from three songs, each merger producing a new track. Today's bread wheat = a triple-layered remix.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Haldane's Rule.",
+      "a": "When hybrid offspring of one sex are inviable or sterile, it is more often the HETEROGAMETIC SEX (the sex with two different sex chromosomes).\n- Mammals & flies: XY = males → MALES suffer first.\n- Birds & butterflies: ZW = females → FEMALES suffer first.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "WHY does Haldane's Rule work? (mechanism)",
+      "a": "Recessive incompatibility alleles on the X (or Z) chromosome are EXPOSED in the heterogametic sex because there's no second X (or Z) to mask them. The homogametic sex (XX or ZZ) has a backup copy that can compensate. Heterogametic = HEMIZYGOUS = no backup → recessive incompatibilities hit them first.\nANALOGIES:\n- Building with one elevator vs. two. If the only one breaks, you're stuck. If you have a backup, you ride the other one.\n- A solo musician vs. a duo. If the solo player gets sick, the show dies. The duo can carry on.\n- XY males have a single X with no spare; XX females have two X's — if one's broken, the other compensates.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch13spec",
+      "source": "final_review",
+      "analogy": "Building with one elevator vs. two. If the only one breaks, you're stuck. If you have a backup, you ride the other one.",
+      "hint": ""
+    },
+    {
+      "q": "What is BIOGEOGRAPHY?",
+      "a": "The study of the SPATIAL and TEMPORAL distribution of biodiversity. Initiated by Darwin and Wallace. Asks: why does this species live HERE and not THERE? Two processes explain non-random distribution:\n1. DISPERSAL — organisms MOVE to new areas.\n2. VICARIANCE — a barrier APPEARS, splitting an existing range.\nPHYLOGEOGRAPHY = combining phylogenetic relationships with geography to reconstruct historical events.\nANALOGY: A detective tracing how a family ended up scattered across continents — was it migration (dispersal) or a wall going up between branches (vicariance)?",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Marsupial biogeography — the textbook story.",
+      "a": "Memorize this timeline:\n- Oldest fossils: CHINA, ~150 mya\n- Dispersed to N. America ~120 mya\n- Down to S. America\n- Across ANTARCTICA (when Antarctica was warm and connected)\n- Arrived in AUSTRALIA ~55 mya\n- Australia drifted into ISOLATION for 40+ million years with NO PLACENTAL MAMMALS (until bats and rats arrived ~15 mya).\nRESULT: Australian marsupials radiated CONVERGENTLY to fill placental ecological roles — marsupial mole, marsupial wolf (thylacine), sugar glider (parallels flying squirrel), etc.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why do marsupial wolves and placental wolves look so similar?",
+      "a": "CONVERGENT EVOLUTION. Both faced similar selective pressures for pursuit predation → convergent skull and body shapes. They did NOT share a wolf-like common ancestor. This is HOMOPLASY, not homology.\nANALOGY: Two car companies in different countries independently designing similar SUVs. No copying — they're solving the same problem with similar physics constraints.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Standing diversity formula (memorize cold).",
+      "a": "D₂ = D₁ + originations − extinctions\n- D₁ = species at start\n- D₂ = species at end\n- λ (lambda) = origination rate (species per million years)\n- μ (mu) = extinction rate (species per million years)\n- TURNOVER = total originations + extinctions (NOT the difference — the SUM)\nKEY: At GLOBAL scale, immigration and emigration cancel out → only originations and extinctions matter.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "At GLOBAL scale, immigration and emigration cancel out → only originations and extinctions matter."
+    },
+    {
+      "q": "Three diversity scenarios.",
+      "a": "- λ > μ → diversity INCREASES (e.g., adaptive radiations)\n- μ > λ → diversity DECREASES (mass extinctions, declining clades)\n- λ ≈ μ → diversity STABLE but still TURNOVER (constant birth and death of species)\nANALOGY: A bathtub with the tap on (λ) and the drain open (μ). Tap > drain → fills up. Drain > tap → empties. Equal → water level stable but molecules constantly cycling.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Global vs. Local scale.",
+      "a": "At GLOBAL scale: D₂ = D₁ + originations − extinctions ONLY. (Immigration/emigration cancel — a species \"immigrating\" to one continent is \"emigrating\" from another.)\nAt LOCAL scale: must include immigration + emigration too.\nRobbins likes to test this as a fill-in-the-blank: \"Which terms apply globally?\" → just λ and μ.\nMNEMONIC: \"Diversity = Species Births minus Species Deaths\" — at GLOBAL level only.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"Diversity = Species Births minus Species Deaths\" — at GLOBAL level only."
+    },
+    {
+      "q": "Worked example — practice the formula.",
+      "a": "Start: 24 species.\n- Stage B: +10 originations, −6 extinctions → D = 24 + 10 − 6 = 28\n- Stage C: +8 originations, −12 extinctions → D = 28 + 8 − 12 = 24\nStage B turnover = 10 + 6 = 16. Stage C turnover = 8 + 12 = 20.\nKEY: Notice Stage C has HIGHER turnover but LOWER diversity. Don't confuse turnover with net change.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Notice Stage C has HIGHER turnover but LOWER diversity. Don't confuse turnover with net change."
+    },
+    {
+      "q": "Quick-check problem.",
+      "a": "A clade starts with 50 species. Over 10 million years, 30 originate and 15 go extinct. Final standing diversity?\nANSWER: D = 50 + 30 − 15 = 65 species.\nλ = 30/10 = 3 species/My. μ = 15/10 = 1.5 species/My.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Adaptive radiation — definition.",
+      "a": "λ GREATLY EXCEEDS μ → rapid diversification of a clade into many ecological roles in a short time. Three triggers:\n1. NEW HABITAT with no competitors (island colonization)\n2. KEY INNOVATION opening previously unavailable resource space\n3. MASS EXTINCTION removing competitors → empty niches\nANALOGIES:\n- A new continent is discovered. Settlers spread out fast; each carves a niche (mining, farming, fishing). Competition is low → everyone succeeds in different ways.\n- The competitor goes bankrupt; their market share gets carved up by 50 startups overnight.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "A new continent is discovered. Settlers spread out fast; each carves a niche (mining, farming, fishing). Competition is low → everyone succeeds in different ways.",
+      "hint": ""
+    },
+    {
+      "q": "Classic adaptive radiation examples.",
+      "a": "- HAWAIIAN HONEYCREEPERS (>50 species): colonized Hawaii ~5 mya; new island, no competitors. Beak forms diverged for nectar, seeds, insects, etc.\n- AFRICAN CICHLIDS (~500 species in Lake Victoria alone): jaw diversity opening multiple feeding niches; new lake, no competitors.\n- CENOZOIC MAMMALS: K-T extinction (66 mya) freed niches monopolized by dinosaurs for 160M years. Mammals exploded.\n- CRETACEOUS ANGIOSPERMS: KEY INNOVATION = flowers → coevolution with insect pollinators.\n- ELEUTHERODACTYLUS FROGS (>400 species): KEY INNOVATION = direct development on land, skipping aquatic tadpole stage → freed from aquatic larval competition.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Key Innovation defined precisely.",
+      "a": "Key innovation is NOT \"the organism got smarter\" or \"evolved a generally useful trait.\" It is a SPECIFIC adaptation that grants ACCESS to previously unavailable habitats or resources by REMOVING A CONSTRAINT.\n- Eleutherodactylus key innovation: bypasses aquatic larval competition by direct land development.\n- Angiosperm key innovation: flowers + insect coevolution.\n- Bird flight key innovation: opens aerial niche.\nTEST: \"Does this trait remove a barrier and open new niche space?\" If yes → key innovation.\nANALOGY: A new bridge across a river isn't just a \"general improvement\" — it specifically opens up the other side for everyone.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why did Cenozoic mammals radiate?",
+      "a": "K-T extinction (66 mya) removed non-avian dinosaurs, who had monopolized large-bodied terrestrial niches for 160 million years. Empty niches → mammals (previously small, mostly nocturnal) diversified into elephants, whales, cats, bats, primates, etc. within ~20 million years.\nKEY: Mass extinction is a major TRIGGER for radiation in survivors.\nANALOGY: When a dominant industry collapses, dozens of new companies fill the vacuum within a few years.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Mass extinction is a major TRIGGER for radiation in survivors. ANALOGY: When a dominant industry collapses, dozens of new companies fill the vacuum within a few years."
+    },
+    {
+      "q": "The Big 5 mass extinctions — order and dates.",
+      "a": "MNEMONIC: \"Old Dogs Play Tennis Carefully\"\n1. End-ORDOVICIAN (~444 mya, ~86% loss) — glacial episodes, ocean cooling\n2. Late DEVONIAN (~375–359 mya, ~75% loss) — multiple pulses, oceanic anoxia, CO₂ drop\n3. End-PERMIAN \"Great Dying\" (~252 mya, ~96% loss) — Siberian Traps volcanism → CO₂ spike, warming, anoxia\n4. End-TRIASSIC (~202 mya, ~80% loss) — volcanism, elevated CO₂\n5. End-CRETACEOUS (K-T or K-Pg) (~66 mya, ~76% loss) — Chicxulub asteroid + climate disruption\n6. SIXTH (ongoing) — humans, 100–1000× background rate",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"Old Dogs Play Tennis Carefully\" 1. End-ORDOVICIAN (~444 mya, ~86% loss) — glacial episodes, ocean cooling 2. Late DEVONIAN (~375–359 mya, ~75% loss) — multiple pulses, oceanic anoxia, CO₂ drop"
+    },
+    {
+      "q": "TRAP — Biggest vs. Most Famous.",
+      "a": "BIGGEST = END-PERMIAN (\"Great Dying\"), ~96% of species lost. Caused by Siberian Traps volcanism → CO₂ spike → global warming + ocean acidification + anoxia.\nMOST FAMOUS = END-CRETACEOUS (K-T / K-Pg), ~76% of species lost. Killed non-avian dinosaurs. Caused by Chicxulub asteroid impact.\n- \"Most severe?\" = PERMIAN.\n- \"Killed the dinosaurs?\" = K-T.\nDO NOT CONFUSE THEM. Robbins will test directly.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "End-Permian mechanism — step-by-step.",
+      "a": "1. Siberian Traps (massive volcanic eruption in modern Russia) erupted for ~1 million years.\n2. Released huge amounts of CO₂ and sulfur into atmosphere.\n3. Global warming + ocean acidification.\n4. Ocean stratification → widespread oceanic anoxia (no oxygen at depth).\n5. ~96% of marine species + ~70% of terrestrial vertebrate species died.\n6. Recovery took ~10 million years.\nKEY: This is why it's called the \"Great Dying\" — life nearly ended.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "This is why it's called the \"Great Dying\" — life nearly ended."
+    },
+    {
+      "q": "K-T extinction mechanism.",
+      "a": "~66 mya, an asteroid (~10 km wide) struck what is now the Yucatán Peninsula (Chicxulub crater). Effects:\n1. Initial impact → firestorms, megatsunamis.\n2. Dust and aerosols blocked sunlight for years → \"impact winter\" → photosynthesis collapsed.\n3. Food webs collapsed.\n4. Acid rain, temperature swings, ocean disruption.\n5. ~76% of species died, including all non-avian dinosaurs.\nKEY EVIDENCE: Iridium-rich layer at K-T boundary worldwide; shocked quartz; tektites.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Iridium-rich layer at K-T boundary worldwide; shocked quartz; tektites."
+    },
+    {
+      "q": "The 6th extinction — what makes it \"current\"?",
+      "a": "Modern extinction rates are 100–1000× the BACKGROUND extinction rate (the steady-state non-mass-extinction rate). Drivers:\n1. Habitat destruction\n2. Invasive species\n3. Climate change\n4. Overexploitation (hunting, fishing)\n5. Pollution\nKEY: Caused by humans. Currently in progress.\nANALOGY: Background extinction = steady evaporation. Mass extinction = a sudden drought. We're causing a man-made drought.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Caused by humans. Currently in progress. ANALOGY: Background extinction = steady evaporation. Mass extinction = a sudden drought. We're causing a man-made drought."
+    },
+    {
+      "q": "Island biogeography theory — core idea.",
+      "a": "Island species richness reflects a DYNAMIC EQUILIBRIUM between:\n- IMMIGRATION (adds species)\n- EXTINCTION (removes species)\nAt equilibrium: immigration rate = extinction rate → STABLE species number. But species COMPOSITION keeps changing through TURNOVER.\nANALOGY: A pool with people coming and going. The TOTAL stays the same, but it's not the SAME PEOPLE.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Two main predictions.",
+      "a": "1. LARGER ISLANDS → MORE species (more niches; lower extinction rate due to larger population sizes).\n2. ISLANDS CLOSER TO MAINLAND → MORE species (higher immigration rate).\nCOMBINED: Large + Near = MOST species. Small + Far = FEWEST.\nANALOGY: Big city near a major airport = lots of people, constant turnover. Tiny remote village far from anywhere = few people, harder to refresh.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Equilibrium ≠ same species forever.",
+      "a": "At equilibrium, the NUMBER of species is stable but the IDENTITY of those species KEEPS CHANGING. Species go extinct; new ones colonize. Stable count, dynamic membership. Don't say \"the same species always live there.\"\nANALOGY: A class of 30 students stays at 30 students every semester — but the actual students rotate.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why is island biogeography important for conservation?",
+      "a": "Habitat fragments behave like islands. As habitat shrinks and fragments, biodiversity drops predictably according to MacArthur-Wilson theory. CONSERVATION IMPLICATIONS:\n- LARGER reserves preserve more species.\n- CONNECTED reserves (corridors) act like \"near-mainland\" islands.\n- Fragmented landscapes lose species fastest.\nKEY: This is the foundation of modern conservation biology.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "This is the foundation of modern conservation biology."
+    },
+    {
+      "q": "Wallace Line — what is it?",
+      "a": "A sharp biogeographic boundary running through the Malay Archipelago — between BALI and LOMBOK; between BORNEO and SULAWESI. Discovered by Alfred Russel Wallace in 1859.\n- WEST of line: ASIAN fauna (primates, tigers, elephants).\n- EAST of line: AUSTRALASIAN fauna (marsupials, cockatoos).\nThe line marks where the ASIAN and AUSTRALIAN continental shelves meet. Even at ice age low sea levels, a DEEP WATER CHANNEL remained → most terrestrial organisms couldn't cross.\nKEY: Classic example of VICARIANCE creating biogeographic patterns.\nANALOGY: A river that's deep enough to never freeze — animals on each side stayed separated for millions of years even when surrounding waters dropped.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Classic example of VICARIANCE creating biogeographic patterns. ANALOGY: A river that's deep enough to never freeze — animals on each side stayed separated for millions of years even when surrounding waters dropped."
+    },
+    {
+      "q": "50/500 Rule (conservation genetics).",
+      "a": "Minimum viable Effective Population Size (Ne) guideline:\n- Ne ≥ 50 SHORT-TERM → prevents rapid inbreeding depression (limits inbreeding rate to ~1% per generation).\n- Ne ≥ 500 LONG-TERM → maintains enough genetic variation for adaptive evolution.\nSome scientists now suggest 100/1000 as more realistic.\nMNEMONIC: \"50 to live, 500 to thrive.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"50 to live, 500 to thrive.\""
+    },
+    {
+      "q": "TRAP — Ne ≠ N.",
+      "a": "EFFECTIVE population size (Ne) is ALWAYS SMALLER than CENSUS population (N). Why?\n- Unequal sex ratios (e.g., 1 breeding male per 50 females → Ne crashes)\n- Variance in reproductive success (some breed, some don't)\n- Population fluctuations (bottlenecks)\nRULE: Conservation policy targets Ne, not N. A population with 200 individuals might have Ne = 30.\nANALOGY: A company with 1000 employees but only 30 actually voting on decisions → effective size = 30.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why does inbreeding harm small populations? (mechanism)",
+      "a": "1. Inbreeding INCREASES homozygosity.\n2. DELETERIOUS RECESSIVE alleles, normally masked in heterozygotes, become EXPRESSED in homozygotes.\n3. Heterozygote advantage is LOST (e.g., MHC immune genes — heterozygotes recognize more pathogens).\n4. Result: reduced fertility, disease susceptibility, developmental abnormalities.\nCHEETAH EXAMPLE: So little genetic diversity that skin grafts between unrelated cheetahs are accepted without immune rejection (normally rejected due to MHC diversity). ~70% abnormal sperm. Vulnerable to disease outbreaks.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Parapatric speciation — the \"third mode.\"",
+      "a": "Between allopatric and sympatric. Populations have PARTIAL geographic separation — they meet along a NARROW CONTACT ZONE where some gene flow occurs. Strong selection gradients on each side OVERCOME gene flow → divergence. If assortative mating evolves in the contact zone, full speciation results.\nKEY: Less common than allopatric, harder to document than sympatric. Real-world example: certain grass species adapted to mine tailings vs. surrounding non-toxic soil.\nANALOGY: Two neighborhoods with a shared border street. Some people cross daily, but the cultures slowly diverge anyway because of strong local selection on each side.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch14macro",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Less common than allopatric, harder to document than sympatric. Real-world example: certain grass species adapted to mine tailings vs. surrounding non-toxic soil. ANALOGY: Two neighborhoods with a shared border street. Some people cross daily, but the cultures slowly diverge anyway because of strong local selection on each side."
+    },
+    {
+      "q": "What is coevolution?",
+      "a": "RECIPROCAL evolutionary change between interacting species. \nEach species acts as a SELECTIVE AGENT on the other → each \ndrives evolutionary change in the other.\n\nKEY: must be MUTUAL/reciprocal. If only ONE species evolves in \nresponse to the other (and the other doesn't change back), it's \nNOT coevolution — it's just adaptation to a static partner.\n\nTYPES of interaction that can drive coevolution:\n- Antagonistic (predator-prey, host-parasite, herbivore-plant)\n- Mutualistic (pollinator-flower, fig-fig wasp)\n- Competitive\n\nANALOGIES:\n- \"Tennis rally\" — both players keep adjusting their strokes \n  based on the other's moves. One player's serve gets harder \n  → other player's return improves → first player adjusts \n  again. Reciprocal volleys.\n- \"Couple bickering\" — each partner's behavior is shaped by the \n  other's. They're co-evolving habits.\n\n⚠ TRAP: A cattle egret following cattle for stirred-up insects \nis NOT coevolution. The cattle don't evolve in response to the \nbirds — it's commensal, one-sided.\n\n──────────────────────────────────────────────\nCARD 02 — Coevolutionary Arms Race",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Tennis rally\" — both players keep adjusting their strokes",
+      "hint": "must be MUTUAL/reciprocal. If only ONE species evolves in  response to the other (and the other doesn't change back), it's  NOT coevolution — it's just adaptation to a static partner."
+    },
+    {
+      "q": "What defines an arms race in coevolution?",
+      "a": "DIRECTIONAL ESCALATION. One species evolves better OFFENSE, \nthe other evolves better DEFENSE → both push to ever more \nextreme traits over evolutionary time.\n\nCLASSIC EXAMPLES:\n- Newt toxicity ↔ garter snake resistance\n- Cheetah speed ↔ gazelle speed\n- Plant toxin concentration ↔ herbivore detoxification enzymes\n- Parasite virulence ↔ host immunity\n\nLIMITS to escalation:\n- COSTS on both sides cap how extreme traits can get\n  (resistant snakes move slower; toxic newts pay energy cost)\n- Eventually one side may \"win\" — once snake is resistant \n  enough, more newt toxin doesn't matter\n\nANALOGIES:\n- \"Cold War nuclear buildup\" (Zimmer & Emlen literally use this) \n  — US and USSR each escalating weapons in response to the \n  other. Trait magnitudes climb together.\n- \"Arms dealer's stairmaster\" — both sides keep climbing higher \n  weaponry because standing still means losing.\n- \"Spy vs. Spy\" comic — every gadget invites a counter-gadget.\n\n⚠ TRAP: Arms races are NOT infinitely escalating — costs limit \nthe climb. Robbins may offer \"infinite escalation\" as a wrong \nanswer.\n\n──────────────────────────────────────────────\nCARD 03 — The Newt-Snake System (Memorize the Names)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Cold War nuclear buildup\" (Zimmer & Emlen literally use this)",
+      "hint": "Arms races are NOT infinitely escalating — costs limit  the climb. Robbins may offer \"infinite escalation\" as a wrong  answer."
+    },
+    {
+      "q": "Who are the players in the classic newt-snake arms race?",
+      "a": "NEWT: Taricha granulosa (rough-skinned newt, Pacific Coast)\n  → produces TETRODOTOXIN (TTX)\n  → up to 14 mg of TTX in a 10g newt\n  → one of the most potent neurotoxins known\n  → blocks voltage-gated Na+ channels (paralyzes most predators)\n\nSNAKE: Thamnophis sirtalis (common garter snake)\n  → evolved TTX-RESISTANT Na+ channels\n  → mutations in the SCN4A gene change channel shape so TTX \n    can't bind effectively\n  → sometimes a SINGLE amino-acid substitution suffices\n\nRESEARCHERS: Edmund Brodie Jr. and Edmund Brodie III (decades \nof fieldwork)\n\nANALOGY:\n- \"Lock and key\" — TTX is a key shaped to fit the Na+ channel \n  lock. Resistant snakes have a re-cut lock that the key no \n  longer fits.\n\n──────────────────────────────────────────────\nCARD 04 — TTX Mechanism",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Lock and key\" — TTX is a key shaped to fit the Na+ channel",
+      "hint": ""
+    },
+    {
+      "q": "How does tetrodotoxin (TTX) work, and how do snakes resist it?",
+      "a": "TTX BLOCKS voltage-gated SODIUM (Na+) channels in nerve cells.\n- Without functioning Na+ channels → no action potentials → \n  paralysis → death\n- Most predators that eat a toxic newt die rapidly\n\nSNAKE RESISTANCE: point mutations in the gene encoding Na+ \nchannels alter the channel's shape so TTX can no longer bind \neffectively. Snake's nerves keep firing despite the toxin.\n\nANALOGIES:\n- \"Door wedge\" — TTX wedges itself into the Na+ channel door so \n  it can't open. Snakes evolved a different door shape that the \n  wedge doesn't fit.\n- \"Spam filter mutation\" — the snake's \"inbox\" (Na+ channel) \n  changed format so the spam (TTX) gets rejected automatically.\n\n⚠ ROBBINS HOOK: TTX = sodium channels. Don't confuse with \ncalcium or potassium channels.\n\n──────────────────────────────────────────────\nCARD 05 — The Cost of Resistance (Trade-Off)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Door wedge\" — TTX wedges itself into the Na+ channel door so",
+      "hint": ""
+    },
+    {
+      "q": "What's the FITNESS COST of being TTX-resistant?",
+      "a": "RESISTANT SNAKES MOVE SLOWER. The resistant Na+ channels \nconduct ions less efficiently → slower neural signaling → \nslower locomotion.\n\nCONSEQUENCES of slowness:\n- Less successful at hunting\n- More vulnerable to predators\n- Lower fitness OVERALL when no toxic newts are around\n\nThis is ANTAGONISTIC PLEIOTROPY — the SAME allele has both a \nbenefit (survives toxic prey) and a cost (slower movement).\n\nNewt cost: producing 14 mg of TTX is a major energetic \ninvestment of carbon and energy.\n\nANALOGIES:\n- \"Bulletproof vest\" — a vest that stops bullets also slows you \n  down running. Worth wearing in a war zone (newt territory), \n  not worth it on a casual jog (newt-free).\n- \"Heavy armor in an MMO\" — high defense, low movement speed. \n  Trade-off baked in.\n\n⚠ This cost is WHY snakes in newt-free areas evolve back to LOW \nresistance — without the benefit, the cost dominates.\n\n──────────────────────────────────────────────\nCARD 06 — Geographic Mosaic Theory (John Thompson)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Bulletproof vest\" — a vest that stops bullets also slows you",
+      "hint": ""
+    },
+    {
+      "q": "What is the Geographic Mosaic Theory of coevolution?",
+      "a": "Author: JOHN N. THOMPSON\nKey insight: COEVOLUTION IS NOT UNIFORM across a species' \ngeographic range. Different populations of the same two \ninteracting species can be at completely different stages of \nthe arms race.\n\nTHREE COMPONENTS:\n1. HOTSPOTS — locations where reciprocal selection is INTENSE; \n   both species present + both adapt to each other → extreme \n   trait values\n2. COLDSPOTS — locations where one species is absent OR \n   selection is asymmetric → only one (or neither) species \n   adapts → low trait values\n3. GENE FLOW — alleles move between hotspots and coldspots → \n   creates a patchwork (mosaic) of coevolved vs non-coevolved \n   populations\n\nRESULT: a geographic patchwork — same two species, different \nintensity of coevolution at different sites. Some places newts \nare super toxic + snakes super resistant. Other places both \nhave low values. About 1/3 of sites are MISMATCHED (one ahead \nof the other).\n\nANALOGIES:\n- \"Local rivalries\" — same two college teams play each other \n  everywhere, but the rivalry is fierce in some cities (hotspots) \n  and meh in others (coldspots).\n- \"Climate map\" — same country, different microclimates region \n  by region. The \"weather\" of selection varies by location.\n- \"Bluetooth signal\" — strong in some rooms (hotspot of \n  interaction), weak in others (coldspot), and the connection \n  bleeds across rooms (gene flow).\n\n──────────────────────────────────────────────\nCARD 07 — Hotspot vs Coldspot Criteria",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Local rivalries\" — same two college teams play each other",
+      "hint": ""
+    },
+    {
+      "q": "What defines a hotspot vs a coldspot?",
+      "a": "HOTSPOT — must satisfy ALL THREE:\n1. BOTH species present\n2. INTENSE reciprocal selection\n3. EXTREME trait values in BOTH species\n\nEX: Pacific Coast site with super-toxic newts AND highly \nresistant snakes coexisting.\n\nCOLDSPOT — at least one missing:\n- One species absent (no reciprocal interaction)\n- Weak interaction (rare encounters, low pressure)\n- Asymmetric selection (only one side responds)\n- Low trait values despite co-occurrence\n\n⚠ TRAP: Co-occurrence (sympatry) ALONE doesn't make a hotspot. \nBoth must be present AND extreme traits AND intense reciprocal \nselection. Same two species sitting in the same forest doing \nnothing intense = coldspot.\n\nANALOGY:\n- \"Boxing match\" — hotspot = both fighters in the ring throwing \n  haymakers. Coldspot = one fighter no-shows, OR both fighters \n  jab politely.\n\n──────────────────────────────────────────────\nCARD 08 — Why Snakes in Newt-Free Areas Evolve LOW Resistance",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Boxing match\" — hotspot = both fighters in the ring throwing",
+      "hint": "Co-occurrence (sympatry) ALONE doesn't make a hotspot.  Both must be present AND extreme traits AND intense reciprocal  selection. Same two species sitting in the same forest doing"
+    },
+    {
+      "q": "A snake population lives where there are NO toxic newts. What's their predicted TTX resistance?",
+      "a": "LOW resistance.\n\nREASONING: TTX resistance has a COST (slower locomotion). \nWithout toxic newts → no benefit → cost dominates → selection \nREMOVES resistance alleles.\n\nKEY POINT: alleles aren't kept \"as a backup\" or \"in case.\" \nSelection only maintains a trait while the benefit > cost.\n\nANALOGIES:\n- \"Shoveling snow in Florida\" — pointless cost, you'd ditch the \n  shovel. No selection to keep it.\n- \"Carrying an umbrella in Phoenix\" — dead weight. Drop it.\n\n⚠ TRAP: Don't pick \"high resistance because gene flow homogenizes\" \nor \"intermediate due to global average.\" Local selection wins \nover gene flow when costs are real.\n\n──────────────────────────────────────────────\nCARD 09 — Arms Race vs. Red Queen (THE BIG TRAP)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Shoveling snow in Florida\" — pointless cost, you'd ditch the",
+      "hint": "alleles aren't kept \"as a backup\" or \"in case.\"  Selection only maintains a trait while the benefit > cost."
+    },
+    {
+      "q": "How do you distinguish an arms race from Red Queen dynamics?",
+      "a": "ARMS RACE — DIRECTIONAL ESCALATION\n- Trait values CLIMB over time\n- Both species push to ever more extreme phenotypes\n- Newt-snake = arms race\n- Cheetah-gazelle = arms race\n- Plant toxins ↔ herbivore detox = arms race\n\nRED QUEEN — FREQUENCY-DEPENDENT CYCLING\n- Trait/genotype frequencies CYCLE around an average\n- NO directional escalation\n- Common host genotype gets exploited by parasites → rare \n  host genotype gains advantage → becomes common → gets \n  exploited → cycle repeats\n- Host-parasite genotype cycling = Red Queen\n- Author: Leigh Van Valen (1973) — \"it takes all the running \n  you can do, to keep in the same place\"\n\nBOTH involve reciprocal evolution between species. The \nDIFFERENCE is shape:\n- Arms race = ↗ ↗ (climbing curves)\n- Red Queen = ∿ ∿ (oscillating curves)\n\nANALOGIES:\n- ARMS RACE = \"weight room\" — both lifters keep maxing higher\n- RED QUEEN = \"rock-paper-scissors\" — no winner, just rotating\n- RED QUEEN = \"hacker vs. password\" — common password gets \n  cracked, you switch to a new one (which becomes common, \n  gets cracked, etc.)\n\n⚠ TRAP STATEMENTS to reject:\n- \"Red Queen produces extreme escalating traits\" → FALSE \n  (that's arms race)\n- \"Arms races involve same species cycling genotypes\" → FALSE \n  (both involve TWO species)\n\n──────────────────────────────────────────────\nCARD 10 — Red Queen Hypothesis (full)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "ARMS RACE = \"weight room\" — both lifters keep maxing higher",
+      "hint": "- \"Red Queen produces extreme escalating traits\" → FALSE    (that's arms race) - \"Arms races involve same species cycling genotypes\" → FALSE"
+    },
+    {
+      "q": "What is the Red Queen Hypothesis and why does it matter for sex?",
+      "a": "PROPOSED BY: Leigh Van Valen (1973)\nNAMED FOR: Red Queen in Lewis Carroll's \"Through the Looking-\nGlass\" — must run constantly just to stay in place.\n\nCORE IDEA: organisms must keep evolving (running) just to \nmaintain fitness as their parasites/competitors evolve back. \nNo permanent winners.\n\nMECHANISM (host-parasite):\n1. Parasites adapt to MOST COMMON host genotype\n2. That host genotype suffers, declines in frequency\n3. Previously rare host genotype rises (parasites can't \n   exploit it yet)\n4. Parasites then evolve to track the new common genotype\n5. Cycle repeats\n\nCONNECTION TO SEX: sexual reproduction generates NOVEL host \ngenotypes via recombination → parasites can never lock onto a \nfixed target. Curtis Lively's Potamopyrgus snail study: more \nsexual snails where parasite loads are high; more clonal \nsnails where parasites are rare.\n\nANALOGIES:\n- \"Treadmill\" — running full speed, but the belt is moving \n  back. You're not getting anywhere; you just don't fall off.\n- \"Password rotation policy\" — IT forces you to change \n  passwords every 30 days, not because you're climbing to \n  better passwords, but because hackers keep cracking the \n  old common ones.\n\n──────────────────────────────────────────────\nCARD 11 — Negative Frequency-Dependent Selection",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Treadmill\" — running full speed, but the belt is moving",
+      "hint": ""
+    },
+    {
+      "q": "What is negative frequency-dependent selection? Where does it apply?",
+      "a": "A phenotype's FITNESS DECREASES as it becomes MORE COMMON. \nRare types win, common types get punished.\n\nThis is the engine behind Red Queen dynamics — parasites \nspecialize on the most common host genotype, so being common \nis bad and being rare is good. Maintains polymorphism.\n\nCONTRAST with POSITIVE frequency-dependent selection: \ncommon types win, rare ones lose. Reduces variation.\n\nEXAMPLES of negative frequency-dependent:\n- Host-parasite cycling\n- Side-blotched lizard rock-paper-scissors mating system\n- Apostatic predation (predators form a \"search image\" for \n  the most common prey, so rare prey escape)\n\nANALOGY:\n- \"Trendy restaurant problem\" — once everyone goes there, the \n  place gets crowded and bad. The empty new place is suddenly \n  better. Then everyone shifts to that one. Repeat forever.\n\n──────────────────────────────────────────────\nCARD 12 — Step-by-Step: How a Geographic Mosaic Forms",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Trendy restaurant problem\" — once everyone goes there, the",
+      "hint": ""
+    },
+    {
+      "q": "Walk through how the geographic mosaic of coevolved traits forms.",
+      "a": "1. Two coevolving species interact at VARYING INTENSITIES \n   across the landscape\n2. HOTSPOTS form where both species are present and reciprocal \n   selection is intense → traits escalate\n3. COLDSPOTS form where the interaction is weak or one partner \n   is absent → traits stay low/moderate\n4. GENE FLOW connects hotspots and coldspots → some alleles \n   spread between regions, partially homogenizing traits but \n   not eliminating differences\n5. RESULT: geographic patchwork (mosaic) of coevolved trait \n   values across the species' range\n\nANALOGY:\n- \"City vs suburbs vs rural\" — same country, different \n  intensity of \"city life\" by location. People move between \n  zones (gene flow), but each zone keeps its character.\n\n──────────────────────────────────────────────\nCARD 13 — Batesian Mimicry",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "City vs suburbs vs rural\" — same country, different",
+      "hint": ""
+    },
+    {
+      "q": "What is Batesian mimicry?",
+      "a": "A PALATABLE (harmless) species evolves to LOOK LIKE an \nUNPALATABLE/dangerous (toxic) species.\n\nThe MIMIC is \"lying\" — it gets predator avoidance for free, \nwithout paying the cost of being toxic.\nThe MODEL is the honest signaler (truly dangerous).\n\nCLASSIC EXAMPLE:\n- Coral snake (TOXIC, model) ↔ king snake (HARMLESS, mimic) \n  — similar red-yellow-black banding\n- Hoverfly (HARMLESS, mimic) ↔ wasp (STINGS, model)\n- Viceroy butterfly mimics monarch (originally proposed as \n  Batesian; now considered Müllerian since both are unpalatable)\n\nKEY CONSTRAINT: Batesian mimicry only works when MIMICS ARE \nRARE. If mimics outnumber models, predators meet too many \nharmless individuals → learn the signal is unreliable → stop \navoiding the pattern → mimics lose protection.\n\nANALOGIES:\n- \"Counterfeit ID\" — works because most IDs are real. If most \n  IDs were fake, the bouncer would stop trusting any ID.\n- \"Wearing a fake police uniform\" — only works in a world of \n  mostly real cops. Too many fakes and the costume loses power.\n- \"Crying wolf\" — false signals erode trust in the warning.\n\n⚠ TRAP STATEMENT to reject: \"Batesian works better when \nmimics are common.\" FALSE — that destroys the system.\n\n──────────────────────────────────────────────\nCARD 14 — Müllerian Mimicry",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Counterfeit ID\" — works because most IDs are real. If most",
+      "hint": "Batesian mimicry only works when MIMICS ARE  RARE. If mimics outnumber models, predators meet too many  harmless individuals → learn the signal is unreliable → stop"
+    },
+    {
+      "q": "What is Müllerian mimicry?",
+      "a": "TWO OR MORE UNPALATABLE/dangerous species converge on the \nSAME warning pattern. ALL species are honest signalers. ALL \nbenefit.\n\nMECHANISM: predators learn the warning faster when more \nindividuals share the signal — each species \"shares the \nteaching cost\" of training predators not to attack.\n\nCLASSIC EXAMPLE:\n- Heliconius butterflies (multiple toxic species share the \n  same red-and-black warning patterns within a region)\n- Multiple stinging bee/wasp species converge on yellow-and-\n  black banding\n\nKEY: works BETTER when COMMON (more individuals = more \npredator encounters = faster learning, less mortality per \nspecies).\n\nPROPOSED BY: Fritz Müller (after Bates).\n\nANALOGIES:\n- \"Group brand\" — Visa, MasterCard, Amex all have similar \n  recognition processes. Customers know \"credit card = pay \n  with plastic.\" Each company benefits from the shared signal.\n- \"Warning sign committee\" — multiple actually-dangerous \n  factories all use the same yellow-triangle hazard sign. \n  Public learns one symbol; everyone benefits.\n- \"Cooperative defense\" — multiple armies wearing the same \n  uniform, all genuinely armed. Enemies learn the uniform = \n  trouble.\n\n──────────────────────────────────────────────\nCARD 15 — Batesian vs Müllerian (the Trap Comparison)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Group brand\" — Visa, MasterCard, Amex all have similar",
+      "hint": "works BETTER when COMMON (more individuals = more  predator encounters = faster learning, less mortality per  species)."
+    },
+    {
+      "q": "Side-by-side: Batesian vs Müllerian mimicry.",
+      "a": "BATESIAN              MÜLLERIAN\n─────────────────────────────────────────────────────────\nMimic palatable? YES (harmless)        NO (toxic)\nModel palatable? NO (toxic)            NO (toxic)\nHonest?          MIMIC LIES            BOTH HONEST\nWho benefits?    MIMIC only            BOTH species\nModel harmed?    YES (signal diluted)  NO (signal reinforced)\nRelationship     PARASITIC             MUTUALISTIC\nFrequency rule   Works when MIMIC      Works BETTER when\n                 is RARE               COMMON\nExample          King snake/coral      Heliconius butterflies\n                 snake                 / bee+wasp colors\n\nEXAM PHRASING:\n- \"Harmless species mimics harmful\" → Batesian\n- \"Two harmful species look alike\" → Müllerian\n\nANALOGY for the asymmetry:\n- Batesian = \"freeloader at the gym\" — pays no membership, \n  uses the equipment. Works only if there are few freeloaders.\n- Müllerian = \"co-op gym\" — everyone pays and shares the \n  facilities. More members = better facilities for all.\n\n⚠ NOTE: real systems can be hybrid (\"quasi-Batesian\" / \n\"imperfect Müllerian\"). A medium-toxic species can be \nMüllerian with a very-toxic partner AND simultaneously be a \nBatesian model for a totally harmless mimic.\n\n──────────────────────────────────────────────\nCARD 16 — Step-by-Step: How Batesian Mimicry Is Maintained",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Walk through the step-by-step mechanism that maintains Batesian mimicry.",
+      "a": "1. Predator eats unpalatable MODEL → learns to avoid its \n   warning coloration (associative learning)\n2. Harmless MIMIC shares the warning pattern (evolved via \n   natural selection)\n3. Predator avoids the mimic too → mimic survives → fitness \n   benefit drives further evolution toward the model's pattern\n4. IF mimics become too COMMON → predators frequently \n   encounter harmless individuals\n5. Warning signal becomes UNRELIABLE — predators learn the \n   pattern is mostly safe\n6. Predators stop avoiding the pattern → mimics LOSE \n   protection → system breaks down\n\nThis is FREQUENCY-DEPENDENT — mimic fitness decreases as \nmimic frequency increases (so the system self-regulates at \nLOW mimic frequencies).\n\n──────────────────────────────────────────────\nCARD 17 — Three Components of Mimicry (Required)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "What three components must exist for ANY mimicry system to work?",
+      "a": "1. MODEL — the honest signaler with a real defense (toxic, \n   stinging, dangerous)\n2. MIMIC — the imitator (palatable in Batesian, also toxic \n   in Müllerian)\n3. RECEIVER — a predator (or other party) capable of LEARNING \n   the association between signal and consequence\n\nWithout ANY one of the three, the system collapses. No \nlearner = no avoidance. No model = no signal worth copying. \nNo mimic = no copying happening.\n\nANALOGY:\n- \"Counterfeit currency requires three things\" — real bills \n  in circulation, fake bills made to match, and a trader who \n  notices the difference but can be fooled. Remove any one \n  and counterfeiting can't work.\n\n──────────────────────────────────────────────\nCARD 18 — Endosymbiotic Theory (Lynn Margulis)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Counterfeit currency requires three things\" — real bills",
+      "hint": ""
+    },
+    {
+      "q": "What is the endosymbiotic theory and who proposed it?",
+      "a": "PROPOSED BY: Lynn Margulis (née Sagan), 1967 paper \"On the \nOrigin of Mitosing Cells.\" Initially REJECTED by ~15 journals \nbefore publication; widely doubted by the scientific \ncommunity for years.\n\nTHEORY: mitochondria and chloroplasts originated as FREE-\nLIVING BACTERIA that were ENGULFED by ancestral eukaryotic \ncells, ~1.5–2 billion years ago. Instead of being digested, \nthe engulfed bacteria became permanent intracellular \nmutualists — eventually becoming organelles.\n\nOUTCOMES:\n- MITOCHONDRIA descended from alpha-proteobacteria (closest \n  living relatives: Pelagibacteraceae / SAR11 clade — \n  abundant in ocean surface waters)\n- CHLOROPLASTS descended from cyanobacteria\n- Two SEPARATE engulfment events (different bacterial lineages)\n- Over time, most genes transferred to the host nucleus \n  (endosymbiotic gene transfer); modern human mitochondria \n  encode only ~13 proteins\n\nNOW: universally accepted — paradigm-shifting biology.\n\nANALOGIES:\n- \"Adopted roommate that became family\" — bacteria moved into \n  the cell, never moved out, eventually became a built-in \n  organ.\n- \"Acquisition / merger\" — the host cell \"acquired\" a small \n  bacterium and absorbed its operations into the bigger company.\n- \"Trojan horse that decided to stay\" — got inside expecting \n  to be a guest (or prey), ended up integrated permanently.\n\n──────────────────────────────────────────────\nCARD 19 — Four Lines of Evidence for Endosymbiosis",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Adopted roommate that became family\" — bacteria moved into",
+      "hint": ""
+    },
+    {
+      "q": "What evidence supports the endosymbiotic origin of mitochondria?",
+      "a": "1. CIRCULAR DNA — mitochondria have their own DNA in a single \n   circular chromosome (like bacteria, NOT linear like nuclear \n   chromosomes)\n2. DOUBLE MEMBRANES — outer membrane = host's engulfing \n   vesicle; inner membrane = original bacterial membrane\n3. 70S RIBOSOMES — bacterial-type ribosomes (NOT 80S \n   eukaryotic). These are inhibited by bacterial antibiotics \n   (chloramphenicol, tetracycline) the same way bacterial \n   ribosomes are\n4. BINARY FISSION — mitochondria divide by binary fission like \n   bacteria, NOT by mitosis\n\nPLUS: phylogenetic analysis places mitochondrial DNA WITHIN \nalpha-proteobacteria and chloroplast DNA WITHIN cyanobacteria.\n\nMNEMONIC: \"DDR-B\" → DNA (circular), Double-membrane, Ribosomes \n(70S), Binary fission.\n\nANALOGY:\n- \"Smoking gun in archaeology\" — circular DNA and 70S \n  ribosomes are forensic evidence the organelle \"used to be\" \n  bacterial. Like finding a passport in someone's drawer \n  proving they were once a different citizen.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Mitochondria have a nucleus containing most of their genetic \n  material\" → FALSE (mito have NO nucleus; they have circular \n  DNA in the matrix)\n- \"Mitochondrial proteins are entirely synthesized on 80S \n  ribosomes\" → FALSE (they have 70S of their own)\n- \"Mitochondria have a single membrane\" → FALSE (DOUBLE)\n\n──────────────────────────────────────────────\nCARD 20 — Mitochondria vs Chloroplasts (Two Separate Events)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Smoking gun in archaeology\" — circular DNA and 70S",
+      "hint": "\"DDR-B\" → DNA (circular), Double-membrane, Ribosomes  (70S), Binary fission."
+    },
+    {
+      "q": "Are mitochondria and chloroplasts from the same endosymbiotic event?",
+      "a": "NO — TWO SEPARATE engulfment events.\n\nMITOCHONDRIA: originated from alpha-proteobacteria \n(specifically the SAR11 / Pelagibacteraceae lineage)\n\nCHLOROPLASTS: originated from CYANOBACTERIA (photosynthetic \nbacteria)\n\nEVIDENCE THEY'RE SEPARATE: phylogenetic analysis of organelle \nDNA places mitochondria within alpha-proteobacteria and \nchloroplasts within cyanobacteria — two completely different \nbacterial lineages. If a single event, both would cluster \nwith one bacterial ancestor.\n\nEUGLENA: result of a SECONDARY endosymbiosis — a eukaryote \nengulfed ANOTHER eukaryote that already contained chloroplasts.\n\nANALOGY:\n- \"Two adoptions, different orphanages\" — the cell adopted \n  one kid (alpha-proteobacterium → mitochondrion) early, \n  then later adopted a second from a different orphanage \n  (cyanobacterium → chloroplast).\n\n──────────────────────────────────────────────\nCARD 21 — Aster Leafhopper Endosymbionts (Bonus Example)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Two adoptions, different orphanages\" — the cell adopted",
+      "hint": ""
+    },
+    {
+      "q": "What's the aster leafhopper endosymbiosis example, and why does it matter?",
+      "a": "Aster leafhoppers harbor TWO obligate bacterial endosymbionts \ninside specialized cells called BACTERIOMES:\n- Nasuia deltocephalinicola — one of the SMALLEST known \n  bacterial genomes (~112 kb)\n- Sulcia muelleri\n\nCO-EVOLUTION TIME: ~260–280 million years of host-symbiont \ncoevolution — phylogenies of the host and the symbionts are \nCONGRUENT (matching tree shapes confirm they've been together \nthat long).\n\nWHY IT MATTERS:\n- Leafhoppers eat plant sap, which lacks essential amino acids\n- The two endosymbionts complement each other — each makes \n  some amino acids the other can't, together they provide \n  what the host needs\n- Neither leafhopper nor symbionts can survive alone\n\nANALOGY:\n- \"Three-way startup\" — the host (leafhopper) provides shelter \n  and resources; one bacterium provides one set of nutrients, \n  the other provides the rest. None of them can run the \n  business alone — the merger IS the company.\n\nKEY POINT: shows endosymbiosis is not just an ancient event \n— it's an ongoing process. Many insects depend on internal \nbacteria to survive on nutrient-poor diets.\n\n──────────────────────────────────────────────\nCARD 22 — Margulis Was Initially Rejected (HISTORY POINT)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Three-way startup\" — the host (leafhopper) provides shelter",
+      "hint": "- Leafhoppers eat plant sap, which lacks essential amino acids - The two endosymbionts complement each other — each makes    some amino acids the other can't, together they provide"
+    },
+    {
+      "q": "Why was Margulis's endosymbiotic theory initially rejected, and what does that teach us about science?",
+      "a": "REJECTED 15 times before publication in 1967. Mainstream \nbiology was committed to the idea that organelles evolved \ninternally from cellular invaginations (the \"autogenous\" \nhypothesis).\n\nWHY ACCEPTED EVENTUALLY:\n- Independent molecular evidence — sequencing showed mito DNA \n  clusters with alpha-proteobacterial DNA, not host nuclear DNA\n- 70S ribosomes structurally distinct from 80S\n- Double membranes confirmed by electron microscopy\n\nTHE POINT: revolutionary ideas require strong INDEPENDENT \nevidence to overcome existing consensus. The rejection-then-\nacceptance cycle is the NORMAL scientific process for \nparadigm-shifting claims.\n\n⚠ ROBBINS HOOK: don't pick \"rejected because she was a woman\" \nor \"rejected because endosymbiosis is unobservable\" — the \ncorrect framing is normal scientific skepticism eventually \novercome by hard evidence.\n\nANALOGY:\n- \"Plate tectonics\" — Wegener's continental drift was mocked \n  for decades until seafloor spreading evidence forced its \n  acceptance. Same pattern.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch15coevo",
+      "source": "final_review",
+      "analogy": "Plate tectonics\" — Wegener's continental drift was mocked",
+      "hint": "- Independent molecular evidence — sequencing showed mito DNA    clusters with alpha-proteobacterial DNA, not host nuclear DNA - 70S ribosomes structurally distinct from 80S"
+    },
+    {
+      "q": "What is an ESS?",
+      "a": "Evolutionarily Stable Strategy (Maynard Smith & Price, 1973). A strategy that, ONCE COMMON in the population, CANNOT BE INVADED by any rare mutant strategy. ESS is a GAME THEORY concept — payoffs are FREQUENCY-DEPENDENT (depend on what others are doing).\nKEY: ESS ≠ optimal. ESS = invasion-resistant.\nANALOGIES:\n- Driving on the right side of the road in the U.S. — not \"objectively best,\" but once everyone does it, a rare mutant who drives on the left gets crushed. Stable because invasion fails.\n- Defaulting to English at international airports — not the prettiest language, but switching alone gets you nowhere.\n- Standardized phone chargers — once USB-C is everywhere, a mutant with a weird port can't gain traction.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "Driving on the right side of the road in the U.S. — not \"objectively best,\" but once everyone does it, a rare mutant who drives on the left gets crushed. Stable because invasion fails.",
+      "hint": "ESS ≠ optimal. ESS = invasion-resistant. ANALOGIES: - Driving on the right side of the road in the U.S. — not \"objectively best,\" but once everyone does it, a rare mutant who drives on the left gets crushed. Stable because invasion fails."
+    },
+    {
+      "q": "TRAP — ESS is NOT the strategy with highest absolute fitness.",
+      "a": "At a mixed ESS, ALL strategies present have EQUAL fitness (otherwise one would invade). The ESS resists invasion; it doesn't maximize anyone's payoff. Don't confuse \"stable\" with \"optimal.\"\nANALOGY: Salaries at a stable equilibrium across two job categories — they end up paying about the same expected income (if one paid more, everyone would switch). The equilibrium isn't the highest-paying job; it's where switching no longer helps.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Hawk-Dove game — payoff matrix.",
+      "a": "Two strategies fighting over a resource of value V at potential injury cost C.\n- Hawk vs. Hawk: ½(V − C) — both escalate, half the time you win\n- Hawk vs. Dove: V — Hawk takes everything\n- Dove vs. Hawk: 0 — Dove retreats, gets nothing\n- Dove vs. Dove: ½V — share peacefully\nANALOGY: Two people fighting over a $20 bill. If they brawl (Hawk-Hawk), they both end up with bruises and split the money. Hawk vs. Dove = the aggressive one walks off with $20. Two Doves split the $20 nicely.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "When is \"Pure Hawk\" the ESS vs. when is \"Mixed\" the ESS?",
+      "a": "- IF V > C (resource worth more than injury): PURE HAWK ESS. Aggression always pays.\n- IF V < C (injury cost > resource): MIXED ESS. Neither pure strategy is stable. Equilibrium frequency of Hawks = V/C.\nAt the V/C frequency, Hawks and Doves have equal fitness.\nANALOGIES:\n- Cheap product vs. expensive lawsuit cost. If product (V) > lawsuit cost (C), sue everyone. If lawsuit cost > product value, only sue sometimes.\n- Bidding war over a $5 item with $50 in lost time → don't always bid. But over a $500 item with $5 in transaction time → always bid.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "Cheap product vs. expensive lawsuit cost. If product (V) > lawsuit cost (C), sue everyone. If lawsuit cost > product value, only sue sometimes.",
+      "hint": ""
+    },
+    {
+      "q": "Step-by-step derivation: ESS frequency in Hawk-Dove (when V < C).",
+      "a": "1. Hawk vs. Hawk = (V−C)/2\n2. Hawk vs. Dove = V\n3. Dove vs. Hawk = 0\n4. Dove vs. Dove = V/2\n5. At ESS frequency p* of Hawks, fitness(Hawk) = fitness(Dove):\n   p*(V−C)/2 + (1−p*)V = p*(0) + (1−p*)V/2\n6. Solve: p* = V/C\nANALOGY: Equilibrium price in a market — set price where supply meets demand. Set Hawk frequency where Hawk payoff = Dove payoff.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Side-blotched lizard (Uta stansburiana) — what's the system?",
+      "a": "3 male throat color morphs, each a different reproductive strategy:\n- ORANGE = ultra-dominant, big territory, many females\n- BLUE = mate-guarder, monogamous, defends one female\n- YELLOW = sneaker, female-mimic, sneaks into territories to mate\nThe relationships:\n- Orange BEATS Blue (out-competes territorially)\n- Blue BEATS Yellow (recognizes and blocks sneakers)\n- Yellow BEATS Orange (sneaks into Orange's giant territory undetected)\n= ROCK-PAPER-SCISSORS.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "What kind of ESS is the side-blotched lizard system?",
+      "a": "A CYCLIC ESS. Morph frequencies OSCILLATE over generations rather than reaching a fixed equilibrium. When Orange is common, Yellow exploits → Yellow rises → Blue exploits → Blue rises → Orange exploits → Orange rises → cycle repeats. Population frequencies cycle on multi-year timescales.\nANALOGIES:\n- Rock-paper-scissors at a global scale. Whichever option is most popular gets countered.\n- Tech platform cycles: when one social network gets too big, users hop to a new one; that one gets co-opted, users move on.\n- Fashion cycles: skinny jeans dominate → look bad in photos → baggy returns → too sloppy → skinny returns.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "Rock-paper-scissors at a global scale. Whichever option is most popular gets countered.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Cyclic ESS vs. Mixed-Strategy ESS.",
+      "a": "- HAWK-DOVE = mixed-strategy ESS. Stable proportions held SIMULTANEOUSLY at fixed frequency V/C.\n- SIDE-BLOTCHED LIZARDS = cyclic ESS. Frequencies OSCILLATE through time; no constant equilibrium proportion.\nBoth are technically ESSs, but in different forms. Question asks \"which predicts cycling?\" → Rock-Paper-Scissors / side-blotched lizards.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Step-by-step lizard cycle direction.",
+      "a": "Memorize this exact direction:\n1. ORANGE common → controls big territories → can't watch all of them.\n2. YELLOW (sneaker) infiltrates Orange territories undetected → Yellow rises.\n3. YELLOW common → BLUE mate-guarders detect/block sneakers → Blue rises.\n4. BLUE common → guards individually → ORANGE's aggressive territoriality crushes Blue → Orange rises.\n5. Back to step 1.\nMNEMONIC: Orange → Yellow → Blue → Orange (alphabetical-ish: think \"OYB cycle\"; or \"Orange's empire crumbles to Yellow's tricks; Yellow's tricks fail to Blue's vigilance; Blue's monogamy yields to Orange's empire\").",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Orange → Yellow → Blue → Orange (alphabetical-ish: think \"OYB cycle\"; or \"Orange's empire crumbles to Yellow's tricks; Yellow's tricks fail to Blue's vigilance; Blue's monogamy yields to Orange's empire\")."
+    },
+    {
+      "q": "What is BIOLOGICAL altruism?",
+      "a": "Behavior that REDUCES the actor's direct fitness AND INCREASES the recipient's direct fitness. Note the \"fitness\" angle — this is genetic/reproductive, not psychological. Paradoxical under naive individual selection (\"why help anyone?\"). Resolved by KIN SELECTION.\nANALOGY: Donating to a charity at personal cost. The \"biological\" version is when the charity is your sibling's reproduction.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Hamilton's Rule.",
+      "a": "rB > C\n- r = COEFFICIENT OF RELATEDNESS (probability that a random allele is shared by descent)\n- B = BENEFIT to recipient (in offspring or fitness units)\n- C = COST to actor\nIf rB > C, altruism is favored by kin selection.\nANALOGY: \"I give up X dollars (C). My relative gains Y dollars (B). I'm only x% related to them — only x% of their gain counts as 'mine' genetically (rB). If my discounted gain > my cost, do it.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Only B is discounted by r. NOT C.",
+      "a": "You discount the BENEFIT by relatedness because only that fraction of the benefit goes to copies of YOUR alleles. The COST is paid in FULL by you — your own offspring loss is 100% your loss. Discounting C by r is a common mistake that makes altruism look easier to evolve than it is.\nANALOGY: You're loaning your savings to a cousin. You lose 100% of what you give (full C). You \"gain\" only the fraction of that money that benefits people who share your alleles (rB). Don't double-count.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Coefficients of relatedness (r) — diploid organisms.",
+      "a": "- Identical twin (or self): r = 1.0\n- Parent ↔ offspring: r = 0.5\n- Full sibling: r = 0.5\n- Half-sibling: r = 0.25\n- Aunt/uncle ↔ niece/nephew: r = 0.25\n- Grandparent ↔ grandchild: r = 0.25\n- First cousin: r = 0.125\n- Second cousin: r = 0.03125\nMNEMONIC: Each \"step\" away on the pedigree halves r.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Each \"step\" away on the pedigree halves r."
+    },
+    {
+      "q": "HAPLODIPLOIDY — the special case (Hymenoptera: bees, wasps, ants).",
+      "a": "Females develop from FERTILIZED eggs (DIPLOID). Males develop from UNFERTILIZED eggs (HAPLOID). The father has only ONE genome to pass on, and ALL his sperm are GENETICALLY IDENTICAL.\nRESULT: Full sisters share 100% of dad's genes + 50% of mom's genes = r = 0.75.\nThis is HIGHER than r to your own offspring (0.5) → workers may gain MORE inclusive fitness raising sisters than reproducing.\nANALOGY: Dad has a single suit and only one copy of it. Every daughter gets that exact suit. Sisters share dad's suit perfectly + share half of mom's wardrobe → 75% wardrobe overlap.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Worker-to-Queen's-SONS relatedness.",
+      "a": "r = 0.25 (NOT 0.75). Sons (queen's haploid male offspring) come from UNFERTILIZED eggs — they have only the queen's genes, not dad's. Workers share with brothers ONLY through mom: r(worker → mom) × r(mom → son) = 0.5 × 0.5 = 0.25.\nKEY ASYMMETRY: Workers are 0.75 to sisters, 0.25 to brothers. This is why workers prefer raising sisters when they can manipulate sex ratios — and why colonies often skew female.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Workers are 0.75 to sisters, 0.25 to brothers. This is why workers prefer raising sisters when they can manipulate sex ratios — and why colonies often skew female."
+    },
+    {
+      "q": "Worker-bee relatedness map (memorize cold).",
+      "a": "- Worker → full sister (worker): r = 0.75\n- Worker → brother (drone): r = 0.25\n- Worker → mother (queen): r = 0.5\n- Worker → own daughter (if she laid): r = 0.5\n- Worker → own son: r = 0.5\nNOTE: Helping raise sisters (r=0.75) gives MORE inclusive fitness per offspring than raising her own (r=0.5). This is a partial explanation for eusociality, though not the full story.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "Helping raise sisters (r=0.75) gives MORE inclusive fitness per offspring than raising her own (r=0.5). This is a partial explanation for eusociality, though not the full story."
+    },
+    {
+      "q": "Haldane's famous quip on Hamilton's Rule.",
+      "a": "\"I would lay down my life for 2 brothers or 8 cousins.\"\n- 2 brothers × r(0.5) = 1.0 → equals saving yourself (r=1).\n- 8 cousins × r(0.125) = 1.0 → also break-even.\nMemorable shorthand: 2 sibs OR 4 nephews/nieces OR 8 cousins = 1 self.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Worked example — does altruism evolve here?",
+      "a": "Cost to actor = 3 offspring. Benefit to FULL SIBLING (r=0.5) = 10 offspring.\nHamilton's Rule: rB > C?\n0.5 × 10 = 5 > 3 ✓\nYES, altruism is favored. Don't add discount to C.\nANALOGY: I sacrifice 3 of my kids' worth of fitness; my sibling gains 10 kids' worth. Half of those (5) carry my alleles indirectly. Net: +5 to my genes, −3 to my genes = +2 net. Evolution: yes.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why haplodiploidy ALONE doesn't explain eusociality.",
+      "a": "r = 0.75 to sisters helps, but isn't sufficient. Many haplodiploid species are NOT eusocial (most bees and wasps are solitary). Many EUSOCIAL species are NOT haplodiploid (termites, naked mole-rats — both diploid). So eusociality requires kin selection + ecological constraints (limited nesting sites, parental care opportunities, etc.).\nKEY: r = 0.75 is a FAVORABLE condition, not a sufficient cause.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "r = 0.75 is a FAVORABLE condition, not a sufficient cause."
+    },
+    {
+      "q": "What is GROUP SELECTION (the original hypothesis)?",
+      "a": "The idea that selection acts on whole GROUPS, favoring groups with more cooperators that out-reproduce or out-survive groups with selfish individuals. Wynne-Edwards (1962) proposed that animals voluntarily limit reproduction \"for the good of the group\" to prevent overpopulation.\nANALOGY: A team where everyone takes a pay cut so the company stays afloat. Sounds nice — but if one person quietly doesn't take the cut, they earn more than everyone else.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Why does group selection FAIL (Wynne-Edwards' critique)?",
+      "a": "Step-by-step:\n1. Suppose all individuals voluntarily restrain reproduction for the group.\n2. A mutation arises: one individual reproduces at full capacity (defector).\n3. The defector leaves MORE offspring than restrained group-mates.\n4. The \"selfish\" allele spreads WITHIN the group each generation.\n5. Even if cooperative groups outcompete selfish groups, within-group selection for selfishness is FASTER than between-group selection for cooperation.\n6. The cooperative group gets eaten from inside.\nANALOGY: A pacifist nation surrounded by peace-lovers. One warlord arises, no one fights back, warlord takes over. Pacifism doesn't survive its own success.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "Multi-level selection framework.",
+      "a": "Total selection = WITHIN-group selection + BETWEEN-group selection.\n- WITHIN-group selection: usually favors SELFISH individuals (defectors beat cooperators inside a group).\n- BETWEEN-group selection: cooperative groups outcompete selfish groups.\nNET RESULT: Within-group selection usually OVERWHELMS between-group selection → group selection is generally WEAK.\nANALOGY: Two competing sports leagues. Within each team, the most selfish ball-hog scores more individually. Across leagues, the cooperative team beats the ball-hog team. But if ball-hogging spreads inside every team faster than the league competition matters, ball-hogging dominates everywhere.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Kin Selection ≠ Group Selection.",
+      "a": "- KIN SELECTION: works through INDIVIDUAL inclusive fitness. Actor's alleles propagate when relatives reproduce. Doesn't need a group at all — works with one helper, one recipient.\n- GROUP SELECTION: requires that whole GROUPS differ in productivity, with cooperative groups out-reproducing selfish groups.\nKIN SELECTION IS WELL-SUPPORTED. Group selection is generally weak EXCEPT in special cases (e.g., when groups are composed of close kin — but then it collapses back to kin selection).\nANALOGY: Kin selection is like sending money to your own family. Group selection is like donating to a competing nation that beats yours overall. Very different mechanisms.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": ""
+    },
+    {
+      "q": "When CAN group selection work (the special cases)?",
+      "a": "Group selection has bite when:\n1. Groups are STRONGLY ISOLATED (low between-group migration).\n2. Groups are composed of CLOSE KIN (which makes it functionally kin selection anyway).\n3. Within-group selection is WEAKENED by enforcement (punishment of defectors, policing).\n4. Groups TURN OVER FREQUENTLY relative to within-group selection time scales.\nKEY: When all 4 conditions hold, between-group selection can outpace within-group selection.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch16social",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "When all 4 conditions hold, between-group selection can outpace within-group selection."
+    },
+    {
+      "q": "Why are humans classified as primates, and who first made the case?",
+      "a": "LINNAEUS (1758) placed humans in Order PRIMATES based on \nshared ANATOMICAL features:\n- Forward-facing eyes (binocular vision, depth perception)\n- Gripping hands with NAILS (not claws)\n- Large relative brain size\n- Opposable thumbs\n\nDARWIN (1871, \"The Descent of Man\") explained WHY: COMMON \nANCESTRY with apes.\n\nMOLECULAR PHYLOGENETICS confirms: humans nest WITHIN Primates \n(specifically within great apes / Hominidae).\n\nMOST RECENT COMMON ANCESTOR of all primates: ~66–69 mya \n(right around the K-T extinction boundary that wiped out \nnon-avian dinosaurs).\n\nHIERARCHY: Hominoidea (apes) → Hominidae (great apes: humans, \nchimps, gorillas, orangutans) → Homininae → Hominini (humans \n+ chimps lineage) → Hominina (humans + extinct relatives) → \nGenus Homo → H. sapiens\n\nANALOGY:\n- \"Family tree zoom\" — start at \"primates\" (Linnaeus's bucket), \n  zoom into \"great apes,\" zoom into \"African apes,\" zoom into \n  \"human lineage.\" Each level removes more cousins until only \n  us is left.\n\n──────────────────────────────────────────────\nCARD 02 — \"We Evolved FROM Chimps\" (THE BIG TRAP)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Family tree zoom\" — start at \"primates\" (Linnaeus's bucket),",
+      "hint": ""
+    },
+    {
+      "q": "Did humans evolve from chimpanzees?",
+      "a": "NO. This is one of THE most common misconceptions and Robbins \nwill absolutely test it.\n\nCORRECT: humans and chimps share a COMMON ANCESTOR ~7 mya. \nWe are SISTER LINEAGES — neither is the ancestor of the other.\n\nBoth species have been evolving since the split. The common \nancestor was neither a chimp nor a human; it was something \nelse entirely (probably more ape-like generally, but not a \nmodern chimp).\n\nANALOGIES:\n- \"Cousins, not parents\" — you and your cousin share a \n  grandparent. You didn't come from your cousin. Same with \n  humans and chimps.\n- \"Two branches off the same trunk\" — both branches grew \n  from the same point but neither is the trunk.\n\nCORRECT STATEMENT: \"Humans and chimps DIVERGED FROM A COMMON \nANCESTOR ~7 mya.\"\nINCORRECT: \"Humans evolved from chimps.\"\n\n⚠ TRAP: Robbins may phrase it as \"humans descended from \nmodern chimps\" or \"chimps are the ancestor of humans\" — \nboth wrong.\n\n──────────────────────────────────────────────\nCARD 03 — Human Chromosome 2 Fusion (Molecular Smoking Gun)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Cousins, not parents\" — you and your cousin share a",
+      "hint": "Robbins may phrase it as \"humans descended from  modern chimps\" or \"chimps are the ancestor of humans\" —  both wrong."
+    },
+    {
+      "q": "Why does human chromosome 2 prove common ancestry with chimpanzees?",
+      "a": "Humans have 23 chromosome pairs (46 total). Chimps, gorillas, \nand orangutans have 24 pairs (48 total).\n\nHUMAN CHROMOSOME 2 = FUSION of the two ancestral chromosomes \nthat chimps still carry as separate \"2A\" and \"2B.\"\n\nEVIDENCE OF FUSION:\n1. TELOMERIC SEQUENCES (TTAGGG repeats) found IN THE MIDDLE \n   of human chromosome 2 — telomeres should ONLY be at \n   chromosome ENDS. Telomeres-in-middle is a fossil signature \n   of an ancient end-to-end fusion.\n2. A VESTIGIAL CENTROMERE — humans have one functional \n   centromere on chr 2, but a remnant of a second centromere \n   is still detectable (left over from the smaller of the \n   fused chromosomes)\n3. Banding patterns of human chr 2 match the combined banding \n   of chimp 2A + 2B end-to-end\n\nThis is one of the most concrete molecular proofs of common \nancestry between humans and other apes.\n\nANALOGIES:\n- \"Glued together pages\" — find the staple holes in the \n  middle of a \"single\" page = proof it's two pages stuck \n  together.\n- \"Frankenstein's chromosome\" — you can still see the seam.\n\n⚠ TRAP — wrong answer choices:\n- \"Horizontal gene transfer from microbes\" — FALSE\n- \"Whole chromosome duplication in chimps\" — FALSE (it's a \n  human-lineage fusion, not chimp duplication)\n- \"Reciprocal translocation between chr 2 and 13\" — FALSE\n\n──────────────────────────────────────────────\nCARD 04 — DNA Similarity & Vestigial Tail",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Glued together pages\" — find the staple holes in the",
+      "hint": "- \"Horizontal gene transfer from microbes\" — FALSE - \"Whole chromosome duplication in chimps\" — FALSE (it's a    human-lineage fusion, not chimp duplication)"
+    },
+    {
+      "q": "How similar is human DNA to chimp DNA, and what's our \"vestigial tail\"?",
+      "a": "~98.5% DNA SIMILARITY between humans and chimpanzees.\n\nVESTIGIAL TAIL = COCCYX (tailbone) — homologous to primate \ntails. Embryologically, human embryos briefly develop a tail \nbefore reabsorbing it; the coccyx is the fused remnant \nvertebrae.\n\nOther vestigial structures in humans:\n- Appendix (vestige of cecum for digesting plant material)\n- Wisdom teeth (jaw shrunk; teeth still there)\n- Goosebumps (vestigial fur-fluffing reflex)\n- Plica semilunaris (vestige of nictitating membrane / \n  third eyelid)\n\nANALOGY:\n- \"Bricked-up doorway\" — vestigial structures are evolutionary \n  doorways that no longer open. The shape is still there, \n  but the function is gone.\n\n──────────────────────────────────────────────\nCARD 05 — Hominin Timeline (THE BIG MEMORIZATION)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Bricked-up doorway\" — vestigial structures are evolutionary",
+      "hint": ""
+    },
+    {
+      "q": "List the major hominin species in order with brain size and key feature.",
+      "a": "MNEMONIC: \"SADLY AUSTRALIANS HAVE EATEN NEANDERTHAL SNACKS\"\n= Sahelanthropus → Ardipithecus → Australopithecus → Habilis \n→ Erectus → Neanderthal → Sapiens\n\nSPECIES               TIME (mya)   BRAIN     KEY FEATURE\n─────────────────────────────────────────────────────────────────\nSahelanthropus        ~7 (Chad)    320–380cc EARLIEST hominin; \ntchadensis (\"Toumaï\")                        small canines; \n                                             upright posture \n                                             (foramen magnum \n                                             position)\nArdipithecus          4.4–5.8      ~300cc    Facultative \n(\"Ardi\")                                     biped; FOREST \n                                             habitat (not \n                                             savannah!); \n                                             reduced canines\nAustralopithecus      4–1.2        ~450cc    OBLIGATE biped \n(\"Lucy\" = Au.                      (ape-     ; Lucy (3.2 mya); \nafarensis, 3.2 mya)                sized)    Laetoli prints \n                                             (3.5 mya)\nHomo habilis          2.1–1.5      ~700cc    FIRST Homo; \n                                             Oldowan stone \n                                             tools (~2.6 mya)\nHomo erectus          1.9–0.07     900–1100cc FIRST hominin \n                                             OUT OF AFRICA; \n                                             Acheulean hand \n                                             axes; first \n                                             regular fire use; \n                                             Java + China\nHomo                  0.4–0.04     ~1500cc   Europe/W. Asia; \nneanderthalensis                   (≥sapiens) buried dead; \n                                             Mousterian tools; \n                                             interbred with \n                                             sapiens; extinct \n                                             ~40 kya\nHomo sapiens          0.3–now      ~1350cc   E. Africa origin \n                                             (~300–315 kya, \n                                             Jebel Irhoud); \n                                             behaviorally \n                                             modern ~70–100 \n                                             kya; spread \n                                             globally\n\nKEY TRENDS:\n- Brain size INCREASED over time (~320cc → ~1500cc)\n- Tool complexity INCREASED\n- Geographic range EXPANDED\n\n──────────────────────────────────────────────\nCARD 06 — Sahelanthropus tchadensis (\"Toumaï\")",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "",
+      "hint": "\"SADLY AUSTRALIANS HAVE EATEN NEANDERTHAL SNACKS\" = Sahelanthropus → Ardipithecus → Australopithecus → Habilis  → Erectus → Neanderthal → Sapiens"
+    },
+    {
+      "q": "Why is Sahelanthropus important?",
+      "a": "EARLIEST POTENTIAL HOMININ: ~7 mya, found in CHAD (Africa).\nNicknamed \"Toumaï\" (\"hope of life\" in local Chadian language).\n\nKEY FEATURES:\n- Brain ~320–380cc (chimp-sized)\n- Small canines (more human-like, less ape-like)\n- FORAMEN MAGNUM positioned more centrally — suggests UPRIGHT \n  POSTURE (and thus possibly bipedal walking)\n\nWHY MATTERS: pushes the human-chimp divergence date back to \n~7 mya. Right around the time molecular clock predicts the \nsplit.\n\n⚠ Some controversy: only known from a skull (no postcranial \nfossils), so its bipedality is inferred but not proven from \nhip/leg bones.\n\nANALOGY:\n- \"First page of the human story\" — the oldest known fossil \n  showing hints of the human direction (small canines + \n  upright skull).\n\n──────────────────────────────────────────────\nCARD 07 — Ardipithecus (\"Ardi\")",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "First page of the human story\" — the oldest known fossil",
+      "hint": "- Brain ~320–380cc (chimp-sized) - Small canines (more human-like, less ape-like) - FORAMEN MAGNUM positioned more centrally — suggests UPRIGHT"
+    },
+    {
+      "q": "What was Ardipithecus and what does it tell us?",
+      "a": "Ardipithecus ramidus, ~4.4 mya, ETHIOPIA. \"Ardi\" — 4.4 myr \nold partial skeleton.\n\nKEY FEATURES:\n- Brain ~300–350cc (chimp-sized)\n- FACULTATIVE biped (could walk upright sometimes, but also \n  climbed)\n- Grasping big toe (still arboreal — climbing trees)\n- Long arms\n- Small canines (less aggressive than chimps?)\n- Lived in FOREST habitat — NOT SAVANNAH\n\n⚠ KILLED THE \"SAVANNAH HYPOTHESIS\" — earlier theories said \nbipedalism evolved in open savannah grasslands. Ardi lived \nin a FOREST. Bipedalism evolved BEFORE savannah dispersal.\n\nKEY POINT: \"Common ancestor with chimps was NOT chimp-like.\" \nArdi shows the common ancestor wasn't a knuckle-walker — \nchimps and humans both diverged from something different.\n\nANALOGY:\n- \"Forest-dwelling first walker\" — Ardi was already standing \n  up while still in the trees. Bipedalism started in forests, \n  not on the plains.\n\n──────────────────────────────────────────────\nCARD 08 — Australopithecus & Lucy",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Forest-dwelling first walker\" — Ardi was already standing",
+      "hint": "- Brain ~300–350cc (chimp-sized) - FACULTATIVE biped (could walk upright sometimes, but also    climbed)"
+    },
+    {
+      "q": "Who was Lucy and why is she important?",
+      "a": "Lucy = Australopithecus afarensis, ~3.2 mya, ETHIOPIA. \nDiscovered 1974. ~40% of skeleton intact (exceptional \npreservation for hominin fossils).\n\nKEY FEATURES:\n- Brain ~430–450cc (slightly larger than chimp)\n- OBLIGATE BIPED — pelvis (short, wide ilium) and angled \n  femur (VALGUS knee — femur angles inward to knee) confirm \n  habitual upright walking\n- Body small (~1.1m tall, ~29kg)\n- Retained some climbing features (curved fingers, slightly \n  long arms)\n\nWHY SHE MATTERS:\n- PROVED BIPEDALISM EVOLVED BEFORE BRAIN EXPANSION\n- Killed the \"brains first\" hypothesis (which had assumed \n  large brains evolved first and tool use led to bipedalism)\n- Showed our ancestors were walking on two legs ~3 myr ago \n  with chimp-sized brains\n\nANALOGIES:\n- \"Walking before talking\" — Lucy was already upright with a \n  chimp brain. Smart came later.\n- \"The Founding Mother\" — Lucy is the textbook Australopithecus \n  ancestor most students remember.\n\n──────────────────────────────────────────────\nCARD 09 — Laetoli Footprints (3.5 mya)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Walking before talking\" — Lucy was already upright with a",
+      "hint": "- Brain ~430–450cc (slightly larger than chimp) - OBLIGATE BIPED — pelvis (short, wide ilium) and angled    femur (VALGUS knee — femur angles inward to knee) confirm"
+    },
+    {
+      "q": "What are the Laetoli footprints and why are they significant?",
+      "a": "LOCATION: Tanzania, East Africa\nAGE: ~3.5 mya\nPRESERVATION: trail of hominin footprints fossilized in \nvolcanic ash (rapid burial preserved them).\n\nKEY FEATURES of the prints:\n- Clear bipedal gait (heel strike + toe-off)\n- ARCHED foot (like modern humans)\n- NO divergent big toe (unlike apes — toe is forward-pointing)\n- Two individuals walking side by side (different sizes — \n  possibly adult and child)\n\nSIGNIFICANCE:\n- DIRECT BEHAVIORAL EVIDENCE of habitual bipedalism\n- Independent of skeletal anatomy — actual walking captured \n  in stone\n- Attributed to Australopithecus afarensis (Lucy's species)\n- 400,000 years OLDER than Lucy herself\n\nANALOGY:\n- \"Crime scene footprints from 3.5 myr ago\" — direct evidence \n  of behavior, not just bones. Like finding ancient sneakers.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Show knuckle-walking alongside bipedal tracks\" → FALSE \n  (purely bipedal)\n- \"Stone tools found alongside\" → FALSE (no tools at the site)\n- \"Preserved DNA\" → FALSE (no DNA)\n\n──────────────────────────────────────────────\nCARD 10 — Bipedalism Anatomical Markers (5 BIG ONES)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Crime scene footprints from 3.5 myr ago\" — direct evidence",
+      "hint": "- Clear bipedal gait (heel strike + toe-off) - ARCHED foot (like modern humans) - NO divergent big toe (unlike apes — toe is forward-pointing)"
+    },
+    {
+      "q": "What are the 5 anatomical features that diagnose bipedalism in fossil hominins?",
+      "a": "1. FORAMEN MAGNUM POSITION\n   - Humans/bipeds: BOTTOM CENTER of skull (head balances \n     vertically on spine)\n   - Apes/quadrupeds: REAR of skull (head juts forward)\n   This is the PRIMARY CLUE for fossil skulls (like \n   Sahelanthropus).\n\n2. PELVIS SHAPE\n   - Humans: WIDE, BOWL-SHAPED (short, wide ilium) — supports \n     internal organs upright; anchors gluteal muscles for \n     walking\n   - Apes: ELONGATED, narrow — for quadrupedal locomotion\n\n3. VALGUS FEMUR ANGLE\n   - Humans: femur ANGLES INWARD from hip to knee → knees + \n     feet positioned under center of gravity → enables \n     single-leg balance during walking\n   - Apes: femur is VERTICAL → can't balance well on one leg\n\n4. ARCHED FOOT + ALIGNED BIG TOE\n   - Humans: arch absorbs shock; big toe parallel to others \n     (forward-pointing) for push-off\n   - Apes: flat foot; big toe DIVERGES (grasping toe for \n     climbing, like a thumb on the foot)\n\n5. SPINAL CURVATURE\n   - Humans: S-shaped spine (lumbar curve) puts torso center \n     of mass over hips\n   - Apes: C-shaped spine for quadrupedal posture\n\nANALOGY:\n- \"Architectural retrofit\" — every bipedal feature is a \n  modification of an ancestral quadruped design. The whole \n  body had to be re-engineered to stand up.\n\n──────────────────────────────────────────────\nCARD 11 — Why Bipedalism Evolved (Hypotheses)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Architectural retrofit\" — every bipedal feature is a",
+      "hint": ""
+    },
+    {
+      "q": "Why did bipedalism evolve? List the leading hypotheses.",
+      "a": "1. THERMOREGULATION (\"savannah hypothesis\"): upright posture \n   reduces direct sun exposure on the body's surface area. \n   A vertical body dissipates heat better than a horizontal \n   one. Important for surviving open hot environments.\n   \n2. FREEING THE HANDS: forelimbs no longer needed for \n   locomotion → free to carry food, infants, tools.\n   \n3. ENERGY EFFICIENCY: walking on two legs uses LESS energy \n   per distance than knuckle-walking — important for long-\n   distance travel between food patches.\n   \n4. PROVISIONING (Owen Lovejoy): males who could carry food \n   to females became more attractive mates → sexual selection \n   reinforced bipedality.\n   \n5. SEEING OVER GRASS: stand up to spot predators or food in \n   open environments.\n\n⚠ Multiple causes likely contributed. Not one single driver.\n\n⚠ TRAP: don't say \"bipedalism evolved on the savannah\" alone \n— Ardipithecus shows bipedalism existed in FOREST first.\n\nANALOGY:\n- \"Solar panel angle\" — vertical body = less sun-receiving \n  area than horizontal body. Better thermoregulation.\n\n──────────────────────────────────────────────\nCARD 12 — Bipedalism Trade-Offs (Maladaptations)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Solar panel angle\" — vertical body = less sun-receiving",
+      "hint": "don't say \"bipedalism evolved on the savannah\" alone  — Ardipithecus shows bipedalism existed in FOREST first."
+    },
+    {
+      "q": "What are the costs of bipedalism in modern humans?",
+      "a": "Bipedalism is a RETROFIT, not a redesign. Real costs persist:\n\n1. LOWER BACK PAIN — ~80% of humans experience it. A \n   horizontal-spine quadruped design pressed into vertical \n   service. Stress on lumbar vertebrae.\n\n2. OBSTETRIC DILEMMA — narrow bipedal pelvis + large infant \n   head = very difficult childbirth. Why human babies are \n   born so neurologically immature (have to come out small).\n\n3. KNEE PROBLEMS — knees take all body weight while walking \n   on two legs.\n\n4. PLANTAR FASCIITIS, BUNIONS, FALLEN ARCHES — feet bear \n   load they weren't originally designed for.\n\n5. VARICOSE VEINS / HEMORRHOIDS — gravity pulls blood pooling \n   in lower body.\n\n6. HERNIAS — internal organs \"fall\" against abdominal wall \n   due to vertical orientation.\n\nThis shows EVOLUTIONARY CONSTRAINTS — selection works with \nexisting structures, can't redesign from scratch.\n\nANALOGY:\n- \"Renovating a 1-story horizontal house into a 2-story \n  vertical tower\" — you can do it, but the foundation, \n  plumbing, and weight-bearing walls weren't designed for \n  it. Always going to have cracks.\n\n⚠ KEY EXAM POINT: bipedalism is NOT optimal. It's good \nenough — locked in by ancestry. Same logic as the eye's \nblind spot.\n\n──────────────────────────────────────────────\nCARD 13 — BIPEDALISM FIRST, BIG BRAIN LATER",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Renovating a 1-story horizontal house into a 2-story",
+      "hint": ""
+    },
+    {
+      "q": "Did big brains drive bipedalism, or did bipedalism come first?",
+      "a": "BIPEDALISM CAME FIRST by ~2 MILLION YEARS.\n\nEVIDENCE:\n- Ardipithecus (~4.4 mya): walking with ~300cc brain (chimp-\n  sized)\n- Lucy (Au. afarensis, ~3.2 mya): obligate biped with ~430cc \n  brain\n- Laetoli prints (~3.5 mya): bipedal walking, chimp-sized \n  brain\n- Significant brain expansion didn't begin until Homo habilis \n  (~2.4 mya, ~600cc) and accelerated with H. erectus (~1.9 \n  mya, ~900cc)\n\nSo: walking upright for ~2–3 million years BEFORE big brain \nexpansion took off.\n\nThis refutes the old \"BRAINS FIRST\" hypothesis (that \nintelligence/tool-use drove bipedalism).\n\nLIKELY CAUSAL CHAIN: bipedalism → freed hands → tool use → \nselection for cognition → brain growth.\n\nANALOGY:\n- \"Legs first, brains second\" — the limbs reorganized before \n  the brain caught up. Walking opened the door; brains \n  walked through later.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Brain expansion drove bipedalism\" → FALSE\n- \"Tool use came before bipedalism\" → FALSE\n\n──────────────────────────────────────────────\nCARD 14 — Tool Traditions (MEMORIZE)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Legs first, brains second\" — the limbs reorganized before",
+      "hint": "- \"Brain expansion drove bipedalism\" → FALSE - \"Tool use came before bipedalism\" → FALSE"
+    },
+    {
+      "q": "Match each tool tradition to its date, hominin, and key features.",
+      "a": "TOOL TRADITION   DATE              HOMININ      FEATURES\n─────────────────────────────────────────────────────────────────\nOLDOWAN          ~2.6 mya          H. habilis   Simple flaked \n                                                 stones; \n                                                 chopping/\n                                                 cutting cores \n                                                 + flakes\nACHEULEAN        1.7 mya–200 kya   H. erectus   HAND AXES; \n                                                 BIFACIALLY \n                                                 worked; \n                                                 SYMMETRIC; \n                                                 planning \n                                                 required\nMOUSTERIAN       300–30 kya        Neanderthals Prepared core \n                                  + early       (Levallois \n                                  H. sapiens    technique); \n                                                 more diverse \n                                                 toolkit\nUPPER            ~45 kya           Behaviorally Blades, bone \nPALEOLITHIC                        modern       tools, ART, \n                                   H. sapiens   ornamentation, \n                                                 long-distance \n                                                 trade\n\nKEY TRENDS:\n- Tools become more SYMMETRIC over time (Acheulean = symmetric, \n  requiring planning)\n- Tool diversity INCREASES (Mousterian = first really varied \n  toolkit)\n- Tools acquire SYMBOLIC functions (Upper Paleolithic = art \n  and ornaments)\n\nMNEMONIC: \"OAMU\" → Oldowan, Acheulean, Mousterian, Upper \nPaleolithic (chronological).\n\nANALOGY:\n- \"iPhone generations\" — each tool tradition is a meaningful \n  upgrade. Oldowan = brick phone (functional but crude). \n  Acheulean = smartphone (planning, design). Mousterian = \n  smartphone with apps. Upper Paleolithic = smartphone + \n  internet + culture.\n\n──────────────────────────────────────────────\nCARD 15 — Brain Size Evolution",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "iPhone generations\" — each tool tradition is a meaningful",
+      "hint": "- Tools become more SYMMETRIC over time (Acheulean = symmetric,    requiring planning) - Tool diversity INCREASES (Mousterian = first really varied"
+    },
+    {
+      "q": "How and why did human brain size triple over hominin evolution?",
+      "a": "BRAIN SIZE TRIPLED: ~450cc (Australopithecus) → ~1350cc \n(H. sapiens). Some Neanderthal brains hit ~1500cc.\n\nENERGETIC COST: brain is ~20% of caloric budget despite \nbeing ~2% of body mass. Extremely expensive tissue. \nBig brains require correspondingly big food intake.\n\nPROPOSED SELECTION PRESSURES:\n1. SOCIAL BRAIN HYPOTHESIS (Robin Dunbar): tracking complex \n   social relationships in larger groups favors larger \n   neocortex. \"Dunbar's number\" ~150 for human social \n   networks.\n   \n2. ECOLOGICAL HYPOTHESIS: environmental problem-solving \n   (foraging, navigation, tool use) drove brain expansion.\n   \n3. COOKING HYPOTHESIS (Richard Wrangham): cooking food \n   dramatically increases caloric yield from same raw \n   ingredients. Cooked food = more energy available → \n   could SUPPORT larger metabolically expensive brains. \n   Cooking may have ENABLED brain expansion energetically.\n   \n4. CULTURAL EVOLUTION HYPOTHESIS: ability to learn from \n   others (teaching, language, social transmission) drove \n   selection for big brains.\n\n⚠ TRAP — bigger brain ≠ better. NEANDERTHALS had brains \nLARGER than modern humans (~1500cc vs ~1350cc) and went \nextinct. Brain ORGANIZATION and SOCIAL behavior matter \nmore than raw volume.\n\nANALOGIES:\n- \"GPU vs CPU\" — Neanderthals may have had a bigger graphics \n  card (visual processing) but our smaller brain has better \n  social/symbolic architecture.\n- \"Server farm vs supercomputer\" — size matters less than \n  what you do with it.\n\n──────────────────────────────────────────────\nCARD 16 — FOXP2 (NOT \"The Language Gene\")",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "GPU vs CPU\" — Neanderthals may have had a bigger graphics",
+      "hint": "- \"GPU vs CPU\" — Neanderthals may have had a bigger graphics    card (visual processing) but our smaller brain has better    social/symbolic architecture."
+    },
+    {
+      "q": "What is FOXP2 and what does it actually do?",
+      "a": "FOXP2 = TRANSCRIPTION FACTOR (a regulatory gene that controls \nother genes) involved in OROFACIAL FINE MOTOR CONTROL — the \nprecise movement of mouth, tongue, jaw needed for speech.\n\nKEY FACTS:\n- MUTATIONS in FOXP2 cause severe speech/language disorders \n  in humans (Specific Language Impairment, KE family)\n- HIGHLY CONSERVED across mammals (evolved long before humans)\n- Humans have 2 UNIQUE AMINO ACID CHANGES in FOXP2 since the \n  chimp split (~7 mya)\n- Functions in mice (ultrasonic vocalizations) and songbirds \n  (vocal learning) → it's a general motor control gene \n  co-opted for speech\n\nNEANDERTHAL FOXP2: Neanderthals possess the HUMAN VERSION of \nFOXP2 (the 2 unique amino acid changes). Implications:\n- These mutations evolved BEFORE the Neanderthal-sapiens \n  split (~600 kya)\n- Neanderthals likely had vocal communication capacity\n- Most parsimonious explanation: present in common ancestor\n\n⚠ TRAP — FOXP2 is NOT \"the language gene.\" It is:\n- Necessary but NOT sufficient for language\n- Functions in non-human animals (not specifically human)\n- A transcription factor (REGULATES other genes), not a \n  protein that \"does\" language directly\n\nCalling it \"the language gene\" is OVERSIMPLIFICATION. Robbins \nwill deduct points for this phrasing.\n\nANALOGY:\n- \"Conductor's baton\" — FOXP2 doesn't make music itself, it \n  coordinates the orchestra. Without it, the music falls \n  apart, but the music is performed by many other genes.\n\n──────────────────────────────────────────────\nCARD 17 — Out of Africa Hypothesis",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Conductor's baton\" — FOXP2 doesn't make music itself, it",
+      "hint": "- MUTATIONS in FOXP2 cause severe speech/language disorders    in humans (Specific Language Impairment, KE family) - HIGHLY CONSERVED across mammals (evolved long before humans)"
+    },
+    {
+      "q": "What is the Out of Africa hypothesis?",
+      "a": "OUT OF AFRICA: anatomically modern H. sapiens evolved in \nAFRICA (~315 kya, possibly earlier — Jebel Irhoud, Morocco) \nand expanded GLOBALLY beginning ~70–50 kya, LARGELY REPLACING \nother hominin populations (Neanderthals, Denisovans, H. \nerectus) but with some interbreeding.\n\nEVIDENCE:\n- OLDEST ANATOMICALLY MODERN H. SAPIENS fossils are in Africa\n  - Omo Kibish, Ethiopia (~195 kya)\n  - Jebel Irhoud, Morocco (~315 kya, revised)\n- AFRICAN POPULATIONS HAVE GREATEST GENETIC DIVERSITY (longer \n  history → more accumulated diversity)\n- SERIAL FOUNDER EFFECTS — genetic diversity DECREASES as \n  you move geographically away from Africa (each migration \n  step took only a sample of the source population's diversity)\n- Mitochondrial Eve (~150–200 kya) traces to Africa\n- ANCIENT DNA work by SVANTE PÄÄBO (Nobel Prize 2022) \n  confirmed introgression patterns\n\nALTERNATIVE: MULTIREGIONAL HYPOTHESIS — H. sapiens evolved \nsimultaneously in multiple regions from H. erectus with \ncontinuous gene flow. Genetic evidence STRONGLY favors Out \nof Africa over Multiregional.\n\nANALOGY:\n- \"Single seed, global garden\" — humanity originated in one \n  African seed; spread out, replacing or absorbing local \n  vegetation as it went.\n- \"Branch from one trunk\" — vs. the multiregional view of \n  many parallel trunks in different regions.\n\n──────────────────────────────────────────────\nCARD 18 — Neanderthal DNA in Modern Humans",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Single seed, global garden\" — humanity originated in one",
+      "hint": ""
+    },
+    {
+      "q": "Why is the geographic pattern of Neanderthal DNA proof of post-migration interbreeding?",
+      "a": "NEANDERTHAL DNA in modern humans:\n- NON-AFRICAN humans: ~1–4% Neanderthal DNA\n- SUB-SAHARAN AFRICANS: little to none\n\nWHY THIS PROVES POST-MIGRATION INTERBREEDING:\n- If the DNA were just shared ancestry from a common ancestor, \n  ALL modern humans (including Africans) would carry equal \n  amounts.\n- The geographic pattern — Neanderthal DNA only in non-African \n  populations — pinpoints WHEN the mixing happened: AFTER \n  H. sapiens left Africa (where they encountered Neanderthals \n  in Europe/W. Asia), but BEFORE non-African populations \n  spread globally.\n- Sub-Saharan Africans never met Neanderthals (Neanderthals \n  lived in Eurasia), so they have no introgressed DNA.\n\nNEANDERTHAL FACTS:\n- Diverged from H. sapiens lineage ~600–800 kya\n- Lived in Europe and W. Asia ~400–40 kya\n- Brain size ~1500cc (≥ modern humans!)\n- Buried their dead (cognitive complexity)\n- Made Mousterian tools (prepared cores)\n- Used symbolic ornaments (perforated shells)\n- Extinct ~40 kya (causes debated: outcompeted by sapiens, \n  assimilated via interbreeding, disease, climate)\n\nANALOGY:\n- \"Geographic fingerprint of the dating event\" — Neanderthal \n  DNA in only non-Africans is like finding lipstick stains \n  only on travelers from one country. Tells you exactly \n  where the interaction happened.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Africans lost Neanderthal DNA via drift\" → unlikely; \n  pattern too clean\n- \"Neanderthals were ancestral to all humans\" → FALSE (they \n  were a sister lineage)\n- \"Selection eliminated it from Africans\" → FALSE; would \n  predict messier pattern\n\n──────────────────────────────────────────────\nCARD 19 — Denisovans",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Geographic fingerprint of the dating event\" — Neanderthal",
+      "hint": "- If the DNA were just shared ancestry from a common ancestor,    ALL modern humans (including Africans) would carry equal    amounts."
+    },
+    {
+      "q": "What are Denisovans and what's their genetic legacy?",
+      "a": "DENISOVANS = archaic hominin group identified primarily \nthrough DNA from a finger bone in DENISOVA CAVE, Siberia \n(2010). Almost no fossils — known mostly from genomic data.\n\nKEY FACTS:\n- Diverged from Neanderthals ~400 kya (sister to Neanderthals)\n- Lived in Asia (range from Siberia to Southeast Asia)\n- Interbred with modern humans\n\nGENETIC LEGACY:\n- MELANESIANS / Papua New Guineans / Aboriginal Australians: \n  ~3–6% Denisovan DNA\n- Some mainland Asian populations show small traces\n- Sub-Saharan Africans: little to none\n- Western Europeans: little to none\n\n⚠ COMPARE distributions:\n- NEANDERTHAL DNA: ~1–4% in ALL non-Africans\n- DENISOVAN DNA: ~3–6% in MELANESIANS/Pacific Islanders \n  specifically\n- Different distributions reflect different geographic \n  regions of interbreeding (Neanderthals = Europe/W. Asia; \n  Denisovans = Asia/Pacific)\n\nANALOGY:\n- \"Ghost lineage with DNA receipts\" — almost no fossils, \n  but a clear genetic signature in living people. We know \n  they existed mostly because they're still inside us.\n\n──────────────────────────────────────────────\nCARD 20 — Adaptive Introgression: EPAS1 in Tibetans",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Ghost lineage with DNA receipts\" — almost no fossils,",
+      "hint": "- Diverged from Neanderthals ~400 kya (sister to Neanderthals) - Lived in Asia (range from Siberia to Southeast Asia) - Interbred with modern humans"
+    },
+    {
+      "q": "What is adaptive introgression, and what's the classic example?",
+      "a": "ADAPTIVE INTROGRESSION = an allele from one population/species \nenters another via interbreeding (gene flow), and that allele \nis then favored by natural selection because it confers a \nfitness benefit in the new population's environment.\n\nCLASSIC EXAMPLE — EPAS1 in Tibetans:\n\n1. Denisovans evolved an EPAS1 variant adapted for HIGH-\n   ALTITUDE LOW-OXYGEN environments (Tibetan Plateau region \n   was within their range)\n2. Modern humans (H. sapiens) interbred with Denisovans\n3. The Denisovan EPAS1 variant entered the H. sapiens gene \n   pool via this interbreeding\n4. When humans colonized the high Tibetan Plateau, the \n   Denisovan EPAS1 variant was strongly POSITIVELY SELECTED \n   because it helps regulate red blood cell production at \n   altitude\n5. Today, Tibetans carry the Denisovan version of EPAS1 at \n   high frequency\n\nThis is one of the CLEAREST EXAMPLES of archaic introgression \nproviding a direct, measurable adaptive benefit to modern \nhumans.\n\nANALOGY:\n- \"Inheriting a useful tool from a distant cousin\" — modern \n  humans got a high-altitude adaptation pre-built from \n  Denisovans, then natural selection favored those who \n  inherited it once they moved to high altitudes.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Convergent evolution between Tibetans and Denisovans\" → \n  FALSE (it's the SAME variant, transferred via interbreeding)\n- \"Incomplete lineage sorting\" → FALSE (the timing and \n  geography match introgression, not retention from a \n  common ancestor)\n\n──────────────────────────────────────────────\nCARD 21 — Anatomically vs Behaviorally Modern (THE GAP)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Inheriting a useful tool from a distant cousin\" — modern",
+      "hint": "- \"Convergent evolution between Tibetans and Denisovans\" →    FALSE (it's the SAME variant, transferred via interbreeding) - \"Incomplete lineage sorting\" → FALSE (the timing and"
+    },
+    {
+      "q": "What's the difference between anatomically modern and behaviorally modern H. sapiens?",
+      "a": "ANATOMICALLY MODERN H. sapiens:\n- Modern skeletal features: high domed skull, reduced brow \n  ridges, projecting chin, gracile build\n- OLDEST FOSSILS: ~315 kya (Jebel Irhoud, Morocco) or \n  ~195 kya (Omo Kibish, Ethiopia)\n- These look like us, but didn't yet ACT fully like us\n\nBEHAVIORALLY MODERN H. sapiens:\n- APPEARS ~70–100 kya (much later)\n- Marked by:\n   - Symbolic thought and abstract art\n   - Personal ornaments (drilled shell beads)\n   - Long-distance trade networks (raw materials moved \n     hundreds of km)\n   - Composite tools (multi-part: handles + blades)\n   - Complex burial practices\n   - Possibly fully modern language\n\nTHE GAP: ~100,000–200,000 YEARS where humans had modern \nbodies but didn't yet make art, ornaments, or trade.\n\nCAUSES OF BEHAVIORAL TRANSITION (debated):\n- Cognitive shift (mutation enabling complex symbolic thought)\n- Cultural threshold (population density / interaction \n  intensity passing a critical point)\n- Climate change driving innovation\n- Gradual accumulation of cultural complexity reaching a \n  tipping point\n\nANALOGY:\n- \"Hardware vs software\" — anatomical modernity is hardware \n  (the body). Behavioral modernity is software (the cultural \n  programs running on it). You can have the right hardware \n  long before the right software loads.\n- \"Modern body, ancient mind\" — for ~150 kyr we walked \n  around looking like us but thinking very differently.\n\n⚠ TRAP STATEMENTS to reject:\n- \"Anatomical and behavioral modernity appeared together\" \n  → FALSE\n- \"Omo Kibish humans aren't really H. sapiens because they \n  lack art\" → FALSE (anatomy defines species, not behavior)\n\n──────────────────────────────────────────────\nCARD 22 — Serial Founder Effect (Genetic Diversity Pattern)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Hardware vs software\" — anatomical modernity is hardware",
+      "hint": "- \"Anatomical and behavioral modernity appeared together\"    → FALSE - \"Omo Kibish humans aren't really H. sapiens because they"
+    },
+    {
+      "q": "How does the Out of Africa expansion show up in modern genetic diversity patterns?",
+      "a": "SERIAL FOUNDER EFFECT: each migration step took only a \nSAMPLE of the source population's diversity. Each new \npopulation is a subset of its parent's gene pool.\n\nPATTERN: genetic diversity DECREASES as you move \ngeographically away from Africa.\n\nDATA: scatter plot of mean haplotype heterozygosity vs \ndistance from Addis Ababa, Ethiopia:\n- Africa = highest diversity (largest population, longest \n  history) ~ red dots\n- Middle East / Europe = lower\n- Central / South Asia = lower still\n- East Asia, Oceania = lower\n- Americas (~25,000 km from Addis Ababa) = LOWEST diversity\n\nThis NEGATIVE LINEAR TREND is the genetic signature of \nserial migration out of Africa.\n\nWHY: each migration was a small founder group → small Ne → \ngenetic drift → some alleles lost. Repeated founder events \ncompound diversity loss with each step.\n\nANALOGY:\n- \"Photocopy of a photocopy\" — each generation of migration \n  is a copy of a copy, slightly less complete than the \n  original. The further from the source, the less of the \n  original library is preserved.\n- \"Trickle-down genetic transfer\" — diversity siphons out \n  step by step.\n\nKEY TAKEAWAY: African populations have the GREATEST genetic \ndiversity of any modern human population. Calling some \npopulations \"more genetically pure\" is biologically \nbackwards — Africans are the most genetically diverse.\n\n──────────────────────────────────────────────\nCARD 23 — Mate Choice & MHC (\"Sweaty T-Shirt\" Studies)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Photocopy of a photocopy\" — each generation of migration",
+      "hint": "each migration was a small founder group → small Ne →  genetic drift → some alleles lost. Repeated founder events  compound diversity loss with each step."
+    },
+    {
+      "q": "What do MHC genes have to do with human mate choice?",
+      "a": "MHC = MAJOR HISTOCOMPATIBILITY COMPLEX — immune gene region \nwith EXTREME polymorphism. MHC molecules present pathogen \npeptides to the immune system; diverse MHC = recognize more \npathogens.\n\n\"SWEATY T-SHIRT\" EXPERIMENTS (Wedekind 1995, replicated \nmultiple times):\n- Subjects rated the smell of T-shirts worn by potential \n  mates\n- Subjects PREFERRED the smell of partners with DIFFERENT \n  MHC types from their own\n- Effect detected via body odor (likely secreted MHC-bound \n  peptides)\n\nWHY THIS BENEFITS OFFSPRING:\n- Children of MHC-different parents inherit DIVERSE MHC alleles\n- More diverse MHC → recognize more pathogens → better \n  immune defense\n- Avoids inbreeding (close relatives share MHC)\n\nThis is one of the FEW DOCUMENTED CASES of olfactory genetic \nmate choice in humans driven by immune gene diversity.\n\nANALOGY:\n- \"Antivirus diversity\" — combining two different antivirus \n  programs detects more threats than running two copies of \n  the same one. MHC = immune antivirus library; mating for \n  diversity expands the library.\n\n──────────────────────────────────────────────\nCARD 24 — Homo erectus (First Out of Africa)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Antivirus diversity\" — combining two different antivirus",
+      "hint": "- Children of MHC-different parents inherit DIVERSE MHC alleles - More diverse MHC → recognize more pathogens → better    immune defense"
+    },
+    {
+      "q": "Why is Homo erectus a critical species in human evolution?",
+      "a": "H. erectus, ~1.9 mya–0.07 mya. The first BIG-PICTURE Homo \nspecies.\n\nKEY FIRSTS:\n- FIRST hominin OUT OF AFRICA — fossils in Dmanisi (Georgia, \n  ~1.7 mya), Java (Indonesia), and Zhoukoudian (China, \n  ~0.5 mya)\n- FIRST regular use of FIRE (cooking, warmth, defense)\n- ACHEULEAN HAND AXES — symmetric, bifacially worked, \n  required planning\n- Brain ~900–1100cc (significantly larger than habilis)\n- Long-legged, narrow-waisted body — adapted for endurance \n  walking/running across open landscapes\n\nLONGEVITY: existed for ~1.8 MILLION YEARS — one of the \nlongest-lived Homo species (modern humans are at ~300 kyr \nso far).\n\nLIKELY ANCESTOR of Neanderthals, Denisovans, and modern \nhumans (all probably descend from H. erectus or a close \nrelative like H. heidelbergensis).\n\nANALOGY:\n- \"Mid-tier upgrade\" — between H. habilis (tool starter) \n  and H. sapiens (modern). H. erectus was the first hominin \n  to look us-shaped (tall, lean), make planned tools, control \n  fire, and walk far enough to colonize three continents.\n\n──────────────────────────────────────────────\nCARD 25 — Neanderthal Extinction Causes (Debated)",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Mid-tier upgrade\" — between H. habilis (tool starter)",
+      "hint": "- FIRST hominin OUT OF AFRICA — fossils in Dmanisi (Georgia,    ~1.7 mya), Java (Indonesia), and Zhoukoudian (China,    ~0.5 mya)"
+    },
+    {
+      "q": "Why did Neanderthals go extinct ~40 kya?",
+      "a": "Multiple hypotheses (all may have contributed):\n\n1. COMPETITIVE EXCLUSION — H. sapiens outcompeted \n   Neanderthals for resources (better tools, larger social \n   networks, more efficient hunting).\n\n2. ASSIMILATION — Neanderthals weren't fully replaced; they \n   were absorbed into H. sapiens populations via interbreeding. \n   Their genes survive in non-Africans (~1–4%). Their \n   \"extinction\" is partly genetic dilution.\n\n3. DISEASE — H. sapiens carried novel pathogens from Africa \n   to which Neanderthals had no immunity (similar to European \n   contact with the Americas later).\n\n4. CLIMATE — extreme glacial fluctuations stressed small \n   Neanderthal populations.\n\n5. SMALL POPULATION SIZES — Neanderthals had low effective \n   population size; vulnerable to drift, inbreeding, \n   stochastic events.\n\nThe \"extinction\" was likely a COMBINATION of these factors. \nH. sapiens likely had:\n- Larger social networks (cultural buffer against \n  environmental stress)\n- More projectile weapons (bow and arrow, atlatls)\n- Better long-distance communication (language)\n\n⚠ KEY POINT: bigger brains didn't save Neanderthals (~1500cc \nvs sapiens ~1350cc). What matters is brain ORGANIZATION + \nSOCIAL networks.\n\nANALOGY:\n- \"Smaller team with better coordination beats stronger team \n  with worse coordination\" — H. sapiens may have had less \n  individual cognitive horsepower but better cumulative \n  cultural know-how.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch17human",
+      "source": "final_review",
+      "analogy": "Smaller team with better coordination beats stronger team",
+      "hint": ""
+    },
+    {
+      "q": "What is evolutionary medicine, and what does natural selection actually optimize?",
+      "a": "Evolutionary medicine = applying evolutionary biology to understand WHY humans are vulnerable to disease. Core insight: natural selection maximizes REPRODUCTIVE FITNESS, NOT health or longevity. Our bodies are modified ancestral structures — not engineered for modern environments.\n- Analogy 1 (the shopping cart): Selection is like a shopping cart with one wheel that always pulls toward \"more babies.\" It doesn't care if the cart hits potholes (cancer at 70, bad backs at 50) as long as it crosses the reproductive finish line.\n- Analogy 2 (the renovation): Your body is a 300-million-year-old farmhouse that's been remodeled, not a new build. Plumbing routes are weird, the staircase is steep — because the contractor (selection) can only modify what's there.\n- Analogy 3 (the company KPI): Selection is a CEO whose only KPI is grandkids. Health is just a means to that end. Once you're done reproducing, the CEO stops caring.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Selection is like a shopping cart with one wheel that always pulls toward \"more babies.\" It doesn't care if the cart hits potholes (cancer at 70, bad backs at 50) as long as it crosses the reproductive finish line.",
+      "hint": ""
+    },
+    {
+      "q": "Memorize Nesse's 6 reasons we get sick (mnemonic + each reason).",
+      "a": "Mnemonic: \"Pathogens Laugh, Trade-offs Really Embarrass Anyone\"\n1. Pathogens evolve faster than us\n2. Lag/mismatch — selection can't keep up with environment change\n3. Trade-offs — fixing one thing breaks another\n4. Restraints from history — can't redesign from scratch\n5. (ant)Agonistic pleiotropy — early benefits, late costs\n6. Apparent disease = adaptation (fever, nausea ARE defenses)\n- Analogy 1 (six potholes): Think of disease vulnerability as 6 potholes in evolution's road. Each pothole = one reason selection couldn't pave it over.\n- Analogy 2 (Swiss army knife): Selection built a Swiss army knife with 6 known design flaws — every flaw makes sense once you understand the tool wasn't built for THIS use.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Think of disease vulnerability as 6 potholes in evolution's road. Each pothole = one reason selection couldn't pave it over.",
+      "hint": ""
+    },
+    {
+      "q": "Reason #1 — Why do pathogens \"win\" the evolutionary arms race against humans?",
+      "a": "Pathogens have short generation times + high mutation rates → they evolve faster than host defenses. HIV produces ~1 billion descendants per DAY. Flu mutates every season.\n- Analogy 1 (turtle vs. cheetah race): We evolve at turtle pace (~25 yrs/generation). HIV evolves at cheetah pace (hours per generation). Same race, no contest.\n- Analogy 2 (chess vs. machine gun): You're playing chess one move per year. The pathogen is firing a machine gun. Even if your moves are good, you can't keep up.\n- Analogy 3 (treadmill): Red Queen — running as fast as you can just to stay in place. The immune system runs on a treadmill the pathogen keeps speeding up.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "We evolve at turtle pace (~25 yrs/generation). HIV evolves at cheetah pace (hours per generation). Same race, no contest.",
+      "hint": ""
+    },
+    {
+      "q": "Reason #2 — Evolutionary mismatch (define + 1 example).",
+      "a": "Selection LAGS behind environmental change. Genes were tuned to ancestral conditions; modern environment changed faster than evolution can track. Example: fat-storage genes evolved for feast/famine cycles → in a constant-feast environment they cause obesity & type 2 diabetes.\n- Analogy 1 (Stone Age software, modern hardware): Your DNA is running Pleistocene software on a Twinkie-and-Netflix operating system. The code is buggy in this OS.\n- Analogy 2 (Eskimo in Miami): Imagine an Eskimo's blubber-storing physiology dropped into Miami with a Costco card. Built for famine, drowning in Doritos.\n- Analogy 3 (1985 GPS in 2026): A 1985 GPS map can't find the new highways. Same idea — evolved navigation is outdated.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Your DNA is running Pleistocene software on a Twinkie-and-Netflix operating system. The code is buggy in this OS.",
+      "hint": ""
+    },
+    {
+      "q": "Reason #3 — Trade-offs (with 2 examples).",
+      "a": "Selection can't optimize one thing without compromising another. Examples: (1) Sickle cell allele — protects heterozygotes from malaria but kills HbS/HbS homozygotes. (2) Obstetric dilemma — narrow pelvis (good for walking) vs. wide pelvis (good for big-headed babies).\n- Analogy 1 (sound mixer): Adjusting one slider on a sound mixer always shifts another. Can't max bass AND treble AND volume — something gives.\n- Analogy 2 (engineering blanket): A blanket too small to cover both feet and head. Pull it up, feet get cold. Pull it down, head freezes.\n- Analogy 3 (tax/budget): Every fitness benefit has a cost. Selection pays the cheapest \"tax\" available — but there's always a tax.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Adjusting one slider on a sound mixer always shifts another. Can't max bass AND treble AND volume — something gives.",
+      "hint": ""
+    },
+    {
+      "q": "Reason #4 — Evolutionary constraint / \"history's tinkering\" (give 2 examples).",
+      "a": "Selection MODIFIES existing structures; it cannot redesign from scratch. Examples: (1) Human spine — horizontal quadruped design retrofitted for bipedalism = ~80% of adults have back pain. (2) Vertebrate eye — photoreceptors face backwards, creating a blind spot (squid eye is wired correctly because squid evolved separately).\n- Analogy 1 (Frankenstein car): You can't remove the engine and rebuild the car. You can only bolt new parts on. The result drives, but it rattles.\n- Analogy 2 (renovating a house mid-storm): You're remodeling a house that has to stay livable through the renovation. You can't tear down the walls and start over.\n- Analogy 3 (legacy code): Software developers know — you can't delete legacy code, only patch it. Bugs from 1995 still bite in 2026.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "You can't remove the engine and rebuild the car. You can only bolt new parts on. The result drives, but it rattles.",
+      "hint": ""
+    },
+    {
+      "q": "Reason #5 — Antagonistic pleiotropy (define + example).",
+      "a": "ONE allele has an EARLY-LIFE BENEFIT and a LATE-LIFE COST. Selection sees the early benefit (boosts reproduction) and doesn't \"see\" the late cost (after reproductive years end). Example: testosterone increases mating success in young men but raises prostate cancer / heart disease risk in old men.\n- Analogy 1 (loan with balloon payment): Take the cash now, pay the bill in 40 years. Selection happily signs because it doesn't live to 40.\n- Analogy 2 (rockstar lifestyle): Live fast, die young. The \"live fast\" earns the gigs (and reproduction); the \"die young\" cost is paid AFTER the album sells.\n- Analogy 3 (CEO with a 5-year exit plan): The CEO maximizes profit for 5 years, leaves before the company collapses. Selection is the CEO who reproduces, then dies before the bill comes due.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Take the cash now, pay the bill in 40 years. Selection happily signs because it doesn't live to 40.",
+      "hint": ""
+    },
+    {
+      "q": "Reason #6 — Apparent disease = adaptation (give 2 examples).",
+      "a": "Some symptoms ARE the body's defense, NOT the disease itself. Suppressing them can WORSEN outcomes. Examples: (1) Fever — elevated temperature kills heat-sensitive pathogens. (2) Morning sickness — food aversions in weeks 6–18 protect fetus during organogenesis (most vulnerable period to toxins).\n- Analogy 1 (smoke detector): Fever is the smoke alarm. Disabling it doesn't put out the fire — it just removes the warning.\n- Analogy 2 (immune system bouncer): Cough, vomit, fever are bouncers throwing pathogens out. Tylenol = telling the bouncer to take a nap.\n- Analogy 3 (pregnancy curator): Morning sickness is a curator at a museum throwing out anything suspicious during the most fragile installation phase. Annoying, but the artwork (fetus) survives.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Fever is the smoke alarm. Disabling it doesn't put out the fire — it just removes the warning.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Antagonistic pleiotropy vs. mutation accumulation. Both explain aging — what's the difference?",
+      "a": "BOTH explain why selection allows aging. Key distinction:\n- ANTAGONISTIC PLEIOTROPY: ONE allele with EARLY benefit + late cost. The early benefit is WHY it's selected.\n- MUTATION ACCUMULATION: late-acting deleterious mutations build up because selection is WEAK after reproduction. NO early benefit — these alleles are just invisible to selection late in life.\nThe exam question hinge: does the allele HELP early? Yes → antagonistic pleiotropy. No (just bad late) → mutation accumulation.\n- Analogy 1 (the deal): Antagonistic pleiotropy = a Faustian bargain (gain now, pay later). Mutation accumulation = junk mail piling up in a mailbox no one checks.\n- Analogy 2 (employee performance reviews): Antagonistic pleiotropy = an employee crushing it Q1–Q3, sabotaging Q4. Mutation accumulation = an employee who shows up after the auditor stops checking.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Antagonistic pleiotropy = a Faustian bargain (gain now, pay later). Mutation accumulation = junk mail piling up in a mailbox no one checks.",
+      "hint": ""
+    },
+    {
+      "q": "How does the obstetric dilemma illustrate evolutionary trade-offs?",
+      "a": "Bipedalism selected for a NARROW pelvis (efficient walking, less wobble). Big brains selected for a WIDE birth canal. These two pressures conflict. Result: human birth is dangerous; babies are born helpless (\"secondary altriciality\") because the head must come out before it gets too big.\n- Analogy 1 (loading dock): Imagine forcing a refrigerator (baby head) through a doorway designed for a microwave (narrow pelvis). Either renovate the door, ship a smaller fridge, or ship the fridge unfinished. Evolution chose the third — \"ship unfinished\" = babies finish brain development outside.\n- Analogy 2 (ship in a bottle): The ship is built inside the bottle. Brain finishes assembly post-birth.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Imagine forcing a refrigerator (baby head) through a doorway designed for a microwave (narrow pelvis). Either renovate the door, ship a smaller fridge, or ship the fridge unfinished. Evolution chose the third — \"ship unfinished\" = babies finish brain development outside.",
+      "hint": ""
+    },
+    {
+      "q": "Define virulence and explain the virulence trade-off.",
+      "a": "Virulence = degree of harm a pathogen causes its host. Pathogen fitness = (within-host replication) × (transmission to new hosts). Trade-off: high virulence = more pathogen output per unit time BUT kills/incapacitates host faster, lowering total transmissions. Selection usually favors INTERMEDIATE virulence.\n- Analogy 1 (rideshare driver): A pathogen is an Uber driver who needs to get fares from house to house. If you crash the car (kill the host) on the first ride, you can't pick up more passengers.\n- Analogy 2 (party guest): A guest who eats ALL the food at one party gets full but is never invited back. The optimal guest takes some food at MANY parties.\n- Analogy 3 (printer & paper): Pathogen replication is a printer; transmission is delivery. Print too much, the printer melts before the package ships.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "A pathogen is an Uber driver who needs to get fares from house to house. If you crash the car (kill the host) on the first ride, you can't pick up more passengers.",
+      "hint": ""
+    },
+    {
+      "q": "Why does cholera maintain HIGH virulence (the exception to the trade-off)?",
+      "a": "Cholera transmits via contaminated WATER, not via active host movement. Even bedridden or dead hosts contaminate water supplies through rapid liquid diarrhea. Therefore high virulence does NOT reduce transmission — it INCREASES it (more bacteria pumped into the water). Transmission mode is the key determinant.\n- Analogy 1 (postal mail vs. handshake): Most pathogens need a \"handshake\" — an active, mobile host. Cholera uses \"postal mail\" — once the package is dropped in the water, it doesn't matter if the sender is alive.\n- Analogy 2 (zombie movie): Most viruses want a walking zombie that bites others. Cholera is happy with a corpse leaking into the river.\n- Analogy 3 (oil spill): Once the tanker dumps the oil into the ocean, the tanker doesn't have to keep sailing. The ocean delivers it.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Most pathogens need a \"handshake\" — an active, mobile host. Cholera uses \"postal mail\" — once the package is dropped in the water, it doesn't matter if the sender is alive.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — does virulence always evolve to DECREASE? Why or why not?",
+      "a": "NO. Virulence evolves toward whatever maximizes pathogen FITNESS. Direct/respiratory transmission → typically intermediate-low virulence. Water-borne (cholera), vector-borne (malaria), or post-mortem transmission → high virulence can be maintained. Evolution has NO direction or \"niceness.\" Transmission ecology dictates the optimum.\n- Analogy 1 (driver behavior): Whether a delivery driver speeds depends on the road. Highway = floor it. Pedestrian zone = creep along. Pathogens \"drive\" based on their transmission \"road.\"",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Whether a delivery driver speeds depends on the road. Highway = floor it. Pedestrian zone = creep along. Pathogens \"drive\" based on their transmission \"road.\"",
+      "hint": ""
+    },
+    {
+      "q": "Australian myxoma virus story — what evolved and why?",
+      "a": "1950: Myxoma virus released in Australia to kill invasive rabbits. Initially killed 99.8%. Within years: virus evolved LOWER virulence (less lethal strains). Why? Highly virulent strains killed rabbits before mosquitoes could feed and transmit them; less virulent strains kept rabbits alive longer = more mosquito feedings = more transmission. Rabbits ALSO evolved resistance. Real-time arms race + virulence trade-off.\n- Analogy 1 (sales pitch): Imagine a salesman so aggressive he kills the customer mid-pitch. He sells to nobody. The salesman who chats nicely makes more sales — even if each sale is smaller.\n- Analogy 2 (forest fire): A firestorm that burns through fuel in seconds dies out. A slow burn keeps going for days. Pathogens often evolve the slow-burn strategy.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Imagine a salesman so aggressive he kills the customer mid-pitch. He sells to nobody. The salesman who chats nicely makes more sales — even if each sale is smaller.",
+      "hint": ""
+    },
+    {
+      "q": "How do bacteria evolve antibiotic resistance? (4 mechanisms)",
+      "a": "1. Point mutations alter drug TARGETS (drug can't bind).\n2. Enzymes DEGRADE the antibiotic (e.g., beta-lactamases destroy penicillin).\n3. Efflux pumps EJECT the drug from the cell.\n4. Horizontal gene transfer (HGT) — resistance plasmids passed between species, spreading resistance across phylogenetic lines.\n- Analogy 1 (locked door, 4 ways past): Mutation = change the lock. Enzyme = melt the key. Pump = push the burglar back outside. HGT = neighbor texts you the master code.\n- Analogy 2 (military): Bacteria as soldiers fighting drug \"bullets.\" Mutation = wear thicker armor. Enzyme = catch & disarm bullets. Pump = teleport bullets back outside. HGT = trade weapons with the enemy across enemy lines.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Mutation = change the lock. Enzyme = melt the key. Pump = push the burglar back outside. HGT = neighbor texts you the master code.",
+      "hint": ""
+    },
+    {
+      "q": "What is horizontal gene transfer (HGT) and why does it matter for medicine?",
+      "a": "Bacteria can transfer GENES (often on plasmids) between unrelated species — not just from parent to offspring. Resistance genes evolved in one species can spread laterally to ENTIRELY different bacterial species in a hospital ward in days. This is why a resistance gene from soil bacteria can suddenly appear in a hospital pathogen.\n- Analogy 1 (group chat): Vertical inheritance = passing a recipe down through your family. HGT = posting the recipe in a public group chat where strangers grab it.\n- Analogy 2 (genetic black market): Bacteria trade resistance genes like contraband. The plasmid is the package; conjugation is the dead drop.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Vertical inheritance = passing a recipe down through your family. HGT = posting the recipe in a public group chat where strangers grab it.",
+      "hint": ""
+    },
+    {
+      "q": "Why does HIV develop drug resistance so fast?",
+      "a": "HIV produces ~1 BILLION descendants per day, has NO proofreading repair enzymes, and accumulates massive genetic variation. A diverse viral population already exists when treatment starts. Drug kills susceptible majority; pre-existing resistant variants explode in number. Same logic as antibiotic resistance — selection of pre-existing variation, NOT drug-induced mutation. Combination therapy works because no single virion is likely to have resistance to 3+ drugs at once.\n- Analogy 1 (Powerball): Imagine buying a billion lottery tickets a day. SOMEONE wins. The drug kills 999,999,999 losers; the winner expands.\n- Analogy 2 (army of typo monkeys): A billion monkeys typing produce every imaginable sequence. The drug kills any monkey not typing \"RESISTANT.\" Tomorrow there are a billion of those.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Imagine buying a billion lottery tickets a day. SOMEONE wins. The drug kills 999,999,999 losers; the winner expands.",
+      "hint": ""
+    },
+    {
+      "q": "Chemotherapy stops working after a few months — why?",
+      "a": "SAME mechanism as antibiotic resistance. Tumors are genetically heterogeneous (somatic mutations create diverse cell lineages). Chemo kills susceptible cells. Pre-existing resistant variants (already there before treatment) are released from competition and expand. Drug did NOT induce the resistance — it SELECTED for it.\n- Analogy 1 (weeding the lawn): You spray weedkiller. It kills 99% of weeds. The 1% that already had resistance now have the whole lawn to themselves.\n- Analogy 2 (movie villain): The chemo doesn't \"create\" the villain — the villain was always in the crowd, hiding. Chemo just thins the crowd until you see them.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "You spray weedkiller. It kills 99% of weeds. The 1% that already had resistance now have the whole lawn to themselves.",
+      "hint": ""
+    },
+    {
+      "q": "Define evolutionary mismatch and list 5 mismatch diseases.",
+      "a": "Mismatch = modern disease arising because evolved biology is mismatched to current environment.\n1. Feast/famine genes + constant calories = OBESITY, T2 DIABETES\n2. Hunter-gatherer activity levels + sedentary lifestyle = CARDIOVASCULAR DISEASE\n3. High parasite load + ultra-clean environment = ALLERGIES, AUTOIMMUNE (hygiene hypothesis)\n4. Quadruped spine + bipedal posture = LOWER BACK PAIN\n5. Many pregnancies + few pregnancies/more cycles = BREAST/OVARIAN CANCER (more lifetime estrogen)\n- Analogy 1 (deep-sea fish in aquarium): A creature evolved for crushing pressure put in a fish bowl. It survives but its biology malfunctions.\n- Analogy 2 (fish out of water): Literally — your physiology is evolved for water (Pleistocene) and dropped on land (modernity).",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "A creature evolved for crushing pressure put in a fish bowl. It survives but its biology malfunctions.",
+      "hint": ""
+    },
+    {
+      "q": "Hygiene hypothesis — counterintuitive trap. What is the direction?",
+      "a": "MORE cleanliness = MORE allergies & autoimmune disease, NOT LESS. The immune system evolved calibrated to a HIGH parasite load. With nothing real to fight, it misfires onto harmless antigens (pollen → allergy) or self-tissue (autoimmunity). Farm-raised children have significantly LOWER allergy rates.\n- Analogy 1 (idle worker): An immune system without parasites is like a security guard with no intruders — eventually he tackles the mailman.\n- Analogy 2 (overtuned smoke alarm): Without real smoke, the alarm gets so sensitive it goes off when you toast bread.\n- Analogy 3 (boxer with no opponent): Trained to fight, no fight available, starts swinging at his own corner.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "An immune system without parasites is like a security guard with no intruders — eventually he tackles the mailman.",
+      "hint": ""
+    },
+    {
+      "q": "Why is the human spine a mismatch / evolutionary constraint?",
+      "a": "Spine evolved as HORIZONTAL beam in quadrupeds for ~300 million years. Co-opted for VERTICAL bipedalism only ~6–7 million years ago. The S-curve compensates but creates lumbar disc herniation, vertebral compression, spondylolisthesis. ~80% of humans get significant back pain. Selection couldn't redesign the spine — only tinker with it. (This is Reason #4: constraint, AND a mismatch effect.)\n- Analogy 1 (horizontal beam stood on end): A horizontal bridge re-purposed as a vertical pillar. Forces concentrate at curves. Cracks in the same spots every time.\n- Analogy 2 (suspension bridge as elevator): Take a horizontal suspension bridge, tilt it 90°. Now gravity pulls in the wrong direction.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "A horizontal bridge re-purposed as a vertical pillar. Forces concentrate at curves. Cracks in the same spots every time.",
+      "hint": ""
+    },
+    {
+      "q": "Why does increased lifetime estrogen exposure raise breast/ovarian cancer risk? (Ancestral vs. modern)",
+      "a": "Ancestral women: many pregnancies + extended lactation = FEW ovulatory cycles per lifetime. Modern women: fewer pregnancies + earlier menarche + later menopause = MANY MORE ovulatory cycles + more lifetime estrogen exposure. Estrogen drives cell proliferation in breast/ovarian tissue → more cell divisions = more chances for cancer-causing mutations. Mismatch.\n- Analogy 1 (engine running): Reproductive system is a car. Ancestral life = mostly off (pregnant/nursing). Modern life = idling 24/7 — engine wears out faster.\n- Analogy 2 (paint shaker on overtime): More ovulatory cycles = paint shaker run constantly. Eventually the bolts fail.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Reproductive system is a car. Ancestral life = mostly off (pregnant/nursing). Modern life = idling 24/7 — engine wears out faster.",
+      "hint": ""
+    },
+    {
+      "q": "Marcotte's yeast→human angiogenesis discovery — what's the lesson for evolutionary medicine?",
+      "a": "Humans and yeast share a common ancestor >1 BILLION years ago, but many gene networks are DEEPLY CONSERVED. Marcotte et al. found yeast cell-wall repair gene networks are HOMOLOGOUS to human blood vessel growth (angiogenesis) networks. Used yeast (well-characterized, easy to study) to identify 8 NEW human angiogenesis genes — potential cancer drug targets. Ancient conservation enables modern discovery.\n- Analogy 1 (universal car wiring): Yeast and humans use the same wiring color codes. Fix a Toyota, learn how a Ferrari works.\n- Analogy 2 (translated software): Same source code translated into different programming languages. Bugs in version 1.0 still exist in 4.0 — and the fix transfers.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Yeast and humans use the same wiring color codes. Fix a Toyota, learn how a Ferrari works.",
+      "hint": ""
+    },
+    {
+      "q": "Hunter-gatherer activity vs. sedentary lifestyle mismatch — what diseases result?",
+      "a": "Hunter-gatherers walked 10–20+ km/day, ate diverse plants/animals, had high physical activity. Modern sedentary lifestyle = cardiovascular disease, osteoporosis (less bone-loading), type 2 diabetes, depression (less natural light/movement). The evolved physiology REQUIRES movement for cardiovascular and metabolic health.\n- Analogy 1 (race horse in stall): A thoroughbred kept in a stall develops health problems. The body NEEDS the run to function right.\n- Analogy 2 (idle car battery): A car that never drives has its battery die. Movement isn't optional — it's input the system requires.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "A thoroughbred kept in a stall develops health problems. The body NEEDS the run to function right.",
+      "hint": ""
+    },
+    {
+      "q": "What's the molecular cause of sickle cell, and what's its frequency story?",
+      "a": "Single nucleotide change in beta-globin: Glutamic Acid → Valine at position 6 (Glu6Val / E6V). HbS/HbS homozygotes = severe sickle cell anemia. HbA/HbS heterozygotes = ~25% protection from severe Plasmodium falciparum malaria (parasitized cells sickle and get cleared by spleen; intracellular environment hostile to parasite). In malaria-endemic Africa: HbS held at 10–20% by balancing selection (overdominance / heterozygote advantage). In non-malarial regions: HbS purely deleterious, drifts to low frequency.\n- Analogy 1 (one-letter typo, big consequence): Like changing one letter in a book and the whole sentence flips meaning. ONE amino acid swap → entire red blood cell shape changes.\n- Analogy 2 (poison/antidote): Heterozygote has just enough \"poison\" to kill the parasite but not enough to kill the cell.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Like changing one letter in a book and the whole sentence flips meaning. ONE amino acid swap → entire red blood cell shape changes.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — In malaria-endemic regions, rank the fitness of HbA/HbA, HbA/HbS, and HbS/HbS.",
+      "a": "HbA/HbS > HbA/HbA > HbS/HbS. Heterozygote has the HIGHEST fitness (overdominance). In NON-malarial regions: HbA/HbA > HbA/HbS > HbS/HbS — sickle cell allele is just deleterious. SAME genotype, DIFFERENT environment, DIFFERENT fitness. This is why the allele is at high frequency in sub-Saharan Africa and low elsewhere.\n- Analogy 1 (Goldilocks): Two HbS = sick. Zero HbS = malaria-vulnerable. ONE = just right (only in malaria zone).\n- Analogy 2 (vaccine shot): Heterozygote got \"one shot\" of mild sickle, immunizing them against malaria without making them sick.\n- Analogy 3 (climate-dependent gene): The same coat is a winner in winter and a curse in summer. Genotype fitness = relative, not absolute.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Two HbS = sick. Zero HbS = malaria-vulnerable. ONE = just right (only in malaria zone).",
+      "hint": ""
+    },
+    {
+      "q": "Cystic fibrosis (CF) heterozygote advantage — best evolutionary explanation for ~4% European frequency?",
+      "a": "SAME LOGIC as sickle cell. CF homozygotes get severe lung/digestive disease. ONE copy may reduce CFTR (chloride channel) function just enough that cholera/typhoid toxin can't cause as deadly diarrhea — heterozygotes survived European cholera/typhoid epidemics better. 4% frequency is too high to be mutation alone → balancing selection.\n- Analogy 1 (sickle cell of Europe): Different disease, same story — heterozygote benefit from a historical pathogen sustains the allele.\n- Analogy 2 (closed faucet): Cholera toxin cranks open a chloride faucet causing fatal water loss. Heterozygote has a half-broken faucet — toxin can't open it as wide → less fatal.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Different disease, same story — heterozygote benefit from a historical pathogen sustains the allele.",
+      "hint": ""
+    },
+    {
+      "q": "How is cancer literally evolution? (3 ingredients)",
+      "a": "Cancer IS evolution acting on somatic cell lineages within ONE body during ONE lifetime. (1) HERITABLE VARIATION: somatic mutations create variant cell lineages. (2) NATURAL SELECTION: cells with mutations enabling faster proliferation, immune evasion, metastasis are \"selected.\" (3) ADAPTATION: tumors evolve drug resistance — same mechanism as antibiotic resistance.\n- Analogy 1 (Galápagos in your gut): Each tumor is its own little Galápagos. Cell lineages are species. The tumor microenvironment is the island.\n- Analogy 2 (population genetics inside you): Mutation, selection, drift — all running inside your body, just at the cellular scale.\n- Analogy 3 (rebellion): Cells start as cooperative citizens. Mutations turn some into rebels who reproduce too much. The body's \"cops\" (immune system, p53) usually catch them — but rebels with cloaking mutations escape.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Each tumor is its own little Galápagos. Cell lineages are species. The tumor microenvironment is the island.",
+      "hint": ""
+    },
+    {
+      "q": "What is p53 and why does antagonistic pleiotropy explain it?",
+      "a": "p53 = tumor suppressor protein (gene: TP53). Detects DNA damage → triggers cell cycle arrest, DNA repair, OR apoptosis. EARLY-LIFE BENEFIT: prevents cancer during reproductive years. LATE-LIFE COST: too much p53 activity may deplete stem cells → tissue atrophy, reduced regeneration, accelerated aging. Mouse experiments: enhanced p53 = LESS cancer BUT FASTER aging. Classic antagonistic pleiotropy.\n- Analogy 1 (overzealous bouncer): p53 is the bouncer who throws out anyone suspicious. Great when the club is young — but eventually he kicks out the regulars too, and the club empties.\n- Analogy 2 (paranoid manager): A boss who fires anyone who underperforms. Saves the company from rot early. Eventually fires too many people and the company has no workforce.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "p53 is the bouncer who throws out anyone suspicious. Great when the club is young — but eventually he kicks out the regulars too, and the club empties.",
+      "hint": ""
+    },
+    {
+      "q": "Tumor drug resistance — explain the mechanism.",
+      "a": "Tumor cells are GENETICALLY HETEROGENEOUS (different lineages have different mutations). Pre-existing resistant variants (random mutations already present BEFORE treatment) are SELECTED FOR when chemo kills susceptible cells. Resistant clone expands without competition. NOT drug-induced; selection of pre-existing variation.\n- Analogy 1 (weed killer): Spray a lawn — kill 99% of weeds. The 1% naturally resistant inherits the lawn.\n- Analogy 2 (Russian roulette in reverse): The drug shoots the bullets into the cylinder; pre-resistant cells = empty chambers; they survive every shot.\n- Analogy 3 (combination therapy = chess vs 3 grandmasters): Beating one drug = lucky. Beating 3 simultaneously = nearly impossible. That's why we use cocktails.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Spray a lawn — kill 99% of weeds. The 1% naturally resistant inherits the lawn.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Which of these is evolutionary MISMATCH (not antagonistic pleiotropy or constraint)? A) Lower back pain from retrofitted spine B) Prostate cancer from testosterone C) Type 2 diabetes from feast/famine genes in modern processed-food world D) Sickle cell disease in malaria zones",
+      "a": "Answer = C. Mismatch = evolved trait now maladaptive in NEW environment.\nA = CONSTRAINT (Reason 4 — can't redesign spine).\nB = ANTAGONISTIC PLEIOTROPY (early benefit + late cost).\nC = MISMATCH (genes for famine in a feast world).\nD = TRADE-OFF / heterozygote advantage (balancing selection).\n- Analogy: Mismatch = evolved for environment X, now living in environment Y. Constraint = can't redesign the building. Antagonistic pleiotropy = a deal with the future devil. Trade-off = can't have it all.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Mismatch = evolved for environment X, now living in environment Y. Constraint = can't redesign the building. Antagonistic pleiotropy = a deal with the future devil. Trade-off = can't have it all.",
+      "hint": ""
+    },
+    {
+      "q": "TRAP — Which is NOT one of Nesse's 6 reasons? \"Natural selection always optimizes both reproductive fitness AND health/longevity.\"",
+      "a": "NOT a Nesse reason — it's the OPPOSITE of evolutionary medicine's central claim. Selection optimizes REPRODUCTIVE FITNESS ONLY. Health is selected only if it boosts reproduction. Selection HAPPILY maintains health-harming alleles if they boost reproduction (antagonistic pleiotropy is the textbook case).\n- Analogy: Selection is a billionaire who only counts grandkids. Health is just an instrumental tool. Once you're done reproducing, the billionaire stops paying for upkeep.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Selection is a billionaire who only counts grandkids. Health is just an instrumental tool. Once you're done reproducing, the billionaire stops paying for upkeep.",
+      "hint": ""
+    },
+    {
+      "q": "Morning sickness — why is it BEST explained as adaptation?",
+      "a": "Nausea and food aversions in early pregnancy (weeks 6–18) protect the fetus during ORGANOGENESIS — the most vulnerable developmental period. Aversions target potentially toxic/contaminated foods (bitter plants, meat smells, alcohol). It's a curated immune-like food filter for the fetus. Suppressing morning sickness without medical reason can theoretically increase exposure risk.\n- Analogy 1 (museum quarantine): During the most fragile installation phase, the curator throws out anything suspicious. Annoying for the curator (mom), saves the artwork (fetus).\n- Analogy 2 (TSA pre-flight): Pregnancy is \"high-risk security mode.\" The system blocks anything questionable before it can do damage.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "During the most fragile installation phase, the curator throws out anything suspicious. Annoying for the curator (mom), saves the artwork (fetus).",
+      "hint": ""
+    },
+    {
+      "q": "Fever — adaptation or just symptom?",
+      "a": "ADAPTATION. Elevated body temperature (1) directly inhibits temperature-sensitive pathogens, (2) ramps up immune cell activity, (3) reduces iron availability to pathogens. Reflexively suppressing fever with antipyretics can prolong some infections. (Of course, dangerously high fevers still need treatment — adaptation doesn't mean \"always good.\")\n- Analogy 1 (sauna for invaders): Body cranks the heat. Most invaders can't take the sauna; immune cells thrive in it.\n- Analogy 2 (smoke alarm + sprinklers): Fever is the alarm AND the fire suppression — turn it off, fire spreads.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Body cranks the heat. Most invaders can't take the sauna; immune cells thrive in it.",
+      "hint": ""
+    },
+    {
+      "q": "Why does selection FAIL to eliminate cancer-predisposing alleles?",
+      "a": "Most cancers strike LATE in life — AFTER reproduction is finished. Selection's \"eyes\" are weak past reproductive age. Plus: many cancer-related genes have antagonistic pleiotropy (p53 prevents early cancer but accelerates aging; high cell-division rates good for growth but increase mutation load later). Plus: peto's paradox in big animals — elephants have 20 copies of TP53, suggesting evolved cancer suppression where there's pressure for it. Humans don't have that pressure as strongly because we historically died young from other causes.\n- Analogy 1 (post-deadline bug report): The bug shows up after the project ships. Manager doesn't care anymore.\n- Analogy 2 (warranty expired): The car's hidden defect shows up after the warranty (reproductive years) — manufacturer doesn't pay.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "The bug shows up after the project ships. Manager doesn't care anymore.",
+      "hint": ""
+    },
+    {
+      "q": "Why are HIV and flu drug-resistance evolution textbook examples of selection on pre-existing variation?",
+      "a": "BOTH: high mutation rate + huge population sizes + short generations = a viral population already contains every imaginable resistance mutation BEFORE the drug arrives. The drug doesn't CREATE resistance — it CULLS susceptibles, allowing rare resistant variants to dominate. Combination therapy works because no virion is likely to randomly carry resistance to 3+ drugs simultaneously.\n- Analogy 1 (lottery already drawn): The winning ticket was bought yesterday. The drug just announces who already won.\n- Analogy 2 (locked doors, multiple keys): Resistance to 1 drug = common. Resistance to 3 different drugs in 1 virion = lottery × lottery × lottery.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "The winning ticket was bought yesterday. The drug just announces who already won.",
+      "hint": ""
+    },
+    {
+      "q": "Red Queen dynamics in human-pathogen coevolution.",
+      "a": "From Lewis Carroll: \"It takes all the running you can do, to keep in the same place.\" Hosts evolve defenses; pathogens evolve counter-defenses; hosts must keep evolving NEW defenses just to maintain status quo. No \"winning\" — just running. Every generation, the relative fitness picture is the same even though both sides have evolved.\n- Analogy 1 (treadmill race): Both runners run hard, neither moves forward relative to the other.\n- Analogy 2 (cop & burglar arms race): Better locks → better lock-picks → better locks. Decades pass, doors still get broken into.\n- Analogy 3 (cybersecurity): New malware → new antivirus → newer malware. Forever.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Both runners run hard, neither moves forward relative to the other.",
+      "hint": ""
+    },
+    {
+      "q": "Define heterozygote advantage / overdominance in 1 sentence with the formula.",
+      "a": "Heterozygote advantage (overdominance) = a form of balancing selection where heterozygote (Aa) fitness EXCEEDS both homozygote fitnesses (AA and aa), maintaining BOTH alleles in the population at intermediate frequency. Equilibrium frequency depends on the ratio of homozygote fitness costs (q̂ = s₁/(s₁+s₂)).\n- Analogy 1 (sweet spot): Two extremes are bad; the middle is best. Selection holds the middle, keeping both extremes around as parents of the heterozygotes.\n- Analogy 2 (mortgage): Both homozygotes pay a \"tax\" (disease, malaria-susceptibility); heterozygotes pay less. The pool sustains the alleles together.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "Two extremes are bad; the middle is best. Selection holds the middle, keeping both extremes around as parents of the heterozygotes.",
+      "hint": ""
+    },
+    {
+      "q": "Why does evolutionary medicine say diabetes/obesity are \"diseases of civilization\"?",
+      "a": "Our ancestral diet was high-fiber, low-sugar, intermittent (feast/famine). Genes for efficient fat storage (\"thrifty genotype\") were favored — they stored energy when food was around for the famine that would inevitably come. Modern environment = constant calories, no famines. The thrifty genotype now over-stores → obesity, insulin resistance, T2 diabetes. The genes haven't changed; the environment has.\n- Analogy 1 (camel in a swimming pool): A camel evolved for desert keeps storing water — drowns in a pool of constant water.\n- Analogy 2 (squirrel with infinite acorns): Squirrel hoards for winter that never comes. The hoarder dies of acorn-buried-in-cheek syndrome.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "A camel evolved for desert keeps storing water — drowns in a pool of constant water.",
+      "hint": ""
+    },
+    {
+      "q": "Bonus integration question — How does evolutionary medicine reframe the question \"Why are we so badly designed?\"",
+      "a": "Reframe: we're not \"badly designed\" — we're WELL-DESIGNED FOR REPRODUCTIVE FITNESS in our ancestral environment. Vulnerabilities arise because (1) selection couldn't redesign from scratch, (2) the environment changed faster than we did, (3) selection trades long-term health for short-term reproduction, (4) pathogens evolve faster, and (5) some \"diseases\" are actually defenses. The \"design flaws\" are the cost of being a tinkered-together, history-bound, reproduction-maximizing organism in a brand-new world.\n- Analogy 1 (race car at the grocery store): A Formula 1 car is \"badly designed\" for grocery runs — but it's perfectly designed for its actual job. We're Pleistocene F1 cars stuck in traffic.\n- Analogy 2 (movie reboot): The reboot reuses old footage. Plot holes from the original persist. Selection can't reshoot the prequels.",
+      "chapterId": "ch_final_review",
+      "sectionId": "s_ch18med",
+      "source": "final_review",
+      "analogy": "A Formula 1 car is \"badly designed\" for grocery runs — but it's perfectly designed for its actual job. We're Pleistocene F1 cars stuck in traffic.",
+      "hint": ""
+    }
+  ]
 };

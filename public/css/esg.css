@@ -723,11 +723,17 @@ table.ct tbody td strong{ color: var(--gold-2); }
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 40px 32px;
+  padding: 28px 22px;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
   text-align: center;
   box-shadow: 0 4px 24px rgba(0,0,0,.3);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.flipcard-back{
+  justify-content: flex-start;
+  text-align: left;
 }
 .flipcard-front{
   border-top: 3px solid var(--gold);
@@ -753,14 +759,21 @@ table.ct tbody td strong{ color: var(--gold-2); }
   font-weight: 600;
   line-height: 1.35;
   color: var(--text);
-  max-width: 480px;
+  max-width: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 .card-a{
   font-size: 16px;
   font-weight: 400;
   line-height: 1.55;
   color: var(--text);
-  max-width: 520px;
+  max-width: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
 }
 .card-a strong{ color: var(--gold-2); }
 .card-hint{
@@ -937,7 +950,9 @@ table.ct tbody td strong{ color: var(--gold-2); }
   .score-badge{ font-size: 10.5px; }
   .card-q{ font-size: 18px; }
   .rate-btn{ min-width: 120px; padding: 10px 18px; }
-  .flipcard, .flipcard-inner, .flipcard-front, .flipcard-back{ min-height: 280px; }
+  .flipcard, .flipcard-inner, .flipcard-front, .flipcard-back{ min-height: 460px; }
+  .flipcard-front, .flipcard-back{ padding: 22px 18px; }
+  .card-a{ font-size: 14.5px; line-height: 1.5; }
   /* Tables scroll horizontally instead of overflowing */
   .ct{ display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
