@@ -526,28 +526,33 @@
   // Swipe helper: fires `cb('left'|'right')` once the user drags > 80px
   // horizontally. Green/red tint applied during drag via CSS hooks.
   function attachSwipe(el, cb){
-    var startX = 0, startY = 0, dx = 0, active = false, pid = null;
-    function reset(){ el.style.transform = ''; el.style.boxShadow = ''; el.classList.remove('swiping-left','swiping-right'); active = false; el.__swipeActive = false; }
-    el.addEventListener('pointerdown', function(e){
+    var startX = 0, startY = 0, dx = 0, active = false, pid = null, lockedHorizontal = false;
+    function reset(){ el.style.transform = ''; el.style.boxShadow = ''; el.classList.remove('swiping-left','swiping-right'); active = false; el.__swipeActive = false; lockedHorizontal = false; }
+    function down(x, y, target, capturePid){
       // Ignore if the pointer target is a button inside the card
-      if (e.target.closest('button')) return;
-      pid = e.pointerId; startX = e.clientX; startY = e.clientY; dx = 0;
-      active = true; el.__swipeActive = false;
-      el.setPointerCapture && el.setPointerCapture(pid);
-    });
-    el.addEventListener('pointermove', function(e){
+      if (target && target.closest && target.closest('button')) return;
+      pid = capturePid; startX = x; startY = y; dx = 0;
+      active = true; el.__swipeActive = false; lockedHorizontal = false;
+      if (capturePid != null && el.setPointerCapture){ try { el.setPointerCapture(capturePid); } catch(_){} }
+    }
+    function move(x, y){
       if (!active) return;
-      dx = e.clientX - startX;
-      var dy = e.clientY - startY;
-      if (Math.abs(dy) > Math.abs(dx) * 2) return; // mostly vertical → ignore
+      dx = x - startX;
+      var dy = y - startY;
+      if (!lockedHorizontal){
+        // First meaningful movement decides axis lock — prevents page jitter on near-vertical drags
+        if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) lockedHorizontal = true;
+        else if (Math.abs(dy) > 8) { active = false; reset(); return; }
+        else return;
+      }
       if (Math.abs(dx) > 6) el.__swipeActive = true;
       el.style.transform = 'translateX(' + dx + 'px) rotate(' + (dx * 0.04) + 'deg)';
       el.classList.toggle('swiping-right', dx > 24);
       el.classList.toggle('swiping-left',  dx < -24);
-    });
+    }
     function end(){
       if (!active) return;
-      el.releasePointerCapture && pid && el.releasePointerCapture(pid);
+      if (pid != null && el.releasePointerCapture){ try { el.releasePointerCapture(pid); } catch(_){} }
       var finalDx = dx;
       if (Math.abs(finalDx) > 80){
         // Animate off-screen then reset
@@ -561,8 +566,26 @@
       }
       active = false;
     }
+    // Pointer events (modern browsers — covers iOS 13+, Android Chrome, desktop)
+    el.addEventListener('pointerdown', function(e){ down(e.clientX, e.clientY, e.target, e.pointerId); });
+    el.addEventListener('pointermove', function(e){ move(e.clientX, e.clientY); });
     el.addEventListener('pointerup', end);
     el.addEventListener('pointercancel', end);
+    // Touch event fallback (older mobile browsers + extra safety)
+    el.addEventListener('touchstart', function(e){
+      if (active) return; // pointerdown already handled it
+      var t = e.touches[0]; if (!t) return;
+      down(t.clientX, t.clientY, e.target, null);
+    }, { passive: true });
+    el.addEventListener('touchmove', function(e){
+      if (!active) return;
+      var t = e.touches[0]; if (!t) return;
+      move(t.clientX, t.clientY);
+      // Once we've locked horizontal, prevent the browser from scrolling
+      if (lockedHorizontal && e.cancelable) e.preventDefault();
+    }, { passive: false });
+    el.addEventListener('touchend', end);
+    el.addEventListener('touchcancel', end);
   }
   async function rateCard(rating){
     var card = state.cardsQueue[state.cardIdx];
