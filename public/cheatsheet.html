@@ -22,18 +22,26 @@
   body {
     font-family: 'Inter', system-ui, sans-serif;
     color: var(--ink);
-    background: var(--bg);
-    font-size: 7pt;
-    line-height: 1.18;
-    max-width: 8in;
+    background: white;
+    font-size: 9pt;            /* readable on screen — print override below resets to 7pt */
+    line-height: 1.22;
+    max-width: 8.5in;
     margin: 0.35in auto;
     padding: 0.35in;
-    background: white;
     box-shadow: 0 0 24px rgba(0,0,0,0.4);
   }
+
   @media print {
-    body { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+    @page { size: letter portrait; margin: 0.35in; }
     html, body { background: white !important; }
+    body {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+      font-size: 7pt;          /* tight density for print */
+      line-height: 1.18;
+    }
   }
 
   h1, h2, h3 {
@@ -65,12 +73,16 @@
   }
   .sheet-header .meta strong { color: var(--amber); font-weight: 700; }
 
-  /* 3-column body */
+  /* 3-column body — balance on screen so all columns fill,
+     auto on print so content paginates page-by-page. */
   .body-cols {
     column-count: 3;
-    column-gap: 10pt;
-    column-fill: auto;
+    column-gap: 14pt;
+    column-fill: balance;
     column-rule: 0.4pt solid var(--rule);
+  }
+  @media print {
+    .body-cols { column-fill: auto; column-gap: 10pt; }
   }
 
   .lec {
@@ -155,8 +167,6 @@
     font-family: 'Inter', sans-serif;
   }
   .proof b { color: var(--ink); }
-
-  @page { size: letter portrait; margin: 0.35in; }
 </style>
 <script>
   // Mark printing class for white bg
