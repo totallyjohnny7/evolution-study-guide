@@ -8,6 +8,11 @@
   const LS_HISTORY = 'evol_stim_history';
   const LS_STATS   = 'evol_stim_topic_stats';
   const LS_SETTINGS = 'evol_stim_settings';
+  const LS_DASH    = 'evol_stim_dash_prefs';
+  const LS_REVIEW  = 'evol_stim_review_filter';
+
+  // dashboard preference defaults
+  const DASH_DEFAULTS = { granularity: 'lecture', showPct: true, onlyAttempted: false };
 
   // -------- helpers --------
   const $ = sel => document.querySelector(sel);
@@ -45,6 +50,63 @@
   let timerHandle = null;
 
   function bankReady() { return Array.isArray(window.STIM_BANK) && window.STIM_BANK.length > 0; }
+
+  // Some questions are tagged with multiple sections (e.g. "A,B" — the
+  // question covers material from both section A and section B of the
+  // lecture). For heat-map purposes we attribute the question to EACH
+  // section it touches, so a weak answer surfaces in each related cell.
+  function splitSections(s) {
+    if (s == null || s === '') return ['?'];
+    const out = String(s).split(/[,\s/]+/).map(x => x.trim()).filter(Boolean);
+    return out.length ? out : ['?'];
+  }
+
+  // Build a static index of every (lecture, section, topic) cell that EXISTS
+  // in the bank, regardless of whether the user has answered any questions
+  // for it yet. Multi-section questions are expanded into one entry per
+  // section. Used so the heatmap can show empty/un-attempted cells too.
+  let _bankIdxCache = null;
+  function buildBankIndex() {
+    if (_bankIdxCache) return _bankIdxCache;
+    const idx = { lectures: [], sections: {}, topics: {}, lecSections: {} };
+    if (!Array.isArray(window.STIM_BANK)) return idx;
+    const lecSet = new Set();
+    window.STIM_BANK.forEach(q => {
+      const lec = q.lecture || '?';
+      const top = q.topic || '(general)';
+      lecSet.add(lec);
+      splitSections(q.section).forEach(sec => {
+        const sk = `${lec}§${sec}`;
+        if (!idx.sections[sk]) idx.sections[sk] = { lecture: lec, section: sec, q_count: 0, topics: new Set() };
+        idx.sections[sk].q_count++;
+        idx.sections[sk].topics.add(top);
+        if (!idx.lecSections[lec]) idx.lecSections[lec] = new Set();
+        idx.lecSections[lec].add(sec);
+        const tk = `${sk}::${top}`;
+        if (!idx.topics[tk]) idx.topics[tk] = { lecture: lec, section: sec, topic: top, q_count: 0 };
+        idx.topics[tk].q_count++;
+      });
+    });
+    idx.lectures = [...lecSet].sort();
+    Object.values(idx.sections).forEach(s => s.topics = [...s.topics].sort());
+    Object.keys(idx.lecSections).forEach(l => idx.lecSections[l] = [...idx.lecSections[l]].sort());
+    _bankIdxCache = idx;
+    return idx;
+  }
+
+  // Map qid -> { lecture, section (raw string from bank), topic }. For
+  // multi-section attribution use splitSections(meta.section).
+  function qMeta(qid) {
+    const q = findQ(qid);
+    if (!q) return { lecture: '?', section: '?', topic: '' };
+    return { lecture: q.lecture, section: q.section || '?', topic: q.topic || '' };
+  }
+
+  // Color ramp shared by all heat renderers.
+  function heatColor(pct) {
+    if (pct == null) return '#444';
+    return pct < 0.4 ? '#c74e4e' : pct < 0.6 ? '#d69b4e' : pct < 0.8 ? '#d6c84e' : '#5fb87a';
+  }
 
   // -------- entry point --------
   window.StimMode = {
@@ -95,6 +157,7 @@
 
     root().innerHTML = `
       <div class="stim-shell">
+        <div class="stim-back-bar">${backBtnHTML()}</div>
         <div class="stim-eyebrow">Stim Mode · Practice Exam</div>
         <h1 class="stim-title">Take a real practice exam.</h1>
         <p class="stim-subtitle">${totalQs} questions across all three exams. Mix MC + short answer. Short-answer questions get a <strong>Grade with Claude</strong> button so you can verify your answer against an expert grader.</p>
@@ -156,6 +219,7 @@
       el.style.display = el.style.display === 'none' ? 'block' : 'none';
     });
     wireDashboardCommon();
+    wireBackBtn();
   }
 
   function startSession(settings) {
@@ -231,6 +295,7 @@
         </div>
         <div style="display:flex;gap:12px;align-items:center">
           ${session.timer_sec > 0 ? `<span class="stim-timer" id="stimTimer">--:--</span>` : ''}
+          ${backBtnHTML()}
           <button class="stim-btn stim-btn-ghost" id="stimFlag">${flagged?'★ Flagged':'☆ Flag'}</button>
           <button class="stim-btn stim-btn-danger" id="stimSubmit">Submit Exam</button>
         </div>
@@ -298,6 +363,7 @@
       renderExam();
     });
     $('#stimSubmit').addEventListener('click', submitConfirm);
+    wireBackBtn();
 
     // Timer
     if (session.timer_sec > 0) {
@@ -350,6 +416,7 @@
       const result = {
         qid: id,
         lecture: q.lecture,
+        section: q.section || '?',
         topic: q.topic,
         type: q.type,
         difficulty: q.difficulty,
@@ -385,7 +452,10 @@
       count: sess.qids.length,
       started_at: sess.started_at,
       finished_at: sess.finished_at,
-      results: sess.results.map(r => ({ qid: r.qid, lecture: r.lecture, topic: r.topic, type: r.type, score: r.score, max: r.max }))
+      results: sess.results.map(r => {
+        const meta = qMeta(r.qid);
+        return { qid: r.qid, lecture: r.lecture, section: meta.section, topic: r.topic, type: r.type, score: r.score, max: r.max };
+      })
     });
     // cap to last 50
     if (hist.length > 50) hist.splice(0, hist.length - 50);
@@ -412,41 +482,86 @@
 
   function computeStats() {
     const hist = loadJSON(LS_HISTORY, []);
-    const stats = loadJSON(LS_STATS, {});
     let totalPts = 0, scoredPts = 0, sessionCount = hist.length;
+
+    // Per (lec § section :: topic) — re-derived from the bank so older
+    // history records (which don't store section) still aggregate correctly.
+    // Multi-section questions ("A,B") contribute to each section.
+    const byTopic = {};
     hist.forEach(s => s.results.forEach(r => {
       if (r.score == null) return;
       totalPts += r.max; scoredPts += r.score;
+      const meta = qMeta(r.qid);
+      const lec = r.lecture || meta.lecture;
+      const top = r.topic || meta.topic || '(general)';
+      splitSections(r.section || meta.section).forEach(sec => {
+        const key = `${lec}§${sec}::${top}`;
+        if (!byTopic[key]) byTopic[key] = { lecture: lec, section: sec, topic: top, seen: 0, total_pts: 0, scored_pts: 0, last_seen: 0 };
+        byTopic[key].seen++;
+        byTopic[key].total_pts += r.max;
+        byTopic[key].scored_pts += r.score;
+        byTopic[key].last_seen = Math.max(byTopic[key].last_seen, s.finished_at || s.started_at);
+      });
     }));
-    const accuracy = totalPts > 0 ? Math.round(100 * scoredPts / totalPts) : null;
-    // by lecture
-    const byLec = {};
-    Object.values(stats).forEach(t => {
-      if (!byLec[t.lecture]) byLec[t.lecture] = { total_pts: 0, scored_pts: 0, seen: 0 };
-      byLec[t.lecture].total_pts += t.total_pts;
-      byLec[t.lecture].scored_pts += t.scored_pts;
-      byLec[t.lecture].seen += t.seen;
+
+    // Roll up to (lec § section)
+    const bySection = {};
+    Object.values(byTopic).forEach(t => {
+      const k = `${t.lecture}§${t.section}`;
+      if (!bySection[k]) bySection[k] = { lecture: t.lecture, section: t.section, total_pts: 0, scored_pts: 0, seen: 0 };
+      bySection[k].total_pts += t.total_pts;
+      bySection[k].scored_pts += t.scored_pts;
+      bySection[k].seen += t.seen;
     });
-    // weak topics (min 3 seen, sorted by score_pct ascending)
-    const weak = Object.values(stats)
+
+    // Roll up to lecture
+    const byLec = {};
+    Object.values(bySection).forEach(s => {
+      if (!byLec[s.lecture]) byLec[s.lecture] = { total_pts: 0, scored_pts: 0, seen: 0 };
+      byLec[s.lecture].total_pts += s.total_pts;
+      byLec[s.lecture].scored_pts += s.scored_pts;
+      byLec[s.lecture].seen += s.seen;
+    });
+
+    const accuracy = totalPts > 0 ? Math.round(100 * scoredPts / totalPts) : null;
+    const weak = Object.values(byTopic)
       .filter(t => t.seen >= 2 && t.total_pts > 0)
       .map(t => ({ ...t, pct: t.scored_pts / t.total_pts }))
       .sort((a, b) => a.pct - b.pct)
       .slice(0, 8);
-    return { totalSessions: sessionCount, accuracy, byLec, weak };
+
+    // Persist legacy LS_STATS shape for backwards compat (keyed by topic alone)
+    const legacy = {};
+    Object.values(byTopic).forEach(t => { legacy[t.topic || t.lecture] = t; });
+    saveJSON(LS_STATS, legacy);
+
+    return { totalSessions: sessionCount, accuracy, byLec, bySection, byTopic, weak };
   }
 
   function renderDashboardHTML(stats) {
-    const lecKeys = Object.keys(stats.byLec).sort();
-    const heat = lecKeys.map(k => {
-      const v = stats.byLec[k];
-      const pct = v.total_pts > 0 ? v.scored_pts / v.total_pts : null;
-      const color = pct == null ? '#444' : pct < 0.4 ? '#c74e4e' : pct < 0.6 ? '#d69b4e' : pct < 0.8 ? '#d6c84e' : '#5fb87a';
-      return `<div class="stim-heat-cell" style="background:${color};color:#1a1a1a" title="${k} — ${pct==null?'no data':Math.round(pct*100)+'%'}">${k}</div>`;
-    }).join('');
+    const prefs = Object.assign({}, DASH_DEFAULTS, loadJSON(LS_DASH, {}));
+    const bankIdx = buildBankIndex();
+
+    const granChip = (v, l) => `<button class="stim-chip stim-dash-chip${prefs.granularity===v?' active':''}" data-dash="granularity" data-val="${v}">${l}</button>`;
+    const toggleChip = (k, l) => `<button class="stim-chip stim-dash-chip${prefs[k]?' active':''}" data-dash="${k}">${l}: ${prefs[k]?'ON':'OFF'}</button>`;
+
+    let heat = '';
+    let heatLabel = '';
+    if (prefs.granularity === 'lecture') {
+      heat = renderLectureHeatmap(stats, bankIdx, prefs);
+      heatLabel = 'Per-lecture heatmap';
+    } else if (prefs.granularity === 'section') {
+      heat = renderSectionHeatmap(stats, bankIdx, prefs);
+      heatLabel = 'Per-section heatmap (rows = lecture, columns = section A-E)';
+    } else {
+      heat = renderMechanismHeatmap(stats, bankIdx, prefs);
+      heatLabel = 'Per-mechanism heatmap (one bar per topic)';
+    }
+
     const weakList = stats.weak.length ? stats.weak.map(t =>
-      `<li><strong>${esc(t.topic)}</strong> · ${t.lecture} · ${Math.round(t.pct * 100)}% (${t.scored_pts}/${t.total_pts} pts in ${t.seen} attempts)</li>`
+      `<li><strong>${esc(t.topic)}</strong> · ${t.lecture} §${t.section} · ${Math.round(t.pct * 100)}% (${t.scored_pts}/${t.total_pts} pts in ${t.seen} attempts)</li>`
     ).join('') : '<li style="color:var(--ink-faint,#b0a796)">No weak topics yet — take a few exams.</li>';
+
     return `
       <div class="stim-result-summary">
         <div class="stim-stat">
@@ -458,14 +573,124 @@
           <div class="stim-stat-lbl">Sessions taken</div>
         </div>
       </div>
-      <div style="margin:18px 0 6px;font-size:13px;color:var(--ink-faint,#b0a796);">Per-lecture heatmap (red = weak, green = strong)</div>
-      <div class="stim-heatmap">${heat || '<em style="color:var(--ink-faint,#b0a796)">No data yet.</em>'}</div>
+
+      <div class="stim-dash-controls">
+        <div class="stim-dash-row">
+          <label>Granularity</label>
+          ${granChip('lecture', 'Lecture')}
+          ${granChip('section', 'Section (A-E)')}
+          ${granChip('mechanism', 'Mechanism · Concept · Rule')}
+        </div>
+        <div class="stim-dash-row">
+          <label>Display</label>
+          ${toggleChip('showPct', 'Show %')}
+          ${toggleChip('onlyAttempted', 'Only attempted')}
+        </div>
+      </div>
+
+      <div style="margin:14px 0 6px;font-size:13px;color:var(--ink-faint,#b0a796);">${heatLabel} — red &lt; 40% · orange &lt; 60% · yellow &lt; 80% · green &ge; 80%</div>
+      <div class="stim-heat-wrap">${heat || '<em style="color:var(--ink-faint,#b0a796)">No data yet.</em>'}</div>
       <div style="margin:18px 0 6px;font-size:13px;color:var(--ink-faint,#b0a796);">Topics to work on</div>
       <ul style="margin:0;padding-left:20px;font-size:13px;line-height:1.7;">${weakList}</ul>
       <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:20px;padding-top:16px;border-top:1px solid var(--rule,rgba(255,255,255,0.08));">
         <button class="stim-btn stim-btn-ghost" data-action="reset-progress">Reset progress</button>
       </div>
     `;
+  }
+
+  function renderLectureHeatmap(stats, bankIdx, prefs) {
+    const lectures = bankIdx.lectures.length ? bankIdx.lectures : Object.keys(stats.byLec).sort();
+    const cells = lectures.map(lec => {
+      const v = stats.byLec[lec];
+      const pct = v && v.total_pts > 0 ? v.scored_pts / v.total_pts : null;
+      if (prefs.onlyAttempted && pct == null) return '';
+      const color = heatColor(pct);
+      const label = prefs.showPct && pct != null ? `${lec}<br><span class="stim-heat-pct">${Math.round(pct*100)}%</span>` : lec;
+      const title = `${lec} — ${pct==null?'no attempts':Math.round(pct*100)+'% ('+v.scored_pts+'/'+v.total_pts+' pts, '+v.seen+' Qs)'}`;
+      return `<div class="stim-heat-cell" style="background:${color};color:#1a1a1a" title="${esc(title)}">${label}</div>`;
+    }).join('');
+    return `<div class="stim-heatmap">${cells}</div>`;
+  }
+
+  function renderSectionHeatmap(stats, bankIdx, prefs) {
+    const lectures = bankIdx.lectures;
+    if (lectures.length === 0) return '';
+    // determine union of section letters across all lectures (typically A-E or A-F)
+    const allSections = new Set();
+    Object.values(bankIdx.lecSections).forEach(arr => arr.forEach(s => allSections.add(s)));
+    const sections = [...allSections].sort();
+
+    const headerCells = sections.map(s => `<div class="stim-grid-head">§${s}</div>`).join('');
+    const rows = lectures.map(lec => {
+      const cells = sections.map(s => {
+        const k = `${lec}§${s}`;
+        const inBank = bankIdx.sections[k];
+        if (!inBank) return `<div class="stim-grid-cell empty" title="No questions for ${lec} §${s}"></div>`;
+        const v = stats.bySection[k];
+        const pct = v && v.total_pts > 0 ? v.scored_pts / v.total_pts : null;
+        if (prefs.onlyAttempted && pct == null) {
+          return `<div class="stim-grid-cell empty" title="${lec} §${s} — no attempts"></div>`;
+        }
+        const color = heatColor(pct);
+        const pctTxt = prefs.showPct && pct != null ? `<span class="stim-grid-pct">${Math.round(pct*100)}%</span>` : '';
+        const seenTxt = v ? `<span class="stim-grid-n">${v.seen}/${inBank.q_count}</span>` : `<span class="stim-grid-n">0/${inBank.q_count}</span>`;
+        const title = `${lec} §${s} — ${pct==null?'no attempts':Math.round(pct*100)+'%'} · ${v?v.scored_pts+'/'+v.total_pts+' pts':'0 pts'} · ${v?v.seen:0}/${inBank.q_count} Qs`;
+        return `<div class="stim-grid-cell" style="background:${color};color:#1a1a1a" title="${esc(title)}">${pctTxt}${seenTxt}</div>`;
+      }).join('');
+      return `<div class="stim-grid-row"><div class="stim-grid-lab">${lec}</div>${cells}</div>`;
+    }).join('');
+
+    return `
+      <div class="stim-grid">
+        <div class="stim-grid-row stim-grid-header"><div class="stim-grid-lab"></div>${headerCells}</div>
+        ${rows}
+      </div>
+    `;
+  }
+
+  function renderMechanismHeatmap(stats, bankIdx, prefs) {
+    // Group bank topics by (lecture, section), render each group as a labeled
+    // band of horizontal bars — one bar per topic.
+    const lectures = bankIdx.lectures;
+    if (lectures.length === 0) return '';
+
+    let html = '<div class="stim-mech-list">';
+    lectures.forEach(lec => {
+      const lecSecs = bankIdx.lecSections[lec] || [];
+      lecSecs.forEach(sec => {
+        const sk = `${lec}§${sec}`;
+        const sectionInfo = bankIdx.sections[sk];
+        if (!sectionInfo) return;
+        const topics = sectionInfo.topics;
+        // build per-topic rows
+        const rows = topics.map(top => {
+          const tk = `${sk}::${top}`;
+          const t = stats.byTopic[tk];
+          const inBank = bankIdx.topics[tk];
+          const pct = t && t.total_pts > 0 ? t.scored_pts / t.total_pts : null;
+          if (prefs.onlyAttempted && pct == null) return '';
+          const color = heatColor(pct);
+          const widthPct = pct == null ? 0 : Math.max(4, pct * 100);
+          const pctTxt = prefs.showPct && pct != null ? `${Math.round(pct*100)}%` : (pct == null ? '—' : '');
+          const meta = `${t?t.seen:0}/${inBank?inBank.q_count:0} Q · ${t?t.scored_pts:0}/${t?t.total_pts:0} pt`;
+          return `
+            <div class="stim-mech-row">
+              <div class="stim-mech-name" title="${esc(top)}">${esc(top)}</div>
+              <div class="stim-mech-bar"><div class="stim-mech-fill" style="width:${widthPct}%;background:${color};"></div></div>
+              <div class="stim-mech-pct">${pctTxt}</div>
+              <div class="stim-mech-n">${meta}</div>
+            </div>`;
+        }).filter(Boolean).join('');
+        if (!rows) return;
+        html += `
+          <details class="stim-mech-group" ${prefs.onlyAttempted ? 'open' : ''}>
+            <summary><strong>${lec} §${sec}</strong> <span class="stim-mech-summary-meta">${topics.length} topics · ${sectionInfo.q_count} Qs</span></summary>
+            <div class="stim-mech-rows">${rows}</div>
+          </details>`;
+      });
+    });
+    html += '</div>';
+    return html;
   }
 
   function resetProgress() {
@@ -491,6 +716,35 @@
   function wireDashboardCommon() {
     document.querySelectorAll('[data-action="reset-progress"]').forEach(b => {
       b.addEventListener('click', resetProgress);
+    });
+    // Dashboard preference chips — re-render the dashboard in place so the
+    // user keeps their scroll position relative to the Your-progress card.
+    document.querySelectorAll('.stim-dash-chip').forEach(b => {
+      b.addEventListener('click', () => {
+        const prefs = Object.assign({}, DASH_DEFAULTS, loadJSON(LS_DASH, {}));
+        const k = b.dataset.dash;
+        const v = b.dataset.val;
+        if (k === 'granularity') prefs.granularity = v;
+        else prefs[k] = !prefs[k]; // boolean toggles
+        saveJSON(LS_DASH, prefs);
+        // Re-render the dashboard card in place (don't blow away the whole view)
+        const dash = document.getElementById('stimDashboard');
+        if (dash) {
+          dash.innerHTML = `<h3 style="margin-top:0;font-family:var(--ff-display,serif);">Your progress</h3>${renderDashboardHTML(computeStats())}`;
+          wireDashboardCommon();
+        }
+      });
+    });
+  }
+
+  // -------- back-to-study button --------
+  function backBtnHTML() {
+    return `<button class="stim-btn stim-btn-ghost stim-back-btn" id="stimBackToStudy" title="Switch to Study mode (your STIM session is auto-saved)">← Back to Study</button>`;
+  }
+  function wireBackBtn() {
+    const b = document.getElementById('stimBackToStudy');
+    if (b) b.addEventListener('click', () => {
+      if (typeof window.setMode === 'function') window.setMode('study');
     });
   }
 
@@ -519,8 +773,14 @@
 
     const stats = computeStats();
 
+    const ungradedSAs = saResults.filter(x => x.score == null && (x.user_sa_text || '').trim());
+    const batchBtn = ungradedSAs.length > 0
+      ? `<button class="stim-btn" id="stimBatchGrade" title="Send all your answered SA responses to Claude in one prompt">Grade all my SAs (${ungradedSAs.length})</button>`
+      : '';
+
     root().innerHTML = `
       <div class="stim-shell">
+        <div class="stim-back-bar">${backBtnHTML()}</div>
         <div class="stim-eyebrow">Stim Mode · Results</div>
         <h1 class="stim-title">${overallPct}% — ${session.exam===0?'Cumulative':'Exam '+session.exam} practice</h1>
         <p class="stim-subtitle">${overallPts}/${overallMax} pts · ${mcCorrect}/${mcTotal} MC · ${saGraded.length}/${saResults.length} SA graded · ${mm}m ${ss}s elapsed</p>
@@ -535,7 +795,10 @@
           <button class="stim-btn" id="stimNew">New exam</button>
           <button class="stim-btn stim-btn-ghost" id="stimReview">Review questions</button>
           <button class="stim-btn stim-btn-ghost" id="stimDashToggle">Toggle dashboard</button>
+          ${batchBtn}
         </div>
+
+        <div id="stimBatchGradeArea" style="display:none"></div>
 
         <div class="stim-card" id="stimDashboard">
           <h3 style="margin-top:0;font-family:var(--ff-display,serif);">Your progress</h3>
@@ -543,8 +806,9 @@
         </div>
 
         <div id="stimReviewSection" style="display:none">
-          <h2 style="font-family:var(--ff-display,serif);font-size:24px;margin:32px 0 16px;">Question-by-question review</h2>
-          ${r.map((res, i) => renderResultCardHTML(res, i)).join('')}
+          <h2 style="font-family:var(--ff-display,serif);font-size:24px;margin:32px 0 12px;">Question-by-question review</h2>
+          <div class="stim-review-filter" id="stimReviewFilter">${renderReviewFilterChips()}</div>
+          <div id="stimReviewList">${renderFilteredReview(r)}</div>
         </div>
       </div>`;
 
@@ -558,6 +822,7 @@
       el.style.display = el.style.display === 'none' ? 'block' : 'none';
       if (el.style.display === 'block') {
         wireResultCardHandlers();
+        wireReviewFilterChips();
         el.scrollIntoView({ behavior: 'smooth' });
       }
     });
@@ -565,7 +830,65 @@
       const el = $('#stimDashboard');
       el.style.display = el.style.display === 'none' ? 'block' : 'none';
     });
+    if (batchBtn) {
+      $('#stimBatchGrade').addEventListener('click', openBatchGrade);
+    }
     wireDashboardCommon();
+    wireBackBtn();
+  }
+
+  // ---- Review filter chips (All / Answered / Unanswered / Wrong / Ungraded) ----
+  function renderReviewFilterChips() {
+    const f = loadJSON(LS_REVIEW, 'all');
+    const chip = (v, l) => `<button class="stim-chip stim-review-chip${f===v?' active':''}" data-rfilter="${v}">${l}</button>`;
+    return `
+      <span class="stim-dash-row-label">Show</span>
+      ${chip('all', 'All')}
+      ${chip('answered', 'Answered')}
+      ${chip('unanswered', 'Unanswered')}
+      ${chip('wrong', 'Wrong / Partial')}
+      ${chip('ungraded', 'Ungraded SAs')}
+    `;
+  }
+
+  function isAnswered(res, q) {
+    if (!q) return false;
+    if (q.type === 'mc') return res.user_mc_idx != null;
+    return !!(res.user_sa_text && res.user_sa_text.trim());
+  }
+
+  function renderFilteredReview(results) {
+    const f = loadJSON(LS_REVIEW, 'all');
+    const filtered = results.filter(res => {
+      const q = findQ(res.qid);
+      if (!q) return false;
+      const answered = isAnswered(res, q);
+      if (f === 'all') return true;
+      if (f === 'answered') return answered;
+      if (f === 'unanswered') return !answered;
+      if (f === 'wrong') {
+        if (q.type === 'mc') return answered && !res.correct;
+        return res.score != null && res.score < q.points;
+      }
+      if (f === 'ungraded') return q.type === 'sa' && answered && res.score == null;
+      return true;
+    });
+    if (filtered.length === 0) {
+      return `<div style="padding:18px;color:var(--ink-faint,#b0a796);font-style:italic">No questions match this filter.</div>`;
+    }
+    return filtered.map((res, i) => renderResultCardHTML(res, results.indexOf(res))).join('');
+  }
+
+  function wireReviewFilterChips() {
+    document.querySelectorAll('.stim-review-chip').forEach(b => {
+      b.addEventListener('click', () => {
+        saveJSON(LS_REVIEW, b.dataset.rfilter);
+        document.getElementById('stimReviewFilter').innerHTML = renderReviewFilterChips();
+        document.getElementById('stimReviewList').innerHTML = renderFilteredReview(session.results);
+        wireResultCardHandlers();
+        wireReviewFilterChips();
+      });
+    });
   }
 
   function renderResultCardHTML(res, i) {
@@ -731,6 +1054,180 @@ Grade strictly per rubric. Be fair but accurate. Reply with ONLY this JSON, no o
     msgEl.style.color = '#5fb87a';
     msgEl.textContent = `✓ Graded: ${score}/${max} pts. Topics added to your dashboard.`;
     setTimeout(() => renderResults(), 800);
+  }
+
+  // -------- batch grade with claude --------
+  function openBatchGrade() {
+    const ungraded = session.results.filter(r => {
+      const q = findQ(r.qid);
+      return q && q.type === 'sa' && r.score == null && (r.user_sa_text || '').trim();
+    });
+    if (ungraded.length === 0) {
+      alert('No ungraded short-answer responses to grade.');
+      return;
+    }
+
+    const blocks = ungraded.map((r, i) => {
+      const q = findQ(r.qid);
+      const rubricLines = (q.rubric && q.rubric.criteria || []).map(c => `- ${c.pts} pt: ${c.desc}`).join('\n');
+      const max = q.rubric ? q.rubric.total : q.points;
+      return `========== Q${i+1} of ${ungraded.length} · qid: ${r.qid} (${max} pts) ==========
+QUESTION:
+${q.q}
+
+STUDENT ANSWER:
+${r.user_sa_text}
+
+RUBRIC (total ${max} pts):
+${rubricLines}
+
+MODEL ANSWER (reference; don't penalize alternative correct answers):
+${q.model_answer || '(none provided)'}`;
+    }).join('\n\n');
+
+    const prompt = `You are grading ${ungraded.length} BIOL 4230 (Evolution) short-answer responses in one batch.
+
+For EACH question, grade strictly per rubric. Be fair but accurate. Then reply with ONLY a single JSON array, no other text before or after — one object per question, in the SAME ORDER as the questions appear below:
+
+[
+  {
+    "qid": "<qid string from the header>",
+    "score": <integer>,
+    "max": <integer>,
+    "per_criterion": [{"pts_awarded": 0|1, "feedback": "specific feedback for this criterion"}],
+    "topics_to_work_on": ["specific topic 1", "specific topic 2"],
+    "overall_feedback": "1-3 sentences"
+  },
+  ...
+]
+
+QUESTIONS TO GRADE:
+
+${blocks}
+
+End of questions. Reply with the JSON array only.`;
+
+    const copy = (text) => {
+      if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text);
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta);
+      return Promise.resolve();
+    };
+
+    const area = document.getElementById('stimBatchGradeArea');
+    area.style.display = 'block';
+    area.innerHTML = `
+      <div class="stim-card" id="stimBatchCard">
+        <h3 style="margin-top:0;font-family:var(--ff-display,serif);">Batch grade · ${ungraded.length} short answers</h3>
+        <ol style="font-size:13px;line-height:1.6;color:var(--ink-faint,#b0a796);padding-left:20px;">
+          <li>Prompt was copied to your clipboard. claude.ai is opening in a new tab.</li>
+          <li>Paste the prompt into Claude. Wait for the JSON array reply.</li>
+          <li>Copy Claude's reply (the entire JSON array) and paste it into the box below.</li>
+          <li>Click <strong>Apply all grades</strong> — every score is updated and your dashboard rebuilds.</li>
+        </ol>
+        <textarea class="stim-grade-paste" id="stimBatchPaste" placeholder="Paste Claude's JSON array here…" style="min-height:160px"></textarea>
+        <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+          <button class="stim-btn" id="stimBatchApply">Apply all grades</button>
+          <button class="stim-btn stim-btn-ghost" id="stimBatchRecopy">Re-copy prompt</button>
+          <button class="stim-btn stim-btn-ghost" id="stimBatchCancel">Close</button>
+        </div>
+        <div class="stim-grade-msg" id="stimBatchMsg" style="font-size:13px;margin-top:8px"></div>
+      </div>
+    `;
+
+    copy(prompt).then(() => {
+      window.open('https://claude.ai/new', '_blank', 'noopener');
+      const msg = document.getElementById('stimBatchMsg');
+      msg.style.color = '#5fb87a';
+      msg.textContent = `✓ Prompt for ${ungraded.length} questions copied. Paste into Claude → paste reply below.`;
+    }).catch(() => {
+      alert('Could not copy. The prompt is too long to display here — please use the per-question grade buttons instead.');
+    });
+
+    document.getElementById('stimBatchApply').addEventListener('click', () => applyBatchGrade(ungraded));
+    document.getElementById('stimBatchRecopy').addEventListener('click', () => {
+      copy(prompt).then(() => {
+        const msg = document.getElementById('stimBatchMsg');
+        msg.style.color = '#5fb87a';
+        msg.textContent = '✓ Prompt re-copied to clipboard.';
+      });
+    });
+    document.getElementById('stimBatchCancel').addEventListener('click', () => {
+      area.style.display = 'none';
+      area.innerHTML = '';
+    });
+
+    area.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function applyBatchGrade(ungraded) {
+    const ta = document.getElementById('stimBatchPaste');
+    const msg = document.getElementById('stimBatchMsg');
+    const raw = (ta && ta.value || '').trim();
+    if (!raw) {
+      msg.style.color = '#c74e4e';
+      msg.textContent = '✗ Paste Claude\'s JSON array first.';
+      return;
+    }
+    // Try to extract a JSON array — tolerate leading/trailing text.
+    const m = raw.match(/\[[\s\S]*\]/);
+    if (!m) {
+      msg.style.color = '#c74e4e';
+      msg.textContent = '✗ Could not find a JSON array in the pasted text.';
+      return;
+    }
+    let parsed;
+    try { parsed = JSON.parse(m[0]); }
+    catch (e) {
+      msg.style.color = '#c74e4e';
+      msg.textContent = '✗ JSON failed to parse: ' + e.message;
+      return;
+    }
+    if (!Array.isArray(parsed)) {
+      msg.style.color = '#c74e4e';
+      msg.textContent = '✗ Expected a JSON array but got ' + (typeof parsed) + '.';
+      return;
+    }
+
+    let applied = 0, missed = [];
+    parsed.forEach(item => {
+      if (!item || !item.qid) return;
+      const res = session.results.find(r => r.qid === item.qid);
+      const q = findQ(item.qid);
+      if (!res || !q) { missed.push(item.qid); return; }
+      const max = q.rubric ? q.rubric.total : q.points;
+      const score = Math.max(0, Math.min(max, Number(item.score) || 0));
+      res.score = score;
+      res.claude_grade = item;
+      applied++;
+    });
+
+    if (applied === 0) {
+      msg.style.color = '#c74e4e';
+      msg.textContent = '✗ No qids in your paste matched this session. Did you paste the wrong array?';
+      return;
+    }
+
+    saveJSON(LS_SESSION, session);
+    // Update history record for this session
+    const hist = loadJSON(LS_HISTORY, []);
+    if (hist.length) {
+      const last = hist[hist.length - 1];
+      if (last.id === session.id) {
+        parsed.forEach(item => {
+          const histRes = last.results.find(r => r.qid === item.qid);
+          if (histRes) histRes.score = Math.max(0, Math.min(histRes.max, Number(item.score) || 0));
+        });
+        saveJSON(LS_HISTORY, hist);
+      }
+    }
+    rebuildStats();
+
+    msg.style.color = '#5fb87a';
+    msg.textContent = `✓ Applied ${applied}/${parsed.length} grades. ${missed.length ? '(' + missed.length + ' qid mismatches: ' + missed.slice(0,3).join(', ') + (missed.length>3?'…':'') + ')' : ''} Reloading results…`;
+    setTimeout(() => renderResults(), 1100);
   }
 
   // -------- modal helpers --------
