@@ -1,0 +1,128 @@
+{
+  "title": "Complex Adaptations",
+  "intro": "How complex traits — eyes, wings, body plans — evolve through stepwise mutations, regulatory changes, and gene-network conservation. This lecture is the EVO-DEVO chapter, integrating molecular biology with classical evolutionary thinking.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Adaptation as both trait and process",
+      "overview": "The word 'adaptation' has two meanings: a trait that has been shaped by past selection, AND the process by which selection produces such traits. Complex adaptations build incrementally — they do not appear in their finished form.",
+      "key_points": [
+        "Adaptation (noun) = a heritable trait whose current form is the product of past natural selection in service of some function.",
+        "Adaptation (verb) = the process by which selection improves fit between organism and environment.",
+        "Complex adaptations arise through MANY small mutational steps, each conferring some fitness advantage along the way.",
+        "Each intermediate stage must itself be functional and selectively advantageous — selection cannot 'plan ahead.'"
+      ],
+      "key_terms": [
+        { "term": "Adaptation", "def": "Either a trait shaped by past selection (noun) OR the process producing such traits (verb)." },
+        { "term": "Gradual evolution", "def": "Complex traits accumulate from many small mutational changes, each itself favorable." }
+      ],
+      "exam_traps": [
+        "The classic 'half an eye is useless' objection ignores that early eyes are not failed full eyes — they are simpler light-detecting structures with their own value.",
+        "Selection works on what's available. A trait can be 'good enough' rather than perfect — historical contingency leaves limits."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Evolution of the vertebrate eye — gradual stepwise model",
+      "overview": "The vertebrate eye is the textbook example of complex adaptation evolving through functional intermediates. Each step (light-sensitive patch → cup → pinhole → lensed eye) is itself useful.",
+      "key_points": [
+        "Stage 1: light-sensitive patch — distinguishes light from dark; useful for circadian rhythms and predator detection.",
+        "Stage 2: cupped patch — adds directional sensitivity; can detect WHERE light comes from.",
+        "Stage 3: pinhole eye (e.g., Nautilus) — narrows the aperture, producing a crude image without a lens.",
+        "Stage 4: lens added — focuses light; sharper image. Lenses likely evolved from co-opted crystallin proteins.",
+        "Eyes have evolved INDEPENDENTLY at least 40 times across animals — convergent solutions to a common selective problem."
+      ],
+      "key_terms": [
+        { "term": "Stepwise eye evolution", "def": "The gradual elaboration from light-sensitive patch to cup to pinhole to lensed eye, each step functional." },
+        { "term": "Convergent evolution of eyes", "def": "Eyes have arisen independently in many animal lineages; the camera eye of vertebrates and cephalopods is the classic case." }
+      ],
+      "exam_traps": [
+        "The vertebrate camera eye and the cephalopod camera eye look superficially similar but evolved independently — convergent, not homologous.",
+        "Each eye-evolution stage is documented in a living organism today (flatworm patches, Nautilus pinhole, etc.). The intermediates are not hypothetical."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Regulatory networks and gene duplication",
+      "overview": "A lot of evolutionary novelty comes from RE-WIRING existing genes rather than inventing new ones. Mutations in regulatory regions, gene duplication followed by sub- or neofunctionalization, and changes in expression timing/location all reshape phenotype without changing the underlying protein-coding repertoire.",
+      "key_points": [
+        "Mutations in cis-regulatory elements (enhancers, promoters) can reshape WHEN and WHERE a gene is expressed without changing the protein.",
+        "Gene duplication produces redundant copies — one can retain the original function while the other evolves a new role (NEOFUNCTIONALIZATION) or a subset of the old role (SUBFUNCTIONALIZATION).",
+        "Many adaptations are 'tinkering' on conserved gene networks rather than de novo invention.",
+        "PROTEIN PROMISCUITY — proteins often have weak side-activities that can be co-opted and refined into new primary functions."
+      ],
+      "key_terms": [
+        { "term": "Cis-regulatory mutation", "def": "Mutation in a regulatory sequence (enhancer, promoter) that alters when/where a gene is expressed without changing the protein." },
+        { "term": "Gene duplication", "def": "Production of an extra copy of a gene; relaxed selection on the duplicate enables new function evolution." },
+        { "term": "Neofunctionalization", "def": "One copy of a duplicated gene evolves a novel function while the other retains the original." },
+        { "term": "Subfunctionalization", "def": "Both copies of a duplicated gene specialize on different subsets of the ancestral function." },
+        { "term": "Protein promiscuity", "def": "Proteins often have weak side-activities; selection can refine these into new primary functions." }
+      ],
+      "exam_traps": [
+        "Cis-regulatory evolution is a major route to morphological novelty — Hox-gene expression changes reshape body plans without changing the Hox proteins themselves.",
+        "Don't confuse subfunctionalization with neofunctionalization. Sub: each copy does part of the original. Neo: one copy gains a new function."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Heterochrony — changes in developmental timing",
+      "overview": "Many morphological differences across species reflect changes in WHEN developmental processes occur, not WHAT they do. Speeding up, slowing down, or shifting the onset of a process produces dramatically different adult forms.",
+      "key_points": [
+        "HETEROCHRONY = evolutionary change in the relative TIMING or RATE of developmental events.",
+        "Examples: paedomorphosis (juvenile features retained in adults — axolotl salamander), peramorphosis (extension of growth past ancestral state — large antlers).",
+        "Small changes in timing (a few hours of extra cell proliferation) can produce dramatic morphological differences.",
+        "Heterochronic changes often have a simple genetic basis — a few mutations in regulatory genes."
+      ],
+      "key_terms": [
+        { "term": "Heterochrony", "def": "Evolutionary change in the timing or rate of developmental events between species." },
+        { "term": "Paedomorphosis", "def": "Retention of juvenile features in the adult form (e.g., axolotl reproduces while still in larval form)." },
+        { "term": "Peramorphosis", "def": "Extension of development past the ancestral end-point, producing more derived adult forms." }
+      ],
+      "exam_traps": [
+        "Heterochrony explains a lot of variation among closely related species without invoking many new genes.",
+        "Don't conflate heterochrony with heterotopy (changes in WHERE in the body something develops). Different concept, often paired."
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Hox genes and conserved developmental networks",
+      "overview": "Hox genes encode transcription factors that pattern the anterior-posterior axis of bilaterian animals. They are deeply conserved across phyla — the same Hox toolkit patterns flies, mice, and humans.",
+      "key_points": [
+        "Hox genes are clustered in a chromosomal arrangement that mirrors their expression pattern along the body axis (COLINEARITY).",
+        "Hox proteins are transcription factors that turn on segment-specific developmental programs.",
+        "The same Hox genes pattern the body axes of vastly different animals — flies, mice, humans — testifying to deep evolutionary conservation.",
+        "Differences in WHERE Hox genes are expressed (regulatory evolution) underlie many morphological differences across species.",
+        "Hox-cluster duplications correlate with major body-plan transitions (the vertebrate genome has 4 Hox clusters; invertebrates typically have 1)."
+      ],
+      "key_terms": [
+        { "term": "Hox gene", "def": "Member of a family of transcription factors that pattern the anterior-posterior body axis in bilaterian animals." },
+        { "term": "Colinearity", "def": "The arrangement of Hox genes along the chromosome matches their expression order along the body axis." },
+        { "term": "Conservation of developmental networks", "def": "Core gene-regulatory networks (Hox, Pax, Wnt) are shared across distantly related animals — evidence of deep common ancestry." }
+      ],
+      "exam_traps": [
+        "Hox-gene CONSERVATION across phyla is the headline. Differences in body plan come largely from differences in REGULATION, not from new Hox proteins.",
+        "Don't say Hox genes 'cause' segments. They specify segment IDENTITY — what each segment becomes — given an underlying segmentation process."
+      ]
+    },
+    {
+      "letter": "F",
+      "title": "Imperfect adaptation — limits and constraints",
+      "overview": "Selection produces traits that are 'good enough,' not optimal. Historical legacy, developmental constraints, and trade-offs leave fingerprints of imperfection — and those imperfections are often the strongest evidence of evolution.",
+      "key_points": [
+        "Adaptations are constrained by history — selection can only modify what's already there.",
+        "Vestigial structures (whale pelvis, human appendix, ostrich wings) reflect ancestral function with no current use.",
+        "Trade-offs — improving one trait often comes at the cost of another (running speed vs. heat dissipation).",
+        "The vertebrate retina has the photoreceptors BACKWARDS (light passes through neurons before reaching them) — a historical accident, not a design choice."
+      ],
+      "key_terms": [
+        { "term": "Vestigial structure", "def": "A structure that retains ancestral form but has lost most or all of its original function." },
+        { "term": "Trade-off", "def": "Improving one trait comes at the cost of reduced performance in another." },
+        { "term": "Constraint", "def": "Historical or developmental factors that limit what selection can produce." }
+      ],
+      "exam_traps": [
+        "Imperfections are powerful evidence of evolution. A designed system would not have a blind spot; an evolved one inherits its 'mistakes.'",
+        "'Good enough' is the right framing — selection lifts fitness, but is not an optimization algorithm with foresight."
+      ]
+    }
+  ]
+}

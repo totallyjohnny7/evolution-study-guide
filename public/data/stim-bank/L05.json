@@ -1,0 +1,310 @@
+[
+  {
+    "id": "STIM-L05-001",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "A",
+    "topic": "Phenotypic variance partitioning",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Total phenotypic variance V_P can be partitioned as:",
+    "choices": [
+      "V_P = V_G + V_E",
+      "V_P = V_A + V_D + V_I + V_E",
+      "V_P = h² + V_E",
+      "V_P = V_A · V_E"
+    ],
+    "correct": 1,
+    "why": "The standard partition: V_P = V_A (additive) + V_D (dominance) + V_I (interaction/epistatic) + V_E (environmental). The first three sum to V_G (total genetic variance).",
+    "choice_why": [
+      "Partially right but incomplete. V_G splits further into V_A + V_D + V_I — this is the level of detail the study guide expects.",
+      "Correct. The fully partitioned form: V_P = V_A + V_D + V_I + V_E.",
+      "Wrong. h² is a ratio (V_A / V_P), not a variance; it cannot sum with V_E.",
+      "Wrong. Variances are additive (under independence), not multiplicative."
+    ],
+    "source": "sg-exam-1 §II; L05 §A"
+  },
+  {
+    "id": "STIM-L05-002",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "A",
+    "topic": "Which variance component responds to selection",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Which variance component drives the predictable response to selection in the breeder's equation R = h² · S?",
+    "choices": [
+      "V_E (environmental)",
+      "V_A (additive)",
+      "V_D (dominance)",
+      "V_I (epistatic / interaction)"
+    ],
+    "correct": 1,
+    "why": "Only the additive component (V_A) is consistently transmitted from parent to offspring in a way that selection can build on across generations. Dominance and epistatic interactions get reshuffled by recombination each generation, so selection on them produces inconsistent gains.",
+    "choice_why": [
+      "Wrong. V_E is environmental and not heritable.",
+      "Correct. V_A is the engine of evolutionary response. h² = V_A / V_P.",
+      "Wrong. V_D effects depend on the specific allele combinations in heterozygotes, which are remixed each generation.",
+      "Wrong. V_I depends on multi-locus combinations that recombination disrupts each generation."
+    ],
+    "source": "sg-exam-1 §II; L05 §A,B"
+  },
+  {
+    "id": "STIM-L05-003",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "B",
+    "topic": "Narrow-sense heritability",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Which formula correctly defines narrow-sense heritability h²?",
+    "choices": [
+      "h² = V_G / V_P",
+      "h² = V_A / V_P",
+      "h² = V_E / V_P",
+      "h² = R · S"
+    ],
+    "correct": 1,
+    "why": "Narrow-sense heritability uses the additive component only: h² = V_A / V_P. This is the version that predicts response to selection. Broad-sense heritability H² = V_G / V_P uses total genetic variance.",
+    "choice_why": [
+      "Wrong. That is BROAD-sense heritability (H²). The lowercase h² uses only V_A.",
+      "Correct. h² = V_A / V_P, narrow-sense.",
+      "Wrong. V_E / V_P is the proportion of variance attributable to environment, not heritability.",
+      "Wrong. h² is a property of the population, not a product of R and S."
+    ],
+    "source": "sg-exam-1 §II; L05 §B"
+  },
+  {
+    "id": "STIM-L05-004",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "B",
+    "topic": "Estimating h² from parent-offspring regression",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Narrow-sense heritability is most directly estimated from:",
+    "choices": [
+      "The variance of trait values in the population.",
+      "The slope of offspring trait values regressed on the mid-parent trait value.",
+      "The ratio of within-family to between-family variance.",
+      "Counting the number of genes contributing to the trait."
+    ],
+    "correct": 1,
+    "why": "A standard estimator of h²: plot offspring trait value (y) against the average of their two parents' trait values (mid-parent, x). The slope of that regression line approximates h². If offspring strongly resemble parents, slope is steep; if not, slope is shallow.",
+    "choice_why": [
+      "Wrong. Total trait variance alone gives V_P, not h².",
+      "Correct. Parent-offspring regression slope ≈ h². The study guide flags this method.",
+      "Wrong. Within/between-family variance ratios estimate other components but are not the standard h² method named in the guide.",
+      "Wrong. Heritability does not depend on counting loci. It's a variance ratio."
+    ],
+    "source": "sg-exam-1 §II; L05 §B"
+  },
+  {
+    "id": "STIM-L05-005",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "C",
+    "topic": "Breeder's equation",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "A breeder selects heifers with the highest milk yield (mean = 25 kg/day) from a herd with mean 20 kg/day, and breeds them. Heritability of milk yield is h² = 0.4. What is the predicted mean milk yield of the next generation?",
+    "choices": [
+      "20 kg/day (no change)",
+      "22 kg/day",
+      "23 kg/day",
+      "25 kg/day"
+    ],
+    "correct": 1,
+    "why": "Breeder's equation: R = h² · S. Selection differential S = 25 − 20 = 5 kg. R = 0.4 · 5 = 2 kg. Next-generation mean = 20 + 2 = 22 kg.",
+    "choice_why": [
+      "Wrong. Selection produces some response when h² > 0.",
+      "Correct. R = h² · S = 0.4 · 5 = 2 kg, so 20 + 2 = 22 kg.",
+      "Wrong. Setting R = 3 implies h² = 0.6, not 0.4.",
+      "Wrong. The selected mean (25) is the breeders' phenotype, not the offspring expectation. h² < 1 means offspring don't fully match the breeders."
+    ],
+    "source": "sg-exam-1 §II; L05 §C"
+  },
+  {
+    "id": "STIM-L05-006",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "C",
+    "topic": "Selection without heritability",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "A trait has a large selection differential S but heritability h² = 0. What is the predicted response to selection R?",
+    "choices": [
+      "Equal to S, since selection is strong.",
+      "Half of S, on average.",
+      "R = 0, regardless of S.",
+      "Negative — the population evolves the opposite way."
+    ],
+    "correct": 2,
+    "why": "Breeder's equation: R = h² · S. If h² = 0, R = 0, no matter how large S is. This is the recurring 'selection without evolution' lesson.",
+    "choice_why": [
+      "Wrong. R = h² · S, so when h² = 0 the response is 0 even if S is large.",
+      "Wrong. R is proportional to h². If h² = 0, R = 0.",
+      "Correct. Without heritability there is no evolutionary response, no matter how strong selection is.",
+      "Wrong. Negative R would imply h² < 0, which is impossible."
+    ],
+    "source": "sg-exam-1 §II,III; L05 §C,E"
+  },
+  {
+    "id": "STIM-L05-007",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "D",
+    "topic": "Reaction norms",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "On a reaction-norm graph (phenotype on y-axis, environment on x-axis), what does a horizontal line for a given genotype indicate?",
+    "choices": [
+      "The genotype is plastic.",
+      "The genotype is not plastic — same phenotype across environments (canalization).",
+      "There is genotype-by-environment interaction.",
+      "The trait is environmentally determined and not genetic."
+    ],
+    "correct": 1,
+    "why": "A horizontal reaction norm means the phenotype doesn't change with environment for that genotype = no plasticity = canalized. Sloped reaction norms indicate plasticity.",
+    "choice_why": [
+      "Wrong. A horizontal line means NO change with environment = no plasticity. Plasticity = sloped.",
+      "Correct. Horizontal = canalization (no plasticity).",
+      "Wrong. G×E requires comparing MULTIPLE genotypes' reaction norms; non-parallel slopes indicate G×E.",
+      "Wrong. A horizontal genotype-specific line means the genotype produces a fixed phenotype REGARDLESS of environment — opposite of environmentally determined."
+    ],
+    "source": "sg-exam-1 §II; L05 §D"
+  },
+  {
+    "id": "STIM-L05-008",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "D",
+    "topic": "G×E interaction",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "On a plot of reaction norms for two genotypes, the lines have different slopes and cross each other. This indicates:",
+    "choices": [
+      "No genotype-by-environment interaction.",
+      "Genotype-by-environment interaction (V_G×E).",
+      "The trait has zero heritability.",
+      "Both genotypes are canalized."
+    ],
+    "correct": 1,
+    "why": "Non-parallel reaction norms = different genotypes responding to environment differently = G×E. When the lines cross, the ranking of genotypes flips across environments — a strong sign of G×E.",
+    "choice_why": [
+      "Wrong. Parallel reaction norms = no G×E. Non-parallel = G×E.",
+      "Correct. Different slopes = different environmental sensitivity by genotype = G×E.",
+      "Wrong. Heritability and G×E are different concepts; G×E doesn't directly imply h² = 0.",
+      "Wrong. Sloped lines mean both genotypes are PLASTIC — opposite of canalized."
+    ],
+    "source": "sg-exam-1 §II; L05 §D"
+  },
+  {
+    "id": "STIM-L05-009",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "E",
+    "topic": "Selection vs. evolution scenarios",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "In which scenario does NATURAL SELECTION OCCUR but NO EVOLUTION result?",
+    "choices": [
+      "A population shows heritable variation in beak depth, and large-beaked birds reproduce more during a drought.",
+      "A herd of cattle has variation in milk yield due entirely to feed differences (h² = 0); high-yield cows are selected as breeders.",
+      "Bacteria exposed to antibiotics develop resistance through mutation.",
+      "Two populations are separated by a mountain range and experience different selective pressures."
+    ],
+    "correct": 1,
+    "why": "Selection operates whenever individuals differ in reproductive success based on a trait — even if that trait isn't heritable. But if h² = 0, no evolutionary response occurs (R = h² · S = 0). The cattle scenario has selection (high-yield cows preferentially bred) but no evolution (yield differences are purely environmental).",
+    "choice_why": [
+      "Wrong. Heritable variation + differential reproduction → both selection AND evolution.",
+      "Correct. Selection happens (high-yield breeders) but h² = 0 means no evolutionary response.",
+      "Wrong. Bacterial antibiotic resistance involves heritable mutations + selection → both selection and evolution.",
+      "Wrong. Different selective pressures across populations → selection AND evolution (potentially divergent)."
+    ],
+    "source": "sg-exam-1 §I,III; L05 §E"
+  },
+  {
+    "id": "STIM-L05-010",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "B,C",
+    "topic": "h² calculation and interpretation — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "(a) Define narrow-sense heritability (h²) in formula form. (b) A breeder regresses offspring milk yield on mid-parent milk yield and finds a slope of 0.35. What is h²? (c) The breeder selects parents whose mean exceeds the population mean by 8 kg/day. Predict the response R. (d) Explain why selection on the same trait might produce a smaller R in a different population, even if S is identical.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Defines h² = V_A / V_P." },
+        { "pts": 1, "desc": "States h² ≈ 0.35 (the regression slope is the standard estimator of h²)." },
+        { "pts": 1, "desc": "Calculates R = h² · S = 0.35 · 8 = 2.8 kg/day." },
+        { "pts": 1, "desc": "Explains: h² is population-and-environment specific. A different population may have different V_A (e.g., from different allele frequencies) or different V_E (more environmental noise), changing h² and thus R." }
+      ]
+    },
+    "model_answer": "(a) Narrow-sense heritability is defined as h² = V_A / V_P, where V_A is the additive genetic variance and V_P is the total phenotypic variance. (b) The slope of an offspring-on-midparent regression directly estimates h², so h² ≈ 0.35. (c) Using the breeder's equation R = h² · S = 0.35 · 8 = 2.8 kg/day. (d) Heritability is not a fixed property of a trait; it depends on the population's allele frequencies (which set V_A) AND on the environmental variability the population experiences (which sets V_E). A different population could have less additive variance (e.g., reduced V_A from inbreeding or selection that has already exhausted variation) or more environmental noise, lowering h² — so the same selection differential would produce a smaller response.",
+    "source": "sg-exam-1 §II; L05 §B,C,E"
+  },
+  {
+    "id": "STIM-L05-011",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "C",
+    "topic": "Selection differential definition",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "The selection differential S is best defined as:",
+    "choices": [
+      "The fitness advantage of the heterozygote over both homozygotes.",
+      "The difference between the mean trait value of breeders and the mean of the original population.",
+      "The slope of offspring values regressed on parent values.",
+      "The proportion of phenotypic variance that is genetic."
+    ],
+    "correct": 1,
+    "why": "Selection differential S quantifies how 'different' the breeders are from the original population in trait value: S = mean(breeders) − mean(population).",
+    "choice_why": [
+      "Wrong. That is heterozygote advantage / overdominance — a different concept.",
+      "Correct. S = mean breeders − mean population. Larger S = stronger selection on the trait.",
+      "Wrong. That slope is heritability h², not S.",
+      "Wrong. That is broad-sense heritability H²."
+    ],
+    "source": "sg-exam-1 §II; L05 §C"
+  },
+  {
+    "id": "STIM-L05-012",
+    "exam": 1,
+    "lecture": "L05",
+    "section": "D",
+    "topic": "Polyphenism",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Aphids develop into winged or wingless morphs depending on local population density. This is a classic example of:",
+    "choices": [
+      "G×E interaction with no plasticity.",
+      "A polyphenic trait — one genotype producing discrete alternative phenotypes triggered by an environmental cue.",
+      "Independent assortment of alleles at multiple loci.",
+      "Inheritance of acquired characteristics."
+    ],
+    "correct": 1,
+    "why": "Polyphenic traits are a special case of phenotypic plasticity where the genotype produces TWO OR MORE DISCRETE phenotypes depending on environmental conditions — winged vs. wingless aphid morphs are the textbook example.",
+    "choice_why": [
+      "Wrong. There is plasticity here — the genotype produces different phenotypes in different environments.",
+      "Correct. Polyphenic = one genotype, discrete alternative phenotypes triggered by environmental cues.",
+      "Wrong. Independent assortment is a meiotic process, unrelated to environmentally cued morphs.",
+      "Wrong. Polyphenism is genetic plasticity, not Lamarckian acquired-trait inheritance. The capacity for the alternative morphs is itself heritable."
+    ],
+    "source": "sg-exam-1 §II; L05 §D"
+  }
+]

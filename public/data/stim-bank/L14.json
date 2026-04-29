@@ -1,0 +1,231 @@
+[
+  {
+    "id": "STIM-L14-001",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "A",
+    "topic": "Earth's age",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Earth is approximately how old, based on radiometric dating?",
+    "choices": [
+      "4.568 billion years",
+      "13.8 billion years",
+      "4.568 million years",
+      "100 million years"
+    ],
+    "correct": 0,
+    "why": "Earth's age is ~4.568 billion years, established by radiometric dating of meteorites and the oldest terrestrial materials (zircons up to ~4.4 GYA).",
+    "choice_why": [
+      "Correct. ~4.568 GYA is the canonical figure.",
+      "Wrong. ~13.8 GYA is the age of the universe, not Earth.",
+      "Wrong. Earth is billions of years old, not millions.",
+      "Wrong. 100 MYA would be the Cretaceous — middle of the dinosaur era, not Earth's age."
+    ],
+    "source": "sg-exam-3 §1; L14 §A"
+  },
+  {
+    "id": "STIM-L14-002",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "A",
+    "topic": "Radiometric dating",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Radiometric dating works by measuring:",
+    "choices": [
+      "The total amount of radioactivity in a rock.",
+      "The ratio of a parent isotope to its daughter (decay product), using the parent's known half-life.",
+      "The depth at which a rock is buried.",
+      "The color of mineral inclusions in the rock."
+    ],
+    "correct": 1,
+    "why": "Radiometric dating measures the parent-to-daughter isotope ratio. Each radioactive isotope decays at a known rate (half-life), so the ratio reveals how long the rock has been a closed system.",
+    "choice_why": [
+      "Wrong. Total radioactivity isn't informative without knowing the parent and daughter isotopes specifically.",
+      "Correct. Parent-daughter ratio + half-life = age.",
+      "Wrong. Burial depth depends on local sedimentation rate, not absolute age.",
+      "Wrong. Mineral color is unrelated to radiometric dating."
+    ],
+    "source": "sg-exam-3 §1; L14 §A"
+  },
+  {
+    "id": "STIM-L14-003",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "A",
+    "topic": "Biomarkers",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Biomarkers are:",
+    "choices": [
+      "Genetic markers used in modern populations.",
+      "Chemical signatures (often lipid molecules) preserved in ancient rocks that indicate the past presence of specific organisms.",
+      "Radioactive isotopes used for dating.",
+      "Magnetic minerals showing past magnetic field reversals."
+    ],
+    "correct": 1,
+    "why": "Biomarkers are molecular fossils — chemical compounds that originate from specific kinds of organisms and survive in rocks. Bacterial lipids, steranes (steroids), and similar compounds indicate the past presence of organisms ~3.5–3.8 GYA, even before microfossils are reliable.",
+    "choice_why": [
+      "Wrong. That term in modern biology refers to genetic markers, but in evolution/paleontology, biomarkers are ancient chemical signatures.",
+      "Correct. Lipid biomarkers are key evidence of early life.",
+      "Wrong. Isotopes are used for dating, not as biomarkers per se.",
+      "Wrong. Magnetic minerals indicate paleomagnetism, a different tool."
+    ],
+    "source": "sg-exam-3 §1; L14 §A"
+  },
+  {
+    "id": "STIM-L14-004",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "C",
+    "topic": "Devonian — age of fishes",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "The Devonian period (~416–359 MYA) is most associated with which biological event?",
+    "choices": [
+      "The first land plants.",
+      "Diversification of fishes and the origin of land vertebrates (early tetrapods).",
+      "The first dinosaurs.",
+      "The Cambrian explosion."
+    ],
+    "correct": 1,
+    "why": "The Devonian is the 'age of fishes' — major fish diversification — and also marks the origin of land vertebrates (tetrapods), with transitional fossils like Tiktaalik.",
+    "choice_why": [
+      "Wrong. Land plants appeared earlier, in the Ordovician and Silurian.",
+      "Correct. Devonian = age of fishes + early tetrapods.",
+      "Wrong. Dinosaurs originated in the Triassic (~230 MYA), much later.",
+      "Wrong. Cambrian explosion was ~541 MYA, before the Devonian."
+    ],
+    "source": "sg-exam-3 §1; L14 §C"
+  },
+  {
+    "id": "STIM-L14-005",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "B,D",
+    "topic": "K-T boundary",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The K-T (or K-Pg) boundary is significant primarily because it marks:",
+    "choices": [
+      "The first appearance of life on Earth.",
+      "The largest mass extinction in Earth's history.",
+      "An asteroid impact ~66 MYA that caused the extinction of non-avian dinosaurs.",
+      "The transition from the Permian to the Triassic."
+    ],
+    "correct": 2,
+    "why": "The K-T (K-Pg) boundary marks the asteroid impact at the Yucatán (Chicxulub crater) ~66 MYA, identified by the worldwide iridium-rich layer. This event eliminated non-avian dinosaurs and many other groups, opening niches for mammals.",
+    "choice_why": [
+      "Wrong. Earliest life is much earlier, ~3.5–3.8 GYA.",
+      "Wrong. The largest mass extinction is the Permian-Triassic, not K-T.",
+      "Correct. Asteroid impact, ~66 MYA, end-Cretaceous; non-avian dinosaur extinction.",
+      "Wrong. That's the Permian-Triassic boundary, ~252 MYA — different event entirely."
+    ],
+    "source": "sg-exam-3 §1; L14 §D"
+  },
+  {
+    "id": "STIM-L14-006",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "D",
+    "topic": "End-Permian extinction",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The largest mass extinction in Earth's history occurred at the:",
+    "choices": [
+      "K-T (K-Pg) boundary, ~66 MYA, due to asteroid impact.",
+      "End of the Permian, ~252 MYA, eliminating ~95% of marine species.",
+      "End of the Cretaceous, killing all dinosaurs.",
+      "Cambrian explosion, ~541 MYA."
+    ],
+    "correct": 1,
+    "why": "The end-Permian extinction (~252 MYA) is the largest in Earth's history — killing ~95% of marine species. Likely driven by Siberian Trap volcanism, ocean acidification, and climate change. The K-Pg, while famous, was less severe overall.",
+    "choice_why": [
+      "Wrong. The K-Pg extinction is famous (and large) but not the largest.",
+      "Correct. End-Permian is the largest. Often called 'the Great Dying.'",
+      "Wrong. The K-Pg extinction killed non-avian dinosaurs but other major events killed more species.",
+      "Wrong. The Cambrian explosion is a diversification event, not an extinction."
+    ],
+    "source": "sg-exam-3 §1; L14 §D"
+  },
+  {
+    "id": "STIM-L14-007",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "A,D",
+    "topic": "K-T boundary — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 3,
+    "q": "Explain the significance of the K-T (K-Pg) boundary. Include: (a) approximate date, (b) the main proposed cause, (c) the evidence supporting that cause, and (d) one major biological consequence.",
+    "rubric": {
+      "total": 3,
+      "criteria": [
+        { "pts": 1, "desc": "Date and event named: ~66 MYA, end-Cretaceous mass extinction." },
+        { "pts": 1, "desc": "Cause + evidence: asteroid impact at Chicxulub (Yucatán), evidenced by the worldwide iridium-rich sediment layer + the impact crater itself." },
+        { "pts": 1, "desc": "Biological consequence: non-avian dinosaurs eliminated, opening niches for mammals (and other surviving lineages) to undergo adaptive radiation." }
+      ]
+    },
+    "model_answer": "The K-T (K-Pg) boundary marks the end-Cretaceous mass extinction ~66 million years ago. The main proposed cause is an ASTEROID IMPACT at the Chicxulub site on the Yucatán Peninsula. Evidence includes a globally distributed thin sediment layer enriched in IRIDIUM (rare in Earth's crust but common in meteorites), shocked-quartz grains, and the buried Chicxulub crater itself. The biological consequence: non-avian dinosaurs, ammonites, and many marine groups went extinct; the niches they occupied became available, leading to the rapid adaptive radiation of mammals (and birds, the surviving avian dinosaurs) over the following tens of millions of years.",
+    "source": "sg-exam-3 §1; L14 §D"
+  },
+  {
+    "id": "STIM-L14-008",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "C",
+    "topic": "Silurian — first land animals",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "The Silurian period (~444–416 MYA) is best known for:",
+    "choices": [
+      "The first photosynthetic life.",
+      "The first land animals (e.g., millipedes, arthropods).",
+      "The K-T extinction event.",
+      "The origin of mammals."
+    ],
+    "correct": 1,
+    "why": "The Silurian saw the first land animals — primarily arthropods like millipedes — colonizing what was already a partially plant-covered land surface (land plants appeared in late Ordovician).",
+    "choice_why": [
+      "Wrong. Photosynthesis arose much earlier, in the Archean (>2.4 GYA cyanobacteria).",
+      "Correct. Silurian = first land animals.",
+      "Wrong. K-T is end-Cretaceous, ~66 MYA — far later.",
+      "Wrong. Mammals originated in the late Triassic, much later."
+    ],
+    "source": "sg-exam-3 §1; L14 §C"
+  },
+  {
+    "id": "STIM-L14-009",
+    "exam": 3,
+    "lecture": "L14",
+    "section": "B",
+    "topic": "Cambrian explosion",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The Cambrian explosion (~541 MYA) refers to:",
+    "choices": [
+      "A nuclear-scale extinction event in the Cambrian.",
+      "The rapid (~20 MYR) appearance of most modern animal phyla in the fossil record.",
+      "A volcanic eruption that ended the Cambrian.",
+      "The first appearance of plants."
+    ],
+    "correct": 1,
+    "why": "The Cambrian explosion is the rapid (geologically — over ~20 MYR) appearance of most modern animal phyla in the fossil record. It coincides with the evolution of hard skeletal parts that fossilize well.",
+    "choice_why": [
+      "Wrong. 'Explosion' is a metaphor for rapid diversification, not literal.",
+      "Correct. Rapid appearance of most modern animal phyla.",
+      "Wrong. Volcanism is not the Cambrian event.",
+      "Wrong. Plants colonized land later (Ordovician)."
+    ],
+    "source": "sg-exam-3 §1; L14 §B"
+  }
+]

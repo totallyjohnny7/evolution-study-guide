@@ -1,0 +1,284 @@
+[
+  {
+    "id": "STIM-L20-001",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "A",
+    "topic": "What evolutionary medicine is",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Evolutionary medicine differs from conventional medicine primarily by:",
+    "choices": [
+      "Replacing modern medical practice with paleolithic remedies.",
+      "Asking WHY (in evolutionary terms) bodies are vulnerable to disease, complementing the standard medical question of HOW (mechanism).",
+      "Focusing only on infectious disease.",
+      "Using evolutionary concepts to oppose vaccination and antibiotics."
+    ],
+    "correct": 1,
+    "why": "Evolutionary medicine adds the ULTIMATE (evolutionary) explanation to the proximate (mechanistic) explanation. Both are needed. It complements, not replaces, mainstream medicine.",
+    "choice_why": [
+      "Wrong. Evolutionary medicine integrates with modern medicine — it doesn't reject it.",
+      "Correct. The proximate-vs-ultimate distinction is the core idea.",
+      "Wrong. Evolutionary medicine spans infectious disease, chronic disease, cancer, mental health, and more.",
+      "Wrong. Evolutionary medicine actually informs better antibiotic stewardship and vaccine design."
+    ],
+    "source": "sg-exam-3 §7; L20 §A"
+  },
+  {
+    "id": "STIM-L20-002",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "B",
+    "topic": "Antibiotic resistance basics",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Antibiotic resistance evolves in bacteria most fundamentally because:",
+    "choices": [
+      "Antibiotics directly cause mutations conferring resistance.",
+      "Resistance mutations occur randomly and pre-exist in bacterial populations; antibiotics select for them by killing susceptible cells.",
+      "Bacteria detect antibiotics and choose to become resistant.",
+      "Resistance can only be inherited from parent bacteria, never transferred between species."
+    ],
+    "correct": 1,
+    "why": "The classic random-mutation + non-random-selection story. Resistance variants exist at low frequency in any large bacterial population due to spontaneous mutation; antibiotic exposure removes susceptible bacteria, leaving resistant ones to multiply.",
+    "choice_why": [
+      "Wrong. Antibiotics don't direct mutations — that would be Lamarckian.",
+      "Correct. Random mutation + selection.",
+      "Wrong. Bacteria don't 'choose' anything; they have no decision-making capacity in this sense.",
+      "Wrong. Horizontal gene transfer (plasmids, transposons) actually spreads resistance ACROSS species, accelerating its spread."
+    ],
+    "source": "sg-exam-3 §7; L20 §B"
+  },
+  {
+    "id": "STIM-L20-003",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "B",
+    "topic": "Combination therapy",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "HIV is treated with COMBINATION antiretroviral therapy (multiple drugs simultaneously) rather than a single drug. What is the evolutionary rationale?",
+    "choices": [
+      "Multiple drugs improve patient compliance.",
+      "Resistance to multiple drugs simultaneously requires multiple INDEPENDENT mutations; the joint probability of all occurring is the product of individual probabilities, making multi-drug resistance essentially impossible.",
+      "Multiple drugs cure HIV completely.",
+      "Multiple drugs work in different organs."
+    ],
+    "correct": 1,
+    "why": "If single-drug resistance requires probability ~10⁻⁹ per generation, three-drug resistance requires ~10⁻²⁷ — vanishingly unlikely in any single patient's viral population. Combination therapy locks in suppression by exploiting this multiplicative probability barrier.",
+    "choice_why": [
+      "Wrong. Multiple drugs typically REDUCE compliance (more pills, more side effects).",
+      "Correct. The probability multiplication is the textbook rationale.",
+      "Wrong. Combination therapy SUPPRESSES HIV but does not cure it; the latent reservoir remains.",
+      "Wrong. The drugs act on different VIRAL targets, not different organs."
+    ],
+    "source": "sg-exam-3 §7; L20 §B"
+  },
+  {
+    "id": "STIM-L20-004",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "C",
+    "topic": "Virulence-transmission trade-off",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Why does the common cold (respiratory, directly transmitted) tend to evolve toward MILDER virulence, while cholera (waterborne) does not face the same pressure?",
+    "choices": [
+      "The common cold evolved earlier than cholera.",
+      "Directly transmitted pathogens need a healthy, mobile host to spread; very high virulence kills the host before transmission. Waterborne pathogens transmit even from immobile sick hosts.",
+      "Cholera bacteria are larger than cold viruses.",
+      "The common cold has higher mutation rates."
+    ],
+    "correct": 1,
+    "why": "Mode of transmission shapes optimal virulence. Direct host-to-host transmission requires the host to be active enough to spread the pathogen; waterborne transmission depends on contaminating water sources, which an immobile sick host can do well. Different optima follow.",
+    "choice_why": [
+      "Wrong. Evolutionary timing is irrelevant to optimal virulence under different transmission modes.",
+      "Correct. Ewald's transmission-mode hypothesis.",
+      "Wrong. Pathogen size doesn't determine virulence-transmission trade-offs.",
+      "Wrong. Mutation rates affect rate of evolution, not the equilibrium virulence under selection."
+    ],
+    "source": "sg-exam-3 §7; L20 §C"
+  },
+  {
+    "id": "STIM-L20-005",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "D",
+    "topic": "Sickle-cell heterozygote advantage",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The sickle-cell allele (HbS) causes severe anemia in homozygotes. Yet it persists at high frequencies in malaria-endemic regions. Why?",
+    "choices": [
+      "Mutation pressure constantly regenerates the HbS allele.",
+      "Heterozygotes (HbA/HbS) are protected against malaria; the heterozygous fitness advantage outweighs the homozygous cost.",
+      "Genetic drift in small populations randomly increased HbS frequency.",
+      "The HbS allele is dominant for malaria resistance."
+    ],
+    "correct": 1,
+    "why": "Heterozygote advantage (overdominance) maintains both alleles in the population: homozygous HbS suffers anemia; homozygous HbA is malaria-vulnerable; heterozygous HbA/HbS gets malaria resistance without severe anemia. Selection by malaria sustains the heterozygote-advantage equilibrium.",
+    "choice_why": [
+      "Wrong. Mutation alone can't sustain such high frequencies; selection-mutation balance gives much lower equilibria.",
+      "Correct. Heterozygote advantage is the textbook explanation.",
+      "Wrong. The pattern correlates with malaria endemicity, not random drift.",
+      "Wrong. Malaria resistance in heterozygotes is partial; the allele's heterozygous effect is what creates the advantage, not classical dominance."
+    ],
+    "source": "sg-exam-3 §7; L20 §D"
+  },
+  {
+    "id": "STIM-L20-006",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "E",
+    "topic": "Mismatch hypothesis",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Type 2 diabetes is rare in traditional hunter-gatherer populations and prevalent in industrialized populations. Which evolutionary explanation best fits?",
+    "choices": [
+      "Hunter-gatherers have higher mutation rates that prevent diabetes.",
+      "Mismatch — traits adaptive in ancestral environments (efficient fat storage, preference for sweet/fat foods, sedentary tolerance) become pathogenic in modern food-abundant, sedentary conditions.",
+      "Industrialized populations have weaker immune systems.",
+      "Hunter-gatherers do not have the genes for diabetes."
+    ],
+    "correct": 1,
+    "why": "Insulin sensitivity, fat storage, and food preferences evolved under conditions of food scarcity and high physical activity. In modern conditions of abundance and inactivity, the same physiology produces metabolic dysfunction.",
+    "choice_why": [
+      "Wrong. Mutation rates aren't the issue.",
+      "Correct. Classic mismatch hypothesis applied to diabetes.",
+      "Wrong. Immune system differences don't explain type 2 diabetes specifically.",
+      "Wrong. Hunter-gatherers have the same genes; differences lie in environmental triggers."
+    ],
+    "source": "sg-exam-3 §7; L20 §E"
+  },
+  {
+    "id": "STIM-L20-007",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "F",
+    "topic": "Cancer as somatic evolution",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Why does aggressive chemotherapy that initially shrinks a tumor often lead to relapse with drug-resistant cancer?",
+    "choices": [
+      "Chemotherapy causes new cancer mutations.",
+      "Chemotherapy is a strong selective pressure — it kills susceptible tumor cells but leaves resistant subclones to expand without competition.",
+      "Cancers learn from chemotherapy.",
+      "The drug stops working after a few weeks regardless."
+    ],
+    "correct": 1,
+    "why": "Tumor cell populations are heterogeneous, with rare resistant subclones present before treatment. Chemotherapy applies strong selection — sensitive cells die, resistant cells multiply. Relapse with drug-resistant tumors is the classic somatic-evolution outcome.",
+    "choice_why": [
+      "Wrong. Chemotherapy is mutagenic in some cases but the relapse problem is primarily SELECTIVE, not mutational.",
+      "Correct. Cancer evolution under treatment selection mirrors antibiotic resistance evolution.",
+      "Wrong. Tumors don't 'learn' — they evolve.",
+      "Wrong. Drug efficacy doesn't independently fade; the population evolves around the drug."
+    ],
+    "source": "sg-exam-3 §7; L20 §F"
+  },
+  {
+    "id": "STIM-L20-008",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "B",
+    "topic": "Horizontal gene transfer",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Resistance genes can spread between bacterial species via horizontal gene transfer (HGT). Which mechanism is NOT a form of HGT?",
+    "choices": [
+      "Conjugation (plasmid transfer through a pilus).",
+      "Transformation (uptake of free DNA from the environment).",
+      "Transduction (DNA transfer via bacteriophages).",
+      "Vertical transmission (parent-to-daughter cell during division)."
+    ],
+    "correct": 3,
+    "why": "Vertical transmission is parent-to-offspring — that's NOT horizontal. The three main HGT mechanisms are conjugation (plasmid transfer), transformation (free DNA uptake), and transduction (phage-mediated transfer).",
+    "choice_why": [
+      "Wrong. Conjugation IS HGT.",
+      "Wrong. Transformation IS HGT.",
+      "Wrong. Transduction IS HGT.",
+      "Correct. Vertical transmission is parent-to-offspring (descent), not horizontal."
+    ],
+    "source": "sg-exam-3 §7; L20 §B"
+  },
+  {
+    "id": "STIM-L20-009",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "B,C",
+    "topic": "Antibiotic resistance and virulence — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "Pathogens evolve under medical pressure. (a) Explain why heavy antibiotic use selects for resistance using random-mutation logic. (b) Why does combination therapy slow this process? (c) How does mode of transmission shape virulence evolution? (d) Give one example of a directly-transmitted pathogen and one of a vector-borne or waterborne pathogen, predicting expected virulence trends.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Random mutation + selection: resistance mutations occur spontaneously at low frequency; antibiotics kill susceptible bacteria, leaving resistant rare variants to multiply." },
+        { "pts": 1, "desc": "Combination therapy: requires resistance to multiple drugs simultaneously, which has joint probability = product of individual probabilities — vanishingly small." },
+        { "pts": 1, "desc": "Mode of transmission: directly transmitted pathogens need a healthy mobile host; vector-borne or waterborne pathogens don't, so they can evolve higher virulence." },
+        { "pts": 1, "desc": "Examples + predictions: e.g., common cold (directly transmitted) → moderate or low virulence; cholera (waterborne) → high virulence. Or HIV (sexually transmitted) → moderate; malaria (vector-borne) → high." }
+      ]
+    },
+    "model_answer": "(a) Antibiotic resistance evolves because resistance MUTATIONS OCCUR RANDOMLY at low frequency in large bacterial populations (independent of antibiotic exposure). When antibiotics are applied, susceptible bacteria die while rare resistant variants survive and multiply, raising the frequency of resistance — random mutation plus non-random selection. (b) COMBINATION THERAPY uses multiple drugs simultaneously. To survive, a bacterium must carry resistance to ALL drugs at once. The joint probability is the PRODUCT of individual probabilities — for three drugs at 10⁻⁹ each, joint resistance is 10⁻²⁷, vanishingly rare. (c) MODE OF TRANSMISSION shapes optimal virulence: directly-transmitted pathogens need a mobile, healthy host to spread, so very high virulence is selected against; vector-borne or waterborne pathogens transmit even from incapacitated hosts, so virulence can stay high. (d) EXAMPLES: the common cold (rhinovirus, directly respiratory) — predicted to evolve toward MODERATE virulence; cholera (waterborne) — predicted to evolve toward HIGH virulence. Improvements in clean water supply (Ewald) should select for less-virulent cholera strains.",
+    "source": "sg-exam-3 §7; L20 §B,C"
+  },
+  {
+    "id": "STIM-L20-010",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "D",
+    "topic": "MHC balancing selection",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "MHC genes show extreme polymorphism — some loci have >100 alleles in human populations. The most likely cause is:",
+    "choices": [
+      "Random mutation alone, with no selection.",
+      "Negative frequency-dependent (balancing) selection from coevolving pathogens — rare MHC alleles are favored because pathogens haven't adapted to them yet.",
+      "Genetic drift in large populations.",
+      "Gene conversion homogenizing the locus."
+    ],
+    "correct": 1,
+    "why": "MHC presents pathogen-derived peptides to T cells. Pathogens evolve to evade common MHC alleles, so individuals carrying RARE MHC alleles get better immune surveillance — negative frequency-dependent selection (a form of balancing selection) maintains exceptional polymorphism.",
+    "choice_why": [
+      "Wrong. Mutation alone can't sustain dozens of alleles at high frequency; the selection-mutation balance equilibrium would be much lower.",
+      "Correct. Pathogen-driven balancing selection.",
+      "Wrong. Drift removes variation; it cannot generate it.",
+      "Wrong. Gene conversion can affect MHC sequence evolution but doesn't generate the high polymorphism by itself."
+    ],
+    "source": "sg-exam-3 §7; L20 §D"
+  },
+  {
+    "id": "STIM-L20-011",
+    "exam": 3,
+    "lecture": "L20",
+    "section": "E",
+    "topic": "Aging and selection",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Most cancers occur in older individuals. From an evolutionary perspective, why has selection failed to eliminate cancer susceptibility?",
+    "choices": [
+      "Cancer was unknown in ancestral populations.",
+      "Selection's strength declines with age — late-life diseases like most cancers occur after most reproduction has happened, so selection cannot effectively act against them.",
+      "All organisms have an upper age limit.",
+      "Cancer is contagious in some species."
+    ],
+    "correct": 1,
+    "why": "This is the same logic as MEDAWAR'S MUTATION ACCUMULATION theory of aging applied to cancer: late-acting deleterious effects escape selection because the affected individuals have already reproduced. There is also ANTAGONISTIC PLEIOTROPY: rapid cell division beneficial early may carry late-life cancer risk.",
+    "choice_why": [
+      "Wrong. Cancer existed in ancestral populations; we have evidence in fossil bones and ancient DNA.",
+      "Correct. Selection's age-dependence is the standard answer.",
+      "Wrong. There's no fixed upper limit; selection's weakening with age is what permits late-onset diseases to persist.",
+      "Wrong. Most cancers are not contagious; this isn't the relevant mechanism."
+    ],
+    "source": "sg-exam-3 §7; L20 §E,F (also L12 §C)"
+  }
+]

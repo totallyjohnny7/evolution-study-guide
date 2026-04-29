@@ -1,0 +1,284 @@
+[
+  {
+    "id": "STIM-L03-001",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "A",
+    "topic": "Genome composition",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Which of the following is NOT considered part of the genome?",
+    "choices": [
+      "Protein-coding genes.",
+      "Pseudogenes.",
+      "Mobile genetic elements.",
+      "Free amino acids in the cytoplasm."
+    ],
+    "correct": 3,
+    "why": "The genome is the entire DNA content of an organism — coding genes, noncoding sequences, pseudogenes, and mobile elements all qualify. Free amino acids are protein building blocks, not DNA, and are not part of the genome.",
+    "choice_why": [
+      "Wrong choice — protein-coding genes ARE part of the genome.",
+      "Wrong choice — pseudogenes ARE part of the genome (just nonfunctional).",
+      "Wrong choice — mobile genetic elements ARE part of the genome.",
+      "Correct. Free amino acids are metabolites, not DNA, and so are not part of the genome."
+    ],
+    "source": "sg-exam-1 §II; L03 §A"
+  },
+  {
+    "id": "STIM-L03-002",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "A",
+    "topic": "C-value paradox",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Some single-celled amoebas have genomes more than 100× larger than the human genome. What does this fact most directly illustrate?",
+    "choices": [
+      "Amoebas are evolutionarily more advanced than humans.",
+      "Genome size does not correlate with organismal complexity.",
+      "Amoebas have more protein-coding genes than humans.",
+      "The amoeba genome is mostly artifact and does not actually replicate."
+    ],
+    "correct": 1,
+    "why": "This is the classic C-value paradox: genome size varies wildly across eukaryotes and does not track organismal complexity. Most of the size difference is in noncoding DNA (transposons, repeats, expanded introns), not in gene count.",
+    "choice_why": [
+      "Wrong. There is no meaningful sense in which any taxon is 'more advanced.' Evolution is not progressive.",
+      "Correct. The C-value paradox is the textbook lesson here.",
+      "Wrong. Larger genomes typically reflect more noncoding DNA, not more genes.",
+      "Wrong. The DNA is real and is replicated each generation; that is precisely why the size variation is informative."
+    ],
+    "source": "sg-exam-1 §II; L03 §A"
+  },
+  {
+    "id": "STIM-L03-003",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "B",
+    "topic": "Levels of gene regulation",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "DNA methylation acts at which level of gene regulation?",
+    "choices": [
+      "Pre-transcriptional",
+      "Transcriptional",
+      "Post-transcriptional",
+      "Post-translational"
+    ],
+    "correct": 0,
+    "why": "DNA methylation modifies cytosine residues in DNA (typically at CpG sites), making chromatin less accessible to transcription machinery — it controls whether the gene CAN be transcribed. That makes it pre-transcriptional.",
+    "choice_why": [
+      "Correct. DNA methylation alters DNA accessibility BEFORE transcription begins.",
+      "Wrong. Transcriptional regulation is about transcription factors binding regulatory sequences once chromatin is accessible.",
+      "Wrong. Post-transcriptional means acting on the mRNA after it's made (splicing, miRNA).",
+      "Wrong. Post-translational acts on proteins (phosphorylation, ubiquitination)."
+    ],
+    "source": "sg-exam-1 §II; L03 §B"
+  },
+  {
+    "id": "STIM-L03-004",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "B",
+    "topic": "MicroRNA",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "A microRNA binds to a complementary sequence in an mRNA and triggers its degradation. This is an example of:",
+    "choices": [
+      "Pre-transcriptional regulation",
+      "Transcriptional regulation",
+      "Post-transcriptional regulation",
+      "Post-translational regulation"
+    ],
+    "correct": 2,
+    "why": "MicroRNAs act on mRNA AFTER it has been transcribed but BEFORE (or instead of) translation — by definition, post-transcriptional.",
+    "choice_why": [
+      "Wrong. miRNA acts on mRNA, which is downstream of transcription.",
+      "Wrong. Transcriptional regulation acts on transcription itself, not on the mRNA product.",
+      "Correct. Acting on the mRNA product is post-transcriptional regulation.",
+      "Wrong. Post-translational acts on proteins, not on the mRNA."
+    ],
+    "source": "sg-exam-1 §II; L03 §B"
+  },
+  {
+    "id": "STIM-L03-005",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "B",
+    "topic": "Histone modification",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Acetylation of histone tails generally:",
+    "choices": [
+      "Tightens chromatin and represses transcription.",
+      "Loosens chromatin and promotes transcription.",
+      "Triggers degradation of the protein the gene encodes.",
+      "Causes alternative splicing of the resulting mRNA."
+    ],
+    "correct": 1,
+    "why": "Histone acetylation neutralizes positive charges on histone tails, weakening their grip on DNA, opening chromatin, and making genes more accessible for transcription.",
+    "choice_why": [
+      "Wrong. That description fits histone deacetylation or some methylation marks, not acetylation.",
+      "Correct. Acetylation = open chromatin = active transcription. (Mnemonic: 'acetyl = active.')",
+      "Wrong. Histone modification is pre-transcriptional, not post-translational on the gene's protein product.",
+      "Wrong. Splicing is regulated post-transcriptionally, not by histone modification directly."
+    ],
+    "source": "sg-exam-1 §II; L03 §B"
+  },
+  {
+    "id": "STIM-L03-006",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "C",
+    "topic": "Dominance and selection rate",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "A new beneficial allele appears in a population at frequency 0.001. If this allele is RECESSIVE, what is most likely to happen in early generations?",
+    "choices": [
+      "It will spread rapidly because heterozygotes show its phenotype.",
+      "It will spread slowly because most copies are masked in heterozygotes and hidden from selection.",
+      "It will be eliminated immediately due to genetic drift.",
+      "It will become dominant after a few generations."
+    ],
+    "correct": 1,
+    "why": "When a recessive allele is rare, almost all copies are in heterozygotes (Aa). Heterozygotes show the dominant phenotype, so selection cannot 'see' the recessive allele. It increases very slowly until it becomes common enough that homozygotes appear at appreciable frequency.",
+    "choice_why": [
+      "Wrong. Heterozygotes show the DOMINANT phenotype, not the recessive one. The new recessive allele is masked.",
+      "Correct. Rare recessive beneficial alleles increase slowly because most copies hide in heterozygotes.",
+      "Wrong. Drift can eliminate any rare allele but is not a special property of recessive alleles.",
+      "Wrong. An allele's dominance/recessivity is a function of its molecular effect, not a mutable property over generations."
+    ],
+    "source": "sg-exam-1 §II; L03 §C"
+  },
+  {
+    "id": "STIM-L03-007",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "C",
+    "topic": "Additive alleles",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "If alleles at a locus act additively, the phenotype of an Aa heterozygote is most likely:",
+    "choices": [
+      "Identical to AA homozygote.",
+      "Identical to aa homozygote.",
+      "Intermediate between AA and aa.",
+      "Wholly different from either homozygote."
+    ],
+    "correct": 2,
+    "why": "Additive alleles each contribute INCREMENTALLY to the phenotype, with no dominance. The heterozygote, having one dose of each allele, sits exactly in between the two homozygotes.",
+    "choice_why": [
+      "Wrong. That would be A dominant over a — not additive.",
+      "Wrong. That would be a dominant over A — not additive.",
+      "Correct. Additive means linear dose-response: 0/1/2 copies of A → low/intermediate/high phenotype.",
+      "Wrong. That would be overdominance/heterosis or some other non-additive interaction."
+    ],
+    "source": "sg-exam-1 §II; L03 §C"
+  },
+  {
+    "id": "STIM-L03-008",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "D",
+    "topic": "Mutation as ultimate source of variation",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Why is mutation considered the 'ultimate source' of genetic variation?",
+    "choices": [
+      "Mutation is the only process that can change allele frequencies.",
+      "Mutation is the only process that creates new alleles; selection, drift, and gene flow can only act on existing variation.",
+      "Mutation is always beneficial in the long term.",
+      "Mutation generates more variation than any other process."
+    ],
+    "correct": 1,
+    "why": "Mutation alone can introduce NEW alleles into a population. Selection, drift, gene flow, and recombination only sort or shuffle existing variation. Without mutation, populations eventually exhaust their genetic variation.",
+    "choice_why": [
+      "Wrong. Selection, drift, gene flow, and non-random mating all change allele frequencies. Mutation is unique in creating NEW alleles.",
+      "Correct. Mutation is the only NEW source. Other forces sort existing variation.",
+      "Wrong. Most mutations are neutral or deleterious. Beneficial mutations are rare.",
+      "Wrong. Recombination shuffles existing variation into many novel combinations and can generate more phenotypic diversity per generation than mutation alone."
+    ],
+    "source": "sg-exam-1 §I,II; L03 §D"
+  },
+  {
+    "id": "STIM-L03-009",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "D",
+    "topic": "Mutation randomness — applied to flu",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Influenza virus rapidly evolves resistance to antiviral drugs. Which statement best captures the role of mutation in this process?",
+    "choices": [
+      "Antiviral exposure causes the virus to mutate toward resistance.",
+      "Mutations conferring resistance arise by chance independently of drug presence; selection then favors them when drugs are used.",
+      "The drug induces directed mutations only in the genes that confer resistance.",
+      "Resistance is acquired during the host's lifetime and passed to offspring viruses through epigenetic inheritance."
+    ],
+    "correct": 1,
+    "why": "This is a textbook test of mutation randomness. Resistance mutations occur whether or not drugs are used; the drug is the SELECTIVE FORCE that favors them once they appear. Mutation generates variation; selection sorts it.",
+    "choice_why": [
+      "Wrong. Drugs do not direct mutations toward resistance — that would be Lamarckian.",
+      "Correct. Random mutation + non-random selection is the standard explanation.",
+      "Wrong. There is no mechanism by which a drug would specifically mutate the genes that resist it.",
+      "Wrong. This is Lamarckian reasoning. Acquired resistance is not how viruses evolve."
+    ],
+    "source": "sg-exam-1 §I,II,IV; L03 §D"
+  },
+  {
+    "id": "STIM-L03-010",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "B",
+    "topic": "Multi-level regulation — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "Gene expression is regulated at four broadly different levels. Name each level and give one example of a regulatory mechanism that acts at that level.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Pre-transcriptional level: any of DNA methylation, histone modification (acetylation/methylation), chromatin remodeling." },
+        { "pts": 1, "desc": "Transcriptional level: transcription factor binding to promoters/enhancers, RNA polymerase recruitment." },
+        { "pts": 1, "desc": "Post-transcriptional level: alternative splicing, microRNA-mediated mRNA degradation, mRNA stability/localization." },
+        { "pts": 1, "desc": "Post-translational level: phosphorylation, ubiquitination, proteolytic cleavage, protein localization." }
+      ]
+    },
+    "model_answer": "PRE-TRANSCRIPTIONAL: DNA methylation at CpG sites silences gene access by altering chromatin packing. Histone modifications (e.g., histone acetylation opening chromatin, H3K9 methylation closing it) act at this level. TRANSCRIPTIONAL: transcription factors bind promoters and enhancers to recruit or block RNA polymerase II, controlling the rate of mRNA synthesis. POST-TRANSCRIPTIONAL: alternative splicing generates multiple mRNA isoforms from one gene; microRNAs bind complementary mRNAs to suppress translation or trigger degradation. POST-TRANSLATIONAL: protein phosphorylation activates or inactivates enzymes; ubiquitination tags proteins for degradation by the proteasome.",
+    "source": "sg-exam-1 §II; L03 §B"
+  },
+  {
+    "id": "STIM-L03-011",
+    "exam": 1,
+    "lecture": "L03",
+    "section": "C",
+    "topic": "Pseudogene",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "A pseudogene in the human genome is most accurately described as:",
+    "choices": [
+      "A protein-coding gene that produces a non-functional protein.",
+      "A nonfunctional remnant of a once-functional gene, typically disabled by stop codons or frameshifts.",
+      "A regulatory sequence that controls neighboring genes.",
+      "A DNA sequence found in viruses but not in human chromosomes."
+    ],
+    "correct": 1,
+    "why": "A pseudogene retains sequence similarity to a known gene but is no longer functional — usually because of premature stop codons, frameshift mutations, or loss of regulatory elements that prevent transcription.",
+    "choice_why": [
+      "Wrong. Pseudogenes typically aren't transcribed/translated at all — and if transcribed, they don't produce a functional protein because of structural disruption.",
+      "Correct. Pseudogenes are evolutionary 'fossils' of formerly functional genes.",
+      "Wrong. That's a regulatory sequence, distinct from a pseudogene.",
+      "Wrong. Pseudogenes are part of the host's own genome, not viral DNA."
+    ],
+    "source": "sg-exam-1 §II; L03 §A"
+  }
+]

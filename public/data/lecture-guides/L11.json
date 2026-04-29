@@ -1,0 +1,90 @@
+{
+  "title": "Sex and Sexual Selection",
+  "intro": "Why does sex exist at all, given its costs? Once it exists, why do males and females differ so dramatically? This lecture covers the evolution of sexual reproduction, the origin of anisogamy, and the consequences — sexual selection, sexual conflict, sperm competition.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "The cost of sex and why sex evolved anyway",
+      "overview": "Sexual reproduction has obvious costs (the 'twofold cost of males,' searching for mates, recombination breaking up good gene combinations) — yet sex is widespread. The benefits must outweigh these costs.",
+      "key_points": [
+        "TWOFOLD COST OF SEX (Maynard Smith): in sexual species, males don't directly produce offspring, so a sexual mother passes on only HALF as many genes per offspring as an asexual one would.",
+        "BENEFIT 1 — Genetic diversity through recombination: sexual reproduction shuffles alleles, creating new combinations selection can act on.",
+        "BENEFIT 2 — MULLER'S RATCHET: in asexual lineages, deleterious mutations accumulate irreversibly; sex purges them via recombination.",
+        "BENEFIT 3 — RED QUEEN HYPOTHESIS: parasites coevolve rapidly with hosts; sexual recombination lets hosts 'run faster' to stay ahead of parasites.",
+        "BENEFIT 4 — Sib competition reduction: sexual offspring are genetically diverse, reducing competition among siblings for the same niche."
+      ],
+      "key_terms": [
+        { "term": "Twofold cost of sex", "def": "Sexual females produce half the gene-copies per offspring that asexual ones would, because they share parentage with males." },
+        { "term": "Muller's ratchet", "def": "In asexual populations, deleterious mutations accumulate over generations; without recombination, the mutation-free class is irreversibly lost." },
+        { "term": "Red Queen hypothesis", "def": "Sex provides genetic novelty needed to keep up with rapidly evolving parasites; named after Lewis Carroll's Red Queen ('it takes all the running you can do, to keep in the same place')." }
+      ],
+      "exam_traps": [
+        "The 'twofold cost' is sometimes phrased as the cost of MALES, sometimes the cost of SEX. The cost is real either way — sexual mothers transmit half the gene copies per offspring vs. asexual.",
+        "Muller's ratchet specifically requires that recombination be ABSENT. Bacteria recombine via horizontal gene transfer and can purge mutations by other routes."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Anisogamy — the foundation of male and female",
+      "overview": "ANISOGAMY = unequal gamete sizes. Females (by definition) produce few large gametes (eggs); males produce many small gametes (sperm). This asymmetry is the foundation of nearly all sex differences.",
+      "key_points": [
+        "ANISOGAMY = unequal gamete sizes; the OPERATIONAL DEFINITION of male and female (rather than secondary sex characteristics).",
+        "Female = the sex that makes the larger, costlier gamete; male = the sex with the smaller, cheaper gamete.",
+        "Asymmetric gamete investment leads to asymmetric reproductive strategies: females typically more selective, males typically compete for mates.",
+        "Anisogamy evolved in the deep past as a stable evolutionary endpoint of disruptive selection on gamete size."
+      ],
+      "key_terms": [
+        { "term": "Anisogamy", "def": "Unequal gamete sizes — the foundation of biological sex differences." },
+        { "term": "Isogamy", "def": "Equal-sized gametes — found in some algae and fungi; the ancestral state from which anisogamy evolved." }
+      ],
+      "exam_traps": [
+        "Sex is defined by GAMETE SIZE, not by secondary sex characteristics, behavior, or chromosomes. Don't define 'female' as 'the one that nurtures' — that's downstream of anisogamy.",
+        "Anisogamy is not 'why' sex exists; it's a feature of HOW sex is organized once it exists."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Sexual selection — Darwin's second mechanism",
+      "overview": "Sexual selection is selection on traits that increase MATING success rather than survival. It explains otherwise-puzzling traits (peacock tails, antlers) that reduce survival.",
+      "key_points": [
+        "SEXUAL SELECTION = selection arising from competition for mates, distinct from survival selection (though both fall under 'natural selection' in a broad sense).",
+        "INTRASEXUAL selection (male-male competition): direct contests between same-sex individuals for access to mates. Produces weapons, large body size in the more competitive sex.",
+        "INTERSEXUAL selection (mate choice, typically female choice): one sex chooses mates based on signal traits. Produces ornaments — peacock tails, bird songs.",
+        "Sexual selection can OPPOSE survival selection: showy ornaments attract mates AND predators. Net fitness = mating gain − survival cost.",
+        "FISHERIAN RUNAWAY: an arbitrary preference for a trait can amplify itself if 'sexy' offspring inherit both the trait and the preference (positive feedback)."
+      ],
+      "key_terms": [
+        { "term": "Sexual selection", "def": "Selection for traits increasing mating success rather than survival." },
+        { "term": "Intrasexual selection", "def": "Same-sex competition for mates (e.g., male-male combat)." },
+        { "term": "Intersexual selection", "def": "Mate choice — one sex selects partners based on signal traits." },
+        { "term": "Sexual dimorphism", "def": "Difference in form between males and females; often a product of sexual selection." }
+      ],
+      "exam_traps": [
+        "Sexual selection IS a form of natural selection — Darwin distinguished them but they share the same logic of differential reproduction.",
+        "Sexually selected traits (peacock tails) often REDUCE survival. Their fitness gain comes from mating, which more than offsets the survival cost."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Sexual conflict and sperm competition",
+      "overview": "Male and female evolutionary interests often diverge. Sexual CONFLICT — selection pressures pulling males and females in different directions — drives much of the elaborate biology of mating.",
+      "key_points": [
+        "SEXUAL CONFLICT: males benefit from many matings; females typically benefit from FEW matings with HIGH-quality partners. Their interests diverge.",
+        "SPERM COMPETITION: when females mate with multiple males, sperm from different males compete to fertilize her eggs. Drives evolution of large testes, long sperm, mating plugs, and sperm-removal devices.",
+        "Cryptic FEMALE choice: females can bias paternity post-copulation through reproductive-tract physiology.",
+        "ANTAGONISTIC COEVOLUTION: an arms race within species — male traits coercing females, female traits resisting. Examples: ducks (sexually antagonistic genital coevolution), bedbugs (traumatic insemination).",
+        "Sexual conflict can drive RAPID evolutionary change in reproductive structures."
+      ],
+      "key_terms": [
+        { "term": "Sexual conflict", "def": "Mismatch between the reproductive interests of males and females, generating opposing selection pressures." },
+        { "term": "Sperm competition", "def": "Competition between sperm from different males to fertilize the same female's eggs." },
+        { "term": "Cryptic female choice", "def": "Female biasing paternity after mating, via reproductive-tract mechanisms." },
+        { "term": "Antagonistic coevolution", "def": "Reciprocal evolutionary change between sexes (or between species) driven by conflicting interests." }
+      ],
+      "exam_traps": [
+        "Sexual conflict is INTRA-species coevolution — males and females are members of the same species and yet are evolutionary antagonists.",
+        "Sperm competition implies polyandry (multiple mating by females). In strictly monogamous species, sperm competition is weak."
+      ]
+    }
+  ]
+}

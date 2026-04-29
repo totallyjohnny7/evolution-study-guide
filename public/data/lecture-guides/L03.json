@@ -1,0 +1,90 @@
+{
+  "title": "Genes and Heritable Variation",
+  "intro": "Evolution requires heritable variation. This lecture is the genetics-and-genomics foundation: what genes ARE, how genomes are built, how alleles differ in their phenotypic effects, and how gene expression is regulated at multiple levels.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Genome architecture — coding vs. noncoding DNA",
+      "overview": "Eukaryotic genomes are mostly NOT made of protein-coding genes. The bulk is noncoding DNA — pseudogenes, mobile elements, regulatory sequences, and stretches with no known function. This matters because evolution acts on genome content as a whole.",
+      "key_points": [
+        "Protein-coding genes typically make up only a small fraction of eukaryotic genomes (humans: ~1–2% of the genome).",
+        "Noncoding DNA includes pseudogenes (broken former genes), mobile genetic elements (transposons, retroelements), regulatory sequences, and repetitive DNA.",
+        "GENOME SIZE does NOT correlate with organismal complexity (the C-value paradox) — some amoebas have larger genomes than humans.",
+        "Pseudogenes are evolutionary fossils — once functional, now not — and provide direct evidence of evolutionary history."
+      ],
+      "key_terms": [
+        { "term": "Pseudogene", "def": "A nonfunctional sequence resembling a known gene, usually disabled by stop codons, frameshifts, or loss of regulation." },
+        { "term": "Mobile genetic element (MGE)", "def": "DNA sequences that can change position within a genome — transposons, retroelements (LINEs, SINEs)." },
+        { "term": "C-value paradox", "def": "The observation that genome size does not correlate with organismal complexity." }
+      ],
+      "exam_traps": [
+        "Genome size ≠ gene count ≠ complexity. The study guide flags this directly: 'genome size does not necessarily correlate with organismal complexity.'",
+        "Pseudogenes ARE part of the genome — they are real DNA, just not functional. Don't exclude them when listing genome contents."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Levels of gene expression regulation",
+      "overview": "Cells regulate gene expression at multiple stages — pre-transcriptional, transcriptional, post-transcriptional, and post-translational. Knowing which mechanism acts at which level is a core test item.",
+      "key_points": [
+        "PRE-TRANSCRIPTIONAL: chromatin structure, histone modification (acetylation, methylation), DNA methylation. Controls whether the gene is even ACCESSIBLE for transcription.",
+        "TRANSCRIPTIONAL: transcription factors binding to promoters and enhancers; regulates the rate of mRNA synthesis.",
+        "POST-TRANSCRIPTIONAL: alternative splicing of pre-mRNA, microRNA-mediated mRNA degradation, mRNA stability/localization.",
+        "POST-TRANSLATIONAL: protein phosphorylation, ubiquitination, proteolytic cleavage, subcellular targeting — alters protein activity AFTER it is made."
+      ],
+      "key_terms": [
+        { "term": "DNA methylation", "def": "Addition of methyl groups to DNA (typically CpG sites); usually represses transcription. PRE-TRANSCRIPTIONAL regulation." },
+        { "term": "Histone modification", "def": "Chemical changes to histone tails (acetylation, methylation) that alter chromatin packing and gene accessibility. PRE-TRANSCRIPTIONAL." },
+        { "term": "MicroRNA (miRNA)", "def": "Small noncoding RNA that binds complementary mRNAs to suppress translation or trigger degradation. POST-TRANSCRIPTIONAL." },
+        { "term": "Alternative splicing", "def": "Production of multiple mRNA variants from a single gene by including/excluding different exons. POST-TRANSCRIPTIONAL." }
+      ],
+      "exam_traps": [
+        "DNA methylation = PRE-transcriptional (controls access). MicroRNA = POST-transcriptional (degrades mRNAs after they're made). Don't mix them up.",
+        "Phosphorylation can occur during transcription factor activation (transcriptional) or as a post-translational modification of any protein. Context tells you which level."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Alleles — dominant, recessive, additive",
+      "overview": "Alleles are alternative versions of a gene at the same locus. How they interact with one another (dominance) — and how the homozygote/heterozygote phenotypes relate — sets how quickly selection can change allele frequencies.",
+      "key_points": [
+        "DOMINANT alleles mask the expression of recessive alleles in heterozygotes (Aa shows the A phenotype).",
+        "ADDITIVE alleles each contribute incrementally to the phenotype — Aa is intermediate between AA and aa, and the effect scales linearly with copy number.",
+        "RECESSIVE beneficial mutations spread SLOWLY from rarity — most copies hide in heterozygotes where they're masked.",
+        "DOMINANT beneficial mutations spread FAST — every heterozygote already shows the phenotype.",
+        "Additive variance (V_A) is the only variance component that responds predictably to selection (covered more in L05)."
+      ],
+      "key_terms": [
+        { "term": "Allele", "def": "A specific variant of a gene at a given locus." },
+        { "term": "Dominant", "def": "An allele whose phenotype is fully expressed in heterozygotes." },
+        { "term": "Recessive", "def": "An allele whose phenotype is hidden in heterozygotes; only expressed when homozygous." },
+        { "term": "Additive", "def": "Allelic effects that combine linearly — phenotype is proportional to the dose of the allele." },
+        { "term": "Locus", "def": "The chromosomal location of a gene." }
+      ],
+      "exam_traps": [
+        "Beneficial RECESSIVE alleles increase slowly when rare (most are in Aa heterozygotes, hidden from selection). Beneficial DOMINANT alleles increase quickly when rare. Selection efficiency depends on dominance.",
+        "Don't confuse 'additive' (linear dose-response across copies) with 'codominant' (both alleles' phenotypes are visible in the heterozygote, but not necessarily linearly intermediate)."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Mutation as the source of new variation",
+      "overview": "Mutation is the ULTIMATE source of new genetic variation. Selection cannot create new alleles — it can only sort among existing variants. Mutation is random with respect to fitness.",
+      "key_points": [
+        "Mutations are heritable changes in DNA sequence; they are the only source of NEW genetic variation.",
+        "Mutations are RANDOM with respect to fitness — they don't preferentially generate beneficial alleles when those would be useful.",
+        "Most mutations are neutral or slightly deleterious; beneficial mutations are rare.",
+        "Mutation rate per base per generation in eukaryotes is roughly 10⁻⁸ to 10⁻⁹, but compounded across the whole genome each individual carries dozens of new mutations."
+      ],
+      "key_terms": [
+        { "term": "Mutation", "def": "Heritable change in DNA sequence — point mutations, insertions, deletions, duplications, inversions, translocations." },
+        { "term": "Mutation rate", "def": "The probability of a mutation per base per generation; ~10⁻⁸ to 10⁻⁹ in mammals." },
+        { "term": "Random with respect to fitness", "def": "Mutations don't preferentially generate alleles that would be beneficial in the current environment." }
+      ],
+      "exam_traps": [
+        "Mutation is random WITH RESPECT TO FITNESS. Mutation rates can vary across the genome (hotspots) and respond to environmental stressors — but the randomness referred to is about fitness-direction, not uniform per-base probability.",
+        "Selection requires variation; mutation generates it. Without mutation, selection eventually exhausts genetic variation."
+      ]
+    }
+  ]
+}

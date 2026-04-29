@@ -1,0 +1,64 @@
+{
+  "title": "What Is Evolution? Course Intro",
+  "intro": "First lecture frames evolution as the unifying theory of biology — a process of heritable change in populations over generations — and previews the four mechanisms (selection, drift, gene flow, mutation) the rest of the course will dissect.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Defining evolution",
+      "overview": "Evolution is descent with modification — change in the heritable traits of populations across generations. It is a population-level, multi-generational phenomenon, not something that happens to an individual.",
+      "key_points": [
+        "Evolution = change in allele frequencies in a population over generations.",
+        "The unit of evolution is the population, not the individual.",
+        "Individuals are selected; populations evolve.",
+        "Heritable variation is required for evolutionary change to occur."
+      ],
+      "key_terms": [
+        { "term": "Evolution", "def": "Change in the heritable traits (allele frequencies) of a population across generations." },
+        { "term": "Population", "def": "A group of interbreeding individuals of the same species in a defined area." },
+        { "term": "Heritable variation", "def": "Trait differences among individuals that have a genetic basis and can be passed to offspring." }
+      ],
+      "exam_traps": [
+        "An individual cannot 'evolve' — even if they change during their lifetime, evolution requires change across generations in a population.",
+        "If trait differences are NOT heritable (e.g., purely environmental), selection on those traits produces no evolutionary change."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Why evolution unifies biology",
+      "overview": "Dobzhansky's 1973 essay — 'Nothing in biology makes sense except in the light of evolution' — captures the role evolution plays as the explanatory glue across every biological subdiscipline.",
+      "key_points": [
+        "Theodosius Dobzhansky (1973) wrote the famous essay establishing evolution as biology's unifying theory.",
+        "Evolution explains both unity (shared features from common descent) and diversity (lineage-specific adaptations).",
+        "Practical applications include antibiotic resistance, vaccine design, conservation biology, and crop improvement."
+      ],
+      "key_terms": [
+        { "term": "Common descent", "def": "All life on Earth shares a common ancestor; similarities reflect shared inheritance." },
+        { "term": "Adaptation", "def": "A heritable trait that increases fitness in a given environment, produced by natural selection." }
+      ],
+      "exam_traps": [
+        "'Adaptation' has two meanings — a trait (the noun) AND the process that produces it (the verb). Context matters."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "The four evolutionary mechanisms (preview)",
+      "overview": "Four forces change allele frequencies. The course spends the next several lectures dissecting each one in turn.",
+      "key_points": [
+        "Natural selection — non-random; differential survival/reproduction based on heritable trait differences.",
+        "Genetic drift — random sampling of alleles; strongest in small populations.",
+        "Gene flow — movement of alleles between populations via migration; tends to homogenize.",
+        "Mutation — the ultimate source of new genetic variation; random with respect to fitness."
+      ],
+      "key_terms": [
+        { "term": "Natural selection", "def": "Differential reproductive success based on heritable trait variation; non-random with respect to fitness." },
+        { "term": "Genetic drift", "def": "Random change in allele frequencies due to chance sampling, especially in small populations." },
+        { "term": "Gene flow", "def": "Movement of alleles between populations through migration of individuals or gametes." },
+        { "term": "Mutation", "def": "Heritable change in DNA sequence; the ultimate source of new alleles." }
+      ],
+      "exam_traps": [
+        "Mutation is RANDOM with respect to fitness (it doesn't 'know' what's useful), but selection acting on the resulting variation is NON-random.",
+        "Drift and selection both change allele frequencies — but only selection systematically increases fitness."
+      ]
+    }
+  ]
+}

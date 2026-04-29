@@ -1,0 +1,259 @@
+[
+  {
+    "id": "STIM-L13-001",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "A",
+    "topic": "Group selection problem",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Why is naïve group selection — the idea that traits evolve 'for the good of the species' — generally rejected in modern evolutionary biology?",
+    "choices": [
+      "Group benefits are physically impossible.",
+      "A 'cheater' that exploits cooperation has higher individual fitness than cooperators, so cheaters spread and group-beneficial cooperation collapses.",
+      "Species don't actually exist as discrete entities.",
+      "Group selection only works when the cosmos approves."
+    ],
+    "correct": 1,
+    "why": "Selection acts at the individual (or genic) level. If a cheater has higher individual fitness in a cooperative group, cheaters spread, eroding cooperation. Group-beneficial traits don't persist unless individual or kin-selected mechanisms support them.",
+    "choice_why": [
+      "Wrong. Group benefits exist; the issue is whether selection at the GROUP level can produce them when individual selection opposes them.",
+      "Correct. The cheater problem is the standard objection.",
+      "Wrong. Species are real biological units; the issue is the level of selection.",
+      "Wrong. Not a serious answer."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §A"
+  },
+  {
+    "id": "STIM-L13-002",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "B",
+    "topic": "Hamilton's rule",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Hamilton's rule for the evolution of altruism is:",
+    "choices": [
+      "B > C",
+      "rB > C",
+      "C > rB",
+      "B = C"
+    ],
+    "correct": 1,
+    "why": "Altruism evolves when the indirect benefit (relatedness × benefit to recipient) exceeds the cost to the actor: rB > C. Forgetting the relatedness coefficient r is the classic exam mistake.",
+    "choice_why": [
+      "Wrong. That ignores relatedness; it would imply altruism toward strangers.",
+      "Correct. rB > C is Hamilton's rule.",
+      "Wrong. That's the opposite — when altruism does NOT evolve.",
+      "Wrong. Equality is a knife-edge case, not the rule."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §B"
+  },
+  {
+    "id": "STIM-L13-003",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "B",
+    "topic": "Coefficient of relatedness",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Two full siblings share a coefficient of relatedness r equal to:",
+    "choices": [
+      "0.125",
+      "0.25",
+      "0.5",
+      "1.0"
+    ],
+    "correct": 2,
+    "why": "Full siblings share r = 0.5 — on average, they share half of their alleles by recent common descent. This is the same as parent-offspring r (also 0.5).",
+    "choice_why": [
+      "Wrong. r = 0.125 is for first cousins.",
+      "Wrong. r = 0.25 is for half-siblings.",
+      "Correct. Full siblings: r = 0.5.",
+      "Wrong. r = 1.0 would be identical twins."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §B"
+  },
+  {
+    "id": "STIM-L13-004",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "B",
+    "topic": "Inclusive fitness",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "INCLUSIVE FITNESS is best defined as:",
+    "choices": [
+      "The number of offspring an individual produces.",
+      "The total number of allele copies an individual passes on, including direct offspring AND extra offspring of relatives that wouldn't have existed without the individual's help, weighted by relatedness.",
+      "The fitness of the entire population.",
+      "Average fitness of an individual's species."
+    ],
+    "correct": 1,
+    "why": "Inclusive fitness extends the concept of fitness beyond direct offspring to include the actor's effect on the reproduction of relatives — weighted by relatedness. The genes that propagate are what matter; helping kin propagates shared alleles.",
+    "choice_why": [
+      "Wrong. That's DIRECT fitness only.",
+      "Correct. Inclusive fitness = direct + indirect (helping relatives).",
+      "Wrong. Population-level fitness is a different concept.",
+      "Wrong. Species-level averaging is not what inclusive fitness measures."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §B"
+  },
+  {
+    "id": "STIM-L13-005",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "B",
+    "topic": "Eusociality",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Worker honey bees forgo reproduction and help raise their queen's offspring. From an inclusive-fitness perspective, this makes sense because:",
+    "choices": [
+      "Workers are forced into helping by the queen and have no choice.",
+      "Workers gain inclusive fitness by helping raise sisters (in haplodiploid systems, sisters share r = 0.75, higher than r = 0.5 with own offspring).",
+      "Group selection at the colony level overrides individual fitness.",
+      "Workers are sterile and incapable of reproduction."
+    ],
+    "correct": 1,
+    "why": "In haplodiploid hymenopterans (bees, wasps, ants), sisters share r = 0.75 because they inherit 100% of their father's haploid genome. Helping sisters propagates more shared alleles than helping own offspring — favoring eusociality. Note: this 'haplodiploidy hypothesis' is debated as the full explanation, but the inclusive-fitness logic remains central.",
+    "choice_why": [
+      "Wrong. Workers can revert to laying haploid eggs in some species; their helping is not pure coercion.",
+      "Correct. Sisters in haplodiploid systems share r = 0.75 — higher than mother-offspring r = 0.5 — favoring helping kin over own offspring.",
+      "Wrong. Modern evolutionary biology explains eusociality via inclusive fitness, not naïve group selection.",
+      "Wrong. Workers can sometimes lay eggs; their reproduction is suppressed, not absent."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §B"
+  },
+  {
+    "id": "STIM-L13-006",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "C",
+    "topic": "ESS",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "An Evolutionarily Stable Strategy (ESS) is best defined as:",
+    "choices": [
+      "The strategy that maximizes population mean fitness.",
+      "A strategy that, when adopted by most members of a population, cannot be invaded by any rare alternative strategy.",
+      "A strategy that always wins in head-to-head competition.",
+      "A strategy that produces the most offspring on average."
+    ],
+    "correct": 1,
+    "why": "ESS is a non-invasibility criterion: once common, the strategy resists invasion by alternatives. It need not be the highest-mean-fitness strategy; mixed-strategy ESS solutions are common when payoffs depend on what other players do.",
+    "choice_view": [],
+    "choice_why": [
+      "Wrong. ESS is about resistance to invasion, not maximizing population mean.",
+      "Correct. Standard ESS definition.",
+      "Wrong. Many ESS solutions are mixed (frequency-dependent), not single best strategies.",
+      "Wrong. ESS is about non-invasibility, not absolute offspring counts."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §C"
+  },
+  {
+    "id": "STIM-L13-007",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "D",
+    "topic": "Side-blotched lizards rock-paper-scissors",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Side-blotched lizards have three male morphs whose frequencies cycle over years (Orange beats Blue, Blue beats Yellow, Yellow beats Orange). What does this real-world example illustrate?",
+    "choices": [
+      "A single ESS dominates and the other strategies disappear.",
+      "Negative frequency-dependent selection — each morph is favored when rare and disfavored when common — producing cyclic dynamics.",
+      "Genetic drift in a small lizard population.",
+      "Sexual conflict between males and females."
+    ],
+    "correct": 1,
+    "why": "When each strategy beats one of the others and is beaten by another, none can stably dominate. Instead, frequencies cycle: whichever is rare is favored, which raises its frequency, which then makes its 'predator' rare, etc. Classic negative frequency-dependence.",
+    "choice_why": [
+      "Wrong. No single ESS dominates — that's the point.",
+      "Correct. Rare morphs are favored, producing cyclic frequencies.",
+      "Wrong. Drift is random; the cycle is directional within years and predictable.",
+      "Wrong. The dynamic is among males, not between sexes."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §C,D"
+  },
+  {
+    "id": "STIM-L13-008",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "B,C",
+    "topic": "Altruism evolution — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "Altruistic behavior — paying a cost to benefit another — should be selected against, yet it is widespread. (a) State Hamilton's rule. (b) Define each variable. (c) Explain why a worker bee helping its queen sister is favored even though the worker doesn't reproduce directly. (d) Explain why apparent altruism toward NON-kin requires a different mechanism.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "States Hamilton's rule: rB > C." },
+        { "pts": 1, "desc": "Defines variables: r = coefficient of relatedness; B = benefit to recipient; C = cost to actor (in fitness units)." },
+        { "pts": 1, "desc": "Worker bee logic: workers gain inclusive fitness by helping sisters (r = 0.75 in haplodiploids), more than if they reproduced directly (r = 0.5 with own offspring)." },
+        { "pts": 1, "desc": "Non-kin cooperation: r ≈ 0, so Hamilton's rule fails. Other mechanisms (direct reciprocity, indirect reciprocity / reputation, mutualistic byproducts, partner choice) are needed." }
+      ]
+    },
+    "model_answer": "(a) Hamilton's rule: rB > C. (b) r is the COEFFICIENT OF RELATEDNESS — the probability that two individuals share a given allele by recent common descent (e.g., siblings r = 0.5, half-siblings r = 0.25, first cousins r = 0.125). B is the BENEFIT to the recipient in additional offspring produced; C is the COST to the actor in offspring foregone. (c) Worker bees forgo direct reproduction to help raise their queen's offspring (their sisters). In haplodiploid hymenopterans, sisters share r = 0.75 — higher than mother-offspring r = 0.5. Helping a sister propagates more copies of shared alleles than helping own offspring would. The worker's INCLUSIVE FITNESS through her sisters exceeds what direct reproduction would give. (d) For apparent altruism toward unrelated individuals, r ≈ 0 and Hamilton's rule cannot be satisfied. These cases require different mechanisms: DIRECT RECIPROCITY (tit-for-tat), INDIRECT RECIPROCITY (reputation effects), MUTUALISTIC BYPRODUCTS (cooperation that's also self-beneficial), or PARTNER CHOICE.",
+    "source": "sg-exam-2 Ch16; L13 §B,E"
+  },
+  {
+    "id": "STIM-L13-009",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "E",
+    "topic": "Reciprocity",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Vampire bats regurgitate blood to feed roost-mates who failed to feed that night. Recipients later return the favor when they have surplus and the original donor goes hungry. This best illustrates:",
+    "choices": [
+      "Naïve group selection.",
+      "DIRECT reciprocity — tit-for-tat helping among repeated interactors.",
+      "Inclusive fitness through close kinship only.",
+      "Sexual conflict."
+    ],
+    "correct": 1,
+    "why": "Vampire bat blood-sharing is a textbook case of direct reciprocity: bats remember who shared, preferentially share with prior helpers, and refuse cheaters. The roost-mates aren't all close kin — reciprocity, not just kin selection, sustains the cooperation.",
+    "choice_why": [
+      "Wrong. Group-selection logic isn't needed; reciprocity explains it at individual level.",
+      "Correct. Tit-for-tat blood sharing is the canonical example.",
+      "Wrong. While some recipients are kin, blood-sharing extends to non-kin roost-mates and depends on reciprocation history.",
+      "Wrong. This is between-individual cooperation, not male-female conflict."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §E"
+  },
+  {
+    "id": "STIM-L13-010",
+    "exam": 2,
+    "lecture": "L13",
+    "section": "C",
+    "topic": "Frequency-dependent selection",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "In a Hawk-Dove game, why doesn't a population evolve to be entirely Hawks (always-aggressive)?",
+    "choices": [
+      "All-Hawk populations are never possible due to genetic constraints.",
+      "When Hawks are common, Hawk-Hawk fights inflict heavy costs; rare Doves who avoid fights have higher fitness, invading the population. The result is a mixed-strategy ESS.",
+      "Group selection penalizes aggressive populations.",
+      "Doves are intrinsically more fit in all environments."
+    ],
+    "correct": 1,
+    "why": "Frequency-dependent payoffs: Hawk fitness depends on opponent identity. Against Doves, Hawks win cheaply. Against Hawks, both pay big fight costs. When Hawks are common, the average Hawk pays heavy costs; rare Doves avoid fights and have higher mean fitness — Doves invade. Equilibrium is a mixture.",
+    "choice_why": [
+      "Wrong. There's no genetic constraint preventing all-Hawk; the issue is fitness payoffs.",
+      "Correct. Frequency-dependent costs of Hawk-Hawk fights stabilize a mixed equilibrium.",
+      "Wrong. Group selection isn't needed; individual-level payoffs explain it.",
+      "Wrong. Doves do poorly when alone among Hawks; their advantage is conditional."
+    ],
+    "source": "sg-exam-2 Ch16; L13 §C"
+  }
+]

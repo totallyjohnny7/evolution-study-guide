@@ -1,0 +1,83 @@
+{
+  "title": "Phylogenetics and the Tree of Life",
+  "intro": "Phylogenetic trees are hypotheses about evolutionary relationships built from shared derived characters. The skill on this exam is reading trees correctly and choosing the right kind of character (synapomorphy, not symplesiomorphy or homoplasy) to define groups.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Reading phylogenetic trees",
+      "overview": "A phylogenetic tree depicts hypothesized evolutionary relationships among taxa. Tips are extant or extinct organisms; internal nodes are common ancestors; branches represent lineages over time.",
+      "key_points": [
+        "A NODE is a common ancestor of the taxa above it (toward the tips).",
+        "Two taxa that share a more RECENT common ancestor are more CLOSELY related — measured by node depth, NOT by physical distance on the page.",
+        "Trees can be rotated at any node without changing relationships — only the order of branching matters."
+      ],
+      "key_terms": [
+        { "term": "Tip / Terminal taxon", "def": "An extant (or extinct) organism at the end of a branch — what's being classified." },
+        { "term": "Node", "def": "A point in the tree where lineages diverge — represents the most recent common ancestor of all descendants." },
+        { "term": "Branch", "def": "A line in the tree representing a lineage existing through time." },
+        { "term": "Sister groups", "def": "Two clades that share an immediate common ancestor (a single node)." }
+      ],
+      "exam_traps": [
+        "Visual proximity on the page does NOT equal evolutionary closeness — trees can be drawn with branches in any rotation.",
+        "Don't assume tips on adjacent branches are sister groups; trace back to the node and see what it joins."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Synapomorphies vs. symplesiomorphies vs. homoplasies",
+      "overview": "Only SYNAPOMORPHIES — shared derived characters — define monophyletic groups. Symplesiomorphies (shared ancestral traits) and homoplasies (independent acquisitions) mislead.",
+      "key_points": [
+        "Synapomorphy = a derived character STATE shared because of inheritance from a common ancestor that first evolved it.",
+        "Symplesiomorphy = a shared ANCESTRAL state — present in more distant ancestors, not informative about which lineages cluster.",
+        "Homoplasy = a similar state arising independently (convergence) or by reversal — misleading; not a synapomorphy."
+      ],
+      "key_terms": [
+        { "term": "Synapomorphy", "def": "A shared, derived (evolutionarily novel) character state that is informative for defining a monophyletic group." },
+        { "term": "Symplesiomorphy", "def": "A shared ancestral character state; widespread among lineages and uninformative about closer relationships." },
+        { "term": "Homoplasy", "def": "Similar character states in different lineages that did NOT come from a common ancestor — produced by convergence, parallelism, or reversal." }
+      ],
+      "exam_traps": [
+        "'Has a backbone' is a synapomorphy of vertebrates as a whole, but a SYMPLESIOMORPHY for any subgroup (e.g., mammals + birds) — i.e., the same character can play different roles depending on the level you're working at.",
+        "If two distantly related lineages share a feature, suspect homoplasy — check whether the common ancestor likely had it."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Monophyletic, paraphyletic, polyphyletic",
+      "overview": "Modern systematics requires named groups to be monophyletic. Para- and polyphyletic groups are rejected because they don't reflect evolutionary history.",
+      "key_points": [
+        "MONOPHYLETIC (clade) = a common ancestor + ALL its descendants. Defined by synapomorphies.",
+        "PARAPHYLETIC = common ancestor + SOME (not all) descendants. Example: 'Reptilia' excluding birds — birds are reptiles by descent but were left out historically.",
+        "POLYPHYLETIC = group built from members that do NOT share an immediate common ancestor; based on convergent traits. Example: 'warm-blooded animals' (mammals + birds, not their reptilian common ancestor)."
+      ],
+      "key_terms": [
+        { "term": "Clade / Monophyletic group", "def": "A common ancestor and all of its descendants — the only kind of group that reflects an evolutionary unit." },
+        { "term": "Paraphyletic group", "def": "A group containing a common ancestor but NOT all of its descendants; rejected in modern systematics." },
+        { "term": "Polyphyletic group", "def": "A group whose members do not share an immediate common ancestor; based on convergent (homoplasic) traits." }
+      ],
+      "exam_traps": [
+        "Birds nest within reptiles — calling 'Reptilia' (without birds) a valid group makes it paraphyletic. Modern usage either includes birds or uses 'Sauropsida'.",
+        "Polyphyletic groups are diagnosed by SHARED CONVERGENT FEATURES, not common ancestry."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Species concepts",
+      "overview": "Different species concepts emphasize different criteria. The Biological Species Concept (BSC) is the most famous, but it has limits.",
+      "key_points": [
+        "Biological Species Concept (BSC, Mayr): species = groups of actually or potentially interbreeding populations, reproductively isolated from others. Strength: clear mechanism (gene flow). Limit: can't apply to asexual organisms or fossils.",
+        "Morphological Species Concept: species defined by distinctive form. Strength: usable on fossils and any organism. Limit: cryptic species and morphological plasticity confuse it.",
+        "Phylogenetic Species Concept: species = smallest monophyletic group with shared derived characters. Strength: works for asexuals and fossils. Limit: depends on chosen markers; tends to split lineages aggressively."
+      ],
+      "key_terms": [
+        { "term": "Biological Species Concept (BSC)", "def": "Mayr's definition: a species is a group of interbreeding (or potentially interbreeding) natural populations reproductively isolated from others." },
+        { "term": "Morphological species concept", "def": "Species defined by distinct, diagnosable morphological differences." },
+        { "term": "Phylogenetic species concept", "def": "Species defined as the smallest monophyletic group identifiable by shared derived characters." }
+      ],
+      "exam_traps": [
+        "The BSC requires reproductive isolation — but two morphologically distinct populations that occasionally hybridize can still be 'good' biological species if hybrids have reduced fitness.",
+        "Asexual organisms (bacteria, parthenogenetic animals) are not species under the BSC. Use morphology or phylogeny instead."
+      ]
+    }
+  ]
+}

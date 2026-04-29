@@ -1,0 +1,105 @@
+{
+  "title": "Evolution of Social Behavior",
+  "intro": "How can selection favor cooperative or self-sacrificing behavior when those behaviors apparently lower the actor's fitness? The answer — kin selection, inclusive fitness, evolutionarily stable strategies — is a foundational result in modern evolutionary biology.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Individual vs. group selection",
+      "overview": "An old idea: traits evolve 'for the good of the species' or 'good of the group.' Modern evolutionary biology rejects naïve group selection — selection acts predominantly at the level of individuals (or genes), and selfish individuals usually outcompete cooperative ones.",
+      "key_points": [
+        "GROUP SELECTION (naïve form): traits spread because they benefit the group, even at individual cost.",
+        "Problem with naïve group selection: a 'cheater' that benefits from cooperation without contributing has higher individual fitness. Cheaters spread; cooperation collapses.",
+        "Modern view: selection mostly works at the individual or genic level; apparent group benefits arise from individual benefits.",
+        "Special conditions (frequent population extinctions, strict subdivision) can permit some forms of group-level selection, but it's the exception."
+      ],
+      "key_terms": [
+        { "term": "Group selection", "def": "Selection in which differential reproduction of GROUPS (not individuals) drives evolutionary change." },
+        { "term": "Selfish gene perspective", "def": "Dawkins's framing: selection favors alleles that increase their own propagation, even if that means promoting altruistic behavior toward genetic relatives." }
+      ],
+      "exam_traps": [
+        "'Good of the species' is a non-explanation. Always ask: what's in it for the individual (or the gene)?",
+        "Group selection isn't strictly impossible, but it's overwhelmed by individual selection in nearly all real-world cases."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Kin selection and inclusive fitness",
+      "overview": "Hamilton's insight: an altruistic gene can spread if its bearers help GENETIC RELATIVES, who share copies of the gene. The propagation of the gene matters, not the survival of the individual.",
+      "key_points": [
+        "HAMILTON'S RULE: rB > C, where r = coefficient of relatedness, B = benefit to recipient, C = cost to actor. Altruism evolves when rB > C.",
+        "Coefficient of relatedness r: parent-offspring r = 0.5; full siblings r = 0.5; half-siblings r = 0.25; first cousins r = 0.125.",
+        "INCLUSIVE FITNESS = direct fitness (own offspring) + indirect fitness (extra offspring of relatives that wouldn't have existed without your help, weighted by relatedness).",
+        "Eusociality (worker bees, ants, naked mole-rats) is the extreme case — workers forgo reproduction entirely to raise relatives.",
+        "Haplodiploidy in hymenopterans: sisters share r = 0.75 (more than they'd share with their own offspring, r = 0.5), favoring sister-helping behavior. Disputed as a complete explanation, but suggestive."
+      ],
+      "key_terms": [
+        { "term": "Hamilton's rule", "def": "Altruism is favored when rB > C; rB is the indirect benefit through relatives, C is the cost to the actor." },
+        { "term": "Coefficient of relatedness (r)", "def": "Probability that two individuals share a given allele by recent common descent." },
+        { "term": "Inclusive fitness", "def": "Direct fitness from own offspring plus indirect fitness gained through helping relatives reproduce." },
+        { "term": "Eusociality", "def": "Highly social organization with reproductive division of labor — workers forgo reproduction to raise relatives." }
+      ],
+      "exam_traps": [
+        "Hamilton's rule is rB > C, NOT B > C. Forgetting the r is the classic error.",
+        "Helping random strangers does not satisfy Hamilton's rule (r = 0). Apparent altruism toward strangers usually involves reciprocity, reputation, or other mechanisms."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Evolutionarily stable strategies (ESS)",
+      "overview": "An ESS is a behavioral strategy that, once common in a population, cannot be invaded by a rare alternative. ESS reasoning predicts which behaviors persist under frequency-dependent selection.",
+      "key_points": [
+        "ESS = a strategy that, when adopted by most of a population, cannot be invaded by a rare alternative — a Nash equilibrium in evolutionary terms.",
+        "ESS depends on FREQUENCY-DEPENDENT payoffs: the fitness of a strategy depends on what other strategies are common.",
+        "Hawk-Dove game: pure-Hawk is unstable (Hawks fight, costs mount); pure-Dove is unstable (a rare Hawk exploits all the Doves). Mixed equilibrium emerges.",
+        "ESS is solved with game-theory tools — payoff matrices and frequency-dependent fitness."
+      ],
+      "key_terms": [
+        { "term": "Evolutionarily Stable Strategy (ESS)", "def": "A strategy that, when adopted by most members of a population, cannot be invaded by any rare alternative strategy." },
+        { "term": "Frequency-dependent selection", "def": "Fitness of a strategy depends on its frequency in the population — common strategies may be at advantage or disadvantage." },
+        { "term": "Hawk-Dove game", "def": "Classic ESS model: aggressive (Hawk) and submissive (Dove) strategies in resource competition; equilibrium is a mix." }
+      ],
+      "exam_traps": [
+        "An ESS is not necessarily the BEST strategy on average — it's the strategy that can't be displaced once common. Mixed ESS solutions are common.",
+        "Frequency-dependent selection can MAINTAIN diversity at equilibrium — different strategies coexist because each is favored when rare."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Side-blotched lizards — rock-paper-scissors in nature",
+      "overview": "Male side-blotched lizards (Uta stansburiana) come in three throat-color morphs that play a rock-paper-scissors mating game — a real-world demonstration of frequency-dependent ESS dynamics.",
+      "key_points": [
+        "Three male morphs: ORANGE (aggressive, defends large territories with many females), BLUE (defends small territories with one mate, vigilant against sneakers), YELLOW (sneaker, mimics females, sneaks copulations).",
+        "Orange beats Blue (Orange's aggression overwhelms Blue's small-territory defense).",
+        "Blue beats Yellow (Blue's vigilance catches Yellow sneakers).",
+        "Yellow beats Orange (Orange spreads thin defending many females; Yellow sneaks in unnoticed).",
+        "Result: frequencies of the three morphs cycle over years — no single ESS, but a stable cyclic dynamic."
+      ],
+      "key_terms": [
+        { "term": "Side-blotched lizard (Uta stansburiana)", "def": "Lizard species with three male throat-color morphs displaying rock-paper-scissors mating dynamics." }
+      ],
+      "exam_traps": [
+        "The 'rock-paper-scissors' framing: Orange > Blue, Blue > Yellow, Yellow > Orange. Cyclic dominance, not one winner.",
+        "This is a real demonstration of NEGATIVE frequency-dependent selection — each morph is favored when rare, disadvantaged when common."
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Cooperation among non-kin — reciprocity, reputation, byproducts",
+      "overview": "Cooperation among unrelated individuals does occur. The mechanisms are different from kin-selected altruism — reciprocity, reputation, partner choice, or mutual benefit.",
+      "key_points": [
+        "DIRECT RECIPROCITY: 'I help you now if you help me later.' Requires repeat interaction and memory.",
+        "INDIRECT RECIPROCITY: helping confers a reputation that attracts future help from third parties. Requires public visibility.",
+        "MUTUALISTIC BYPRODUCT: cooperation costs nothing (or even directly benefits the actor) — pure self-interest aligns.",
+        "Cheating is always tempting; cooperation among non-kin is fragile and requires enforcement, sanctions, or partner choice to persist."
+      ],
+      "key_terms": [
+        { "term": "Direct reciprocity", "def": "Cooperation maintained by tit-for-tat exchange between two individuals over repeated interactions." },
+        { "term": "Indirect reciprocity", "def": "Cooperation maintained because helpful behavior earns a reputation that attracts future help from others." }
+      ],
+      "exam_traps": [
+        "Reciprocity requires REPEATED INTERACTION — it doesn't work in one-shot games or anonymous encounters.",
+        "Cooperation among non-kin is often unstable; cheating invades unless mechanisms exist to detect and punish defectors."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "STIM-L01-001",
+    "exam": 1,
+    "lecture": "L01",
+    "section": "A",
+    "topic": "Definition of evolution",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Which of the following best defines biological evolution?",
+    "choices": [
+      "An individual organism becoming better adapted over its lifetime.",
+      "Change in the heritable traits of a population across generations.",
+      "Progressive improvement of organisms toward greater complexity.",
+      "Random variation among individuals within a single generation."
+    ],
+    "correct": 1,
+    "why": "Evolution is a population-level, multi-generational change in allele frequencies / heritable traits. It is not something that happens to individuals.",
+    "choice_why": [
+      "Wrong. Individuals don't 'evolve' — they may change phenotypically (acclimation, learning), but those changes aren't heritable. Evolution requires multi-generational change.",
+      "Correct. This is the standard population-genetic definition: change in heritable traits across generations.",
+      "Wrong. Evolution is not directional toward complexity. Many lineages simplify (e.g., parasites) and most evolutionary change is not 'progress'.",
+      "Wrong. Within-generation variation is the raw material for evolution but is not itself evolution. Evolution requires CHANGE between generations."
+    ],
+    "source": "sg-exam-1 §I; L01 §A"
+  },
+  {
+    "id": "STIM-L01-002",
+    "exam": 1,
+    "lecture": "L01",
+    "section": "A",
+    "topic": "Selection without evolution",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Tall and short individuals in a wildflower population produce different numbers of seeds, but height in this species is determined entirely by soil nutrients (no genetic component). Across many generations, will the population evolve to be taller?",
+    "choices": [
+      "Yes — natural selection is acting on height, so the population will evolve.",
+      "Yes — but only if selection pressure is strong enough.",
+      "No — selection requires heritable variation, and there is none.",
+      "No — but only because the population is not large enough."
+    ],
+    "correct": 2,
+    "why": "Selection requires HERITABLE variation to produce evolutionary change. If trait differences are purely environmental, selection on those differences cannot shift allele frequencies.",
+    "choice_why": [
+      "Wrong. Selection alone is not enough — the trait must be heritable for the population to evolve.",
+      "Wrong. Strength of selection doesn't matter if there is no heritable variation to select on.",
+      "Correct. Heritability is one of the three requirements for natural selection to produce evolution (variation, heritability, differential reproduction).",
+      "Wrong. Population size affects drift and the efficiency of selection, but does not rescue selection on a non-heritable trait."
+    ],
+    "source": "sg-exam-1 §I; L01 §A,C"
+  },
+  {
+    "id": "STIM-L01-003",
+    "exam": 1,
+    "lecture": "L01",
+    "section": "C",
+    "topic": "Mutation randomness",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "When biologists say mutations are 'random,' they specifically mean:",
+    "choices": [
+      "Mutations occur at every base of the genome with equal probability.",
+      "Mutations are not directed toward producing adaptations that the organism needs.",
+      "Mutations are unpredictable and cannot be studied scientifically.",
+      "Mutations only occur during environmental stress."
+    ],
+    "correct": 1,
+    "why": "Mutations are random WITH RESPECT TO FITNESS — the organism's needs do not bias which mutations occur. Some genome regions mutate more than others (mutational hotspots), so 'every base equal' is wrong; randomness here refers to fitness-direction, not uniform probability.",
+    "choice_why": [
+      "Wrong. Mutation rates vary by genomic context (CpG islands, mutational hotspots, replication timing). Randomness ≠ uniform probability.",
+      "Correct. The biologically important sense of 'random' is fitness-blindness — mutations don't preferentially generate beneficial alleles when needed.",
+      "Wrong. Mutation rates and spectra are well-studied scientifically.",
+      "Wrong. Mutations occur throughout an organism's life and across all conditions; some are stress-induced but most are not."
+    ],
+    "source": "sg-exam-1 §I; L01 §C"
+  },
+  {
+    "id": "STIM-L01-004",
+    "exam": 1,
+    "lecture": "L01",
+    "section": "B",
+    "topic": "Dobzhansky / unifying theory",
+    "type": "sa",
+    "difficulty": "recall",
+    "points": 2,
+    "q": "Briefly explain what Dobzhansky's 1973 quote — 'Nothing in biology makes sense except in the light of evolution' — is claiming, and give one concrete example of a biological phenomenon that requires evolutionary thinking to explain.",
+    "rubric": {
+      "total": 2,
+      "criteria": [
+        { "pts": 1, "desc": "States that evolution unifies biology / provides the explanatory framework that makes other observations cohere (1 pt)." },
+        { "pts": 1, "desc": "Gives a concrete biological example whose explanation depends on evolution: antibiotic resistance, vaccine evasion, conservation of homologous genes (Hox), shared molecular machinery, vestigial structures, fossil sequences, etc. (1 pt)." }
+      ]
+    },
+    "model_answer": "Dobzhansky meant that evolution is the unifying theory of biology — the framework that ties together molecular, cellular, organismal, and ecological observations into a coherent whole. Without evolution, the patterns biologists observe are just disconnected facts. Example: antibiotic resistance in bacterial populations only makes sense as natural selection acting on heritable mutations conferring resistance — the mutation is random, but the selection is non-random, and the rapid spread reflects differential reproduction.",
+    "source": "sg-exam-1 §III; L01 §B"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "title": "Conservation and Humans as a Selective Force",
+  "intro": "Humans are now a dominant evolutionary force — through habitat alteration, hunting, fishing, antibiotic use, and climate change, we are reshaping selection pressures on most species on Earth. This lecture is about that, plus what conservation biology can do.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Humans as selective force",
+      "overview": "Human activities apply strong, directional selection on countless species. Wherever we hunt, harvest, or otherwise selectively kill or capture organisms, we drive evolutionary change.",
+      "key_points": [
+        "FISHERIES SELECTION: minimum-size limits selectively remove large individuals; over decades, fish populations evolve toward earlier maturation and smaller size.",
+        "TROPHY HUNTING: selecting for large-horned individuals can reduce average horn size in the population over time (e.g., bighorn sheep on Ram Mountain).",
+        "ANTIBIOTIC RESISTANCE: heavy use selects for resistant bacterial strains.",
+        "PESTICIDE RESISTANCE: insect pests evolve resistance under heavy spraying.",
+        "URBANIZATION: city-dwelling species (urban pigeons, mice, peppered moths) evolve under novel selective pressures."
+      ],
+      "key_terms": [
+        { "term": "Selective harvest", "def": "Hunting/fishing that targets specific phenotypes (large size, big horns) and applies directional selection." },
+        { "term": "Fisheries-induced evolution", "def": "Evolutionary change in fish populations driven by size-selective fishing pressure." }
+      ],
+      "exam_traps": [
+        "Human selection is the same evolutionary process as natural selection; we just play the selecting role.",
+        "Selective harvest can REVERSE pre-existing selection (e.g., natural selection for large body, fishing for small) — populations evolve away from natural-equilibrium phenotypes."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Habitat destruction, fragmentation, and conservation genetics",
+      "overview": "Habitat loss and fragmentation reduce population sizes and gene flow — making drift stronger, inbreeding more likely, and adaptive evolution slower.",
+      "key_points": [
+        "Small populations experience strong genetic drift, lose genetic variation, and are vulnerable to inbreeding depression.",
+        "Population FRAGMENTATION reduces gene flow between subpopulations, accelerating local divergence and loss of variation.",
+        "Florida panther example: a tiny remnant population suffered severe inbreeding depression (heart defects, reproductive issues); rescue via introduction from Texas pumas restored fitness.",
+        "GENETIC RESCUE: introducing individuals from a related population can restore genetic variation and fitness in inbred populations."
+      ],
+      "key_terms": [
+        { "term": "Inbreeding depression", "def": "Reduced fitness in inbred populations due to expression of deleterious recessive alleles in homozygotes." },
+        { "term": "Genetic rescue", "def": "Introducing individuals from another population to restore genetic variation and reduce inbreeding depression." },
+        { "term": "Fragmentation", "def": "Subdivision of habitat into smaller patches, reducing gene flow and population sizes." }
+      ],
+      "exam_traps": [
+        "Small populations are vulnerable to BOTH demographic and genetic problems. Conservation must address both.",
+        "Genetic rescue can fail if the introduced population is so distantly related that hybrids are maladapted (outbreeding depression)."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Climate change as selective pressure",
+      "overview": "Anthropogenic climate change is a major and ongoing selective force. Some species track suitable climate by shifting range; others must evolve in place; many will fail to do either fast enough.",
+      "key_points": [
+        "Many species are shifting ranges poleward and upslope as climates warm.",
+        "Species with limited dispersal (e.g., trees, mountain-top organisms) cannot track climate easily and face strong selection or extinction.",
+        "Phenological shifts (flowering, migration timing) reflect rapid evolution and plastic responses to changing seasonal cues.",
+        "MISMATCHES between interacting species (e.g., insect emergence vs. plant flowering) may break ecological networks."
+      ],
+      "key_terms": [
+        { "term": "Phenological shift", "def": "Change in the timing of seasonal biological events (flowering, breeding, migration) in response to climate." },
+        { "term": "Range shift", "def": "Geographic movement of a species' distribution, often poleward or upslope under warming." }
+      ],
+      "exam_traps": [
+        "Species can RESPOND to climate change by shifting range, evolving, going plastic, or going extinct. The mix depends on dispersal ability, generation time, and severity.",
+        "Phenological shifts driven by climate are evidence of climate change effects on biology, even when range hasn't shifted yet."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Conservation strategies",
+      "overview": "Conservation biology applies evolutionary thinking to preserving biodiversity. The toolkit ranges from habitat protection to captive breeding to genetic rescue.",
+      "key_points": [
+        "HABITAT PROTECTION: protected areas (national parks, reserves) preserve in-situ biodiversity.",
+        "CAPTIVE BREEDING: ex-situ programs maintain populations of critically endangered species (California condor, Arabian oryx) for eventual reintroduction.",
+        "ASSISTED MIGRATION: moving species to climate-appropriate habitats (controversial for risk of unintended consequences).",
+        "GENETIC RESCUE / outcrossing programs: see §B above.",
+        "Effective conservation manages BOTH demographic decline (low N) AND genetic decline (low diversity, inbreeding)."
+      ],
+      "key_terms": [
+        { "term": "Conservation biology", "def": "The study of preservation of biodiversity; applies evolutionary, ecological, and population-genetic principles." },
+        { "term": "Captive breeding", "def": "Maintaining populations in human care to prevent extinction and supply individuals for reintroduction." }
+      ],
+      "exam_traps": [
+        "Conservation is ALWAYS about both populations and the genes within them. A demographically large population with no genetic diversity is still vulnerable.",
+        "Captive breeding can introduce its own selection pressures (adaptation to captivity) that may reduce wild fitness on release."
+      ]
+    }
+  ]
+}

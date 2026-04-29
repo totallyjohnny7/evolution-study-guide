@@ -1,0 +1,257 @@
+[
+  {
+    "id": "STIM-L12-001",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "A",
+    "topic": "Life-history trade-offs",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Life-history trade-offs exist because:",
+    "choices": [
+      "Organisms have unlimited resources but choose to allocate them strategically.",
+      "Resources are finite; energy spent on one trait cannot also be spent on another.",
+      "Selection has not yet eliminated trade-offs — given enough time, all could be optimized simultaneously.",
+      "Trade-offs are a textbook simplification that doesn't apply in nature."
+    ],
+    "correct": 1,
+    "why": "Trade-offs arise from physical constraints — finite energy, time, and resources. An organism cannot maximize all fitness components at once because investments compete for the same pool. Selection works WITHIN trade-offs, not against them.",
+    "choice_why": [
+      "Wrong. Trade-offs come from FINITE resources, not from strategic choice over unlimited ones.",
+      "Correct. Limited resources force trade-offs.",
+      "Wrong. Trade-offs are physical constraints, not failures of selection to optimize.",
+      "Wrong. Trade-offs are well-documented across taxa."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §A"
+  },
+  {
+    "id": "STIM-L12-002",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "B",
+    "topic": "Extrinsic mortality",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Two populations of guppies live in adjacent pools. Pool A has heavy predator presence; Pool B has no predators. What life-history difference would you predict?",
+    "choices": [
+      "Pool A guppies mature LATER and produce FEWER offspring.",
+      "Pool A guppies mature EARLIER and produce MORE offspring.",
+      "No difference — life history is genetically fixed.",
+      "Pool A guppies have longer lifespans because they're tougher."
+    ],
+    "correct": 1,
+    "why": "High extrinsic mortality (predation) selects for FAST life history: early maturity, more offspring, shorter lifespan. The 'live fast, die young' strategy maximizes lifetime reproduction when adults won't survive long anyway.",
+    "choice_why": [
+      "Wrong. Late maturity wastes time when adult survival is low.",
+      "Correct. Early/many = high-extrinsic-mortality strategy. Reznick's classic guppy experiments confirm this.",
+      "Wrong. Life history evolves rapidly under different selective pressures.",
+      "Wrong. High predation reduces lifespan, not increases it."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §B"
+  },
+  {
+    "id": "STIM-L12-003",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "C",
+    "topic": "Antagonistic pleiotropy",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Williams's antagonistic pleiotropy hypothesis explains aging by proposing that:",
+    "choices": [
+      "Aging is caused by random late-life mutations that escape selection.",
+      "Aging genes are favored by selection because they have BENEFICIAL effects early in life and HARMFUL effects late in life.",
+      "Selection cannot remove harmful late-life genes from the population.",
+      "Aging is an adaptation that benefits the species by clearing old individuals."
+    ],
+    "correct": 1,
+    "why": "Antagonistic pleiotropy: a single gene with TWO effects — early-life benefit, late-life cost. Net selection is positive because early-life effects on reproduction outweigh late-life costs. The 'cost' of aging is the price of early benefits.",
+    "choice_why": [
+      "Wrong. That is MEDAWAR'S MUTATION ACCUMULATION theory — a different (also valid) theory.",
+      "Correct. Antagonistic pleiotropy: same gene, opposing age-effects.",
+      "Wrong. That's mutation accumulation theory, not antagonistic pleiotropy.",
+      "Wrong. Group selection 'for the species' is not the standard explanation."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §C"
+  },
+  {
+    "id": "STIM-L12-004",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "C",
+    "topic": "Mutation accumulation theory",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Medawar's mutation accumulation theory of aging proposes that:",
+    "choices": [
+      "Mutations are more common in older individuals.",
+      "Late-acting deleterious mutations escape selection and accumulate in the gene pool because they affect organisms after most reproduction has occurred.",
+      "Aging is caused by accumulation of toxins.",
+      "Each species has a fixed number of cell divisions."
+    ],
+    "correct": 1,
+    "why": "Selection's strength declines with age because organisms have already reproduced. Mutations whose deleterious effects manifest only in old age (after reproduction) are nearly invisible to selection — they accumulate in the gene pool and contribute to senescence.",
+    "choice_why": [
+      "Wrong. Mutation rates are not necessarily higher in old age.",
+      "Correct. Late-acting deleterious mutations escape selection and accumulate.",
+      "Wrong. Toxin accumulation is a different (non-evolutionary) theory.",
+      "Wrong. The Hayflick limit is a cellular phenomenon, not Medawar's theory."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §C"
+  },
+  {
+    "id": "STIM-L12-005",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "D",
+    "topic": "Offspring number-size trade-off",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "An island has unpredictable resource availability — sometimes abundant, often scarce. Selection on this island would most likely favor:",
+    "choices": [
+      "Producing few, large, well-provisioned offspring (K-strategy).",
+      "Producing many small offspring as a bet-hedging strategy.",
+      "Eliminating reproduction entirely.",
+      "Producing exactly one offspring per lifetime."
+    ],
+    "correct": 1,
+    "why": "When environments are unpredictable, BET-HEDGING through many small offspring spreads risk: even if most fail in a bad year, some may make it. Few-large offspring is favored in stable environments where each can be reliably nurtured.",
+    "choice_why": [
+      "Wrong. K-strategy works in stable, competitive environments where investment per offspring pays off reliably.",
+      "Correct. Many small = bet-hedging in unpredictable environments.",
+      "Wrong. Any reproduction at all beats none for fitness, given any non-zero offspring survival.",
+      "Wrong. One offspring is extreme K-strategy, suited to stable environments."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §D"
+  },
+  {
+    "id": "STIM-L12-006",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "E",
+    "topic": "Seychelles warblers",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "In Seychelles warblers, female offspring more often remain on natal high-quality territories as helpers, while males disperse. What does this pattern reveal?",
+    "choices": [
+      "Sex-biased dispersal driven by territory quality — staying pays off where territories are good, especially for females.",
+      "Random dispersal independent of habitat quality.",
+      "Genetic differences between males and females in flight ability.",
+      "Females cannot survive away from natal territories."
+    ],
+    "correct": 0,
+    "why": "Seychelles warbler dispersal patterns demonstrate sex-biased dispersal driven by territory inheritance and helping opportunities. High-quality territories make staying valuable; the sex bias likely reflects asymmetric helping/inheritance benefits.",
+    "choice_why": [
+      "Correct. Sex-biased dispersal is the key concept; territory quality drives it.",
+      "Wrong. The pattern is non-random and tied to territory quality.",
+      "Wrong. Both sexes can fly well; dispersal is about reproductive strategy, not capability.",
+      "Wrong. Females CAN survive elsewhere; they choose to stay because the payoff is higher on good territories."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §E"
+  },
+  {
+    "id": "STIM-L12-007",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "B,C",
+    "topic": "Senescence theories — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 3,
+    "q": "Why does selection fail to eliminate aging? Briefly explain TWO theories that account for the persistence of senescence.",
+    "rubric": {
+      "total": 3,
+      "criteria": [
+        { "pts": 1, "desc": "Mutation accumulation (Medawar): selection's strength declines with age (fewer offspring still to be made), so late-acting deleterious mutations escape selection and accumulate." },
+        { "pts": 1, "desc": "Antagonistic pleiotropy (Williams): genes with beneficial early-life effects and harmful late-life effects are favored on net because early-life benefits to reproduction outweigh late-life costs." },
+        { "pts": 1, "desc": "(Bonus criterion / 1 of 3 — could be the third theory) Disposable soma (Kirkwood): trade-off between somatic maintenance and reproduction; selection favors investment in reproduction at the cost of long-term cell repair." }
+      ]
+    },
+    "model_answer": "Two theories: (1) MUTATION ACCUMULATION (Medawar): selection becomes weaker at older ages because organisms have already reproduced; deleterious mutations whose effects manifest only late escape selection's filter and accumulate in the gene pool, producing senescence. (2) ANTAGONISTIC PLEIOTROPY (Williams): single genes can have beneficial effects early in life and harmful effects late. Selection favors them on net because the early benefit (boost to reproduction) outweighs the late cost (decline in old age). The cost of aging is the price of early-life adaptation. (A third theory, DISPOSABLE SOMA, frames aging as the result of an organism allocating finite resources between somatic maintenance and reproduction — investing in reproduction at the cost of long-term cell repair.)",
+    "source": "sg-exam-2 Ch12; L12 §C"
+  },
+  {
+    "id": "STIM-L12-008",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "D",
+    "topic": "r/K selection",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "An r-selected species would typically display which combination of traits?",
+    "choices": [
+      "Few offspring, late maturity, parental care, long lifespan.",
+      "Many offspring, early maturity, little parental care, short lifespan.",
+      "One offspring per lifetime, no maturity stage, immortality.",
+      "Sterile workers and a single reproductive queen."
+    ],
+    "correct": 1,
+    "why": "r-selected species (mice, weeds) live in unstable environments with high mortality. They reproduce early, produce many offspring, invest little per offspring, and have short lifespans. K-selected species (elephants, oaks) are the opposite.",
+    "choice_why": [
+      "Wrong. That's K-selected.",
+      "Correct. Many/early/short is the r-strategy.",
+      "Wrong. No real organism follows this combination.",
+      "Wrong. That's eusociality (specialized social organization), not r/K."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §D"
+  },
+  {
+    "id": "STIM-L12-009",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "A",
+    "topic": "Reproductive effort trade-off",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Salmon reproduce once in a single massive spawning event and die shortly afterward (semelparity). What life-history logic best explains this strategy?",
+    "choices": [
+      "Salmon are unable to reproduce more than once due to a genetic defect.",
+      "Adult salmon survival is so low after migration that maximum effort in a single reproductive bout outperforms hedging across multiple bouts.",
+      "Salmon are too dumb to live longer than one breeding season.",
+      "Multiple breeding events are forbidden by Pacific Ocean conditions."
+    ],
+    "correct": 1,
+    "why": "Semelparity (one reproductive bout, then death) evolves when adult survival prospects are very low — the salmon's energetically costly migration leaves little chance of returning a second time. Better to invest everything now than hold reserves for an unlikely future.",
+    "choice_why": [
+      "Wrong. Semelparity is an adaptive strategy, not a defect.",
+      "Correct. Low post-reproduction survival favors all-in current reproduction.",
+      "Wrong. This is not a cognitive limitation.",
+      "Wrong. This is not about ocean rules; it's about the cost-benefit balance of repeated breeding."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §A,B"
+  },
+  {
+    "id": "STIM-L12-010",
+    "exam": 2,
+    "lecture": "L12",
+    "section": "B",
+    "topic": "Opossum case study",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Mainland opossums (heavy predation) and island opossums (no predators) have evolved different life histories. Which prediction is most consistent with theory and observed data?",
+    "choices": [
+      "Mainland opossums mature later and produce smaller litters.",
+      "Mainland opossums mature earlier and produce larger litters; island opossums delay maturity, age more slowly, and live longer.",
+      "Both populations have identical life histories because they are the same species.",
+      "Mainland opossums age more slowly because predation 'tests' them."
+    ],
+    "correct": 1,
+    "why": "High extrinsic mortality (predation) on the mainland favors fast life-history (early/many offspring). Low extrinsic mortality on islands relaxes that pressure — selection can favor delayed maturity and slower senescence (more time to invest in repair).",
+    "choice_why": [
+      "Wrong. Heavy predation favors EARLIER maturity (fast life-history).",
+      "Correct. The well-documented mainland-vs-island contrast.",
+      "Wrong. Same species can evolve different life histories under different selection.",
+      "Wrong. Predation reduces lifespan; it doesn't slow aging."
+    ],
+    "source": "sg-exam-2 Ch12; L12 §B"
+  }
+]

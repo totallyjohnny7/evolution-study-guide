@@ -1,0 +1,110 @@
+{
+  "title": "Quantitative Genetics, Selection, and Plasticity",
+  "intro": "How traits with continuous variation (height, milk yield, beak depth) evolve. This lecture covers phenotypic variance partitioning, heritability, the breeder's equation, and phenotypic plasticity — the ways environment shapes phenotype without changing genotype.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Quantitative traits and partitioning phenotypic variance",
+      "overview": "Quantitative traits are continuously varying (height, mass, fitness components) — many genes plus environment. The total phenotypic variance V_P can be decomposed into components, each with a different evolutionary meaning.",
+      "key_points": [
+        "Phenotypic variance equation: V_P = V_A + V_D + V_I + V_E.",
+        "V_A (ADDITIVE genetic variance) — additive effects of alleles; the only component that responds predictably to selection.",
+        "V_D (DOMINANCE variance) — interaction effects of alleles at the same locus.",
+        "V_I (EPISTATIC / INTERACTION variance) — interaction effects of alleles at different loci.",
+        "V_E (ENVIRONMENTAL variance) — variation in phenotype caused by environment, not heritable."
+      ],
+      "key_terms": [
+        { "term": "Quantitative trait", "def": "A trait with continuous variation, typically influenced by many genes plus environment (height, weight, fecundity)." },
+        { "term": "V_A — Additive genetic variance", "def": "The portion of genetic variance from additive allelic effects; passes predictably from parents to offspring; the engine of response to selection." },
+        { "term": "V_D — Dominance variance", "def": "Genetic variance arising from interactions between alleles at the same locus (heterozygote effects)." },
+        { "term": "V_I — Epistatic (interaction) variance", "def": "Genetic variance arising from interactions between alleles at different loci." },
+        { "term": "V_E — Environmental variance", "def": "Phenotypic variance attributable to environmental differences; not inherited." }
+      ],
+      "exam_traps": [
+        "Only V_A responds predictably to selection. V_D and V_I get reshuffled by recombination each generation, so selection on them produces inconsistent gains.",
+        "The study guide explicitly asks for the V_P expression — be ready to write it: V_P = V_A + V_D + V_I + V_E."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Heritability — broad-sense vs. narrow-sense",
+      "overview": "Heritability is the fraction of phenotypic variance attributable to genetic causes. The narrow-sense version (h²) — using only V_A — is what predicts response to selection.",
+      "key_points": [
+        "BROAD-SENSE heritability H² = V_G / V_P, where V_G = V_A + V_D + V_I (total genetic variance).",
+        "NARROW-SENSE heritability h² = V_A / V_P — uses only the additive component.",
+        "h² ranges from 0 (no genetic basis) to 1 (purely genetic, no environmental influence).",
+        "h² can be estimated from a PARENT-OFFSPRING REGRESSION — the slope of offspring trait values regressed on the mid-parent value.",
+        "h² is a PROPERTY OF A POPULATION IN AN ENVIRONMENT — it changes when allele frequencies or environmental variance change. It is not an intrinsic property of the trait."
+      ],
+      "key_terms": [
+        { "term": "Broad-sense heritability (H²)", "def": "Total genetic variance divided by total phenotypic variance: V_G / V_P." },
+        { "term": "Narrow-sense heritability (h²)", "def": "Additive genetic variance divided by total phenotypic variance: V_A / V_P. Predicts response to selection." },
+        { "term": "Parent-offspring regression", "def": "Plot of offspring trait values vs. mid-parent values; slope estimates h²." }
+      ],
+      "exam_traps": [
+        "h² (lowercase, narrow-sense) ≠ H² (uppercase, broad-sense). The study guide tests h² because it's the one that predicts evolution.",
+        "Heritability is population-and-environment specific. A trait with h² = 0.6 in one population can have h² = 0.2 in another. Don't quote heritability values as universal facts."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "The breeder's equation — predicting response to selection",
+      "overview": "The breeder's equation R = h² · S links heritability to selection differential to predict the per-generation response to selection. It is the central equation of quantitative genetics.",
+      "key_points": [
+        "Breeder's equation: R = h² · S.",
+        "S (SELECTION DIFFERENTIAL) = mean of breeders − mean of original population. Captures the strength of selection on the phenotype.",
+        "R (RESPONSE TO SELECTION) = mean of next generation − mean of current generation. Captures the actual evolutionary change.",
+        "Larger S → larger R (selection is stronger). Larger h² → larger R (more of the variance is heritable).",
+        "If h² = 0 (no heritability), R = 0 — no response, regardless of how strong the selection."
+      ],
+      "key_terms": [
+        { "term": "Selection differential (S)", "def": "The phenotypic difference between selected breeders and the original population mean." },
+        { "term": "Response to selection (R)", "def": "The change in population mean from one generation to the next, due to selection." },
+        { "term": "Breeder's equation", "def": "R = h² · S. Predicts evolutionary response from heritability and selection strength." }
+      ],
+      "exam_traps": [
+        "If you select strongly (large S) but h² is near zero, the population doesn't evolve. Heritability is the gating factor.",
+        "The breeder's equation works for ONE generation at a time. Iterating across generations requires knowing how V_A and h² change as allele frequencies shift (they don't stay constant)."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Phenotypic plasticity and reaction norms",
+      "overview": "A single genotype can produce different phenotypes in different environments. Phenotypic plasticity is the rule, not the exception, and the patterns reveal whether plasticity itself can evolve.",
+      "key_points": [
+        "PHENOTYPIC PLASTICITY = the ability of a single genotype to produce different phenotypes in different environments.",
+        "POLYPHENIC traits = single genotype producing DISCRETE alternative phenotypes (e.g., aphid winged vs. wingless morphs depending on density).",
+        "REACTION NORM = a plot of phenotype (y) vs. environment (x) for a given genotype. Sloped lines = plasticity. Horizontal lines = no plasticity (canalization).",
+        "GENOTYPE-BY-ENVIRONMENT INTERACTION (G×E, V_G×E) = genotypes differ in HOW they respond to environment (non-parallel reaction norms).",
+        "G×E adds to phenotypic variance and can confound heritability estimates."
+      ],
+      "key_terms": [
+        { "term": "Phenotypic plasticity", "def": "A genotype's capacity to produce different phenotypes in different environments." },
+        { "term": "Reaction norm", "def": "A graph of phenotype vs. environment for one genotype." },
+        { "term": "G×E interaction (V_G×E)", "def": "Differences among genotypes in their response to environment — reaction norms with different slopes." },
+        { "term": "Polyphenic trait", "def": "A genotype producing two or more discrete alternative phenotypes triggered by environmental cues." },
+        { "term": "Canalization", "def": "Lack of plasticity — the genotype produces the same phenotype across environments." }
+      ],
+      "exam_traps": [
+        "Sloped reaction norms = plasticity. Non-parallel reaction norms = G×E. The study guide asks about interpreting these graphs.",
+        "Plasticity is itself heritable and can evolve. A 'plastic' trait isn't the same as a 'non-genetic' trait — the capacity to be plastic is genetic."
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Selection vs. evolution — a recurring distinction",
+      "overview": "Selection ACTING on a trait does not guarantee EVOLUTION. The link is heritability. This is the integrative concept the study guide returns to repeatedly.",
+      "key_points": [
+        "Selection produces evolution ONLY when the selected trait has heritable variation (h² > 0).",
+        "If trait differences are entirely environmental (V_A = 0), selection can be strong but no evolution occurs.",
+        "Evolution = change in allele frequencies across generations. Selection on phenotypes only matters evolutionarily if those phenotypes correlate with genotypes.",
+        "This is the bedrock distinction between within-generation differences in survival/reproduction and between-generation evolutionary change."
+      ],
+      "key_terms": [],
+      "exam_traps": [
+        "Common exam scenario: selection clearly happens (some individuals reproduce more than others) but the trait is environmentally determined → NO evolutionary response. R = h² · S = 0.",
+        "Selection is a within-generation process. Evolution is a between-generation outcome that requires heritability."
+      ]
+    }
+  ]
+}

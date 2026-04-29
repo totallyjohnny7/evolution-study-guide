@@ -1,0 +1,127 @@
+[
+  {
+    "id": "STIM-L04-001",
+    "exam": 1,
+    "lecture": "L04",
+    "section": "B",
+    "topic": "Hardy-Weinberg assumptions",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Which of the following is NOT one of the five assumptions of Hardy-Weinberg equilibrium?",
+    "choices": [
+      "No mutation",
+      "Random mating",
+      "Equal allele frequencies (p = q = 0.5)",
+      "Infinite population size"
+    ],
+    "correct": 2,
+    "why": "Hardy-Weinberg works for ANY allele frequencies, not just 0.5/0.5. The five assumptions are no mutation, no migration (gene flow), no genetic drift (infinite N), no selection, and random mating.",
+    "choice_why": [
+      "Correct assumption — mutation would change allele frequencies, breaking HWE.",
+      "Correct assumption — non-random mating skews genotype frequencies away from p²/2pq/q².",
+      "NOT an assumption. HWE holds for any p and q so long as p + q = 1. This is the right answer.",
+      "Correct assumption — finite populations experience drift, which can shift allele frequencies."
+    ],
+    "source": "sg-exam-1 §II / §IV; L04 §B"
+  },
+  {
+    "id": "STIM-L04-002",
+    "exam": 1,
+    "lecture": "L04",
+    "section": "A",
+    "topic": "Allele frequency calculation",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "In a population of 200 diploid individuals, the genotype counts are 50 AA, 100 Aa, and 50 aa. What is the frequency of allele A?",
+    "choices": [
+      "0.25",
+      "0.50",
+      "0.75",
+      "0.40"
+    ],
+    "correct": 1,
+    "why": "Each AA contributes 2 A; each Aa contributes 1 A. Total A copies = 2(50) + 1(100) = 200. Total alleles = 2(200) = 400. p = 200/400 = 0.50.",
+    "choice_why": [
+      "Wrong. 0.25 would be the frequency of the AA GENOTYPE (50/200), not the A allele.",
+      "Correct. (2·50 + 100) / 400 = 200/400 = 0.50.",
+      "Wrong. 0.75 confuses allele with genotype, or counts AA + Aa individuals (150/200) — but Aa contributes only ONE A allele, not two.",
+      "Wrong arithmetic. Re-count: A copies from AA homozygotes (100) plus A copies from heterozygotes (100) = 200, divided by 400 total."
+    ],
+    "source": "sg-exam-1 §II; L04 §A,D"
+  },
+  {
+    "id": "STIM-L04-003",
+    "exam": 1,
+    "lecture": "L04",
+    "section": "C",
+    "topic": "HWE deviations diagnosis",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "A population has p = 0.4 (allele A) and q = 0.6 (allele a). Hardy-Weinberg expects 32% heterozygotes (2pq = 0.48 → 48%, sorry let me recompute: 2 × 0.4 × 0.6 = 0.48 = 48%). The population is observed to have only 20% heterozygotes. Which mechanism best explains this deviation?",
+    "choices": [
+      "Heterozygote advantage (overdominance)",
+      "Inbreeding or population subdivision (Wahlund effect)",
+      "Strong selection against the AA homozygote",
+      "Recent admixture between populations"
+    ],
+    "correct": 1,
+    "why": "Fewer heterozygotes than expected means EXCESS HOMOZYGOTES, which is the signature of inbreeding (close relative mating increases homozygosity) or the Wahlund effect (pooling subpopulations that each have their own internal HWE).",
+    "choice_why": [
+      "Wrong. Heterozygote advantage produces an EXCESS of heterozygotes, not a deficit.",
+      "Correct. Inbreeding directly increases homozygosity without changing allele frequencies; the Wahlund effect produces an apparent excess of homozygotes when subpopulations are mixed.",
+      "Wrong. Selection against AA reduces the AA count specifically, not heterozygotes; the pattern would skew toward Aa and aa, not away.",
+      "Wrong. Recent admixture would actually push genotypes toward HWE proportions in the next random-mating generation; admixture between divergent populations briefly causes Wahlund — but that's the same diagnosis as B."
+    ],
+    "source": "sg-exam-1 §IV; L04 §C"
+  },
+  {
+    "id": "STIM-L04-004",
+    "exam": 1,
+    "lecture": "L04",
+    "section": "B",
+    "topic": "HWE one-generation result",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "A population is started with 60% AA, 0% Aa, and 40% aa individuals. After one generation of random mating with all five HWE assumptions met, what are the genotype frequencies?",
+    "choices": [
+      "60% AA, 0% Aa, 40% aa (no change)",
+      "36% AA, 48% Aa, 16% aa",
+      "30% AA, 50% Aa, 20% aa",
+      "100% Aa (all heterozygous)"
+    ],
+    "correct": 1,
+    "why": "Allele freqs: p = 0.6, q = 0.4. After one generation of random mating, genotypes go to HWE: p² = 0.36, 2pq = 0.48, q² = 0.16. Allele frequencies stay constant; genotype frequencies snap to HWE.",
+    "choice_why": [
+      "Wrong. Random mating reshuffles genotypes immediately. HWE is reached in ONE generation from any starting point.",
+      "Correct. p² = 0.36, 2pq = 0.48, q² = 0.16. Note allele freqs are the same as before but genotypes have re-mixed.",
+      "Wrong arithmetic. 0.30 + 0.50 + 0.20 = 1.0 but doesn't match p² = 0.36 with p = 0.6.",
+      "Wrong. All-heterozygous would only happen with assortative-disassortative mating — not under random mating."
+    ],
+    "source": "sg-exam-1 §IV; L04 §B"
+  },
+  {
+    "id": "STIM-L04-005",
+    "exam": 1,
+    "lecture": "L04",
+    "section": "C",
+    "topic": "HWE deviations — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 3,
+    "q": "A population of snails has the following genotype counts at a shell-color locus: 90 RR, 20 Rr, 90 rr (total 200). (a) Calculate p (frequency of R) and q. (b) Compute the expected number of heterozygotes under Hardy-Weinberg. (c) Propose ONE mechanism that could explain the deviation between expected and observed heterozygote counts.",
+    "rubric": {
+      "total": 3,
+      "criteria": [
+        { "pts": 1, "desc": "Correctly calculates p = 0.5 and q = 0.5 [(2·90 + 20) / 400 = 200/400 = 0.5]." },
+        { "pts": 1, "desc": "Computes expected heterozygotes: 2pq · N = 0.5 · N = 100 (vs. observed 20). Recognizes large heterozygote DEFICIT." },
+        { "pts": 1, "desc": "Proposes a plausible mechanism for excess homozygotes / heterozygote deficit: inbreeding, assortative mating by color, population subdivision (Wahlund effect), or selection against heterozygotes (underdominance)." }
+      ]
+    },
+    "model_answer": "(a) Total alleles = 400. R copies = 2·90 + 1·20 = 200, so p = 0.5; q = 0.5. (b) Expected Rr under HWE = 2pq·N = 2·0.5·0.5·200 = 100 individuals. Observed = 20, so there are 80 fewer heterozygotes than expected — a substantial heterozygote deficit. (c) The most likely mechanism is INBREEDING or assortative mating by shell color (RR snails preferentially mating with RR, rr with rr). Either would push genotype frequencies toward homozygosity without changing allele frequencies. Alternatively, the Wahlund effect — if the 200 snails are actually two subpopulations pooled together, each of which has different allele frequencies, the combined sample would appear heterozygote-deficient.",
+    "source": "sg-exam-1 §IV; L04 §C,D"
+  }
+]

@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BIOL 4230 Evolution — Cheat Sheet (L01-L20)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tan: #f7f1e3;
+    --tan-rule: #d97706;
+    --amber: #b45309;
+    --ink: #1a1815;
+    --ink-dim: #4a4538;
+    --rule: #d4cdb8;
+    --bg: #faf8f3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: #2a2825; }
+  html.printing { background: white !important; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    font-size: 7pt;
+    line-height: 1.18;
+    max-width: 8in;
+    margin: 0.35in auto;
+    padding: 0.35in;
+    background: white;
+    box-shadow: 0 0 24px rgba(0,0,0,0.4);
+  }
+  @media print {
+    body { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+    html, body { background: white !important; }
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+  }
+
+  /* Header — column-span all */
+  .sheet-header {
+    column-span: all;
+    border-bottom: 1.2pt solid var(--ink);
+    padding-bottom: 4pt;
+    margin-bottom: 6pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12pt;
+  }
+  .sheet-header h1 {
+    font-size: 11pt;
+    color: var(--ink);
+    letter-spacing: -0.2pt;
+  }
+  .sheet-header .meta {
+    font-size: 6pt;
+    color: var(--ink-dim);
+    text-align: right;
+    line-height: 1.3;
+  }
+  .sheet-header .meta strong { color: var(--amber); font-weight: 700; }
+
+  /* 3-column body */
+  .body-cols {
+    column-count: 3;
+    column-gap: 10pt;
+    column-fill: auto;
+    column-rule: 0.4pt solid var(--rule);
+  }
+
+  .lec {
+    margin-bottom: 3pt;
+  }
+  .lec h2 {
+    font-size: 8.2pt;
+    color: var(--amber);
+    font-weight: 700;
+    border-bottom: 0.5pt solid var(--amber);
+    padding-bottom: 0.5pt;
+    margin-bottom: 1.5pt;
+    margin-top: 2pt;
+    letter-spacing: -0.1pt;
+    break-after: avoid;
+  }
+  .lec:first-child h2 { margin-top: 0; }
+
+  .sec {
+    break-inside: avoid;
+    margin-bottom: 2pt;
+  }
+  .sec h3 {
+    font-size: 7.4pt;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 0.5pt;
+    margin-top: 1pt;
+  }
+  .sec h3 .sym {
+    color: var(--tan-rule);
+    font-weight: 700;
+    margin-right: 2pt;
+  }
+
+  .pts {
+    list-style: none;
+    margin-bottom: 1pt;
+  }
+  .pts li {
+    font-size: 6.7pt;
+    line-height: 1.18;
+    padding-left: 5pt;
+    text-indent: -5pt;
+    margin-bottom: 0.2pt;
+    color: var(--ink);
+  }
+  .pts li::before {
+    content: "▸ ";
+    color: var(--tan-rule);
+    font-weight: 600;
+  }
+
+  .terms {
+    background: var(--tan);
+    border-left: 1.2pt solid var(--tan-rule);
+    padding: 1.2pt 3pt 1.2pt 4pt;
+    font-size: 6.4pt;
+    line-height: 1.18;
+    color: var(--ink-dim);
+    margin-top: 0.5pt;
+    margin-bottom: 1pt;
+  }
+  .terms b {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .terms .sep {
+    color: var(--tan-rule);
+    margin: 0 2pt;
+    font-weight: 600;
+  }
+
+  .proof {
+    column-span: all;
+    margin-top: 6pt;
+    padding-top: 3pt;
+    border-top: 0.4pt solid var(--rule);
+    font-size: 5.8pt;
+    color: var(--ink-dim);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+  }
+  .proof b { color: var(--ink); }
+
+  @page { size: letter portrait; margin: 0.35in; }
+</style>
+<script>
+  // Mark printing class for white bg
+  window.addEventListener('beforeprint', () => document.documentElement.classList.add('printing'));
+  window.addEventListener('afterprint', () => document.documentElement.classList.remove('printing'));
+</script>
+</head>
+<body>
+
+<header class="sheet-header">
+  <h1>BIOL 4230 · Evolution — Cumulative Cheat Sheet (Exams 1-3, L01-L20)</h1>
+  <div class="meta">3-col · 7pt · print at 100%<br><strong>18 lectures</strong> · synapomorphies, drift, speciation, evo-medicine</div>
+</header>
+
+<div class="body-cols">
+
+<!-- L01 -->
+<div class="lec">
+  <h2>L01 · What Is Evolution? Course Intro</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Defining evolution</h3>
+    <ul class="pts">
+      <li>Evolution = change in allele frequencies in a population over generations.</li>
+      <li>The unit of evolution is the population, not the individual.</li>
+      <li>Individuals are selected; populations evolve.</li>
+      <li>Heritable variation is required for evolutionary change to occur.</li>
+    </ul>
+    <div class="terms"><b>Evolution</b>=change in heritable allele frequencies across generations<span class="sep">·</span><b>Population</b>=interbreeding individuals of one species in an area<span class="sep">·</span><b>Heritable variation</b>=genetic-basis trait differences passable to offspring</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Why evolution unifies biology</h3>
+    <ul class="pts">
+      <li>Dobzhansky 1973: 'Nothing in biology makes sense except in the light of evolution.'</li>
+      <li>Explains both unity (common descent) and diversity (lineage-specific adaptations).</li>
+      <li>Applications: antibiotic resistance, vaccine design, conservation, crop improvement.</li>
+    </ul>
+    <div class="terms"><b>Common descent</b>=all life shares an ancestor; similarity from inheritance<span class="sep">·</span><b>Adaptation</b>=heritable trait raising fitness, made by selection</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> The four evolutionary mechanisms</h3>
+    <ul class="pts">
+      <li>Natural selection — non-random; differential survival/reproduction by trait variation.</li>
+      <li>Genetic drift — random sampling of alleles; strongest in small populations.</li>
+      <li>Gene flow — movement of alleles between populations; tends to homogenize.</li>
+      <li>Mutation — ultimate source of new variation; random with respect to fitness.</li>
+    </ul>
+    <div class="terms"><b>Natural selection</b>=differential reproduction from heritable trait variation, non-random<span class="sep">·</span><b>Genetic drift</b>=random allele-frequency change, esp. small N<span class="sep">·</span><b>Gene flow</b>=allele movement between populations via migration<span class="sep">·</span><b>Mutation</b>=heritable DNA change; ultimate source of new alleles</div>
+  </div>
+</div>
+
+<!-- L02 -->
+<div class="lec">
+  <h2>L02 · Evolutionary Thinking — Pre-Darwin to NS</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Great Chain of Being / pre-Darwin</h3>
+    <ul class="pts">
+      <li>Great Chain of Being: fixed hierarchy with humans at apex.</li>
+      <li>Species assumed immutable; created in final form, not changing.</li>
+      <li>Extinction denied or downplayed well into the 1700s.</li>
+      <li>No concept of common ancestry — similarity meant shared design.</li>
+    </ul>
+    <div class="terms"><b>Great Chain of Being (Scala Naturae)</b>=pre-Darwinian fixed ladder, no descent<span class="sep">·</span><b>Immutability</b>=pre-Darwinian assumption species don't change</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Extinction recognized — Smith</h3>
+    <ul class="pts">
+      <li>William Smith (early 1800s) used fossils + stratigraphy to map English rock layers.</li>
+      <li>Distinct fossil assemblages occur in consistent vertical order — faunal succession.</li>
+      <li>Disappearance of fossil types from younger strata established extinction as real.</li>
+      <li>Cuvier independently demonstrated extinction by comparing fossil to living mammals.</li>
+    </ul>
+    <div class="terms"><b>Stratigraphy</b>=study of rock layers; younger atop older<span class="sep">·</span><b>Faunal succession</b>=fossils occur in consistent vertical order; date rocks by fossils<span class="sep">·</span><b>Extinction</b>=complete disappearance of a lineage</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Lamarck, Lyell, road to Darwin</h3>
+    <ul class="pts">
+      <li>Lamarck (1809): inheritance of acquired characteristics — wrong on mechanism, right that species change.</li>
+      <li>Lyell: uniformitarianism — same gradual processes shaped Earth over deep time.</li>
+      <li>Lyell's gift to Darwin: deep time = millions/billions of years for slow change.</li>
+    </ul>
+    <div class="terms"><b>Lamarckism</b>=traits gained in life pass to offspring (wrong)<span class="sep">·</span><b>Uniformitarianism</b>=gradual processes over deep time shape Earth<span class="sep">·</span><b>Deep time</b>=millions-billions of years over Earth history</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Darwin, Wallace, natural selection</h3>
+    <ul class="pts">
+      <li>Darwin: Beagle voyage (1831-36); Galápagos finches; barnacles → natural selection.</li>
+      <li>Three obs + one inference: variation, overproduction, non-random survival → trait freq shift.</li>
+      <li>Wallace independently from Malay Archipelago; 1858 letter spurred Darwin to publish.</li>
+      <li>On the Origin of Species published 1859.</li>
+    </ul>
+    <div class="terms"><b>Natural selection</b>=heritable variants raising reproduction become more common<span class="sep">·</span><b>Heritability</b>=portion of phenotypic variance that is genetic<span class="sep">·</span><b>S (selection differential)</b>=mean of breeders − mean of population</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§E</span> Hypothesis vs. theory</h3>
+    <ul class="pts">
+      <li>Hypothesis = tentative, testable, narrow explanation; designed to be falsified.</li>
+      <li>Scientific theory = broad, well-supported explanation; generates many hypotheses.</li>
+      <li>Evolution is a theory in the strong sense, supported by many evidence streams.</li>
+      <li>A good hypothesis is falsifiable — specifies what would prove it wrong.</li>
+    </ul>
+    <div class="terms"><b>Hypothesis</b>=tentative, testable, falsifiable explanation<span class="sep">·</span><b>Scientific theory</b>=broad well-supported explanation; spawns hypotheses<span class="sep">·</span><b>Falsifiability</b>=specifies what observations would refute</div>
+  </div>
+</div>
+
+<!-- L03 -->
+<div class="lec">
+  <h2>L03 · Genes and Heritable Variation</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Genome architecture — coding vs. noncoding</h3>
+    <ul class="pts">
+      <li>Protein-coding ~1-2% of human genome; bulk is noncoding.</li>
+      <li>Noncoding includes pseudogenes, transposons/retroelements, regulatory DNA, repeats.</li>
+      <li>Genome size does NOT correlate with complexity (C-value paradox).</li>
+      <li>Pseudogenes are evolutionary fossils — direct evidence of evolutionary history.</li>
+    </ul>
+    <div class="terms"><b>Pseudogene</b>=nonfunctional sequence, broken by stops/frameshifts<span class="sep">·</span><b>MGE</b>=DNA that changes position; transposons, LINEs, SINEs<span class="sep">·</span><b>C-value paradox</b>=genome size ≠ complexity</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Levels of gene expression regulation</h3>
+    <ul class="pts">
+      <li>Pre-transcriptional: chromatin, histone mods, DNA methylation — controls accessibility.</li>
+      <li>Transcriptional: TFs binding promoters/enhancers; rate of mRNA synthesis.</li>
+      <li>Post-transcriptional: alt. splicing, miRNA degradation, mRNA stability.</li>
+      <li>Post-translational: phosphorylation, ubiquitination, cleavage; alters made protein.</li>
+    </ul>
+    <div class="terms"><b>DNA methylation</b>=methyl on CpG; usually represses; PRE-txn<span class="sep">·</span><b>Histone modification</b>=acetyl/methyl on tails; alters chromatin; PRE-txn<span class="sep">·</span><b>miRNA</b>=small RNA degrades mRNA; POST-txn<span class="sep">·</span><b>Alternative splicing</b>=multiple mRNAs from one gene; POST-txn</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Alleles — dominant, recessive, additive</h3>
+    <ul class="pts">
+      <li>Dominant alleles mask recessives in heterozygotes (Aa shows A).</li>
+      <li>Additive: each allele incremental; Aa intermediate; effect scales linearly.</li>
+      <li>Recessive beneficial mutations spread SLOWLY when rare (hidden in heterozygotes).</li>
+      <li>Dominant beneficial mutations spread FAST — every Aa shows phenotype.</li>
+      <li>V_A is the only variance component that responds predictably to selection.</li>
+    </ul>
+    <div class="terms"><b>Allele</b>=variant of a gene at a locus<span class="sep">·</span><b>Dominant</b>=fully expressed in heterozygote<span class="sep">·</span><b>Recessive</b>=expressed only when homozygous<span class="sep">·</span><b>Additive</b>=linear dose-response across copies<span class="sep">·</span><b>Locus</b>=chromosomal location of a gene</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Mutation as source of variation</h3>
+    <ul class="pts">
+      <li>Mutations are heritable DNA changes; the only source of NEW genetic variation.</li>
+      <li>Random with respect to fitness — don't preferentially generate beneficial alleles.</li>
+      <li>Most mutations are neutral or slightly deleterious; beneficials are rare.</li>
+      <li>Eukaryote rate ~10⁻⁸-10⁻⁹ per base/generation; dozens of new mutations per individual.</li>
+    </ul>
+    <div class="terms"><b>Mutation</b>=heritable DNA change: point, indel, dup, inv, translocation<span class="sep">·</span><b>Mutation rate</b>=~10⁻⁸-10⁻⁹ per base/gen in mammals<span class="sep">·</span><b>Random wrt fitness</b>=mutation doesn't 'know' what's useful</div>
+  </div>
+</div>
+
+<!-- L04 -->
+<div class="lec">
+  <h2>L04 · Hardy-Weinberg Equilibrium</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Allele freq vs genotype freq</h3>
+    <ul class="pts">
+      <li>For biallelic locus A,a: p = freq(A), q = freq(a). p + q = 1.</li>
+      <li>p = (2·N_AA + N_Aa)/(2·N_total).</li>
+      <li>Genotype freqs sum: freq(AA)+freq(Aa)+freq(aa) = 1.</li>
+    </ul>
+    <div class="terms"><b>Allele frequency</b>=proportion of gene copies at a locus<span class="sep">·</span><b>Genotype frequency</b>=proportion of individuals with a given genotype</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> The Hardy-Weinberg equation</h3>
+    <ul class="pts">
+      <li>HWE: p² + 2pq + q² = 1.</li>
+      <li>p² = AA freq; 2pq = Aa freq; q² = aa freq.</li>
+      <li>Five assumptions: no mutation, no migration, no drift, no selection, random mating.</li>
+      <li>HWE achieved in ONE gen of random mating from any starting genotype freqs.</li>
+    </ul>
+    <div class="terms"><b>HWE</b>=allele/genotype freq constant; no evol forces acting<span class="sep">·</span><b>Random mating (panmixia)</b>=all pairings equally likely</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Detecting deviations</h3>
+    <ul class="pts">
+      <li>Excess homozygotes → inbreeding or population subdivision (Wahlund).</li>
+      <li>Excess heterozygotes → heterozygote advantage or disassortative mating.</li>
+      <li>Selection against a homozygote shifts allele freqs and genotype ratios.</li>
+      <li>Drift in small N causes random, non-directional departures.</li>
+    </ul>
+    <div class="terms"><b>Inbreeding</b>=mating with relatives; raises homozygosity<span class="sep">·</span><b>Heterozygote advantage</b>=Aa fitter than AA or aa (sickle/malaria)<span class="sep">·</span><b>Wahlund effect</b>=apparent homozygote excess from pooling subpops</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Worked computation pattern</h3>
+    <ul class="pts">
+      <li>Step 1: count alleles (AA→2A, Aa→1A+1a, aa→2a).</li>
+      <li>Step 2: compute p and q from totals.</li>
+      <li>Step 3: expected counts = N·p², N·2pq, N·q².</li>
+      <li>Step 4: compare expected vs observed; identify mechanism for mismatch.</li>
+    </ul>
+    <div class="terms">Common slip: forgetting to multiply expected freqs by N when comparing to counts<span class="sep">·</span>Allele freqs alone can't detect HWE deviations — need genotypes</div>
+  </div>
+</div>
+
+<!-- L05 -->
+<div class="lec">
+  <h2>L05 · Quantitative Genetics, Selection, Plasticity</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Variance partitioning</h3>
+    <ul class="pts">
+      <li>V_P = V_A + V_D + V_I + V_E.</li>
+      <li>V_A = additive (responds predictably to selection).</li>
+      <li>V_D = dominance (allele×allele same locus).</li>
+      <li>V_I = epistasis (allele×allele different loci).</li>
+      <li>V_E = environmental (not heritable).</li>
+    </ul>
+    <div class="terms"><b>V_A</b>=additive genetic variance; passes parent→offspring; engine of selection<span class="sep">·</span><b>V_D</b>=dominance variance; same-locus interactions<span class="sep">·</span><b>V_I</b>=epistatic variance; cross-locus interactions<span class="sep">·</span><b>V_E</b>=environmental variance; not inherited</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Heritability — broad vs narrow</h3>
+    <ul class="pts">
+      <li>Broad-sense H² = V_G/V_P (V_G = V_A+V_D+V_I).</li>
+      <li>Narrow-sense h² = V_A/V_P — predicts response to selection.</li>
+      <li>h² estimated from parent-offspring regression (slope of offspring on mid-parent).</li>
+      <li>h² is population- and environment-specific; not intrinsic to the trait.</li>
+    </ul>
+    <div class="terms"><b>H²</b>=V_G/V_P, total genetic over phenotypic variance<span class="sep">·</span><b>h²</b>=V_A/V_P, narrow-sense; predicts evolution<span class="sep">·</span><b>Parent-offspring regression</b>=offspring vs midparent slope ≈ h²</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Breeder's equation</h3>
+    <ul class="pts">
+      <li>R = h² · S — central equation of quantitative genetics.</li>
+      <li>S = mean of breeders − population mean (selection strength).</li>
+      <li>R = mean of next gen − current mean (evolutionary response).</li>
+      <li>If h² = 0, R = 0 — no evolution regardless of selection strength.</li>
+    </ul>
+    <div class="terms"><b>S</b>=phenotypic difference between breeders and population mean<span class="sep">·</span><b>R</b>=change in pop mean from one gen to the next<span class="sep">·</span><b>Breeder's equation</b>=R = h²·S</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Phenotypic plasticity, reaction norms</h3>
+    <ul class="pts">
+      <li>Plasticity = one genotype produces different phenotypes in different environments.</li>
+      <li>Polyphenic = single genotype, discrete alternative morphs (winged/wingless aphids).</li>
+      <li>Reaction norm = phenotype-vs-environment plot for a genotype; sloped = plastic.</li>
+      <li>G×E = genotypes differ in HOW they respond (non-parallel reaction norms).</li>
+    </ul>
+    <div class="terms"><b>Phenotypic plasticity</b>=one genotype, many phenotypes by environment<span class="sep">·</span><b>Reaction norm</b>=phenotype vs environment plot<span class="sep">·</span><b>G×E</b>=non-parallel reaction norms<span class="sep">·</span><b>Canalization</b>=lack of plasticity</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§E</span> Selection vs evolution</h3>
+    <ul class="pts">
+      <li>Selection produces evolution ONLY when trait has heritable variation (h² &gt; 0).</li>
+      <li>If V_A = 0, no evolutionary response no matter how strong selection.</li>
+      <li>Selection = within-gen process; evolution = between-gen outcome.</li>
+    </ul>
+    <div class="terms">If trait differences are entirely environmental, R = h²·S = 0<span class="sep">·</span>Selection on phenotypes only matters if phenotypes correlate with genotypes</div>
+  </div>
+</div>
+
+<!-- L07 -->
+<div class="lec">
+  <h2>L07 · Empirical Studies of Natural Selection</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Measuring selection in nature</h3>
+    <ul class="pts">
+      <li>Need (1) heritable variation, (2) differential reproduction, (3) freq change across gens.</li>
+      <li>Field requires longitudinal data — marked individuals tracked across years.</li>
+      <li>S measured directly: mean of breeders − population mean.</li>
+      <li>Predicted R = h²·S checked against next-gen change.</li>
+    </ul>
+    <div class="terms"><b>Selection in the wild</b>=heritable trait variants reproduce more in nature</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Grants' Galápagos finches</h3>
+    <ul class="pts">
+      <li>1977 drought left large hard seeds; deeper-beaked Geospiza fortis survived better.</li>
+      <li>Beak depth was heritable; next gen had measurably deeper beaks.</li>
+      <li>Wet years reversed the pressure (small seeds favored) — direction is contingent.</li>
+      <li>Hybridization with relatives also injected variation, mixing flow with selection.</li>
+    </ul>
+    <div class="terms"><b>Geospiza fortis</b>=medium ground finch on Daphne Major<span class="sep">·</span><b>Selection on beak depth</b>=post-1977 deeper beaks survived; next gen deeper</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Peppered moths — industrial melanism</h3>
+    <ul class="pts">
+      <li>Pre-industrial: light morph dominant on lichen-covered trunks.</li>
+      <li>Pollution killed lichen, blackened trunks; melanic morph rose to &gt;95% in polluted areas.</li>
+      <li>Mechanism: differential bird predation on visible morphs.</li>
+      <li>Clean-air laws → lichen returned → light morph rebounded.</li>
+      <li>Genetic basis: transposon insertion in cortex gene.</li>
+    </ul>
+    <div class="terms"><b>Industrial melanism</b>=rise of dark morphs from human darkening<span class="sep">·</span><b>Biston betularia</b>=peppered moth species</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Other examples — flu, antibiotics, domestication</h3>
+    <ul class="pts">
+      <li>Influenza evolves antigenic variation under host immune + antiviral selection.</li>
+      <li>Antibiotic resistance — strong directional natural selection by humans.</li>
+      <li>Domestication = artificial selection; greyhounds show measurable evolution of speed.</li>
+      <li>Common structure: heritable variation + strong directional selection → rapid change.</li>
+    </ul>
+    <div class="terms"><b>Antibiotic resistance</b>=resistant variants exist, drug selects them<span class="sep">·</span><b>Artificial selection</b>=humans choose breeders</div>
+  </div>
+</div>
+
+<!-- L08 -->
+<div class="lec">
+  <h2>L08 · Complex Adaptations</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Adaptation as trait and process</h3>
+    <ul class="pts">
+      <li>Adaptation (noun) = trait shaped by past selection; (verb) = the process producing it.</li>
+      <li>Complex adaptations build incrementally — many small mutational steps, each useful.</li>
+      <li>Each intermediate must itself be functional; selection cannot plan ahead.</li>
+    </ul>
+    <div class="terms"><b>Adaptation</b>=trait shaped by past selection OR the process making it<span class="sep">·</span><b>Gradual evolution</b>=complex traits via many small favorable changes</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Vertebrate eye — stepwise model</h3>
+    <ul class="pts">
+      <li>Stage 1: light-sensitive patch (light/dark, circadian, predator detection).</li>
+      <li>Stage 2: cupped patch — directional sensitivity.</li>
+      <li>Stage 3: pinhole eye (Nautilus) — crude image, no lens.</li>
+      <li>Stage 4: lens added (co-opted crystallins) for sharp focus.</li>
+      <li>Eyes evolved independently &gt;40 times — convergent solutions.</li>
+    </ul>
+    <div class="terms"><b>Stepwise eye evolution</b>=patch→cup→pinhole→lensed, each stage functional<span class="sep">·</span><b>Convergent eye evolution</b>=vertebrate vs cephalopod camera eyes</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Regulatory networks, gene duplication</h3>
+    <ul class="pts">
+      <li>Cis-regulatory mutations alter when/where a gene fires without changing protein.</li>
+      <li>Gene duplication: one copy keeps original function; the other can evolve a new role.</li>
+      <li>Neofunctionalization vs subfunctionalization (split ancestral function).</li>
+      <li>Protein promiscuity — weak side activities can be refined into new primary functions.</li>
+    </ul>
+    <div class="terms"><b>Cis-regulatory mutation</b>=enhancer/promoter change; alters expression<span class="sep">·</span><b>Gene duplication</b>=extra copy; relaxed selection enables novelty<span class="sep">·</span><b>Neofunctionalization</b>=duplicate gains new function<span class="sep">·</span><b>Subfunctionalization</b>=duplicates split ancestral function<span class="sep">·</span><b>Protein promiscuity</b>=weak side activities co-opted</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Heterochrony</h3>
+    <ul class="pts">
+      <li>Heterochrony = evolution of timing/rate of developmental events.</li>
+      <li>Paedomorphosis: juvenile features kept in adult (axolotl).</li>
+      <li>Peramorphosis: development extended past ancestor (large antlers).</li>
+      <li>Small timing changes → dramatic morphological differences; simple genetic basis.</li>
+    </ul>
+    <div class="terms"><b>Heterochrony</b>=evolution of developmental timing or rate<span class="sep">·</span><b>Paedomorphosis</b>=juvenile features in adult (axolotl)<span class="sep">·</span><b>Peramorphosis</b>=development extends past ancestral endpoint</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§E</span> Hox genes and conserved networks</h3>
+    <ul class="pts">
+      <li>Hox genes pattern A-P axis of bilaterians; arranged in clusters showing colinearity.</li>
+      <li>Same Hox toolkit patterns flies, mice, humans — deep conservation.</li>
+      <li>Body-plan differences come largely from changes in regulation, not Hox proteins.</li>
+      <li>Hox-cluster duplications correlate with major body-plan transitions (vertebrates have 4).</li>
+    </ul>
+    <div class="terms"><b>Hox gene</b>=TF patterning A-P axis in bilaterians<span class="sep">·</span><b>Colinearity</b>=Hox chromosomal order matches body-axis expression<span class="sep">·</span><b>Conservation of dev networks</b>=Hox/Pax/Wnt shared across phyla</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§F</span> Imperfect adaptation</h3>
+    <ul class="pts">
+      <li>Selection produces 'good enough,' not optimal; constrained by history.</li>
+      <li>Vestigial structures (whale pelvis, human appendix) — ancestral function gone.</li>
+      <li>Trade-offs (running speed vs heat dissipation) limit any single trait.</li>
+      <li>Vertebrate retina has photoreceptors backwards — historical accident.</li>
+    </ul>
+    <div class="terms"><b>Vestigial structure</b>=ancestral form, lost function<span class="sep">·</span><b>Trade-off</b>=gain in one trait costs another<span class="sep">·</span><b>Constraint</b>=historical/dev factor limiting selection</div>
+  </div>
+</div>
+
+<!-- L09 -->
+<div class="lec">
+  <h2>L09 · Coevolution</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Defining reciprocal coevolution</h3>
+    <ul class="pts">
+      <li>Coevolution = reciprocal evolutionary change in interacting lineages.</li>
+      <li>Coexistence alone is NOT coevolution — adaptation must run in both directions.</li>
+      <li>Can be antagonistic (predator-prey) or mutualistic (pollinator-flower).</li>
+    </ul>
+    <div class="terms"><b>Coevolution</b>=reciprocal evolutionary change between interacting species<span class="sep">·</span><b>Reciprocal selection</b>=A imposes selection on B which imposes back on A</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Antagonistic arms races</h3>
+    <ul class="pts">
+      <li>Newts (Taricha) make tetrodotoxin; garter snakes (Thamnophis) evolve TTX-resistant Na channels.</li>
+      <li>Geographic variation: where snakes are resistant, newts are toxic — and vice versa.</li>
+      <li>Arms races can be asymmetric; one side may temporarily 'win.'</li>
+      <li>Fitness costs (snake speed cost of resistance) cap escalation.</li>
+    </ul>
+    <div class="terms"><b>Coevolutionary arms race</b>=reciprocal escalation of offense/defense<span class="sep">·</span><b>Tetrodotoxin (TTX)</b>=newt neurotoxin blocking Na channels</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Mutualistic coevolution</h3>
+    <ul class="pts">
+      <li>Pollinator-plant: long-tongued moths and long-spurred orchids (Darwin's prediction).</li>
+      <li>Endosymbiosis: mitochondria from alphaproteobacteria, chloroplasts from cyanobacteria.</li>
+      <li>Mutualisms can break down or shift to parasitism if cost/benefit changes.</li>
+    </ul>
+    <div class="terms"><b>Mutualism</b>=both species gain net fitness<span class="sep">·</span><b>Endosymbiosis</b>=organism inside another; origin of mitochondria/plastids</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Mimicry — Batesian vs Müllerian</h3>
+    <ul class="pts">
+      <li>Batesian: harmless mimic resembles harmful model; mimic must stay rare.</li>
+      <li>Müllerian: multiple harmful species converge on shared warning signal.</li>
+      <li>Both products of frequency-dependent predator selection.</li>
+    </ul>
+    <div class="terms"><b>Batesian mimicry</b>=palatable mimics unpalatable model<span class="sep">·</span><b>Müllerian mimicry</b>=multiple unpalatable species share warning signal<span class="sep">·</span><b>Aposematism</b>=warning coloration in unpalatable species</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§E</span> Geographic Mosaic Theory</h3>
+    <ul class="pts">
+      <li>Thompson: hotspots (intense reciprocal selection) + coldspots (weak/none).</li>
+      <li>Gene flow + local trait evolution → mosaic of coevolutionary states.</li>
+      <li>Predicts trait MISMATCH in some areas — evidence FOR ongoing coevolution.</li>
+    </ul>
+    <div class="terms"><b>Geographic Mosaic Theory</b>=Thompson; coevolution varies in rate/direction across range</div>
+  </div>
+</div>
+
+<!-- L11 -->
+<div class="lec">
+  <h2>L11 · Sex and Sexual Selection</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Cost of sex / why sex evolved</h3>
+    <ul class="pts">
+      <li>Twofold cost (Maynard Smith): sexual mom passes only half her genes per offspring.</li>
+      <li>Benefit 1: recombination shuffles alleles, makes new combinations selection can use.</li>
+      <li>Benefit 2: Muller's ratchet — sex purges deleterious mutations asexuals can't.</li>
+      <li>Benefit 3: Red Queen — sex helps hosts keep up with rapidly evolving parasites.</li>
+      <li>Benefit 4: sib competition reduced when offspring are diverse.</li>
+    </ul>
+    <div class="terms"><b>Twofold cost of sex</b>=sexual female transmits half the gene copies of asexual<span class="sep">·</span><b>Muller's ratchet</b>=asexual lineages accumulate irreversible mutations<span class="sep">·</span><b>Red Queen</b>=sex needed to keep up with parasites</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Anisogamy</h3>
+    <ul class="pts">
+      <li>Anisogamy = unequal gamete sizes; foundation of male/female.</li>
+      <li>Female = larger gamete sex; male = smaller. Defined by gametes, not behavior.</li>
+      <li>Asymmetric investment → asymmetric strategies (selective females, competitive males).</li>
+    </ul>
+    <div class="terms"><b>Anisogamy</b>=unequal gametes; biological basis of sex<span class="sep">·</span><b>Isogamy</b>=equal gametes (some algae/fungi); ancestral state</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Sexual selection</h3>
+    <ul class="pts">
+      <li>Selection on traits raising MATING success rather than survival.</li>
+      <li>Intrasexual = same-sex contests (weapons, large body); intersexual = mate choice (ornaments).</li>
+      <li>Can OPPOSE survival selection — peacock tail attracts mates AND predators.</li>
+      <li>Fisherian runaway: arbitrary preference amplifies if 'sexy' offspring inherit both.</li>
+    </ul>
+    <div class="terms"><b>Sexual selection</b>=selection for mating success rather than survival<span class="sep">·</span><b>Intrasexual</b>=male-male combat<span class="sep">·</span><b>Intersexual</b>=mate choice<span class="sep">·</span><b>Sexual dimorphism</b>=morphological difference between sexes</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Conflict, sperm competition</h3>
+    <ul class="pts">
+      <li>Sexual conflict: males benefit from many matings; females from fewer-but-better.</li>
+      <li>Sperm competition drives large testes, long sperm, mating plugs.</li>
+      <li>Cryptic female choice — bias paternity post-copulation via reproductive tract.</li>
+      <li>Antagonistic coevolution within species: males coerce, females resist (ducks, bedbugs).</li>
+    </ul>
+    <div class="terms"><b>Sexual conflict</b>=opposing selection on males vs females<span class="sep">·</span><b>Sperm competition</b>=sperm of different males compete to fertilize<span class="sep">·</span><b>Cryptic female choice</b>=post-copulatory paternity bias<span class="sep">·</span><b>Antagonistic coevolution</b>=reciprocal change from conflicting interests</div>
+  </div>
+</div>
+
+<!-- L12 -->
+<div class="lec">
+  <h2>L12 · Life History Evolution</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Trade-offs in energy allocation</h3>
+    <ul class="pts">
+      <li>Growth vs reproduction; current vs future; offspring number vs size.</li>
+      <li>Trade-offs are physiological — selection navigates them, can't break them.</li>
+      <li>High adult survival favors future reproduction; low favors current.</li>
+    </ul>
+    <div class="terms"><b>Life history</b>=schedule of birth/growth/reproduction/death<span class="sep">·</span><b>Trade-off</b>=inverse relationship between fitness traits<span class="sep">·</span><b>Reproductive effort</b>=fraction of resources allocated to current reproduction</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Extrinsic mortality</h3>
+    <ul class="pts">
+      <li>HIGH extrinsic mortality → early reproduction, many offspring, short life.</li>
+      <li>LOW extrinsic mortality → delayed reproduction, fewer/better offspring, longer life.</li>
+      <li>Mainland (predators) opossums mature earlier than predator-free island opossums.</li>
+      <li>These shifts evolve in tens of generations under strong pressure.</li>
+    </ul>
+    <div class="terms"><b>Extrinsic mortality</b>=external death (predation/disease)<span class="sep">·</span><b>Senescence/intrinsic mortality</b>=physiological decline</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Theories of senescence</h3>
+    <ul class="pts">
+      <li>Mutation accumulation (Medawar): late-life deleterious mutations escape selection.</li>
+      <li>Antagonistic pleiotropy (Williams): one gene helps young, hurts old — net favored.</li>
+      <li>Disposable soma (Kirkwood): trade-off between maintenance and reproduction.</li>
+      <li>Theories are not mutually exclusive — all may contribute.</li>
+    </ul>
+    <div class="terms"><b>Senescence</b>=age-related decline in survival/reproduction<span class="sep">·</span><b>Mutation accumulation</b>=many-gene story; late mutations escape selection<span class="sep">·</span><b>Antagonistic pleiotropy</b>=single-gene story; early benefit, late cost<span class="sep">·</span><b>Disposable soma</b>=invest in reproduction over repair</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Age at maturity, offspring size</h3>
+    <ul class="pts">
+      <li>Earlier maturity → reproduce sooner but smaller; depends on growth/risk/payoff.</li>
+      <li>Many-small offspring (bet-hedging) vs few-large (well-provisioned, higher per-offspring).</li>
+      <li>r-selected: fast-living, many small (mice, weeds).</li>
+      <li>K-selected: slow-living, few large, parental care (elephants, oaks).</li>
+    </ul>
+    <div class="terms"><b>Age at maturity</b>=age at first reproduction<span class="sep">·</span><b>r/K selection</b>=fast-many vs slow-few life-history dichotomy</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§E</span> Seychelles warblers</h3>
+    <ul class="pts">
+      <li>Cooperative breeders: offspring help parents raise later broods.</li>
+      <li>Female offspring stay on natal high-quality territories; males disperse (sex-biased).</li>
+      <li>Helping is not pure altruism — helpers gain inclusive fitness, may inherit territory.</li>
+    </ul>
+    <div class="terms"><b>Cooperative breeding</b>=adult helpers assist parents<span class="sep">·</span><b>Sex-biased dispersal</b>=one sex disperses more than the other</div>
+  </div>
+</div>
+
+<!-- L13 -->
+<div class="lec">
+  <h2>L13 · Evolution of Social Behavior</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Individual vs group selection</h3>
+    <ul class="pts">
+      <li>Naive group selection fails: cheaters profit without contributing, spread, collapse cooperation.</li>
+      <li>Modern view: selection mostly at individual or genic level; group benefits arise from individual.</li>
+      <li>Special conditions (frequent extinctions, strict subdivision) permit group selection but rare.</li>
+    </ul>
+    <div class="terms"><b>Group selection</b>=differential reproduction of GROUPS<span class="sep">·</span><b>Selfish gene perspective</b>=Dawkins; alleles favor their own propagation</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Kin selection / inclusive fitness</h3>
+    <ul class="pts">
+      <li>Hamilton's rule: rB &gt; C — altruism evolves when benefit×relatedness exceeds cost.</li>
+      <li>r values: parent-offspring 0.5; full sib 0.5; half sib 0.25; first cousin 0.125.</li>
+      <li>Inclusive fitness = direct (own offspring) + indirect (relatives' extra offspring × r).</li>
+      <li>Eusociality (bees, ants, naked mole-rats): workers forgo reproduction.</li>
+      <li>Haplodiploidy in hymenopterans: sisters r = 0.75 (more than to own offspring).</li>
+    </ul>
+    <div class="terms"><b>Hamilton's rule</b>=rB &gt; C; altruism favored when indirect benefit exceeds cost<span class="sep">·</span><b>Coefficient of relatedness (r)</b>=prob of sharing allele by descent<span class="sep">·</span><b>Inclusive fitness</b>=direct + indirect (kin-mediated)<span class="sep">·</span><b>Eusociality</b>=reproductive division of labor; workers don't reproduce</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Evolutionarily stable strategies (ESS)</h3>
+    <ul class="pts">
+      <li>ESS = strategy that, once common, can't be invaded by rare alternative (Nash equilibrium).</li>
+      <li>Depends on frequency-dependent payoffs.</li>
+      <li>Hawk-Dove: pure-Hawk unstable (costs); pure-Dove unstable (Hawks invade); mixed equilibrium.</li>
+      <li>ESS solved with payoff-matrix game theory.</li>
+    </ul>
+    <div class="terms"><b>ESS</b>=strategy uninvadable when common<span class="sep">·</span><b>Frequency-dependent selection</b>=fitness depends on strategy frequency<span class="sep">·</span><b>Hawk-Dove</b>=classic ESS resource-competition game</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Side-blotched lizards (rock-paper-scissors)</h3>
+    <ul class="pts">
+      <li>Three male morphs: Orange (aggressive), Blue (vigilant), Yellow (sneaker).</li>
+      <li>Orange &gt; Blue, Blue &gt; Yellow, Yellow &gt; Orange — cyclic dominance.</li>
+      <li>Frequencies cycle over years; no single ESS, stable cyclic dynamic.</li>
+      <li>Real demonstration of negative frequency-dependent selection.</li>
+    </ul>
+    <div class="terms"><b>Side-blotched lizard (Uta stansburiana)</b>=three throat-color morphs in RPS dynamics</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§E</span> Cooperation among non-kin</h3>
+    <ul class="pts">
+      <li>Direct reciprocity: tit-for-tat; needs repeat interaction and memory.</li>
+      <li>Indirect reciprocity: reputation attracts future help; needs visibility.</li>
+      <li>Mutualistic byproduct: cooperation costs nothing or directly benefits.</li>
+      <li>Cooperation among non-kin is fragile — needs enforcement to persist.</li>
+    </ul>
+    <div class="terms"><b>Direct reciprocity</b>=tit-for-tat between two individuals<span class="sep">·</span><b>Indirect reciprocity</b>=reputation-based; helping earns future help</div>
+  </div>
+</div>
+
+<!-- L14 -->
+<div class="lec">
+  <h2>L14 · History of Life</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Earth's age, dating methods</h3>
+    <ul class="pts">
+      <li>Earth ~4.568 GYA (radiometric on meteorites, oldest zircons).</li>
+      <li>Radiometric: ratio of parent to daughter isotope; known half-life.</li>
+      <li>¹⁴C ~50 KYR limit; U-Pb for billions; K-Ar for millions.</li>
+      <li>Biomarkers (specific lipids) suggest life by ~3.5-3.8 GYA.</li>
+    </ul>
+    <div class="terms"><b>Radiometric dating</b>=age from parent/daughter isotope ratios<span class="sep">·</span><b>Half-life</b>=time for half a radioisotope to decay<span class="sep">·</span><b>Biomarker</b>=lipid in old rock indicating organisms</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Major milestones</h3>
+    <ul class="pts">
+      <li>~3.5-3.8 GYA: first life; ~2.4 GYA: Great Oxidation Event (cyanobacteria O₂).</li>
+      <li>~2.1-1.6 GYA: first eukaryotes (mitochondrial endosymbiosis).</li>
+      <li>~1.0 GYA: multicellularity; ~541 MYA: Cambrian explosion of phyla.</li>
+      <li>~252 MYA: end-Permian extinction (~95% marine sp lost).</li>
+      <li>~66 MYA: K-Pg / Chicxulub impact; non-avian dinosaurs gone.</li>
+    </ul>
+    <div class="terms"><b>Great Oxidation Event</b>=O₂ rise ~2.4 GYA from cyanobacteria<span class="sep">·</span><b>Cambrian explosion</b>=541-520 MYA rapid phylum diversification</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Geological periods</h3>
+    <ul class="pts">
+      <li>Ordovician (~488-444 MYA): early bony fishes, first land plants.</li>
+      <li>Silurian (~444-416 MYA): first land animals (millipedes).</li>
+      <li>Devonian (~416-359 MYA): Age of Fishes; early tetrapods; forests.</li>
+      <li>Permian (~299-251 MYA): reptiles + synapsids; ends in biggest extinction.</li>
+    </ul>
+    <div class="terms"><b>Devonian</b>=~416-359 MYA; fish diversification, first land vertebrates<span class="sep">·</span><b>Permian</b>=~299-251 MYA; ends with largest mass extinction</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Mass extinctions</h3>
+    <ul class="pts">
+      <li>Big Five: end-Ordovician, Late Devonian, end-Permian, end-Triassic, end-Cretaceous.</li>
+      <li>End-Permian (~252 MYA): largest; Siberian Trap volcanism + acidification + climate.</li>
+      <li>K-Pg (~66 MYA): Chicxulub asteroid; iridium layer is the smoking gun.</li>
+      <li>Survivors radiate into empty niches (mammals after K-Pg).</li>
+      <li>Many argue we're now in a sixth, human-driven extinction.</li>
+    </ul>
+    <div class="terms"><b>Mass extinction</b>=geologically rapid &gt;75% species loss<span class="sep">·</span><b>K-T (K-Pg) boundary</b>=~66 MYA; non-avian dinosaurs gone<span class="sep">·</span><b>Iridium layer</b>=K-Pg boundary marker; impact evidence</div>
+  </div>
+</div>
+
+<!-- L15 -->
+<div class="lec">
+  <h2>L15 · Phylogenetics and the Tree of Life</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Reading phylogenetic trees</h3>
+    <ul class="pts">
+      <li>A node = common ancestor of taxa above it (toward tips).</li>
+      <li>Recency of common ancestor = closeness of relationship; not page distance.</li>
+      <li>Trees can be rotated at any node without changing relationships.</li>
+    </ul>
+    <div class="terms"><b>Tip/Terminal taxon</b>=organism at branch end<span class="sep">·</span><b>Node</b>=lineage divergence point; MRCA<span class="sep">·</span><b>Branch</b>=lineage through time<span class="sep">·</span><b>Sister groups</b>=clades sharing one immediate node</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Synapomorphy / symplesiomorphy / homoplasy</h3>
+    <ul class="pts">
+      <li>Synapomorphy = shared derived character; defines monophyletic groups.</li>
+      <li>Symplesiomorphy = shared ancestral state; uninformative about closer relationships.</li>
+      <li>Homoplasy = independent acquisition or reversal; misleading.</li>
+    </ul>
+    <div class="terms"><b>Synapomorphy</b>=shared derived state; informative for clade<span class="sep">·</span><b>Symplesiomorphy</b>=shared ancestral state; uninformative<span class="sep">·</span><b>Homoplasy</b>=convergent/parallel/reversed; not from common ancestor</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Mono / para / polyphyletic</h3>
+    <ul class="pts">
+      <li>Monophyletic (clade) = ancestor + ALL descendants. The only valid group.</li>
+      <li>Paraphyletic = ancestor + some descendants (e.g., 'Reptilia' without birds).</li>
+      <li>Polyphyletic = members lacking shared immediate ancestor; built on convergence.</li>
+    </ul>
+    <div class="terms"><b>Clade/Monophyletic</b>=ancestor + all descendants<span class="sep">·</span><b>Paraphyletic</b>=ancestor + some descendants<span class="sep">·</span><b>Polyphyletic</b>=group from convergent traits, no shared ancestor</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Species concepts</h3>
+    <ul class="pts">
+      <li>Biological (Mayr): interbreeding populations reproductively isolated; fails for asexuals/fossils.</li>
+      <li>Morphological: distinct form; usable on fossils; cryptic species confuse it.</li>
+      <li>Phylogenetic: smallest monophyletic group with shared derived characters.</li>
+    </ul>
+    <div class="terms"><b>BSC</b>=interbreeding populations, reproductively isolated<span class="sep">·</span><b>Morphological</b>=diagnosable form differences<span class="sep">·</span><b>Phylogenetic</b>=smallest monophyletic group</div>
+  </div>
+</div>
+
+<!-- L16 -->
+<div class="lec">
+  <h2>L16 · Species Concepts and Reproductive Isolation</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Major species concepts</h3>
+    <ul class="pts">
+      <li>BSC (Mayr): interbreeding populations, reproductively isolated. Fails for asexuals/fossils.</li>
+      <li>Morphological: diagnosable differences; cryptic species and plasticity confuse.</li>
+      <li>Phylogenetic: smallest monophyletic group with shared derived chars.</li>
+      <li>Ecological: populations sharing one adaptive zone (niche).</li>
+    </ul>
+    <div class="terms"><b>BSC</b>=interbreeding populations, reproductively isolated<span class="sep">·</span><b>Morphological</b>=diagnosable form<span class="sep">·</span><b>Phylogenetic</b>=smallest monophyletic group</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Reproductive isolation</h3>
+    <ul class="pts">
+      <li>Prezygotic — temporal, behavioral, mechanical, gametic, habitat barriers.</li>
+      <li>Postzygotic — hybrid inviability, hybrid sterility (mules), hybrid breakdown (F2).</li>
+      <li>Dividing line is fertilization: pre = before zygote; post = after.</li>
+    </ul>
+    <div class="terms"><b>Prezygotic isolation</b>=blocks fertilization (temporal/behavioral/mech/gametic/habitat)<span class="sep">·</span><b>Postzygotic isolation</b>=blocks viable/fertile hybrids<span class="sep">·</span><b>Hybrid sterility</b>=hybrids live but can't reproduce (mules)</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Speciation modes</h3>
+    <ul class="pts">
+      <li>Allopatric: geographic separation → divergence → isolation. Most common in animals.</li>
+      <li>Peripatric: small founder population isolated; drift + selection accelerate divergence.</li>
+      <li>Parapatric: partially separated; divergence despite some gene flow.</li>
+      <li>Sympatric: divergence with no separation — niche shifts, polyploidy (mostly plants).</li>
+      <li>Reinforcement: secondary contact selects for stronger prezygotic isolation if hybrids unfit.</li>
+    </ul>
+    <div class="terms"><b>Allopatric</b>=geographically separated populations<span class="sep">·</span><b>Sympatric</b>=same range; niche shifts/polyploidy<span class="sep">·</span><b>Reinforcement</b>=selection strengthens prezygotic isolation in secondary contact</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Hybrid zones</h3>
+    <ul class="pts">
+      <li>Hybrid zones = regions of overlap and interbreeding between two species.</li>
+      <li>Viable hybrids typically have reduced fitness — outcompeted, sterile, or maladapted.</li>
+      <li>Zones can be stable (selection vs hybrids balanced by gene flow) or shift over time.</li>
+      <li>Hybrid speciation (sunflowers) is real but a special case.</li>
+    </ul>
+    <div class="terms"><b>Hybrid zone</b>=geographic overlap with interbreeding<span class="sep">·</span><b>Viable hybrid</b>=hybrid that survives but typically with reduced fitness</div>
+  </div>
+</div>
+
+<!-- L17 -->
+<div class="lec">
+  <h2>L17 · Biogeography, Speciation, Extinction</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> What is biogeography?</h3>
+    <ul class="pts">
+      <li>Biogeography = study of where species live and why.</li>
+      <li>Geological history (tectonics, glaciation) and ecology jointly shape distributions.</li>
+      <li>Wallace and Darwin: distinct continental faunas best explained by descent.</li>
+    </ul>
+    <div class="terms"><b>Biogeography</b>=study of species distribution across space and time<span class="sep">·</span><b>Wallace line</b>=Indonesian boundary between Asian and Australasian biotas</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Dispersal vs. vicariance</h3>
+    <ul class="pts">
+      <li>Dispersal: organisms move; same lineage now in multiple regions.</li>
+      <li>Vicariance: a barrier (mountain, sea, drift) splits an existing range.</li>
+      <li>Often both operate; molecular dating distinguishes.</li>
+      <li>S. America-Africa biota relatedness reflects shared Gondwanan ancestry (vicariance).</li>
+    </ul>
+    <div class="terms"><b>Dispersal</b>=organisms cross barriers<span class="sep">·</span><b>Vicariance</b>=new barrier splits a continuous range</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Standing diversity, turnover</h3>
+    <ul class="pts">
+      <li>Standing diversity = species count in a region at one time.</li>
+      <li>Turnover rate = species replacement over time.</li>
+      <li>Equilibrium island biogeography (MacArthur-Wilson): immigration vs. extinction balance.</li>
+      <li>Same standing diversity can mask very different turnover rates.</li>
+    </ul>
+    <div class="terms"><b>Standing diversity</b>=species present at a moment<span class="sep">·</span><b>Turnover rate</b>=species replacement per unit time</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Mass extinctions</h3>
+    <ul class="pts">
+      <li>Big Five each killed &gt;50% marine species; end-Permian (~252 MYA) is largest.</li>
+      <li>End-Permian: Siberian Traps + ocean acidification + climate; ~95% marine loss.</li>
+      <li>End-Triassic cleared major reptilian groups; dinosaurs dominated after.</li>
+      <li>K-Pg (~66 MYA): Chicxulub impact; iridium layer; mammals radiate.</li>
+    </ul>
+    <div class="terms"><b>Adaptive radiation</b>=rapid diversification into many ecological niches</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§E</span> Adaptive radiations</h3>
+    <ul class="pts">
+      <li>Rapid diversification of one lineage into many niche-distinct species.</li>
+      <li>Conditions: open niches, new colonization, key innovations, post-extinction recovery.</li>
+      <li>Galápagos finches: ~14 species from one ancestor, each a food specialist.</li>
+      <li>Mammals radiated post-K-Pg as dinosaur niches opened.</li>
+    </ul>
+    <div class="terms"><b>Adaptive radiation</b>=rapid lineage diversification across niches<span class="sep">·</span><b>Key innovation</b>=novelty (jaws, wings, flowers) that opens new ecology</div>
+  </div>
+</div>
+
+<!-- L18 -->
+<div class="lec">
+  <h2>L18 · Conservation / Humans as Selective Force</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Humans as selective force</h3>
+    <ul class="pts">
+      <li>Fisheries selection: size limits remove large individuals → earlier maturity, smaller size.</li>
+      <li>Trophy hunting (bighorn sheep): selecting big horns lowers average horn size.</li>
+      <li>Antibiotic use selects for resistant strains; pesticides for resistant insects.</li>
+      <li>Urbanization: city pigeons, mice, peppered moths evolve under novel pressures.</li>
+    </ul>
+    <div class="terms"><b>Selective harvest</b>=hunting/fishing targeting specific phenotypes<span class="sep">·</span><b>Fisheries-induced evolution</b>=size-selective fishing alters fish populations</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Habitat fragmentation, conservation genetics</h3>
+    <ul class="pts">
+      <li>Small populations: strong drift, lost variation, inbreeding depression.</li>
+      <li>Fragmentation reduces gene flow, accelerates divergence and variation loss.</li>
+      <li>Florida panther: severe inbreeding (heart, reproductive issues); Texas puma rescue restored fitness.</li>
+      <li>Genetic rescue: introduce relatives to restore variation.</li>
+    </ul>
+    <div class="terms"><b>Inbreeding depression</b>=fitness loss from homozygous deleterious recessives<span class="sep">·</span><b>Genetic rescue</b>=introducing individuals to restore variation<span class="sep">·</span><b>Fragmentation</b>=habitat subdivision; reduces gene flow</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Climate change as selective pressure</h3>
+    <ul class="pts">
+      <li>Many species shifting ranges poleward and upslope.</li>
+      <li>Limited dispersers (trees, mountain-tops) face extinction or strong selection.</li>
+      <li>Phenological shifts: flowering, migration timing track climate.</li>
+      <li>Mismatches between interacting species can break ecological networks.</li>
+    </ul>
+    <div class="terms"><b>Phenological shift</b>=timing change of seasonal events<span class="sep">·</span><b>Range shift</b>=geographic move under warming, often poleward/upslope</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Conservation strategies</h3>
+    <ul class="pts">
+      <li>Habitat protection (parks, reserves) — in-situ biodiversity.</li>
+      <li>Captive breeding (California condor, Arabian oryx) → reintroduction.</li>
+      <li>Assisted migration to climate-appropriate habitats; controversial.</li>
+      <li>Effective conservation manages BOTH demographic and genetic decline.</li>
+    </ul>
+    <div class="terms"><b>Conservation biology</b>=preservation of biodiversity using evolutionary principles<span class="sep">·</span><b>Captive breeding</b>=ex-situ to prevent extinction</div>
+  </div>
+</div>
+
+<!-- L19 -->
+<div class="lec">
+  <h2>L19 · Human Evolution</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> Hominin lineage and bipedalism</h3>
+    <ul class="pts">
+      <li>Hominins split from chimps ~6-7 MYA in Africa.</li>
+      <li>Earliest possible hominins: Sahelanthropus tchadensis (~7 MYA, Chad), Orrorin, Ardipithecus.</li>
+      <li>Bipedalism was the FIRST major hominin trait — preceded brain enlargement.</li>
+      <li>Foramen magnum positioned underneath the skull = upright spine.</li>
+    </ul>
+    <div class="terms"><b>Hominin</b>=human lineage since chimp split<span class="sep">·</span><b>Bipedalism</b>=habitual two-legged walking; first hominin hallmark<span class="sep">·</span><b>Foramen magnum</b>=skull opening for spinal cord; position indicates posture</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Australopithecines and early Homo</h3>
+    <ul class="pts">
+      <li>Australopithecus afarensis (~3.9-2.9 MYA): 'Lucy'; fully bipedal, small brain.</li>
+      <li>Robust australopithecines (Paranthropus): heavy chewing apparatus; dead-end.</li>
+      <li>Homo habilis (~2.5 MYA): genus Homo begins; first stone tools (Oldowan).</li>
+      <li>Homo erectus (~1.9 MYA): FIRST hominin to leave Africa; larger brain.</li>
+      <li>Homo sapiens emerges in Africa ~300 KYA.</li>
+    </ul>
+    <div class="terms"><b>Australopithecus</b>=bipedal hominin ~4-2 MYA; Lucy = A. afarensis<span class="sep">·</span><b>Homo habilis</b>=earliest Homo ~2.5 MYA; first stone tools</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Out-of-Africa, Neanderthal/Denisovan</h3>
+    <ul class="pts">
+      <li>Modern Homo sapiens: ~300 KYA in Africa; major dispersal ~70 KYA.</li>
+      <li>Non-African humans: ~1-4% Neanderthal DNA (interbreeding ~40-60 KYA).</li>
+      <li>Asian/Oceanic populations carry Denisovan DNA; Tibetan EPAS1 high-altitude allele.</li>
+      <li>Introgression contributed alleles for immunity, pigmentation, altitude adaptation.</li>
+    </ul>
+    <div class="terms"><b>Out of Africa</b>=Homo sapiens dispersal ~70 KYA<span class="sep">·</span><b>Introgression</b>=gene flow via interbreeding between populations/species<span class="sep">·</span><b>Neanderthal</b>=H. neanderthalensis; Europe/W. Asia; interbred ~40-60 KYA</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Evolutionary medicine</h3>
+    <ul class="pts">
+      <li>Antibiotic resistance: pathogens evolve under drug selection; needs stewardship.</li>
+      <li>Virulence evolves with transmission mode: respiratory → low; vector-borne → high.</li>
+      <li>Mismatch hypothesis: ancestral (scarce, active) vs modern (abundant, sedentary) → obesity, T2D.</li>
+      <li>Body shows compromises: backaches, difficult childbirth, vestigial appendix.</li>
+    </ul>
+    <div class="terms"><b>Evolutionary medicine</b>=evolutionary principles applied to health<span class="sep">·</span><b>Virulence</b>=damage pathogen does to host<span class="sep">·</span><b>Mismatch hypothesis</b>=modern disease from ancestral-modern environment gap</div>
+  </div>
+</div>
+
+<!-- L20 -->
+<div class="lec">
+  <h2>L20 · Evolutionary Medicine</h2>
+  <div class="sec">
+    <h3><span class="sym">§A</span> What evolutionary medicine is</h3>
+    <ul class="pts">
+      <li>Asks WHY (evolutionary) bodies are vulnerable, not just HOW (mechanism).</li>
+      <li>Six explanations: mismatch, coevolution, constraints, trade-offs, reproduction trumps health, defenses confused as symptoms.</li>
+      <li>Modern medicine integrates: stewardship, vaccine design, cancer-treatment timing.</li>
+    </ul>
+    <div class="terms"><b>Evolutionary medicine</b>=evolutionary biology applied to disease<span class="sep">·</span><b>Proximate vs ultimate</b>=mechanism (HOW) vs evolutionary reason (WHY)</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§B</span> Pathogen evolution / antibiotic resistance</h3>
+    <ul class="pts">
+      <li>Resistance mutations occur randomly; antibiotics select pre-existing variants.</li>
+      <li>HGT spreads resistance genes between species via plasmids/transposons.</li>
+      <li>Mechanisms: enzymatic destruction, efflux pumps, target mods, alternative pathways.</li>
+      <li>Combination therapy: 10⁻⁹ × 10⁻⁹ = 10⁻¹⁸ for joint resistance — exponentially less likely.</li>
+      <li>Vaccine escape via antigenic drift (annual flu).</li>
+    </ul>
+    <div class="terms"><b>Antibiotic resistance</b>=heritable bacterial drug survival from random mutation<span class="sep">·</span><b>HGT</b>=DNA movement between species; speeds resistance spread<span class="sep">·</span><b>Combination therapy</b>=multiple drugs needing multiple mutations<span class="sep">·</span><b>Antigenic drift</b>=surface antigens evolve to evade immunity</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§C</span> Virulence and transmission mode</h3>
+    <ul class="pts">
+      <li>Virulence-transmission trade-off: load helps spread but kills hosts.</li>
+      <li>Directly transmitted (respiratory, STI) → moderate/lower virulence (need mobile hosts).</li>
+      <li>Vector-borne / waterborne (cholera, malaria) → high virulence (host mobility doesn't matter).</li>
+      <li>Ewald: cleaner water selects for less-virulent diarrheal pathogens.</li>
+      <li>1918 flu evolved high virulence under WWI crowding.</li>
+    </ul>
+    <div class="terms"><b>Virulence</b>=host damage from pathogen<span class="sep">·</span><b>Virulence-transmission trade-off</b>=load vs host longevity<span class="sep">·</span><b>Vector-borne</b>=transmitted by third organism<span class="sep">·</span><b>Ewald's hypothesis</b>=transmission mode shapes optimal virulence</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§D</span> Host-pathogen coevolution</h3>
+    <ul class="pts">
+      <li>Reciprocal: hosts evolve defense; pathogens evolve evasion; on and on.</li>
+      <li>MHC: highly variable; balancing selection from coevolving pathogens (rare alleles favored).</li>
+      <li>Red Queen at population level: sex evolved partly to keep up with parasites.</li>
+      <li>Sickle-cell allele persists via heterozygote advantage against malaria.</li>
+    </ul>
+    <div class="terms"><b>MHC</b>=polymorphic immune genes presenting peptides; balancing selection<span class="sep">·</span><b>Sickle-cell heterozygote advantage</b>=HbA/HbS protected from malaria<span class="sep">·</span><b>Antigenic variation</b>=surface antigen evolution evading immunity</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§E</span> Mismatch hypothesis</h3>
+    <ul class="pts">
+      <li>Ancestral: food scarce, high activity, high pathogens, modest lifespan.</li>
+      <li>Modern: food abundant (refined sugars/fats), sedentary, hygienic, longer lifespan.</li>
+      <li>Efficient fat storage and sweet preference adaptive ancestrally → obesity now.</li>
+      <li>Hygiene hypothesis: low early-life microbe exposure → allergies, autoimmune.</li>
+      <li>Diseases of old age (most cancers, Alzheimer's) escape selection — post-reproductive.</li>
+    </ul>
+    <div class="terms"><b>Mismatch hypothesis</b>=ancestral-modern environment gap drives modern disease<span class="sep">·</span><b>Hygiene hypothesis</b>=low microbe exposure raises allergies/autoimmune<span class="sep">·</span><b>Diseases of civilization</b>=chronic ills frequent only in modern populations</div>
+  </div>
+  <div class="sec">
+    <h3><span class="sym">§F</span> Cancer as somatic evolution</h3>
+    <ul class="pts">
+      <li>Tumor cells divide fast with high mutation rate — heritable variation among cells.</li>
+      <li>Cells compete for resources; growth-promoting mutations win.</li>
+      <li>Therapies are strong selection — kill susceptibles, leave resistant subclones → relapse.</li>
+      <li>Adaptive therapy: maintain susceptibles to suppress resistant subclones.</li>
+      <li>Cancer protection (apoptosis, senescence) trades off against regeneration/longevity.</li>
+    </ul>
+    <div class="terms"><b>Somatic evolution</b>=mutation+selection on cell lineages within an organism<span class="sep">·</span><b>Tumor heterogeneity</b>=genetic diversity among tumor cells<span class="sep">·</span><b>Adaptive therapy</b>=keep susceptibles to suppress resistant clones</div>
+  </div>
+</div>
+
+</div><!-- /body-cols -->
+
+<div class="proof">
+  <b>Show proof — lectures included:</b> L01 · L02 · L03 · L04 · L05 · L07 · L08 · L09 · L11 · L12 · L13 · L14 · L15 · L16 · L17 · L18 · L19 · L20 &nbsp;(18/18)
+</div>
+
+</body>
+</html>

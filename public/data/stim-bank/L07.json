@@ -1,0 +1,231 @@
+[
+  {
+    "id": "STIM-L07-001",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "B",
+    "topic": "Galápagos finches",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "After the 1977 drought on Daphne Major, the medium ground finch population shifted toward deeper beaks. The Grants concluded this was natural selection because:",
+    "choices": [
+      "The drought directly caused beaks to grow.",
+      "Beak depth was heritable, and birds with deeper beaks had higher survival; the next generation was measurably deeper-beaked.",
+      "All small-beaked birds happened to die randomly.",
+      "Birds physically modified their beaks to deal with hard seeds."
+    ],
+    "correct": 1,
+    "why": "Documenting natural selection in the wild requires (1) heritable variation, (2) differential survival/reproduction, (3) measurable change across generations. The Grants showed all three for beak depth in 1977.",
+    "choice_why": [
+      "Wrong. The drought is a SELECTIVE FORCE; it doesn't induce changes in beak development.",
+      "Correct. Heritability + differential survival + next-generation change = textbook selection.",
+      "Wrong. Random death is drift, not selection. The Grants showed survival was correlated with beak depth (non-random).",
+      "Wrong. Beaks are not modifiable during life. This is Lamarckian thinking."
+    ],
+    "source": "sg-exam-2 (background); L07 §B"
+  },
+  {
+    "id": "STIM-L07-002",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "C",
+    "topic": "Peppered moths",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Why did the dark (melanic) form of Biston betularia rise to dominance in industrial regions of England?",
+    "choices": [
+      "Pollution induced melanism in moths during their lifetime.",
+      "Polluted air directly killed light-colored moths through respiratory toxicity.",
+      "Bird predators were more likely to spot light moths against soot-darkened tree trunks; dark moths survived better and left more offspring.",
+      "Moths actively chose darker resting sites in polluted areas."
+    ],
+    "correct": 2,
+    "why": "Industrial melanism is driven by differential bird predation — visible moths get eaten, camouflaged moths survive. When pollution darkened tree trunks, the dark morph became the camouflaged one.",
+    "choice_why": [
+      "Wrong. Pollution does not induce heritable color changes during the moth's life.",
+      "Wrong. Selection here is via predation, not direct toxicity.",
+      "Correct. Bird predation on visible morphs is the well-documented selective mechanism.",
+      "Wrong. Moths don't choose resting sites based on color. The selection is post-hoc — visible ones get eaten."
+    ],
+    "source": "sg-exam-2 (Ch 8); L07 §C"
+  },
+  {
+    "id": "STIM-L07-003",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "C",
+    "topic": "Reversal of selection",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "After the UK's Clean Air Act reduced pollution, peppered moth populations shifted back toward the light morph. This best illustrates:",
+    "choices": [
+      "Selection direction is fixed once a trait evolves.",
+      "Selection direction can reverse when the environment changes.",
+      "Genetic drift is more powerful than selection.",
+      "Mutations had to occur to produce the light morph."
+    ],
+    "correct": 1,
+    "why": "Selection acts on whichever phenotype is currently camouflaged. When pollution declined, light tree trunks returned and the LIGHT morph regained its survival advantage. Selection direction is environment-contingent, not fixed.",
+    "choice_why": [
+      "Wrong. Selection direction is contingent on the environment; it has no inherent direction.",
+      "Correct. The same trait can be favored in one environment and disfavored in another.",
+      "Wrong. Drift is random; the moth shift is directional and tracks the environmental change — selection.",
+      "Wrong. The light morph was already present; its frequency rose under new selective conditions. No new mutation was needed."
+    ],
+    "source": "sg-exam-2 (Ch 8); L07 §C"
+  },
+  {
+    "id": "STIM-L07-004",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "D",
+    "topic": "Antibiotic resistance",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Hospitals that heavily use a particular antibiotic see rising rates of resistance to that antibiotic. Which evolutionary mechanism is most directly responsible?",
+    "choices": [
+      "Lamarckian inheritance — bacteria acquire resistance from exposure and pass it to offspring.",
+      "Genetic drift — random change in a small bacterial population.",
+      "Natural selection on rare resistant mutants that arise independently of the antibiotic.",
+      "Mutation rate increases when antibiotics are present, generating resistance on demand."
+    ],
+    "correct": 2,
+    "why": "Resistance mutations occur randomly whether or not antibiotics are used. The antibiotic is the selective force that kills susceptible bacteria, leaving the resistant rare variants to replicate.",
+    "choice_why": [
+      "Wrong. Lamarckian inheritance is not the mechanism; mutations are random with respect to fitness.",
+      "Wrong. Drift in a hospital's bacterial population would not produce a directional shift toward resistance.",
+      "Correct. Standard random mutation + non-random selection.",
+      "Wrong. While stress-induced mutagenesis exists in some bacteria, the basic mechanism is selection on existing rare variants."
+    ],
+    "source": "sg-exam-2 (Ch 8); L07 §D"
+  },
+  {
+    "id": "STIM-L07-005",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "A",
+    "topic": "Measuring selection in the wild",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Researchers measure trait values, mark individuals, and follow them across years. They observe that birds with longer wings have higher survival. Which additional measurement is needed to predict an EVOLUTIONARY response?",
+    "choices": [
+      "Heritability of wing length.",
+      "Total population size.",
+      "Latitude of the population.",
+      "Mating system."
+    ],
+    "correct": 0,
+    "why": "Selection requires heritability to produce evolution (R = h² · S). Without measuring heritability, you can document selection (differential survival) but cannot predict whether the population will evolve.",
+    "choice_why": [
+      "Correct. Heritability is the missing ingredient for predicting evolutionary response.",
+      "Wrong. Population size affects drift but doesn't determine the response to selection.",
+      "Wrong. Latitude is irrelevant to the conceptual structure of measuring selection.",
+      "Wrong. Mating system can affect inheritance patterns but heritability is the direct missing piece."
+    ],
+    "source": "sg-exam-2 (Ch 8); L07 §A"
+  },
+  {
+    "id": "STIM-L07-006",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "D",
+    "topic": "Artificial selection — greyhounds",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Greyhounds bred for racing have evolved measurably faster sprint speeds over decades. This is best characterized as:",
+    "choices": [
+      "Lamarckian inheritance of acquired speed.",
+      "Genetic drift in a closed breeding population.",
+      "Artificial selection — humans choose breeders based on speed; speed is heritable.",
+      "Mutation pressure favoring faster alleles."
+    ],
+    "correct": 2,
+    "why": "Artificial selection mirrors natural selection — the only difference is who/what selects. Humans pick the fastest dogs to breed; speed is heritable; the next generation is on average faster. R = h² · S applies.",
+    "choice_why": [
+      "Wrong. Speed is not 'acquired during life' — it's a heritable trait determined by genetics + training.",
+      "Wrong. Drift is random; the directional speed increase is the result of human choice (selection).",
+      "Correct. Artificial selection is selection driven by human choice of breeders.",
+      "Wrong. Mutation generates variation but does not by itself drive the directional shift; selection does."
+    ],
+    "source": "sg-exam-2 (Ch 8); L07 §D"
+  },
+  {
+    "id": "STIM-L07-007",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "B",
+    "topic": "Selection on heritable variation — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 3,
+    "q": "Describe what evidence the Grants needed to demonstrate that beak-depth evolution in Geospiza fortis after the 1977 drought was caused by natural selection. Name three specific kinds of evidence.",
+    "rubric": {
+      "total": 3,
+      "criteria": [
+        { "pts": 1, "desc": "Variation: there must be measurable individual variation in beak depth in the population before the drought." },
+        { "pts": 1, "desc": "Heritability: parent-offspring resemblance in beak depth (e.g., from regression slope) showing the trait is genetically transmitted." },
+        { "pts": 1, "desc": "Differential survival/reproduction correlated with beak depth (deeper beaks survive better when seeds are large/hard) AND a measurable shift in mean beak depth in the next generation." }
+      ]
+    },
+    "model_answer": "First, the Grants needed to show that beak-depth VARIATION existed in the pre-drought population. Second, they needed to show that variation was HERITABLE — using parent-offspring regressions to demonstrate that offspring beak depths predictably tracked their parents'. Third, they needed to show DIFFERENTIAL SURVIVAL: birds with deeper beaks survived the drought at higher rates because they could crack large seeds; and they needed to show that the next generation had measurably deeper beaks on average — the actual evolutionary RESPONSE to selection.",
+    "source": "sg-exam-2; L07 §A,B"
+  },
+  {
+    "id": "STIM-L07-008",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "C",
+    "topic": "Genetic basis of melanism",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The genetic basis of dark coloration in industrial peppered moths was identified as a transposon insertion in the cortex gene. What does this finding imply about the source of the melanic variant?",
+    "choices": [
+      "The dark morph evolved entirely after pollution began.",
+      "Pollution caused the transposon insertion through DNA damage.",
+      "The transposon insertion was a pre-existing mutation present at low frequency before the Industrial Revolution; pollution selected for it.",
+      "All cortex-gene insertions cause dark coloration in any species."
+    ],
+    "correct": 2,
+    "why": "Population-genetic dating of the cortex insertion shows it predates the Industrial Revolution. Pollution did not cause it; pollution selected for an existing rare variant. Random mutation + non-random selection.",
+    "choice_why": [
+      "Wrong. The variant existed before pollution; its FREQUENCY shifted, not its origin.",
+      "Wrong. Pollution does not generate specific transposon insertions in the cortex gene.",
+      "Correct. The variant predated industrialization; selection raised its frequency.",
+      "Wrong. The cortex-insertion phenotype is specific to peppered moth wing-coloration regulation, not a general rule."
+    ],
+    "source": "sg-exam-2 (Ch 8); L07 §C"
+  },
+  {
+    "id": "STIM-L07-009",
+    "exam": 2,
+    "lecture": "L07",
+    "section": "D",
+    "topic": "Influenza evolution",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "The flu vaccine has to be reformulated each year. Which evolutionary mechanism best explains why?",
+    "choices": [
+      "Influenza viruses are not living organisms and don't evolve.",
+      "Influenza accumulates mutations in surface proteins that allow escape from prior immunity, with the virus's antigenic profile shifting under selection from host immune systems.",
+      "Influenza recombines DNA with bacterial pathogens.",
+      "Influenza mutations are induced by vaccine exposure."
+    ],
+    "correct": 1,
+    "why": "Influenza is an RNA virus with a high mutation rate. Variants escaping previous immunity are favored each year as host populations gain resistance to last year's strains. Selection on standing antigenic variation produces the annual shift.",
+    "choice_why": [
+      "Wrong. Viruses evolve robustly; influenza is a textbook example.",
+      "Correct. Antigenic drift driven by immune selection is the canonical mechanism.",
+      "Wrong. Influenza recombines (reassorts) with other influenza strains, not bacteria.",
+      "Wrong. Mutations are random; the vaccine selects against susceptible variants but doesn't cause the mutations."
+    ],
+    "source": "sg-exam-2 (Ch 8); L07 §D"
+  }
+]

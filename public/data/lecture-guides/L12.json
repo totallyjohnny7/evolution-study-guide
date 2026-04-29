@@ -1,0 +1,104 @@
+{
+  "title": "Life History Evolution",
+  "intro": "Life history is the schedule of an organism's birth, growth, reproduction, and death. Selection cannot maximize all these at once — trade-offs between traits force compromises, and the form those compromises take depends on the environment.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Trade-offs in energy allocation",
+      "overview": "An organism has finite resources and time. Energy spent on growth cannot be spent on reproduction; reproduction now reduces resources available for survival and future reproduction.",
+      "key_points": [
+        "Life-history trade-offs: growth vs. reproduction, current vs. future reproduction, offspring number vs. offspring size.",
+        "These trade-offs are physiological constraints — selection cannot break them, only navigate them.",
+        "OPTIMAL allocation depends on the environment: high adult survival favors investment in future reproduction; low adult survival favors current reproduction.",
+        "Reaction norms for life-history traits show context-dependent allocation."
+      ],
+      "key_terms": [
+        { "term": "Life history", "def": "The schedule of major events in an organism's life — age at maturity, fecundity, longevity, reproductive timing." },
+        { "term": "Trade-off", "def": "An inverse relationship between two fitness-related traits enforced by limited resources or physiological constraints." },
+        { "term": "Reproductive effort", "def": "The fraction of an organism's resources allocated to current reproduction vs. survival/future reproduction." }
+      ],
+      "exam_traps": [
+        "Trade-offs are physical/physiological — they are not optional. Selection works WITHIN trade-offs to optimize, not to escape them.",
+        "Don't expect organisms to maximize one fitness component (e.g., longevity). Selection maximizes lifetime reproductive success, integrated over all life-history traits."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Extrinsic mortality and life-history strategies",
+      "overview": "Extrinsic mortality — the rate at which adults die from external causes (predation, disease) — is the single most important determinant of optimal life-history strategy.",
+      "key_points": [
+        "HIGH extrinsic mortality (e.g., heavy predation) → favors EARLY reproduction, MANY offspring, short lifespan ('live fast, die young').",
+        "LOW extrinsic mortality → favors DELAYED reproduction, FEWER but better-provisioned offspring, longer lifespan.",
+        "Classic comparison: opossums on predator-rich mainland mature earlier and produce more offspring than opossums on predator-free islands.",
+        "These life-history shifts evolve quickly — within tens of generations under strong selection."
+      ],
+      "key_terms": [
+        { "term": "Extrinsic mortality", "def": "Death from external causes (predation, disease, accident) — outside the organism's physiological control." },
+        { "term": "Intrinsic mortality / senescence", "def": "Death from internal causes (aging, organ failure) — physiological decline." }
+      ],
+      "exam_traps": [
+        "When the study guide asks about predation effects, the answer is usually: high predation → early/fast reproduction; low predation → delayed/slow reproduction.",
+        "Extrinsic mortality affects optimal age at maturity, even if intrinsic survival is high."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Theories of senescence — why we age",
+      "overview": "Why doesn't selection prevent aging? Two main answers, both rooted in the fact that selection becomes weaker at older ages.",
+      "key_points": [
+        "MUTATION ACCUMULATION (Medawar): late-life deleterious mutations escape selection because they affect individuals who've already reproduced. Such mutations accumulate.",
+        "ANTAGONISTIC PLEIOTROPY (Williams): some genes have BENEFICIAL effects early in life and HARMFUL effects late. Selection favors them on net because early-life effects on reproduction outweigh late-life costs.",
+        "DISPOSABLE SOMA (Kirkwood): organisms allocate finite resources between somatic maintenance (long life) and reproduction (more offspring). Investment in soma reduces fecundity.",
+        "These theories are not mutually exclusive — all may contribute."
+      ],
+      "key_terms": [
+        { "term": "Senescence", "def": "Age-related decline in survival and reproduction; aging." },
+        { "term": "Mutation accumulation theory", "def": "Late-acting deleterious mutations escape selection and accumulate, causing senescence." },
+        { "term": "Antagonistic pleiotropy", "def": "A single gene with beneficial early-life effects and harmful late-life effects; selection favors the early benefit." },
+        { "term": "Disposable soma theory", "def": "Trade-off between somatic maintenance and reproduction; selection favors reproduction at the cost of long-term cell repair." }
+      ],
+      "exam_traps": [
+        "Antagonistic pleiotropy is a single-gene story (one gene, two effects at different ages). Mutation accumulation is a many-gene story (many late-acting mutations escape selection).",
+        "'Why we age' has multiple non-exclusive answers — be ready to name and distinguish at least two of the three theories."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Age at maturity and offspring size",
+      "overview": "When to start reproducing, and how to package each offspring, are central life-history decisions. Both depend on environmental risk and resource availability.",
+      "key_points": [
+        "AGE AT MATURITY: earlier maturity → reproduce sooner but at smaller size (less invested in growth). Optimal age depends on growth rate, mortality risk, and reproductive payoff.",
+        "OFFSPRING SIZE-NUMBER trade-off: a fixed reproductive budget can be split into MANY SMALL offspring (high mortality of each, but bet-hedging) OR FEW LARGE offspring (each well-provisioned, higher per-offspring survival).",
+        "r-selected species (high mortality, ephemeral resources): many small offspring, early maturity. (Mice, weeds.)",
+        "K-selected species (stable, competitive environments): few large offspring, delayed maturity, parental care. (Elephants, oaks.)"
+      ],
+      "key_terms": [
+        { "term": "Age at maturity", "def": "Age at which an individual first reproduces." },
+        { "term": "r/K selection", "def": "Classical (and somewhat dated) framework distinguishing fast-living, high-fecundity (r) from slow-living, low-fecundity (K) life histories." }
+      ],
+      "exam_traps": [
+        "r/K is a useful heuristic but not a strict dichotomy. Many species are intermediate. Modern life-history theory uses continuous variables.",
+        "Earlier maturity does NOT always mean smaller offspring; the trade-off is about TOTAL reproductive investment, not necessarily individual offspring size."
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Case study — Seychelles warblers",
+      "overview": "The Seychelles warbler (Acrocephalus sechellensis) population on Cousin Island provides one of the best documented life-history datasets, including sex-biased dispersal driven by territory quality.",
+      "key_points": [
+        "Seychelles warblers cooperatively breed: offspring help parents raise subsequent broods.",
+        "Territory quality varies dramatically; high-quality territories support more breeding success.",
+        "FEMALE OFFSPRING are more likely to remain on natal high-quality territories as helpers; MALE OFFSPRING disperse — sex-biased dispersal driven by territory value.",
+        "Demonstrates how ecological constraints (territory quality, helping opportunities) shape life-history decisions about dispersal, helping, and breeding."
+      ],
+      "key_terms": [
+        { "term": "Cooperative breeding", "def": "A breeding system in which adult helpers (often offspring from previous broods) assist parents in raising young." },
+        { "term": "Sex-biased dispersal", "def": "One sex disperses from the natal site more than the other; common in birds and mammals." }
+      ],
+      "exam_traps": [
+        "Sex-biased dispersal in Seychelles warblers is FEMALE-PHILOPATRIC (females stay on good territories, males disperse). The direction of bias is testable.",
+        "Helping is not pure altruism — helpers gain inclusive fitness through helping kin and may inherit territories later."
+      ]
+    }
+  ]
+}

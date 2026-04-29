@@ -1,0 +1,258 @@
+[
+  {
+    "id": "STIM-L02-001",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "A",
+    "topic": "Great Chain of Being",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Which statement best describes the pre-Darwinian Great Chain of Being?",
+    "choices": [
+      "An early evolutionary tree showing common ancestry of organisms.",
+      "A fixed hierarchical ladder placing humans at the top and lower forms at the bottom — non-evolutionary.",
+      "A geological framework explaining extinction events.",
+      "A theological argument that God created species in series over time."
+    ],
+    "correct": 1,
+    "why": "The Great Chain of Being / Scala Naturae is a FIXED hierarchy with no branching, no common ancestry, and no extinction. It is fundamentally not an evolutionary view.",
+    "choice_why": [
+      "Wrong. The Chain of Being has no concept of common ancestry. Trees of life are post-Darwinian.",
+      "Correct. Pre-Darwinian view: a fixed ladder with humans on top, no branching, no extinction.",
+      "Wrong. Extinction was not a recognized concept under the Chain of Being framework — Smith and Cuvier later established it.",
+      "Wrong. The Chain treated species as immutable, all created at once — not in serial bursts."
+    ],
+    "source": "sg-exam-1 §III; L02 §A"
+  },
+  {
+    "id": "STIM-L02-002",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "B",
+    "topic": "William Smith / extinction",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Whose work using fossils and stratigraphy helped establish extinction as a real phenomenon?",
+    "choices": [
+      "Charles Darwin",
+      "Alfred Russel Wallace",
+      "William Smith",
+      "Jean-Baptiste Lamarck"
+    ],
+    "correct": 2,
+    "why": "William Smith mapped fossil-bearing rock strata across England and showed that distinct fossil assemblages marked specific layers — establishing both faunal succession and the reality of extinction.",
+    "choice_why": [
+      "Wrong. Darwin built on the idea of extinction but did not establish it.",
+      "Wrong. Wallace's contribution was independent discovery of natural selection, not extinction.",
+      "Correct. Smith's stratigraphic work showed fossil types disappearing from younger rocks, establishing extinction.",
+      "Wrong. Lamarck proposed an evolutionary mechanism but did not focus on extinction; he largely denied it for many groups."
+    ],
+    "source": "sg-exam-1 §III; L02 §B"
+  },
+  {
+    "id": "STIM-L02-003",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "C",
+    "topic": "Lamarck",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Lamarck's most famous proposed mechanism of evolution was:",
+    "choices": [
+      "Natural selection of heritable variation.",
+      "Inheritance of characteristics acquired during an individual's lifetime.",
+      "Genetic drift in small populations.",
+      "Reproductive isolation between populations."
+    ],
+    "correct": 1,
+    "why": "Lamarck proposed that traits acquired during an individual's life (e.g., a giraffe stretching its neck) could be passed to offspring. This mechanism is now known to be wrong as a general account, but Lamarck deserves credit for systematically proposing that species change.",
+    "choice_why": [
+      "Wrong. Natural selection is Darwin and Wallace's contribution, not Lamarck's.",
+      "Correct. Inheritance of acquired characteristics is the textbook Lamarckian mechanism.",
+      "Wrong. Genetic drift was articulated by 20th-century population geneticists, not Lamarck.",
+      "Wrong. Reproductive isolation is a 20th-century concept (Mayr's biological species concept)."
+    ],
+    "source": "sg-exam-1 §III; L02 §C"
+  },
+  {
+    "id": "STIM-L02-004",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "C",
+    "topic": "Lyell / uniformitarianism",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "How did Charles Lyell's work most directly influence Darwin's theory of natural selection?",
+    "choices": [
+      "Lyell discovered the genetic basis of inheritance, providing a mechanism.",
+      "Lyell argued that natural selection had been operating on geological scales.",
+      "Lyell established that Earth was very old, providing the deep time over which slow evolutionary change could accumulate.",
+      "Lyell catalogued the fossils Darwin used in On the Origin of Species."
+    ],
+    "correct": 2,
+    "why": "Lyell's uniformitarianism argued that the same gradual processes (erosion, sedimentation) operating today shaped Earth over enormous spans of time — establishing 'deep time' as the backdrop against which Darwin's slow process of selection became plausible.",
+    "choice_why": [
+      "Wrong. The genetic basis of inheritance was Mendel's work, rediscovered around 1900.",
+      "Wrong. Lyell was not an evolutionary biologist — he focused on geology, not selection.",
+      "Correct. Deep time is Lyell's gift to evolutionary thought: enough time for slow change to accumulate.",
+      "Wrong. Lyell did not catalogue fossils for Darwin specifically; the fossil work came from many sources."
+    ],
+    "source": "sg-exam-1 §III; L02 §C"
+  },
+  {
+    "id": "STIM-L02-005",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "D",
+    "topic": "Wallace and Darwin",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Which naturalist independently conceived natural selection and, by sending Darwin a letter outlining the idea in 1858, prompted Darwin to publish his work?",
+    "choices": [
+      "Thomas Malthus",
+      "Charles Lyell",
+      "Alfred Russel Wallace",
+      "Gregor Mendel"
+    ],
+    "correct": 2,
+    "why": "Wallace, working in the Malay Archipelago, independently arrived at natural selection. His 1858 letter to Darwin is the proximate cause of Darwin finally publishing — leading to the joint Darwin-Wallace paper that year and Origin of Species in 1859.",
+    "choice_why": [
+      "Wrong. Malthus's essay on population growth INFLUENCED Darwin's thinking about competition, but Malthus did not propose natural selection.",
+      "Wrong. Lyell encouraged Darwin to publish but did not himself propose natural selection.",
+      "Correct. Wallace independently conceived natural selection; his letter spurred Darwin.",
+      "Wrong. Mendel's genetics work was contemporary but unknown to Darwin and unrelated to the publication trigger."
+    ],
+    "source": "sg-exam-1 §III; L02 §D"
+  },
+  {
+    "id": "STIM-L02-006",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "D",
+    "topic": "Requirements for natural selection",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "All three of the following must be present for natural selection to produce evolution. Which is NOT required?",
+    "choices": [
+      "Variation in a trait among individuals in the population.",
+      "The trait must be heritable.",
+      "Differential survival or reproduction associated with the trait.",
+      "The trait must benefit the species as a whole."
+    ],
+    "correct": 3,
+    "why": "Natural selection acts at the level of individuals, not species. Group benefit is NOT a requirement (and is rarely the outcome). Many adaptations are individually beneficial while being neutral or harmful at the species level.",
+    "choice_why": [
+      "Required. No variation = no raw material for selection.",
+      "Required. Without heritability, selection produces no evolutionary response.",
+      "Required. Without differential reproduction, allele frequencies don't change.",
+      "Correct — this is NOT required. Natural selection does not act for the good of the species. Individual fitness is the level at which selection works."
+    ],
+    "source": "sg-exam-1 §I, §III; L02 §D"
+  },
+  {
+    "id": "STIM-L02-007",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "E",
+    "topic": "Hypothesis vs. theory",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Which of the following is a HYPOTHESIS rather than a scientific theory?",
+    "choices": [
+      "Evolution by natural selection.",
+      "The germ theory of disease.",
+      "Antibiotic-resistant strains will increase in frequency in hospitals where antibiotics are heavily used.",
+      "The cell theory."
+    ],
+    "correct": 2,
+    "why": "A hypothesis is a narrow, specific, testable prediction. The antibiotic-resistance prediction is testable and falsifiable. The other three are broad theories supported by extensive evidence and generating many testable hypotheses.",
+    "choice_why": [
+      "Wrong. Evolution by natural selection is a THEORY — broad, well-supported, generates many testable hypotheses.",
+      "Wrong. Germ theory is a THEORY of disease causation, not a single testable hypothesis.",
+      "Correct. This is a specific, narrow, testable prediction = hypothesis.",
+      "Wrong. Cell theory is a foundational scientific THEORY about the cellular basis of life."
+    ],
+    "source": "sg-exam-1 §III; L02 §E"
+  },
+  {
+    "id": "STIM-L02-008",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "E",
+    "topic": "Falsifiability",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Why is 'evolution happens' a poor scientific hypothesis even though evolution is well supported?",
+    "choices": [
+      "It is too broad — it does not specify what observations would prove it wrong.",
+      "It is not supported by any evidence.",
+      "It is religious rather than scientific.",
+      "It is an example of inheritance of acquired characteristics."
+    ],
+    "correct": 0,
+    "why": "A good hypothesis must be falsifiable — it must specify observations that would prove it wrong. 'Evolution happens' is too broad to be falsifiable as a single hypothesis (though evolution as a theory IS supported by many specific falsifiable hypotheses).",
+    "choice_why": [
+      "Correct. A hypothesis must be falsifiable; 'evolution happens' is too vague to specify falsifying observations.",
+      "Wrong. Evolution is supported by mountains of evidence; the issue is that this statement is not framed as a testable prediction.",
+      "Wrong. The statement is not religious; the issue is its breadth.",
+      "Wrong. Lamarckism is unrelated to whether 'evolution happens' is a good hypothesis."
+    ],
+    "source": "sg-exam-1 §III; L02 §E"
+  },
+  {
+    "id": "STIM-L02-009",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "C,D",
+    "topic": "Matching key figures to ideas",
+    "type": "sa",
+    "difficulty": "application",
+    "points": 4,
+    "q": "Match each key figure to their primary contribution to evolutionary thought, and briefly explain each contribution: (a) Lamarck, (b) Lyell, (c) Darwin, (d) Wallace.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Lamarck → inheritance of acquired characteristics; first systematic mechanism of evolutionary change, but mechanism was wrong." },
+        { "pts": 1, "desc": "Lyell → uniformitarianism / deep time; geologist whose argument for slow gradual processes over vast time gave Darwin the temporal canvas he needed." },
+        { "pts": 1, "desc": "Darwin → theory of evolution by natural selection; observations on the Beagle voyage led to the framework that variation + heritability + differential reproduction = evolution." },
+        { "pts": 1, "desc": "Wallace → independently conceived natural selection; his 1858 letter to Darwin prompted Darwin's publication and the joint paper that year." }
+      ]
+    },
+    "model_answer": "(a) Lamarck proposed the INHERITANCE OF ACQUIRED CHARACTERISTICS — that traits gained during an individual's life are passed to offspring. The mechanism is wrong, but Lamarck deserves credit as the first to propose a systematic mechanism for evolutionary change. (b) Lyell, a geologist, argued for UNIFORMITARIANISM — that gradual, observable processes operating over DEEP TIME shaped Earth. He gave Darwin the temporal canvas needed for slow evolution to accumulate. (c) Darwin developed the theory of EVOLUTION BY NATURAL SELECTION through observations on the Beagle voyage and decades of subsequent work — variation + heritability + differential reproduction = evolutionary change. (d) Wallace INDEPENDENTLY CONCEIVED natural selection while working in the Malay Archipelago. His 1858 letter to Darwin is what finally spurred Darwin to publish, leading to the joint Darwin-Wallace paper that year.",
+    "source": "sg-exam-1 §III; L02 §C,D"
+  },
+  {
+    "id": "STIM-L02-010",
+    "exam": 1,
+    "lecture": "L02",
+    "section": "B",
+    "topic": "Faunal succession",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "What does the principle of faunal succession state?",
+    "choices": [
+      "Species succeed each other in geographic space, with newer ones replacing older ones in the same habitat.",
+      "Distinct fossil assemblages occur in a consistent vertical order in rock strata, allowing layers to be dated by their fossils.",
+      "Each species evolves directly into the next; lineage is a straight line.",
+      "Species can be ordered into a fixed hierarchy from simple to complex."
+    ],
+    "correct": 1,
+    "why": "Faunal succession is the empirical observation that distinct fossil assemblages mark specific rock strata in a CONSISTENT vertical (temporal) order across geography. This allowed Smith to correlate rock layers across regions using fossils.",
+    "choice_why": [
+      "Wrong. Faunal succession is about VERTICAL (temporal) order in rocks, not horizontal (geographic) replacement.",
+      "Correct. The principle is that fossil assemblages occur in a consistent stratigraphic order, allowing rocks to be dated by fossils.",
+      "Wrong. Faunal succession is descriptive of fossil sequences; it does not assert direct lineage between successive forms.",
+      "Wrong. That is the Great Chain of Being, not faunal succession."
+    ],
+    "source": "sg-exam-1 §III; L02 §B"
+  }
+]

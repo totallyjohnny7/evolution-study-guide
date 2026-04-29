@@ -1,0 +1,91 @@
+{
+  "title": "History of Life",
+  "intro": "A 4-billion-year overview of life on Earth — when, where, and roughly how. The lecture covers Earth's age, key evolutionary milestones (origin of life, photosynthesis, eukaryotes, multicellularity, Cambrian explosion), mass extinctions, and the dating tools that anchor it all.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Earth's age and dating methods",
+      "overview": "Earth is ~4.568 billion years old. We know this from radiometric dating of Earth and meteorite materials. Dating life's milestones depends on the same physics — measuring ratios of radioactive isotopes in rocks.",
+      "key_points": [
+        "Earth's age: ~4.568 billion years (radiometric dating of meteorites, oldest Earth zircons).",
+        "RADIOMETRIC DATING measures the ratio of a parent isotope to its daughter (decay product). Each isotope has a known half-life.",
+        "Different isotope systems for different time scales: ¹⁴C for tens of thousands of years; U-Pb for billions of years; K-Ar for millions.",
+        "BIOMARKERS (chemical signatures in rocks like specific lipid molecules) suggest life by ~3.5–3.8 billion years ago."
+      ],
+      "key_terms": [
+        { "term": "Radiometric dating", "def": "Determining the age of a rock by measuring ratios of parent and daughter isotopes; uses known half-lives." },
+        { "term": "Half-life", "def": "Time required for half of a radioactive isotope to decay." },
+        { "term": "Biomarker", "def": "A chemical molecule (often a lipid) preserved in ancient rocks that indicates the past presence of specific organisms." }
+      ],
+      "exam_traps": [
+        "Carbon-14 dating only works back ~50,000 years (5 half-lives × 5,730 yr ≈ 28k yr; method becomes unreliable beyond that). For deep time, you need U-Pb, K-Ar, etc.",
+        "Earth's age is ~4.568 billion years — close to but distinct from the universe's age (~13.8 Gyr) or the age of the oldest rocks on Earth (~4.0 Gyr)."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Major milestones in life's history",
+      "overview": "Life appeared early. Then for a couple billion years, very little visible happened. Then in a few hundred million years, all the modern phyla appeared. The timeline matters.",
+      "key_points": [
+        "~3.5–3.8 GYA: earliest evidence of life (microbial mats, biomarkers).",
+        "~2.4 GYA: GREAT OXIDATION EVENT — cyanobacteria producing oxygen accumulate atmospheric O₂; redox-sensitive minerals show the shift in rocks worldwide.",
+        "~2.1–1.6 GYA: first eukaryotes (mitochondrial endosymbiosis).",
+        "~1.0 GYA: first multicellular life.",
+        "~541 MYA: CAMBRIAN EXPLOSION — most modern animal phyla appear in the fossil record over ~20 million years.",
+        "~444 MYA (Ordovician): early bony fishes; first land plants.",
+        "~419 MYA (Silurian): first land animals (millipedes, arthropods).",
+        "~359 MYA (Devonian): age of fishes; early tetrapods (Tiktaalik, etc.).",
+        "~251 MYA (Permian-Triassic boundary): largest mass extinction; ~95% marine species lost.",
+        "~66 MYA (K-T or K-Pg boundary): asteroid impact; non-avian dinosaurs go extinct."
+      ],
+      "key_terms": [
+        { "term": "Great Oxidation Event", "def": "Rise of atmospheric oxygen ~2.4 GYA driven by cyanobacterial photosynthesis; transformed Earth's chemistry and life." },
+        { "term": "Cambrian explosion", "def": "Rapid (~541–520 MYA) diversification of most modern animal phyla, recorded in the fossil record." }
+      ],
+      "exam_traps": [
+        "The Cambrian explosion is RAPID on a geological timescale (~20 MYR) but is NOT instant. It also represents the appearance of HARD PARTS that fossilize, not necessarily the origin of phyla.",
+        "Don't confuse the Permian-Triassic extinction (~252 MYA, biggest) with the K-T / K-Pg extinction (~66 MYA, dinosaurs)."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Geological time periods to recognize",
+      "overview": "The study guide explicitly lists Ordovician, Silurian, Devonian, Permian. Be ready to associate each period with its key biological event.",
+      "key_points": [
+        "ORDOVICIAN (~488–444 MYA): early bony fishes; first land plants.",
+        "SILURIAN (~444–416 MYA): first land animals (arthropods, including millipedes).",
+        "DEVONIAN (~416–359 MYA): age of fishes; early tetrapod evolution; early forests; major reef expansion.",
+        "PERMIAN (~299–251 MYA): origin of reptiles and proto-mammals (synapsids); ends with the Permian-Triassic mass extinction."
+      ],
+      "key_terms": [
+        { "term": "Devonian", "def": "Geological period (~416–359 MYA) marked by major fish diversification and the origin of land vertebrates." },
+        { "term": "Permian", "def": "Geological period (~299–251 MYA) ending in Earth's largest mass extinction." }
+      ],
+      "exam_traps": [
+        "The study guide explicitly tests these period-event associations. Memorize the canonical pairings.",
+        "The Devonian = 'Age of Fishes'; the Permian-Triassic boundary = the largest mass extinction."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Mass extinctions",
+      "overview": "Five 'Big Five' mass extinctions punctuate the Phanerozoic. Each reset evolutionary trajectories — opening new niches for survivors. Mass extinction is not unidirectional; it shapes which lineages get to radiate next.",
+      "key_points": [
+        "BIG FIVE mass extinctions: end-Ordovician (~444 MYA), Late Devonian (~375 MYA), end-Permian (~252 MYA), end-Triassic (~201 MYA), end-Cretaceous (K-Pg, ~66 MYA).",
+        "End-PERMIAN: largest, ~95% marine species lost; cause likely Siberian Trap volcanism + climate change + ocean acidification.",
+        "K-T (end-CRETACEOUS): asteroid impact at the Yucatán (Chicxulub crater); iridium layer is the smoking gun. Non-avian dinosaurs eliminated.",
+        "Mass extinctions clear out dominant groups, opening niches for survivors to radiate (mammals diversified after the K-Pg).",
+        "Many biologists argue we are now in the SIXTH MASS EXTINCTION driven by humans."
+      ],
+      "key_terms": [
+        { "term": "Mass extinction", "def": "A geologically rapid event eliminating a large fraction of Earth's species, usually defined as >75% species loss." },
+        { "term": "K-T (K-Pg) boundary", "def": "End-Cretaceous boundary (~66 MYA) marked by asteroid impact and the extinction of non-avian dinosaurs." },
+        { "term": "Iridium layer", "def": "A thin global layer of iridium-rich sediment at the K-Pg boundary, evidence for an extraterrestrial impact." }
+      ],
+      "exam_traps": [
+        "The study guide directly asks about the K-T boundary's significance — be ready: asteroid impact, end-Cretaceous, non-avian dinosaur extinction, mammal radiation thereafter.",
+        "K-T (K-Pg) is the dinosaur extinction; the Permian-Triassic is the bigger one. Don't confuse them."
+      ]
+    }
+  ]
+}

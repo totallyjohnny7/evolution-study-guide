@@ -1,0 +1,92 @@
+{
+  "title": "Species Concepts and Reproductive Isolation",
+  "intro": "What IS a species, exactly? Different concepts emphasize different criteria, each with strengths and limits. This lecture covers species concepts and the reproductive isolation mechanisms — pre- and postzygotic — that keep species apart.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Major species concepts",
+      "overview": "There is no single universal species definition. The Biological Species Concept dominates animal biology; alternatives handle cases where the BSC fails.",
+      "key_points": [
+        "BIOLOGICAL SPECIES CONCEPT (BSC, Mayr): species = groups of actually or potentially interbreeding natural populations, reproductively isolated from other such groups. Strength: clear mechanism (gene flow). Limits: can't apply to asexual organisms or fossils.",
+        "MORPHOLOGICAL SPECIES CONCEPT: species defined by distinct, diagnosable morphological differences. Strength: applies to fossils and asexuals. Limit: cryptic species (genetically distinct but morphologically identical) and morphological plasticity create errors.",
+        "PHYLOGENETIC SPECIES CONCEPT: species = the smallest monophyletic group identifiable by shared derived characters. Strength: works for asexuals, applies cladistic logic. Limit: sensitive to sampling and characters chosen; tends to split lineages aggressively.",
+        "ECOLOGICAL SPECIES CONCEPT: species = populations occupying the same adaptive zone (niche). Useful but sometimes blurry."
+      ],
+      "key_terms": [
+        { "term": "Biological Species Concept (BSC)", "def": "Mayr's definition: species = group of interbreeding natural populations reproductively isolated from others." },
+        { "term": "Morphological species concept", "def": "Species defined by diagnosable morphological differences." },
+        { "term": "Phylogenetic species concept", "def": "Species = smallest monophyletic group sharing derived characters." }
+      ],
+      "exam_traps": [
+        "The BSC fails for asexual organisms (bacteria, parthenogenetic species) and for fossils — you can't test interbreeding with extinct populations.",
+        "Different concepts can disagree about what counts as a species in the same case (e.g., a hybridizing species pair). The 'right' concept depends on what you need it for."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Reproductive isolation — prezygotic vs postzygotic",
+      "overview": "The BSC requires reproductive isolation. Mechanisms split into PREZYGOTIC (preventing zygote formation) and POSTZYGOTIC (acting after zygote formation).",
+      "key_points": [
+        "PREZYGOTIC barriers prevent fertilization or gamete contact:",
+        "  • TEMPORAL — populations breed at different times (different seasons, different times of day).",
+        "  • BEHAVIORAL — different mating displays/courtship songs prevent recognition between species.",
+        "  • MECHANICAL — incompatible reproductive structures (e.g., insect genital morphology) prevent successful copulation.",
+        "  • GAMETIC — sperm cannot fertilize eggs of different species (incompatible surface proteins).",
+        "  • HABITAT/ECOLOGICAL — populations live in different microhabitats and rarely encounter each other.",
+        "POSTZYGOTIC barriers act AFTER zygote formation:",
+        "  • HYBRID INVIABILITY — hybrid embryos fail to develop or survive.",
+        "  • HYBRID STERILITY — hybrids survive but are sterile (e.g., mules, zorses).",
+        "  • HYBRID BREAKDOWN — F1 hybrids viable and fertile, but F2 (or later) generations show reduced fitness."
+      ],
+      "key_terms": [
+        { "term": "Prezygotic isolation", "def": "Reproductive barriers preventing successful fertilization between species (temporal, behavioral, mechanical, gametic, habitat)." },
+        { "term": "Postzygotic isolation", "def": "Reproductive barriers acting after zygote formation: hybrid inviability, sterility, or breakdown." },
+        { "term": "Hybrid sterility", "def": "Hybrid offspring survive but cannot reproduce; classic example is the mule (horse × donkey)." }
+      ],
+      "exam_traps": [
+        "Pre-zygotic = before zygote (no successful fertilization). Post-zygotic = after zygote (hybrid problems). The dividing line is fertilization.",
+        "Hybrid INVIABILITY ≠ hybrid STERILITY. Inviability: hybrids die. Sterility: hybrids live but can't reproduce."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Speciation — how new species arise",
+      "overview": "Speciation is the evolutionary process by which one species splits into two or more reproductively isolated descendants. Geography is often (but not always) involved.",
+      "key_points": [
+        "ALLOPATRIC speciation: populations geographically separated → independent evolution → reproductive isolation accumulates → new species. Most common.",
+        "PERIPATRIC speciation: a small founder population becomes geographically isolated; drift + selection in the small population accelerates divergence.",
+        "PARAPATRIC speciation: populations are partially separated (adjacent ranges, narrow contact zone); divergence occurs despite some gene flow.",
+        "SYMPATRIC speciation: divergence WITHOUT geographic separation, often via niche differentiation, polyploidy (especially in plants), or strong assortative mating.",
+        "REINFORCEMENT: when populations come back into secondary contact, selection can favor stronger prezygotic isolation IF hybrids have low fitness."
+      ],
+      "key_terms": [
+        { "term": "Allopatric speciation", "def": "New species form in geographically separated populations." },
+        { "term": "Sympatric speciation", "def": "New species form within the same geographic range, often via niche shifts or polyploidy." },
+        { "term": "Reinforcement", "def": "Selection strengthens prezygotic isolation when hybrids between two populations are unfit, accelerating completion of speciation." }
+      ],
+      "exam_traps": [
+        "Allopatric is the DEFAULT speciation mode for most animals. Sympatric is rare in animals but more common in plants (polyploidy is sympatric).",
+        "Reinforcement is a SECONDARY-CONTACT phenomenon — it only operates AFTER initial divergence in allopatry, when populations meet again."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Hybrid zones and viable hybrids",
+      "overview": "Real populations don't always fit clean species boundaries. Hybrid zones — where two species meet and interbreed — reveal incomplete reproductive isolation.",
+      "key_points": [
+        "HYBRID ZONES are geographic regions where two species' ranges overlap and they interbreed.",
+        "VIABLE HYBRIDS can exist (offspring survive) but typically have REDUCED FITNESS — outcompeted by parental species, often sterile, or maladapted to either parental habitat.",
+        "Hybrid zones can be stable (selection against hybrids balanced by gene flow) or move over time.",
+        "Sometimes hybrids THRIVE in intermediate environments — hybrid zones can also be sites of evolution and even hybrid speciation."
+      ],
+      "key_terms": [
+        { "term": "Hybrid zone", "def": "Geographic region where two species' ranges overlap and they interbreed, typically producing hybrids of intermediate or reduced fitness." },
+        { "term": "Viable hybrid", "def": "Hybrid offspring that survives but typically with reduced fitness." }
+      ],
+      "exam_traps": [
+        "Hybrid existence does NOT disprove species status under the BSC — hybrids with reduced fitness still leave the parental species reproductively isolated in the long run.",
+        "Hybrid speciation (e.g., in sunflowers) is a real but special case where hybrids form a stable third lineage."
+      ]
+    }
+  ]
+}

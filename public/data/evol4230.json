@@ -1,0 +1,34 @@
+{
+  "course": "BIOL 4230",
+  "title": "Evolution",
+  "instructor": "Dr. Travis Robbins",
+  "final_exam": "2026-05-04T17:00:00",
+  "final_exam_label": "Mon May 4 · 5:00–7:00 PM",
+  "textbook": "Zimmer & Emlen, Evolution: Making Sense of Life (2nd ed.)",
+  "lectures": [
+    { "id": "L01", "title": "Intro",                                          "chapter": "Ch 1",   "exam": 1 },
+    { "id": "L02", "title": "Evolutionary thinking",                          "chapter": "Ch 2",   "exam": 1 },
+    { "id": "L03", "title": "Genes and heritable variation",                  "chapter": "Ch 5",   "exam": 1 },
+    { "id": "L04", "title": "Genetic evolution in populations",               "chapter": "Ch 6",   "exam": 1 },
+    { "id": "L05", "title": "Quantitative genetics, selection, plasticity",   "chapter": "Ch 7",   "exam": 1 },
+    { "id": "L07", "title": "Empirical studies of natural selection",         "chapter": "Ch 8",   "exam": 2 },
+    { "id": "L08", "title": "Complex adaptations",                            "chapter": "Ch 10",  "exam": 2 },
+    { "id": "L09", "title": "Coevolution",                                    "chapter": "Ch 15",  "exam": 2 },
+    { "id": "L11", "title": "Sex and sexual selection",                       "chapter": "Ch 11",  "exam": 2 },
+    { "id": "L12", "title": "Life history evolution",                         "chapter": "Ch 12",  "exam": 2 },
+    { "id": "L13", "title": "Evolution of social behavior",                   "chapter": "Ch 16",  "exam": 2 },
+    { "id": "L14", "title": "History of life",                                "chapter": "Ch 3",   "exam": 3 },
+    { "id": "L15", "title": "Phylogenetics and the tree of life",             "chapter": "Ch 4",   "exam": 3 },
+    { "id": "L16", "title": "Species concepts and reproductive isolation",    "chapter": "Ch 13",  "exam": 3 },
+    { "id": "L17", "title": "Biogeography, speciation, and extinction",       "chapter": "Ch 14",  "exam": 3 },
+    { "id": "L18", "title": "Conservation and humans as selective force",     "chapter": "Ch 8",   "exam": 3 },
+    { "id": "L19", "title": "Human evolution",                                "chapter": "Ch 17",  "exam": 3 },
+    { "id": "L20", "title": "Evolutionary medicine",                          "chapter": "Ch 18",  "exam": 3 }
+  ],
+  "exams": [
+    { "id": 1, "title": "Exam 1", "lectures": ["L01","L02","L03","L04","L05"] },
+    { "id": 2, "title": "Exam 2", "lectures": ["L07","L08","L09","L11","L12","L13"] },
+    { "id": 3, "title": "Exam 3", "lectures": ["L14","L15","L16","L17","L18","L19","L20"] },
+    { "id": 0, "title": "Cumulative (Final)", "lectures": ["L01","L02","L03","L04","L05","L07","L08","L09","L11","L12","L13","L14","L15","L16","L17","L18","L19","L20"] }
+  ]
+}

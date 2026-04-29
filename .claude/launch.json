@@ -7,6 +7,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "public", "--no-clipboard"],
       "port": 4200
+    },
+    {
+      "name": "evolution-v2",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "C:\\Users\\johnn\\Desktop\\School\\Evolution_EVOL4230\\evolution-study-guide\\public-v2", "--no-clipboard"],
+      "port": 4210
     }
   ]
 }

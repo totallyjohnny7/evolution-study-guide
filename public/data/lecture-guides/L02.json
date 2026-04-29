@@ -1,0 +1,105 @@
+{
+  "title": "Evolutionary Thinking — From Pre-Darwinian Worldviews to Natural Selection",
+  "intro": "How biologists came to think about life as a tree, not a ladder. This lecture traces the conceptual road from the Great Chain of Being to Darwin and Wallace, and frames the scientific method (hypothesis vs. theory) that lets evolutionary claims be tested.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "The Great Chain of Being and pre-Darwinian thinking",
+      "overview": "Before Darwin, the dominant Western view of life was the Scala Naturae — a fixed hierarchical ladder with humans at the top and 'lower' organisms at the bottom. Species were considered immutable; extinction was not yet recognized as a real phenomenon.",
+      "key_points": [
+        "The Great Chain of Being arranged organisms in a fixed hierarchy with humans at the apex.",
+        "Species were assumed to be immutable — created in their final form, not changing over time.",
+        "Extinction was either denied outright or chalked up to local catastrophes; the idea that whole lineages had vanished was controversial well into the 1700s.",
+        "There was no concept of 'common ancestry' — similarities between organisms were attributed to a shared design template, not shared descent."
+      ],
+      "key_terms": [
+        { "term": "Great Chain of Being (Scala Naturae)", "def": "Pre-Darwinian view of life as a fixed hierarchy with humans at the top — non-evolutionary, no shared descent." },
+        { "term": "Immutability of species", "def": "The pre-Darwinian assumption that species do not change over time." }
+      ],
+      "exam_traps": [
+        "The Great Chain of Being is NOT an evolutionary tree — it is a fixed ladder with no branching, no common ancestry, and no extinction.",
+        "Don't confuse the Chain of Being's 'progression toward humans' with evolution. Evolution does not progress toward any goal."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Extinction recognized — William Smith and stratigraphy",
+      "overview": "The realization that whole groups of organisms had disappeared came from geology. William Smith showed that fossil sequences in rock layers had a consistent pattern across geography — and that some forms simply stopped appearing in younger rock.",
+      "key_points": [
+        "William Smith (early 1800s) used fossils + stratigraphy to map rock layers across England.",
+        "He showed that distinct fossil assemblages characterize specific rock strata, in a consistent worldwide order — the principle of FAUNAL SUCCESSION.",
+        "The disappearance of fossil types from younger strata established extinction as a real phenomenon.",
+        "Georges Cuvier independently demonstrated extinction by comparing extinct fossil mammals (like mastodons) to all known living species."
+      ],
+      "key_terms": [
+        { "term": "Stratigraphy", "def": "The study of rock layers; younger rocks lie atop older ones, and fossils within them mark time." },
+        { "term": "Faunal succession", "def": "The principle that distinct fossil assemblages occur in a consistent vertical order in rock strata, allowing rocks to be dated by their fossils." },
+        { "term": "Extinction", "def": "The complete disappearance of a species or lineage from Earth." }
+      ],
+      "exam_traps": [
+        "The study guide explicitly flags William Smith's role in establishing extinction — be ready to attribute him.",
+        "Faunal succession is descriptive (which fossils where) — it doesn't on its own explain WHY species disappeared. Extinction as a concept comes from observing the pattern."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Lamarck, Lyell, and the road to Darwin",
+      "overview": "Several thinkers helped clear the conceptual ground before Darwin. Lamarck proposed an evolutionary mechanism (wrong about the details). Lyell argued for deep time and gradual geological change. Both shaped how Darwin framed natural selection.",
+      "key_points": [
+        "Jean-Baptiste Lamarck (1809) was the first to propose a systematic mechanism of evolution: inheritance of ACQUIRED CHARACTERISTICS — traits acquired during an individual's life are passed to offspring (e.g., the giraffe stretching its neck).",
+        "Lamarck was wrong about the mechanism (acquired traits aren't inherited via the standard germline) but right that species change over time.",
+        "Charles Lyell argued for UNIFORMITARIANISM — the same gradual processes operating today shaped Earth over enormous spans of time.",
+        "Lyell's gift to Darwin: the concept of DEEP TIME — Earth is millions/billions of years old, plenty of time for slow evolutionary change to accumulate."
+      ],
+      "key_terms": [
+        { "term": "Inheritance of acquired characteristics (Lamarckism)", "def": "Lamarck's proposed mechanism: traits gained during life pass to offspring. Now known to be wrong as a general mechanism." },
+        { "term": "Uniformitarianism", "def": "Lyell's principle that observable, gradual processes (erosion, sedimentation) operating over deep time produced Earth's geological features." },
+        { "term": "Deep time", "def": "The vast time spans (millions to billions of years) over which Earth's history has unfolded." }
+      ],
+      "exam_traps": [
+        "Lamarck is famous as a wrong example, but the study guide calls for matching him to 'inheritance of acquired traits.' Don't dismiss him without naming his contribution.",
+        "Lyell was a geologist, not an evolutionary biologist. His contribution to evolution was indirect — providing deep time as a backdrop."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Darwin, Wallace, and natural selection",
+      "overview": "Darwin's voyage on the Beagle (1831–1836) and decades of subsequent work led him to natural selection. Alfred Russel Wallace independently arrived at the same idea — and his 1858 letter is what finally pushed Darwin to publish.",
+      "key_points": [
+        "Charles Darwin developed the theory of evolution by natural selection through observations on the Beagle voyage and later work, especially on Galápagos finches and barnacles.",
+        "Darwin's three observations + one inference: (1) populations have heritable variation; (2) more offspring are produced than can survive; (3) survival/reproduction is non-random; → therefore (4) heritable traits associated with higher reproductive success increase in frequency.",
+        "Alfred Russel Wallace independently conceived natural selection while working in the Malay Archipelago. His 1858 letter to Darwin spurred the joint Darwin-Wallace paper that year.",
+        "Darwin published On the Origin of Species in 1859."
+      ],
+      "key_terms": [
+        { "term": "Natural selection", "def": "The process by which individuals with heritable trait variants that increase reproductive success leave more offspring, increasing those variants' frequency over generations." },
+        { "term": "Heritability", "def": "The proportion of phenotypic variation that is genetically inherited rather than environmental." },
+        { "term": "Selection differential (S)", "def": "The difference between the mean trait value of breeders and the mean trait value of the original population." }
+      ],
+      "exam_traps": [
+        "The study guide explicitly tests: 'identifying which naturalist spurred Darwin to make his work public' — that's WALLACE, via his 1858 letter.",
+        "Natural selection requires variation, heritability, AND differential reproductive success. All three. Missing any one and the population doesn't evolve."
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Hypotheses vs. theories — the scientific method",
+      "overview": "Lay usage of 'theory' often means 'guess,' but in science it means something quite different. Distinguishing hypothesis from theory is a small but reliably testable item.",
+      "key_points": [
+        "A HYPOTHESIS is a tentative, testable explanation for an observation — narrow in scope, designed to be falsified.",
+        "A SCIENTIFIC THEORY is a well-substantiated, broad explanation supported by a large body of evidence and capable of generating many testable hypotheses.",
+        "Evolution is a theory in the strong scientific sense: a unifying explanation supported by molecular, fossil, biogeographic, and experimental evidence.",
+        "A good hypothesis is FALSIFIABLE — it specifies observations that would prove it wrong."
+      ],
+      "key_terms": [
+        { "term": "Hypothesis", "def": "A tentative, testable, falsifiable explanation for an observation." },
+        { "term": "Scientific theory", "def": "A broad, well-supported explanation for a major aspect of the natural world; generates testable hypotheses." },
+        { "term": "Falsifiability", "def": "The criterion that a scientific claim must specify observations that could prove it wrong." }
+      ],
+      "exam_traps": [
+        "'Theory' in everyday language ≠ 'theory' in science. Saying evolution is 'just a theory' confuses the two senses.",
+        "A good hypothesis says what observations would falsify it. 'Evolution happens' is too broad to be a hypothesis; 'antibiotic resistance increases when antibiotics are widely used' is testable."
+      ]
+    }
+  ]
+}

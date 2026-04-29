@@ -1,0 +1,101 @@
+[
+  {
+    "id": "STIM-L09-001",
+    "exam": 2,
+    "lecture": "L09",
+    "section": "A",
+    "topic": "Definition of coevolution",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Which of the following best illustrates coevolution (rather than mere coexistence or convergence)?",
+    "choices": [
+      "Two species of cactus in the same desert evolving similar water-storage tissue.",
+      "A predator and its prey both evolving faster running speeds in response to one another.",
+      "Different bird species nesting in the same forest without interacting.",
+      "Two unrelated frogs in different continents evolving the same toxic compound."
+    ],
+    "correct": 1,
+    "why": "Coevolution requires RECIPROCAL evolutionary change — adaptations in one species drive selection on the other, which drives further change in the first. Predator-prey speed escalation is the textbook arms race.",
+    "choice_why": [
+      "Wrong. Convergent evolution to similar abiotic challenges — no reciprocal feedback between species.",
+      "Correct. Each side's adaptation imposes selection on the other, producing reciprocal change.",
+      "Wrong. Coexistence ≠ coevolution. The species must be exerting reciprocal selection on each other.",
+      "Wrong. Convergent evolution in unrelated lineages — no shared interaction history; not coevolution."
+    ],
+    "source": "sg-exam-2 Ch15; L09 §A"
+  },
+  {
+    "id": "STIM-L09-002",
+    "exam": 2,
+    "lecture": "L09",
+    "section": "B",
+    "topic": "Newt-snake arms race",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Rough-skinned newts (Taricha) produce tetrodotoxin (TTX); garter snakes (Thamnophis) eat them. In some regions, snakes are highly TTX-resistant; in others, they have little resistance. What does this geographic variation suggest?",
+    "choices": [
+      "Coevolution is not actually occurring — the trait is just genetically variable.",
+      "There is a coevolutionary geographic mosaic: 'hotspots' of intense reciprocal selection alternate with 'coldspots' of weak interaction.",
+      "TTX evolved before snakes evolved resistance, and resistance is still spreading.",
+      "Snake populations migrate between regions, equalizing resistance over time."
+    ],
+    "correct": 1,
+    "why": "Geographic variation in matched offense/defense traits is the signature of Thompson's geographic mosaic theory — coevolutionary interactions vary in strength across the landscape, producing a patchwork of trait combinations.",
+    "choice_why": [
+      "Wrong. The matched cline (high toxicity ↔ high resistance) IS evidence of ongoing coevolution, not against it.",
+      "Correct. Thompson's geographic mosaic predicts exactly this pattern: hotspots and coldspots produce variable trait combinations across the species' range.",
+      "Wrong. The observed pattern isn't a single wave of resistance spreading — it's a stable mosaic with persistent regional differences.",
+      "Wrong. If migration equalized resistance, we wouldn't see persistent regional differences. Local selection > gene flow in maintaining the mosaic."
+    ],
+    "source": "sg-exam-2 Ch15; L09 §B,E"
+  },
+  {
+    "id": "STIM-L09-003",
+    "exam": 2,
+    "lecture": "L09",
+    "section": "D",
+    "topic": "Batesian vs Müllerian mimicry",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "A non-toxic hoverfly evolves yellow-and-black bands resembling a stinging wasp. Predators avoid both. As the hoverfly population grows so that hoverflies become MORE COMMON than wasps, what is most likely to happen?",
+    "choices": [
+      "Predator avoidance becomes stronger because the warning signal is more frequent.",
+      "Predator avoidance breaks down because most yellow-and-black insects are actually palatable.",
+      "Both species converge further on each other's appearance (Müllerian mimicry).",
+      "The hoverfly population stabilizes due to the ESS payoff structure."
+    ],
+    "correct": 1,
+    "why": "This is Batesian mimicry, which depends on the mimic being RARE relative to the model. When mimics outnumber models, predators encounter palatable mimics often, learn the warning signal is unreliable, and stop avoiding it. Mimicry breaks down.",
+    "choice_why": [
+      "Wrong. Predator avoidance depends on the warning being a RELIABLE signal of unprofitability. Common mimics make the signal unreliable.",
+      "Correct. Frequency-dependent selection: Batesian mimicry only works when mimics are rare. High mimic-to-model ratio collapses the system.",
+      "Wrong. Müllerian mimicry requires BOTH species to be unpalatable. Hoverflies are palatable — this is Batesian.",
+      "Wrong. There's no ESS protecting Batesian mimics at high frequency; the payoff structure favors discounting the warning."
+    ],
+    "source": "sg-exam-2 Ch15; L09 §D"
+  },
+  {
+    "id": "STIM-L09-004",
+    "exam": 2,
+    "lecture": "L09",
+    "section": "C",
+    "topic": "Endosymbiosis",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 3,
+    "q": "Mitochondria are descended from free-living alphaproteobacteria that took up residence inside an ancestral eukaryotic cell. Why is the modern mitochondrion-host relationship considered one of the most extreme examples of mutualistic coevolution? Give three specific lines of evidence or reasoning.",
+    "rubric": {
+      "total": 3,
+      "criteria": [
+        { "pts": 1, "desc": "Mentions that BOTH partners benefit and neither can survive without the other now (obligate mutualism / mutual dependence)." },
+        { "pts": 1, "desc": "Cites at least one molecular line of evidence: mitochondria have their own (reduced) circular genome resembling bacterial DNA; they replicate independently; their ribosomes resemble bacterial ribosomes; they're double-membraned." },
+        { "pts": 1, "desc": "Describes the coevolutionary integration: many ancestral mitochondrial genes have been TRANSFERRED to the host nuclear genome over evolutionary time, so the mitochondrion now imports most of its proteins from the host — a profound restructuring of both partners' genomes." }
+      ]
+    },
+    "model_answer": "The mitochondrion-host relationship is now obligate: the host cell cannot perform aerobic respiration without it, and the mitochondrion cannot survive outside the host. Three lines of evidence: (1) mitochondria retain their own small circular genome, double membrane, and bacterial-style 70S ribosomes — direct signatures of their endosymbiotic alphaproteobacterial ancestor. (2) Most ancestral mitochondrial genes have been transferred to the host nucleus over evolutionary time, with the proteins re-imported back to the mitochondrion — a deep restructuring of both genomes that only makes sense as long-term coevolutionary integration. (3) The energetic mutualism is two-way: the host provides protected environment, substrates, and nuclear-encoded proteins; the mitochondrion supplies ATP via oxidative phosphorylation — a co-adapted, reciprocally evolved division of labor.",
+    "source": "sg-exam-2 Ch15; L09 §C"
+  }
+]

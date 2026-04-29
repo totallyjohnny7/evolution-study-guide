@@ -1,0 +1,96 @@
+{
+  "title": "Coevolution",
+  "intro": "Coevolution is reciprocal evolutionary change in two interacting species — each lineage's adaptations are evolutionary responses to the other. It produces arms races, mutualisms, and the geographic mosaic of selection.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Defining reciprocal coevolution",
+      "overview": "Coevolution is not just any pair of species coexisting — it requires that adaptations in one lineage drive adaptive responses in the other, in a feedback loop.",
+      "key_points": [
+        "Coevolution = reciprocal evolutionary change between two (or more) interacting lineages, each responding to selective pressure from the other.",
+        "Coexistence alone is not coevolution; the interaction must shape heritable trait change in both directions.",
+        "The interaction can be antagonistic (predator-prey, host-parasite) or mutualistic (pollinators-flowers)."
+      ],
+      "key_terms": [
+        { "term": "Coevolution", "def": "Reciprocal evolutionary change in two or more interacting species driven by selective pressures each imposes on the others." },
+        { "term": "Reciprocal selection", "def": "Selection imposed by one species on another, which then imposes selection back on the first." }
+      ],
+      "exam_traps": [
+        "Mere ecological association ≠ coevolution. The textbook bar is: changes in species A drive changes in species B, which drive further changes in A.",
+        "Convergent evolution (similar solutions in unrelated lineages) is NOT coevolution — there's no reciprocal feedback."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Antagonistic arms races",
+      "overview": "When predator-prey or host-parasite interactions persist, each side evolves countermeasures, which selects for new adaptations in the other side, in an open-ended escalation.",
+      "key_points": [
+        "Classic case: rough-skinned newts (Taricha) produce tetrodotoxin (TTX); garter snakes (Thamnophis) evolve TTX-resistant sodium channels.",
+        "Geographic variation is striking: where snakes are highly resistant, newts are highly toxic; where snakes are sensitive, newts are weakly toxic.",
+        "Arms races can be asymmetric — one side may 'win' temporarily, with the other lagging behind in evolutionary response time."
+      ],
+      "key_terms": [
+        { "term": "Coevolutionary arms race", "def": "Reciprocal escalation of offense/defense traits in interacting species, driven by ongoing antagonistic selection." },
+        { "term": "Tetrodotoxin (TTX)", "def": "Potent neurotoxin produced by newts that blocks voltage-gated sodium channels; basis of the newt-snake arms race." }
+      ],
+      "exam_traps": [
+        "Arms races don't always escalate forever — fitness costs (e.g., snake speed cost of TTX resistance) can cap the escalation.",
+        "Variation across geography is the key signature of a true arms race; uniform 'one-size-fits-all' adaptations argue against ongoing coevolution."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Mutualistic coevolution",
+      "overview": "Mutualisms are coevolutionary too: each partner's traits are adapted to the other, and selection on one drives change in the other in a cooperative direction.",
+      "key_points": [
+        "Pollinator-plant mutualisms (e.g., long-tongued moths and long-spurred orchids — Darwin's prediction) show co-adapted morphology.",
+        "Endosymbiosis (mitochondria from ancestral alphaproteobacteria, chloroplasts from cyanobacteria) is the deepest mutualism — now obligate.",
+        "Mutualisms can break down or shift to parasitism if cost/benefit balance changes."
+      ],
+      "key_terms": [
+        { "term": "Mutualism", "def": "An interaction in which both species gain net fitness benefit." },
+        { "term": "Endosymbiosis", "def": "One organism living inside another; classic origin of eukaryotic mitochondria and plastids." }
+      ],
+      "exam_traps": [
+        "Mutualists often cheat — selection favors taking benefits without paying costs. Stable mutualisms typically have enforcement mechanisms.",
+        "Mutualism is not 'cooperation for the good of the species' — each partner is selected for individual fitness; mutual benefit is a coincidence of interests."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Mimicry — Batesian vs. Müllerian",
+      "overview": "Mimicry is a coevolutionary product where one species' phenotype evolves to resemble another. The two flavors differ in who pays the cost.",
+      "key_points": [
+        "Batesian mimicry — a HARMLESS mimic resembles a HARMFUL model; mimic gains protection without bearing the cost of being toxic. Mimic must stay rare or predators learn the trick.",
+        "Müllerian mimicry — multiple HARMFUL species converge on a shared warning signal; predators learn 'this color = bad' faster, benefiting all.",
+        "Both are products of frequency-dependent selection by shared predators."
+      ],
+      "key_terms": [
+        { "term": "Batesian mimicry", "def": "A palatable species evolves to resemble an unpalatable model species, gaining protection from predators." },
+        { "term": "Müllerian mimicry", "def": "Multiple unpalatable species converge on a similar warning signal, sharing the cost of educating predators." },
+        { "term": "Aposematism", "def": "Conspicuous warning coloration in unpalatable or dangerous species." }
+      ],
+      "exam_traps": [
+        "Batesian mimicry breaks down at high mimic-to-model ratios — predators encounter the harmless mimic too often and stop avoiding the warning signal.",
+        "Müllerian mimicry is technically convergent evolution AND coevolution — both species evolve toward each other's signal."
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Geographic Mosaic Theory of Coevolution",
+      "overview": "Thompson's framework: coevolutionary outcomes vary across geography because local ecological conditions tilt the cost/benefit balance differently in different places.",
+      "key_points": [
+        "Coevolution happens in 'hotspots' (intense reciprocal selection) and 'coldspots' (weak or no reciprocal selection).",
+        "Gene flow between hotspots and coldspots, plus local trait evolution, generates a mosaic of coevolutionary states across the species' range.",
+        "Predictions: trait values mismatched in some places (showing the mosaic), no single 'optimal' coevolutionary outcome."
+      ],
+      "key_terms": [
+        { "term": "Geographic Mosaic Theory of Coevolution", "def": "Thompson's hypothesis that coevolution proceeds at different rates and in different directions across a species' geographic range, producing spatially variable trait combinations." }
+      ],
+      "exam_traps": [
+        "Mosaic theory predicts trait MISMATCH in some areas — this is evidence FOR ongoing coevolution, not against it.",
+        "Don't confuse the geographic mosaic with simple local adaptation; mosaic theory specifically requires reciprocal feedback between species."
+      ]
+    }
+  ]
+}

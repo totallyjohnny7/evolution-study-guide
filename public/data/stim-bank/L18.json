@@ -1,0 +1,232 @@
+[
+  {
+    "id": "STIM-L18-001",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "A",
+    "topic": "Fisheries-induced evolution",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Fisheries with minimum-size limits (only large fish kept, small ones returned) have led to evolution toward earlier maturation and smaller maximum size in many fish populations. Why?",
+    "choices": [
+      "Fish randomly become smaller over time.",
+      "Selection imposed by humans removes large individuals before they reproduce; fish that mature earlier and at smaller sizes get to reproduce first.",
+      "Smaller fish have higher mutation rates.",
+      "Younger fish have lower nutritional needs."
+    ],
+    "correct": 1,
+    "why": "Size-selective fishing applies strong directional selection: large fish die, small/early-maturing fish reproduce. Fish populations evolve toward earlier maturation and smaller sizes. Reverses the natural-selection pattern (which often favors large body).",
+    "choice_why": [
+      "Wrong. The change is directional and tracks fishing pressure — not random.",
+      "Correct. Human-imposed size selection drives the evolutionary shift.",
+      "Wrong. Mutation rates don't depend on body size.",
+      "Wrong. Nutrition doesn't drive heritable evolutionary change in this scenario."
+    ],
+    "source": "sg-exam-3 §5; L18 §A"
+  },
+  {
+    "id": "STIM-L18-002",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "B",
+    "topic": "Inbreeding depression",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Inbreeding depression in a small population arises because:",
+    "choices": [
+      "Inbreeding causes new mutations.",
+      "Inbreeding increases homozygosity, causing deleterious recessive alleles to be expressed more often in homozygotes.",
+      "Inbreeding directly reduces population size.",
+      "Inbreeding only affects sexually selected traits."
+    ],
+    "correct": 1,
+    "why": "Mating between close relatives increases the probability that offspring inherit the same allele at a locus from both parents (homozygosity). Deleterious recessive alleles, normally hidden in heterozygotes, are exposed in homozygotes — reducing fitness.",
+    "choice_why": [
+      "Wrong. Inbreeding doesn't generate new mutations.",
+      "Correct. Increased homozygosity exposes deleterious recessives.",
+      "Wrong. Inbreeding is a consequence of small population size, not a direct cause of further reduction (though it can hasten decline).",
+      "Wrong. Inbreeding depression affects fitness components broadly, not just sexually selected traits."
+    ],
+    "source": "sg-exam-3 §5; L18 §B"
+  },
+  {
+    "id": "STIM-L18-003",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "B",
+    "topic": "Genetic rescue",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Florida panthers (a remnant subpopulation of cougars) suffered severe inbreeding depression. Conservation managers introduced cougars from Texas. The Florida population's fitness improved significantly. This intervention is called:",
+    "choices": [
+      "Sympatric speciation.",
+      "Genetic rescue.",
+      "Captive breeding.",
+      "Convergent evolution."
+    ],
+    "correct": 1,
+    "why": "GENETIC RESCUE: introducing individuals from another population to add genetic variation and reduce inbreeding depression. The Florida panther program is the textbook case — subsequent generations had restored fitness markers.",
+    "choice_why": [
+      "Wrong. The two populations are the same species; speciation didn't occur.",
+      "Correct. Genetic rescue.",
+      "Wrong. Captive breeding is ex-situ propagation; the panther rescue was IN SITU (live releases into the wild).",
+      "Wrong. Not relevant to this conservation intervention."
+    ],
+    "source": "sg-exam-3 §5; L18 §B"
+  },
+  {
+    "id": "STIM-L18-004",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "A",
+    "topic": "Trophy hunting evolution",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "On Ram Mountain, bighorn sheep were heavily trophy-hunted for large-horned males. Over decades, average horn size in the population DECREASED. The most likely cause is:",
+    "choices": [
+      "Sheep with large horns voluntarily hid them.",
+      "Selective hunting of large-horned individuals removed those phenotypes from the breeding pool, so smaller-horned individuals contributed more genes to the next generation.",
+      "Climate change shrank horns.",
+      "Random drift in a large population."
+    ],
+    "correct": 1,
+    "why": "Trophy hunting selectively kills large-horned males before they fully reproduce. Smaller-horned males survive longer and reproduce more, shifting the population's gene pool toward smaller horns over generations. This is human-induced evolution by harvest selection.",
+    "choice_why": [
+      "Wrong. Animals don't strategically hide phenotypes that are heritable traits.",
+      "Correct. Selective harvest = directional selection against the harvested phenotype.",
+      "Wrong. The shift is too rapid and specific to be climate-driven.",
+      "Wrong. The change is directional, not random."
+    ],
+    "source": "sg-exam-3 §5; L18 §A"
+  },
+  {
+    "id": "STIM-L18-005",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "C",
+    "topic": "Climate range shift",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "As climate warms, many species shift their ranges poleward and upslope. Which species is MOST likely to fail to track climate this way?",
+    "choices": [
+      "A wide-ranging migratory bird.",
+      "A wind-dispersed plant with light seeds.",
+      "A flightless mountaintop salamander already at the highest available elevation.",
+      "A fast-flying insect with strong dispersal."
+    ],
+    "correct": 2,
+    "why": "Mountaintop species 'sky island' specialists have nowhere to go — they can't move higher (no more mountain) and can't easily move to other mountains (intervening lowland habitat is hostile). They face strong selection or extinction.",
+    "choice_why": [
+      "Wrong. Birds are highly mobile and can shift ranges.",
+      "Wrong. Wind-dispersed seeds spread far and can colonize new climate zones.",
+      "Correct. Mountaintop species at the top have nowhere to go.",
+      "Wrong. Strong-flying insects can disperse readily."
+    ],
+    "source": "sg-exam-3 §5; L18 §C"
+  },
+  {
+    "id": "STIM-L18-006",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "C",
+    "topic": "Phenological shift",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Many bird species are now breeding earlier in spring than they did 50 years ago. This represents:",
+    "choices": [
+      "A purely behavioral choice with no evolutionary basis.",
+      "A phenological shift, which can reflect plasticity, evolutionary change, or both, in response to changing seasonal cues.",
+      "A speciation event.",
+      "Hybridization between bird species."
+    ],
+    "correct": 1,
+    "why": "Phenological shifts are changes in timing of seasonal biological events. They can be plastic (individuals responding to current cues) or evolutionary (genetic change in cue-responsiveness or threshold). Both have been documented.",
+    "choice_why": [
+      "Wrong. Phenology has both genetic and plastic components.",
+      "Correct. Plasticity AND evolution can both contribute.",
+      "Wrong. Earlier breeding within a species isn't a speciation event.",
+      "Wrong. Phenological shifts are not hybridization."
+    ],
+    "source": "sg-exam-3 §5; L18 §C"
+  },
+  {
+    "id": "STIM-L18-007",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "D",
+    "topic": "Captive breeding limitations",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Why might captive-bred animals released into the wild have lower fitness than their wild counterparts?",
+    "choices": [
+      "Captive environments impose unique selection pressures (relaxed predation, novel diet, human contact); animals adapted to captivity may struggle in the wild.",
+      "Captive breeding produces genetically inferior offspring.",
+      "Wild and captive animals are different species.",
+      "Captive breeding always works perfectly."
+    ],
+    "correct": 0,
+    "why": "Captivity selects for traits that work in captivity (calm temperament, reduced predator avoidance, tolerance of human handling). These traits can be maladaptive in the wild. Best-practice captive breeding tries to minimize selection for captivity-specific phenotypes.",
+    "choice_why": [
+      "Correct. Adaptation to captivity is a real concern.",
+      "Wrong. Captive offspring are not inherently genetically inferior.",
+      "Wrong. Captive and wild populations of the same species are the same species.",
+      "Wrong. Captive breeding has documented limitations."
+    ],
+    "source": "sg-exam-3 §5; L18 §D"
+  },
+  {
+    "id": "STIM-L18-008",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "A,B",
+    "topic": "Conservation strategies — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "Endangered species face both demographic and genetic threats. Briefly describe (a) ONE genetic threat to small populations, (b) ONE conservation strategy that addresses it, (c) ONE example of human activity directly imposing selection on wild species, and (d) ONE example of mismatch between wild adaptation and modern conservation interventions.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Genetic threat: inbreeding depression, loss of genetic variation, increased drift, or fixation of deleterious alleles in small populations." },
+        { "pts": 1, "desc": "Conservation strategy: genetic rescue (introducing unrelated individuals), habitat restoration to enable gene flow, or captive breeding programs that maintain genetic diversity." },
+        { "pts": 1, "desc": "Selection example: fisheries-induced evolution, trophy hunting effects, antibiotic resistance, pesticide resistance, or urban-adapted species." },
+        { "pts": 1, "desc": "Mismatch example: captive-bred animals adapted to captivity struggling in the wild; reintroduction of inbred individuals; or domestication-affected behavior in escapees." }
+      ]
+    },
+    "model_answer": "(a) GENETIC THREAT: Inbreeding depression — small populations have more relatives mating, increasing homozygosity and exposing deleterious recessive alleles, lowering fitness. Florida panthers exemplified this with heart defects and reproductive failure. (b) STRATEGY: GENETIC RESCUE — introducing individuals from a related, healthier population to add variation and reduce inbreeding. The Texas-into-Florida cougar program restored panther fitness. (c) HUMAN-IMPOSED SELECTION: Fisheries-induced evolution — minimum-size limits remove large fish before they reproduce, selecting for earlier maturation and smaller body size in heavily fished populations. (d) MISMATCH: Captive-bred animals adapted to captivity (calm around humans, less predator-wary) often have reduced survival when released; well-designed programs minimize captivity-specific selection.",
+    "source": "sg-exam-3 §5; L18 §A,B,C,D"
+  },
+  {
+    "id": "STIM-L18-009",
+    "exam": 3,
+    "lecture": "L18",
+    "section": "C",
+    "topic": "Phenological mismatch",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Caterpillars now emerge earlier in spring due to warming. The bird species that depends on those caterpillars for chick food now arrives at the breeding grounds AFTER the caterpillar peak. This is called:",
+    "choices": [
+      "Coevolution.",
+      "Phenological mismatch.",
+      "Convergent evolution.",
+      "Inclusive fitness."
+    ],
+    "correct": 1,
+    "why": "PHENOLOGICAL MISMATCH: when interacting species respond to climate cues differently, peak resource availability and consumer demand decouple. The bird-caterpillar example is well-documented in great tits and pied flycatchers across Europe.",
+    "choice_why": [
+      "Wrong. The species aren't coevolving in response to one another; they're responding (differently) to a third factor.",
+      "Correct. Phenological mismatch is the right term.",
+      "Wrong. Convergent evolution is unrelated.",
+      "Wrong. Inclusive fitness is about kin-selected helping."
+    ],
+    "source": "sg-exam-3 §5; L18 §C"
+  }
+]

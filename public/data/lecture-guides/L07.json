@@ -1,0 +1,82 @@
+{
+  "title": "Empirical Studies of Natural Selection",
+  "intro": "How biologists actually MEASURE natural selection in the wild — landmark long-term studies that move 'selection' from theory to observation. Grants' finches, peppered moths, and similar systems are the empirical canon.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "How selection is measured in nature",
+      "overview": "To demonstrate natural selection in the field, you need to (1) measure heritable variation in a trait, (2) measure differential survival or reproduction associated with that variation, and (3) ideally see allele-frequency change across generations.",
+      "key_points": [
+        "Field measurement of selection requires longitudinal data — tracking marked individuals across years.",
+        "Selection differential S can be measured directly by comparing the mean trait of breeders to the population mean.",
+        "Heritability h² can be estimated from parent-offspring resemblance in the wild.",
+        "Predicted response R = h² · S can be checked against the observed change in the next generation."
+      ],
+      "key_terms": [
+        { "term": "Selection in the wild", "def": "Demonstrated when individuals with certain heritable trait values reproduce more than others in a natural setting." }
+      ],
+      "exam_traps": [
+        "Selection in the field can produce TINY per-generation changes that nonetheless add up over decades. Don't dismiss small year-on-year shifts.",
+        "Without heritability data, observed differential reproduction is selection but doesn't predict evolution."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Grants' Galápagos finches",
+      "overview": "Peter and Rosemary Grant's decades-long study of medium ground finches (Geospiza fortis) on Daphne Major is the gold standard of natural selection in action.",
+      "key_points": [
+        "After the 1977 drought, large hard seeds dominated the food supply. Birds with deeper, stronger beaks survived better.",
+        "The trait (beak depth) was heritable; the next generation had measurably deeper beaks — natural selection caught in real time.",
+        "Subsequent wet years reversed the selective pressure (smaller seeds favored), demonstrating that selection direction is environment-contingent.",
+        "Hybridization with a related species also introduced variation, showing how gene flow and selection can interact."
+      ],
+      "key_terms": [
+        { "term": "Geospiza fortis", "def": "The medium ground finch on Daphne Major, focus of the Grants' long-term study." },
+        { "term": "Selection on beak depth", "def": "After the 1977 drought, deeper-beaked birds survived better and the next generation had deeper beaks on average." }
+      ],
+      "exam_traps": [
+        "The classic finch result is one-direction selection (deeper beaks) followed by reversal in different conditions. Selection can flip direction.",
+        "The Grants observed evolution over a few generations — not 'gradualism takes millions of years' as caricatured. Natural selection can act rapidly given strong pressure."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Peppered moths and industrial melanism",
+      "overview": "Peppered moths (Biston betularia) shifted from light to dark forms during the Industrial Revolution and back again with pollution control. The textbook case of rapid microevolution under human-caused selection.",
+      "key_points": [
+        "Pre-industrial: light morph dominant; rested camouflaged on lichen-covered tree trunks.",
+        "Industrial-era pollution killed lichen and blackened tree trunks; dark (melanic) form had a survival advantage and rose to >95% in polluted regions.",
+        "Selection mechanism: differential bird predation on visible morphs.",
+        "After clean-air legislation reduced soot, lichen returned, and the light morph rebounded — selection direction reversed.",
+        "The genetic basis is now known: a transposon insertion in the cortex gene."
+      ],
+      "key_terms": [
+        { "term": "Industrial melanism", "def": "Increase of dark (melanic) morphs in animal populations due to human-caused environmental darkening; classic in Biston betularia." },
+        { "term": "Biston betularia", "def": "The peppered moth species in which industrial melanism was documented." }
+      ],
+      "exam_traps": [
+        "The peppered moth case is sometimes attacked as bad evidence; modern replication of Kettlewell's experiments confirms differential predation does drive the morph frequencies.",
+        "The selective agent is bird predation on resting moths — not direct toxicity of pollutants."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Other documented examples — flu, antibiotics, domestication",
+      "overview": "Beyond classic natural systems, human activities provide many real-time tests of selection: pathogens evolving resistance, domesticated species evolving under artificial selection.",
+      "key_points": [
+        "Influenza evolves antigenic variation rapidly under selection from host immune systems and (where used) antiviral drugs.",
+        "Antibiotic resistance in bacteria is a textbook case of strong, directional natural selection by humans.",
+        "Domestication is artificial selection — humans choose breeders. Greyhounds bred for speed show measurable evolution of sprint biomechanics over decades.",
+        "These cases share a structure: heritable variation + strong directional selection → rapid measurable change."
+      ],
+      "key_terms": [
+        { "term": "Antibiotic resistance", "def": "Evolution of bacteria able to survive antibiotic exposure; driven by selection on rare resistant variants in large populations." },
+        { "term": "Artificial selection", "def": "Selection in which humans (rather than the natural environment) determine which individuals reproduce." }
+      ],
+      "exam_traps": [
+        "Antibiotic resistance is NOT caused by the antibiotic mutating bacteria. The mutations occur randomly; the antibiotic selects existing variants.",
+        "Artificial selection follows the same logic as natural selection — the only difference is who/what is doing the selecting."
+      ]
+    }
+  ]
+}

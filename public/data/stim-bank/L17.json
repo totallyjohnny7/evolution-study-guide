@@ -1,0 +1,231 @@
+[
+  {
+    "id": "STIM-L17-001",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "A",
+    "topic": "Biogeography definition",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Biogeography is best defined as the study of:",
+    "choices": [
+      "How organisms differ chemically.",
+      "The distribution of species and ecosystems in geographic space and through geological time.",
+      "Climate change effects on individual organisms.",
+      "Genetic differences within a single population."
+    ],
+    "correct": 1,
+    "why": "Biogeography studies WHERE organisms live and WHY — across both space and time. It integrates plate tectonics, climate history, dispersal, and evolutionary history.",
+    "choice_why": [
+      "Wrong. That's biochemistry.",
+      "Correct. Geographic distribution across space and time.",
+      "Wrong. That's climate ecology / physiology.",
+      "Wrong. That's population genetics."
+    ],
+    "source": "sg-exam-3 §4; L17 §A"
+  },
+  {
+    "id": "STIM-L17-002",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "B",
+    "topic": "Dispersal vs vicariance",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Two related lizard species occur on different sides of a mountain range that uplifted ~10 MYA. The lizards' lineage split also dates to ~10 MYA. This pattern most likely reflects:",
+    "choices": [
+      "Dispersal — the lizards crossed the mountain after it formed.",
+      "Vicariance — the rising mountain split a previously continuous population.",
+      "Convergent evolution.",
+      "Drift in a small population."
+    ],
+    "correct": 1,
+    "why": "When a lineage split coincides with the formation of a geographic barrier, vicariance is the parsimonious explanation — the barrier separated a previously continuous range, and the populations diverged independently.",
+    "choice_why": [
+      "Wrong. Dispersal would generally produce younger splits than the barrier (post-barrier crossing).",
+      "Correct. Coincident dates of split and barrier = vicariance.",
+      "Wrong. Convergent evolution doesn't speak to phylogenetic split timing.",
+      "Wrong. Drift doesn't produce a coordinated split timed to a geographic event."
+    ],
+    "source": "sg-exam-3 §4; L17 §B"
+  },
+  {
+    "id": "STIM-L17-003",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "B",
+    "topic": "Vicariance from continental drift",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Closely related plant lineages on South America and Africa share an ancestor that lived ~120 MYA. The most likely explanation is:",
+    "choices": [
+      "Recent dispersal across the Atlantic Ocean.",
+      "Vicariance — the lineage was once continuous on Gondwana before South America and Africa separated.",
+      "Convergent evolution producing similar plants.",
+      "Long-distance bird-mediated seed transport at the species' age."
+    ],
+    "correct": 1,
+    "why": "Gondwana broke up ~150–110 MYA, separating the South American and African continental crusts. Plants once present on the unified landmass were divided by vicariance and evolved independently. The age of the lineage split matches the geological event.",
+    "choice_why": [
+      "Wrong. Recent dispersal would produce younger splits, not 120 MYA splits.",
+      "Correct. Continental drift = textbook vicariance.",
+      "Wrong. Closely related lineages share recent ancestry; convergent evolution would not explain shared ancestry.",
+      "Wrong. Long-distance dispersal does happen but isn't the best explanation when the split timing matches a continental break-up."
+    ],
+    "source": "sg-exam-3 §4; L17 §B"
+  },
+  {
+    "id": "STIM-L17-004",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "C",
+    "topic": "Standing diversity vs turnover",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Two islands have identical species counts (50 species each). Island A has high immigration and high extinction; Island B has low immigration and low extinction. Which statement is true?",
+    "choices": [
+      "Standing diversity is the same; turnover rate differs (higher on A).",
+      "Standing diversity differs; turnover rate is the same.",
+      "Both standing diversity and turnover differ.",
+      "Neither matters because there are 50 species on each."
+    ],
+    "correct": 0,
+    "why": "Standing diversity is a snapshot — both have 50 species. Turnover rate captures the FLUX. Island A has high turnover (species coming and going often); Island B has low turnover (stable membership). Same standing, different turnover.",
+    "choice_why": [
+      "Correct. Equal standing diversity, different turnover rates.",
+      "Wrong. Standing diversity is identical here.",
+      "Wrong. Standing diversity is the same.",
+      "Wrong. Turnover matters even when standing diversity is identical — it tells you about ecological stability."
+    ],
+    "source": "sg-exam-3 §4; L17 §C"
+  },
+  {
+    "id": "STIM-L17-005",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "D",
+    "topic": "Mass extinction radiations",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Why did mammals undergo a major adaptive radiation after the K-Pg extinction?",
+    "choices": [
+      "Mammals were not affected by the asteroid impact.",
+      "Mammals had been small and ecologically restricted; the extinction of non-avian dinosaurs opened many vacant niches into which mammals could diversify.",
+      "Mammals had higher mutation rates after the extinction.",
+      "Mammals appeared for the first time after the K-Pg."
+    ],
+    "correct": 1,
+    "why": "Mammals existed for ~150 MYR before the K-Pg but were small and limited by dinosaur dominance. After the K-Pg eliminated non-avian dinosaurs, mammals diversified rapidly into the now-empty large-body and ecological niches.",
+    "choice_why": [
+      "Wrong. Mammals were affected; many lineages went extinct too. But surviving lineages had abundant opportunity afterward.",
+      "Correct. Empty niches + surviving mammalian lineages → adaptive radiation.",
+      "Wrong. Mutation rates didn't suddenly increase.",
+      "Wrong. Mammals originated in the late Triassic, ~225 MYA — long before K-Pg."
+    ],
+    "source": "sg-exam-3 §4; L17 §D,E"
+  },
+  {
+    "id": "STIM-L17-006",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "E",
+    "topic": "Adaptive radiation conditions",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Which condition most strongly favors adaptive radiation?",
+    "choices": [
+      "A stable, fully occupied ecosystem.",
+      "Open ecological space (e.g., new island, post-extinction void) plus a colonizing or surviving lineage with evolutionary flexibility.",
+      "High predation pressure.",
+      "Genetic drift in a single population."
+    ],
+    "correct": 1,
+    "why": "Adaptive radiations require BOTH ecological opportunity (vacant niches) AND a flexible founding lineage. Galápagos islands (open ecosystems for finch ancestors), Hawaiian honeycreepers, mammals after the K-Pg — all share this combination.",
+    "choice_why": [
+      "Wrong. Stable, fully occupied ecosystems resist invasion and diversification.",
+      "Correct. Open niches + flexible lineage = radiation.",
+      "Wrong. High predation can constrain diversification, not promote it.",
+      "Wrong. Drift alone doesn't drive directional diversification."
+    ],
+    "source": "sg-exam-3 §4; L17 §E"
+  },
+  {
+    "id": "STIM-L17-007",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "C",
+    "topic": "Standing diversity calculation",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 3,
+    "q": "Define standing diversity and turnover rate. Then explain how the equilibrium theory of island biogeography (MacArthur & Wilson) predicts the relationship between island size, distance from the mainland, and standing diversity.",
+    "rubric": {
+      "total": 3,
+      "criteria": [
+        { "pts": 1, "desc": "Standing diversity = number of species present at a given time. Turnover rate = rate at which species are replaced (immigrating in / going extinct out)." },
+        { "pts": 1, "desc": "MacArthur-Wilson: standing diversity is the equilibrium between immigration rate (decreases as species accumulate) and extinction rate (increases as species accumulate)." },
+        { "pts": 1, "desc": "Predictions: LARGER islands → lower per-species extinction → higher equilibrium diversity. NEAR-mainland islands → higher immigration → higher equilibrium diversity. Both effects are independent and combine." }
+      ]
+    },
+    "model_answer": "STANDING DIVERSITY is the number of species present in a given area at a given time. TURNOVER RATE is the rate at which species enter (via origination or immigration) and leave (via extinction or emigration) the community. The MacArthur-Wilson EQUILIBRIUM THEORY OF ISLAND BIOGEOGRAPHY models standing diversity as the equilibrium between immigration (which DECREASES as more species are already present) and extinction (which INCREASES as more species are present). Two key predictions follow: (1) LARGER islands have lower per-species extinction rates (more individuals, more habitat heterogeneity) → higher equilibrium standing diversity. (2) Islands CLOSER to the mainland have higher immigration rates → higher equilibrium standing diversity. The two effects (size and distance) operate independently, so the highest diversity is on large near-mainland islands and the lowest on small remote islands.",
+    "source": "sg-exam-3 §4; L17 §C"
+  },
+  {
+    "id": "STIM-L17-008",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "D",
+    "topic": "Big Five mass extinctions",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Which of the following is NOT one of the 'Big Five' mass extinctions?",
+    "choices": [
+      "End-Permian (~252 MYA).",
+      "End-Triassic (~201 MYA).",
+      "End-Cretaceous / K-Pg (~66 MYA).",
+      "End-Pleistocene (~11 KYA megafauna extinction)."
+    ],
+    "correct": 3,
+    "why": "The Big Five are end-Ordovician, Late Devonian, end-Permian, end-Triassic, and end-Cretaceous (K-Pg). The Pleistocene megafauna extinction — partly natural, partly human-driven — was significant but is not part of the classic Big Five.",
+    "choice_why": [
+      "Wrong choice (it IS one of the Big Five).",
+      "Wrong choice (it IS one of the Big Five).",
+      "Wrong choice (it IS one of the Big Five).",
+      "Correct. The Pleistocene megafauna extinction is recent and not part of the Big Five list."
+    ],
+    "source": "sg-exam-3 §4; L17 §D"
+  },
+  {
+    "id": "STIM-L17-009",
+    "exam": 3,
+    "lecture": "L17",
+    "section": "B",
+    "topic": "Wallace line",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The Wallace Line is:",
+    "choices": [
+      "A line on a phylogenetic tree separating chordates from arthropods.",
+      "A faunal boundary in the Indonesian archipelago that separates Asian and Australasian biotas, despite no obvious geographic barrier.",
+      "The boundary of Wallace's voyage on the HMS Beagle.",
+      "A genetic marker used to date the human-chimpanzee split."
+    ],
+    "correct": 1,
+    "why": "Alfred Russel Wallace identified a sharp faunal boundary in the Indonesian archipelago — Asian (placental mammals, ungulates) on one side, Australasian (marsupials, distinctive birds) on the other. The boundary reflects deep history of land connections that never spanned the deep ocean trench between the two regions.",
+    "choice_why": [
+      "Wrong. That's a phylogenetic tree division, unrelated.",
+      "Correct. Faunal boundary in Indonesia.",
+      "Wrong. Wallace did not sail on the Beagle (that was Darwin); Wallace worked in the Malay Archipelago.",
+      "Wrong. Not a genetic marker."
+    ],
+    "source": "sg-exam-3 §4; L17 §A"
+  }
+]

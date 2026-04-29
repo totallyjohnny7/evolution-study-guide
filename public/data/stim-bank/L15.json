@@ -1,0 +1,101 @@
+[
+  {
+    "id": "STIM-L15-001",
+    "exam": 3,
+    "lecture": "L15",
+    "section": "A",
+    "topic": "Reading phylogenetic trees",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "On a phylogenetic tree, two taxa are 'more closely related' to each other than to a third when:",
+    "choices": [
+      "Their branches end closer together horizontally on the page.",
+      "They share a more recent common ancestor (a more shallow node) than either does with the third.",
+      "They share more morphological similarities overall.",
+      "Their lineages have evolved at similar rates."
+    ],
+    "correct": 1,
+    "why": "Relatedness on a phylogenetic tree is determined by shared common ancestry — node depth — not by visual proximity, overall similarity, or rate of evolution.",
+    "choice_why": [
+      "Wrong. Visual rotation of branches doesn't affect relationships. Trees can be redrawn with branches in any rotation.",
+      "Correct. Closer common ancestor = closer relationship. Trace the path back to the joining node.",
+      "Wrong. Overall similarity can be misleading due to convergence (homoplasy) and rate variation. Synapomorphies are what count.",
+      "Wrong. Rate variation is decoupled from relatedness — two sister taxa can evolve at very different rates."
+    ],
+    "source": "sg-exam-3 §2; L15 §A"
+  },
+  {
+    "id": "STIM-L15-002",
+    "exam": 3,
+    "lecture": "L15",
+    "section": "B",
+    "topic": "Synapomorphy vs symplesiomorphy",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "You're trying to define a clade containing only mammals. 'Has a vertebral column' is a shared trait among all your candidate species. What is this character at the level of mammals?",
+    "choices": [
+      "A synapomorphy uniting mammals.",
+      "A symplesiomorphy — present in the deeper ancestor of all vertebrates, so uninformative for mammals as a group.",
+      "A homoplasy — independently evolved in different mammalian lineages.",
+      "Diagnostic of all mammals but not informative for non-mammalian relatives."
+    ],
+    "correct": 1,
+    "why": "A vertebral column is a synapomorphy of VERTEBRATES as a whole, but at the level of MAMMALS it's a symplesiomorphy (ancestral character) — it doesn't distinguish mammals from other vertebrates.",
+    "choice_why": [
+      "Wrong. It's not novel to mammals; it was inherited from a much deeper vertebrate ancestor.",
+      "Correct. The same trait can be a synapomorphy at one level and a symplesiomorphy at a more derived level. For mammals as a group, vertebral column is ancestral.",
+      "Wrong. Vertebrate column is inherited from common ancestry; not independently evolved.",
+      "Wrong. It IS shared with non-mammalian relatives (other vertebrates) — that's exactly why it's not informative for grouping mammals."
+    ],
+    "source": "sg-exam-3 §2; L15 §B"
+  },
+  {
+    "id": "STIM-L15-003",
+    "exam": 3,
+    "lecture": "L15",
+    "section": "C",
+    "topic": "Monophyletic vs paraphyletic vs polyphyletic",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "The traditional group 'Reptilia' (turtles, lizards, snakes, crocodiles) excludes birds. Birds, however, are descended from theropod dinosaurs, nested within Reptilia by descent. What kind of group is traditional 'Reptilia'?",
+    "choices": [
+      "Monophyletic — it's a clade.",
+      "Paraphyletic — includes a common ancestor and SOME but not all of its descendants.",
+      "Polyphyletic — members lack an immediate common ancestor.",
+      "Diphyletic — has exactly two ancestral origins."
+    ],
+    "correct": 1,
+    "why": "Traditional Reptilia leaves out birds, which are descended from the same common ancestor as the included reptiles. A common ancestor + some-but-not-all descendants = paraphyletic.",
+    "choice_why": [
+      "Wrong. A clade includes ALL descendants. Reptilia-without-birds excludes a descendant lineage (birds), so it's not a clade.",
+      "Correct. Paraphyletic is the precise term for 'common ancestor + some descendants.' This is why modern systematists either include birds in Reptilia or use 'Sauropsida.'",
+      "Wrong. Polyphyletic groups have members lacking shared immediate ancestry. Reptiles do share a common ancestor — they just exclude one of its descendant lineages.",
+      "Wrong. 'Diphyletic' is not a standard taxonomic category in this hierarchy."
+    ],
+    "source": "sg-exam-3 §2; L15 §C"
+  },
+  {
+    "id": "STIM-L15-004",
+    "exam": 3,
+    "lecture": "L15",
+    "section": "D",
+    "topic": "Species concepts",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 3,
+    "q": "The Biological Species Concept (BSC) defines species by reproductive isolation. Give one strength and two specific limitations of the BSC, and name an alternative species concept that handles each limitation.",
+    "rubric": {
+      "total": 3,
+      "criteria": [
+        { "pts": 1, "desc": "Identifies a strength of the BSC: clear mechanism (gene flow) makes species testable in principle; rooted in evolutionary process; widely applicable to sexually-reproducing animals." },
+        { "pts": 1, "desc": "First limitation: BSC cannot apply to ASEXUAL organisms (bacteria, parthenogenetic animals). Alternative: morphological or phylogenetic species concept." },
+        { "pts": 1, "desc": "Second limitation: BSC cannot apply to EXTINCT species / FOSSILS — no way to test interbreeding. Alternative: morphological species concept (or phylogenetic concept based on shared derived traits)." }
+      ]
+    },
+    "model_answer": "The strength of the BSC (Mayr) is that it grounds species in a clear, testable evolutionary mechanism — gene flow — and is operational for most sexually-reproducing animals. Limitations: (1) The BSC fails for ASEXUAL organisms like bacteria and parthenogenetic lizards, where there's no interbreeding to test reproductive isolation against — these are typically classified using morphological or phylogenetic species concepts. (2) The BSC fails for FOSSILS, since you can't test interbreeding between extinct populations — paleontologists use the morphological species concept or phylogenetic species concept. Additional weakness (bonus): the BSC can be ambiguous when populations occasionally hybridize but maintain mostly distinct lineages.",
+    "source": "sg-exam-3 §2,3; L15 §D"
+  }
+]

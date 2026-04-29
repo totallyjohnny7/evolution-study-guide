@@ -1,0 +1,78 @@
+{
+  "title": "Genetic Evolution in Populations — Hardy-Weinberg",
+  "intro": "Hardy-Weinberg equilibrium is the null model of population genetics. It predicts genotype frequencies from allele frequencies in an idealized non-evolving population, so any deviation tells you something is going on (selection, drift, mutation, gene flow, or non-random mating).",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "Allele frequencies vs genotype frequencies",
+      "overview": "An allele frequency is the proportion of a given allele at a locus across the whole population's gene pool. Genotype frequencies are the proportions of homozygotes and heterozygotes.",
+      "key_points": [
+        "For a biallelic locus with alleles A and a, let p = freq(A), q = freq(a). Then p + q = 1.",
+        "Allele frequencies are computed from genotype counts: p = (2·N_AA + N_Aa) / (2·N_total).",
+        "Genotype frequencies should add to 1: freq(AA) + freq(Aa) + freq(aa) = 1."
+      ],
+      "key_terms": [
+        { "term": "Allele frequency", "def": "The proportion of all gene copies in a population that are a given allele." },
+        { "term": "Genotype frequency", "def": "The proportion of individuals in a population with a given genotype (e.g., AA, Aa, aa)." }
+      ],
+      "exam_traps": [
+        "Don't confuse allele counts with individual counts — each diploid individual contributes TWO allele copies.",
+        "Heterozygotes contribute ONE A and ONE a to the allele tally, not two of one."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "The Hardy-Weinberg equation",
+      "overview": "Under five idealizing assumptions, expected genotype frequencies are p², 2pq, q². The cross-multiplication comes from random union of gametes — Punnett-square logic at the population level.",
+      "key_points": [
+        "Hardy-Weinberg expectation: p² + 2pq + q² = 1.",
+        "p² is the expected frequency of homozygous AA; 2pq of heterozygous Aa; q² of homozygous aa.",
+        "The five assumptions: (1) no mutation, (2) no gene flow / migration, (3) no genetic drift (infinite population size), (4) no natural selection, (5) random mating."
+      ],
+      "key_terms": [
+        { "term": "Hardy-Weinberg equilibrium (HWE)", "def": "The state of a population where allele and genotype frequencies remain constant across generations because none of the five evolutionary forces are acting." },
+        { "term": "Random mating (panmixia)", "def": "Each individual is equally likely to mate with any other; no preference based on genotype." }
+      ],
+      "exam_traps": [
+        "Hardy-Weinberg gives EXPECTED genotype frequencies under the null. If observed frequencies differ, that's evidence the population is NOT in HWE — i.e., one or more forces are acting.",
+        "HWE is achieved in ONE generation of random mating from any starting genotype frequencies (allele freq p stays the same; genotype freq snaps to p²/2pq/q²)."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Detecting deviations and what they mean",
+      "overview": "Excess homozygotes vs. excess heterozygotes are diagnostic of different evolutionary processes. Spotting and interpreting deviations is a core exam skill.",
+      "key_points": [
+        "Excess HOMOZYGOTES (more AA + aa than expected) → suggests inbreeding or population subdivision (Wahlund effect).",
+        "Excess HETEROZYGOTES → suggests heterozygote advantage (overdominant selection) or disassortative mating.",
+        "Selection against a homozygote shifts allele frequencies AND warps genotype ratios away from HWE.",
+        "Drift in small populations causes random departures from HWE that aren't directional."
+      ],
+      "key_terms": [
+        { "term": "Inbreeding", "def": "Mating between close relatives; increases homozygosity and exposes deleterious recessive alleles (inbreeding depression)." },
+        { "term": "Heterozygote advantage", "def": "Heterozygotes have higher fitness than either homozygote; classic example is sickle-cell trait conferring malaria resistance." },
+        { "term": "Wahlund effect", "def": "Apparent excess of homozygotes when distinct subpopulations are pooled together as if they were one." }
+      ],
+      "exam_traps": [
+        "Selection AGAINST the recessive homozygote (aa) makes a slow change because most a alleles hide in heterozygotes — selection on rare recessives is inefficient.",
+        "Inbreeding does NOT change allele frequencies on its own — it only changes genotype frequencies (more homozygotes, fewer heterozygotes)."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Worked computation pattern",
+      "overview": "Exam questions often hand you genotype counts and ask you to compute allele frequencies, then expected genotype frequencies under HWE, then compare to observed.",
+      "key_points": [
+        "Step 1 — count alleles: each AA contributes 2 A; each Aa contributes 1 A and 1 a; each aa contributes 2 a.",
+        "Step 2 — compute p and q from the totals.",
+        "Step 3 — compute expected counts: N · p², N · 2pq, N · q².",
+        "Step 4 — compare expected vs observed; if they don't match, identify which mechanism best explains the pattern."
+      ],
+      "key_terms": [],
+      "exam_traps": [
+        "Common arithmetic slip: forgetting to multiply expected genotype FREQUENCIES by N (population size) when comparing to observed COUNTS.",
+        "If only allele frequencies are given, you cannot detect HWE deviations — you need genotype counts."
+      ]
+    }
+  ]
+}

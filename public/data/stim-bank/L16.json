@@ -1,0 +1,232 @@
+[
+  {
+    "id": "STIM-L16-001",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "A",
+    "topic": "Biological Species Concept",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Mayr's Biological Species Concept (BSC) defines a species as:",
+    "choices": [
+      "A group of organisms with the same morphology.",
+      "A group of actually or potentially interbreeding natural populations, reproductively isolated from other such groups.",
+      "The smallest monophyletic group identifiable by shared derived characters.",
+      "Any group of organisms occupying the same niche."
+    ],
+    "correct": 1,
+    "why": "Mayr's BSC is the canonical definition: interbreeding populations reproductively isolated from others. It's the gene-flow-based definition.",
+    "choice_why": [
+      "Wrong. That's the morphological species concept.",
+      "Correct. Mayr's BSC.",
+      "Wrong. That's the phylogenetic species concept.",
+      "Wrong. That's closer to the ecological species concept."
+    ],
+    "source": "sg-exam-3 §3; L16 §A"
+  },
+  {
+    "id": "STIM-L16-002",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "A",
+    "topic": "BSC limitations",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Which of the following groups is the Biological Species Concept LEAST well suited to?",
+    "choices": [
+      "Sexual mammals.",
+      "Sexual birds.",
+      "Asexual bacteria.",
+      "Sexual amphibians."
+    ],
+    "correct": 2,
+    "why": "The BSC requires reproductive isolation between sexual populations — but bacteria are asexual (they reproduce by binary fission, with horizontal gene transfer rather than mating). The BSC simply does not apply.",
+    "choice_why": [
+      "Wrong. The BSC works well for sexual mammals.",
+      "Wrong. Sexual birds are a textbook BSC application.",
+      "Correct. Asexual organisms (bacteria, parthenogenetic species) cannot be classified by the BSC because reproductive isolation isn't testable.",
+      "Wrong. Amphibians are sexual; BSC applies."
+    ],
+    "source": "sg-exam-3 §2,3; L16 §A"
+  },
+  {
+    "id": "STIM-L16-003",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "B",
+    "topic": "Prezygotic vs postzygotic",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Two related fly species court at different times of day, so they rarely encounter each other. This is best classified as:",
+    "choices": [
+      "Postzygotic isolation — hybrid sterility.",
+      "Postzygotic isolation — hybrid breakdown.",
+      "Prezygotic isolation — temporal.",
+      "Prezygotic isolation — mechanical."
+    ],
+    "correct": 2,
+    "why": "Different breeding times prevent encounter and copulation BEFORE zygote formation — TEMPORAL prezygotic isolation. The barrier acts before fertilization occurs.",
+    "choice_why": [
+      "Wrong. No zygote forms; the barrier is prezygotic.",
+      "Wrong. Same — no zygote.",
+      "Correct. Temporal isolation = different breeding times.",
+      "Wrong. Mechanical = incompatible reproductive structures, not different breeding times."
+    ],
+    "source": "sg-exam-3 §3; L16 §B"
+  },
+  {
+    "id": "STIM-L16-004",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "B",
+    "topic": "Hybrid sterility — mules",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Horses and donkeys mate and produce viable offspring (mules), but mules are sterile. This is best classified as:",
+    "choices": [
+      "Prezygotic isolation — gametic.",
+      "Prezygotic isolation — behavioral.",
+      "Postzygotic isolation — hybrid inviability.",
+      "Postzygotic isolation — hybrid sterility."
+    ],
+    "correct": 3,
+    "why": "Hybrids form (zygote forms, develops, lives) but cannot reproduce — POSTZYGOTIC HYBRID STERILITY. The barrier acts AFTER zygote formation but limits hybrid reproduction.",
+    "choice_why": [
+      "Wrong. Fertilization succeeds; the barrier is postzygotic.",
+      "Wrong. Behavioral isolation would prevent mating; horses and donkeys do mate.",
+      "Wrong. Mules are viable (they live); they're just sterile. So not inviability.",
+      "Correct. Hybrid sterility — viable but cannot reproduce."
+    ],
+    "source": "sg-exam-3 §3; L16 §B"
+  },
+  {
+    "id": "STIM-L16-005",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "C",
+    "topic": "Allopatric speciation",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Two populations of squirrels are separated when a mountain range rises between them. Over time, they diverge and become reproductively incompatible. This is:",
+    "choices": [
+      "Sympatric speciation.",
+      "Parapatric speciation.",
+      "Allopatric speciation — the most common mode in animals.",
+      "Peripatric speciation only."
+    ],
+    "correct": 2,
+    "why": "ALLOPATRIC speciation: geographic separation → independent evolution → reproductive isolation. Mountain ranges, glaciation, or sea-level changes are classic vicariant barriers driving allopatric speciation. This is the most common animal speciation mode.",
+    "choice_why": [
+      "Wrong. Sympatric requires no geographic separation; here there's clear separation.",
+      "Wrong. Parapatric has partial overlap and a narrow contact zone, not full separation.",
+      "Correct. Allopatric speciation by vicariance.",
+      "Wrong. Peripatric is allopatric speciation specifically in a small founder population — not necessarily this case."
+    ],
+    "source": "sg-exam-3 §3; L16 §C"
+  },
+  {
+    "id": "STIM-L16-006",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "C",
+    "topic": "Sympatric speciation",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Sympatric speciation is most common in plants because of which mechanism?",
+    "choices": [
+      "Plants have higher mutation rates than animals.",
+      "Polyploidy — whole-genome duplication can immediately produce a reproductively isolated lineage in a single generation.",
+      "Plants are more mobile than animals.",
+      "Plants have shorter generation times."
+    ],
+    "correct": 1,
+    "why": "POLYPLOIDY (autopolyploidy or allopolyploidy) doubles the chromosome number in a single event, instantly creating reproductive isolation: tetraploids cannot produce viable offspring with diploid parents. This is a common mode of plant speciation.",
+    "choice_why": [
+      "Wrong. Plant mutation rates are not dramatically higher.",
+      "Correct. Polyploidy → instant reproductive isolation; sympatric speciation in plants commonly works this way.",
+      "Wrong. Plants are LESS mobile, not more — but this isn't the speciation point.",
+      "Wrong. Generation times alone don't explain sympatric speciation."
+    ],
+    "source": "sg-exam-3 §3; L16 §C"
+  },
+  {
+    "id": "STIM-L16-007",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "C",
+    "topic": "Reinforcement",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Reinforcement of speciation occurs when:",
+    "choices": [
+      "Two species that have come back into secondary contact evolve stronger prezygotic isolation because hybrids have low fitness.",
+      "Geographic isolation alone completes speciation.",
+      "Species independently evolve similar traits in different regions.",
+      "Polyploidy doubles chromosome counts."
+    ],
+    "correct": 0,
+    "why": "Reinforcement: when populations re-encounter each other after partial divergence and produce unfit hybrids, selection favors stronger prezygotic isolation (mate-recognition mechanisms, etc.) to avoid wasting reproductive effort on hybrids.",
+    "choice_why": [
+      "Correct. Reinforcement requires secondary contact + low hybrid fitness.",
+      "Wrong. That's allopatric speciation without reinforcement specifically.",
+      "Wrong. That's convergent evolution.",
+      "Wrong. That's polyploidy, a mode of sympatric speciation."
+    ],
+    "source": "sg-exam-3 §3; L16 §C"
+  },
+  {
+    "id": "STIM-L16-008",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "B",
+    "topic": "Pre/postzygotic isolation — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "Reproductive isolation can be classified as prezygotic or postzygotic. (a) State the difference. (b) Give two examples of prezygotic isolation. (c) Give one example of postzygotic isolation. (d) Explain why reproductive isolation is central to the Biological Species Concept.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Difference: prezygotic acts BEFORE zygote formation; postzygotic acts AFTER zygote formation." },
+        { "pts": 1, "desc": "Two prezygotic examples: from {temporal, behavioral, mechanical, gametic, habitat/ecological isolation}." },
+        { "pts": 1, "desc": "Postzygotic example: hybrid inviability, hybrid sterility (e.g., mules), or hybrid breakdown." },
+        { "pts": 1, "desc": "BSC connection: reproductive isolation IS what defines species under the BSC — populations are different species precisely when they are reproductively isolated and gene flow is prevented." }
+      ]
+    },
+    "model_answer": "(a) PREZYGOTIC isolation acts BEFORE zygote formation, preventing fertilization. POSTZYGOTIC isolation acts AFTER zygote formation, reducing hybrid fitness. (b) Two prezygotic examples: TEMPORAL (e.g., two related plants flower at different times so pollen never crosses); BEHAVIORAL (e.g., different bird species have distinctive courtship songs that prevent inter-species recognition). Other prezygotic mechanisms include mechanical (incompatible reproductive structures), gametic (sperm/egg surface proteins don't match), and habitat (populations live in different microenvironments). (c) Postzygotic example: HYBRID STERILITY — horses and donkeys produce viable mules, but mules are sterile; the hybrid form exists but cannot reproduce. (d) Reproductive isolation is the heart of the BSC because the BSC defines species as populations that DON'T exchange genes. When two populations are reproductively isolated, gene flow stops, and they evolve independently — meeting Mayr's criterion for species status.",
+    "source": "sg-exam-3 §3; L16 §A,B"
+  },
+  {
+    "id": "STIM-L16-009",
+    "exam": 3,
+    "lecture": "L16",
+    "section": "D",
+    "topic": "Hybrid zones",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "A hybrid zone exists where two species' ranges overlap and they interbreed, producing low-fitness hybrids. Does the existence of this hybrid zone disprove the species' status under the BSC?",
+    "choices": [
+      "Yes — any interbreeding means they are the same species.",
+      "No — if hybrids have reduced fitness, gene flow remains limited, and the parental species can persist as distinct entities.",
+      "Yes — only completely non-interbreeding populations are species.",
+      "Cannot be determined without additional evidence."
+    ],
+    "correct": 1,
+    "why": "The BSC requires reproductive isolation 'in nature' — but isolation is a spectrum. If hybrids have low fitness, gene flow between species is sharply limited despite occasional interbreeding. The species can be 'good' BSC species despite a hybrid zone.",
+    "choice_why": [
+      "Wrong. Strict 'no interbreeding' is too rigid; many BSC species occasionally hybridize.",
+      "Correct. Reduced hybrid fitness limits gene flow even when matings occur.",
+      "Wrong. Complete non-interbreeding is too strict — the BSC tolerates rare hybridization.",
+      "Wrong. The conceptual answer is clear: limited hybrid fitness preserves species distinction."
+    ],
+    "source": "sg-exam-3 §3; L16 §A,D"
+  }
+]

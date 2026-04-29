@@ -1,0 +1,103 @@
+{
+  "title": "Biogeography, Speciation, and Extinction",
+  "intro": "Why are species where they are? This lecture covers the geographic distribution of life — how dispersal, vicariance, and continental drift shape biodiversity, plus what determines diversity in a given place over time.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "What is biogeography?",
+      "overview": "Biogeography is the study of WHERE species live and WHY. Past geological history (continental drift, glaciation) and ecological factors (climate, dispersal) jointly shape modern distributions.",
+      "key_points": [
+        "BIOGEOGRAPHY = the study of species distributions across geographic space and through geological time.",
+        "Wallace and Darwin both argued that geographic patterns (e.g., distinct faunas on different continents) are best explained by descent and history, not independent creation.",
+        "Modern biogeography integrates plate tectonics, climate history, dispersal ability, and ecological interactions."
+      ],
+      "key_terms": [
+        { "term": "Biogeography", "def": "The study of the geographic distribution of species and ecosystems through space and time." },
+        { "term": "Wallace line", "def": "A faunal boundary in the Indonesian archipelago separating Asian and Australasian biotas; named for Alfred Russel Wallace." }
+      ],
+      "exam_traps": [
+        "Biogeography unites geology, ecology, and evolution — questions can pull from any of these.",
+        "Patterns of distribution are clues to history; similar species in distant places may share ancestry (vicariance) or have dispersed."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Dispersal vs. vicariance",
+      "overview": "Two opposing explanations for why related species are found in different places: organisms moved (dispersal) or the geography moved underneath them (vicariance).",
+      "key_points": [
+        "DISPERSAL: organisms move from one place to another; the same lineage now occupies multiple regions because individuals or propagules crossed geographic barriers.",
+        "VICARIANCE: a geographic barrier (mountain range, sea-level change, continental drift) splits a previously continuous range, separating populations that diverge.",
+        "Often both have operated; modern molecular phylogenies + dating help distinguish them.",
+        "Classic vicariance example: the close relationship of South American and African biota reflects their shared Gondwanan ancestry — they were once continuous before continental drift split them."
+      ],
+      "key_terms": [
+        { "term": "Dispersal", "def": "Movement of organisms from one location to another, crossing geographic barriers." },
+        { "term": "Vicariance", "def": "Geographic separation of a once-continuous range by a new barrier (mountains, seaways, continental drift)." }
+      ],
+      "exam_traps": [
+        "Distinguishing dispersal from vicariance requires DATING — vicariant splits should match the geological barrier formation; dispersal splits can be any age.",
+        "Don't assume vicariance for every pair of similar species on different continents — some are dispersal events (especially birds, oceanic taxa)."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Standing diversity and species turnover",
+      "overview": "STANDING DIVERSITY is how many species are present in a region at one time. TURNOVER is the rate at which species enter (originate, immigrate) and leave (go extinct, emigrate).",
+      "key_points": [
+        "Standing diversity at any moment = (cumulative origination) − (cumulative extinction) − (emigration) + (immigration).",
+        "Turnover RATE = species replacement rate; high turnover means many species coming and going.",
+        "Equilibrium theory of island biogeography (MacArthur & Wilson): diversity is set by the BALANCE between immigration (decreasing as species accumulate) and extinction (increasing as species accumulate).",
+        "Standing diversity can be stable while turnover is high (membership of the species list constantly changes)."
+      ],
+      "key_terms": [
+        { "term": "Standing diversity", "def": "The number of species present in a region at a given time." },
+        { "term": "Turnover rate", "def": "The rate at which species are replaced — incoming species per unit time, balanced by extinctions/emigrations." }
+      ],
+      "exam_traps": [
+        "Standing diversity is a SNAPSHOT; turnover is a RATE. Don't conflate them.",
+        "Two communities with the same standing diversity can have very different turnover rates."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Mass extinctions and their consequences",
+      "overview": "Mass extinctions reset the trajectory of life by clearing dominant lineages and opening niches for survivors to radiate into. The Big Five share certain features but had different causes.",
+      "key_points": [
+        "Big Five mass extinctions punctuate the Phanerozoic; each killed >50% of marine species.",
+        "End-Ordovician (~444 MYA): glaciation/sea-level fall.",
+        "Late Devonian (~375 MYA): multiple pulses; possibly anoxia / sea-level / climate.",
+        "End-Permian (~252 MYA): largest. Likely Siberian Trap volcanism, ocean acidification, climate change. ~95% marine species lost.",
+        "End-Triassic (~201 MYA): extinction cleared major reptilian groups, allowing dinosaurs to dominate.",
+        "End-Cretaceous / K-Pg (~66 MYA): asteroid impact (Chicxulub). Iridium layer is the smoking gun. Non-avian dinosaurs extinct; mammals radiate.",
+        "After mass extinctions, surviving lineages undergo ADAPTIVE RADIATIONS into newly empty niches."
+      ],
+      "key_terms": [
+        { "term": "Adaptive radiation", "def": "Rapid diversification of a single lineage into many ecologically distinct species, often after mass extinction or invasion of a new habitat." }
+      ],
+      "exam_traps": [
+        "End-Permian, NOT end-Cretaceous, is the largest mass extinction.",
+        "The K-Pg extinction is closely linked to the Chicxulub impact, but additional factors (Deccan Trap volcanism) likely contributed."
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Adaptive radiations",
+      "overview": "When a lineage colonizes a new environment or survives a mass extinction, it can rapidly diversify into many species exploiting different niches. Galápagos finches and Hawaiian honeycreepers are classic examples.",
+      "key_points": [
+        "ADAPTIVE RADIATION = rapid diversification of one lineage into many ecologically diverse species.",
+        "Conditions favoring adaptive radiation: open ecological space, new geographic colonization, key innovations, post-extinction recovery.",
+        "Galápagos finches: ~14 species derived from a single ancestor, each specialized for a different food niche.",
+        "Mammals radiated rapidly after the K-Pg extinction — the niches dinosaurs occupied were suddenly available.",
+        "Adaptive radiations can be morphologically dramatic in a few million years."
+      ],
+      "key_terms": [
+        { "term": "Adaptive radiation", "def": "Rapid evolutionary diversification of one lineage into many species occupying different ecological niches." },
+        { "term": "Key innovation", "def": "An evolutionary novelty (jaws, wings, flowering) that opens new ecological possibilities and can trigger radiations." }
+      ],
+      "exam_traps": [
+        "Adaptive radiation is fast diversification INTO DIFFERENT NICHES — not just speciation in general.",
+        "Mammalian radiation didn't START at the K-Pg; mammals existed earlier but were small and ecologically restricted. The K-Pg removed dinosaur competitors and let mammals diversify."
+      ]
+    }
+  ]
+}

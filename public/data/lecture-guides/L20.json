@@ -1,0 +1,135 @@
+{
+  "title": "Evolutionary Medicine",
+  "intro": "Evolution doesn't stop at the species boundary — it explains why we get sick, why pathogens evolve, and why some 'designs' of the human body are flawed. This lecture frames disease, drug resistance, virulence evolution, and modern lifestyle illnesses through an evolutionary lens.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "What evolutionary medicine is",
+      "overview": "Evolutionary medicine applies evolutionary principles to human health. The central insight: many disease vulnerabilities make sense only as products of past selection in environments very different from the one we live in now.",
+      "key_points": [
+        "Evolutionary medicine asks WHY (in evolutionary terms) bodies are vulnerable to particular diseases — not just HOW (mechanistically) the disease works.",
+        "Six common evolutionary explanations for disease: (1) mismatch with modern environments, (2) coevolution with rapidly evolving pathogens, (3) constraints (selection cannot start over), (4) trade-offs, (5) reproduction trumps health (selection optimizes reproductive success, not longevity), (6) defenses are misperceived as 'symptoms.'",
+        "Modern medicine integrates evolutionary thinking into diagnosis, treatment, and public-health strategies (e.g., antibiotic stewardship, vaccine design, cancer treatment timing)."
+      ],
+      "key_terms": [
+        { "term": "Evolutionary medicine", "def": "Application of evolutionary biology to understanding human health, disease, and medical practice." },
+        { "term": "Proximate vs ultimate explanation", "def": "Proximate = mechanism (HOW); ultimate = evolutionary reason (WHY). Both are needed for full understanding." }
+      ],
+      "exam_traps": [
+        "Evolutionary medicine doesn't claim modern medicine is wrong — it adds the WHY behind the HOW. Both are needed.",
+        "'Why we get sick' is a question with at least six different evolutionary answer categories. Don't reduce all disease to one explanation."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Pathogen evolution and antibiotic resistance",
+      "overview": "Pathogens evolve fast — large populations, short generation times, strong selection. The most consequential evolutionary process in clinical medicine is antibiotic resistance, but the same logic applies to antiviral resistance, vaccine escape, and host-immune evasion.",
+      "key_points": [
+        "ANTIBIOTIC RESISTANCE evolves whenever antibiotics are heavily used. Mutations conferring resistance occur randomly; the antibiotic kills susceptible bacteria and lets resistant rare variants reproduce.",
+        "RESISTANCE GENES often spread between bacterial species via horizontal gene transfer (plasmids, transposons) — accelerating spread far beyond clonal reproduction.",
+        "Common resistance mechanisms: enzymatic destruction of the drug (β-lactamases), efflux pumps, target-site modification, alternative metabolic pathways.",
+        "ANTIBIOTIC STEWARDSHIP — limiting unnecessary antibiotic use, completing prescribed courses, restricting agricultural use — slows but does not stop the evolution of resistance.",
+        "ANTIVIRAL RESISTANCE follows the same logic; HIV evolves resistance within a single patient given monotherapy, which is why combination therapy works.",
+        "VACCINE ESCAPE: pathogens evolve antigenic variation to evade immune responses (influenza is the textbook annual case)."
+      ],
+      "key_terms": [
+        { "term": "Antibiotic resistance", "def": "Heritable ability of bacteria to survive antibiotic exposure; arises from random mutation, then spreads under selection." },
+        { "term": "Horizontal gene transfer (HGT)", "def": "Movement of DNA (often resistance genes) between bacterial species via plasmids, transformation, or transduction; accelerates resistance spread." },
+        { "term": "Combination therapy", "def": "Use of multiple drugs simultaneously so that pathogens require multiple independent resistance mutations to survive — exponentially less likely than single resistance." },
+        { "term": "Vaccine escape / antigenic drift", "def": "Pathogen evolution that alters surface antigens to evade prior immunity, requiring updated vaccines." }
+      ],
+      "exam_traps": [
+        "Antibiotics do NOT cause resistance mutations — they SELECT for already-existing rare resistant variants. Random mutation + non-random selection.",
+        "Stopping a course early can leave partially-resistant survivors and worsen the resistance problem. Complete the prescribed course (current best evidence is more nuanced than the old 'always finish' rule, but the evolutionary logic still favors fully suppressing the infection).",
+        "Combination therapy works because the joint probability of multi-drug resistance is the product of single-drug resistance probabilities — for example, 10⁻⁹ × 10⁻⁹ = 10⁻¹⁸ per generation."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Virulence evolution and transmission mode",
+      "overview": "How harmful (virulent) a pathogen is to its host is itself an evolutionary trait — and it depends on how the pathogen transmits. Mode of transmission shapes the cost-benefit balance for the pathogen.",
+      "key_points": [
+        "VIRULENCE = the degree of damage a pathogen causes its host (often measured as case-fatality or per-infection morbidity).",
+        "Optimal virulence depends on the TRADE-OFF between transmission rate (often higher in more virulent infections, because pathogen load is higher) and host longevity (lower virulence keeps the host alive and infectious longer).",
+        "DIRECTLY TRANSMITTED pathogens (respiratory, sexually transmitted) often evolve toward MODERATE OR LOWER virulence — they need a healthy, mobile host to spread.",
+        "VECTOR-BORNE or WATERBORNE pathogens (cholera, malaria) can evolve HIGH virulence because the host's mobility doesn't matter — the vector or environment moves the pathogen.",
+        "EWALD'S HYPOTHESIS: cleaner water supplies select for less-virulent diarrheal pathogens because immobile sick hosts can't be visited by vectors or contaminate clean water sources.",
+        "Pathogen evolution can shift virulence quickly — e.g., the 1918 influenza pandemic strain evolved very high virulence under crowded WWI conditions."
+      ],
+      "key_terms": [
+        { "term": "Virulence", "def": "The degree of damage a pathogen causes its host; subject to evolutionary optimization." },
+        { "term": "Virulence-transmission trade-off", "def": "Higher within-host pathogen load increases transmission but reduces host survival — selection finds an intermediate optimum." },
+        { "term": "Vector-borne", "def": "Transmitted by a third organism (mosquito, tick); the host's own movement doesn't drive transmission." },
+        { "term": "Ewald's hypothesis", "def": "Mode of transmission shapes optimal virulence; hygiene improvements lower virulence in waterborne pathogens." }
+      ],
+      "exam_traps": [
+        "Virulence is NOT 'always' selected to decrease — that old folk-rule (pathogens evolve to be benign) was wrong. The direction depends on transmission mode.",
+        "Sexually-transmitted, respiratory, and vector-borne pathogens all face DIFFERENT virulence-transmission trade-offs. Predicting virulence evolution requires identifying the transmission route."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Host-pathogen coevolution",
+      "overview": "Hosts and pathogens are locked in mutual evolutionary arms races. Each side's adaptations select for counter-adaptations in the other — driving rapid evolution on both sides.",
+      "key_points": [
+        "HOST-PATHOGEN COEVOLUTION is reciprocal: hosts evolve immune defenses; pathogens evolve evasion; hosts evolve new defenses; and so on.",
+        "MAJOR HISTOCOMPATIBILITY COMPLEX (MHC) is one of the most variable gene regions in vertebrate genomes — under strong balancing selection from coevolving pathogens. Rare MHC alleles are favored because pathogens haven't adapted to them yet (negative frequency-dependent selection).",
+        "RED QUEEN DYNAMICS at the population level: hosts must keep evolving genetic novelty (often via sexual recombination) just to keep up with parasites. This is one of the leading explanations for why sex evolved.",
+        "Some pathogens drive long-term host evolution. Example: SICKLE-CELL ALLELE persists in human populations because heterozygotes have malaria resistance — heterozygote advantage maintained by pathogen selection.",
+        "Pathogen counter-adaptations include antigenic variation (HIV, trypanosomes), immune-suppressive proteins, intracellular hiding, and rapid mutation rates."
+      ],
+      "key_terms": [
+        { "term": "MHC (Major Histocompatibility Complex)", "def": "Highly polymorphic immune-system genes presenting pathogen-derived peptides to T cells; under balancing selection from coevolving pathogens." },
+        { "term": "Sickle-cell heterozygote advantage", "def": "Heterozygotes (HbA/HbS) are protected against malaria; homozygotes (HbS/HbS) suffer sickle-cell anemia; selection by malaria maintains the allele in malaria-endemic regions." },
+        { "term": "Antigenic variation", "def": "Pathogen evolution of surface antigens to evade host immunity (HIV, influenza, trypanosomes)." }
+      ],
+      "exam_traps": [
+        "Sickle-cell anemia is a classic POPULATION-LEVEL example of pathogen-driven host evolution. The allele persists not despite the homozygous cost, but because of the heterozygous benefit.",
+        "MHC diversity is maintained by BALANCING SELECTION — distinct from directional or stabilizing selection. Rare alleles benefit from being unfamiliar to pathogens."
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Mismatch hypothesis — modern environments and chronic disease",
+      "overview": "Many chronic diseases of the modern industrialized world (obesity, type 2 diabetes, atherosclerosis, certain autoimmune disorders) reflect a mismatch between traits that were adaptive in ancestral environments and the conditions of modern life.",
+      "key_points": [
+        "ANCESTRAL ENVIRONMENT (Pleistocene, hunter-gatherer): food often scarce, high physical activity, high pathogen load, modest reproductive lifespan.",
+        "MODERN ENVIRONMENT: food abundant (especially refined sugars and fats), sedentary lifestyle, hygiene reduces pathogen exposure, longer lifespan.",
+        "MISMATCH DISEASES: efficient fat storage and sweet/fat preferences (adaptive when food was scarce) contribute to obesity and metabolic syndrome in food-abundant environments.",
+        "Type 2 DIABETES is rare in populations with traditional active lifestyles and rises sharply with sedentary, calorie-rich modern living.",
+        "HYGIENE HYPOTHESIS: reduced early-life microbial exposure may underlie rising allergies, autoimmune diseases — the immune system 'expects' diverse pathogen exposure that no longer occurs.",
+        "Many cancers and atherosclerotic heart diseases are diseases of OLD AGE not strongly experienced ancestrally — selection couldn't act against them because they manifest after reproduction."
+      ],
+      "key_terms": [
+        { "term": "Mismatch hypothesis", "def": "Modern diseases arise from mismatch between ancestrally-adaptive traits and modern environmental conditions." },
+        { "term": "Hygiene hypothesis", "def": "Reduced early-life microbial exposure may contribute to rising allergies and autoimmune diseases." },
+        { "term": "Diseases of civilization", "def": "Chronic diseases (obesity, type 2 diabetes, atherosclerosis) prevalent in modernized populations and rare in traditional populations." }
+      ],
+      "exam_traps": [
+        "Mismatch DOESN'T mean we should live like cave-people; it means understanding our evolutionary history helps explain why certain modern foods and habits are pathogenic.",
+        "Diseases of old age (most cancers, Alzheimer's) escape selection because they manifest after reproduction. They aren't 'designed' against — selection just can't see them."
+      ]
+    },
+    {
+      "letter": "F",
+      "title": "Cancer as somatic evolution",
+      "overview": "Cancer is evolution playing out within an individual body. Cells acquire mutations, some of which give a growth advantage; selection within the body favors those cells; tumors are the result. This view reshapes treatment strategies.",
+      "key_points": [
+        "Cancer cells DIVIDE rapidly with HIGH MUTATION RATES — generating heritable variation among tumor cells.",
+        "Tumor cells COMPETE for resources (oxygen, glucose, space). Cells with growth-promoting mutations outcompete neighbors.",
+        "Therapies act as STRONG SELECTIVE PRESSURES — chemotherapy and targeted drugs kill susceptible cells but select for resistant subclones, often leading to relapse.",
+        "ADAPTIVE THERAPY is an experimental strategy: instead of trying to kill all tumor cells (which selects for resistance), maintain susceptible cells to suppress resistant ones — leveraging competition among tumor subclones.",
+        "Cancer susceptibility itself reflects evolutionary trade-offs: mechanisms protecting against cancer (apoptosis, senescence) trade off against tissue regeneration and longevity."
+      ],
+      "key_terms": [
+        { "term": "Somatic evolution", "def": "Evolution by mutation + selection acting on cell lineages within a multicellular organism's body." },
+        { "term": "Tumor heterogeneity", "def": "Genetic diversity among cells within a single tumor, generated by ongoing mutation; substrate for treatment-resistance evolution." },
+        { "term": "Adaptive therapy", "def": "Cancer treatment strategy that maintains susceptible tumor cells to competitively suppress resistant subclones, rather than aggressive eradication." }
+      ],
+      "exam_traps": [
+        "Cancer is evolution writ small — the same processes (variation, selection, heritability) operating on cell lineages.",
+        "Aggressive cancer therapy can SELECT for resistance just like aggressive antibiotic use does. Treatment strategy is also an evolutionary problem."
+      ]
+    }
+  ]
+}

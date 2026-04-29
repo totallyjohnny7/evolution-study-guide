@@ -1,0 +1,88 @@
+{
+  "title": "Human Evolution",
+  "intro": "Where we came from. The hominin lineage diverged from chimpanzees ~6–7 million years ago in Africa; bipedalism came first, then expanding brain, then long migration out of Africa. This lecture also touches evolutionary medicine — how our evolutionary history shapes modern disease.",
+  "sections": [
+    {
+      "letter": "A",
+      "title": "The hominin lineage and bipedalism",
+      "overview": "Humans share a common ancestor with chimpanzees ~6–7 MYA. The first major hominin innovation was BIPEDAL LOCOMOTION, which preceded brain enlargement.",
+      "key_points": [
+        "Hominins (the human lineage after splitting from chimpanzees) appeared ~6–7 MYA in Africa.",
+        "Earliest possible hominins: Sahelanthropus tchadensis (~7 MYA, Chad), Orrorin tugenensis, and Ardipithecus.",
+        "BIPEDALISM (walking upright on two legs) was the first major hominin trait, evident in skeletal anatomy of these earliest forms.",
+        "Bipedalism is documented in skeletal features: foramen magnum (where the spinal cord exits the skull) is positioned UNDERNEATH the skull, indicating an upright spine.",
+        "Brain enlargement came AFTER bipedalism in hominin evolution."
+      ],
+      "key_terms": [
+        { "term": "Hominin", "def": "Members of the human lineage since the chimpanzee split — includes modern humans and all extinct relatives." },
+        { "term": "Bipedalism", "def": "Habitual two-legged walking; the earliest hallmark hominin adaptation." },
+        { "term": "Foramen magnum", "def": "The opening in the skull where the spinal cord exits; its position (rear vs. underneath) indicates posture." }
+      ],
+      "exam_traps": [
+        "The study guide explicitly tests bipedalism: it began ~6–7 MYA. Brain enlargement is later.",
+        "Sahelanthropus from Chad is the early hominin example the study guide flags. Recognize the Chad connection."
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Australopithecines and early Homo",
+      "overview": "After the earliest hominins, several species of Australopithecus dominated for several million years. Genus Homo appears ~2.5 MYA.",
+      "key_points": [
+        "Australopithecus afarensis (~3.9–2.9 MYA) — 'Lucy' is the famous specimen; small-brained but fully bipedal.",
+        "Robust australopithecines (Paranthropus) — heavy chewing apparatus, evolutionary dead-end.",
+        "Genus Homo appears ~2.5 MYA with H. habilis — first stone tools (Oldowan).",
+        "Homo erectus (~1.9 MYA) — first hominin to leave Africa, larger brain, more sophisticated tools.",
+        "Homo sapiens emerges in Africa ~300 KYA."
+      ],
+      "key_terms": [
+        { "term": "Australopithecus", "def": "Genus of bipedal hominins (~4–2 MYA); 'Lucy' is the famous A. afarensis specimen." },
+        { "term": "Homo habilis", "def": "Earliest member of genus Homo (~2.5 MYA); associated with first known stone tools." }
+      ],
+      "exam_traps": [
+        "Homo erectus is the FIRST hominin to leave Africa, not Homo sapiens.",
+        "Brain size increased gradually through the hominin lineage; H. erectus had ~1000 cc, H. sapiens ~1350 cc."
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Out-of-Africa migrations and Neanderthal/Denisovan introgression",
+      "overview": "Modern humans (Homo sapiens) originated in Africa, then dispersed worldwide ~70 KYA, encountering and partly interbreeding with archaic populations like Neanderthals and Denisovans.",
+      "key_points": [
+        "Anatomically modern Homo sapiens: ~300 KYA in Africa.",
+        "Major out-of-Africa dispersal: ~70 KYA, replacing or absorbing earlier hominin populations across Eurasia.",
+        "Modern non-African humans carry ~1–4% Neanderthal DNA from interbreeding ~40–60 KYA.",
+        "Some Asian and Oceanic populations carry additional Denisovan DNA; this includes high-altitude adaptation alleles in Tibetans (EPAS1).",
+        "Genetic introgression with archaic humans contributed alleles for immunity, skin pigmentation, altitude adaptation — partly accelerating modern-human adaptation to new environments."
+      ],
+      "key_terms": [
+        { "term": "Out of Africa", "def": "The migration of anatomically modern humans from Africa to the rest of the world ~70 KYA." },
+        { "term": "Introgression", "def": "Gene flow between populations or species via interbreeding, contributing alleles from one to the other." },
+        { "term": "Neanderthal", "def": "Archaic human relative (Homo neanderthalensis) inhabiting Europe and West Asia; interbred with modern humans ~40–60 KYA." }
+      ],
+      "exam_traps": [
+        "All non-African modern humans carry small amounts of Neanderthal DNA; African populations have very little or none (because the introgression happened after the migration out of Africa).",
+        "The 'Out of Africa' model is now better called 'Recent African Origin' with admixture — it's not a simple replacement."
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Evolutionary medicine — disease in evolutionary context",
+      "overview": "Many modern health problems make more sense when viewed through an evolutionary lens. Pathogens evolve in response to our defenses; our bodies are evolutionary compromises shaped by ancestral environments different from modern ones.",
+      "key_points": [
+        "ANTIBIOTIC RESISTANCE: pathogens evolve resistance under selection. Once-treatable infections become untreatable. Solution: stewardship + new drug discovery.",
+        "PATHOGEN VIRULENCE evolves. Mode of transmission shapes optimal virulence — directly transmitted (e.g., respiratory) pathogens often evolve toward LOWER virulence (need a healthy host to spread); waterborne / vector-borne pathogens can evolve high virulence (don't need the host mobile).",
+        "MISMATCH HYPOTHESIS: many modern diseases (obesity, type 2 diabetes, atherosclerosis) reflect mismatch between our ancestral environment (food-scarce, high physical activity) and modern conditions (food-abundant, sedentary).",
+        "Our bodies show evolutionary compromises: backaches from upright posture, difficult childbirth from large brains + narrow pelvis, vestigial appendix prone to infection."
+      ],
+      "key_terms": [
+        { "term": "Evolutionary medicine", "def": "Application of evolutionary principles to understanding human health and disease." },
+        { "term": "Virulence", "def": "The degree to which a pathogen damages its host; evolves in response to transmission mode and other ecological factors." },
+        { "term": "Mismatch hypothesis", "def": "Modern diseases arise from mismatch between traits adapted to ancestral environments and the conditions of modern life." }
+      ],
+      "exam_traps": [
+        "Pathogens evolve. Antibiotic resistance is one application; antigenic shift in flu is another.",
+        "Evolutionary medicine doesn't say 'we should live like cave-people' — it says understanding the evolutionary mismatch helps explain susceptibility to certain modern diseases."
+      ]
+    }
+  ]
+}

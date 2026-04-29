@@ -1,0 +1,258 @@
+[
+  {
+    "id": "STIM-L08-001",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "B",
+    "topic": "Eye evolution stepwise",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Critics sometimes object that 'half an eye is useless,' arguing complex traits like eyes can't evolve gradually. What is the strongest evolutionary response?",
+    "choices": [
+      "Eyes evolved in a single dramatic mutation.",
+      "Each intermediate stage (light-sensitive patch, cup, pinhole) is itself functional and adaptive in living organisms today.",
+      "Eyes only evolved once in evolutionary history.",
+      "The objection is correct, and eye evolution is genuinely mysterious."
+    ],
+    "correct": 1,
+    "why": "Living organisms today display a spectrum of eye complexity (flatworm patches, Nautilus pinhole, fish lensed eyes). Each step is functional in its own ecological context. 'Half an eye' is a strawman — what exists at intermediate stages is a SIMPLER eye, not a broken full eye.",
+    "choice_why": [
+      "Wrong. Stepwise mutations across many generations, not one big mutation.",
+      "Correct. Functional intermediates exist in extant organisms — the eye-evolution sequence is not hypothetical.",
+      "Wrong. Eyes have evolved INDEPENDENTLY in many lineages — at least 40 times across animals.",
+      "Wrong. Eye evolution is well-modeled and supported empirically."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §A,B"
+  },
+  {
+    "id": "STIM-L08-002",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "B",
+    "topic": "Convergent eye evolution",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The vertebrate eye and the cephalopod eye are both camera-type eyes with lens, retina, and pupil. They are best described as:",
+    "choices": [
+      "Homologous structures inherited from a common eyed ancestor.",
+      "Convergent (analogous) structures — independently evolved camera eyes.",
+      "Vestigial structures.",
+      "An example of horizontal gene transfer."
+    ],
+    "correct": 1,
+    "why": "The last common ancestor of vertebrates and cephalopods did not have camera eyes. Both lineages independently evolved camera eyes — a striking case of convergence. Telltale: the photoreceptors face FORWARD (toward incoming light) in cephalopods but BACKWARD in vertebrates, reflecting independent origin.",
+    "choice_why": [
+      "Wrong. The common ancestor lacked camera eyes; the camera designs were each derived independently.",
+      "Correct. Independent origins of similar function = convergent evolution.",
+      "Wrong. Both eyes are functional, not vestigial.",
+      "Wrong. Eye structure is not transferred horizontally between metazoan lineages."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §B"
+  },
+  {
+    "id": "STIM-L08-003",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "C",
+    "topic": "Cis-regulatory evolution",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Two closely related fruit fly species differ dramatically in pigmentation pattern, but the proteins involved in pigment synthesis are nearly identical. What evolutionary mechanism most likely explains the difference?",
+    "choices": [
+      "Different genes are present in the two species' genomes.",
+      "Mutations in CIS-REGULATORY sequences alter when and where the pigmentation genes are expressed, without changing the proteins.",
+      "Lamarckian acquired pigmentation.",
+      "The species share gametes via horizontal transfer."
+    ],
+    "correct": 1,
+    "why": "Cis-regulatory evolution is a major route to morphological novelty: changes in regulatory sequences (enhancers/promoters) alter spatial and temporal expression patterns without changing the protein-coding sequences. Same toolkit, different deployment.",
+    "choice_why": [
+      "Wrong. The proteins are nearly identical — same genes are present.",
+      "Correct. Regulatory rather than coding changes underlie much morphological evolution.",
+      "Wrong. Pigmentation is genetic, not acquired.",
+      "Wrong. Drosophila species don't exchange gametes; horizontal gene transfer is rare in animals."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §C"
+  },
+  {
+    "id": "STIM-L08-004",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "C",
+    "topic": "Gene duplication / neofunctionalization",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "After a gene duplication event, one copy retains the ancestral function while the other accumulates mutations and eventually evolves a novel role. This is:",
+    "choices": [
+      "Subfunctionalization",
+      "Neofunctionalization",
+      "Pseudogenization",
+      "Gene conversion"
+    ],
+    "correct": 1,
+    "why": "NEOFUNCTIONALIZATION = one copy of a duplicated gene gains a new function while the other keeps the original. SUBFUNCTIONALIZATION = both copies retain part of the original function (specialization).",
+    "choice_why": [
+      "Wrong. Subfunctionalization is when both copies specialize on different subsets of the ANCESTRAL function — neither gains a new role.",
+      "Correct. Neofunctionalization is novel-function evolution in one duplicated copy.",
+      "Wrong. Pseudogenization is loss of function in one copy (becomes a pseudogene).",
+      "Wrong. Gene conversion is sequence-level homogenization between paralogs, distinct from functional divergence."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §C"
+  },
+  {
+    "id": "STIM-L08-005",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "D",
+    "topic": "Heterochrony",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Axolotls (Ambystoma mexicanum) reach sexual maturity while retaining larval features (gills, fin) — they do not metamorphose into terrestrial adults like related salamanders. This is an example of:",
+    "choices": [
+      "Heterochrony — specifically, paedomorphosis.",
+      "Convergent evolution.",
+      "Cis-regulatory neofunctionalization.",
+      "Antagonistic pleiotropy."
+    ],
+    "correct": 0,
+    "why": "Paedomorphosis is heterochronic retention of juvenile (larval) features in the adult form. The axolotl is the textbook case — sexually mature larva.",
+    "choice_why": [
+      "Correct. Heterochrony / paedomorphosis is exactly this phenomenon.",
+      "Wrong. Convergent evolution = independent origin of similar traits in different lineages — not relevant here.",
+      "Wrong. Cis-regulatory evolution can underlie heterochrony, but the term for the OUTCOME is paedomorphosis.",
+      "Wrong. Antagonistic pleiotropy is a senescence theory, unrelated to development."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §D"
+  },
+  {
+    "id": "STIM-L08-006",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "E",
+    "topic": "Hox conservation",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The same Hox genes pattern the anterior-posterior axis of fruit flies, mice, and humans. What is the strongest evolutionary inference from this fact?",
+    "choices": [
+      "Hox genes evolved independently in flies, mice, and humans through convergence.",
+      "Hox genes were present in the common ancestor of bilaterian animals and have been conserved over hundreds of millions of years.",
+      "Insects and mammals are equally complex.",
+      "Hox genes are randomly distributed across animal genomes."
+    ],
+    "correct": 1,
+    "why": "Shared, deeply similar gene clusters across distantly related lineages reflect inheritance from a common ancestor — not independent invention. The bilaterian common ancestor had a Hox cluster, and it has been conserved.",
+    "choice_why": [
+      "Wrong. Hox conservation across phyla argues against convergent independent origin.",
+      "Correct. Common ancestry inherited the Hox toolkit; differences across animals are largely regulatory.",
+      "Wrong. Hox conservation is about toolkit, not complexity.",
+      "Wrong. Hox genes occur in clusters in a colinear arrangement across bilaterians — not random."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §E"
+  },
+  {
+    "id": "STIM-L08-007",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "F",
+    "topic": "Imperfect adaptation — vestigial structures",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Whales have small, internal pelvic bones that don't articulate with the spine. What does this best illustrate?",
+    "choices": [
+      "Whales evolved from terrestrial ancestors that had functional pelvic skeletons; the pelvis is now vestigial.",
+      "Whales recently developed a pelvis through convergent evolution with mammals.",
+      "Pelvic bones formed by chance during whale development.",
+      "These bones support the whale's swimming musculature in a major way."
+    ],
+    "correct": 0,
+    "why": "Vestigial pelvic bones in whales are leftover from terrestrial ancestors. They no longer have their original function but have been retained because removing them is not strongly selected for.",
+    "choice_why": [
+      "Correct. Vestigial structures are evolutionary fossils inside living bodies.",
+      "Wrong. Whales are mammals; they did not 'develop' a pelvis through convergence — they inherited (and reduced) one.",
+      "Wrong. The bones develop reliably from the same developmental program; they're not random.",
+      "Wrong. The whale pelvis has minor anchorage function (related to reproduction in some species) but is heavily reduced."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §F"
+  },
+  {
+    "id": "STIM-L08-008",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "C",
+    "topic": "Protein promiscuity",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "PROTEIN PROMISCUITY refers to:",
+    "choices": [
+      "Proteins frequently interacting with foreign DNA.",
+      "Proteins having weak side-activities beyond their primary function, providing raw material for selection to refine new functions.",
+      "Proteins binding multiple partners with equal strength.",
+      "Proteins that move freely between cellular compartments."
+    ],
+    "correct": 1,
+    "why": "Many proteins have weak 'side' activities — substrates they can act on at low efficiency, partners they can bind weakly. These weak activities can be co-opted and refined by selection, providing a starting point for new function evolution.",
+    "choice_why": [
+      "Wrong. That describes DNA-binding proteins or restriction enzymes, not promiscuity.",
+      "Correct. Weak side-activities are the conceptual core of protein promiscuity.",
+      "Wrong. Equal-strength binding to multiple partners is a different concept (and not specifically promiscuity).",
+      "Wrong. Cellular trafficking is a different phenomenon."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §C"
+  },
+  {
+    "id": "STIM-L08-009",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "B,C",
+    "topic": "Complex adaptations — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "Evolution of complex adaptations like the vertebrate eye seems to require many coordinated changes. Explain (a) how STEPWISE GRADUAL EVOLUTION can build such structures; (b) the role of REGULATORY mutations; (c) the role of GENE DUPLICATION; (d) why complex adaptations are typically IMPERFECT.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Stepwise gradualism: complex traits accumulate via many small mutations, each conferring some fitness advantage; intermediate stages are themselves functional (e.g., light-sensitive patch → cup → pinhole → lens)." },
+        { "pts": 1, "desc": "Regulatory mutations: changes in cis-regulatory sequences alter when/where genes are expressed, producing morphological novelty without changing protein function." },
+        { "pts": 1, "desc": "Gene duplication: produces redundant copies; one can retain ancestral function while the other neo- or sub-functionalizes." },
+        { "pts": 1, "desc": "Imperfection: selection cannot start over; it modifies existing structures. Historical constraints, trade-offs, and developmental limits leave 'good-enough' adaptations rather than optimal designs (e.g., backwards retina, vestigial structures)." }
+      ]
+    },
+    "model_answer": "(a) Complex adaptations build by STEPWISE accumulation of small mutational changes, each conferring some fitness advantage. The vertebrate eye evolved through a sequence — light-sensitive patch → cupped patch → pinhole eye → lensed eye — and each intermediate stage exists in living organisms today and is functional in its own context. (b) Many morphological changes come from CIS-REGULATORY mutations that alter WHEN and WHERE genes are expressed, without changing the proteins themselves. This rewires existing toolkits (e.g., Hox expression boundaries) to produce novel body plans. (c) GENE DUPLICATION creates redundant copies; relaxed selection on one copy lets it accumulate mutations and evolve new functions (neofunctionalization) or subdivide ancestral roles (subfunctionalization). (d) Complex adaptations are IMPERFECT because selection works only on what's available — historical legacy, developmental constraints, and trade-offs limit what can evolve. The vertebrate retina has its photoreceptors backward (light passes through neurons before reaching them) — a quirk of history, not optimal design.",
+    "source": "sg-exam-2 Ch10; L08 §A,B,C,F"
+  },
+  {
+    "id": "STIM-L08-010",
+    "exam": 2,
+    "lecture": "L08",
+    "section": "F",
+    "topic": "Trade-offs",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Why don't cheetahs have BOTH the speed of a sprinter AND the heat tolerance of a slow-walking lion?",
+    "choices": [
+      "Mutations for both traits never occurred.",
+      "Trade-offs: high-speed sprinting generates body heat that exceeds heat dissipation capacity. Selection optimizes a compromise.",
+      "Cheetahs are still actively evolving toward both.",
+      "Lion alleles cannot be transferred to cheetahs."
+    ],
+    "correct": 1,
+    "why": "Adaptations are constrained by trade-offs. Cheetah sprint biomechanics generate heat too fast to dissipate; selection arrives at an optimal compromise (short sprints with rest periods), not a universal best.",
+    "choice_why": [
+      "Wrong. Trade-offs are physical constraints, not just absence of variation.",
+      "Correct. Trade-offs force compromises in adaptive evolution.",
+      "Wrong. The trade-off is structural — selection cannot escape it.",
+      "Wrong. Cross-species gene transfer is irrelevant; the constraint is physiological."
+    ],
+    "source": "sg-exam-2 Ch10; L08 §F"
+  }
+]

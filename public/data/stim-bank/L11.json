@@ -1,0 +1,258 @@
+[
+  {
+    "id": "STIM-L11-001",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "A",
+    "topic": "Twofold cost of sex",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "What is the 'twofold cost of sex' (Maynard Smith)?",
+    "choices": [
+      "Sexual reproduction produces twice as much genetic variation as asexual.",
+      "A sexual female passes on only half as many of her genes per offspring (compared to an asexual female who would transmit all her genes).",
+      "Sexual reproduction takes twice as long as asexual reproduction.",
+      "Sexual species have twice the mutation rate of asexual species."
+    ],
+    "correct": 1,
+    "why": "Maynard Smith's twofold cost: an asexual mother passes 100% of her genes to each offspring; a sexual mother passes only 50%. Per gene, sexual reproduction is twice as costly. The benefits of sex must outweigh this two-fold disadvantage.",
+    "choice_why": [
+      "Wrong. Genetic variation is a BENEFIT of sex, not the source of its cost.",
+      "Correct. Halving the per-offspring gene contribution is the textbook twofold cost.",
+      "Wrong. The cost is genetic transmission, not time.",
+      "Wrong. Mutation rates are not twofold higher in sexual species."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §A"
+  },
+  {
+    "id": "STIM-L11-002",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "A",
+    "topic": "Muller's ratchet",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Muller's ratchet describes:",
+    "choices": [
+      "Loss of beneficial alleles by drift in small sexual populations.",
+      "Irreversible accumulation of deleterious mutations in asexual populations because there's no recombination to recreate the mutation-free class once it's lost.",
+      "The clicking sound of bacterial flagella.",
+      "A directional ratchet of beneficial mutations in sexual populations."
+    ],
+    "correct": 1,
+    "why": "In asexual lineages, once the mutation-free class is lost (by drift or because all individuals carry at least one mutation), recombination cannot recreate it. Each new mutation that fixes raises the mutational load — irreversibly, like a ratchet.",
+    "choice_why": [
+      "Wrong. Muller's ratchet specifically refers to deleterious mutation accumulation in asexuals.",
+      "Correct. Standard Muller's-ratchet definition.",
+      "Wrong. This is unrelated; the ratchet is a metaphor.",
+      "Wrong. The ratchet is about deleterious accumulation, not beneficial fixation."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §A"
+  },
+  {
+    "id": "STIM-L11-003",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "A",
+    "topic": "Red Queen hypothesis",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The Red Queen hypothesis proposes that sexual reproduction is favored because:",
+    "choices": [
+      "Sexual reproduction reduces parental investment in each offspring.",
+      "Hosts must constantly evolve to keep up with rapidly evolving parasites; sexual recombination provides the genetic novelty needed.",
+      "Sex makes reproduction faster than asexual processes.",
+      "Predators preferentially attack asexual species."
+    ],
+    "correct": 1,
+    "why": "The Red Queen (named after Lewis Carroll's character) — 'it takes all the running you can do, to keep in the same place' — captures the antagonistic coevolution between hosts and parasites. Sex generates novel allele combinations that help hosts evade rapidly evolving parasites.",
+    "choice_why": [
+      "Wrong. Reduced parental investment is unrelated.",
+      "Correct. Parasite-host coevolution favors sexual reproduction in hosts.",
+      "Wrong. Sex is typically slower per generation than asexual reproduction.",
+      "Wrong. Predator preference is not the mechanism."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §A"
+  },
+  {
+    "id": "STIM-L11-004",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "B",
+    "topic": "Anisogamy / sex definition",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Biologically, the FEMALE in a sexually reproducing species is defined as:",
+    "choices": [
+      "The sex that bears live offspring.",
+      "The sex that produces the larger, costlier gamete.",
+      "The sex that has two X chromosomes.",
+      "The sex that displays mate choice."
+    ],
+    "correct": 1,
+    "why": "Sex is defined by GAMETE SIZE (anisogamy). Female = larger gamete (egg), male = smaller gamete (sperm). All other features (live birth, sex chromosomes, behavior) are downstream and species-variable.",
+    "choice_why": [
+      "Wrong. Many species (most fish, all birds, all reptiles) lay eggs externally. Live birth is not the definition.",
+      "Correct. Larger gamete = female; smaller gamete = male. Anisogamy is the operational definition.",
+      "Wrong. Sex chromosomes vary across taxa (XY in mammals, ZW in birds). Not the universal definition.",
+      "Wrong. In some species (e.g., pipefish, jacanas) males are the choosier sex; mate choice does not define sex."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §B"
+  },
+  {
+    "id": "STIM-L11-005",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "C",
+    "topic": "Intersexual selection",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Female peahens prefer males with larger, more iridescent tails. Male peacock tails reduce survival (visible to predators, costly to grow). The persistence of the tail despite its survival cost is best explained by:",
+    "choices": [
+      "Intersexual selection (mate choice) outweighing the survival cost.",
+      "Intrasexual selection — males physically fight with their tails.",
+      "Sexual conflict — females can't tell males with tails apart from males without.",
+      "Group selection for showy populations."
+    ],
+    "correct": 0,
+    "why": "Intersexual selection (female mate choice) generates strong selection on male ornament traits. If preferred males get many more matings, the mating gain can exceed the survival cost — net fitness positive even with shorter life.",
+    "choice_why": [
+      "Correct. Female choice produces the directional selection on male ornaments.",
+      "Wrong. Peacock tails are not used as weapons; they are display ornaments.",
+      "Wrong. Females choose tail-bearers; that's the mechanism, not a confusion.",
+      "Wrong. Group selection isn't needed; individual fitness through mating success accounts for it."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §C"
+  },
+  {
+    "id": "STIM-L11-006",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "C",
+    "topic": "Intrasexual vs intersexual",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Male elk grow large antlers used in physical combat with rival males during the breeding season. This is primarily an example of:",
+    "choices": [
+      "Intersexual selection (mate choice).",
+      "Intrasexual selection (same-sex competition).",
+      "Sexual conflict.",
+      "Sexual cooperation."
+    ],
+    "correct": 1,
+    "why": "Antlers are weapons used in male-male combat for access to mates — INTRASEXUAL selection. Intersexual selection (female choice) often produces ornaments rather than weapons, though both can occur on the same trait.",
+    "choice_why": [
+      "Wrong. Female elk don't choose males based on antler aesthetics; antlers are tools for fighting other males.",
+      "Correct. Same-sex competition for mates = intrasexual.",
+      "Wrong. Sexual conflict is between males and females; antler fights are male vs. male.",
+      "Wrong. Combat is competitive, not cooperative."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §C"
+  },
+  {
+    "id": "STIM-L11-007",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "D",
+    "topic": "Sperm competition",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Species in which females mate with multiple males within a single breeding cycle tend to evolve relatively LARGE TESTES compared to species with strictly monogamous mating. The most likely explanation is:",
+    "choices": [
+      "Larger testes in polyandrous species support larger overall body size.",
+      "Sperm competition — males who produce more sperm have higher chances of fertilizing ova when ejaculate from rival males is also present.",
+      "Larger testes are required for hormone signaling.",
+      "Larger testes evolved randomly via drift."
+    ],
+    "correct": 1,
+    "why": "When females mate with multiple males, sperm from different males compete to fertilize the eggs. Selection favors males who produce more sperm. The well-documented correlation between testis size and female promiscuity across primates and other taxa supports this.",
+    "choice_why": [
+      "Wrong. Body size correlation is a confound; testis size correlates with mating system AFTER controlling for body size.",
+      "Correct. Sperm competition is the textbook explanation for the testis-size pattern.",
+      "Wrong. Hormonal needs don't scale with sperm-competition intensity.",
+      "Wrong. The pattern is too strong and consistent across lineages to be drift."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §D"
+  },
+  {
+    "id": "STIM-L11-008",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "D",
+    "topic": "Sexual conflict",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "In Drosophila, male seminal fluid contains compounds that increase female short-term egg-laying but reduce female lifespan. From a sexual-conflict perspective:",
+    "choices": [
+      "This is mutualism — both sexes benefit equally.",
+      "Male and female evolutionary interests diverge: males benefit from immediate fertilization even at long-term cost to females.",
+      "Females have evolved zero counter-adaptations to these compounds.",
+      "The compounds randomly evolved with no selective basis."
+    ],
+    "correct": 1,
+    "why": "The male's reproductive interests favor maximizing his own paternity NOW; the female's interests include living to mate again with potentially better males. The seminal compounds boost his fitness at her cost — antagonistic coevolution at the species level.",
+    "choice_why": [
+      "Wrong. The compounds harm females while helping males — definitionally not mutualism.",
+      "Correct. Sexual conflict produces antagonistic coevolution between sexes.",
+      "Wrong. Females do evolve counter-adaptations (resistance, post-copulatory mechanisms) — that's the antagonistic coevolution side.",
+      "Wrong. Male compounds are clearly under positive selection in males."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §D"
+  },
+  {
+    "id": "STIM-L11-009",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "A,B",
+    "topic": "Sex evolution — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "Sexual reproduction has substantial costs. Name and briefly explain THREE benefits that have been proposed to outweigh those costs and explain why sex is widespread.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Genetic diversity / recombination — sex shuffles alleles, generating new combinations selection can act on." },
+        { "pts": 1, "desc": "Muller's ratchet — sex purges deleterious mutations via recombination, while asexual lineages accumulate mutations irreversibly." },
+        { "pts": 1, "desc": "Red Queen — sexual recombination keeps hosts ahead of rapidly evolving parasites." },
+        { "pts": 1, "desc": "All three benefits clearly explained with mechanism, not just named." }
+      ]
+    },
+    "model_answer": "Three classical benefits of sex: (1) GENETIC DIVERSITY through recombination — sex shuffles alleles into novel combinations each generation, producing genetic variation on which selection can act. This is especially valuable when environments are fluctuating. (2) MULLER'S RATCHET avoidance — in asexual lineages, deleterious mutations accumulate irreversibly because there's no way to recreate the mutation-free class once it's lost. Sexual recombination can recreate clean genotypes, purging mutational load. (3) RED QUEEN dynamics — parasites coevolve rapidly with their hosts. Sexual recombination generates novel allele combinations that help hosts evade parasites that have adapted to last generation's common host genotypes. Despite the twofold cost of sex, these benefits collectively explain the widespread persistence of sexual reproduction.",
+    "source": "sg-exam-2 Ch11; L11 §A"
+  },
+  {
+    "id": "STIM-L11-010",
+    "exam": 2,
+    "lecture": "L11",
+    "section": "C",
+    "topic": "Fisherian runaway",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Fisherian runaway sexual selection refers to:",
+    "choices": [
+      "Predators learning to avoid mating displays of unpalatable species.",
+      "A positive-feedback process where female preference for a male trait and the trait itself co-amplify over generations because preference and trait are linked in 'sexy' offspring.",
+      "Loss of all sexual ornaments due to high predation.",
+      "Mutation pressure generating new ornament traits."
+    ],
+    "correct": 1,
+    "why": "Fisher's runaway: if females prefer a trait, and the genes for the trait and the preference become correlated, then 'sexy' offspring inherit BOTH traits. The trait amplifies because it's preferred, and the preference amplifies because preferred males are sexy — a runaway feedback loop.",
+    "choice_why": [
+      "Wrong. That describes aposematism / mimicry, not Fisherian runaway.",
+      "Correct. Positive-feedback coevolution of preference and trait.",
+      "Wrong. Runaway dynamics PRODUCE elaborate ornaments, not lose them.",
+      "Wrong. Mutation generates variation; runaway is the selection-driven amplification."
+    ],
+    "source": "sg-exam-2 Ch11; L11 §C"
+  }
+]

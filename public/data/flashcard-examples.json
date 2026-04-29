@@ -1,0 +1,272 @@
+{
+  "_meta": "Hand-crafted application examples for every flashcard. One scenario or applied question per term, written to test understanding (not recall) of the concept.",
+
+  "L01": {
+    "Evolution": "A bacterial colony exposed to penicillin shifts from <1% to >95% resistant cells over 30 generations. Single bacteria didn't 'evolve' — what changed across generations to qualify this as evolution?",
+    "Population": "Why is it incorrect to say 'this finch evolved a longer beak during the drought'? What level of biological organization actually evolves?",
+    "Heritable variation": "A field of dandelions shows wide variation in flower color, but careful crosses show the variation is purely from soil pH, not genetics. Can selection on color cause this population to evolve?",
+    "Common descent": "Cytochrome c (a respiratory protein) is ~95% identical between humans and rhesus monkeys, ~90% identical to dogs, ~75% identical to fruit flies. What does this graded similarity reflect?",
+    "Adaptation": "The thick fur of arctic foxes is described as 'an adaptation to cold.' This phrase has two meanings — both a TRAIT and a PROCESS. Distinguish them.",
+    "Natural selection": "In a desert lizard population, individuals with darker scales have higher water retention and thus higher reproductive success. Three things must be true for this to produce evolutionary change. Name them.",
+    "Genetic drift": "A flock of 8 finches gets blown to a remote island and founds a new population. After 100 generations, the island finches differ from the mainland finches at many neutral loci. Selection or drift — and why is it likely drift here?",
+    "Gene flow": "A new highway cuts through a salamander's range, blocking dispersal. Will gene flow between the two halves of the population increase, decrease, or stay the same? What evolutionary consequence is most likely?",
+    "Mutation": "A claim: 'Antibiotic exposure causes bacteria to mutate so they can survive.' Why is this evolutionarily wrong, and what is the correct framing?"
+  },
+
+  "L02": {
+    "Great Chain of Being (Scala Naturae)": "A medieval naturalist describes life as a fixed ladder from worms (bottom) to humans (just below angels). Identify two specific assumptions in this view that are incompatible with modern evolution.",
+    "Immutability of species": "Pre-Darwinian biologists argued species were created in their current form and never change. Name one piece of geological/biological evidence Darwin used to overturn this view.",
+    "Stratigraphy": "Geologist William Smith finds the same fossil shellfish in identical rock layers across England — but never in younger or older layers. What can he infer from this consistency?",
+    "Faunal succession": "Paleontologists discover trilobite fossils in lower (older) rock strata but never in strata younger than the Permian. What does the principle of faunal succession let them conclude about trilobites?",
+    "Extinction": "Why was the recognition of extinction so important for evolutionary thinking? (Hint: what does extinction imply about the immutability-of-species view?)",
+    "Inheritance of acquired characteristics (Lamarckism)": "A weight-lifter's children are NOT born with bigger muscles, despite their parent's training. Explain why this is evidence against Lamarckism — and why Lamarck's mechanism still doesn't apply even though the trait IS passed on as DNA in some special cases (transgenerational epigenetics).",
+    "Uniformitarianism": "Lyell argued that the Grand Canyon was carved by ordinary river erosion over millions of years, not by a single biblical flood. How did this thinking influence Darwin?",
+    "Deep time": "Darwin estimated that natural selection needed enormous spans of time. Why was Lord Kelvin's calculation that Earth was only 20–40 million years old such a problem for early evolution? What discovery later resolved it?",
+    "Natural selection": "Distinguish Darwin's natural selection (1859) from Lamarck's mechanism (1809). Both proposed evolutionary change — what is the critical difference?",
+    "Heritability": "A breeder selects the largest tomatoes for the next generation. Year after year, the average size barely changes. Diagnose: what does this say about heritability of fruit size in this population?",
+    "Selection differential (S)": "A herd has mean milk yield 25 L/day; the breeder selects breeders with mean 30 L/day. What is S?",
+    "Hypothesis": "Distinguish: 'evolution is true' vs. 'mosquitoes will evolve resistance to a new pesticide within 5 generations of widespread spraying.' Which is a hypothesis? Why?",
+    "Scientific theory": "When a critic says 'evolution is just a theory,' what scientific concept are they confusing 'theory' with? Give two other scientific theories that share the same level of evidentiary support.",
+    "Falsifiability": "Propose one observation that, if found, would falsify the theory of common descent."
+  },
+
+  "L03": {
+    "Pseudogene": "Humans have a broken vitamin C synthesis gene (GULO) — a pseudogene. Other primates (and guinea pigs) also have GULO pseudogenes. What does this shared inactive gene reveal about our evolutionary history?",
+    "Mobile genetic element (MGE)": "About 45% of the human genome is derived from transposable elements. What does this tell you about the relationship between genome size and 'organismal complexity'?",
+    "C-value paradox": "Some salamanders have genomes 40× larger than humans. Are salamanders 40× more 'complex'? What does this paradox actually tell us about genome evolution?",
+    "DNA methylation": "Identical-twin mice raised in different environments show different gene expression at hundreds of loci, despite identical DNA. Which level of regulation is most likely doing this work, and why?",
+    "Histone modification": "An experimental drug (an HDAC inhibitor) blocks histone deacetylation. Predict the qualitative effect on gene expression genome-wide.",
+    "MicroRNA (miRNA)": "A miRNA binds the 3' UTR of an oncogene's mRNA and targets it for degradation. Categorize this regulation as pre-, transcriptional, post-transcriptional, or post-translational.",
+    "Alternative splicing": "The Drosophila gene Dscam can produce >38,000 mRNA isoforms from a single gene through alternative splicing. What does this say about the gene-count vs. proteome-complexity assumption?",
+    "Allele": "At the human ABO locus, the I^A, I^B, and i alleles produce different blood-group phenotypes. Define 'allele' using this example.",
+    "Dominant": "The Huntington's disease allele is dominant — heterozygotes (Hh) express the disease phenotype. What does this predict about the rate at which a NEW dominant deleterious allele would be eliminated by selection?",
+    "Recessive": "A new beneficial recessive allele appears at frequency 1/1000 in a population. Why does it spread very slowly at first?",
+    "Additive": "Human height shows continuous variation rather than discrete classes. What does an additive allelic model predict for the phenotype distribution at multi-locus quantitative traits?",
+    "Locus": "Hemoglobin α and hemoglobin β are different genes at different chromosomal locations. Why does it matter, in evolutionary terms, that they are at different LOCI?",
+    "Mutation": "A single point mutation in HBB (β-globin) causes sickle-cell anemia. The mutation rate at any given base is ~10⁻⁹ per generation. With ~10¹⁴ B-cells in your body, how many will carry that exact mutation in a lifetime — and what does this tell you about somatic vs. germline mutation?",
+    "Mutation rate": "Different organisms have different per-base mutation rates. Why is this number meaningful for predicting how fast a population can evolve under strong selection?",
+    "Random with respect to fitness": "If you starve E. coli of lactose, will lactose-utilization mutations preferentially appear? Frame the answer in terms of mutation randomness."
+  },
+
+  "L04": {
+    "Allele frequency": "In a population of 100 fish, you observe 16 AA, 48 Aa, 36 aa. Compute p (frequency of A). What does this number tell you about the gene pool?",
+    "Genotype frequency": "Same population (16 AA, 48 Aa, 36 aa). Compute the three genotype frequencies. Why do these tell you something different from the allele frequencies?",
+    "Hardy-Weinberg equilibrium (HWE)": "Why is HWE called the 'null model' of population genetics? What kind of conclusion can you draw when a population FITS HWE?",
+    "Random mating (panmixia)": "Suppose female peacocks preferentially mate with the males that have the longest tails. Is this population at HWE for tail-length-related loci? Why or why not?",
+    "Inbreeding": "An island population of 200 individuals has been isolated for 50 generations. Many close-kin matings occur. Predict whether observed homozygote frequencies will be above or below HWE expectations — and what fitness consequence may follow.",
+    "Heterozygote advantage": "In sub-Saharan Africa, the sickle-cell allele (HbS) persists at frequency ~10% despite being lethal in homozygotes. Why? What HWE deviation pattern does this produce?",
+    "Wahlund effect": "Two adjacent ponds each have their own HWE-conforming carp population — but with different allele frequencies. A biologist samples both ponds together as one 'population.' What HWE deviation will appear, and why is it not a sign of inbreeding?"
+  },
+
+  "L05": {
+    "Quantitative trait": "Human stature varies continuously from very short to very tall in any modern population. Why is this called a quantitative trait, and what does that imply about the number of contributing loci?",
+    "V_A — Additive genetic variance": "A breeder wants to know whether selection on milk yield will produce a response. Which variance component must be non-zero, and why specifically that one?",
+    "V_D — Dominance variance": "Why does V_D not respond predictably to selection across generations, even though dominance does affect phenotype?",
+    "V_I — Epistatic (interaction) variance": "Two coat-color loci in mice interact: B+/E+ produces black, B+/ee produces yellow, regardless of B genotype. The interaction effect is V_I. Why is selection on this interaction inefficient?",
+    "V_E — Environmental variance": "Two genetically identical plants (clones) grown in different soil produce flowers of different sizes. The variation between them is V_E. Will selecting the larger-flowered clone produce evolutionary change in its lineage? Why or why not?",
+    "Broad-sense heritability (H²)": "A trait has H² = 0.8 but h² = 0.4. What does the gap between broad- and narrow-sense heritability tell you about the genetic architecture of the trait?",
+    "Narrow-sense heritability (h²)": "Heritability of human IQ in well-fed populations is estimated h² ≈ 0.5. Heritability of IQ in malnourished populations is estimated h² ≈ 0.1. Why does this NOT mean IQ is 'more genetic' in well-fed populations — it means the population/environment differ.",
+    "Parent-offspring regression": "You plot offspring tail-length against the mid-parent value for 200 mouse families. The slope of the regression is 0.6. Estimate h² and predict whether selection on tail length would produce a strong response.",
+    "Selection differential (S)": "Population mean weight = 100 g; breeders' mean = 120 g. h² = 0.5. Predict the next-generation mean weight using the breeder's equation.",
+    "Response to selection (R)": "Same as above. What is R?",
+    "Breeder's equation": "Why does R = h² · S — and not, say, R = S — give the right answer? Frame your answer in terms of what fraction of phenotypic variation is heritable.",
+    "Phenotypic plasticity": "Daphnia (water fleas) develop defensive helmets when chemicals from predatory fish are present, but no helmets in safe water. Single genotypes produce different phenotypes. What is this phenomenon, and why is it adaptive even though selection is acting on the same genotype each generation?",
+    "Reaction norm": "You plot phenotype (y) against environment (x) for two genotypes. Genotype A's line is flat; Genotype B's line slopes upward. Interpret each line in plasticity terms.",
+    "G×E interaction (V_G×E)": "Same genotypes A and B as above. If A's line slopes one way and B's the OPPOSITE way (lines cross), what does this signature indicate?",
+    "Polyphenic trait": "Aphids alternate between winged and wingless adult morphs depending on population density and food quality. One genotype, two discrete phenotypes. How is this distinct from continuous plasticity, and what cue triggers the switch?",
+    "Canalization": "A genotype produces the same phenotype across a wide environmental range. Why can canalization be selectively favored — and why might it sometimes be selected AGAINST?"
+  },
+
+  "L07": {
+    "Selection in the wild": "Beyond observing differential survival in nature, what additional measurement is required to demonstrate that observed selection has produced evolutionary change?",
+    "Geospiza fortis": "After the 1977 drought, the medium ground finch on Daphne Major shifted toward deeper beaks. Was this driven by selection or by phenotypic plasticity? How could the Grants distinguish them?",
+    "Selection on beak depth": "Why was the rapid (one-year) shift in beak depth in Geospiza fortis particularly important for evolutionary biology — what mistaken claim did it disprove?",
+    "Industrial melanism": "Suppose air-pollution reduction in the 1980s caused tree trunks to lighten. Predict the qualitative shift in peppered moth morph frequencies — and why selection direction reversed.",
+    "Biston betularia": "Why is Biston betularia widely cited as the 'textbook case' of natural selection in action — what makes the example especially clean and well-documented?",
+    "Antibiotic resistance": "A hospital sees a sharp rise in MRSA over 5 years of heavy methicillin use. Identify (1) what evolutionary forces are at work, (2) what change occurred to allele frequencies in the bacterial population, and (3) what intervention slows this evolution.",
+    "Artificial selection": "Wild teosinte has tiny ears with ~6 small kernels; modern maize has massive ears with hundreds of kernels. Selection differential and response over ~9000 years of human breeding. How does this differ from natural selection mechanistically?"
+  },
+
+  "L08": {
+    "Adaptation": "The leaf-shape mimicry of Phyllium (leaf insects) seems perfectly suited to camouflage. Distinguish adaptation as a TRAIT vs. as a PROCESS using this example.",
+    "Gradual evolution": "Critics ask: 'How could the eye evolve gradually — what use is half an eye?' Sketch a stepwise sequence of intermediate eye-like structures, each functional, that exists in living organisms today.",
+    "Stepwise eye evolution": "Name a living organism that represents each of these stages: light-sensitive patch, cup, pinhole eye, lensed eye.",
+    "Convergent evolution of eyes": "Vertebrate and cephalopod (octopus) camera eyes share strikingly similar structure but differ in the orientation of photoreceptors. What does this similarity-with-difference tell you about their evolutionary origins?",
+    "Cis-regulatory mutation": "Two species of Drosophila have ~99% identical pigmentation gene SEQUENCES, but very different wing patterns. Where is the mutation most likely located, and what does this tell you about the role of regulatory evolution in morphological diversity?",
+    "Gene duplication": "Globin genes duplicated multiple times in vertebrate evolution: α-globin, β-globin, γ-globin, ε-globin, δ-globin, myoglobin. Why was duplication a precondition for sub- and neofunctionalization across this gene family?",
+    "Neofunctionalization": "After a gene duplication, one copy retains its ancestral function (oxygen transport in RBC) while the other evolves a new function (oxygen storage in muscle = myoglobin). Identify which copy underwent neo- and which retained the original.",
+    "Subfunctionalization": "An ancestral protein had two functions A and B. After duplication, one copy specializes on A and the other on B. Each is now expressed in different tissues. Distinguish from neofunctionalization.",
+    "Protein promiscuity": "An ancestral steroid receptor binds multiple steroids weakly. After duplication, one copy specializes for cortisol, the other for aldosterone. How does promiscuity facilitate subsequent neofunctionalization?",
+    "Heterochrony": "Domestic dogs retain juvenile features (floppy ears, playful behavior) into adulthood compared to wolves. Categorize this evolutionary change.",
+    "Paedomorphosis": "Axolotls reproduce while still in larval form — gills, fin, and all. Why is this an example of paedomorphosis, and what selective context might favor it?",
+    "Peramorphosis": "Irish elk had massive antlers extending the developmental program past the typical end-point. Compare to paedomorphosis.",
+    "Hox gene": "If you transplant a fly Hox gene into a mouse genome, it can substitute for the mouse's homolog in early development. What does this functional interchangeability across phyla reveal?",
+    "Colinearity": "Hox genes are arranged on the chromosome in the same order as their expression along the body axis — anterior genes in front, posterior genes in back. What is this called, and why is it evolutionarily significant?",
+    "Conservation of developmental networks": "The Pax6 gene initiates eye development in flies, mice, and humans — eyes that look very different, in lineages separated by ~600 million years. What does this conservation suggest about ancestral eye-like structures?",
+    "Vestigial structure": "The human appendix and the whale pelvis are commonly called vestigial. What is the strongest evolutionary argument for their existence, and what alternative explanation does evolution rule out?",
+    "Trade-off": "Cheetahs sprint at 100+ km/h but cannot maintain pace beyond ~30 seconds. Identify a physical trade-off underlying this limit.",
+    "Constraint": "Why don't human spines have a bone-saving design, given that back pain is so common? Frame your answer in terms of evolutionary constraint."
+  },
+
+  "L09": {
+    "Coevolution": "Two species coexist in the same forest. Are they necessarily coevolving? What additional evidence would distinguish coevolution from mere coexistence?",
+    "Reciprocal selection": "Wild ginger (Asarum) flowers have evolved scent that mimics rotting meat to attract carrion-fly pollinators. Have flies' preferences also evolved in response? Why is reciprocal evidence the key to claiming coevolution here?",
+    "Coevolutionary arms race": "In rough-skinned newts (Taricha) and garter snakes (Thamnophis), newt TTX toxicity correlates with snake TTX resistance across populations. What evolutionary process produces this correlation?",
+    "Tetrodotoxin (TTX)": "TTX blocks voltage-gated sodium channels — a key signal in mammalian nervous systems. Why is it remarkable that some garter snake populations have evolved sodium channels resistant to TTX?",
+    "Mutualism": "Ants protect Acacia trees from herbivores; the trees provide ants with food (nectar) and shelter (hollow thorns). What evolutionary force is most likely to disrupt this mutualism, and how do partners enforce reciprocity?",
+    "Endosymbiosis": "Mitochondria have their own circular DNA, ribosomes resembling those of bacteria, and double membranes. What does this evidence support about their origin?",
+    "Batesian mimicry": "A non-toxic Heliconius butterfly evolves wing patterns matching a toxic species. Predict what happens to the mimic's selective advantage if its abundance becomes much greater than that of the model.",
+    "Müllerian mimicry": "Two distinct unpalatable Heliconius species evolve similar wing patterns. Both benefit from predator learning. Why does this differ from Batesian mimicry, and why is it co-adaptive?",
+    "Aposematism": "Poison dart frogs are brilliantly colored and deadly toxic. Why does evolution favor conspicuous coloration in such species — wouldn't camouflage be safer?",
+    "Geographic Mosaic Theory of Coevolution": "Pollinator-flower coevolution between Greya moths and Lithophragma plants varies dramatically across the Pacific Northwest. Some sites show tight reciprocal adaptation; others show no coevolution. What is this geographic patchwork called?"
+  },
+
+  "L11": {
+    "Twofold cost of sex": "An asexual lineage produces all-female offspring carrying 100% of the mother's genes. A sexual lineage produces 50% female and 50% male, and only the female half passes mom's genes (in part) to grandchildren. Calculate the per-generation 'cost' of sex.",
+    "Muller's ratchet": "An asexual lineage of 1000 individuals exists. Due to drift, the class with zero deleterious mutations is occasionally lost. Why can't the original 'clean' class be regenerated? What does this predict for asexual lineage longevity?",
+    "Red Queen hypothesis": "A population of New Zealand snails exists in both sexual and asexual forms. Asexual forms predominate in shallow, parasite-poor lakes; sexual forms in deeper, parasite-rich lakes. Frame this in Red Queen terms.",
+    "Anisogamy": "Sea urchins produce ~10⁶ tiny sperm per spawning male; ~10³ much larger eggs per spawning female. Why is anisogamy considered THE root of male-female differences?",
+    "Isogamy": "Some single-celled algae have two mating types but produce equally-sized gametes. Why is isogamy considered the ancestral state from which anisogamy evolved?",
+    "Sexual selection": "Why is the peacock's tail considered a sexual-selection product rather than a natural-selection product, even though it presumably increases predation risk?",
+    "Intrasexual selection": "Male elephant seals fight intensely for harems; females watch and mate with the winners. Categorize this as intra- or intersexual selection.",
+    "Intersexual selection": "Female bowerbirds inspect male-built bowers (decorated structures) and prefer the most elaborate; non-elaborate bowers go unmated. Categorize this.",
+    "Sexual dimorphism": "Sexual dimorphism in lions: males are 50% heavier than females and have manes. Predict whether selection on body size in males is mostly intra- or intersexual, and why.",
+    "Sexual conflict": "Female fruit flies that mate produce fewer eggs over their lifetime than virgin females, because seminal fluid harms them. Why is this an evolutionary conflict, and what response might females evolve?",
+    "Sperm competition": "Male chimps have testes ~3% of body weight; gorilla males have testes ~0.05% of body weight. Predict the mating systems based on this difference.",
+    "Cryptic female choice": "A female may mate with multiple males but bias paternity through internal mechanisms (storage, ejection, sperm killing). Why is this 'cryptic,' and how does it complicate measurements of male reproductive success?",
+    "Antagonistic coevolution": "Bedbugs use traumatic insemination — males stab females to inject sperm. Females evolve thicker exoskeletons in stabbing zones. What is this two-sex coevolutionary dynamic called?"
+  },
+
+  "L12": {
+    "Life history": "Two animals: one matures at 6 months and dies at age 1, producing 100 offspring. The other matures at 5 years and lives to 30, producing 5 offspring. These represent contrasting life histories. What is a life history, biologically?",
+    "Trade-off": "An octopus that produces enormous broods then dies cannot also produce another brood next year. Identify the trade-off and the constraint that enforces it.",
+    "Reproductive effort": "A salmon spawns once (semelparity) and dies; a perch breeds repeatedly (iteroparity). Why is reproductive effort context-dependent rather than a fixed strategy?",
+    "Extrinsic mortality": "Two guppy populations: one in a pond with predators, one without. Predict differences in their life histories — age at maturity, offspring number, lifespan.",
+    "Intrinsic mortality / senescence": "A captive bird has no predators, no food shortage, no disease. Why does it still age and die? What is this kind of mortality called?",
+    "Senescence": "Natural selection's strength declines with age because few individuals reproduce at old ages. Why does this gradient predict that senescence will evolve as a side-effect, even without 'aging genes'?",
+    "Mutation accumulation theory": "Late-acting deleterious mutations escape selection because they affect post-reproductive individuals. What does this theory predict about mortality patterns at different ages?",
+    "Antagonistic pleiotropy": "A gene increases early-life testosterone and reproductive success but elevates late-life prostate cancer risk. Why might selection favor it on net?",
+    "Disposable soma theory": "Daphnia in lab can extend lifespan by 30% under caloric restriction — but produce fewer offspring. Frame this trade-off in disposable-soma terms.",
+    "Age at maturity": "Female elephants mature at 12–15 years and produce one calf every 4–5 years. Why is delayed maturity favored in elephants, given high adult survival and parental investment?",
+    "r/K selection": "Mice (r) vs. elephants (K). Predict each species' approximate offspring count, parental care, age at maturity, and lifespan.",
+    "Cooperative breeding": "In Florida scrub jays, mature offspring help parents raise next year's brood. Why does this counterintuitive 'helping at the nest' make sense in inclusive-fitness terms?",
+    "Sex-biased dispersal": "In Seychelles warblers, male offspring leave to establish their own territories, while females stay and help. What does this say about who gains more from natal philopatry vs. dispersal?"
+  },
+
+  "L13": {
+    "Group selection": "A trait benefits the species but harms individual carriers (e.g., self-sacrifice in alarm-calling to warn unrelated others). Why is naïve 'good of the species' explanation rejected in modern evolutionary biology? What's wrong with the cheater logic?",
+    "Selfish gene perspective": "Reframe ant worker self-sacrifice from a 'selfish gene' perspective: whose genes are propagating, exactly?",
+    "Hamilton's rule": "Bee worker A helps queen produce 5 sister offspring she would not have otherwise. Worker A's relatedness to sisters is r = 0.75. Cost to worker is C = 1 (lost direct offspring). Use Hamilton's rule to determine if helping evolves.",
+    "Coefficient of relatedness (r)": "Calculate r between (a) full siblings, (b) half-siblings, (c) first cousins, (d) parent and offspring. Why is r the relevant quantity for Hamilton's rule, not 'how genetically similar' two individuals look overall?",
+    "Inclusive fitness": "Worker bees produce zero offspring directly but contribute to nest success. From the workers' genetic perspective, what does inclusive fitness count, and why does it justify their behavior evolutionarily?",
+    "Eusociality": "Naked mole-rats live in colonies with one breeding queen, several breeding males, and dozens of sterile workers. Why is this the 'most extreme' kin-selection example?",
+    "Evolutionarily Stable Strategy (ESS)": "In a Hawk-Dove population, neither pure-Hawk nor pure-Dove is stable. What kind of equilibrium emerges, and why is it a STABLE solution?",
+    "Frequency-dependent selection": "Side-blotched lizards have three male morphs (rock-paper-scissors). Each is favored when rare, disfavored when common. What kind of selection is this, and what kind of population dynamic does it produce?",
+    "Hawk-Dove game": "Two males approach a contested resource. Both Hawk → fight and someone gets seriously injured. Both Dove → display only, share, no injuries. Hawk vs Dove → Hawk wins quickly. Why doesn't pure-Hawk become the only strategy?",
+    "Direct reciprocity": "Vampire bats share blood: bat A donates a blood meal to hungry bat B today; on a future night when A starves, B reciprocates. Why is direct reciprocity called 'tit-for-tat,' and what conditions enable it?",
+    "Indirect reciprocity": "Anonymous public donations to charity: the donor gains reputation, which attracts cooperative partners later. What conditions are needed for indirect reciprocity to evolve?",
+    "Side-blotched lizard (Uta stansburiana)": "Male side-blotched lizards have three throat-color morphs (orange, blue, yellow) that beat each other rock-paper-scissors style: orange beats blue, blue beats yellow, yellow beats orange. Why do all three persist instead of one winning out?"
+  },
+
+  "L14": {
+    "Radiometric dating": "A volcanic ash layer between two fossil-bearing strata is dated at 65.0 ± 0.2 Mya by U-Pb decay. What does this date tell us about the fossils above and below?",
+    "Half-life": "Carbon-14 has half-life 5,730 years. After 28,650 years, what fraction of original ¹⁴C remains? Why is ¹⁴C dating useless for dating dinosaur fossils?",
+    "Biomarker": "Steranes (stable steroid molecules) found in 1.6-billion-year-old rocks suggest the presence of eukaryotes at that time. What evidentiary strength does this provide compared to actual fossils?",
+    "Great Oxidation Event": "Around 2.4 Bya, oxygen-producing cyanobacteria caused atmospheric O₂ to rise from <0.001% to ~10%. Why was this event a 'mass extinction' for anaerobic life, and what evolutionary opportunities did it create?",
+    "Cambrian explosion": "The fossil record shows rapid diversification of major animal phyla over ~20 million years (~541–520 Mya). Why is this called an 'explosion,' and is it actually rapid in evolutionary terms?",
+    "Devonian": "The Devonian period (~419–359 Mya) is called the 'Age of Fishes.' What evolutionary innovations are most associated with this period?",
+    "Permian": "The Permian period (~299–252 Mya) ended with Earth's largest extinction event. What proportion of marine species was lost, and what factors are implicated as causes?",
+    "Mass extinction": "Of the 'Big Five' mass extinctions, which was the most severe in terms of marine species loss? Which one most shaped subsequent vertebrate evolution?",
+    "K-T (K-Pg) boundary": "An iridium-rich clay layer dating to ~66 Mya is found globally. What does this evidence support, and what specific extinction event does it mark?",
+    "Iridium layer": "Iridium is rare in Earth's crust but abundant in extraterrestrial bodies (asteroids, comets). Why is the iridium layer at the K-Pg boundary considered the 'smoking gun' for an asteroid impact?"
+  },
+
+  "L15": {
+    "Tip / Terminal taxon": "On a phylogenetic tree showing primates, where are humans located — at a tip, at a node, or on an internal branch?",
+    "Node": "Two species share a node 5 million years ago. What does this node represent, biologically?",
+    "Branch": "On a phylogenetic tree, the length of a branch can represent (a) time, (b) number of evolutionary changes, or (c) be uninformative. Why does this matter for interpretation?",
+    "Sister groups": "Chimps and humans are sister groups; gorillas are an outgroup. What does 'sister group' mean precisely?",
+    "Synapomorphy": "Mammals share lactation and mammary glands. Are these synapomorphies or symplesiomorphies? At what taxonomic level is each interpretation correct?",
+    "Symplesiomorphy": "Vertebrates all have a vertebral column. Is this a synapomorphy of mammals? Of vertebrates as a whole? What's the difference, and why does it matter for cladistics?",
+    "Homoplasy": "Bat wings and bird wings both fly. Are these homologous (synapomorphies) or analogous (homoplasies)? What evidence distinguishes them?",
+    "Clade / Monophyletic group": "Mammals + their common ancestor + all descendants of that ancestor = mammals. Why is this group considered monophyletic, and what would make it not be?",
+    "Paraphyletic group": "Reptiles in the traditional sense (turtles, lizards, snakes, crocodiles) exclude birds, even though birds are descended from theropod dinosaurs. Why is 'reptiles' paraphyletic, and how do modern systematists fix this?",
+    "Polyphyletic group": "Why is 'warm-blooded animals' (mammals + birds) considered polyphyletic? What kind of trait was used to define this group, and why is that problematic?",
+    "Biological Species Concept (BSC)": "Mules result from horse×donkey matings but are sterile. Are horses and donkeys 'good' biological species under Mayr's BSC? Why or why not?",
+    "Morphological species concept": "Cryptic species are reproductively isolated but morphologically nearly identical (e.g., cryptic skipper butterflies). Which species concept fails on cryptics, and which works better?",
+    "Phylogenetic species concept": "A bacterial 'species' that reproduces only asexually and exchanges genes via horizontal transfer cannot be defined by the BSC. How does the phylogenetic species concept handle this?"
+  },
+
+  "L16": {
+    "Biological Species Concept (BSC)": "An entomologist finds two morphologically similar moths that never interbreed in nature. Are they distinct species under the BSC? What additional evidence might be needed?",
+    "Morphological species concept": "Paleontologists must define species using fossils alone — bones and teeth. Which species concept is most useful for paleontology, and why is the BSC inapplicable?",
+    "Phylogenetic species concept": "Two populations of bacteria differ in 1% of their genome. The phylogenetic species concept might define them as different species. What is the threshold question, and why is it controversial?",
+    "Prezygotic isolation": "Two related orchid species have flowers that bloom in different seasons. They never share pollinators in time. Categorize this isolation mechanism.",
+    "Postzygotic isolation": "Two species hybridize, but the hybrid offspring are sterile. Prezygotic or postzygotic? Pre- or post-fertilization?",
+    "Hybrid sterility": "Mule (horse × donkey) is viable but sterile. Why does sterility usually arise from chromosomal mismatch, and what does this say about ongoing genetic divergence between parent species?",
+    "Allopatric speciation": "An island chain forms when sea levels rise. A previously continuous population becomes fragmented across the islands. Predict how speciation might unfold, and what intermediates might exist between populations.",
+    "Sympatric speciation": "Tetraploidy in plants can produce a new reproductively isolated lineage in one generation, with no geographic separation. Why is polyploid speciation considered sympatric, and why is it more common in plants than animals?",
+    "Reinforcement": "Two recently diverged populations come back into secondary contact. Hybrids are unfit. What kind of selection does this favor, and what trait might evolve in response?",
+    "Hybrid zone": "In central Europe, two species of frogs (Bombina bombina and B. variegata) form a narrow zone where they hybridize. Why does the zone remain stable for thousands of years rather than collapsing into one species?",
+    "Viable hybrid": "Sometimes hybrids are perfectly viable and even outperform parents (e.g., Helianthus sunflower hybrids on novel substrates). Why doesn't this collapse parent-species boundaries?"
+  },
+
+  "L17": {
+    "Biogeography": "Why do Australian kangaroos and South American opossums (both marsupials) tell us something about continental drift and ancient distributions?",
+    "Wallace line": "A faunal boundary in Indonesia separates Asian and Australasian biota — placental mammals on one side, marsupials and unique birds on the other. What does this dramatic boundary tell us about deep history?",
+    "Dispersal": "How did finches reach the remote Galápagos, ~1000 km from the South American mainland? What process do you invoke?",
+    "Vicariance": "South American and African Lystrosaurus fossils (~250 Mya) are nearly identical; today the lineages are extinct in both places, but the closest living relatives are split by the Atlantic Ocean. What process explains this distribution pattern?",
+    "Standing diversity": "An island has 50 species. A neighboring island, 10× larger, has 200 species. Why does island size correlate with standing diversity?",
+    "Turnover rate": "Standing diversity might be 50 species, but each year 5 species go extinct and 5 new species arrive. What is the turnover rate, and why does it matter for biodiversity conservation?",
+    "Adaptive radiation": "After the K-Pg extinction, mammals diversified explosively into many ecological niches. What conditions made this possible, and what term describes this rapid lineage-splitting?",
+    "Key innovation": "Flowering plants (angiosperms) diversified rapidly after evolving flowers and fruits. Identify a 'key innovation' that opened up a major ecological opportunity, and explain why."
+  },
+
+  "L18": {
+    "Selective harvest": "Trophy hunters target the largest-horned bighorn rams. After 30 years, average horn size has decreased ~25%. What process is operating, and why does selective harvest reverse natural selection?",
+    "Fisheries-induced evolution": "Atlantic cod populations under intense fishing pressure have shifted toward earlier maturation (smaller, younger reproducers). Why is this an evolutionary response to size-selective fishing?",
+    "Inbreeding depression": "A captive population of 30 cheetahs in a zoo has very low reproductive success and high cub mortality. Why is inbreeding likely the cause, and what genetic mechanism produces these effects?",
+    "Genetic rescue": "Florida panthers were down to ~30 individuals with severe inbreeding (heart defects, kinked tails). Wildlife managers introduced 8 Texas pumas. The hybrid descendants showed restored fitness. Why was this 'genetic rescue' successful?",
+    "Fragmentation": "An old-growth forest is logged into small isolated patches. Predict the genetic and demographic consequences for a non-flying species.",
+    "Phenological shift": "Tree leaf-out has advanced by ~3 days per decade since 1980 in Europe. What evolutionary or plastic mechanism could underlie this shift, and what mismatch concerns might follow?",
+    "Range shift": "Many species are shifting their ranges poleward and upslope as climate warms. Why might mountain-top species face 'nowhere to go' even when they can disperse?",
+    "Conservation biology": "A new species is threatened with extinction. Why is conservation biology fundamentally an evolutionary discipline, not just an ecological one?",
+    "Captive breeding": "Captive breeding programs aim to preserve genetic diversity, but in practice many programs have lost variation over generations. What evolutionary forces are at work, and what mitigations exist?"
+  },
+
+  "L19": {
+    "Hominin": "Define the hominin lineage. When did it diverge from the chimpanzee lineage, and what is the first major hominin trait that distinguishes us from chimps?",
+    "Bipedalism": "The earliest probable hominin (Sahelanthropus tchadensis, ~7 Mya) shows skeletal evidence of bipedalism. Why is bipedalism considered the FIRST major hominin innovation, before brain enlargement?",
+    "Foramen magnum": "How can paleoanthropologists tell from a fossil skull alone whether a creature was bipedal? What anatomical feature is the smoking gun?",
+    "Australopithecus": "'Lucy' is the famous specimen of Australopithecus afarensis, discovered in Ethiopia in 1974 (~3.2 Mya). What is the evolutionary significance of Australopithecus in the hominin lineage?",
+    "Homo habilis": "Homo habilis (~2.4 Mya) was named 'handy man' because of its association with the first stone tools. Why is the Homo habilis fossil record significant, and what evolutionary capacity does tool use suggest?",
+    "Out of Africa": "Modern humans (Homo sapiens) appeared in Africa ~300 Kya and migrated 'Out of Africa' starting ~70 Kya. What evolutionary advantage might have allowed modern humans to displace earlier hominin populations they encountered?",
+    "Introgression": "Modern humans of European and Asian descent carry ~1–4% Neanderthal DNA. What evolutionary process produced this signal, and what does it tell us about the 'Out of Africa' model?",
+    "Neanderthal": "Neanderthals (Homo neanderthalensis) inhabited Europe and Western Asia ~400–40 Kya. They had brains larger than modern humans, made tools, buried their dead. Why did they go extinct, and what does their genome reveal about their relationship to us?",
+    "Evolutionary medicine": "We evolved as foragers eating diverse, low-calorie diets. Modern industrial diets are calorie-dense and processed. What is this 'mismatch' phenomenon called, and what diseases might it contribute to?",
+    "Virulence": "Why do directly-transmitted respiratory pathogens (like the common cold) tend to evolve toward LESS virulence over time, while waterborne pathogens (like cholera) can evolve to be highly virulent? What is the evolutionary logic?",
+    "Mismatch hypothesis": "Type 2 diabetes is rare in indigenous populations consuming traditional diets but becomes epidemic when those populations adopt Western foods. Frame this in evolutionary mismatch terms."
+  },
+
+  "L20": {
+    "Evolutionary medicine": "A patient asks why we don't have 'better' immune systems if evolution had millions of years to optimize them. Frame your answer in terms of trade-offs and the difference between proximate and ultimate explanations.",
+    "Proximate vs ultimate explanation": "Q: Why do humans get fevers? Proximate: cytokines reset hypothalamic temperature setpoint. Ultimate: ? Provide the evolutionary reason.",
+    "Antibiotic resistance": "Hospital-acquired MRSA is resistant to most β-lactam antibiotics. Antibiotic exposure didn't 'create' the resistance — what process did, and what drove its rise to dominance?",
+    "Horizontal gene transfer (HGT)": "An E. coli strain acquires a plasmid carrying tetracycline resistance from a neighboring Klebsiella. What process moved this gene, and why is HGT particularly important for the spread of resistance among bacteria?",
+    "Combination therapy": "HIV is treated with a combination of 3+ different antiretroviral drugs simultaneously. Why is this so much more effective than a single drug at preventing resistance evolution?",
+    "Vaccine escape / antigenic drift": "Influenza A undergoes constant antigenic drift in its surface proteins, evading prior immunity. Why is this a constant evolutionary problem, and how do public health agencies respond?",
+    "Virulence": "Define virulence. Why is the EVOLUTION of virulence (rather than just its current value) the relevant question for predicting disease outcomes?",
+    "Virulence-transmission trade-off": "A pathogen that quickly kills its host loses the chance to transmit. A pathogen that doesn't damage its host hardly transmits. Where does the optimal virulence lie?",
+    "Vector-borne": "Malaria is transmitted by mosquito vectors; cholera by water; HIV by direct contact. Predict the relative optimal virulence for each transmission mode, and why.",
+    "Ewald's hypothesis": "Cholera in regions with clean water can evolve toward less virulent strains; in regions with poor sanitation, it evolves toward MORE virulent strains. Why does Ewald's framework predict this pattern?",
+    "MHC (Major Histocompatibility Complex)": "Why is the MHC the most polymorphic gene region in the human genome? What evolutionary force explains its extreme variation, and why is MHC variation in dating-app match rates evolutionarily relevant?",
+    "Sickle-cell heterozygote advantage": "In malaria-endemic regions, the sickle-cell allele (HbS) persists at ~10% despite being lethal in homozygotes. Use heterozygote advantage to explain why selection MAINTAINS this allele rather than eliminating it.",
+    "Antigenic variation": "Trypanosomes evade the immune system by switching their surface antigens. HIV, influenza, and trypanosomes all use this strategy. What evolutionary advantage does this provide, and why is vaccine design hard for these pathogens?",
+    "Mismatch hypothesis": "Modern people get tooth decay; ancestral hunter-gatherers rarely did. Why does the mismatch hypothesis explain this, and what evolutionary mismatches are most relevant to dental health?",
+    "Hygiene hypothesis": "Children in farming households have lower allergy rates than urban children. The 'hygiene hypothesis' proposes this is evolutionary. Frame it: what did our immune systems evolve to expect, and what happens when expectations are unmet?",
+    "Diseases of civilization": "Type 2 diabetes, atherosclerosis, certain cancers, mental health disorders. Why are these called 'diseases of civilization,' and what evolutionary mismatches contribute to each?",
+    "Somatic evolution": "A tumor begins as one cell with a mutation that disables apoptosis. Within months, billions of descendant cells exist, varying by additional mutations. Why is cancer described as evolution within an organism?",
+    "Tumor heterogeneity": "Sequencing different regions of the same tumor reveals dozens of distinct genetic clones. Why does this matter for treatment, and what kind of evolutionary process is at work within tumors?",
+    "Adaptive therapy": "Some experimental cancer treatments use lower drug doses that don't aim to kill ALL cancer cells, but rather to prevent resistant clones from dominating. Why might this strategy work better than maximum-tolerated dosing in some cases?"
+  }
+}

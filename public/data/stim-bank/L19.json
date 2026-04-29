@@ -1,0 +1,258 @@
+[
+  {
+    "id": "STIM-L19-001",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "A",
+    "topic": "Bipedalism timing",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "Bipedal locomotion in the hominin lineage began approximately:",
+    "choices": [
+      "200,000 years ago",
+      "1 million years ago",
+      "6–7 million years ago",
+      "100 million years ago"
+    ],
+    "correct": 2,
+    "why": "Bipedalism is the FIRST major hominin trait, evident in the earliest possible hominins like Sahelanthropus (~7 MYA) and Ardipithecus. Brain enlargement came much later.",
+    "choice_why": [
+      "Wrong. 200 KYA is closer to the origin of anatomically modern Homo sapiens.",
+      "Wrong. Bipedalism predates 1 MYA by several million years.",
+      "Correct. Bipedalism evolved 6–7 MYA in early hominins.",
+      "Wrong. 100 MYA was the Cretaceous; no hominins existed."
+    ],
+    "source": "sg-exam-3 §6; L19 §A"
+  },
+  {
+    "id": "STIM-L19-002",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "A",
+    "topic": "Sahelanthropus",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Sahelanthropus tchadensis, an early possible hominin from ~7 MYA, was discovered in:",
+    "choices": [
+      "South Africa",
+      "Chad",
+      "Indonesia",
+      "Mongolia"
+    ],
+    "correct": 1,
+    "why": "Sahelanthropus was found in Chad — a notable finding because most hominin fossils come from East Africa or South Africa. The Chad locality expanded the geographic range of early hominins.",
+    "choice_why": [
+      "Wrong. South Africa has many hominin fossils (Australopithecus, Paranthropus) but not Sahelanthropus.",
+      "Correct. Chad is the locality. The study guide flags this directly.",
+      "Wrong. Indonesia has Homo erectus fossils but not Sahelanthropus.",
+      "Wrong. Mongolia is not a hominin fossil region."
+    ],
+    "source": "sg-exam-3 §6; L19 §A"
+  },
+  {
+    "id": "STIM-L19-003",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "A",
+    "topic": "Foramen magnum and bipedalism",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "How can paleontologists infer that an extinct hominin walked bipedally from skull anatomy alone?",
+    "choices": [
+      "By measuring brain size.",
+      "By the position of the foramen magnum (the spinal cord opening) — UNDERNEATH the skull indicates an upright spine; toward the REAR indicates a quadruped.",
+      "By the shape of the eye sockets.",
+      "By tooth wear patterns."
+    ],
+    "correct": 1,
+    "why": "In quadrupeds, the spinal cord exits the rear of the skull, aligning with a horizontal spine. In bipeds, it exits underneath, aligning with a vertical spine. The foramen magnum's position is a reliable indicator of habitual posture.",
+    "choice_why": [
+      "Wrong. Brain size correlates with cognition, not posture.",
+      "Correct. Foramen magnum position is the diagnostic feature.",
+      "Wrong. Eye socket shape relates to vision, not posture.",
+      "Wrong. Tooth wear relates to diet, not posture."
+    ],
+    "source": "sg-exam-3 §6; L19 §A"
+  },
+  {
+    "id": "STIM-L19-004",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "B",
+    "topic": "Lucy / Australopithecus",
+    "type": "mc",
+    "difficulty": "recall",
+    "points": 1,
+    "q": "'Lucy' is a famous specimen of which species?",
+    "choices": [
+      "Homo erectus",
+      "Australopithecus afarensis",
+      "Sahelanthropus tchadensis",
+      "Homo neanderthalensis"
+    ],
+    "correct": 1,
+    "why": "Lucy (~3.2 MYA, Ethiopia) is the iconic specimen of Australopithecus afarensis — small-brained but fully bipedal, demonstrating that bipedalism preceded brain enlargement in hominin evolution.",
+    "choice_why": [
+      "Wrong. H. erectus is later, ~1.9 MYA.",
+      "Correct. Lucy is A. afarensis.",
+      "Wrong. Sahelanthropus is much earlier (~7 MYA), found in Chad.",
+      "Wrong. Neanderthals are much later, in Eurasia."
+    ],
+    "source": "sg-exam-3 §6; L19 §B"
+  },
+  {
+    "id": "STIM-L19-005",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "B",
+    "topic": "First hominin out of Africa",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Which hominin species was the FIRST to disperse out of Africa?",
+    "choices": [
+      "Homo sapiens",
+      "Homo neanderthalensis",
+      "Homo erectus",
+      "Australopithecus afarensis"
+    ],
+    "correct": 2,
+    "why": "Homo erectus dispersed out of Africa ~1.8–1.9 MYA, reaching East Asia (Java, China). Homo sapiens left much later, ~70 KYA.",
+    "choice_why": [
+      "Wrong. Homo sapiens left Africa much later (~70 KYA).",
+      "Wrong. Neanderthals descended from a population that left Africa as part of an earlier wave.",
+      "Correct. H. erectus, ~1.9 MYA, was the first.",
+      "Wrong. Australopithecines remained in Africa."
+    ],
+    "source": "sg-exam-3 §6; L19 §B"
+  },
+  {
+    "id": "STIM-L19-006",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "C",
+    "topic": "Neanderthal introgression",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Modern non-African humans typically carry approximately what fraction of Neanderthal-derived DNA?",
+    "choices": [
+      "0%",
+      "1–4%",
+      "20–30%",
+      "50%"
+    ],
+    "correct": 1,
+    "why": "Modern non-African humans carry ~1–4% Neanderthal DNA, from interbreeding ~40–60 KYA after Homo sapiens left Africa. African populations have very little or none, since the introgression occurred after the migration.",
+    "choice_why": [
+      "Wrong. Non-Africans do carry Neanderthal DNA, just a small fraction.",
+      "Correct. ~1–4% Neanderthal DNA in modern non-Africans.",
+      "Wrong. That's much higher than actual estimates.",
+      "Wrong. 50% would be a recent F1 hybrid, not human."
+    ],
+    "source": "sg-exam-3 §6; L19 §C"
+  },
+  {
+    "id": "STIM-L19-007",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "D",
+    "topic": "Antibiotic resistance evolution",
+    "type": "mc",
+    "difficulty": "application",
+    "points": 1,
+    "q": "Antibiotic resistance in bacteria is a textbook example of natural selection because:",
+    "choices": [
+      "Antibiotics induce mutations toward resistance.",
+      "Resistance mutations occur randomly; antibiotics are the selective force that increases resistant variants' frequency.",
+      "Bacteria deliberately evolve resistance.",
+      "Resistance is acquired during a bacterium's lifetime and passed via cell division."
+    ],
+    "correct": 1,
+    "why": "Mutations conferring resistance occur whether or not antibiotics are present. The antibiotic is a selective force — kills susceptible bacteria, lets resistant variants reproduce. Random mutation + non-random selection.",
+    "choice_why": [
+      "Wrong. Antibiotics don't direct mutations toward resistance.",
+      "Correct. Random mutation + selection.",
+      "Wrong. Bacteria don't 'decide' to evolve.",
+      "Wrong. Resistance comes from heritable mutations, not Lamarckian acquisition."
+    ],
+    "source": "sg-exam-3 §7; L19 §D"
+  },
+  {
+    "id": "STIM-L19-008",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "D",
+    "topic": "Mismatch hypothesis",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "The MISMATCH hypothesis in evolutionary medicine proposes that:",
+    "choices": [
+      "Modern humans are mismatched with their environment because they evolve too fast.",
+      "Many modern diseases (obesity, type 2 diabetes, atherosclerosis) reflect mismatches between traits adapted to ancestral environments and conditions in modern life.",
+      "Pathogens cannot infect humans whose immune systems are mismatched.",
+      "Modern medicine is unable to keep up with mutation rates."
+    ],
+    "correct": 1,
+    "why": "The mismatch hypothesis: traits like efficient fat storage, sweet/fat preferences, and inactivity-tolerance evolved in food-scarce environments with high physical activity. They are MISMATCHED to modern food abundance and sedentary life, contributing to obesity, diabetes, and heart disease.",
+    "choice_why": [
+      "Wrong. Modern human evolution is slow on the relevant timescale, not fast.",
+      "Correct. Ancestral-modern environmental mismatch underlies many modern diseases.",
+      "Wrong. The mismatch hypothesis isn't about pathogen susceptibility specifically.",
+      "Wrong. Mutation rates are not what mismatch refers to."
+    ],
+    "source": "sg-exam-3 §7; L19 §D"
+  },
+  {
+    "id": "STIM-L19-009",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "D",
+    "topic": "Virulence evolution",
+    "type": "mc",
+    "difficulty": "synthesis",
+    "points": 1,
+    "q": "Pathogens transmitted directly between hosts (e.g., respiratory viruses passing person-to-person) often evolve toward LOWER virulence. Why?",
+    "choices": [
+      "Lower virulence is morally preferable.",
+      "Direct transmission requires a healthy, mobile host; very high virulence kills hosts before they spread the pathogen.",
+      "Direct transmission is biologically impossible at high virulence.",
+      "Higher virulence wastes the pathogen's energy."
+    ],
+    "correct": 1,
+    "why": "Virulence evolution depends on transmission mode. Directly transmitted pathogens need a mobile host to spread; killing hosts too quickly limits transmission. Vector-borne or waterborne pathogens (which don't need a healthy host) can evolve higher virulence.",
+    "choice_why": [
+      "Wrong. Selection has no morality.",
+      "Correct. Trade-off between virulence and transmission opportunity.",
+      "Wrong. Direct transmission is possible at any virulence level — it just trades off with host survival.",
+      "Wrong. Energy efficiency isn't the issue."
+    ],
+    "source": "sg-exam-3 §7; L19 §D"
+  },
+  {
+    "id": "STIM-L19-010",
+    "exam": 3,
+    "lecture": "L19",
+    "section": "A,B,C",
+    "topic": "Hominin evolution timeline — short answer",
+    "type": "sa",
+    "difficulty": "synthesis",
+    "points": 4,
+    "q": "Briefly describe the hominin evolutionary sequence from the chimpanzee split to modern humans. Include: (a) approximate time of the chimp-hominin split, (b) the FIRST major hominin innovation, (c) the genus that first left Africa, and (d) the approximate age of anatomically modern Homo sapiens.",
+    "rubric": {
+      "total": 4,
+      "criteria": [
+        { "pts": 1, "desc": "Chimp-hominin split: ~6–7 MYA in Africa." },
+        { "pts": 1, "desc": "First innovation: BIPEDALISM (preceded brain enlargement). Sahelanthropus, Orrorin, Ardipithecus are early bipedal hominins." },
+        { "pts": 1, "desc": "First out-of-Africa migration: Homo erectus (~1.9 MYA), reaching East Asia and Europe." },
+        { "pts": 1, "desc": "Anatomically modern Homo sapiens: ~300 KYA in Africa; major out-of-Africa migration ~70 KYA." }
+      ]
+    },
+    "model_answer": "(a) The hominin lineage diverged from chimpanzees approximately 6–7 MYA in Africa. (b) BIPEDALISM was the first major hominin trait — present in the earliest probable hominins (Sahelanthropus tchadensis from Chad, ~7 MYA; Ardipithecus, ~4.4 MYA). Brain enlargement came LATER in hominin evolution. (c) Homo erectus was the FIRST hominin to leave Africa, ~1.9 MYA, reaching as far as East Asia (Java, China) and Europe. (d) Anatomically modern Homo sapiens emerged in Africa ~300 KYA, with the major out-of-Africa dispersal ~70 KYA. After this dispersal, modern humans interbred with Neanderthals and Denisovans, contributing the ~1–4% archaic-human DNA found in modern non-African populations.",
+    "source": "sg-exam-3 §6; L19 §A,B,C"
+  }
+]
