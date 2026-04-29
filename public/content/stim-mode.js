@@ -143,17 +143,42 @@
 
   // -------- setup view --------
   function renderSetup() {
-    const settings = loadJSON(LS_SETTINGS, { exam: 1, count: 25, type: 'mixed', timer: 0 });
+    const settings = loadJSON(LS_SETTINGS, { exam: 1, count: 25, type: 'mixed', timer: 0, lecture: 'all' });
+    if (settings.lecture == null) settings.lecture = 'all';
     const stats = computeStats();
 
     const examChip = (n, label) => `<button class="stim-chip${settings.exam===n?' active':''}" data-set="exam" data-val="${n}">${label}</button>`;
     const countChip = n => `<button class="stim-chip${settings.count===n?' active':''}" data-set="count" data-val="${n}">${n===0?'All':n}</button>`;
     const typeChip = (v, l) => `<button class="stim-chip${settings.type===v?' active':''}" data-set="type" data-val="${v}">${l}</button>`;
     const timerChip = (s, l) => `<button class="stim-chip${settings.timer===s?' active':''}" data-set="timer" data-val="${s}">${l}</button>`;
+    const lecChip = (v, l) => `<button class="stim-chip${settings.lecture===v?' active':''}" data-set="lecture" data-val="${v}">${l}</button>`;
 
     const idx = window.STIM_INDEX || { byExam: {}, byLecture: {} };
     const examCounts = idx.byExam || {};
+    const lectureCounts = idx.byLecture || {};
     const totalQs = Array.isArray(window.STIM_BANK) ? window.STIM_BANK.length : 0;
+
+    // Lectures in scope for the currently-selected exam (Cumulative shows all).
+    const examSet = settings.exam === 0 ? null : new Set(examCounts[settings.exam] || []);
+    const lectureKeys = Object.keys(lectureCounts).filter(lec => {
+      if (examSet === null) return true;
+      return (lectureCounts[lec] || []).some(qid => examSet.has(qid));
+    }).sort();
+
+    // If user previously chose a lecture that isn't in the current exam, drop back to All.
+    if (settings.lecture !== 'all' && !lectureKeys.includes(settings.lecture)) {
+      settings.lecture = 'all';
+      saveJSON(LS_SETTINGS, settings);
+    }
+
+    const lectureChipsHtml = [
+      lecChip('all', 'All lectures'),
+      ...lectureKeys.map(lec => {
+        const ids = lectureCounts[lec] || [];
+        const count = examSet === null ? ids.length : ids.filter(qid => examSet.has(qid)).length;
+        return lecChip(lec, `${lec} (${count})`);
+      })
+    ].join('');
 
     root().innerHTML = `
       <div class="stim-shell">
@@ -169,6 +194,10 @@
             ${examChip(2, 'Exam 2 ('+((examCounts[2]||[]).length)+')')}
             ${examChip(3, 'Exam 3 ('+((examCounts[3]||[]).length)+')')}
             ${examChip(0, 'Cumulative ('+totalQs+')')}
+          </div>
+          <div class="stim-row">
+            <label>Lecture</label>
+            ${lectureChipsHtml}
           </div>
           <div class="stim-row">
             <label>Question count</label>
@@ -207,7 +236,7 @@
     root().querySelectorAll('.stim-chip[data-set]').forEach(b => {
       b.addEventListener('click', () => {
         const k = b.dataset.set, v = b.dataset.val;
-        settings[k] = (k === 'type') ? v : Number(v);
+        settings[k] = (k === 'type' || k === 'lecture') ? v : Number(v);
         saveJSON(LS_SETTINGS, settings);
         // re-render to update active states
         renderSetup();
@@ -225,6 +254,9 @@
   function startSession(settings) {
     const bank = window.STIM_BANK;
     let pool = bank.filter(q => settings.exam === 0 || q.exam === settings.exam);
+    if (settings.lecture && settings.lecture !== 'all') {
+      pool = pool.filter(q => q.lecture === settings.lecture);
+    }
     if (settings.type === 'mc') pool = pool.filter(q => q.type === 'mc');
     if (settings.type === 'sa') pool = pool.filter(q => q.type === 'sa');
     if (pool.length === 0) {
