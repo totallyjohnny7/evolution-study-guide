@@ -3,6 +3,18 @@
    game theory, speciation modes, phylogenetic groupings, Hox / dev.
    Each card may include a `mnem` field that the new view renders in a
    separate gold-bordered subsection. */
+
+// Helper exposed for downstream patch files to merge content per-term without overwriting.
+window.addCardPatches = function (lectureId, terms) {
+  if (!window.FLASHCARD_PATCHES) window.FLASHCARD_PATCHES = {};
+  if (!window.FLASHCARD_PATCHES[lectureId]) window.FLASHCARD_PATCHES[lectureId] = {};
+  Object.entries(terms || {}).forEach(function (entry) {
+    var term = entry[0]; var patch = entry[1];
+    if (!window.FLASHCARD_PATCHES[lectureId][term]) window.FLASHCARD_PATCHES[lectureId][term] = {};
+    Object.assign(window.FLASHCARD_PATCHES[lectureId][term], patch);
+  });
+};
+
 (function () {
   const EXTRA = {
     "L01": [
@@ -1013,4 +1025,66 @@
     });
   }
   console.log('[flashcards-extra] +' + added + ' gap-filling cards merged into decks.');
+
+  // === PATCHES MERGE ===
+  // Apply window.FLASHCARD_PATCHES (filled by _patches_g*.js files) to existing cards.
+  // Schema: window.FLASHCARD_PATCHES = { L01: { "Term name": { exAnswer, mnem, analogy } } }
+  // Patches only fill EMPTY fields (won't overwrite existing exAnswer / mnem).
+  function applyPatches() {
+    const patches = window.FLASHCARD_PATCHES;
+    if (!patches) return;
+    const stripTerm = (t) => (t || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+
+    const flatLookup = {};
+    Object.entries(patches).forEach(([lectureId, byTerm]) => {
+      if (!byTerm || typeof byTerm !== 'object') return;
+      Object.entries(byTerm).forEach(([term, patch]) => {
+        const k = stripTerm(term);
+        if (!flatLookup[k]) flatLookup[k] = [];
+        flatLookup[k].push({ lectureId, patch });
+      });
+    });
+
+    let patchedFields = 0;
+    const applyOne = (card, patch) => {
+      if (!card || !patch) return;
+      if (patch.exAnswer && !card.exAnswer) { card.exAnswer = patch.exAnswer; patchedFields++; }
+      if (patch.mnem && !card.mnem && !card.mnemonic) { card.mnem = patch.mnem; patchedFields++; }
+      if (patch.analogy && !card.analogy && !card.mnem && !card.mnemonic) { card.analogy = patch.analogy; patchedFields++; }
+      if (patch.importance && !card.importance) { card.importance = patch.importance; patchedFields++; }
+      if (patch.images && !card.images) { card.images = patch.images; patchedFields++; }
+    };
+
+    Object.entries(patches).forEach(([lectureId, byTerm]) => {
+      const deck = window.FLASHCARD_DECKS[lectureId];
+      if (!Array.isArray(deck) || !byTerm) return;
+      const termMap = {};
+      Object.entries(byTerm).forEach(([term, patch]) => { termMap[stripTerm(term)] = patch; });
+      deck.forEach(card => {
+        const patch = termMap[stripTerm(card.term)];
+        if (patch) applyOne(card, patch);
+      });
+    });
+
+    const allDeck = window.FLASHCARD_DECKS.all;
+    if (Array.isArray(allDeck)) {
+      allDeck.forEach(card => {
+        const k = stripTerm(card.term);
+        const candidates = flatLookup[k];
+        if (!candidates) return;
+        const ctxPrefix = (card.ctx || '').match(/^(L\d+)/);
+        const lectureId = ctxPrefix ? ctxPrefix[1] : null;
+        const match = candidates.find(c => c.lectureId === lectureId) || candidates[0];
+        applyOne(card, match.patch);
+      });
+    }
+
+    console.log('[flashcards-patches] applied ' + patchedFields + ' field(s) across decks.');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyPatches);
+  } else {
+    Promise.resolve().then(applyPatches);
+  }
 })();

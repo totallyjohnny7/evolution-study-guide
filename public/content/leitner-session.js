@@ -24,6 +24,7 @@
     SESSION:  'leitner-session-v1',
     HISTORY:  'leitner-history-v1',
     SETTINGS: 'leitner-settings-v1',
+    FLAGGED:  'leitner-flagged-v1',
   };
 
   // ============================================================ utility
@@ -110,6 +111,102 @@
     } catch (e) {}
 
     saveJSON(KEYS.PROGRESS, out);
+  }
+
+  // ============================================================ flagged cards
+
+  const FLAG_REASONS = [
+    { id: 'no_exanswer', label: 'No answer to Apply It' },
+    { id: 'no_analogy',  label: 'No analogy / mnemonic' },
+    { id: 'wrong',       label: 'Wrong content' },
+    { id: 'unclear',     label: 'Unclear / confusing' },
+    { id: 'thin_def',    label: 'Definition too thin' },
+    { id: 'other',       label: 'Other' },
+  ];
+
+  function loadFlagged() { return loadJSON(KEYS.FLAGGED, []); }
+  function saveFlagged(arr) { saveJSON(KEYS.FLAGGED, arr); }
+
+  function getFlagEntry(card) {
+    const k = cardKey(card);
+    return loadFlagged().find(f => f.key === k) || null;
+  }
+  function isFlagged(card) { return !!getFlagEntry(card); }
+
+  function flagCard(card, reasonId, note) {
+    if (!card) return;
+    const k = cardKey(card);
+    const arr = loadFlagged();
+    const existingIdx = arr.findIndex(f => f.key === k);
+    const entry = {
+      key: k,
+      term: card.term || '',
+      def:  card.def  || '',
+      example:  card.example  || '',
+      exAnswer: card.exAnswer || '',
+      mnem:     card.mnem || card.mnemonic || '',
+      analogy:  card.analogy  || '',
+      ctx:      card.ctx      || '',
+      reason:   reasonId || 'other',
+      note:     note     || '',
+      ts:       Date.now(),
+    };
+    if (existingIdx >= 0) arr[existingIdx] = entry;
+    else arr.push(entry);
+    saveFlagged(arr);
+  }
+
+  function unflagCard(cardOrKey) {
+    const k = (cardOrKey && typeof cardOrKey === 'object') ? cardKey(cardOrKey) : cardOrKey;
+    saveFlagged(loadFlagged().filter(f => f.key !== k));
+  }
+
+  function clearAllFlags() { saveFlagged([]); }
+
+  function buildClaudePrompt() {
+    const flagged = loadFlagged();
+    if (!flagged.length) return '';
+    const reasonLabel = id => (FLAG_REASONS.find(r => r.id === id) || { label: id }).label;
+
+    const cards = flagged.map(f => ({
+      term: f.term,
+      reason: reasonLabel(f.reason),
+      note: f.note || '',
+      ctx: f.ctx,
+      current: {
+        def: f.def,
+        example: f.example,
+        exAnswer: f.exAnswer,
+        mnem: f.mnem,
+        analogy: f.analogy,
+      }
+    }));
+
+    return [
+      'Fix these flashcards in the evolution-study-guide repo.',
+      '',
+      'Source files (public/ is what deploys):',
+      '  C:\\Users\\johnn\\Desktop\\School\\Evolution_EVOL4230\\evolution-study-guide\\public\\content\\flashcards.js',
+      '  C:\\Users\\johnn\\Desktop\\School\\Evolution_EVOL4230\\evolution-study-guide\\public\\content\\flashcards-extra.js',
+      '',
+      'For each card below:',
+      '  1. Locate the card by exact `term` field in flashcards.js or flashcards-extra.js.',
+      '  2. Apply the fix described in `reason` (and `note` if present):',
+      '       - "No answer to Apply It"  -> add an `exAnswer` field that clearly answers the `example` prompt.',
+      '       - "No analogy / mnemonic"  -> add a `mnem` (or `analogy`) field with a memorable hook tied to the def.',
+      '       - "Wrong content"          -> verify against course material and rewrite `def` (and `exAnswer` if affected).',
+      '       - "Unclear / confusing"    -> rewrite `def` and `example` for clarity, keep meaning.',
+      '       - "Definition too thin"    -> expand `def` with the key mechanism / why-it-matters.',
+      '       - "Other"                  -> follow the `note`.',
+      '  3. Keep existing fields intact unless the fix requires changing them.',
+      '  4. Match the existing style: short crisp `def`, `example` is an Apply-It scenario, `exAnswer` answers the scenario in 1-3 sentences.',
+      '  5. After all fixes, ask me before deploying. (Deploy is `bash deploy.sh "msg"` from the repo root.)',
+      '',
+      'CARDS TO FIX (' + cards.length + '):',
+      '```json',
+      JSON.stringify(cards, null, 2),
+      '```',
+    ].join('\n');
   }
 
   // ============================================================ progress
@@ -674,11 +771,15 @@
         `<button type="button" class="lz-time-chip ${m === settings.minutes ? 'active' : ''}" data-min="${m}">${m} min</button>`
       ).join('');
 
+      const flaggedCount = loadFlagged().length;
       root.innerHTML = `
         <div class="lz-setup">
           <header class="lz-setup-head">
             <h2>Session</h2>
-            <button class="lz-icon-btn lz-close" id="lzCloseSetup" title="Close (Esc)">×</button>
+            <div class="lz-setup-head-actions">
+              <button class="lz-btn-flagged-open" id="lzOpenFlagged" title="Review flagged cards">🚩 Flagged${flaggedCount ? ' · ' + flaggedCount : ''}</button>
+              <button class="lz-icon-btn lz-close" id="lzCloseSetup" title="Close (Esc)">×</button>
+            </div>
           </header>
           ${resumeBlock}
           <div class="lz-setup-body">
@@ -692,7 +793,7 @@
             </label>
             <button class="lz-btn lz-btn-primary lz-btn-go" id="lzStart">Start session</button>
             <p class="lz-setup-hint">
-              <kbd>1</kbd> Miss · <kbd>2</kbd> Shaky · <kbd>3</kbd> Got it · <kbd>Space</kbd> flip · <kbd>U</kbd> undo · <kbd>J</kbd> skip
+              <kbd>1</kbd> Miss · <kbd>2</kbd> Shaky · <kbd>3</kbd> Got it · <kbd>Space</kbd> flip · <kbd>U</kbd> undo · <kbd>J</kbd> skip · <kbd>F</kbd> flag
             </p>
           </div>
         </div>
@@ -700,6 +801,9 @@
 
       const close = document.getElementById('lzCloseSetup');
       if (close) close.addEventListener('click', () => UI.exit());
+
+      const openFlagged = document.getElementById('lzOpenFlagged');
+      if (openFlagged) openFlagged.addEventListener('click', () => UI.openFlaggedReview());
 
       document.querySelectorAll('#lzTimeChips .lz-time-chip').forEach(c => {
         c.addEventListener('click', () => {
@@ -785,12 +889,49 @@
         } else if (mEl) {
           mEl.style.display = 'none';
         }
+
+        const impEl = document.getElementById('lzImportance');
+        if (impEl) {
+          if (card.importance) {
+            impEl.innerHTML = '<span class="lz-importance-label">Why it&apos;s important</span>' + card.importance;
+            impEl.style.display = '';
+          } else {
+            impEl.style.display = 'none';
+          }
+        }
+
+        const imgsEl = document.getElementById('lzImages');
+        if (imgsEl) {
+          const imgs = Array.isArray(card.images) ? card.images : (card.image ? [card.image] : []);
+          const validImgs = imgs.filter(i => i && (typeof i === 'string' ? i : i.src));
+          if (validImgs.length) {
+            imgsEl.innerHTML = '<span class="lz-images-label">Visual</span>' +
+              validImgs.map(img => {
+                const src = typeof img === 'string' ? img : img.src;
+                const caption = (typeof img === 'object' && img.caption) ? img.caption : '';
+                const credit = (typeof img === 'object' && img.credit) ? img.credit : '';
+                return `<figure class="lz-image-fig">
+                  <img class="lz-image-img" src="${escHTML(src)}" alt="${escHTML(caption || card.term || '')}" loading="lazy" onerror="this.parentElement.classList.add('lz-image-fail')"/>
+                  ${caption ? `<figcaption class="lz-image-cap">${caption}</figcaption>` : ''}
+                  ${credit ? `<span class="lz-image-credit">${escHTML(credit)}</span>` : ''}
+                </figure>`;
+              }).join('');
+            imgsEl.style.display = '';
+          } else {
+            imgsEl.style.display = 'none';
+          }
+        }
+
         if (flipBtn) flipBtn.textContent = 'Hide answer';
       } else {
         if (aEl) aEl.style.display = 'none';
         if (eEl) eEl.style.display = 'none';
         if (exAnsEl) exAnsEl.style.display = 'none';
         if (mEl) mEl.style.display = 'none';
+        const impElHide = document.getElementById('lzImportance');
+        if (impElHide) impElHide.style.display = 'none';
+        const imgsElHide = document.getElementById('lzImages');
+        if (imgsElHide) imgsElHide.style.display = 'none';
         if (flipBtn) flipBtn.textContent = 'Flip (Space)';
       }
 
@@ -801,6 +942,8 @@
 
       const tEl = document.getElementById('lzTimer');
       if (tEl) tEl.textContent = fmtTime(S.remainingMs);
+
+      UI.refreshFlagBtn();
     },
 
     bindCardActions() {
@@ -820,6 +963,7 @@
 
       const skipBtn = document.getElementById('lzSkip'); if (skipBtn) skipBtn.addEventListener('click', skip);
       const undoBtn = document.getElementById('lzUndo'); if (undoBtn) undoBtn.addEventListener('click', undo);
+      const flagBtn = document.getElementById('lzFlag'); if (flagBtn) flagBtn.addEventListener('click', () => UI.openFlagPicker());
 
       const exitBtn = document.getElementById('lzExit');
       if (exitBtn) exitBtn.addEventListener('click', () => {
@@ -1105,6 +1249,161 @@
       }
     },
 
+    refreshFlagBtn() {
+      const item = currentItem();
+      const lbl = document.getElementById('lzFlagLbl');
+      const btn = document.getElementById('lzFlag');
+      if (!btn || !lbl) return;
+      if (item && isFlagged(item.card)) {
+        btn.classList.add('lz-flagged');
+        lbl.textContent = 'Flagged ✓';
+      } else {
+        btn.classList.remove('lz-flagged');
+        lbl.textContent = 'Flag (F)';
+      }
+    },
+
+    openFlagPicker() {
+      const overlay = document.getElementById('lzModalRoot');
+      const item = currentItem();
+      if (!overlay || !item) return;
+      const card = item.card;
+      const existing = getFlagEntry(card);
+      const term = (card.term || '').replace(/<[^>]+>/g, '');
+      const reasonChips = FLAG_REASONS.map(r => `
+        <button type="button" class="lz-flag-chip ${existing && existing.reason === r.id ? 'active' : ''}" data-reason="${r.id}">
+          ${escHTML(r.label)}
+        </button>
+      `).join('');
+
+      overlay.innerHTML = `
+        <div class="lz-modal lz-flag-picker">
+          <span class="lz-flag-label">${existing ? 'Update flag' : 'Flag this card'}</span>
+          <h3>${escHTML(term)}</h3>
+          <div class="lz-flag-chips">${reasonChips}</div>
+          <label class="lz-flag-note-label">
+            <span>Note (optional)</span>
+            <textarea id="lzFlagNote" class="lz-flag-note" rows="2" placeholder="What's missing or wrong?">${escHTML(existing ? existing.note : '')}</textarea>
+          </label>
+          <div class="lz-flag-buttons">
+            ${existing ? '<button type="button" class="lz-btn lz-btn-ghost" id="lzFlagRemove">Remove flag</button>' : ''}
+            <button type="button" class="lz-btn lz-btn-ghost" id="lzFlagCancel">Cancel</button>
+            <button type="button" class="lz-btn lz-btn-primary" id="lzFlagSave" disabled>Save flag</button>
+          </div>
+        </div>
+        <div class="lz-modal-backdrop" id="lzFlagBackdrop"></div>
+      `;
+      overlay.style.display = '';
+
+      let chosen = existing ? existing.reason : null;
+      const saveBtn = document.getElementById('lzFlagSave');
+      const noteEl = document.getElementById('lzFlagNote');
+      const sync = () => { if (saveBtn) saveBtn.disabled = !chosen; };
+      sync();
+
+      overlay.querySelectorAll('.lz-flag-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          overlay.querySelectorAll('.lz-flag-chip').forEach(x => x.classList.remove('active'));
+          chip.classList.add('active');
+          chosen = chip.dataset.reason;
+          sync();
+        });
+      });
+
+      const close = () => { overlay.style.display = 'none'; overlay.innerHTML = ''; UI.refreshFlagBtn(); };
+      const cancel = document.getElementById('lzFlagCancel');
+      if (cancel) cancel.addEventListener('click', close);
+      const back = document.getElementById('lzFlagBackdrop');
+      if (back) back.addEventListener('click', close);
+      const remove = document.getElementById('lzFlagRemove');
+      if (remove) remove.addEventListener('click', () => { unflagCard(card); close(); });
+      if (saveBtn) saveBtn.addEventListener('click', () => {
+        if (!chosen) return;
+        flagCard(card, chosen, noteEl ? noteEl.value.trim() : '');
+        close();
+      });
+    },
+
+    openFlaggedReview() {
+      UI.ensureRoot();
+      const overlay = document.getElementById('lzModalRoot');
+      if (!overlay) return;
+      const flagged = loadFlagged();
+      const reasonLabel = id => (FLAG_REASONS.find(r => r.id === id) || { label: id }).label;
+
+      const rows = flagged.length ? flagged.map(f => `
+        <li class="lz-flagged-row" data-key="${escHTML(f.key)}">
+          <div class="lz-flagged-row-head">
+            <span class="lz-flagged-term">${escHTML((f.term || '').replace(/<[^>]+>/g, ''))}</span>
+            <span class="lz-flagged-reason">${escHTML(reasonLabel(f.reason))}</span>
+            <button type="button" class="lz-flagged-rm" data-key="${escHTML(f.key)}" title="Remove from list">×</button>
+          </div>
+          <div class="lz-flagged-ctx">${escHTML(f.ctx || '')}</div>
+          ${f.note ? `<div class="lz-flagged-note">${escHTML(f.note)}</div>` : ''}
+        </li>
+      `).join('') : '<li class="lz-flagged-empty">No flagged cards yet. Press <kbd>F</kbd> during a session to flag one.</li>';
+
+      overlay.innerHTML = `
+        <div class="lz-modal lz-flagged-modal">
+          <header class="lz-flagged-head">
+            <h3>Flagged cards <span class="lz-flagged-count">${flagged.length}</span></h3>
+            <button type="button" class="lz-icon-btn" id="lzFlaggedClose" title="Close">×</button>
+          </header>
+          <p class="lz-flagged-hint">
+            Click <strong>Copy for Claude Code</strong> below, paste into a Claude Code session opened in your <code>evolution-study-guide</code> folder.
+          </p>
+          <ul class="lz-flagged-list">${rows}</ul>
+          <div class="lz-flagged-actions">
+            <button type="button" class="lz-btn lz-btn-ghost" id="lzFlaggedClear" ${flagged.length ? '' : 'disabled'}>Clear all</button>
+            <button type="button" class="lz-btn lz-btn-primary" id="lzFlaggedCopy" ${flagged.length ? '' : 'disabled'}>📋 Copy for Claude Code</button>
+          </div>
+          <div class="lz-flagged-toast" id="lzFlaggedToast"></div>
+        </div>
+        <div class="lz-modal-backdrop" id="lzFlaggedBackdrop"></div>
+      `;
+      overlay.style.display = '';
+
+      const close = () => { overlay.style.display = 'none'; overlay.innerHTML = ''; if (!S || S.endedAt == null) UI.render && UI.render(); };
+      const closeBtn = document.getElementById('lzFlaggedClose');
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      const back = document.getElementById('lzFlaggedBackdrop');
+      if (back) back.addEventListener('click', close);
+
+      overlay.querySelectorAll('.lz-flagged-rm').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          unflagCard(btn.dataset.key);
+          UI.openFlaggedReview();
+        });
+      });
+
+      const clearBtn = document.getElementById('lzFlaggedClear');
+      if (clearBtn) clearBtn.addEventListener('click', () => {
+        if (!confirm('Clear all flagged cards?')) return;
+        clearAllFlags();
+        UI.openFlaggedReview();
+      });
+
+      const copyBtn = document.getElementById('lzFlaggedCopy');
+      if (copyBtn) copyBtn.addEventListener('click', async () => {
+        const prompt = buildClaudePrompt();
+        if (!prompt) return;
+        const toast = document.getElementById('lzFlaggedToast');
+        try {
+          await navigator.clipboard.writeText(prompt);
+          if (toast) { toast.textContent = '✓ Copied — paste into Claude Code'; toast.classList.add('lz-flagged-toast-ok'); }
+        } catch (e) {
+          const ta = document.createElement('textarea');
+          ta.value = prompt;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); if (toast) { toast.textContent = '✓ Copied — paste into Claude Code'; toast.classList.add('lz-flagged-toast-ok'); } }
+          catch (err) { if (toast) { toast.textContent = 'Copy failed — select all in the box below and copy manually'; toast.classList.add('lz-flagged-toast-err'); } }
+          document.body.removeChild(ta);
+        }
+      });
+    },
+
     html: {
       session() {
         return `
@@ -1124,6 +1423,8 @@
                 <div class="lz-example" id="lzExample" style="display:none"></div>
                 <div class="lz-exanswer" id="lzExAnswer" style="display:none"></div>
                 <div class="lz-mnem" id="lzMnemonic" style="display:none"></div>
+                <div class="lz-importance" id="lzImportance" style="display:none"></div>
+                <div class="lz-images" id="lzImages" style="display:none"></div>
               </div>
             </div>
             <div class="lz-grade-bar">
@@ -1144,6 +1445,7 @@
               <button type="button" class="lz-btn-small" id="lzFlip">Flip (Space)</button>
               <button type="button" class="lz-btn-small" id="lzUndo">Undo (U)</button>
               <button type="button" class="lz-btn-small" id="lzSkip">Skip (J)</button>
+              <button type="button" class="lz-btn-small lz-btn-flag" id="lzFlag" title="Flag this card for review (F)">🚩 <span id="lzFlagLbl">Flag (F)</span></button>
             </div>
           </div>
         `;
@@ -1165,6 +1467,7 @@
     else if (e.key === '3') { e.preventDefault(); grade(3); }
     else if (e.key === 'u' || e.key === 'U') { e.preventDefault(); undo(); }
     else if (e.key === 'j' || e.key === 'J') { e.preventDefault(); skip(); }
+    else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); UI.openFlagPicker(); }
     else if (e.key === 'Escape') {
       if (S && !S.endedAt) {
         if (confirm('Exit session? Progress is saved — you can resume later.')) UI.exit();
@@ -1469,6 +1772,107 @@
         color: var(--accent, #c89b2e);
         font-weight: 700;
         margin-bottom: 4px;
+      }
+
+      /* per-card "why it's important" exam prep */
+      .lz-importance {
+        background: rgba(122, 143, 168, 0.08);
+        border: 1px solid #2e3744;
+        border-left: 3px solid #7a8fa8;
+        border-radius: 6px;
+        padding: 14px 16px;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--ink, #e6dfd0);
+      }
+      .lz-importance-label {
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #7a8fa8;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .lz-importance .big-deal {
+        font-weight: 600;
+        color: var(--accent-ink, #f1d278);
+        margin-bottom: 12px;
+      }
+      .lz-importance h4 {
+        margin: 14px 0 6px 0;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent, #c89b2e);
+        font-weight: 700;
+      }
+      .lz-importance h4:first-child { margin-top: 0; }
+      .lz-importance ul, .lz-importance ol {
+        margin: 4px 0 8px 0;
+        padding-left: 22px;
+      }
+      .lz-importance li {
+        margin-bottom: 4px;
+      }
+      .lz-importance strong { color: var(--accent-ink, #f1d278); }
+      .lz-importance em { font-style: italic; color: var(--ink-dim, #a59a83); }
+
+      /* per-card images */
+      .lz-images {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .lz-images-label {
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--ink-faint, #6b6353);
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+      .lz-image-fig {
+        margin: 0;
+        background: var(--bg-sunk, #090a0e);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .lz-image-img {
+        width: 100%;
+        max-height: 360px;
+        object-fit: contain;
+        background: #fff;
+        display: block;
+      }
+      .lz-image-cap {
+        padding: 10px 14px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--ink-dim, #a59a83);
+        font-style: italic;
+      }
+      .lz-image-credit {
+        padding: 0 14px 8px;
+        font-size: 10px;
+        color: var(--ink-faint, #6b6353);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .lz-image-fail .lz-image-img { display: none; }
+      .lz-image-fail::before {
+        content: 'Image failed to load';
+        display: block;
+        padding: 24px;
+        text-align: center;
+        color: var(--ink-faint, #6b6353);
+        font-size: 12px;
       }
 
       .lz-grade-bar {
@@ -1821,6 +2225,210 @@
         text-align: center;
         margin: 0;
       }
+
+      /* --- flag button --- */
+      .lz-btn-flag.lz-flagged {
+        background: var(--accent-soft, #5b4412);
+        color: var(--accent-ink, #f1d278);
+        border-color: var(--accent, #c89b2e);
+      }
+
+      /* --- setup screen flagged button --- */
+      .lz-setup-head-actions { display: flex; gap: 8px; align-items: center; }
+      .lz-btn-flagged-open {
+        background: var(--bg-sunk, #090a0e);
+        color: var(--ink-dim, #a59a83);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-family: inherit;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .lz-btn-flagged-open:hover { color: var(--ink, #e6dfd0); border-color: var(--rule-strong, #2e333d); }
+
+      /* --- flag picker --- */
+      .lz-flag-picker {
+        max-width: 520px;
+        padding: 28px 26px;
+        display: flex; flex-direction: column; gap: 16px;
+      }
+      .lz-flag-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent, #c89b2e);
+      }
+      .lz-flag-picker h3 {
+        margin: 0;
+        font-family: var(--ff-display, 'Fraunces', Georgia, serif);
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--ink, #e6dfd0);
+      }
+      .lz-flag-chips {
+        display: flex; flex-wrap: wrap; gap: 8px;
+      }
+      .lz-flag-chip {
+        background: var(--bg-sunk, #090a0e);
+        color: var(--ink-dim, #a59a83);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-family: inherit;
+        font-size: 13px;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .lz-flag-chip:hover { color: var(--ink, #e6dfd0); border-color: var(--rule-strong, #2e333d); }
+      .lz-flag-chip.active {
+        background: var(--accent-soft, #5b4412);
+        color: var(--accent-ink, #f1d278);
+        border-color: var(--accent, #c89b2e);
+      }
+      .lz-flag-note-label { display: flex; flex-direction: column; gap: 6px; }
+      .lz-flag-note-label > span {
+        font-size: 11px; text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink-faint, #6b6353);
+      }
+      .lz-flag-note {
+        background: var(--bg-sunk, #090a0e);
+        color: var(--ink, #e6dfd0);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 6px;
+        padding: 10px 12px;
+        font-family: inherit;
+        font-size: 13px;
+        resize: vertical;
+        min-height: 56px;
+      }
+      .lz-flag-buttons {
+        display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap;
+      }
+
+      /* --- flagged review --- */
+      .lz-flagged-modal {
+        max-width: 720px;
+        max-height: 85vh;
+        padding: 24px 26px;
+        display: flex; flex-direction: column; gap: 14px;
+      }
+      .lz-flagged-head {
+        display: flex; justify-content: space-between; align-items: center;
+        border-bottom: 1px solid var(--rule, #22262f);
+        padding-bottom: 12px;
+      }
+      .lz-flagged-head h3 {
+        margin: 0;
+        font-family: var(--ff-display, 'Fraunces', Georgia, serif);
+        font-size: 22px; font-weight: 600;
+        color: var(--ink, #e6dfd0);
+      }
+      .lz-flagged-count {
+        background: var(--accent-soft, #5b4412);
+        color: var(--accent-ink, #f1d278);
+        border-radius: 999px;
+        padding: 2px 10px;
+        font-size: 13px;
+        margin-left: 8px;
+        font-family: var(--ff-ui, 'Inter', system-ui, sans-serif);
+        font-weight: 500;
+      }
+      .lz-flagged-hint {
+        margin: 0;
+        font-size: 13px;
+        color: var(--ink-dim, #a59a83);
+        line-height: 1.5;
+      }
+      .lz-flagged-hint code {
+        background: var(--bg-sunk, #090a0e);
+        padding: 1px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+      .lz-flagged-list {
+        list-style: none;
+        margin: 0; padding: 0;
+        display: flex; flex-direction: column; gap: 8px;
+        overflow-y: auto;
+        max-height: 50vh;
+      }
+      .lz-flagged-row {
+        background: var(--bg-sunk, #090a0e);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 6px;
+        padding: 10px 12px;
+        display: flex; flex-direction: column; gap: 4px;
+      }
+      .lz-flagged-row-head {
+        display: flex; align-items: center; gap: 10px;
+      }
+      .lz-flagged-term {
+        flex: 1;
+        font-weight: 600;
+        color: var(--ink, #e6dfd0);
+        font-size: 14px;
+      }
+      .lz-flagged-reason {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent-ink, #f1d278);
+        background: var(--accent-soft, #5b4412);
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+      .lz-flagged-rm {
+        background: transparent;
+        border: 1px solid var(--rule, #22262f);
+        color: var(--ink-faint, #6b6353);
+        border-radius: 4px;
+        width: 22px; height: 22px;
+        line-height: 18px;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 0;
+      }
+      .lz-flagged-rm:hover { color: #e36b6b; border-color: #e36b6b; }
+      .lz-flagged-ctx {
+        font-size: 11px;
+        color: var(--ink-faint, #6b6353);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .lz-flagged-note {
+        font-size: 12px;
+        color: var(--ink-dim, #a59a83);
+        font-style: italic;
+      }
+      .lz-flagged-empty {
+        padding: 24px 12px;
+        text-align: center;
+        color: var(--ink-faint, #6b6353);
+        font-size: 13px;
+      }
+      .lz-flagged-empty kbd {
+        background: var(--bg-sunk, #090a0e);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 3px;
+        padding: 1px 6px;
+        font-size: 11px;
+      }
+      .lz-flagged-actions {
+        display: flex; gap: 10px; justify-content: flex-end;
+        border-top: 1px solid var(--rule, #22262f);
+        padding-top: 12px;
+      }
+      .lz-flagged-toast {
+        font-size: 12px;
+        text-align: right;
+        min-height: 16px;
+        color: transparent;
+      }
+      .lz-flagged-toast-ok { color: #6bd06b !important; }
+      .lz-flagged-toast-err { color: #e36b6b !important; }
 
       /* --- responsive --- */
       @media (max-width: 720px) {
