@@ -324,7 +324,7 @@
         conceptId: "sperm-competition"
       },
       {
-        term: "Cryptic female choice",
+        term: "Cryptic female choice — why it matters",
         def: "Females bias paternity AFTER copulation via reproductive-tract mechanisms — sperm storage organs, sperm rejection or digestion, differential sperm transport. 'Cryptic' because the choice happens internally, invisible to outside observers.",
         example: "In some insects, females have multiple sperm-storage organs (spermathecae). After mating with several males, the female can preferentially fertilize from one organ. Why does this matter beyond pre-copulatory choice?",
         exAnswer: "Pre-copulatory choice (mate selection) is the visible part of female choice; cryptic female choice extends female preference into the period AFTER mating. Critical when females can't fully avoid mating with all males (coercion, random encounters, sperm storage from past matings). Allows post-hoc filtering of sperm by quality, novelty (preferring genetically dissimilar sperm), or compatibility. Now considered a major component of sexual selection in many taxa.",
