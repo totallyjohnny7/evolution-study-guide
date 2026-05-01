@@ -5,6 +5,69 @@
    separate gold-bordered subsection. */
 (function () {
   const EXTRA = {
+    "L01": [
+      {
+        term: "Heritable vs non-heritable variation",
+        def: "HERITABLE: trait differences with a genetic basis; passable to offspring; the only kind selection can act on across generations. NON-HERITABLE: differences from environment alone (nutrition, learning, accident); not passed on; invisible to evolution.",
+        example: "A field of dandelions varies in flower color. If color is set by soil pH (no genetic variation), can selection on color make the population evolve?",
+        exAnswer: "NO. Without heritable variation in color, selecting purple-only flowers will leave the next generation back at the original color distribution (each new plant's color is set by soil where it grows, not its parent's color). Selection produces evolution ONLY when phenotypic differences correlate with genetic differences. This is why the breeder's equation R = h²·S goes to zero when h² = 0.",
+        ctx: "L01 §A — Defining evolution",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "heritable-variation"
+      },
+      {
+        term: "Population vs individual — what actually evolves?",
+        def: "POPULATIONS evolve (allele frequencies change across generations). INDIVIDUALS are SELECTED (some survive/reproduce more) but do NOT evolve — they live and die with their fixed genotype. Easy to confuse the two.",
+        example: "An exam asks: 'During the drought, the finches evolved deeper beaks.' Identify what's wrong with this sentence and rewrite it correctly.",
+        exAnswer: "Wrong: individuals don't evolve. Each finch had whatever beak depth it was born with — no individual finch's beak got deeper during its life. CORRECTED: 'During the drought, the population's mean beak depth increased — deeper-beaked finches survived and reproduced more, so the next generation had a higher frequency of deep-beak alleles.' The unit of evolution is the POPULATION; the unit of selection is the INDIVIDUAL.",
+        ctx: "L01 §A — Defining evolution",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "unit-of-evolution"
+      },
+      {
+        term: "Mutation: random or directed by need?",
+        def: "Mutations are RANDOM with respect to fitness — they occur regardless of whether they would be useful. The environment SELECTS pre-existing variants; it does not 'create' or 'guide' the mutations themselves.",
+        example: "A claim: 'Antibiotic exposure causes bacteria to mutate so they can survive.' What's wrong with this statement, and what's the correct version?",
+        exAnswer: "Wrong implication: that the antibiotic INDUCES the resistance mutation. CORRECT: Resistance mutations occur randomly at low frequency in the population BEFORE the drug is applied. The antibiotic doesn't generate mutations — it selects pre-existing resistant variants by killing the rest. Luria-Delbrück (1943) demonstrated this experimentally with their fluctuation test using bacteriophage. Selection ≠ direction of mutation.",
+        ctx: "L01 §C — The four evolutionary mechanisms",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "mutation-randomness",
+        mnem: "Random mutation + non-random selection = adaptation (NOT directed mutation)."
+      },
+      {
+        term: "Selection vs drift — when does each dominate?",
+        def: "SELECTION dominates when (selection coefficient s) >> 1/N. DRIFT dominates when s << 1/N. In LARGE populations, even weak selection beats drift. In SMALL populations, drift can override moderate selection. Threshold: |s| ≈ 1/(2Ne) for diploids.",
+        example: "An island population of 50 individuals carries a slightly beneficial allele (s = +0.005). Will selection or drift dominate the allele's fate?",
+        exAnswer: "DRIFT will dominate. The threshold is roughly 1/(2Ne) = 1/100 = 0.01. Since s = 0.005 < 0.01, the allele is effectively neutral; chance fluctuations (births/deaths) determine whether it fixes or is lost. The same allele in a population of 10,000 (threshold 1/20,000) would be strongly under selection. Population size sets which evolutionary force is decisive.",
+        ctx: "L01 §C — The four evolutionary mechanisms",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "selection-vs-drift-threshold"
+      },
+      {
+        term: "Common descent — strongest evidence",
+        def: "All life shares one ancestor. Strongest lines of evidence: (1) UNIVERSAL genetic code (same DNA → amino acid mapping in everything from E. coli to whales), (2) homologous proteins (cytochrome c, ribosomal RNA), (3) shared metabolic pathways, (4) nested hierarchy of traits matching molecular phylogenies.",
+        example: "If life had multiple independent origins, what genetic-code pattern would you expect? What do we actually observe?",
+        exAnswer: "Independent origins would predict DIFFERENT genetic codes (different codon→amino acid mappings) per origin lineage — there's no chemical reason CGU has to mean Arginine. We observe ONE near-universal code across all domains (with rare minor variations in mitochondria/some ciliates), implying a single ancestor that locked in this code billions of years ago. This is one of biology's strongest lines of evidence for common descent.",
+        ctx: "L01 §B — Why evolution unifies biology",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "common-descent-evidence"
+      },
+      {
+        term: "Adaptation — three things selection requires",
+        def: "For natural selection to produce adaptation: (1) HERITABLE VARIATION in a trait, (2) DIFFERENTIAL SURVIVAL or REPRODUCTION based on the trait, (3) CONSEQUENT FITNESS DIFFERENCES (genetic copies of trait in next generation differ from random expectation). All three are necessary.",
+        example: "Identify which of the three requirements is missing in each of these scenarios: (a) Striking variation in beak shape, all environment-driven. (b) Heritable beak variation, but random mating and equal survival. (c) Beak heritable, deeper beaks survive better, but they all leave equal offspring numbers anyway.",
+        exAnswer: "(a) MISSING (1) heritable variation — variation exists but isn't passed on. (b) MISSING (2) differential survival/reproduction — variation exists, but selection isn't acting. (c) MISSING (3) consequent fitness differences — survival differs but TOTAL reproduction is equal, so allele freqs don't change. All three pieces must align; remove any one and adaptation stops.",
+        ctx: "L01 §C — The four evolutionary mechanisms",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "selection-three-requirements"
+      }
+    ],
     "L02": [
       {
         term: "Darwin's three observations + one inference",
@@ -143,6 +206,88 @@
         example: "Genotype A: yields 5 vs 8 across temperatures. Genotype B: yields 8 vs 4 (opposite slope). Lines cross — that's G×E. Why does this matter for predicting which genotype 'is best'?",
         exAnswer: "There is NO context-free 'best' — fitness depends on environment. G×E means the rank order of genotypes can FLIP across environments. A breeder picking the 'best' line in one site can lose the actual best in another site. Practical implication: selection or breeding programs must match the deployment environment; lab-raised crops can fail in field conditions because G×E was ignored. Heritability is also environment-specific.",
         ctx: "L05 §D — Phenotypic plasticity, reaction norms"
+      }
+    ],
+    "L07": [
+      {
+        term: "Three requirements for measurable evolution in nature",
+        def: "(1) HERITABLE variation in a trait. (2) DIFFERENTIAL reproduction — some variants leave more offspring. (3) Trait FREQUENCY changes across generations. All three observable in the field — that's what makes selection a measurable, testable process, not just a story.",
+        example: "A field study shows 'darker beetles in polluted areas.' What additional data would you need to claim natural selection (vs. plasticity, drift, or sampling bias)?",
+        exAnswer: "Need ALL of: (1) heritability test — do dark beetles' offspring tend to be dark? Mid-parent regression slope. (2) Differential reproduction — count surviving offspring of each color. (3) Frequency change over time — track the dark-allele frequency across multiple generations and compare to drift expectation. One of these without the others is just an observation, not selection. The Grants did all three on Daphne Major.",
+        ctx: "L07 §A — Measuring selection in nature",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "selection-measurement-requirements"
+      },
+      {
+        term: "Grants' Galápagos finches — predicted vs observed R",
+        def: "After the 1977 drought, only deeper-beaked Geospiza fortis survived. h² for beak depth ~0.65; selection differential S ~0.5 mm. Breeder's equation predicts R = h²·S ~0.32 mm. Observed mean shift in next gen: ~0.3 mm — predicted and observed match.",
+        example: "Why is the Grants' study a textbook example of measurable evolution in real time?",
+        exAnswer: "Because every variable in the breeder's equation was MEASURED INDEPENDENTLY: h² from parent-offspring regression, S from comparing breeders to population mean, R from the actual next-generation mean. The match between predicted (0.32 mm) and observed (~0.3 mm) confirms the theory's predictive power on a 1-year timescale. It's evolution-by-natural-selection caught in action with no gaps in the causal chain.",
+        ctx: "L07 §B — Grants' Galápagos finches",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "grants-finches"
+      },
+      {
+        term: "Peppered moth industrial melanism — what was actually selected?",
+        def: "Pre-industrial: light morph dominant on lichen-covered trunks. Industrial pollution killed lichen + blackened trunks → melanic morph rose to >95% in polluted areas. Mechanism: differential bird PREDATION on visible morphs. Genetic basis: a transposon insertion in the cortex gene.",
+        example: "Why does this case decisively rule out 'mutation directed by environment' as an alternative to natural selection?",
+        exAnswer: "Because the melanic mutation existed in the population BEFORE industrialization (low frequency). Pollution didn't induce the cortex-transposon insertion — it shifted the visibility-vs-bird-predation balance, selecting pre-existing dark variants. Confirmed by: (1) clean-air laws → light morphs rebounded as lichen returned (selection reverses, not mutation), (2) recent genomics showing the SAME transposon insertion across all melanic individuals (single ancient origin, then selection).",
+        ctx: "L07 §C — Peppered moths",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "peppered-moth"
+      },
+      {
+        term: "Antibiotic resistance — speed and predictability",
+        def: "Strong directional selection by humans. Resistant variants pre-exist at low frequency; antibiotic kills susceptibles → resistant strains take over. Time to resistance often <2 years after a new drug's introduction. Mechanism: enzymatic destruction (β-lactamases), efflux pumps, target-protein mutations, alternative pathways.",
+        example: "Why does FINISHING the antibiotic course have an evolutionary rationale?",
+        exAnswer: "Stopping early leaves PARTIALLY-resistant survivors that aren't fully susceptible (their MIC was just below your peak dose). Those survivors then proliferate and acquire additional resistance mutations. A full course wipes out partial-resistants too — fewer survivors → less raw material for further evolution. Combination therapy multiplies this: needing simultaneous mutations in two targets reduces resistance probability from 10⁻⁹ to ~10⁻¹⁸.",
+        ctx: "L07 §D — Antibiotic resistance",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "antibiotic-resistance"
+      },
+      {
+        term: "Domestication = artificial selection (greyhound case)",
+        def: "Humans choose breeders; resulting trait shifts are evolution by selection — same mechanism, different agent. Greyhounds: speed selected over centuries; modern racing greyhounds run ~64 km/h, ~20% faster than dog ancestors. Selection differential is intense and continuous.",
+        example: "Compare the rate of greyhound speed evolution to natural-selection rates in wild populations. What sets the rate difference?",
+        exAnswer: "Domestication rates are typically 10–100× faster than natural rates. Two reasons: (1) SELECTION DIFFERENTIAL is much stronger — humans pick a tiny fraction of top performers each generation, so S is huge; in the wild, S is bounded by ecology. (2) Generation time is uniform and short. Same h²·S formula applies, but S in domestication is artificially inflated. Belyaev's silver-fox tameness: visible behavioral evolution in 10 generations.",
+        ctx: "L07 §D — Domestication, artificial selection",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "artificial-selection"
+      },
+      {
+        term: "Why field selection studies need longitudinal data",
+        def: "A snapshot 'darker individuals are more common today than yesterday' could be selection, drift, migration, sampling, or plasticity. To distinguish, you need: (1) tracked individuals across years, (2) measured heritability via parent-offspring, (3) replicate populations to control for drift, (4) genetic data ruling out migration.",
+        example: "A field biologist sees 'beetles are darker this year than last.' What four alternative explanations must be ruled out before claiming natural selection?",
+        exAnswer: "(1) DRIFT — small populations can shift by chance; need population-size estimate and replicate sites. (2) MIGRATION — dark beetles moved in; check genetic markers. (3) PLASTICITY — same beetles, different environments → darker due to temperature, not selection; common-garden experiment needed. (4) SAMPLING bias — different sampling effort/method captured a different cohort. Ruling each out requires longitudinal individual tracking, not snapshots.",
+        ctx: "L07 §A — Measuring selection in nature",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "field-selection-confounds"
+      },
+      {
+        term: "Influenza antigenic drift vs antigenic shift",
+        def: "DRIFT: gradual mutational change in HA/NA surface proteins → escape from prior immunity → annual flu vaccines. SHIFT: dramatic reassortment when two flu strains co-infect one cell, swapping genome segments → pandemic potential. Drift = small, continuous; shift = big, episodic.",
+        example: "Why do you need a flu shot every year, but not (typically) annual measles boosters?",
+        exAnswer: "Influenza HA/NA evolves rapidly under SELECTION from human immune memory — drift accumulates ~0.5% sequence change per year, enough to escape antibodies. Last year's vaccine targets last year's epitopes. Measles HA/NA evolve much slower (long generation, lower mutation rate, immune-cost trade-off) — childhood vaccine confers near-lifelong immunity because the virus can't escape it. Faster pathogen evolution → shorter vaccine validity.",
+        ctx: "L07 §D — Other examples — flu",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "flu-antigenic-evolution"
+      },
+      {
+        term: "When does R = h²·S fail to predict the next generation?",
+        def: "The breeder's equation assumes: (1) only V_A matters (no shared environment), (2) no covariance between trait and environment, (3) selection acts only on the focal trait, (4) no genotype-by-environment correlation, (5) no major shifts in the environment between generations.",
+        example: "Predicted R from S = 8 cm and h² = 0.5 gives 4 cm response. Observed: 1 cm. What might explain the shortfall?",
+        exAnswer: "Several common culprits: (a) PARENT-OFFSPRING ENVIRONMENT correlation inflated h² estimate (same nutrition makes parents AND offspring tall — looks heritable but isn't). (b) Inbreeding depression in the next gen reduced offspring fitness. (c) ENVIRONMENT changed between gens (drought reduced growth). (d) Selection actually targeted a different correlated trait. (e) Frequency-dependent selection eroded the additive variance. The breeder's equation is an idealization; field deviations point to which assumption broke.",
+        ctx: "L07 §A — Measuring selection in nature",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "breeders-eqn-failures"
       }
     ],
     "L08": [

@@ -149,22 +149,43 @@
     return true;
   }
 
+  // Score a card's "richness" so dedup can prefer the better version when
+  // two cards share the same cardKey. Hand-authored extras with exAnswer +
+  // conceptId beat auto-gen cards that only have term/def/example.
+  function cardRichness(c) {
+    let r = 0;
+    if (c?.exAnswer) r += 4;
+    if (c?.conceptId) r += 2;
+    if (c?.mnem || c?.analogy || c?.hook) r += 2;
+    if (c?.cardType) r += 1;
+    if ((c?.def || '').length > 100) r += 1;
+    return r;
+  }
+
+  function dedupByKey(cards) {
+    const byKey = new Map();
+    cards.forEach(c => {
+      const k = cardKey(c);
+      if (!k) return;
+      const existing = byKey.get(k);
+      if (!existing || cardRichness(c) > cardRichness(existing)) {
+        byKey.set(k, c);
+      }
+    });
+    return Array.from(byKey.values());
+  }
+
   function getDeckCards(deckId) {
     const decks = window.FLASHCARD_DECKS || {};
     if (deckId === 'all') {
-      const out = [];
-      const seen = new Set();
+      const all = [];
       Object.entries(decks).forEach(([id, arr]) => {
         if (id === 'all' || !Array.isArray(arr)) return;
-        arr.forEach(c => {
-          const k = cardKey(c);
-          if (!k) return;
-          if (!seen.has(k)) { seen.add(k); out.push(c); }
-        });
+        arr.forEach(c => all.push(c));
       });
-      return out;
+      return dedupByKey(all);
     }
-    return (decks[deckId] || []).slice();
+    return dedupByKey(decks[deckId] || []);
   }
 
   function buildQueue(deckId, mode) {
