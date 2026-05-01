@@ -2339,6 +2339,90 @@ body.comp-mode .comp-banner { display: flex; align-items: center; gap: 14px; }
   .ch-nav a { font-size: 11px; padding: 4px 8px; }
 }
 
+/* ============================================================
+   STIM TOPIC HEAT MAP — same design as biol3020-exam4 site
+   ============================================================ */
+.study-tools-bar {
+  max-width: 1200px; margin: 0 auto; padding: 12px 32px;
+  border-bottom: 1px solid var(--rule, rgba(255,255,255,0.08));
+}
+body.fc-mode .study-tools-bar,
+body.ref-mode .study-tools-bar,
+body.stim-mode .study-tools-bar { display: none !important; }
+.stb-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.stb-label { font-size: 11px; letter-spacing: 0.06em; color: var(--ink-faint, rgba(255,255,255,0.5)); text-transform: uppercase; }
+.stb-btn {
+  display: inline-flex; gap: 6px; align-items: center;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--rule, rgba(255,255,255,0.1));
+  border-radius: 6px; padding: 6px 12px; font-size: 12px;
+  color: var(--ink, #e7e5e0); cursor: pointer;
+  font-family: inherit;
+}
+.stb-btn:hover { border-color: var(--accent, #c08040); color: var(--accent, #c08040); }
+.stb-btn.active { background: rgba(217,119,87,0.15); border-color: var(--accent, #c08040); color: var(--accent, #c08040); }
+.study-heatmap { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--rule, rgba(255,255,255,0.08)); }
+.stb-heatmap-head {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-faint, rgba(255,255,255,0.5)); margin-bottom: 8px;
+}
+.stb-heatmap-meta { font-family: var(--ff-mono, monospace); text-transform: none; letter-spacing: 0; opacity: 0.75; }
+.study-heatmap-chapters {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px; margin-bottom: 12px;
+}
+.sh-chapter {
+  border: 1px solid var(--rule, rgba(255,255,255,0.1)); border-radius: 6px;
+  padding: 8px 10px; cursor: pointer;
+  background: rgba(255,255,255,0.02);
+  transition: border-color .12s, transform .12s;
+  text-align: left; color: inherit; font-family: inherit;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.sh-chapter:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-1px); }
+.sh-chapter-head { display: flex; justify-content: space-between; align-items: baseline; }
+.sh-chapter-num { font-family: var(--ff-display, serif); font-size: 14px; font-weight: 600; color: var(--ink, #e7e5e0); }
+.sh-chapter-pct { font-family: var(--ff-mono, monospace); font-size: 11px; color: var(--ink-dim, rgba(255,255,255,0.7)); }
+.sh-chapter-title { font-size: 10px; color: var(--ink-faint, rgba(255,255,255,0.5)); letter-spacing: 0.04em; }
+.sh-chapter-bar { height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; margin-top: 2px; }
+.sh-chapter-bar-fill { height: 100%; transition: width .3s; }
+.study-heatmap-sections { display: block; }
+.sh-exam-section { margin-bottom: 18px; }
+.sh-exam-header {
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-faint, rgba(255,255,255,0.5)); padding: 8px 0 6px;
+  border-top: 1px dashed var(--rule, rgba(255,255,255,0.08)); margin-top: 8px;
+}
+.sh-exam-section:first-child .sh-exam-header { border-top: none; margin-top: 0; padding-top: 4px; }
+.sh-exam-grid { display: flex; flex-direction: column; gap: 10px; }
+.sh-group { display: grid; grid-template-columns: minmax(120px, 140px) 1fr; gap: 10px; align-items: start; }
+.sh-group-label {
+  font-family: var(--ff-mono, monospace); font-size: 10px;
+  color: var(--ink-dim, rgba(255,255,255,0.7)); padding-top: 8px;
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+.sh-group-tiles {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 4px;
+}
+.sh-section {
+  border: 1px solid transparent; border-radius: 4px;
+  padding: 7px 9px; cursor: pointer; background: rgba(255,255,255,0.03);
+  text-align: left; font-family: inherit; color: inherit;
+  display: flex; flex-direction: column; gap: 3px;
+  transition: transform .1s, border-color .1s;
+}
+.sh-section:hover { transform: translateY(-1px); border-color: rgba(255,255,255,0.18); }
+.sh-section-num { font-family: var(--ff-mono, monospace); font-size: 11px; font-weight: 700; }
+.sh-section-pct {
+  font-family: var(--ff-mono, monospace); font-size: 9.5px;
+  margin-top: 2px; opacity: 0.85;
+}
+@media (max-width: 720px) {
+  .study-tools-bar { padding: 8px 14px; }
+  .study-heatmap-chapters { grid-template-columns: repeat(2, 1fr); }
+  .sh-group { grid-template-columns: 1fr; }
+  .sh-group-label { padding-top: 0; }
+}
 </style>
 </head>
 <body data-callout="rule">
@@ -2558,6 +2642,25 @@ body.comp-mode .comp-banner { display: flex; align-items: center; gap: 14px; }
   <span class="dot" style="background:var(--wrong);"></span>
   <span>Wrong-only filter — showing only questions you answered <b style="color:var(--wrong);">incorrectly</b>. <span id="wrongOnlyCount" style="color:var(--ink-dim);">(0 cards visible)</span></span>
   <button class="fc-btn" onclick="toggleWrongOnly()" style="margin-left:auto;">Show all</button>
+</div>
+
+<!-- STIM HEAT MAP TOOLBAR — each tile = one professor-expected topic -->
+<div class="study-tools-bar" id="studyToolsBar" role="region" aria-label="Stim heat map">
+  <div class="stb-row">
+    <button class="stb-btn" id="stbToggleHeatmap" type="button" title="Show / hide Stim per-topic progress heat map">
+      <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg>
+      <span>Stim heat map</span>
+    </button>
+    <span class="stb-label">Each tile = one topic Dr. Robbins expects you to understand</span>
+  </div>
+  <div class="study-heatmap" id="studyHeatmap" hidden>
+    <div class="stb-heatmap-head">
+      <span>Stim per-topic progress (red = unstarted, green = mastered) · click a tile to launch matching questions in Stim</span>
+      <span class="stb-heatmap-meta" id="studyHeatmapMeta">—</span>
+    </div>
+    <div class="study-heatmap-chapters" id="studyHeatmapChapters"></div>
+    <div class="study-heatmap-sections" id="studyHeatmapSections"></div>
+  </div>
 </div>
 
 <div class="app">
@@ -3128,12 +3231,15 @@ body.comp-mode .comp-banner { display: flex; align-items: center; gap: 14px; }
      ============================================================ -->
 <script src="content/qbank.js"></script>
 <script src="content/flashcards.js"></script>
+<script src="content/flashcards-extra.js"></script>
+<script src="content/leitner-session.js"></script>
 <script src="content/analogies.js"></script>
 <script src="content/study-content.js"></script>
 <script src="content/lecture-guides.js"></script>
 <script src="content/diagrams.js"></script>
 <script src="content/makeover.js"></script>
 <script src="content/stim-bank.js"></script>
+<script src="content/stim-topic-manifest.js"></script>
 <script src="content/stim-mode.js"></script>
 
 <!-- ============================================================
@@ -9848,6 +9954,215 @@ window.synthXctx = function(card) {
     wrapFns();
     watchMode();
     setCount(state.seconds);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+<!-- ============================================================
+     STIM HEAT MAP — topic-tile based, sources STIM_BANK + stim_history + STIM_TOPIC_MANIFEST
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+  const LS_HEAT_OPEN = 'evol-stim-heat-open';
+  const $ = sel => document.querySelector(sel);
+  const escHtml = s => String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+
+  const EXAM_LABELS = {
+    1: { num: '1', name: 'Exam 1 · Mechanisms, genetics, pop gen' },
+    2: { num: '2', name: 'Exam 2 · Adaptations, sex, life history, social' },
+    3: { num: '3', name: 'Exam 3 · History, phylogeny, speciation, humans, medicine' }
+  };
+  const EXAM_HEADERS = {
+    1: 'EXAM 1 — Mechanisms · Genetics · Pop Gen · Evol History',
+    2: 'EXAM 2 — Complex Adaptations · Sex · Life History · Coevolution · Social',
+    3: 'EXAM 3 — History of Life · Phylogeny · Speciation · Conservation · Humans · Evol Medicine'
+  };
+
+  function heatColor(pct, total) {
+    if (total === 0) return '#3a3a3a';
+    if (pct == null) return '#444';
+    if (pct < 0.20) return '#c74e4e';
+    if (pct < 0.45) return '#d97757';
+    if (pct < 0.70) return '#d6c84e';
+    if (pct < 0.95) return '#a4c14a';
+    return '#5fb87a';
+  }
+
+  function buildStimQidState() {
+    let hist = [];
+    try { hist = JSON.parse(localStorage.getItem('stim_history') || '[]'); } catch (e) { hist = []; }
+    const byQid = {};
+    hist.forEach(s => {
+      const ts = s.finished_at || s.started_at || 0;
+      (s.results || []).forEach(r => {
+        const prev = byQid[r.qid];
+        if (prev && prev.ts >= ts) return;
+        let state;
+        if (r.score == null) state = 'sa-typed';
+        else if (r.score === 0) state = 'wrong';
+        else if (r.score >= r.max) state = 'right';
+        else state = 'partial';
+        byQid[r.qid] = { state, score: r.score, max: r.max, ts };
+      });
+    });
+    return byQid;
+  }
+
+  function renderHeatmap() {
+    const manifest = window.STIM_TOPIC_MANIFEST || { tiles: [], qid_to_tile: {} };
+    const qidState = buildStimQidState();
+    const bank = Array.isArray(window.STIM_BANK) ? window.STIM_BANK : [];
+
+    // Per-tile aggregation
+    const byTile = {};
+    manifest.tiles.forEach(t => {
+      const tot = t.qids.length;
+      let answered = 0, wrong = 0, partial = 0;
+      t.qids.forEach(qid => {
+        const st = qidState[qid];
+        if (!st) return;
+        if (st.state === 'wrong') { wrong++; answered++; }
+        else if (st.state === 'right' || st.state === 'partial' || st.state === 'sa-typed') {
+          answered++;
+          if (st.state === 'partial') partial++;
+        }
+      });
+      byTile[t.id] = { tile: t, total: tot, answered, wrong, partial };
+    });
+
+    // Per-exam rollup
+    const byExam = {};
+    manifest.tiles.forEach(t => {
+      const ex = t.exam, v = byTile[t.id];
+      if (!byExam[ex]) byExam[ex] = { exam: ex, total: 0, answered: 0, wrong: 0, partial: 0 };
+      byExam[ex].total += v.total;
+      byExam[ex].answered += v.answered;
+      byExam[ex].wrong += v.wrong;
+      byExam[ex].partial += v.partial;
+    });
+
+    // Render exam rollup tiles
+    const chapHost = document.getElementById('studyHeatmapChapters');
+    if (chapHost) {
+      const examKeys = Object.keys(byExam).map(k => parseInt(k, 10)).sort((a, b) => a - b);
+      chapHost.innerHTML = examKeys.map(ex => {
+        const v = byExam[ex];
+        const pct = v.total ? v.answered / v.total : 0;
+        const lbl = EXAM_LABELS[ex] || { num: String(ex), name: 'Exam ' + ex };
+        const color = heatColor(pct, v.total);
+        return `<button class="sh-chapter" data-exam="${ex}" type="button" title="${escHtml(lbl.name)} — ${v.answered}/${v.total} answered (${Math.round(pct*100)}%)${v.wrong?', '+v.wrong+' wrong':''}">
+          <div class="sh-chapter-head"><span class="sh-chapter-num">Exam ${escHtml(lbl.num)}</span><span class="sh-chapter-pct">${v.total?Math.round(pct*100)+'%':'—'}</span></div>
+          <div class="sh-chapter-title">${escHtml(lbl.name)} · ${v.answered}/${v.total}${v.wrong?' · '+v.wrong+' wrong':''}</div>
+          <div class="sh-chapter-bar"><div class="sh-chapter-bar-fill" style="width:${Math.round(pct*100)}%;background:${color}"></div></div>
+        </button>`;
+      }).join('');
+      chapHost.querySelectorAll('.sh-chapter').forEach(b => b.addEventListener('click', () => {
+        const ex = parseInt(b.dataset.exam, 10);
+        if (!ex) return;
+        launchStim(ex, 'all');
+      }));
+    }
+
+    // Render topic tiles grouped by exam → group
+    const secHost = document.getElementById('studyHeatmapSections');
+    if (secHost) {
+      let html = '';
+      [1, 2, 3].forEach(ex => {
+        const tilesForExam = manifest.tiles.filter(t => t.exam === ex);
+        if (!tilesForExam.length) return;
+        html += `<div class="sh-exam-section" data-exam="${ex}">`;
+        html += `<div class="sh-exam-header">${escHtml(EXAM_HEADERS[ex] || ('Exam ' + ex))}</div>`;
+        const groups = {};
+        const groupOrder = [];
+        tilesForExam.forEach(t => {
+          if (!groups[t.group]) { groups[t.group] = []; groupOrder.push(t.group); }
+          groups[t.group].push(t);
+        });
+        html += '<div class="sh-exam-grid">';
+        groupOrder.forEach(grp => {
+          html += `<div class="sh-group"><div class="sh-group-label">${escHtml(grp)}</div><div class="sh-group-tiles">`;
+          groups[grp].forEach(t => {
+            const v = byTile[t.id];
+            const pct = v.total ? v.answered / v.total : 0;
+            const color = heatColor(pct, v.total);
+            const tip = `${t.title} · ${v.answered}/${v.total} answered${v.wrong?', '+v.wrong+' wrong':''}${v.partial?', '+v.partial+' partial':''} · lectures: ${(t.lectures||[]).join(', ')}`;
+            html += `<button class="sh-section sh-topic" type="button" data-tileid="${escHtml(t.id)}" data-exam="${t.exam}" data-firstlec="${escHtml((t.lectures||[])[0]||'all')}" title="${escHtml(tip)}" style="background: color-mix(in oklab, ${color} 35%, rgba(255,255,255,0.03)); border-color: ${color}55;">
+              <span class="sh-section-num" style="color:${color}">${escHtml(t.title)}</span>
+              <span class="sh-section-pct">${v.total?v.answered+'/'+v.total+' · '+Math.round(pct*100)+'%':'no questions'}${v.wrong?' · '+v.wrong+' wrong':''}</span>
+            </button>`;
+          });
+          html += '</div></div>';
+        });
+        html += '</div></div>';
+      });
+      secHost.innerHTML = html;
+      secHost.querySelectorAll('.sh-topic').forEach(b => b.addEventListener('click', () => {
+        const ex = parseInt(b.dataset.exam, 10);
+        const firstLec = b.dataset.firstlec;
+        if (firstLec) launchStim(ex, firstLec);
+      }));
+    }
+
+    // Update meta
+    const metaEl = document.getElementById('studyHeatmapMeta');
+    if (metaEl) {
+      const total = bank.length;
+      const ans = Object.keys(qidState).filter(k => qidState[k].state !== null).length;
+      const wrong = Object.values(qidState).filter(s => s.state === 'wrong').length;
+      const tiles = manifest.tiles.length;
+      metaEl.textContent = `${ans}/${total} stim questions · ${tiles} topics${wrong?' · '+wrong+' wrong':''}`;
+    }
+  }
+
+  function launchStim(exam, lecture) {
+    try {
+      const settings = JSON.parse(localStorage.getItem('stim_settings') || '{}');
+      settings.exam = exam || settings.exam || 1;
+      settings.lecture = lecture || 'all';
+      localStorage.setItem('stim_settings', JSON.stringify(settings));
+    } catch (e) {}
+    if (typeof window.setMode === 'function') window.setMode('stim');
+  }
+
+  function toggleHeatmap(force) {
+    const heat = document.getElementById('studyHeatmap');
+    const btn = document.getElementById('stbToggleHeatmap');
+    if (!heat || !btn) return;
+    const open = typeof force === 'boolean' ? force : heat.hidden;
+    heat.hidden = !open;
+    btn.classList.toggle('active', open);
+    try { localStorage.setItem(LS_HEAT_OPEN, open ? '1' : '0'); } catch (e) {}
+    if (open) renderHeatmap();
+  }
+
+  function init() {
+    const btn = document.getElementById('stbToggleHeatmap');
+    if (!btn) return;
+    btn.addEventListener('click', () => toggleHeatmap());
+    let open = false;
+    try { open = localStorage.getItem(LS_HEAT_OPEN) === '1'; } catch (e) {}
+    if (open) toggleHeatmap(true);
+
+    // Refresh whenever the body class changes (e.g. exiting Stim mode)
+    const obs = new MutationObserver(() => {
+      const heat = document.getElementById('studyHeatmap');
+      if (heat && !heat.hidden) renderHeatmap();
+    });
+    obs.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    // Re-render after small delay for stim-bank.js / manifest async
+    setTimeout(() => {
+      const heat = document.getElementById('studyHeatmap');
+      if (heat && !heat.hidden) renderHeatmap();
+    }, 500);
+
+    window.__evolStimHeat = { renderHeatmap, toggleHeatmap, launchStim };
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

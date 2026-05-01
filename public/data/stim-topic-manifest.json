@@ -1,0 +1,1110 @@
+{
+  "tiles": [
+    {
+      "id": "e1-figures",
+      "exam": 1,
+      "group": "Evol History",
+      "title": "Lamarck · Lyell · Darwin · Wallace",
+      "lectures": [
+        "L02"
+      ],
+      "qids": [
+        "STIM-L02-001",
+        "STIM-L02-003",
+        "STIM-L02-004",
+        "STIM-L02-005",
+        "STIM-L02-009"
+      ],
+      "count": 5
+    },
+    {
+      "id": "e1-scimethod",
+      "exam": 1,
+      "group": "Evol History",
+      "title": "Scientific method · hypothesis vs theory",
+      "lectures": [
+        "L01",
+        "L02"
+      ],
+      "qids": [
+        "STIM-L02-007",
+        "STIM-L02-008"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e1-greatchain",
+      "exam": 1,
+      "group": "Evol History",
+      "title": "Great Chain of Being · pre-Darwinian",
+      "lectures": [
+        "L02"
+      ],
+      "qids": [],
+      "count": 0
+    },
+    {
+      "id": "e1-extinction-hist",
+      "exam": 1,
+      "group": "Evol History",
+      "title": "Extinction · William Smith · fossils",
+      "lectures": [
+        "L02"
+      ],
+      "qids": [
+        "STIM-L02-002"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e1-genome",
+      "exam": 1,
+      "group": "Genetics",
+      "title": "Genome structure · pseudogenes · mobile elements",
+      "lectures": [
+        "L03"
+      ],
+      "qids": [
+        "STIM-L03-011"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e1-geneexpr",
+      "exam": 1,
+      "group": "Genetics",
+      "title": "Gene expression regulation · methylation · miRNA",
+      "lectures": [
+        "L03"
+      ],
+      "qids": [
+        "STIM-L03-003",
+        "STIM-L03-004",
+        "STIM-L03-005"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e1-alleles",
+      "exam": 1,
+      "group": "Genetics",
+      "title": "Alleles · dominant / recessive / additive",
+      "lectures": [
+        "L03",
+        "L04"
+      ],
+      "qids": [
+        "STIM-L03-006",
+        "STIM-L03-007",
+        "STIM-L04-002"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e1-mutation",
+      "exam": 1,
+      "group": "Mechanisms",
+      "title": "Mutation · randomness · source of variation",
+      "lectures": [
+        "L03"
+      ],
+      "qids": [
+        "STIM-L03-008",
+        "STIM-L03-009"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e1-hw",
+      "exam": 1,
+      "group": "Pop Gen",
+      "title": "Hardy–Weinberg equilibrium · p² + 2pq + q²",
+      "lectures": [
+        "L04"
+      ],
+      "qids": [
+        "STIM-L04-001",
+        "STIM-L04-003",
+        "STIM-L04-005"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e1-fst",
+      "exam": 1,
+      "group": "Pop Gen",
+      "title": "FST · genetic differentiation",
+      "lectures": [
+        "L04"
+      ],
+      "qids": [],
+      "count": 0
+    },
+    {
+      "id": "e1-inbreeding",
+      "exam": 1,
+      "group": "Mechanisms",
+      "title": "Inbreeding · homozygosity · depression",
+      "lectures": [
+        "L03",
+        "L04"
+      ],
+      "qids": [],
+      "count": 0
+    },
+    {
+      "id": "e1-geneflow",
+      "exam": 1,
+      "group": "Mechanisms",
+      "title": "Gene flow · migration · allele exchange",
+      "lectures": [
+        "L03",
+        "L04"
+      ],
+      "qids": [],
+      "count": 0
+    },
+    {
+      "id": "e1-drift",
+      "exam": 1,
+      "group": "Mechanisms",
+      "title": "Genetic drift · bottleneck · founder",
+      "lectures": [
+        "L02",
+        "L03",
+        "L04"
+      ],
+      "qids": [
+        "STIM-L04-004"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e1-plasticity",
+      "exam": 1,
+      "group": "Quant Gen",
+      "title": "Phenotypic plasticity · G×E · reaction norm",
+      "lectures": [
+        "L05"
+      ],
+      "qids": [
+        "STIM-L05-007",
+        "STIM-L05-008"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e1-heritability",
+      "exam": 1,
+      "group": "Quant Gen",
+      "title": "Heritability · h² · selection differential·response",
+      "lectures": [
+        "L05"
+      ],
+      "qids": [
+        "STIM-L05-002",
+        "STIM-L05-003",
+        "STIM-L05-004",
+        "STIM-L05-005",
+        "STIM-L05-006",
+        "STIM-L05-010",
+        "STIM-L05-011"
+      ],
+      "count": 7
+    },
+    {
+      "id": "e1-quantvar",
+      "exam": 1,
+      "group": "Quant Gen",
+      "title": "Quantitative variance partitioning · VA / VD / VI",
+      "lectures": [
+        "L05"
+      ],
+      "qids": [
+        "STIM-L05-001"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e1-sexsel",
+      "exam": 1,
+      "group": "Mechanisms",
+      "title": "Sexual selection · mate choice · dimorphism",
+      "lectures": [
+        "L02",
+        "L05",
+        "L07"
+      ],
+      "qids": [],
+      "count": 0
+    },
+    {
+      "id": "e1-homology",
+      "exam": 1,
+      "group": "Mechanisms",
+      "title": "Homology vs analogy · common ancestry",
+      "lectures": [
+        "L02",
+        "L07"
+      ],
+      "qids": [],
+      "count": 0
+    },
+    {
+      "id": "e1-natsel",
+      "exam": 1,
+      "group": "Mechanisms",
+      "title": "Natural selection · fitness · adaptation",
+      "lectures": [
+        "L02",
+        "L03",
+        "L05",
+        "L07"
+      ],
+      "qids": [
+        "STIM-L02-006",
+        "STIM-L03-001",
+        "STIM-L03-002",
+        "STIM-L03-010",
+        "STIM-L05-009"
+      ],
+      "count": 5
+    },
+    {
+      "id": "e1-applied",
+      "exam": 1,
+      "group": "Pop Gen",
+      "title": "Applied · influenza · drug resistance · domestication",
+      "lectures": [
+        "L05",
+        "L07"
+      ],
+      "qids": [],
+      "count": 0
+    },
+    {
+      "id": "e1-selvsevol",
+      "exam": 1,
+      "group": "Mechanisms",
+      "title": "Selection vs evolution · adaptive vs non",
+      "lectures": [
+        "L01",
+        "L02",
+        "L05"
+      ],
+      "qids": [
+        "STIM-L01-001",
+        "STIM-L01-002",
+        "STIM-L01-003",
+        "STIM-L01-004",
+        "STIM-L02-010",
+        "STIM-L05-012"
+      ],
+      "count": 6
+    },
+    {
+      "id": "e2-empirical",
+      "exam": 2,
+      "group": "Empirical",
+      "title": "Empirical case studies of selection",
+      "lectures": [
+        "L07"
+      ],
+      "qids": [
+        "STIM-L07-001",
+        "STIM-L07-002",
+        "STIM-L07-003",
+        "STIM-L07-004",
+        "STIM-L07-005",
+        "STIM-L07-006",
+        "STIM-L07-007",
+        "STIM-L07-008",
+        "STIM-L07-009"
+      ],
+      "count": 9
+    },
+    {
+      "id": "e2-eye",
+      "exam": 2,
+      "group": "Complex Adapt",
+      "title": "Vertebrate eye evolution",
+      "lectures": [
+        "L08"
+      ],
+      "qids": [
+        "STIM-L08-001",
+        "STIM-L08-002",
+        "STIM-L08-009"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e2-hox",
+      "exam": 2,
+      "group": "Complex Adapt",
+      "title": "Hox genes · body plans",
+      "lectures": [
+        "L08"
+      ],
+      "qids": [
+        "STIM-L08-006"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-evodevo",
+      "exam": 2,
+      "group": "Complex Adapt",
+      "title": "Evo-Devo · regulatory networks · heterochrony",
+      "lectures": [
+        "L08"
+      ],
+      "qids": [
+        "STIM-L08-004",
+        "STIM-L08-005",
+        "STIM-L08-008"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e2-complex",
+      "exam": 2,
+      "group": "Complex Adapt",
+      "title": "Complex traits · stepwise · imperfect",
+      "lectures": [
+        "L08"
+      ],
+      "qids": [
+        "STIM-L08-003",
+        "STIM-L08-007",
+        "STIM-L08-010"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e2-armsrace",
+      "exam": 2,
+      "group": "Coevolution",
+      "title": "Arms races · predator-prey · garter/newts",
+      "lectures": [
+        "L09"
+      ],
+      "qids": [
+        "STIM-L09-002"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-mimicry",
+      "exam": 2,
+      "group": "Coevolution",
+      "title": "Mimicry · Batesian · Mullerian",
+      "lectures": [
+        "L09"
+      ],
+      "qids": [
+        "STIM-L09-003"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-mosaic",
+      "exam": 2,
+      "group": "Coevolution",
+      "title": "Geographic mosaic theory",
+      "lectures": [
+        "L09"
+      ],
+      "qids": [],
+      "count": 0
+    },
+    {
+      "id": "e2-mutual",
+      "exam": 2,
+      "group": "Coevolution",
+      "title": "Mutualism vs antagonism · endosymbiosis",
+      "lectures": [
+        "L09"
+      ],
+      "qids": [
+        "STIM-L09-004"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-coev",
+      "exam": 2,
+      "group": "Coevolution",
+      "title": "Coevolution dynamics · reciprocal adaptation",
+      "lectures": [
+        "L09"
+      ],
+      "qids": [
+        "STIM-L09-001"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-cost-sex",
+      "exam": 2,
+      "group": "Sex & Selection",
+      "title": "Cost of sex · twofold cost",
+      "lectures": [
+        "L11"
+      ],
+      "qids": [
+        "STIM-L11-001"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-mullers",
+      "exam": 2,
+      "group": "Sex & Selection",
+      "title": "Muller's ratchet · benefit of sex",
+      "lectures": [
+        "L11"
+      ],
+      "qids": [
+        "STIM-L11-002"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-redqueen",
+      "exam": 2,
+      "group": "Sex & Selection",
+      "title": "Red Queen · parasite-driven sex",
+      "lectures": [
+        "L11"
+      ],
+      "qids": [
+        "STIM-L11-003"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-anisogamy",
+      "exam": 2,
+      "group": "Sex & Selection",
+      "title": "Anisogamy · sperm vs egg · dimorphism",
+      "lectures": [
+        "L11"
+      ],
+      "qids": [
+        "STIM-L11-004"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-sexconflict",
+      "exam": 2,
+      "group": "Sex & Selection",
+      "title": "Sexual conflict · sperm competition",
+      "lectures": [
+        "L11"
+      ],
+      "qids": [
+        "STIM-L11-007",
+        "STIM-L11-008"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e2-mate",
+      "exam": 2,
+      "group": "Sex & Selection",
+      "title": "Mate choice · sexual selection",
+      "lectures": [
+        "L11"
+      ],
+      "qids": [
+        "STIM-L11-005",
+        "STIM-L11-006",
+        "STIM-L11-009",
+        "STIM-L11-010"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e2-tradeoffs",
+      "exam": 2,
+      "group": "Life History",
+      "title": "Trade-offs · energy allocation",
+      "lectures": [
+        "L12"
+      ],
+      "qids": [
+        "STIM-L12-001",
+        "STIM-L12-005",
+        "STIM-L12-009"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e2-mortality",
+      "exam": 2,
+      "group": "Life History",
+      "title": "Extrinsic mortality · age of maturity",
+      "lectures": [
+        "L12"
+      ],
+      "qids": [
+        "STIM-L12-002"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-aging",
+      "exam": 2,
+      "group": "Life History",
+      "title": "Aging · antagonistic pleiotropy",
+      "lectures": [
+        "L12"
+      ],
+      "qids": [
+        "STIM-L12-003",
+        "STIM-L12-004",
+        "STIM-L12-007"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e2-warblers",
+      "exam": 2,
+      "group": "Life History",
+      "title": "Seychelle's warblers · sex-biased dispersal",
+      "lectures": [
+        "L12"
+      ],
+      "qids": [
+        "STIM-L12-006"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-offspring",
+      "exam": 2,
+      "group": "Life History",
+      "title": "Offspring number / size · parental investment",
+      "lectures": [
+        "L12"
+      ],
+      "qids": [
+        "STIM-L12-008",
+        "STIM-L12-010"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e2-ess",
+      "exam": 2,
+      "group": "Social Behavior",
+      "title": "ESS · side-blotched lizards · rock-paper",
+      "lectures": [
+        "L13"
+      ],
+      "qids": [
+        "STIM-L13-006",
+        "STIM-L13-007"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e2-altruism",
+      "exam": 2,
+      "group": "Social Behavior",
+      "title": "Altruism · kin selection · inclusive fitness",
+      "lectures": [
+        "L13"
+      ],
+      "qids": [
+        "STIM-L13-002",
+        "STIM-L13-003",
+        "STIM-L13-004",
+        "STIM-L13-008"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e2-groupsel",
+      "exam": 2,
+      "group": "Social Behavior",
+      "title": "Group vs individual selection",
+      "lectures": [
+        "L13"
+      ],
+      "qids": [
+        "STIM-L13-001"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e2-cooperation",
+      "exam": 2,
+      "group": "Social Behavior",
+      "title": "Cooperation vs selfishness · social",
+      "lectures": [
+        "L13"
+      ],
+      "qids": [
+        "STIM-L13-005",
+        "STIM-L13-009",
+        "STIM-L13-010"
+      ],
+      "count": 3
+    },
+    {
+      "id": "e3-earth-age",
+      "exam": 3,
+      "group": "History",
+      "title": "Earth's age · 4.568 Ga · debates",
+      "lectures": [
+        "L14"
+      ],
+      "qids": [
+        "STIM-L14-001"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e3-timeline",
+      "exam": 3,
+      "group": "History",
+      "title": "Geologic timeline · Cambrian → Permian",
+      "lectures": [
+        "L14"
+      ],
+      "qids": [
+        "STIM-L14-004",
+        "STIM-L14-006",
+        "STIM-L14-008",
+        "STIM-L14-009"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e3-kt",
+      "exam": 3,
+      "group": "History",
+      "title": "K-T / K-Pg extinction · asteroid",
+      "lectures": [
+        "L14"
+      ],
+      "qids": [
+        "STIM-L14-005",
+        "STIM-L14-007"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e3-dating",
+      "exam": 3,
+      "group": "History",
+      "title": "Radiometric dating · biomarkers · half-life",
+      "lectures": [
+        "L14"
+      ],
+      "qids": [
+        "STIM-L14-002",
+        "STIM-L14-003"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e3-trees",
+      "exam": 3,
+      "group": "Phylogenetics",
+      "title": "Phylogenetic trees · monophyletic",
+      "lectures": [
+        "L15"
+      ],
+      "qids": [
+        "STIM-L15-001",
+        "STIM-L15-003"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e3-synap",
+      "exam": 3,
+      "group": "Phylogenetics",
+      "title": "Synapomorphies · shared derived traits",
+      "lectures": [
+        "L15"
+      ],
+      "qids": [
+        "STIM-L15-002"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e3-species",
+      "exam": 3,
+      "group": "Phylogenetics",
+      "title": "Species concepts · biological / morpho / phylo",
+      "lectures": [
+        "L15",
+        "L16"
+      ],
+      "qids": [
+        "STIM-L15-004",
+        "STIM-L16-001",
+        "STIM-L16-002",
+        "STIM-L16-008"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e3-isolation",
+      "exam": 3,
+      "group": "Speciation",
+      "title": "Reproductive isolation · prezygotic / postzygotic",
+      "lectures": [
+        "L16"
+      ],
+      "qids": [
+        "STIM-L16-003",
+        "STIM-L16-004"
+      ],
+      "count": 2
+    },
+    {
+      "id": "e3-speciation",
+      "exam": 3,
+      "group": "Speciation",
+      "title": "Speciation · allopatric / sympatric / polyploid",
+      "lectures": [
+        "L16",
+        "L17"
+      ],
+      "qids": [
+        "STIM-L16-005",
+        "STIM-L16-006",
+        "STIM-L16-007",
+        "STIM-L16-009"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e3-biogeo",
+      "exam": 3,
+      "group": "Biogeography",
+      "title": "Dispersal vs vicariance",
+      "lectures": [
+        "L17"
+      ],
+      "qids": [
+        "STIM-L17-001",
+        "STIM-L17-002",
+        "STIM-L17-003",
+        "STIM-L17-007"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e3-diversity",
+      "exam": 3,
+      "group": "Biogeography",
+      "title": "Standing diversity · turnover · speciation rate",
+      "lectures": [
+        "L17"
+      ],
+      "qids": [
+        "STIM-L17-004"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e3-massext",
+      "exam": 3,
+      "group": "Biogeography",
+      "title": "Mass extinctions · Big Five",
+      "lectures": [
+        "L14",
+        "L17"
+      ],
+      "qids": [
+        "STIM-L17-005",
+        "STIM-L17-006",
+        "STIM-L17-008",
+        "STIM-L17-009"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e3-human-impact",
+      "exam": 3,
+      "group": "Conservation",
+      "title": "Humans as a selective force",
+      "lectures": [
+        "L18"
+      ],
+      "qids": [
+        "STIM-L18-004"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e3-conservation",
+      "exam": 3,
+      "group": "Conservation",
+      "title": "Conservation strategies · biodiversity",
+      "lectures": [
+        "L18"
+      ],
+      "qids": [
+        "STIM-L18-001",
+        "STIM-L18-002",
+        "STIM-L18-003",
+        "STIM-L18-005",
+        "STIM-L18-006",
+        "STIM-L18-007",
+        "STIM-L18-008",
+        "STIM-L18-009"
+      ],
+      "count": 8
+    },
+    {
+      "id": "e3-bipedal",
+      "exam": 3,
+      "group": "Human Evol",
+      "title": "Bipedalism · 6-7 Ma · Sahelanthropus",
+      "lectures": [
+        "L19"
+      ],
+      "qids": [
+        "STIM-L19-001",
+        "STIM-L19-002",
+        "STIM-L19-003",
+        "STIM-L19-004"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e3-hominins",
+      "exam": 3,
+      "group": "Human Evol",
+      "title": "Hominin lineage · Homo · Neanderthal",
+      "lectures": [
+        "L19"
+      ],
+      "qids": [
+        "STIM-L19-005",
+        "STIM-L19-006",
+        "STIM-L19-007",
+        "STIM-L19-008",
+        "STIM-L19-009",
+        "STIM-L19-010"
+      ],
+      "count": 6
+    },
+    {
+      "id": "e3-antibiotic",
+      "exam": 3,
+      "group": "Evol Medicine",
+      "title": "Antibiotic resistance",
+      "lectures": [
+        "L20"
+      ],
+      "qids": [
+        "STIM-L20-002",
+        "STIM-L20-007",
+        "STIM-L20-008",
+        "STIM-L20-009"
+      ],
+      "count": 4
+    },
+    {
+      "id": "e3-virulence",
+      "exam": 3,
+      "group": "Evol Medicine",
+      "title": "Virulence · pathogen evolution",
+      "lectures": [
+        "L20"
+      ],
+      "qids": [
+        "STIM-L20-004"
+      ],
+      "count": 1
+    },
+    {
+      "id": "e3-evomed",
+      "exam": 3,
+      "group": "Evol Medicine",
+      "title": "Co-evolution · disease · mismatch",
+      "lectures": [
+        "L20"
+      ],
+      "qids": [
+        "STIM-L20-001",
+        "STIM-L20-003",
+        "STIM-L20-005",
+        "STIM-L20-006",
+        "STIM-L20-010",
+        "STIM-L20-011"
+      ],
+      "count": 6
+    }
+  ],
+  "qid_to_tile": {
+    "STIM-L01-001": "e1-selvsevol",
+    "STIM-L01-002": "e1-selvsevol",
+    "STIM-L01-003": "e1-selvsevol",
+    "STIM-L01-004": "e1-selvsevol",
+    "STIM-L02-001": "e1-figures",
+    "STIM-L02-002": "e1-extinction-hist",
+    "STIM-L02-003": "e1-figures",
+    "STIM-L02-004": "e1-figures",
+    "STIM-L02-005": "e1-figures",
+    "STIM-L02-006": "e1-natsel",
+    "STIM-L02-007": "e1-scimethod",
+    "STIM-L02-008": "e1-scimethod",
+    "STIM-L02-009": "e1-figures",
+    "STIM-L02-010": "e1-selvsevol",
+    "STIM-L03-001": "e1-natsel",
+    "STIM-L03-002": "e1-natsel",
+    "STIM-L03-003": "e1-geneexpr",
+    "STIM-L03-004": "e1-geneexpr",
+    "STIM-L03-005": "e1-geneexpr",
+    "STIM-L03-006": "e1-alleles",
+    "STIM-L03-007": "e1-alleles",
+    "STIM-L03-008": "e1-mutation",
+    "STIM-L03-009": "e1-mutation",
+    "STIM-L03-010": "e1-natsel",
+    "STIM-L03-011": "e1-genome",
+    "STIM-L04-001": "e1-hw",
+    "STIM-L04-002": "e1-alleles",
+    "STIM-L04-003": "e1-hw",
+    "STIM-L04-004": "e1-drift",
+    "STIM-L04-005": "e1-hw",
+    "STIM-L05-001": "e1-quantvar",
+    "STIM-L05-002": "e1-heritability",
+    "STIM-L05-003": "e1-heritability",
+    "STIM-L05-004": "e1-heritability",
+    "STIM-L05-005": "e1-heritability",
+    "STIM-L05-006": "e1-heritability",
+    "STIM-L05-007": "e1-plasticity",
+    "STIM-L05-008": "e1-plasticity",
+    "STIM-L05-009": "e1-natsel",
+    "STIM-L05-010": "e1-heritability",
+    "STIM-L05-011": "e1-heritability",
+    "STIM-L05-012": "e1-selvsevol",
+    "STIM-L07-001": "e2-empirical",
+    "STIM-L07-002": "e2-empirical",
+    "STIM-L07-003": "e2-empirical",
+    "STIM-L07-004": "e2-empirical",
+    "STIM-L07-005": "e2-empirical",
+    "STIM-L07-006": "e2-empirical",
+    "STIM-L07-007": "e2-empirical",
+    "STIM-L07-008": "e2-empirical",
+    "STIM-L07-009": "e2-empirical",
+    "STIM-L08-001": "e2-eye",
+    "STIM-L08-002": "e2-eye",
+    "STIM-L08-003": "e2-complex",
+    "STIM-L08-004": "e2-evodevo",
+    "STIM-L08-005": "e2-evodevo",
+    "STIM-L08-006": "e2-hox",
+    "STIM-L08-007": "e2-complex",
+    "STIM-L08-008": "e2-evodevo",
+    "STIM-L08-009": "e2-eye",
+    "STIM-L08-010": "e2-complex",
+    "STIM-L09-001": "e2-coev",
+    "STIM-L09-002": "e2-armsrace",
+    "STIM-L09-003": "e2-mimicry",
+    "STIM-L09-004": "e2-mutual",
+    "STIM-L11-001": "e2-cost-sex",
+    "STIM-L11-002": "e2-mullers",
+    "STIM-L11-003": "e2-redqueen",
+    "STIM-L11-004": "e2-anisogamy",
+    "STIM-L11-005": "e2-mate",
+    "STIM-L11-006": "e2-mate",
+    "STIM-L11-007": "e2-sexconflict",
+    "STIM-L11-008": "e2-sexconflict",
+    "STIM-L11-009": "e2-mate",
+    "STIM-L11-010": "e2-mate",
+    "STIM-L12-001": "e2-tradeoffs",
+    "STIM-L12-002": "e2-mortality",
+    "STIM-L12-003": "e2-aging",
+    "STIM-L12-004": "e2-aging",
+    "STIM-L12-005": "e2-tradeoffs",
+    "STIM-L12-006": "e2-warblers",
+    "STIM-L12-007": "e2-aging",
+    "STIM-L12-008": "e2-offspring",
+    "STIM-L12-009": "e2-tradeoffs",
+    "STIM-L12-010": "e2-offspring",
+    "STIM-L13-001": "e2-groupsel",
+    "STIM-L13-002": "e2-altruism",
+    "STIM-L13-003": "e2-altruism",
+    "STIM-L13-004": "e2-altruism",
+    "STIM-L13-005": "e2-cooperation",
+    "STIM-L13-006": "e2-ess",
+    "STIM-L13-007": "e2-ess",
+    "STIM-L13-008": "e2-altruism",
+    "STIM-L13-009": "e2-cooperation",
+    "STIM-L13-010": "e2-cooperation",
+    "STIM-L14-001": "e3-earth-age",
+    "STIM-L14-002": "e3-dating",
+    "STIM-L14-003": "e3-dating",
+    "STIM-L14-004": "e3-timeline",
+    "STIM-L14-005": "e3-kt",
+    "STIM-L14-006": "e3-timeline",
+    "STIM-L14-007": "e3-kt",
+    "STIM-L14-008": "e3-timeline",
+    "STIM-L14-009": "e3-timeline",
+    "STIM-L15-001": "e3-trees",
+    "STIM-L15-002": "e3-synap",
+    "STIM-L15-003": "e3-trees",
+    "STIM-L15-004": "e3-species",
+    "STIM-L16-001": "e3-species",
+    "STIM-L16-002": "e3-species",
+    "STIM-L16-003": "e3-isolation",
+    "STIM-L16-004": "e3-isolation",
+    "STIM-L16-005": "e3-speciation",
+    "STIM-L16-006": "e3-speciation",
+    "STIM-L16-007": "e3-speciation",
+    "STIM-L16-008": "e3-species",
+    "STIM-L16-009": "e3-speciation",
+    "STIM-L17-001": "e3-biogeo",
+    "STIM-L17-002": "e3-biogeo",
+    "STIM-L17-003": "e3-biogeo",
+    "STIM-L17-004": "e3-diversity",
+    "STIM-L17-005": "e3-massext",
+    "STIM-L17-006": "e3-massext",
+    "STIM-L17-007": "e3-biogeo",
+    "STIM-L17-008": "e3-massext",
+    "STIM-L17-009": "e3-massext",
+    "STIM-L18-001": "e3-conservation",
+    "STIM-L18-002": "e3-conservation",
+    "STIM-L18-003": "e3-conservation",
+    "STIM-L18-004": "e3-human-impact",
+    "STIM-L18-005": "e3-conservation",
+    "STIM-L18-006": "e3-conservation",
+    "STIM-L18-007": "e3-conservation",
+    "STIM-L18-008": "e3-conservation",
+    "STIM-L18-009": "e3-conservation",
+    "STIM-L19-001": "e3-bipedal",
+    "STIM-L19-002": "e3-bipedal",
+    "STIM-L19-003": "e3-bipedal",
+    "STIM-L19-004": "e3-bipedal",
+    "STIM-L19-005": "e3-hominins",
+    "STIM-L19-006": "e3-hominins",
+    "STIM-L19-007": "e3-hominins",
+    "STIM-L19-008": "e3-hominins",
+    "STIM-L19-009": "e3-hominins",
+    "STIM-L19-010": "e3-hominins",
+    "STIM-L20-001": "e3-evomed",
+    "STIM-L20-002": "e3-antibiotic",
+    "STIM-L20-003": "e3-evomed",
+    "STIM-L20-004": "e3-virulence",
+    "STIM-L20-005": "e3-evomed",
+    "STIM-L20-006": "e3-evomed",
+    "STIM-L20-007": "e3-antibiotic",
+    "STIM-L20-008": "e3-antibiotic",
+    "STIM-L20-009": "e3-antibiotic",
+    "STIM-L20-010": "e3-evomed",
+    "STIM-L20-011": "e3-evomed"
+  },
+  "unassigned_count": 0,
+  "unassigned": []
+}
