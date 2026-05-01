@@ -54,6 +54,7 @@
         term: "X-linked Hardy-Weinberg",
         def: "Hemizygous males show recessive at frequency q (they have only one X). Females show recessive at q². Disease vastly more common in males.",
         example: "Color blindness q ≈ 0.08. Male affected freq ≈ 0.08; female ≈ 0.0064 — males ~12× more often affected. Why does X-linkage skew sex ratios in disease prevalence?",
+        exAnswer: "Males are HEMIZYGOUS — only one X copy, so a recessive allele at frequency q is fully expressed at q (males get the rare allele 'cheap'). Females need TWO copies, expressed at q². Since q < 1, q ≫ q² → males are affected far more often. Numerically: q = 0.08 → males 8% affected, females 0.64% affected → 12.5× ratio. Increases with rarer alleles (q = 0.01 → 100× ratio).",
         ctx: "L04 §C — Detecting deviations",
         mnem: "X-male = q · X-female = q² (males get the rare allele cheap)."
       },
@@ -61,6 +62,7 @@
         term: "Wahlund effect",
         def: "Pooling two subpopulations with different allele frequencies produces APPARENT excess of homozygotes vs HWE expectation, even if each subpop is in HWE internally.",
         example: "Subpop A: p=0.9. Subpop B: p=0.1. Pooled p=0.5 → expected 2pq=0.5. Observed heterozygotes ≈ 0.18. Excess homozygotes — but no inbreeding inside either subpop. Diagnosis?",
+        exAnswer: "POPULATION SUBDIVISION (Wahlund effect). Pooling subpops with different allele frequencies produces apparent homozygote excess vs HWE — even though each subpop is internally in HWE. No inbreeding required. Distinguish from true inbreeding by looking for spatial structure (sample subpops separately, compute FST). The math: pooled heterozygosity = 2 p̄ q̄ − 2·Var(p) — variance in p across subpops directly reduces apparent heterozygosity.",
         ctx: "L04 §C — Detecting deviations"
       },
       {
@@ -73,6 +75,7 @@
         term: "One generation of random mating restores HWE",
         def: "From any starting genotype frequencies (assuming no other forces), a single generation of random mating produces HWE proportions p², 2pq, q². The other 4 forces must be absent.",
         example: "A population has 80% AA and 20% aa (no Aa). After one round of random mating with p=0.8: expected 0.64 AA, 0.32 Aa, 0.04 aa. Why does this happen instantly?",
+        exAnswer: "Allele frequencies don't change under random mating — only genotype frequencies redistribute. Each new offspring's genotype is drawn from independent gamete sampling at frequencies p and q, so genotype frequencies converge to p², 2pq, q² in a single round (no time-decay term). The 'memory' of previous genotype distributions is wiped because gametes are independent. This is what makes HWE a strong predictive baseline.",
         ctx: "L04 §B — Hardy-Weinberg equation"
       }
     ],
@@ -88,6 +91,7 @@
         term: "Directional selection",
         def: "Favors one extreme of a trait distribution; mean shifts toward favored end; variance often decreases.",
         example: "Drought favors deep beaks in Galápagos finches; mean beak depth shifts deeper across one generation. What does the trait distribution look like before vs after?",
+        exAnswer: "BEFORE: roughly bell-shaped, centered on the original mean. AFTER one generation: bell SHIFTED toward the favored extreme (deeper beaks); shape similar but center moved by R = h²·S. Variance often shrinks slightly because lower-fitness extreme individuals were removed, and the favored extreme is bounded by the original distribution's tail. Sustained selection eventually depletes V_A and slows further response.",
         ctx: "L05 §C — Selection on quantitative traits",
         mnem: "Directional → Distribution Drifts (mean moves)."
       },
@@ -95,6 +99,7 @@
         term: "Stabilizing selection",
         def: "Favors the mean / intermediate phenotype; extremes selected against; mean unchanged but variance shrinks.",
         example: "Human birth weight: very small AND very large babies have higher mortality. Mean stays at ~3.5 kg. What happens to variance under sustained stabilizing selection?",
+        exAnswer: "Variance DECREASES — extremes are pruned each generation, the distribution narrows around the mean. Mean unchanged. Long-term variance is set by mutation–selection balance: new mutations introduce variance, stabilizing selection prunes it. Cannot drive variance to zero unless mutation stops. Note: this is the opposite of what new students often guess — selection here removes phenotypic extremes, not allele frequencies.",
         ctx: "L05 §C — Selection on quantitative traits",
         mnem: "Stabilizing → Squashes the distribution (variance ↓)."
       },
@@ -102,6 +107,7 @@
         term: "Disruptive selection",
         def: "Favors BOTH extremes; intermediates selected against; variance increases; can produce bimodal distribution and seed sympatric divergence.",
         example: "African finch with bimodal beak distribution — small beaks crack soft seeds, large beaks crack hard seeds. Intermediates are bad at both. What long-term outcome may this lead to?",
+        exAnswer: "SYMPATRIC SPECIATION (potentially) — IF assortative mating evolves so that small-beaked birds preferentially mate with small-beaked birds (and likewise for large), the bimodal distribution can split into two reproductively isolated lineages. Without assortative mating, the bimodality is unstable: random mating between morphs continually regenerates intermediates, which selection then prunes — costly equilibrium. Disruptive selection alone is necessary but not sufficient.",
         ctx: "L05 §C — Selection on quantitative traits",
         mnem: "Disruptive → Divides the distribution (two peaks)."
       },
@@ -135,6 +141,7 @@
         term: "Reaction norm",
         def: "Plot of phenotype vs environment for a single genotype; flat line = canalized; sloped = plastic; non-parallel between genotypes = G×E.",
         example: "Genotype A: yields 5 vs 8 across temperatures. Genotype B: yields 8 vs 4 (opposite slope). Lines cross — that's G×E. Why does this matter for predicting which genotype 'is best'?",
+        exAnswer: "There is NO context-free 'best' — fitness depends on environment. G×E means the rank order of genotypes can FLIP across environments. A breeder picking the 'best' line in one site can lose the actual best in another site. Practical implication: selection or breeding programs must match the deployment environment; lab-raised crops can fail in field conditions because G×E was ignored. Heritability is also environment-specific.",
         ctx: "L05 §D — Phenotypic plasticity, reaction norms"
       }
     ],
@@ -461,6 +468,7 @@
         term: "Big Five mass extinctions",
         def: "End-Ordovician, Late Devonian, end-Permian (largest, ~95% marine), end-Triassic, end-Cretaceous (K-Pg, ~66 MYA, dinos).",
         example: "Causes vary: end-Permian (Siberian Traps + acidification + climate), K-Pg (Chicxulub asteroid → iridium layer). Why does each event reshape post-event radiations?",
+        exAnswer: "Mass extinctions empty niches NON-RANDOMLY — surviving lineages diversify into the suddenly-vacant ecospace (adaptive radiation). K-Pg cleared dinosaurs → mammalian radiation into large-body and arboreal niches. End-Permian wiped most marine clades → modern fauna originated from a few survivors. The 'who survives' is partly luck (small body, generalist diet, deep-water refuge), so post-event radiations are CONTINGENT on whichever subset happened to make it through.",
         ctx: "L14 §D — Mass extinctions",
         mnem: "OD-PTC: Ordovician · Devonian · Permian · Triassic · Cretaceous (in time order)."
       },
@@ -468,6 +476,7 @@
         term: "Radiometric dating logic",
         def: "Parent isotope decays to daughter at known half-life. Age = ln(1+D/P)/λ where D/P = daughter/parent ratio, λ = decay constant. Different isotope systems for different timescales.",
         example: "¹⁴C: ~5,730 yr half-life — useful to ~50 KYR. K-Ar: 1.25 GYR half-life — millions to billions. U-Pb: zircons date Earth at 4.4 GYA. Why can't ¹⁴C date a dinosaur fossil?",
+        exAnswer: "¹⁴C half-life is ~5,730 yr, useful range ~10 half-lives = ~50 KYR. After ~10 half-lives, parent isotope is below detection (~0.1% remaining). Dinosaurs went extinct ~66 MYA → ~11,500 ¹⁴C half-lives ago → effectively zero ¹⁴C left. Need a longer-half-life system: K-Ar (1.25 GYR half-life) or U-Pb in zircons (~4.5 GYR), which work across millions to billions of years. Match the system to the timescale.",
         ctx: "L14 §A — Earth's age, dating methods"
       }
     ],
@@ -476,6 +485,7 @@
         term: "Reading a phylogenetic tree — closeness rule",
         def: "Closeness of relationship is determined by RECENCY OF COMMON ANCESTOR (depth of shared node), NOT by horizontal distance on the page. Trees can be rotated at any node without changing relationships.",
         example: "On a tree of (mouse, (human, chimp)), human and chimp are more closely related to each other than either is to mouse — even if mouse is drawn 'right next to' human. Why is rotation allowed?",
+        exAnswer: "A tree's information lives in its TOPOLOGY (which nodes connect to which) and BRANCH LENGTHS (time/divergence) — NOT in the left/right ordering at branch points. Spinning a node 180° preserves all this information; only the page layout changes. Two trees that look different but rotate into each other are the SAME tree. Reflex check: count nodes between taxa, not pixels.",
         ctx: "L15 §A — Reading phylogenetic trees",
         mnem: "Look at the NODE, not the page-distance."
       },
@@ -497,18 +507,21 @@
         term: "Outgroup",
         def: "A taxon known to lie outside the clade being studied — used to root the tree and polarize character states (which is ancestral, which derived).",
         example: "Studying primate phylogeny: tree shrews or mice as outgroup. Why is outgroup choice critical for distinguishing synapomorphy from symplesiomorphy?",
+        exAnswer: "An outgroup tells you which character state is ANCESTRAL (the state shared with the outgroup) vs DERIVED (the state new in the ingroup). Without polarization, you can't tell whether a shared trait is informative (shared derived = synapomorphy = clade) or uninformative (shared ancestral = symplesiomorphy). A bad outgroup (too close to ingroup, or itself nested in ingroup) biases or misroots the entire tree. Outgroup must be confidently outside the ingroup AND share enough characters to be alignable.",
         ctx: "L15 §B — Synapomorphy / symplesiomorphy / homoplasy"
       },
       {
         term: "Crown group vs stem group",
         def: "CROWN group = all descendants of the most recent common ancestor of all LIVING members of a clade. STEM group = extinct lineages that branched off before the crown but are part of the broader clade (e.g., 'feathered theropods are stem-birds').",
         example: "All living birds + their MRCA + descendants = crown Aves. Archaeopteryx and other early feathered dinosaurs = stem birds. Why is this distinction vital for fossil evidence?",
+        exAnswer: "Stem fossils preserve INTERMEDIATE stages between the broader clade's origin and the modern crown — their mosaic of ancestral + derived traits documents the assembly of modern body plans. Conflating crown and stem makes fossils look like 'misfits' (e.g., Archaeopteryx with bird wings + dinosaur teeth). The distinction lets paleontology and molecular phylogenetics agree on the origin TIMING of features (feathers ~150 MYA, beaks ~70 MYA) vs the origin of the modern crown (~70 MYA) — they're separate events.",
         ctx: "L15 §A — Reading phylogenetic trees"
       },
       {
         term: "Maximum parsimony",
         def: "Tree-building criterion: prefer the tree requiring the FEWEST evolutionary changes. Assumes evolution is rare — works when homoplasy is uncommon; fails for fast-evolving genes.",
         example: "Two trees: one needs 5 character changes, the other needs 8. Which does parsimony prefer? Why does parsimony underperform when long branches accumulate convergent changes?",
+        exAnswer: "Parsimony picks the 5-change tree (fewest changes wins). But when long branches evolve fast, multiple changes per site become common; parsimony interprets convergent identical states as shared ancestry, ATTRACTING unrelated long branches together (LONG BRANCH ATTRACTION — a systematic error). Maximum likelihood and Bayesian methods that explicitly model rate variation across sites and branches handle this; parsimony does not. Use parsimony for slow-evolving morphological/genomic data; use likelihood for fast-evolving sites.",
         ctx: "L15 §A — Reading phylogenetic trees"
       }
     ],
@@ -517,6 +530,7 @@
         term: "Speciation modes (geographic)",
         def: "ALLOPATRIC: separated by barrier; most common in animals. PERIPATRIC: small founder pop isolated; drift + selection accelerate. PARAPATRIC: partial separation; gene flow ongoing. SYMPATRIC: same range; via niche shift, polyploidy (mostly plants).",
         example: "Squirrels split by Grand Canyon → Kaibab and Abert squirrels = allopatric. Apple maggot fly (Rhagoletis) shifted host from hawthorn to apple = sympatric. What environmental signature distinguishes peripatric from allopatric?",
+        exAnswer: "ALLOPATRIC: large barrier divides population into two roughly equal halves; both maintain effective size; divergence by drift + diverging selection over many generations. PERIPATRIC: a SMALL founder group is isolated at the periphery — drift is much stronger (small Ne), novel selection regimes hit a small Ne, and trait changes can fix rapidly. SIGNATURE: rapid divergence + lower diversity in the peripheral population, often on islands or range edges (e.g., Hawaiian Drosophila).",
         ctx: "L16 §C — Speciation modes",
         mnem: "APPS: Allopatric · Peripatric · Parapatric · Sympatric (gene-flow level: 0 → 0 → some → full)."
       },
@@ -524,6 +538,7 @@
         term: "Prezygotic isolation barriers (5)",
         def: "TEMPORAL (different breeding times), BEHAVIORAL (different courtship signals), MECHANICAL (incompatible genitalia/flowers), GAMETIC (sperm/pollen don't fertilize), HABITAT (don't meet because of niche).",
         example: "Two cricket species sing at different times of day = behavioral. Two mosquito species breed in different seasons = temporal. Why are prezygotic barriers more 'efficient' than postzygotic?",
+        exAnswer: "Prezygotic barriers prevent reproduction from being ATTEMPTED — no gametes wasted, no inviable offspring produced, no parental care invested in doomed young. Postzygotic barriers (hybrid inviability/sterility/breakdown) waste all of those resources. Because waste is costly, selection FAVORS strengthening prezygotic isolation (REINFORCEMENT) wherever postzygotic isolation already exists. Result: in zones of secondary contact, prezygotic barriers tend to evolve fast.",
         ctx: "L16 §B — Reproductive isolation",
         mnem: "T-B-M-G-H: Temporal · Behavioral · Mechanical · Gametic · Habitat."
       },
@@ -531,6 +546,7 @@
         term: "Postzygotic isolation barriers (3)",
         def: "HYBRID INVIABILITY (zygote/embryo fails). HYBRID STERILITY (mules — develops but can't reproduce). HYBRID BREAKDOWN (F1 fine but F2/backcross weak).",
         example: "Horse × donkey → mule (sterile, viable). Two cotton species → F1 fine, F2 collapses. Why is hybrid breakdown evidence of accumulated incompatibilities (Dobzhansky-Muller)?",
+        exAnswer: "F1 hybrids are HETEROZYGOUS for both species' alleles → most incompatibilities are buffered (one functioning copy is enough). F2 segregation creates novel HOMOZYGOUS COMBINATIONS of alleles that were never co-tested in either parent species — and those combinations expose negative epistasis between independently-evolved alleles (alleles 'incompatible' because they evolved in different genetic backgrounds). Multiple loci → exponential exposure in F2; that's the Dobzhansky-Muller signature: F1 fine, F2 collapse.",
         ctx: "L16 §B — Reproductive isolation",
         mnem: "I-S-B: Inviable · Sterile · Breakdown."
       },
@@ -538,6 +554,7 @@
         term: "Reinforcement",
         def: "When two diverged populations resume contact and produce unfit hybrids, selection favors STRONGER PREZYGOTIC isolation — barriers reinforce because hybrids waste reproductive effort.",
         example: "Pied/collared flycatchers in Europe show stronger song differences in zones of overlap than in pure-population zones — classic reinforcement signature. What does the prediction look like in pure vs sympatric zones?",
+        exAnswer: "PURE-population zones (allopatric): prezygotic differences are at the 'background' level inherited from ancestral divergence — not strongly selected for distinctness. SYMPATRIC (overlap) zones: stronger prezygotic differences because hybrid offspring are unfit and selection favors stronger discrimination. The asymmetric pattern (greater divergence in sympatry than allopatry) is the diagnostic signature for ACTIVE reinforcement. Without postzygotic costs, no reinforcement happens.",
         ctx: "L16 §C — Speciation modes"
       },
       {
@@ -558,6 +575,7 @@
         term: "Dispersal vs vicariance",
         def: "DISPERSAL: organisms move across an existing barrier (lineage now in multiple regions). VICARIANCE: a NEW barrier (mountain rise, sea, continental drift) splits a continuous range. Molecular dating distinguishes.",
         example: "South American + African biotas share Gondwanan ancestry — vicariance from continental rifting (~120 MYA). Hawaiian birds arrived by dispersal across open ocean (no land bridge ever). Why does timing test these hypotheses?",
+        exAnswer: "Vicariance PREDICTS splits matching the timing of the geological barrier (continental rift, mountain rise). Dispersal can occur at any time after a barrier exists. Molecular dating gives split times to test: if South American + African primate sister taxa split ~120 MYA when the Atlantic was opening → vicariance fits. If they split ~35 MYA (long after the Atlantic was wide open) → vicariance fails; dispersal (rafting, island hops) is required. The clock decides between hypotheses.",
         ctx: "L17 §B — Dispersal vs. vicariance",
         mnem: "Dispersal moves; Vicariance divides."
       },
@@ -565,12 +583,14 @@
         term: "Adaptive radiation",
         def: "Rapid diversification of one lineage into many ecologically distinct species. Conditions: open niches + key innovation + ecological opportunity (post-extinction, new habitat).",
         example: "Galápagos finches: ~14 species from one founding ancestor, each a beak/diet specialist. Cichlid fish in African lakes: hundreds of species in <1 MYR. What 'opens niches' for radiations?",
+        exAnswer: "Four classic openers: (1) MASS EXTINCTION clearing ecospace (mammals after K-Pg). (2) COLONIZING a new geographic area lacking competitors (Galápagos finches, Hawaiian honeycreepers). (3) KEY INNOVATION that opens new niches (jaws → vertebrate radiation; flight → bird/bat/insect radiations; flowers → angiosperm radiation; pharyngeal jaws → cichlid radiation). (4) GEOLOGICAL/CLIMATIC SHIFTS creating new habitats (cichlids in young Rift lakes; alpine plants after glaciation).",
         ctx: "L17 §E — Adaptive radiations"
       },
       {
         term: "Equilibrium island biogeography (MacArthur-Wilson)",
         def: "Standing species count = balance between IMMIGRATION (declines as island fills) and EXTINCTION (rises with more species). Equilibrium S* depends on island size (extinction) and distance from source (immigration).",
         example: "Predict: large island near mainland vs small island far away. Which has higher S*? (Large/near.) Why does the model predict TURNOVER even at equilibrium?",
+        exAnswer: "Large-and-near has the highest S* (large = low extinction; near = high immigration; both push the curves favorably). Equilibrium is DYNAMIC, not static — at S*, the extinction rate EQUALS the immigration rate, so species are constantly being lost and replaced even though the total count is stable. Empirically confirmed by Simberloff & Wilson's mangrove fumigation experiments: same total species count returned within months, but different species assemblage years later.",
         ctx: "L17 §C — Standing diversity, turnover"
       }
     ],
@@ -579,6 +599,7 @@
         term: "Hominin bipedality timing",
         def: "Bipedalism predates large brains by millions of years. Sahelanthropus (~7 MYA) and Ardipithecus (~4.4 MYA) show foramen magnum forward, pelvic & lower-limb adaptations for upright walking — large brains evolved much later in Homo (~2 MYA).",
         example: "Why is the order 'bipedal first, big brain later' surprising relative to popular reconstructions? What does it imply about selective pressures driving each?",
+        exAnswer: "SURPRISING because pop-culture reconstructions imply intelligence came first ('we got smart, THEN we stood up'). The fossil order is REVERSED: ~7 MYA bipedal Sahelanthropus with chimp-sized brain. IMPLIES bipedality wasn't selected for tool-use or to support a heavy head — likely thermoregulation (less surface area to direct sun), energy efficiency over long walking distances, or freed hands for carrying food/infants. Brain expansion came ~5 MYA later, riding on different selective pressures (tools, social cognition, dietary shifts).",
         ctx: "L19 — Human evolution"
       }
     ],
