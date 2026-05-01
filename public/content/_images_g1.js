@@ -12,8 +12,8 @@
           credit: "Wikimedia Commons / Public domain"
         },
         {
-          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/WhatIsDrugResistance.gif",
-          caption: "Antibiotic-resistance evolution shown stepwise: rare resistant variants exist before the drug, the antibiotic kills susceptible cells, and the surviving lineage becomes dominant. The bacterial population's allele frequencies shift across generations — that frequency change IS evolution.",
+          src: "https://commons.wikimedia.org/wiki/Special:FilePath/Antibiotic_resistance.svg?width=800",
+          caption: "Antibiotic-resistance evolution stepwise: rare resistant variants exist before the drug, antibiotic kills susceptible cells, surviving resistant lineage becomes dominant. The bacterial population's allele frequencies shifted across generations — that frequency change IS evolution.",
           credit: "Wikimedia Commons / Public domain"
         }
       ]

@@ -904,14 +904,25 @@
         if (imgsEl) {
           const imgs = Array.isArray(card.images) ? card.images : (card.image ? [card.image] : []);
           const validImgs = imgs.filter(i => i && (typeof i === 'string' ? i : i.src));
+          // Wikimedia thumb URLs sometimes 400 for non-pre-cached sizes.
+          // Build a fallback to Special:FilePath which always redirects to a working thumbnail.
+          const wmFallback = (src) => {
+            const m = (src || '').match(/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/[^\/]+\/[^\/]+\/([^\/]+)\/(\d+)px-/);
+            if (!m) return '';
+            return 'https://commons.wikimedia.org/wiki/Special:FilePath/' + m[1] + '?width=' + m[2];
+          };
           if (validImgs.length) {
             imgsEl.innerHTML = '<span class="lz-images-label">Visual</span>' +
               validImgs.map(img => {
                 const src = typeof img === 'string' ? img : img.src;
                 const caption = (typeof img === 'object' && img.caption) ? img.caption : '';
                 const credit = (typeof img === 'object' && img.credit) ? img.credit : '';
+                const fb = wmFallback(src);
+                const onerr = fb
+                  ? `if(this.dataset.fb!=='1'){this.dataset.fb='1';this.src='${escHTML(fb)}';}else{this.parentElement.classList.add('lz-image-fail')}`
+                  : `this.parentElement.classList.add('lz-image-fail')`;
                 return `<figure class="lz-image-fig">
-                  <img class="lz-image-img" src="${escHTML(src)}" alt="${escHTML(caption || card.term || '')}" loading="lazy" onerror="this.parentElement.classList.add('lz-image-fail')"/>
+                  <img class="lz-image-img" src="${escHTML(src)}" alt="${escHTML(caption || card.term || '')}" loading="lazy" onerror="${onerr}"/>
                   ${caption ? `<figcaption class="lz-image-cap">${caption}</figcaption>` : ''}
                   ${credit ? `<span class="lz-image-credit">${escHTML(credit)}</span>` : ''}
                 </figure>`;

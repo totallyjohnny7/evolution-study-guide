@@ -1048,11 +1048,12 @@ window.addCardPatches = function (lectureId, terms) {
     let patchedFields = 0;
     const applyOne = (card, patch) => {
       if (!card || !patch) return;
-      if (patch.exAnswer && !card.exAnswer) { card.exAnswer = patch.exAnswer; patchedFields++; }
-      if (patch.mnem && !card.mnem && !card.mnemonic) { card.mnem = patch.mnem; patchedFields++; }
-      if (patch.analogy && !card.analogy && !card.mnem && !card.mnemonic) { card.analogy = patch.analogy; patchedFields++; }
-      if (patch.importance && !card.importance) { card.importance = patch.importance; patchedFields++; }
-      if (patch.images && !card.images) { card.images = patch.images; patchedFields++; }
+      const force = patch.force === true;
+      if (patch.exAnswer && (force || !card.exAnswer)) { card.exAnswer = patch.exAnswer; patchedFields++; }
+      if (patch.mnem && (force || (!card.mnem && !card.mnemonic))) { card.mnem = patch.mnem; patchedFields++; }
+      if (patch.analogy && (force || (!card.analogy && !card.mnem && !card.mnemonic))) { card.analogy = patch.analogy; patchedFields++; }
+      if (patch.importance && (force || !card.importance)) { card.importance = patch.importance; patchedFields++; }
+      if (patch.images && (force || !card.images)) { card.images = patch.images; patchedFields++; }
     };
 
     Object.entries(patches).forEach(([lectureId, byTerm]) => {
