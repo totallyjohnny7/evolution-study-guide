@@ -10,6 +10,7 @@
         term: "Darwin's three observations + one inference",
         def: "OBS 1: Heritable variation exists. OBS 2: More offspring produced than survive. OBS 3: Survival/reproduction is non-random. INFERENCE: Heritable variants that raise reproduction become more common — natural selection.",
         example: "Asked on an exam to 'list the logical structure of natural selection,' you must give 3 observations and 1 inference. What would a missing piece (e.g., no heritable variation) do to the argument?",
+        exAnswer: "The conclusion fails. If variation is non-heritable (purely environmental), survivors can't transmit their winning traits → no shift across generations. Each observation is a necessary premise; remove any one and the inference doesn't follow. Drop overproduction → no differential survival to select on. Drop non-random survival → no selection signal at all.",
         ctx: "L02 §D — Darwin, Wallace, natural selection",
         mnem: "VOS→S: Variation · Overproduction · Survival differs → Selection."
       },
@@ -17,6 +18,7 @@
         term: "Falsifiability (Popper)",
         def: "A scientific claim must specify observations that would prove it wrong. Evolution is falsifiable; e.g., a Cambrian rabbit fossil would shatter the tree.",
         example: "An exam asks why 'all living things were created perfectly' is not a scientific claim. Frame the answer in falsifiability terms.",
+        exAnswer: "No observation could disprove 'created perfectly' — perfection accommodates any data, including imperfections (just call them 'optimal trade-offs'). Scientific claims must specify what would refute them; this one refuses. Compare evolution: a Precambrian rabbit, identical complex organs in unrelated lineages, or stable allele frequencies under measurable selection would all break the theory.",
         ctx: "L02 §E — Hypothesis vs. theory"
       }
     ],
@@ -141,6 +143,7 @@
         term: "Stepwise eye evolution stages",
         def: "(1) Light-sensitive patch (photoreceptors). (2) Cupped patch — directional sensitivity. (3) Pinhole eye (Nautilus) — image without lens. (4) Lensed eye — sharp focus via co-opted crystallins.",
         example: "Each stage must be functional — selection cannot 'plan' a future eye. Eyes have evolved >40 times independently. What does this convergence imply about complexity?",
+        exAnswer: "Complex 'irreducible' structures aren't barriers to evolution — eyes have evolved >40 times because each step (light sensitivity, directionality, image, focus) confers fitness on its own. Convergence shows the gradient is climbable from many starting points. Complexity emerges from cumulative selection on functional intermediates, not from design.",
         ctx: "L08 §B — Vertebrate eye — stepwise model",
         mnem: "Patch → Cup → Pinhole → Lens (four functional steps)."
       },
@@ -155,6 +158,7 @@
         term: "Heterochrony (paedo vs peramorphosis)",
         def: "Heterochrony = evolution of developmental TIMING. Paedomorphosis: adult retains juvenile traits (axolotl reproduces while gilled). Peramorphosis: development extends past ancestor (large antlers, exaggerated size).",
         example: "Human cranial proportions resemble juvenile chimps — that's paedomorphic. Irish elk antlers are 4 m wide — that's peramorphic. Why are timing changes such a powerful source of morphological novelty?",
+        exAnswer: "Because timing is REGULATORY — flipping when/how long developmental programs run rewires the body without inventing new genes. A small heterochronic shift (extending growth, retaining a juvenile shape) cascades through every downstream tissue and produces dramatically different adult forms cheaply. Strong morphological change from minimal genetic change.",
         ctx: "L08 §D — Heterochrony",
         mnem: "Paedo = Pediatric (juvenile features kept) · Pera = Past (development extended)."
       },
@@ -162,6 +166,7 @@
         term: "Hox genes — A-P body axis",
         def: "Cluster of TFs that pattern the anterior-posterior axis of bilaterians. Colinearity: chromosomal order matches body-axis expression order.",
         example: "Vertebrates have 4 Hox clusters (HoxA, B, C, D) from two whole-genome duplications. Flies have 1 cluster. What body-plan transitions correlate with cluster duplications?",
+        exAnswer: "Two whole-genome duplications in early vertebrates (1R, 2R) created the four Hox clusters. This coincided with vertebrate body-plan elaboration: head, jaws, paired appendages, complex CNS. Teleost fish later underwent a third duplication (3R), correlated with their >30,000-species radiation. More Hox copies → more regulatory degrees of freedom → more body-plan complexity.",
         ctx: "L08 §E — Hox genes and conserved networks",
         mnem: "Hox = Head-to-tail patterning (linear order on chromosome = linear order on body)."
       },
@@ -169,13 +174,35 @@
         term: "Cis-regulatory mutations vs structural",
         def: "Cis = changes WHEN/WHERE a gene is expressed (enhancer/promoter); structural = changes the protein itself. Cis is the leading edge of body-plan evolution because it's modular and tissue-specific.",
         example: "Stickleback fish lost pelvic spines via repeated cis-regulatory loss in the Pitx1 gene. The protein still works in teeth and elsewhere. Why is cis-regulatory evolution favored over structural change in pleiotropic genes?",
+        exAnswer: "Structural changes alter the protein everywhere it's used, breaking other essential functions (pleiotropy → fitness cost, often lethal). Cis-regulatory changes are MODULAR — flipping one enhancer alters expression in one tissue/timepoint only. Pitx1 still works in teeth; only the pelvic enhancer was lost. Lower pleiotropic cost → cis is more evolvable for body-plan tweaks.",
         ctx: "L08 §C — Regulatory networks"
       },
       {
         term: "Vestigial structure (definition + examples)",
         def: "An ancestral structure with reduced or no current function. Whale pelvis, human appendix, snake hind-limb buds, ostrich wings, blind cave-fish eyes.",
         example: "Why isn't the human appendix 'evidence against evolution'? What does it positively support?",
+        exAnswer: "Imperfect/'leftover' parts are EXPECTED if structures are inherited from ancestors and modified, not designed from scratch. The appendix supports common descent (cecum-derived, large in herbivorous ancestors) AND modification by descent (reduced as diet shifted). A pure-design hypothesis would predict no vestiges — vestigials are positive evidence FOR evolution.",
         ctx: "L08 §F — Imperfect adaptation"
+      },
+      {
+        term: "Adaptation — noun vs verb (trait vs process)",
+        def: "TRAIT use: 'the wing is an adaptation' — a heritable feature shaped by past selection FOR a current function. PROCESS use: 'the population is undergoing adaptation' — the verb-act of evolving under selection. Same word, two distinct claims.",
+        example: "An exam asks: 'Bat wings are an adaptation for flight.' Identify which sense is meant, and explain why claiming a trait IS an adaptation is a strong claim that needs evidence.",
+        exAnswer: "Trait sense (noun). Calling something AN adaptation FOR X commits to: (1) heritable variation in the trait, (2) historical fitness benefit specifically in function X, (3) ideally a comparative or experimental test. Otherwise the trait may be an EXAPTATION (co-opted from another role — feathers were thermoregulatory before flight) or a BYPRODUCT (no selection at all — chin shape in humans). The verb sense just labels change; the noun sense commits to a function.",
+        ctx: "L08 §A — Adaptation as trait & process",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "adaptation-noun-vs-verb"
+      },
+      {
+        term: "Protein promiscuity → cooption",
+        def: "Promiscuity = a protein has weak side-activities beyond its main function. Selection can refine those weak activities into new primary roles. Major source of evolutionary novelty without inventing new genes from scratch.",
+        example: "Eye-lens crystallins were co-opted from heat-shock proteins and metabolic enzymes. Antarctic notothenioid antifreeze glycoprotein co-opted from a digestive enzyme. What does cooption tell you about how 'novel' traits are usually built?",
+        exAnswer: "Novelty rarely comes from de novo gene invention. The existing protein toolkit, with its built-in promiscuous side-activities, provides raw material that selection sharpens into new functions. Complex 'new' organs (lenses, antifreeze, venoms) often share deep homology with seemingly unrelated machinery. The real innovation is regulatory tweaking + sequence refinement, not creation. This is also why so many enzymes have moonlighting roles.",
+        ctx: "L08 §C — Regulatory networks, gene duplication",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "cooption"
       }
     ],
     "L09": [
@@ -183,6 +210,7 @@
         term: "Coevolution vs coexistence",
         def: "Coevolution = RECIPROCAL evolutionary change in interacting lineages. Coexistence ≠ coevolution; both species could be in their own equilibria without reciprocal pressure.",
         example: "Two species have lived in the same forest for a million years and look co-adapted. What evidence would show coevolution rather than mere coexistence?",
+        exAnswer: "RECIPROCAL trait change tracked across populations or time: where species A's defense is strong, species B's offense is also strong; where A's defense is weak, B's offense is weak. Static co-adaptation could be coincidence. Matched DYNAMIC variation (e.g., newt TTX matches snake resistance across the range) is the diagnostic for mutual selective pressure. Look for geographic correlation, not just coexistence.",
         ctx: "L09 §A — Defining reciprocal coevolution"
       },
       {
@@ -195,6 +223,7 @@
         term: "Batesian vs Müllerian mimicry",
         def: "BATESIAN: harmless mimic resembles harmful model; mimic must stay rare or predators learn to ignore signal. MÜLLERIAN: multiple HARMFUL species converge on a shared warning signal — all gain protection together.",
         example: "Viceroy butterfly looks like monarch. Both are noxious — that's Müllerian. A non-toxic fly looks like a wasp — that's Batesian. Why does mimic frequency matter only for Batesian?",
+        exAnswer: "Predators learn from costly experiences. In BATESIAN (mimic is harmless), predators that attack mimics get rewarded — so if mimics outnumber models, the warning signal stops working and the bluff fails. Frequency-dependent: mimic must stay rare. In MÜLLERIAN (both noxious), every encounter teaches the SAME lesson — both species reinforce the signal. Frequency doesn't matter; both can be common.",
         ctx: "L09 §D — Mimicry",
         mnem: "Bates = Bluff (one liar) · Müller = Mutual (both honest)."
       },
@@ -202,7 +231,28 @@
         term: "Geographic Mosaic Theory of Coevolution (Thompson)",
         def: "Coevolution intensity varies across the range — HOTSPOTS (intense reciprocal selection) + COLDSPOTS (weak/none). Gene flow + local trait evolution → mosaic of coevolutionary states; mismatch is positive evidence of dynamic process.",
         example: "Crossbill bird beaks match local pine cone shapes in some valleys but not others. Trait MISMATCH is consistent with the Mosaic Theory rather than refuting coevolution. Why?",
+        exAnswer: "Gene flow between populations + locally varying selection → trait combinations chase local conditions imperfectly. The Mosaic Theory PREDICTS mismatch in some places (coldspots, recent immigration, weak selection) and tight matching in others (hotspots). Mismatch is therefore a SIGNATURE of dynamic coevolution, not a refutation. A frozen, perfectly-co-adapted pair would actually be unusual under this model.",
         ctx: "L09 §E — Geographic Mosaic Theory"
+      },
+      {
+        term: "Pollinator-flower mutualism (Darwin's orchid prediction)",
+        def: "Reciprocal coevolution where flower morphology and pollinator anatomy track each other tightly — both partners gain fitness. Flower gets pollen transfer; pollinator gets food. Tight matches are evidence of past coevolutionary feedback.",
+        example: "Darwin saw the long-spurred Madagascar orchid (Angraecum sesquipedale, 25-cm spur) and PREDICTED a hawkmoth with that exact tongue must exist. Decades after his death, Xanthopan morganii praedicta was discovered with a 25-cm tongue. What evolutionary process produced the tight match?",
+        exAnswer: "Reciprocal selection. Flowers with longer spurs forced moths to push deeper, increasing pollen contact → flower fitness rewarded longer spurs. Moths with longer tongues reached more nectar with less effort → moth fitness rewarded longer tongues. Each lineage's selection pressure was generated BY the other lineage's traits — coevolutionary feedback loop. The match isn't coincidence; it's a steady state shaped by mutual escalation.",
+        ctx: "L09 §C — Mutualistic coevolution",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "mutualism-pollinator"
+      },
+      {
+        term: "Endosymbiosis: two distinct organelle origins",
+        def: "Eukaryotes acquired organelles by engulfing free-living bacteria. MITOCHONDRIA: alphaproteobacterium ancestor, ~2.0–1.6 GYA, in the eukaryotic stem (universal). CHLOROPLASTS: cyanobacterium ancestor, ~1.5 GYA, in the Archaeplastida lineage (plants + algae) only — happened in cells that already had mitochondria.",
+        example: "Animals have mitochondria but no chloroplasts; plants have both; some protists have neither in functional form. What does this distribution tell you about the order and exclusivity of the two endosymbiotic events?",
+        exAnswer: "Mitochondrial endosymbiosis happened FIRST in the eukaryotic stem lineage — universal across surviving eukaryotes (animals, plants, fungi, protists). Chloroplast endosymbiosis happened LATER in only ONE daughter lineage (Archaeplastida → plants and algae). Animals branched off before that event, so they never inherited chloroplasts. The two events are nested in the eukaryotic tree, not parallel. (Tertiary endosymbiosis later spread chloroplasts to other lineages by engulfing algae whole.)",
+        ctx: "L09 §C — Mutualistic coevolution",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "endosymbiosis-events"
       }
     ],
     "L11": [
@@ -229,6 +279,7 @@
         term: "Anisogamy = the basis of male/female",
         def: "Anisogamy = unequal gamete sizes. The sex producing larger, costlier gametes is FEMALE; the sex producing smaller, cheaper gametes is MALE. Behavior follows from gamete asymmetry, not the reverse.",
         example: "Some algae are isogamous (equal gametes); these don't have 'males/females' in the usual sense. Why does anisogamy lead to selective females and competing males?",
+        exAnswer: "Females invest more per gamete (larger, costlier eggs) → reproductive output is limited by their RESOURCES, so they should be choosy to ensure good outcomes. Males produce many cheap sperm → reproductive output is limited by ACCESS TO EGGS (i.e., females), so they compete for matings. Asymmetric investment drives asymmetric strategies. The behavioral pattern follows from the gamete-size economics, not the reverse.",
         ctx: "L11 §B — Anisogamy"
       },
       {
@@ -241,8 +292,39 @@
         term: "Intrasexual vs intersexual selection",
         def: "INTRA = competition WITHIN one sex (usually male-male combat → weapons, large body). INTER = mate CHOICE by the other sex (usually females choosing → ornaments).",
         example: "Elk antlers (intrasexual, weapons) vs peacock tail (intersexual, ornament). Both are sexual selection but with very different signatures. Which targets survival more?",
+        exAnswer: "Both impose survival costs but in different ways. INTRASEXUAL weapons (antlers) divert energy and risk injury during contests. INTERSEXUAL ornaments (peacock tails) increase predation risk AND metabolic cost — and they signal honest underlying viability. Ornaments are 'handicaps' (Zahavi): costly precisely BECAUSE they reduce survival, which is what makes them honest signals of fitness. Ornaments push survival costs harder; weapons push contest costs harder.",
         ctx: "L11 §C — Sexual selection",
         mnem: "Intra = Inside-the-sex contest · Inter = Inter-sex choice."
+      },
+      {
+        term: "Sexual conflict — when do interests diverge?",
+        def: "Sexual conflict = males and females have OPPOSING optimal strategies. Conflict arises whenever a male's optimum (more matings, more paternity assurance) reduces female fitness (cost of remating, harassment, harmful traits).",
+        example: "Bedbug 'traumatic insemination': males pierce the female abdomen to inseminate. Females evolve thickened spermalege organs to absorb damage. Duck drakes: corkscrew penises; females: counter-coiled vaginas redirecting unwanted sperm. What general pattern drives these morphologies?",
+        exAnswer: "Antagonistic coevolution WITHIN a species. Male traits evolve to maximize male fitness even when they lower female fitness; female counter-traits evolve to neutralize the male trait. Each side's adaptation imposes new selection on the other → arms race within the species. Common signatures: male coercion structures, female resistance morphology, rapid divergence of genitalia even between closely-related species.",
+        ctx: "L11 §D — Conflict, sperm competition",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "sexual-conflict"
+      },
+      {
+        term: "Sperm competition — male anatomical responses",
+        def: "When females mate with multiple males, sperm of different males compete to fertilize. Selection has produced large testes (more sperm), long sperm (faster), mating plugs (block rivals), removal devices (scoop out rival sperm), and copulation-extension behaviors (mate-guard).",
+        example: "Chimpanzees (promiscuous mating) have testes ~3× the size of human testes for body weight; gorillas (single-male harems) have small testes for their body size. What does testis size predict, and why?",
+        exAnswer: "Testis size scales with the INTENSITY of sperm competition. Promiscuous mating systems → high competition → bigger testes (more sperm = better lottery odds). Monogamous or harem systems → low competition → small testes (no rival sperm in there with yours). Comparative anatomy across primates is a clean test of the prediction. Humans (intermediate testes) suggest moderate ancestral sperm competition.",
+        ctx: "L11 §D — Conflict, sperm competition",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "sperm-competition"
+      },
+      {
+        term: "Cryptic female choice",
+        def: "Females bias paternity AFTER copulation via reproductive-tract mechanisms — sperm storage organs, sperm rejection or digestion, differential sperm transport. 'Cryptic' because the choice happens internally, invisible to outside observers.",
+        example: "In some insects, females have multiple sperm-storage organs (spermathecae). After mating with several males, the female can preferentially fertilize from one organ. Why does this matter beyond pre-copulatory choice?",
+        exAnswer: "Pre-copulatory choice (mate selection) is the visible part of female choice; cryptic female choice extends female preference into the period AFTER mating. Critical when females can't fully avoid mating with all males (coercion, random encounters, sperm storage from past matings). Allows post-hoc filtering of sperm by quality, novelty (preferring genetically dissimilar sperm), or compatibility. Now considered a major component of sexual selection in many taxa.",
+        ctx: "L11 §D — Conflict, sperm competition",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "cryptic-female-choice"
       }
     ],
     "L12": [
@@ -257,6 +339,7 @@
         term: "Extrinsic mortality → life history",
         def: "HIGH extrinsic mortality (predation, disease) selects for FAST life history: early maturity, many small offspring, short life. LOW extrinsic mortality selects for SLOW: delayed maturity, fewer large offspring, long life.",
         example: "Mainland opossums (with predators) mature ~2 yr earlier than island opossums (no predators). This shift evolves in tens of generations. Predict expected life-history of a long-isolated, predator-free island species.",
+        exAnswer: "SLOW life history: delayed maturity, fewer/larger offspring, longer life, often greater body size. Examples: Galápagos tortoises (~100 yr lifespan), kakapos (the heaviest parrot), dodos. CRITICAL VULNERABILITY: this slow strategy collapses when predators arrive — selection can't 'reverse' fast enough. Introduced rats, cats, and humans decimated island faunas precisely because of this evolved response to predator-free conditions.",
         ctx: "L12 §B — Extrinsic mortality"
       },
       {
@@ -265,6 +348,36 @@
         example: "Mice, weeds, and most insects → r. Elephants, oaks, humans → K. What predicts where on the r-K continuum a species sits? (Density and stability of resources.)",
         ctx: "L12 §D — Age at maturity, offspring size",
         mnem: "r = Rapid (many small) · K = Carrying-capacity (few big)."
+      },
+      {
+        term: "Life-history trade-offs — what's the currency?",
+        def: "Trade-offs are inverse fitness relationships between traits, mediated by SHARED LIMITED RESOURCES. Currencies: ENERGY (calories), TIME (development vs reproduction), MORTALITY RISK (current vs future). One pool can't fund two competing demands.",
+        example: "Salmon swim upstream and reproduce ONCE, expending nearly all energy → die. Albatrosses reproduce slowly across decades. Both are stable, evolved life histories. What single concept explains why both work?",
+        exAnswer: "Both maximize LIFETIME reproduction given their extrinsic mortality regime. Salmon face high marine mortality during return migration → big-bang reproduction is optimal (don't bank on a second chance). Albatrosses face low adult mortality → slow steady reproduction across decades pays off. The trade-off CURRENCY (energy + mortality) balances differently because the constraints differ. Selection navigates trade-offs; it can't break them.",
+        ctx: "L12 §A — Trade-offs in energy allocation",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "life-history-tradeoffs"
+      },
+      {
+        term: "Offspring number vs size (bet-hedging vs provisioning)",
+        def: "Fixed reproductive budget can be split many ways. MANY-SMALL: each gets less per-offspring; variance averaged across many; bet-hedging in unpredictable environments. FEW-LARGE: each well-provisioned; higher per-offspring survival; pays off when environment is stable AND offspring face intense competition.",
+        example: "Trout lay thousands of small unprotected eggs. Sharks lay a few large eggs (some live-born after gestation). Predict each species' selective environment from its strategy.",
+        exAnswer: "Trout: high & unpredictable juvenile mortality (predation, dispersal lottery) → many small eggs hedge against any one cohort being wiped out. Sharks: stable predator/competitive environment, slow growth, high parental investment → each large offspring is competitive at hatching. The OPTIMUM is set by the offspring survival curve as a function of size. Flat curves favor many-small; steep curves favor few-large.",
+        ctx: "L12 §D — Age at maturity, offspring size",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "offspring-size-tradeoff"
+      },
+      {
+        term: "Seychelles warblers — why help, not disperse?",
+        def: "Seychelles warblers are cooperative breeders. Adult offspring (especially daughters on high-quality territories) STAY at the natal nest and help raise siblings instead of dispersing to breed independently. Helpers gain inclusive fitness AND can inherit the territory.",
+        example: "On low-quality territories, helpers leave to breed elsewhere. On high-quality territories, helpers stay and assist. What two evolutionary forces is this consistent with?",
+        exAnswer: "(1) KIN SELECTION — helping siblings (r=0.5) raises indirect fitness; on a saturated high-quality territory, the daughter's expected own-offspring (if she dispersed to a poor territory) may be LOWER than the kin-fitness she earns by helping. (2) ECOLOGICAL CONSTRAINT — when good territories are saturated, dispersing to a marginal one is worse than waiting. Hamilton's rule (rB > C) is satisfied because C of staying is low (no breeding territory available anyway). Two forces, same direction.",
+        ctx: "L12 §E — Seychelles warblers",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "cooperative-breeding"
       }
     ],
     "L13": [
@@ -306,6 +419,7 @@
         term: "Side-blotched lizard rock-paper-scissors",
         def: "Three male morphs of Uta stansburiana cycle in frequency: ORANGE (aggressive territory) > BLUE (mate-guarding) > YELLOW (sneaker) > ORANGE again. No single ESS — stable cyclic dynamic from negative frequency-dependent selection.",
         example: "When orange males are common, yellow sneakers exploit them. Yellows rise → blues catch sneakers → blues common → oranges defeat blues. Why doesn't selection drive ANY morph to fixation?",
+        exAnswer: "NEGATIVE frequency-dependent selection: each morph's fitness depends on what's currently common. Whichever morph is at high frequency gets exploited by its predator-strategy; rarity is rewarded. The rock-paper-scissors structure means no strategy is 'best' independent of frequency — fixation is impossible because the loser-of-fixation is always the morph currently winning. Result: stable cycles of ~5–6 years, not equilibrium.",
         ctx: "L13 §D — Side-blotched lizards (rock-paper-scissors)",
         mnem: "O→B→Y→O: Orange beats Blue beats Yellow beats Orange."
       },
@@ -313,13 +427,26 @@
         term: "Direct vs indirect reciprocity",
         def: "DIRECT: tit-for-tat between two individuals; needs repeated encounters & memory. INDIRECT: reputation-based; helping earns help from third parties; needs visibility/communication.",
         example: "Vampire bats regurgitate blood to non-relatives — direct reciprocity, well-documented. Why does indirect reciprocity scale better in large groups?",
+        exAnswer: "Direct reciprocity requires REPEAT encounters with the SAME individual — viable in small groups where everyone meets everyone (pair-bonded primates, vampire bat roosts). In large or fluid groups, you may never re-encounter a partner, so tit-for-tat fails. Indirect reciprocity uses REPUTATION (third-party observers, gossip, public scoring), which scales because helpers earn help from anyone in the group, not just the recipient. Language and norms supercharge it.",
         ctx: "L13 §E — Cooperation among non-kin"
       },
       {
         term: "Group selection — why naive version fails",
         def: "Within a group, individual cheaters have HIGHER fitness than altruistic group-helpers; cheating spreads, cooperation collapses — even if altruistic groups outproduce selfish groups, within-group selection wins on faster timescale.",
         example: "Modern view accepts multilevel selection in narrow conditions (frequent extinction, strict subdivision), but mostly explains 'group benefits' via individual or kin selection. Why is haystack-mouse selection a textbook valid case?",
+        exAnswer: "Maynard Smith's haystack scenario: mice colonize haystacks, breed in isolation for several generations, then disperse and recolonize new haystacks. Selection runs at TWO LEVELS with limited mixing — within-haystack (selfish wins) AND among-haystack (cooperative haystacks produce more colonizers because cheaters eat their groupmates and starve). When inter-group structure is STRONG and extinction is FREQUENT, the among-group component can outpace the within-group component, and cooperation fixes despite individual disadvantage.",
         ctx: "L13 §A — Individual vs group selection"
+      },
+      {
+        term: "Hawk-Dove ESS when V ≥ C (pure-Hawk case)",
+        def: "When the resource value V ≥ injury cost C, Hawk strategy dominates regardless of opponent. Pure-Hawk is the ESS. The mixed equilibrium p* = V/C only applies when V < C (cost exceeds value).",
+        example: "V = 15, C = 10. Compute the would-be mixed-ESS Hawk frequency p* = V/C. Why is the answer not biologically meaningful, and what's the actual ESS?",
+        exAnswer: "p* = 15/10 = 1.5 — but a frequency can't exceed 1.0, signaling the formula is OUT OF ITS VALID DOMAIN (V < C). Interpretation: when the resource is worth more than the injury cost, fighting always pays in expectation, so every individual should escalate. Pure-Hawk is the unique ESS. No Doves can invade because Hawks beat Doves head-to-head AND Hawk vs Hawk still nets positive payoff (½(V−C) = +2.5 > 0). The mixed formula presumes V<C; outside that, fix-Hawk wins.",
+        ctx: "L13 §C — Evolutionarily stable strategies",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "hawk-dove-ess",
+        mnem: "p* > 1 means 'always Hawk.' p* < 0 means 'always Dove.' Mixed ESS only inside [0,1]."
       }
     ],
     "L14": [

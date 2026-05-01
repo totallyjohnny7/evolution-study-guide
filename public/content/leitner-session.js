@@ -715,6 +715,7 @@
       const qEl = document.getElementById('lzQuestion');
       const aEl = document.getElementById('lzAnswer');
       const eEl = document.getElementById('lzExample');
+      const exAnsEl = document.getElementById('lzExAnswer');
       const mEl = document.getElementById('lzMnemonic');
       const cEl = document.getElementById('lzCtx');
       const flipBtn = document.getElementById('lzFlip');
@@ -745,6 +746,13 @@
         } else if (eEl) {
           eEl.style.display = 'none';
         }
+        const exAnsHTML = card.exAnswer;
+        if (exAnsHTML && exAnsEl) {
+          exAnsEl.innerHTML = '<span class="lz-exanswer-label">Answer</span>' + exAnsHTML;
+          exAnsEl.style.display = '';
+        } else if (exAnsEl) {
+          exAnsEl.style.display = 'none';
+        }
         const mnemHTML = card.mnem || card.mnemonic;
         const analHTML = card.analogy;
         if (mnemHTML && mEl) {
@@ -760,6 +768,7 @@
       } else {
         if (aEl) aEl.style.display = 'none';
         if (eEl) eEl.style.display = 'none';
+        if (exAnsEl) exAnsEl.style.display = 'none';
         if (mEl) mEl.style.display = 'none';
         if (flipBtn) flipBtn.textContent = 'Flip (Space)';
       }
@@ -1092,6 +1101,7 @@
                 <div class="lz-question" id="lzQuestion"></div>
                 <div class="lz-answer" id="lzAnswer" style="display:none"></div>
                 <div class="lz-example" id="lzExample" style="display:none"></div>
+                <div class="lz-exanswer" id="lzExAnswer" style="display:none"></div>
                 <div class="lz-mnem" id="lzMnemonic" style="display:none"></div>
               </div>
             </div>
@@ -1397,6 +1407,26 @@
         letter-spacing: 0.1em;
         color: var(--info, #7a8fa8);
         font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .lz-exanswer {
+        background: rgba(95, 168, 113, 0.10);
+        border-left: 3px solid var(--correct, #5fa871);
+        padding: 12px 14px;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--ink, #e6dfd0);
+        margin-top: -6px;
+      }
+      .lz-exanswer b, .lz-exanswer strong { color: #7fc88f; }
+      .lz-exanswer-label {
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--correct, #5fa871);
+        font-weight: 700;
         margin-bottom: 4px;
       }
       .lz-mnem {
