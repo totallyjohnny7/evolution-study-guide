@@ -571,9 +571,22 @@
         ${blocks.map(blockHTML).join('')}
       </div>
       ${overflow.length ? `
-        <div class="sp-overflow-head">⚠ Stacked from missed blocks</div>
+        <div class="sp-overflow-head">⚠ Stacked from missed blocks · ${
+          (() => {
+            let cards = 0, qs = 0;
+            overflow.forEach(b => {
+              cards += (b.target?.cardsSeen || 0);
+              qs += (b.target?.stimQs || 0);
+            });
+            const parts = [];
+            if (cards) parts.push(cards + ' cards');
+            if (qs) parts.push(qs + ' Qs');
+            return parts.join(' + ') + ' carried over';
+          })()
+        }</div>
         <div class="sp-blocks">${overflow.map(blockHTML).join('')}</div>
       ` : ''}
+      <div class="sp-mastery-host" id="spMasteryHost"></div>
       <div class="sp-foot">
         <button id="spReset">Reset today</button>
         <button id="spChangeDate">Set exam date</button>
@@ -622,6 +635,13 @@
         launchBlock(block);
       });
     });
+
+    // Render mastery heat-map compact view
+    const masteryHost = root.querySelector('#spMasteryHost');
+    if (masteryHost && window.masteryMap) {
+      masteryHost.classList.add('mh-section');
+      window.masteryMap.compact(masteryHost);
+    }
   }
 
   function launchBlock(block) {
