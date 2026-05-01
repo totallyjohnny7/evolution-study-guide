@@ -623,6 +623,47 @@
         example: "¹⁴C: ~5,730 yr half-life — useful to ~50 KYR. K-Ar: 1.25 GYR half-life — millions to billions. U-Pb: zircons date Earth at 4.4 GYA. Why can't ¹⁴C date a dinosaur fossil?",
         exAnswer: "¹⁴C half-life is ~5,730 yr, useful range ~10 half-lives = ~50 KYR. After ~10 half-lives, parent isotope is below detection (~0.1% remaining). Dinosaurs went extinct ~66 MYA → ~11,500 ¹⁴C half-lives ago → effectively zero ¹⁴C left. Need a longer-half-life system: K-Ar (1.25 GYR half-life) or U-Pb in zircons (~4.5 GYR), which work across millions to billions of years. Match the system to the timescale.",
         ctx: "L14 §A — Earth's age, dating methods"
+      },
+      {
+        term: "Great Oxidation Event — cause and consequence",
+        def: "~2.4 GYA. Cyanobacteria evolved oxygenic photosynthesis ~3 GYA; for 600 MY, O₂ was buffered by reactions with dissolved Fe²⁺ (banded iron formations). Once Fe²⁺ ran out, free O₂ accumulated → oxidized atmosphere → mass extinction of obligate anaerobes + opened door to aerobic metabolism + multicellularity.",
+        example: "Why did the GOE take ~600 MY between cyanobacterial origin (~3.0 GYA) and atmospheric O₂ rise (~2.4 GYA)?",
+        exAnswer: "BUFFER: ferrous iron (Fe²⁺) dissolved in Earth's oceans reacted with the new O₂ to precipitate as iron oxide on the seafloor — visible today as banded iron formations (BIFs). For 600 MY, O₂ was scrubbed almost as fast as it was produced. Only when this iron sink was depleted did O₂ start accumulating in the atmosphere. Geochemistry, not biology, set the timeline.",
+        ctx: "L14 §B — Major milestones",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "great-oxidation-event"
+      },
+      {
+        term: "Cambrian explosion — what drove the radiation?",
+        def: "~541–520 MYA. Most animal phyla appear in the fossil record within ~20 MY. Proposed drivers: (1) O₂ rose past a threshold enabling large active animals; (2) emergence of Hox-based body-plan toolkit allowed regulatory experimentation; (3) ecological positive-feedback (predators select for armor, vision, sediment-burrowing) — the 'arms-race' hypothesis.",
+        example: "Why is the Cambrian called an 'explosion' but seen as a continuation of pre-Cambrian trends in molecular phylogenies?",
+        exAnswer: "FOSSILS appear suddenly because hard parts (shells, exoskeletons) preserve well; soft-bodied ancestors had been diversifying for >100 MY (cf. Ediacaran biota). MOLECULAR clocks date most phylum splits to 700+ MYA — so the 'explosion' is partly a fossilization artifact (the appearance of armor + body plans). Hox + Pax + Wnt regulatory toolkits were already in place; the Cambrian saw their first explorations of complex morphology.",
+        ctx: "L14 §B — Major milestones",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "cambrian-explosion"
+      },
+      {
+        term: "Geological eras — Paleozoic / Mesozoic / Cenozoic",
+        def: "PALEOZOIC (541–252 MYA): 'old life' — Cambrian explosion through end-Permian; trilobites, fishes, amphibians, early reptiles. MESOZOIC (252–66 MYA): 'middle life' — Triassic, Jurassic, Cretaceous; age of dinosaurs. CENOZOIC (66 MYA–now): 'new life' — mammalian radiation post-K-Pg.",
+        example: "An exam asks: 'In which era did jawed fishes first dominate? Mammals first appear? Mammals first dominate?'",
+        exAnswer: "Jawed fishes dominated the DEVONIAN ('Age of Fishes,' Paleozoic, ~416–359 MYA). Mammals first appeared in the late TRIASSIC (early Mesozoic, ~225 MYA) — but stayed small and nocturnal under dinosaurs. Mammals first DOMINATED in the early CENOZOIC after the K-Pg extinction (~66 MYA) emptied dinosaur niches. Same lineage, three different ecological roles across the eras.",
+        ctx: "L14 §C — Geological periods",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "geo-eras",
+        mnem: "PMC = Paleo · Meso · Ceno (oldest to newest)."
+      },
+      {
+        term: "Endosymbiosis evidence (Margulis)",
+        def: "Mitochondria and chloroplasts have: (1) circular DNA like bacteria, (2) ribosomes more similar to bacterial than eukaryotic, (3) double membranes (outer = host vesicle, inner = bacterial), (4) divide by binary fission, (5) sequenced rRNA places mitochondria with alphaproteobacteria, chloroplasts with cyanobacteria.",
+        example: "Margulis' hypothesis was rejected for 15 years before becoming consensus. What single line of evidence finally convinced most skeptics?",
+        exAnswer: "DNA SEQUENCING — when mitochondrial 16S rRNA was sequenced in the 1980s, it grouped CLEANLY with alphaproteobacteria (specifically Rickettsia-related lineages), not with any eukaryotic gene. Chloroplast rRNA grouped with cyanobacteria. The phylogenetic placement was unambiguous and could only be explained by an actual horizontal-merger ancestry, not by convergent evolution of organelle features.",
+        ctx: "L14 §B — Major milestones",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "endosymbiosis-evidence"
       }
     ],
     "L15": [
@@ -737,6 +778,108 @@
         example: "Predict: large island near mainland vs small island far away. Which has higher S*? (Large/near.) Why does the model predict TURNOVER even at equilibrium?",
         exAnswer: "Large-and-near has the highest S* (large = low extinction; near = high immigration; both push the curves favorably). Equilibrium is DYNAMIC, not static — at S*, the extinction rate EQUALS the immigration rate, so species are constantly being lost and replaced even though the total count is stable. Empirically confirmed by Simberloff & Wilson's mangrove fumigation experiments: same total species count returned within months, but different species assemblage years later.",
         ctx: "L17 §C — Standing diversity, turnover"
+      },
+      {
+        term: "Wallace line — sharp biogeographic boundary",
+        def: "An invisible line through Indonesia (between Bali/Lombok, Borneo/Sulawesi) that separates Asian biota (placental mammals, woodpeckers) from Australasian biota (marsupials, cockatoos). Dramatic faunal switch in <30 km — the cleanest land-based biogeographic boundary in the world.",
+        example: "What geological feature explains why species don't cross the Wallace line, even though the islands are close together?",
+        exAnswer: "Deep-water TRENCHES. The Lombok Strait is >250m deep and never closed during glacial low-sea-level periods. Bali (Asian) and Lombok (Australasian) sat on different continental shelves with deep water between them — animals could walk between Bali, Java, and Borneo across exposed seabed at glacial maxima, but never crossed to Lombok. Geographic isolation by deep water enforced the faunal split for tens of millions of years.",
+        ctx: "L17 §A — What is biogeography?",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "wallace-line"
+      },
+      {
+        term: "Hawaiian Drosophila — peripatric explosion",
+        def: "~1,000 endemic Hawaiian Drosophila species (>25% of world's Drosophila diversity) in a chain <2,000 km long. All descend from a single colonizer ~25 MYA. Each new island colonized by a few founders → drift + new selection → rapid speciation. Textbook peripatric radiation.",
+        example: "Why are Hawaiian Drosophila phylogenetically nested in island age order (older islands carry older species)?",
+        exAnswer: "Each new volcanic island emerges from the hotspot fresh and unpopulated; it's colonized by a handful of flies from the adjacent older island. That FOUNDER population then radiates independently. Phylogenies show 'island progression': flies on the youngest island (Hawai'i Big Island) are nested inside flies from Maui; Maui flies are nested inside O'ahu, and so on. Each peripatric founder event is a step in the phylogeny.",
+        ctx: "L17 §E — Adaptive radiations",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "hawaiian-drosophila"
+      },
+      {
+        term: "Latitudinal diversity gradient",
+        def: "Species richness peaks at the tropics and declines toward the poles for nearly every taxonomic group. Hypotheses: (1) more solar energy → more productivity → more niches; (2) longer time since glaciation → more accumulated diversity; (3) climate stability → more specialization possible.",
+        example: "Why is the latitudinal diversity gradient considered 'one of biology's oldest unsolved problems'?",
+        exAnswer: "Multiple hypotheses (energy, time, stability, area) all PREDICT the same gradient, so the pattern alone can't distinguish among them. Each is partially supported by some taxa or systems and contradicted by others. No single mechanism cleanly explains both terrestrial AND marine gradients, both vertebrates AND insects. Likely a combination of factors with weighting that varies by clade — but consensus on the weights remains elusive after 150+ years.",
+        ctx: "L17 §C — Standing diversity, turnover",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "latitudinal-gradient"
+      },
+      {
+        term: "Continental drift — biogeographic evidence",
+        def: "Species distributions match Pangaean breakup timing. Marsupials in Australia/S.America (split via Antarctica ~50 MYA). Lungfish in S.America/Africa/Australia (Gondwanan). Glossopteris fossils (a Permian seed fern) on every Gondwanan continent. Phylogenies AND geology AND paleomagnetism converge.",
+        example: "Why is glossopteris distribution stronger evidence for continental drift than marsupial distribution alone?",
+        exAnswer: "Glossopteris is a SEED PLANT — its seeds couldn't disperse across modern oceans, ruling out 'rare dispersal' as an explanation. Its fossils on South America, Africa, India, Australia, and Antarctica require those landmasses to have been connected when it lived (Permian, ~280 MYA). Marsupials could conceivably have rafted; seed ferns couldn't have. The plant evidence forced 19th-century geologists to reckon with drifting continents.",
+        ctx: "L17 §B — Dispersal vs. vicariance",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "drift-evidence"
+      }
+    ],
+    "L18": [
+      {
+        term: "Fisheries-induced evolution — size selection",
+        def: "Size-limit fishing rules ('keep only fish >X cm') consistently REMOVE LARGE INDIVIDUALS. Result: heritable size at maturity decreases over generations. Fish mature earlier and smaller. Atlantic cod, sole, and many commercial species show measurable shrinkage over 30-40 years.",
+        example: "A fishery sets a 50-cm minimum size. Why does this seemingly 'protective' rule actually drive small-size evolution?",
+        exAnswer: "It's STRONG DIRECTIONAL SELECTION against large body size and late maturity. Fish that mature small and reproduce BEFORE reaching 50 cm escape the net entirely; fish that grow large and mature late are caught before reproducing. Heritable size-at-maturity drops within ~10–20 generations. The rule is well-intentioned but selects on the wrong trait. Better: total quotas + slot limits (protect both small AND large fish).",
+        ctx: "L18 §A — Humans as selective force",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "fisheries-evolution"
+      },
+      {
+        term: "Bighorn sheep trophy hunting → smaller horns",
+        def: "Trophy hunters select for the largest-horned rams. Over 30 years on Ram Mountain, Alberta, mean horn size declined ~25% — heritability of horn size ~0.7. Body size and age at first reproduction also shifted as correlated traits.",
+        example: "What's the evolutionary irony of trophy hunting management?",
+        exAnswer: "By selecting only the largest-horned rams (often the prime-age breeders), trophy hunting REMOVES the very phenotype it values. Large horns are heritable, so each generation's gene pool shifts toward smaller. Hunters then complain about declining trophy quality without recognizing they're causing it. Compare natural-selection ornament evolution: peacock tails grew because females PREFERRED large; here, hunters prefer large but kill rather than mate, so the direction reverses.",
+        ctx: "L18 §A — Humans as selective force",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "trophy-hunting"
+      },
+      {
+        term: "Florida panther genetic rescue",
+        def: "By 1990s, the Florida panther was reduced to ~30 individuals. Severe inbreeding caused heart defects, undescended testicles, sperm abnormalities. In 1995, 8 Texas pumas were introduced — genetic rescue. Within 2 generations, defects dropped, kitten survival rose, population grew to ~200.",
+        example: "Why is genetic rescue controversial despite the Florida panther success?",
+        exAnswer: "Two concerns: (1) OUTBREEDING DEPRESSION — introduced individuals may carry alleles incompatible with locally-adapted ones, causing F1 hybrid problems. (2) LOSS OF GENETIC IDENTITY — introducing a closely-related subspecies dilutes the original population's distinctness, blurring conservation units. Florida worked because the Texas puma was the historic gene-flow source, but other rescues need careful donor selection.",
+        ctx: "L18 §B — Habitat fragmentation, conservation genetics",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "genetic-rescue"
+      },
+      {
+        term: "Inbreeding depression mechanism",
+        def: "Mating between close relatives raises homozygosity. Recessive deleterious alleles (normally hidden in heterozygotes) become exposed → reduced fitness. Severity depends on genetic load (mutation accumulation) and how many recessives the population carries.",
+        example: "Why does inbreeding hurt small populations more than large ones — and what counterintuitive long-term outcome can it produce?",
+        exAnswer: "Small pops have less standing variation, so close-relative mating is more likely. Inbreeding exposes recessives → low fitness. COUNTERINTUITIVELY, sustained extreme inbreeding can PURGE deleterious recessives over generations (every aa homozygote that dies removes 2 a alleles from the gene pool). Surviving lineages emerge 'inbred but cleaned' — explains why some self-fertilizing plant species or eusocial Hymenoptera tolerate high homozygosity.",
+        ctx: "L18 §B — Habitat fragmentation, conservation genetics",
+        cardType: "discriminator",
+        sourceType: "studyguide",
+        conceptId: "inbreeding-depression"
+      },
+      {
+        term: "Climate change → range shifts and phenological mismatch",
+        def: "Many species track climate by shifting ranges poleward and upslope. PHENOLOGY (timing of seasonal events: flowering, migration, breeding) also shifts. Mismatches occur when interacting species track climate at DIFFERENT rates — pollinator emerges before flower blooms, predator misses prey peak.",
+        example: "European Pied flycatchers migrate from Africa on photoperiod cues but their caterpillar prey peak earlier each year due to warmer European springs. Predict the effect on flycatcher fitness.",
+        exAnswer: "REDUCED FITNESS from a mismatch the birds can't easily fix. Photoperiod is FIXED (day length doesn't shift with climate), so flycatchers arrive on schedule — but caterpillar peak is now WEEKS earlier and gone before chick-feeding. Result: fewer chicks fledged, population decline. Some flycatcher populations are evolving earlier arrival, but at much slower rates than the climate is shifting. Phenological mismatch is a major modern extinction-risk mechanism.",
+        ctx: "L18 §C — Climate change as selective pressure",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "phenological-mismatch"
+      },
+      {
+        term: "Captive breeding + reintroduction (California condor)",
+        def: "By 1987, only 22 California condors survived. ALL were captured for captive breeding (controversial). Through careful pedigree management to minimize inbreeding, the population rebuilt. Reintroduced from 1992; ~500 alive today, ~half wild.",
+        example: "Why is the California condor case both a conservation success and a cautionary tale?",
+        exAnswer: "SUCCESS: extinction averted; population recovered ~25-fold; reintroduction works. CAUTION: condors die from LEAD POISONING (eating bullet-shot carcasses) and trash ingestion. The original threat (lead) wasn't fully solved; reintroduced condors require ongoing veterinary chelation therapy + supplemental feeding. Without addressing the underlying anthropogenic cause, reintroduction is just expensive maintenance, not recovery. Also: severe genetic bottleneck (founders < 30) → reduced variation, future inbreeding risk.",
+        ctx: "L18 §D — Conservation strategies",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "captive-breeding"
       }
     ],
     "L19": [
@@ -746,6 +889,46 @@
         example: "Why is the order 'bipedal first, big brain later' surprising relative to popular reconstructions? What does it imply about selective pressures driving each?",
         exAnswer: "SURPRISING because pop-culture reconstructions imply intelligence came first ('we got smart, THEN we stood up'). The fossil order is REVERSED: ~7 MYA bipedal Sahelanthropus with chimp-sized brain. IMPLIES bipedality wasn't selected for tool-use or to support a heavy head — likely thermoregulation (less surface area to direct sun), energy efficiency over long walking distances, or freed hands for carrying food/infants. Brain expansion came ~5 MYA later, riding on different selective pressures (tools, social cognition, dietary shifts).",
         ctx: "L19 — Human evolution"
+      },
+      {
+        term: "Australopithecus afarensis (Lucy) — anatomy",
+        def: "~3.9–2.9 MYA, eastern Africa. Adult brain ~400 cc (chimp-sized). Bipedal pelvis, valgus knee, longitudinal foot arch — fully bipedal on the ground. BUT retained curved fingers, long arms, and a divergent toe — still capable in trees. Mosaic anatomy.",
+        example: "What does Lucy's mosaic of bipedal + arboreal traits tell us about the early hominin lifestyle?",
+        exAnswer: "Bipedal but NOT obligate ground-dweller. Lucy walked on the ground (efficient bipedalism) but slept in trees and could climb fluently. Mosaic anatomy resists 'pure' interpretations: bipedalism evolved for energy-efficient walking + freed hands, but the arboreal traits weren't yet abandoned. Selection acted on the COMBINATION because trees were still a refuge from predators on the open savanna. Full ground commitment came later (Homo erectus).",
+        ctx: "L19 §B — Australopithecines",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "lucy-anatomy"
+      },
+      {
+        term: "Out-of-Africa + Neanderthal introgression",
+        def: "Modern Homo sapiens originated in Africa ~300 KYA. Major out-of-Africa wave ~70 KYA met Neanderthals in the Middle East/Europe. Interbreeding ~50–60 KYA left ~1–4% Neanderthal DNA in all NON-AFRICAN modern humans. African populations have ~0% Neanderthal DNA (the ancestors never met them).",
+        example: "Why is the absence of Neanderthal DNA in sub-Saharan Africans strong evidence FOR the Out-of-Africa model?",
+        exAnswer: "Out-of-Africa predicts: (1) modern humans originated in Africa, (2) only those who LEFT met Neanderthals, (3) interbreeding happened OUTSIDE Africa, (4) the ancestral population that stayed in Africa never gained Neanderthal alleles. The observed pattern (Neanderthal DNA in non-Africans, ~0% in Africans) matches all four. A multiregional model would predict mixing throughout the species' range — wrong. (Note: very recent back-migration to Africa has introduced trace Neanderthal DNA to some African populations, but the gradient is dramatic.)",
+        ctx: "L19 §C — Out-of-Africa, Neanderthal/Denisovan",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "out-of-africa"
+      },
+      {
+        term: "EPAS1 — Tibetan high-altitude adaptation via Denisovan introgression",
+        def: "Tibetans tolerate high altitude (low O₂) because they have a variant EPAS1 gene that doesn't trigger pathological hemoglobin overproduction at altitude. This protective allele was acquired by INTROGRESSION from Denisovans during interbreeding ~30–50 KYA, then strongly selected in Tibetan populations.",
+        example: "Why is the EPAS1 case considered the 'cleanest example' of adaptive introgression in modern humans?",
+        exAnswer: "Three lines of evidence converge cleanly: (1) the Tibetan EPAS1 haplotype is much more divergent from other modern humans than expected — indicating an external origin. (2) The same haplotype is found in the Denisovan genome from Siberia. (3) The frequency in Tibetans (~87%) is FAR higher than in neighboring populations, indicating strong recent positive selection. Hybrid origin + selection signature + functional benefit at altitude = textbook adaptive introgression.",
+        ctx: "L19 §C — Out-of-Africa, Neanderthal/Denisovan",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "epas1-introgression"
+      },
+      {
+        term: "Homo habilis — first stone tools (Oldowan)",
+        def: "~2.5–1.5 MYA. Brain ~600 cc (50% larger than Australopithecus). Associated with Oldowan tools — simple stone flakes for cutting flesh from carcasses. The lithic tradition is the diagnostic feature defining the genus Homo.",
+        example: "Why do paleoanthropologists treat the Oldowan toolkit as evolutionarily significant despite its 'crude' appearance?",
+        exAnswer: "Because it represents the first stable cultural/cumulative tradition in the hominin lineage. (1) STANDARDIZED design across regions — not random rock-bashing. (2) Selection of suitable raw material (specific stone types). (3) Persistent transmission across generations — implying social learning/teaching. (4) CONSEQUENCES: cut-marks on bones show new dietary niches (scavenging meat). The Oldowan opened a feedback loop: tools → meat → larger brains → better tools. Crude in form, profound in evolutionary signal.",
+        ctx: "L19 §B — Australopithecines and early Homo",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "oldowan-tools"
       }
     ],
     "L20": [
@@ -754,6 +937,56 @@
         def: "Resistant variants pre-exist in populations at low frequency (mutation). Antibiotic use selects them; sensitive cells die. Stop-and-start dosing leaves survivors that proliferate; full courses minimize survivors. Resistance genes spread by horizontal transfer.",
         example: "Why does 'finishing the antibiotic course' have an evolutionary rationale? (Eliminates partially-resistant survivors before they can multiply.)",
         ctx: "L20 §A — Drug resistance evolution"
+      },
+      {
+        term: "Virulence-transmission trade-off (Ewald)",
+        def: "Pathogen virulence (host damage) trades off against transmission. High virulence kills the host fast → may limit spread. Low virulence keeps host alive → more chances to transmit. Optimum depends on TRANSMISSION MODE: respiratory/STI pathogens need mobile hosts (low virulence favored); vector-borne or waterborne don't (high virulence tolerated).",
+        example: "Ewald predicted that improving water sanitation would select for LOWER virulence in diarrheal pathogens like cholera. Why?",
+        exAnswer: "Cholera transmits via contaminated water (host doesn't need to be mobile to spread). High virulence = high cholera-toxin output → severe diarrhea → more pathogen excreted into water → more transmission. SANITATION breaks the contaminated-water loop. Now pathogens need a mobile host to find new water sources, so high-virulence strains (host bedridden) lose; lower-virulence strains win. Ewald's prediction was confirmed: V. cholerae in better-sanitation regions evolves toward less-virulent strains.",
+        ctx: "L20 §C — Virulence and transmission mode",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "virulence-tradeoff"
+      },
+      {
+        term: "MHC and balancing selection",
+        def: "Major Histocompatibility Complex (MHC) genes encode antigen-presenting receptors. They're the most polymorphic genes in vertebrates — hundreds of alleles per locus. Maintained by BALANCING selection: heterozygotes present a wider range of pathogen peptides than homozygotes (heterozygote advantage) AND rare alleles are favored when common ones evolve into being recognized by pathogens (negative frequency-dependent selection).",
+        example: "Why are MHC alleles MORE polymorphic in vertebrate populations than the genome average?",
+        exAnswer: "Two flavors of balancing selection compound. (1) HETEROZYGOTE ADVANTAGE: an Aa heterozygote presents both A's peptide repertoire AND a's, expanding pathogen recognition. (2) NEGATIVE FREQUENCY-DEPENDENT: as a common allele's peptide-binding profile gets 'figured out' by parasites that evolve to evade it, rare alleles regain advantage — keeping all alleles rotating. Result: alleles persist for tens of millions of years (trans-species polymorphism), and humans share some MHC alleles with chimps.",
+        ctx: "L20 §D — Host-pathogen coevolution",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "mhc-balancing"
+      },
+      {
+        term: "Sickle-cell heterozygote advantage (HbA/HbS) vs malaria",
+        def: "HbS homozygotes have severe sickle-cell anemia (fitness ↓). HbA homozygotes are vulnerable to severe malaria. HbA/HbS HETEROZYGOTES are RESISTANT to severe malaria with mild symptoms only — highest fitness in malaria-endemic regions. Stable polymorphism maintained by selection.",
+        example: "Why does HbS persist at ~5–15% in malaria-endemic regions but is rare elsewhere?",
+        exAnswer: "Classic balancing selection (heterozygote advantage). In malaria-endemic regions, the heterozygote is the fittest genotype (resistance with mild anemia). HWE breaks: at equilibrium, allele frequency q* = (s_AA-AA)/(s_AA-AA + s_SS-SS) ≈ 0.10. Wherever malaria pressure is absent (Europe, North America), HbS provides no benefit and the s_SS cost selects it OUT. Population-genetics models predict the geographic gradient observed in real frequency data.",
+        ctx: "L20 §D — Host-pathogen coevolution",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "sickle-cell-malaria"
+      },
+      {
+        term: "Cancer as somatic evolution + adaptive therapy",
+        def: "Tumor cells are subject to mutation + selection like any population — heritable variation among clones, differential growth rates, resource competition. Standard chemo selects HARDEST against susceptible clones, leaving resistant subclones to dominate → relapse. ADAPTIVE THERAPY: maintain susceptibles at sub-lethal doses to suppress resistant clones via competition.",
+        example: "Why does 'maximum tolerated dose' chemotherapy often fail in late-stage cancers, and how does adaptive therapy reframe the goal?",
+        exAnswer: "Maximum-dose chemo creates the strongest possible selection FOR resistance — kill the susceptibles entirely → resistant clones face no competition → expand fast → relapse. ADAPTIVE THERAPY uses the susceptibles as biological competitors: modest doses keep them alive enough to crowd out the resistant clones (ecological control). Goal shifts from 'cure by elimination' to 'control by competition.' Trials show prolonged stable disease in some metastatic cancers (e.g., prostate). It's evolutionary medicine applied to oncology.",
+        ctx: "L20 §F — Cancer as somatic evolution",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "adaptive-therapy"
+      },
+      {
+        term: "Hygiene hypothesis",
+        def: "Modern environments lack the diverse microbial exposure of ancestral conditions. Without childhood exposure to a normal microbe load, the immune system 'mis-trains' — over-reacting to harmless allergens (asthma, hay fever) or self (autoimmunity, T1D, Crohn's). Mismatch between evolved immune development and modern hygiene.",
+        example: "Why are children raised on farms or with multiple older siblings less likely to develop asthma than only-children in sterile suburbs?",
+        exAnswer: "Both farm exposure and older siblings DELIVER MORE MICROBIAL DIVERSITY to the developing immune system: farm dust, animal microbes, sibling-vectored infections. The immune system's regulatory arm (Treg cells, Th1/Th2 balance) needs early diverse exposure to calibrate properly. Without it, the response defaults to over-active Th2 (allergic/atopic). Confirmed in epidemiological cohorts and Amish vs Hutterite comparison: same European ancestry, different microbial environments → vastly different asthma rates.",
+        ctx: "L20 §E — Mismatch hypothesis",
+        cardType: "application",
+        sourceType: "studyguide",
+        conceptId: "hygiene-hypothesis"
       }
     ]
   };

@@ -2652,7 +2652,7 @@ window.FLASHCARD_LABELS = {
 "L18": "L18 — Conservation and humans as selective force",
 "L19": "L19 — Human evolution",
 "L20": "L20 — Evolutionary medicine",
-"all": "All lectures (216 cards)"
+"all": "All lectures"
 };
 window.FC_DECKS = ["L01", "L02", "L03", "L04", "L05", "L07", "L08", "L09", "L11", "L12", "L13", "L14", "L15", "L16", "L17", "L18", "L19", "L20", "all"];
 console.log('[flashcards loaded]', Object.keys(window.FLASHCARD_DECKS).length, 'decks,', Object.values(window.FLASHCARD_DECKS).reduce((s, d) => s + d.length, 0), 'cards total');

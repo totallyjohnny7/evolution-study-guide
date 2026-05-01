@@ -252,14 +252,17 @@
   function ensureTodayPlan() {
     const now = new Date();
     const todayISO = isoDate(now);
-    const exam = new Date(EXAM_ISO + 'T08:00:00');
-    const daysOut = daysBetween(now, exam);
 
     let state = load(KEY_STATE, null);
     if (!state) {
       state = { examDate: EXAM_ISO, examName: EXAM_NAME, plansByDay: {}, completion: {}, visible: true };
     }
-    if (!state.plansByDay[todayISO]) {
+    // Read the examDate from state (user may have changed it), not the hardcoded constant
+    const examDateStr = state.examDate || EXAM_ISO;
+    const exam = new Date(examDateStr + 'T08:00:00');
+    const daysOut = daysBetween(now, exam);
+
+    if (!state.plansByDay[todayISO] || !Array.isArray(state.plansByDay[todayISO].blocks) || state.plansByDay[todayISO].blocks.length === 0) {
       const rawBlocks = generateDayBlocks(daysOut, todayISO);
       const blocks = adaptBlocksForCurrentTime(rawBlocks, todayISO);
       state.plansByDay[todayISO] = {
@@ -267,6 +270,19 @@
         baselineCards: totalCardsSeen(),
         baselineStim: totalStimAnswered(),
         compressed: blocks !== rawBlocks,
+        examDateAtCreate: examDateStr, // track what we generated for
+      };
+    } else if (state.plansByDay[todayISO].examDateAtCreate &&
+               state.plansByDay[todayISO].examDateAtCreate !== examDateStr) {
+      // Exam date changed since this plan was generated → regenerate
+      const rawBlocks = generateDayBlocks(daysOut, todayISO);
+      const blocks = adaptBlocksForCurrentTime(rawBlocks, todayISO);
+      state.plansByDay[todayISO] = {
+        blocks,
+        baselineCards: state.plansByDay[todayISO].baselineCards,
+        baselineStim: state.plansByDay[todayISO].baselineStim,
+        compressed: blocks !== rawBlocks,
+        examDateAtCreate: examDateStr,
       };
     }
     save(KEY_STATE, state);
@@ -729,7 +745,19 @@
     state: () => load(KEY_STATE, null),
     reset: () => { localStorage.removeItem(KEY_STATE); mountWidget(); },
     setExamDate: (iso) => {
-      const s = load(KEY_STATE, {}); s.examDate = iso; save(KEY_STATE, s); mountWidget();
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(iso)) { console.warn('setExamDate: expected YYYY-MM-DD, got', iso); return; }
+      const s = load(KEY_STATE, null) || {};
+      s.examDate = iso;
+      // Clear forward plans so they regenerate against the new exam date
+      const todayD = new Date(); todayD.setHours(0, 0, 0, 0);
+      Object.keys(s.plansByDay || {}).forEach(d => {
+        if (new Date(d + 'T00:00:00') >= todayD) delete s.plansByDay[d];
+      });
+      save(KEY_STATE, s);
+      mountWidget();
+    },
+    setExamName: (name) => {
+      const s = load(KEY_STATE, null) || {}; s.examName = name; save(KEY_STATE, s); mountWidget();
     },
   };
 

@@ -84,14 +84,17 @@
     }
 
     // Rule 1 — Atomicity
+    // Only flag when the SHAPE of the card suggests splitting would help —
+    // either the term covers a comparison ("X vs Y") with a long def, or the
+    // def is extremely long (≥500 chars / ≥6 sentences) regardless of term.
+    // Mastery cards with rich single-concept defs (300–500 chars) are NOT flagged.
     const defLen = (card.def || '').length;
     const sents = sentenceCount(card.def);
-    const termHasMulti = /\s(and|vs|versus)\s/i.test(card.term || '');
-    if (defLen > 320 || sents > 4) {
-      warnings.push({ rule: 'atomicity', msg: `def is long (${defLen} chars, ~${sents} sentences); consider splitting into atomic cards` });
-    }
-    if (termHasMulti && (defLen > 240 || sents > 3)) {
-      warnings.push({ rule: 'atomicity', msg: 'term covers a comparison/conjunction with a long def — consider splitting into siblings via conceptId' });
+    const termHasMulti = /\s(and|vs|versus)\s/i.test(card.term || '') || /,/.test(card.term || '');
+    if (defLen > 500 || sents > 6) {
+      warnings.push({ rule: 'atomicity', msg: `def is very long (${defLen} chars, ~${sents} sentences); consider coreAnswer + deepDive split` });
+    } else if (termHasMulti && (defLen > 280 || sents > 4)) {
+      warnings.push({ rule: 'atomicity', msg: 'term covers a comparison and def is long — consider splitting into sibling cards via conceptId' });
     }
 
     // Rule 2 — Front probe
