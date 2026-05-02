@@ -1,0 +1,122 @@
+{
+  "deckId": "calculations",
+  "label": "Calculations",
+  "description": "Numerical problems: Hardy-Weinberg, breeder's equation, Hamilton's rule, selection coefficients, life-history.",
+  "cards": [
+    {
+      "term": "100 individuals: 36 AA, 48 Aa, 16 aa. Compute p, q, and check HWE.",
+      "definition": "p = (2·36 + 48)/200 = 120/200 = 0.6. q = 0.4. Expected: p²=0.36, 2pq=0.48, q²=0.16. Observed = expected → in HWE.",
+      "sourceTag": "L04 §A/B"
+    },
+    {
+      "term": "Disease frequency 1/2,500. Compute carrier frequency.",
+      "definition": "q² = 1/2500 → q = 1/50 = 0.02. p = 0.98. Carrier freq = 2pq = 2(0.98)(0.02) ≈ 0.0392 ≈ 1/25.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Disease frequency 1/10,000 (autosomal recessive). Compute q and carrier frequency.",
+      "definition": "q² = 0.0001 → q = 0.01. p ≈ 0.99. Carrier freq = 2pq ≈ 0.0198 ≈ 1/51. Carriers ~100× more common than affected.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "p=0.7 in HWE. Compute genotype frequencies.",
+      "definition": "p² = 0.49 (AA). 2pq = 0.42 (Aa). q² = 0.09 (aa). Sum = 1.00. ✓",
+      "sourceTag": "L04 §B"
+    },
+    {
+      "term": "X-linked recessive at q=0.08. Compare male vs female prevalence.",
+      "definition": "Males (hemizygous) affected at q = 0.08 = 8%. Females affected at q² = 0.0064 = 0.64%. Ratio ≈ 12.5×; males far more affected.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Mean trait 170 cm; breeders' mean 178 cm; h² = 0.5. Predict R and next-gen mean.",
+      "definition": "S = 178 − 170 = 8 cm. R = h²·S = 0.5·8 = 4 cm. Next-generation mean ≈ 174 cm.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "Mean milk yield 25 L/day; breeders 30 L/day; h² = 0.3. Predict R.",
+      "definition": "S = 5. R = 0.3·5 = 1.5 L/day. Next-generation mean ≈ 26.5 L/day.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "h² = 0 (purely environmental trait). Predict R for any S.",
+      "definition": "R = h²·S = 0·S = 0. No response to selection regardless of how strongly you select. The trait does not evolve.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "Variance partition: V_A=60, V_D=10, V_E=30. Compute h² and H².",
+      "definition": "V_P = 100. h² = V_A/V_P = 0.60. H² = (V_A+V_D)/V_P = 70/100 = 0.70. Selection responds to h² = 0.60.",
+      "sourceTag": "L05 §A/B"
+    },
+    {
+      "term": "Hamilton's rule: cost C=1, sibling r=0.5. Required B?",
+      "definition": "rB > C → 0.5·B > 1 → B > 2. Saving a sibling must yield >2 offspring units of benefit.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Hamilton's rule: cost C=1, half-sib r=0.25. Required B?",
+      "definition": "0.25·B > 1 → B > 4.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Hamilton's rule: cost C=1, first cousin r=0.125. Required B?",
+      "definition": "0.125·B > 1 → B > 8.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Hawk-Dove ESS for V=10, C=20.",
+      "definition": "p_Hawk* = V/C = 0.5. Mixed ESS at 50% Hawks. Mean fitness = ½·V·(1−p) = 0.5·10·0.5 = 2.5 (also = mean Hawk payoff at ESS).",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Selection-vs-drift threshold for Ne = 100 diploids.",
+      "definition": "Threshold |s| ≈ 1/(2Ne) = 1/200 = 0.005. Alleles with |s| > 0.005 are under selection; |s| < 0.005 effectively neutral (drift dominates).",
+      "sourceTag": "L01 §C"
+    },
+    {
+      "term": "Wahlund: subpop A (p=0.9, N=50), subpop B (p=0.1, N=50). Pooled p̄, expected vs observed het.",
+      "definition": "p̄ = 0.5. Naive HWE expects 2pq = 0.50 het. Observed pooled het = (2·0.9·0.1·50 + 2·0.1·0.9·50)/100 = 0.18. Deficit = 0.32. Wahlund effect.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Population doubles every generation. After 5 generations from 10 individuals, population size?",
+      "definition": "N_t = N_0 · 2^t = 10 · 2⁵ = 10 · 32 = 320.",
+      "sourceTag": "L12 §D"
+    },
+    {
+      "term": "Sickle-cell allele equilibrium with s_AA-AA = 0.1 (malaria cost on AA), s_SS-SS = 1.0 (lethal aa). Compute q*.",
+      "definition": "q* = s_AA-AA / (s_AA-AA + s_SS-SS) = 0.1 / (0.1 + 1.0) = 0.091. ~9% HbS allele frequency at equilibrium.",
+      "sourceTag": "L20 §D"
+    },
+    {
+      "term": "Allele frequency change under selection: p(t+1) = p·w_A / w̄. Given p=0.5, w_A=1.1, w_a=1.0, compute Δp.",
+      "definition": "w̄ = p·w_A + q·w_a = 0.5·1.1 + 0.5·1.0 = 1.05. p' = 0.5·1.1/1.05 ≈ 0.524. Δp ≈ +0.024 per generation.",
+      "sourceTag": "L05"
+    },
+    {
+      "term": "Effective population size for 50 males and 200 females (sex-ratio formula).",
+      "definition": "Ne = 4·N_m·N_f / (N_m + N_f) = 4·50·200/250 = 40,000/250 = 160. Despite census N=250, drift acts on Ne=160.",
+      "sourceTag": "L04"
+    },
+    {
+      "term": "Inbreeding for full-sib mating one generation: F.",
+      "definition": "F (full-sib mating) = 1/4. Expected genotype freqs at biallelic locus: p² + Fpq, 2pq(1−F), q² + Fpq.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Generation time 5 yr; 10 mutations per generation; 10,000 yr elapsed. Number of mutations accumulated.",
+      "definition": "Generations = 10000/5 = 2000. Mutations = 2000·10 = 20,000.",
+      "sourceTag": "L11 §A"
+    },
+    {
+      "term": "Carbon-14 half-life 5,730 yr. Sample retains 12.5% of original ¹⁴C. Age?",
+      "definition": "12.5% = (1/2)³ → 3 half-lives → age ≈ 3·5,730 = 17,190 yr.",
+      "sourceTag": "L14 §A"
+    },
+    {
+      "term": "MacArthur-Wilson: small island, distance to source halved. Predict S* change qualitatively.",
+      "definition": "Distance halved → immigration curve raised → S* increases (curves intersect at higher S). Larger area lowers extinction → S* also rises.",
+      "sourceTag": "L17 §C"
+    }
+  ]
+}

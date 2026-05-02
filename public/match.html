@@ -30,6 +30,32 @@
   .tile.active{background:var(--match-active);color:#fff;border-color:var(--match-active);transform:scale(1.03)}
   .tile.matched{opacity:0.25;cursor:default;pointer-events:none;background:#0a1a0a;border-color:var(--match-good)}
   .tile.wrong{background:var(--match-bad);color:#fff;border-color:var(--match-bad);animation:shake 0.4s}
+  /* Stricter rule: first-try match that puts a term at consec=1 (one more clean round → mastered) */
+  .tile.streak-half{box-shadow:0 0 0 2px var(--accent), 0 0 16px rgba(224,169,58,0.45) inset;border-color:var(--accent);animation: streakHalfPulse 0.9s ease-out;transform-origin:center}
+  .tile.streak-master{animation: masterBurst 1.0s cubic-bezier(.2,1.2,.4,1) both;box-shadow:0 0 0 3px var(--match-good),0 0 30px rgba(58,138,58,0.55);z-index:2;position:relative}
+  @keyframes streakHalfPulse {
+    0%   { transform: scale(1); box-shadow: 0 0 0 0 rgba(224,169,58,0.65) }
+    25%  { transform: scale(1.04) }
+    100% { transform: scale(1); box-shadow: 0 0 0 12px rgba(224,169,58,0) }
+  }
+  @keyframes masterBurst {
+    0%   { transform: scale(1) }
+    20%  { transform: scale(1.15); filter: brightness(1.4) }
+    60%  { transform: scale(0.96) }
+    100% { transform: scale(1); filter: brightness(1) }
+  }
+  .mastery b { display:inline-block; transition: color 0.2s }
+  .mastery b.tick { animation: counterTick 0.45s ease-out; color: var(--match-good) }
+  @keyframes counterTick {
+    0% { transform: translateY(0) scale(1); color: var(--match-good) }
+    40% { transform: translateY(-4px) scale(1.25) }
+    100% { transform: translateY(0) scale(1); color: var(--ink) }
+  }
+  #winStreak { animation: panelSlideIn 0.45s ease-out both }
+  @keyframes panelSlideIn {
+    0% { transform: translateY(12px); opacity: 0 }
+    100% { transform: translateY(0); opacity: 1 }
+  }
   .tile.term{font-weight:700;color:var(--accent)}
   .tile.def{color:var(--ink)}
   .tile sub, .tile sup{font-size:10px}
@@ -86,6 +112,7 @@
 
 <div class="top">
   <a href="index.html">← Back to EVOLution</a>
+  <a href="mastery.html" style="margin-left:6px;">Mastery →</a>
   <h1>Match Mode · vocab game</h1>
   <div class="pick" id="examPicker">
     <button data-exam="1">Exam 1 · Mechanisms / Pop Gen (L01–L05)</button>
@@ -218,29 +245,74 @@ function startGame() {
   newRound();
 }
 
-/* Mastery tracking — per exam, per term (lowercased term as key). */
+/* Mastery tracking — per exam, per term (lowercased term as key).
+   STRICTER RULE (2026-05-02): a term counts as mastered only after the user
+   has paired it FIRST-TRY (zero misses on the term-tile or its def-tile) in
+   TWO ROUNDS IN A ROW. A miss anywhere — clicking the term and then the wrong
+   def, or clicking the def then the wrong term — resets the streak to 0.
+   Schema: { [termKey]: { consec: <0|1|2> } } where consec >= 2 means mastered.
+   Backward-compat: an old Set/array is auto-promoted (each old entry → consec=2). */
 function masteryKey(exam) { return 'evol-match-mastered-' + exam; }
-function getMastery(exam) {
-  try { return new Set(JSON.parse(localStorage.getItem(masteryKey(exam)) || '[]')); }
-  catch (e) { return new Set(); }
+const MASTERY_STREAK_REQUIRED = 2;
+function getMasteryMap(exam) {
+  try {
+    const raw = JSON.parse(localStorage.getItem(masteryKey(exam)) || '{}');
+    if (Array.isArray(raw)) {
+      const m = {};
+      raw.forEach(k => { m[k] = { consec: MASTERY_STREAK_REQUIRED }; });
+      saveMasteryMap(exam, m);
+      return m;
+    }
+    return raw && typeof raw === 'object' ? raw : {};
+  } catch (e) { return {}; }
 }
-function saveMastery(exam, set) {
-  try { localStorage.setItem(masteryKey(exam), JSON.stringify([...set])); } catch (e) {}
+function saveMasteryMap(exam, m) {
+  try { localStorage.setItem(masteryKey(exam), JSON.stringify(m)); } catch (e) {}
+}
+function isMastered(exam, key) {
+  const m = getMasteryMap(exam);
+  return (m[key]?.consec || 0) >= MASTERY_STREAK_REQUIRED;
+}
+function bumpStreak(exam, key, delta) {
+  const m = getMasteryMap(exam);
+  const cur = (m[key]?.consec || 0);
+  const next = delta < 0 ? 0 : Math.min(MASTERY_STREAK_REQUIRED, cur + delta);
+  m[key] = { consec: next };
+  saveMasteryMap(exam, m);
+  return next;
 }
 function termKey(t) { return t.toLowerCase().replace(/[^a-z0-9]/g, ''); }
+function tickMasteryCounter() {
+  const el = document.getElementById('mastered');
+  if (!el) return;
+  el.classList.remove('tick');
+  void el.offsetWidth;
+  el.classList.add('tick');
+  setTimeout(() => el.classList.remove('tick'), 460);
+}
 function updateMasteryDisplay() {
   const pool = extractVocab(currentExam);
-  const mastered = getMastery(currentExam);
-  document.getElementById('mastered').textContent = [...mastered].filter(k => pool.some(p => termKey(p.term) === k)).length;
+  const m = getMasteryMap(currentExam);
+  const masteredCount = pool.filter(p => (m[termKey(p.term)]?.consec || 0) >= MASTERY_STREAK_REQUIRED).length;
+  const halfway = pool.filter(p => (m[termKey(p.term)]?.consec || 0) === 1).length;
+  document.getElementById('mastered').textContent = masteredCount;
   document.getElementById('totalVocab').textContent = pool.length;
+  const wrap = document.querySelector('.mastery');
+  if (wrap) {
+    wrap.title = `Stricter rule: a term counts as mastered after ${MASTERY_STREAK_REQUIRED} clean first-try matches in a row. ${halfway} term${halfway===1?' is':'s are'} 1 first-try away.`;
+  }
 }
 function resetMastery() {
   const label = currentExam === 'all' ? 'the Final pool' : 'Exam ' + currentExam;
   if (!confirm('Reset mastery progress for ' + label + '?')) return;
-  saveMastery(currentExam, new Set());
+  saveMasteryMap(currentExam, {});
   updateMasteryDisplay();
 }
 
+// Per-round per-pair miss tracker. Reset every round. Used by the stricter
+// mastery rule so that ONLY first-try matches (zero misses on this pair's tiles)
+// can advance the consec streak.
+let roundMisses = new Map();
 function newRound() {
   const pool = extractVocab(currentExam);
   if (pool.length < 4) {
@@ -249,14 +321,18 @@ function newRound() {
     return;
   }
   updateMasteryDisplay();
-  // PRIORITIZE unmastered terms for drill mode
-  const mastered = getMastery(currentExam);
-  const unmastered = pool.filter(p => !mastered.has(termKey(p.term)));
+  // PRIORITIZE unmastered terms for drill mode (consec < 2)
+  const mMap = getMasteryMap(currentExam);
+  const isMast = (term) => (mMap[termKey(term)]?.consec || 0) >= MASTERY_STREAK_REQUIRED;
+  const unmastered = pool.filter(p => !isMast(p.term));
   let drawPool;
   if (unmastered.length >= pairsThisRound) {
-    drawPool = unmastered;
+    // Within unmastered, weight cards already at consec=1 ahead of brand-new ones.
+    const halfway = unmastered.filter(p => (mMap[termKey(p.term)]?.consec || 0) === 1);
+    const fresh = unmastered.filter(p => (mMap[termKey(p.term)]?.consec || 0) === 0);
+    drawPool = shuffle(halfway.slice()).concat(shuffle(fresh.slice())).slice(0, pairsThisRound);
   } else if (unmastered.length > 0) {
-    drawPool = unmastered.concat(shuffle(pool.filter(p => mastered.has(termKey(p.term)))).slice(0, pairsThisRound - unmastered.length));
+    drawPool = unmastered.concat(shuffle(pool.filter(p => isMast(p.term))).slice(0, pairsThisRound - unmastered.length));
   } else {
     drawPool = pool.slice();
   }
@@ -266,6 +342,7 @@ function newRound() {
   matched = 0;
   errors = 0;
   activeTile = null;
+  roundMisses = new Map();
   document.getElementById('total').textContent = n;
   document.getElementById('score').textContent = '0';
   document.getElementById('errors').textContent = '0';
@@ -317,10 +394,23 @@ function onTileClick(el) {
     activeTile.classList.remove('active');
     activeTile.classList.add('matched');
     el.classList.add('matched');
+    const pid = +el.dataset.pairId;
     const term = (activeTile.dataset.kind === 'term' ? activeTile : el).textContent;
-    const mastered = getMastery(currentExam);
-    mastered.add(termKey(term));
-    saveMastery(currentExam, mastered);
+    const tk = termKey(term);
+    const missCountForPair = roundMisses.get(pid) || 0;
+    if (missCountForPair === 0) {
+      const next = bumpStreak(currentExam, tk, +1);
+      if (next === 1) {
+        activeTile.classList.add('streak-half'); el.classList.add('streak-half');
+        setTimeout(() => { activeTile.classList.remove('streak-half'); el.classList.remove('streak-half'); }, 900);
+      } else if (next === MASTERY_STREAK_REQUIRED) {
+        activeTile.classList.add('streak-master'); el.classList.add('streak-master');
+        setTimeout(() => { activeTile.classList.remove('streak-master'); el.classList.remove('streak-master'); }, 1000);
+        tickMasteryCounter();
+      }
+    } else {
+      bumpStreak(currentExam, tk, -1);
+    }
     updateMasteryDisplay();
     activeTile = null;
     matched++;
@@ -329,6 +419,9 @@ function onTileClick(el) {
   } else {
     errors++;
     document.getElementById('errors').textContent = errors;
+    const a = +activeTile.dataset.pairId, b = +el.dataset.pairId;
+    roundMisses.set(a, (roundMisses.get(a) || 0) + 1);
+    roundMisses.set(b, (roundMisses.get(b) || 0) + 1);
     el.classList.add('wrong');
     const prev = activeTile;
     prev.classList.remove('active');
@@ -354,6 +447,30 @@ function finishRound() {
   document.getElementById('winTime').textContent = t.toFixed(1) + 's';
   document.getElementById('winErrors').textContent = errors;
   document.getElementById('winBest').textContent = best.toFixed(1) + 's';
+  // Streak feedback: count terms in this round whose consec advanced/reset.
+  const m = getMasteryMap(currentExam);
+  let advancedToMaster = 0, advancedToHalf = 0, resetCount = 0;
+  document.querySelectorAll('.tile.term.matched').forEach(tile => {
+    const tk = termKey(tile.textContent);
+    const pid = +tile.dataset.pairId;
+    const missed = (roundMisses.get(pid) || 0) > 0;
+    const cur = (m[tk]?.consec || 0);
+    if (missed) resetCount++;
+    else if (cur === MASTERY_STREAK_REQUIRED) advancedToMaster++;
+    else if (cur === 1) advancedToHalf++;
+  });
+  let extra = document.getElementById('winStreak');
+  if (!extra) {
+    extra = document.createElement('div');
+    extra.id = 'winStreak';
+    extra.style.cssText = 'margin-top:14px;padding:10px;background:#0e0e10;border:1px solid #2c2a23;border-radius:8px;font-size:12.5px;color:var(--ink)';
+    document.querySelector('.winscreen .card .stat:last-of-type').insertAdjacentElement('afterend', extra);
+  }
+  extra.innerHTML =
+    `<div style="color:var(--accent);font-weight:700;letter-spacing:.05em;font-size:11px;margin-bottom:4px">STREAK PROGRESS</div>` +
+    `<div>✓ <b>${advancedToMaster}</b> term${advancedToMaster===1?'':'s'} just hit mastered</div>` +
+    `<div>↗ <b>${advancedToHalf}</b> at 1 / ${MASTERY_STREAK_REQUIRED} (one more clean round)</div>` +
+    `<div>↺ <b>${resetCount}</b> streak${resetCount===1?'':'s'} reset by misses</div>`;
   document.getElementById('winScreen').classList.add('show');
 }
 

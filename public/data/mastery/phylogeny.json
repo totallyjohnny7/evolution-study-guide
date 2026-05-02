@@ -1,0 +1,122 @@
+{
+  "deckId": "phylogeny",
+  "label": "Phylogeny / Tree Reading",
+  "description": "Tree configurations and what they imply: monophyly, paraphyly, character polarity.",
+  "cards": [
+    {
+      "term": "On a tree of (mouse, (human, chimp)), where does mouse sit on the page if drawn 'right next to human'?",
+      "definition": "Page position is irrelevant. Tree information is in topology (which nodes connect) + branch lengths, not horizontal layout. Human-chimp share a more recent common ancestor than either does with mouse, regardless of drawing.",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "Reptilia excluding birds — group classification?",
+      "definition": "Paraphyletic. Includes the common ancestor of all reptiles but EXCLUDES one descendant lineage (birds, which descend from theropod dinosaurs). Modern systematics rejects paraphyletic groups.",
+      "sourceTag": "L15 §C"
+    },
+    {
+      "term": "Group of 'flying vertebrates' (bats + birds + pterosaurs) — classification?",
+      "definition": "Polyphyletic. Members lack a shared immediate ancestor that was flying; flight evolved independently three times. Built on convergence, not common descent.",
+      "sourceTag": "L15 §C"
+    },
+    {
+      "term": "Mammals — group classification?",
+      "definition": "Monophyletic (clade). Includes the common ancestor of all mammals + ALL its descendants (no living lineage excluded). Valid grouping.",
+      "sourceTag": "L15 §C"
+    },
+    {
+      "term": "Trait shared between bird and bat wings — informative for grouping?",
+      "definition": "No — homoplasy (convergent evolution). Wings evolved independently from non-flying ancestors. Cannot be used to group birds with bats; would mislead the tree.",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Vertebrae shared between birds and frogs — informative for grouping?",
+      "definition": "Symplesiomorphy (shared ancestral state). Inherited from a common vertebrate ancestor, but does not distinguish any subgroup within Vertebrata. Uninformative for grouping at this level.",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Feathers shared by all birds — informative for grouping?",
+      "definition": "Synapomorphy. Shared DERIVED state defining the clade Aves (and stem birds like Archaeopteryx). Diagnostic for the bird lineage.",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Tree (((A,B),C),D). Which two taxa are sister?",
+      "definition": "A and B are sisters (most recent common ancestor). C is more distantly related to A,B than each is to the other. D is the outgroup-like position.",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "Tree (((A,B),C),D) and trait X is present in A and C only. What does this imply?",
+      "definition": "Homoplasy — X must have evolved independently in A and C, OR evolved in their MRCA and was lost in B. Either way, X is not a synapomorphy of any single clade in this tree.",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Outgroup is irrelevant to ingroup phylogeny — true or false?",
+      "definition": "False. The outgroup polarizes character states (which is ancestral, which derived). Without an outgroup, you cannot tell synapomorphy from symplesiomorphy. Critical for rooting.",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Two trees: one needs 5 character changes, the other needs 8. Which does parsimony prefer?",
+      "definition": "The 5-change tree. Maximum parsimony picks the tree with fewest evolutionary changes. Assumes evolution is rare; fails for fast-evolving sequences (long-branch attraction).",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "Two long branches share an unusual derived state. Parsimony groups them. Reliable?",
+      "definition": "No — likely long-branch attraction. Two unrelated long branches accumulate independent identical changes; parsimony interprets these as shared ancestry. Maximum likelihood / Bayesian methods that model rate variation correct this.",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "All living birds + their MRCA + descendants — name this group.",
+      "definition": "Crown Aves (crown group). By contrast, Archaeopteryx and other early feathered theropods are stem birds — outside the crown but within the broader bird clade.",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "A new character state appears at a node and is retained in all descendants. What is this called?",
+      "definition": "A synapomorphy of the clade defined by that node. Diagnostic of the clade; useful for grouping.",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "South American + African primate sister taxa split ~120 MYA. What does this imply about geography?",
+      "definition": "Vicariance from continental rifting. The split timing matches the Atlantic opening. If they had split much later, dispersal across open ocean would be the alternative.",
+      "sourceTag": "L17 §B"
+    },
+    {
+      "term": "South American + African primate sister taxa split ~35 MYA, well after Atlantic was wide open. What's implied?",
+      "definition": "Dispersal (rafting or island-hopping) across open ocean. Vicariance fails — the barrier predated the split. Molecular dating decides.",
+      "sourceTag": "L17 §B"
+    },
+    {
+      "term": "Hawaiian Drosophila phylogeny: flies on youngest island nested inside flies from older island. What does this imply?",
+      "definition": "Peripatric island progression. Each new volcanic island colonized by founders from the adjacent older island, then radiated. The phylogenetic nesting tracks island age.",
+      "sourceTag": "L17 §E"
+    },
+    {
+      "term": "Shared identical mtDNA between two populations. Strong evidence of recent common ancestry?",
+      "definition": "Likely yes — but check for introgression and incomplete lineage sorting. mtDNA is a single locus; shared sequence can reflect maternal hybridization or sorting from ancestral polymorphism. Cross-check with nuclear loci.",
+      "sourceTag": "L15"
+    },
+    {
+      "term": "A trait state matching the outgroup is observed in some ingroup taxa. What does this imply?",
+      "definition": "Likely the ancestral state (symplesiomorphy). Shared with outgroup → ancestral; states unique to a subset of ingroup → potentially synapomorphic.",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Tree rotation at a node: does it change relationships?",
+      "definition": "No. Rotating a node 180° preserves topology and branch lengths. Two trees that rotate into each other are the SAME tree.",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "How many possible rooted trees exist for 4 taxa?",
+      "definition": "15 rooted trees (or 3 unrooted). Number of rooted trees grows super-exponentially: 1, 3, 15, 105, 945, ... for 2, 3, 4, 5, 6 taxa.",
+      "sourceTag": "L15"
+    },
+    {
+      "term": "Reading a phylogram (branch lengths proportional to time/divergence): what does a long branch indicate?",
+      "definition": "More accumulated change OR more elapsed time on that lineage. Interpretation depends on the calibration. In molecular phylograms, long branches often indicate fast-evolving lineages OR long isolation.",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "A taxon nested inside a paraphyletic group — what fix is needed for monophyly?",
+      "definition": "Either include the nested taxon in the group (e.g., put birds inside reptiles → Sauropsida) OR rename the group to exclude common ancestors. Goal: ancestor + ALL descendants, no exceptions.",
+      "sourceTag": "L15 §C"
+    }
+  ]
+}

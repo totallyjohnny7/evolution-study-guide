@@ -1,0 +1,212 @@
+{
+  "deckId": "compare-contrast",
+  "label": "Compare / Contrast",
+  "description": "Pairs of concepts students confuse. Term = X vs Y. Definition = the discriminating feature.",
+  "cards": [
+    {
+      "term": "Heritable vs non-heritable variation",
+      "definition": "Heritable = trait differences with a genetic basis, passable to offspring; selection can act on these across generations. Non-heritable = differences from environment alone (nutrition, learning); not passed on; invisible to evolution. Discriminator: parent-offspring resemblance.",
+      "sourceTag": "L01 §A"
+    },
+    {
+      "term": "Population vs individual — what evolves?",
+      "definition": "Populations evolve (allele frequencies change across generations). Individuals are SELECTED (some survive/reproduce more) but do not evolve — they live and die with their fixed genotype. Discriminator: timescale and unit.",
+      "sourceTag": "L01 §A"
+    },
+    {
+      "term": "Mutation vs selection",
+      "definition": "Mutation = source of new variation; random with respect to fitness. Selection = differential survival/reproduction acting on existing variation; non-random with respect to fitness. Discriminator: where novelty originates vs where it's filtered.",
+      "sourceTag": "L01 §C"
+    },
+    {
+      "term": "Drift vs selection",
+      "definition": "Drift = random allele-frequency change from sampling; strongest in small N. Selection = directional change from fitness differences; strongest in large N. Discriminator: |s| vs 1/(2Ne) — whichever is larger dominates.",
+      "sourceTag": "L01 §C"
+    },
+    {
+      "term": "Gene flow vs mutation",
+      "definition": "Gene flow = movement of EXISTING alleles between populations via migration. Mutation = generation of NEW alleles in place. Discriminator: pre-existing vs novel.",
+      "sourceTag": "L01 §C"
+    },
+    {
+      "term": "Hypothesis vs theory",
+      "definition": "Hypothesis = tentative, testable, falsifiable explanation for an observation. Theory = broad, well-supported explanation that generates hypotheses. Discriminator: scope and degree of evidentiary support; not 'guess vs fact.'",
+      "sourceTag": "L02 §E"
+    },
+    {
+      "term": "Lamarckism vs Darwinism",
+      "definition": "Lamarck: traits ACQUIRED during life pass to offspring (use/disuse). Darwin: traits PRE-EXIST as heritable variation; selection sorts. Discriminator: are acquired modifications inherited? (No, in general — Darwin wins.)",
+      "sourceTag": "L02 §C/D"
+    },
+    {
+      "term": "Genotype vs phenotype",
+      "definition": "Genotype = the genetic makeup at one or more loci. Phenotype = the observable trait expressed (shaped by genotype + environment). Discriminator: hidden code vs visible expression.",
+      "sourceTag": "L03 §C"
+    },
+    {
+      "term": "Dominant vs recessive allele",
+      "definition": "Dominant = phenotype fully expressed in heterozygotes. Recessive = phenotype only expressed in homozygotes. Discriminator: behavior in Aa (heterozygote).",
+      "sourceTag": "L03 §C"
+    },
+    {
+      "term": "Narrow-sense (h²) vs broad-sense (H²) heritability",
+      "definition": "h² = V_A/V_P → predicts response to selection. H² = (V_A+V_D+V_I)/V_P → total genetic share. Discriminator: dominance & epistasis variance counted in H² but not h². Selection responds to h² only.",
+      "sourceTag": "L05 §B"
+    },
+    {
+      "term": "Directional vs stabilizing vs disruptive selection",
+      "definition": "Directional: mean shifts toward favored extreme. Stabilizing: mean unchanged, variance shrinks (extremes pruned). Disruptive: extremes favored, variance increases (bimodal possible). Discriminator: where on the distribution selection presses.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "r-selected vs K-selected",
+      "definition": "r-selected: high reproductive rate, many small offspring, no parental care, short life — unstable/empty environments. K-selected: low rate, few large offspring, parental care, long life — saturated/competitive. Discriminator: density-dependence regime.",
+      "sourceTag": "L12 §D"
+    },
+    {
+      "term": "Mutation accumulation vs antagonistic pleiotropy (senescence)",
+      "definition": "MUTATION ACCUMULATION (Medawar): late-life deleterious mutations escape selection because few reach old age. ANTAGONISTIC PLEIOTROPY (Williams): single allele helps young, hurts old; net favored. Discriminator: many alleles vs single trade-off allele.",
+      "sourceTag": "L12 §C"
+    },
+    {
+      "term": "Intrasexual vs intersexual selection",
+      "definition": "Intrasexual = competition WITHIN one sex (male-male combat → weapons, body size). Intersexual = mate CHOICE by the other sex (female choice → ornaments). Discriminator: who selects whom.",
+      "sourceTag": "L11 §C"
+    },
+    {
+      "term": "Anisogamy vs isogamy",
+      "definition": "Anisogamy = unequal gamete sizes (large female, small male). Isogamy = equal gamete sizes (no males/females in standard sense). Discriminator: gamete size dimorphism — basis of male/female sex roles.",
+      "sourceTag": "L11 §B"
+    },
+    {
+      "term": "Direct vs indirect reciprocity",
+      "definition": "Direct = tit-for-tat between same two individuals; needs repeated encounters + memory. Indirect = reputation-based; helping earns help from third parties. Discriminator: same-pair vs reputation/observer.",
+      "sourceTag": "L13 §E"
+    },
+    {
+      "term": "Coevolution vs coexistence",
+      "definition": "Coevolution = RECIPROCAL evolutionary change in interacting lineages; mutual selection pressure. Coexistence = species share habitat without reciprocal pressure. Discriminator: matching dynamic trait variation across populations vs static co-occurrence.",
+      "sourceTag": "L09 §A"
+    },
+    {
+      "term": "Batesian vs Müllerian mimicry",
+      "definition": "Batesian: harmless mimic resembles harmful model; mimic must stay rare or signal collapses. Müllerian: multiple HARMFUL species share the same warning; all gain protection regardless of frequency. Discriminator: is the mimic actually noxious?",
+      "sourceTag": "L09 §D"
+    },
+    {
+      "term": "Mutualism vs antagonism",
+      "definition": "Mutualism: both partners' fitness rises (pollinator-flower). Antagonism: one rises at the other's expense (predator-prey, parasite-host). Discriminator: sign of fitness effect on each partner.",
+      "sourceTag": "L09 §B/C"
+    },
+    {
+      "term": "Convergence vs parallelism vs reversal (homoplasy)",
+      "definition": "Convergence: similar trait evolves independently from DIFFERENT ancestral states. Parallelism: similar derived state from the SAME ancestral state in separate lineages. Reversal: derived state reverts to ancestral. All three are homoplasy (misleading for grouping).",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Synapomorphy vs symplesiomorphy vs homoplasy",
+      "definition": "Synapomorphy = shared DERIVED state — clade-defining (informative). Symplesiomorphy = shared ANCESTRAL state — uninformative. Homoplasy = independently evolved similarity — misleading. Discriminator: ancestral, derived, or convergent?",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Monophyletic vs paraphyletic vs polyphyletic",
+      "definition": "Monophyletic = ancestor + ALL descendants (only valid clade). Paraphyletic = ancestor + SOME descendants (excludes some, e.g., 'reptiles' without birds). Polyphyletic = members lacking shared immediate ancestor. Discriminator: ancestor included? all descendants included?",
+      "sourceTag": "L15 §C"
+    },
+    {
+      "term": "Crown vs stem group",
+      "definition": "Crown = MRCA of all LIVING members + descendants. Stem = extinct lineages branching off before the crown but within the broader clade (e.g., Archaeopteryx is stem-bird). Discriminator: are any living descendants required?",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "Allopatric vs sympatric speciation",
+      "definition": "Allopatric: separated by geographic barrier; gene flow stopped → divergence. Sympatric: same geographic area; speciation via niche shift, polyploidy (plants), or strong disruptive selection + assortative mating. Discriminator: spatial separation vs none.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Allopatric vs peripatric speciation",
+      "definition": "Allopatric: large barrier divides population roughly in half; gradual divergence. Peripatric: small founder group isolated at the periphery; rapid divergence via drift + new selection in small Ne. Discriminator: founder size and divergence rate.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Prezygotic vs postzygotic isolation",
+      "definition": "Prezygotic = barriers BEFORE zygote (temporal, behavioral, mechanical, gametic, habitat). Postzygotic = barriers AFTER fertilization (hybrid inviability, sterility, breakdown). Discriminator: where in reproduction does the block occur?",
+      "sourceTag": "L16 §B"
+    },
+    {
+      "term": "Hybrid sterility vs hybrid breakdown",
+      "definition": "Sterility: F1 develops but cannot reproduce (mules). Breakdown: F1 fine, F2 or backcross fail (Dobzhansky-Muller incompatibilities exposed by recombination). Discriminator: which generation collapses.",
+      "sourceTag": "L16 §B"
+    },
+    {
+      "term": "Dispersal vs vicariance",
+      "definition": "Dispersal = organisms move ACROSS an existing barrier; lineage now in multiple regions. Vicariance = a NEW barrier (mountain rise, sea, drift) splits a continuous range. Discriminator: did the barrier predate the split? Molecular clock vs geological date diagnoses.",
+      "sourceTag": "L17 §B"
+    },
+    {
+      "term": "Antigenic drift vs antigenic shift (influenza)",
+      "definition": "Drift = gradual mutational change in HA/NA; small, continuous; annual vaccine update. Shift = dramatic genome reassortment when two strains co-infect; pandemic potential; rare, episodic. Discriminator: rate and source of change.",
+      "sourceTag": "L07 §D / L20"
+    },
+    {
+      "term": "Neofunctionalization vs subfunctionalization",
+      "definition": "After gene duplication: NEO = one copy gains a NEW function, the other keeps the original. SUB = duplicates SPLIT the ancestral function. Discriminator: new role added vs old role partitioned.",
+      "sourceTag": "L08 §C"
+    },
+    {
+      "term": "Cis-regulatory vs structural (coding) mutation",
+      "definition": "Cis = changes WHEN/WHERE a gene is expressed (enhancer/promoter); modular, tissue-specific. Structural = changes the protein itself; affects every tissue using it (pleiotropic). Discriminator: regulatory change vs protein change.",
+      "sourceTag": "L08 §C"
+    },
+    {
+      "term": "Paedomorphosis vs peramorphosis (heterochrony)",
+      "definition": "Paedomorphosis: adult retains juvenile traits (axolotl reproduces while gilled). Peramorphosis: development extends past ancestor (Irish elk antlers, exaggerated size). Discriminator: development stops early vs extends past ancestral end.",
+      "sourceTag": "L08 §D"
+    },
+    {
+      "term": "Adaptation: noun vs verb (trait vs process)",
+      "definition": "Trait sense (noun): 'X is an adaptation' — heritable feature shaped by past selection FOR a specific function. Process sense (verb): 'population is undergoing adaptation' — evolving under current selection. Discriminator: claim about history vs ongoing change.",
+      "sourceTag": "L08 §A"
+    },
+    {
+      "term": "Adaptation vs exaptation",
+      "definition": "Adaptation: trait shaped by selection FOR its current function. Exaptation: trait CO-OPTED for a new function from a different original role (feathers were thermoregulatory before flight). Discriminator: current function = original function?",
+      "sourceTag": "L08"
+    },
+    {
+      "term": "Mitochondria vs chloroplasts (endosymbiosis)",
+      "definition": "Mitochondria: alphaproteobacterium origin, ~2.0–1.6 GYA, in eukaryotic stem (universal). Chloroplasts: cyanobacterium origin, ~1.5 GYA, only in Archaeplastida (plants + algae). Discriminator: which lineages have it; which bacterial donor; nested vs parallel events.",
+      "sourceTag": "L09 §C / L14 §B"
+    },
+    {
+      "term": "Inbreeding depression vs outbreeding depression",
+      "definition": "Inbreeding depression: low fitness from homozygosity exposing recessives. Outbreeding depression: low fitness from hybridizing locally-adapted populations whose alleles are co-adapted. Discriminator: too much same vs too much different.",
+      "sourceTag": "L18 §B"
+    },
+    {
+      "term": "Proximate vs ultimate explanation",
+      "definition": "Proximate = mechanism (HOW; cytokines reset hypothalamic setpoint). Ultimate = evolutionary reason (WHY; fever helps clear pathogen). Discriminator: are you explaining how a trait works or why it exists?",
+      "sourceTag": "L20 §A"
+    },
+    {
+      "term": "Vestigial vs absent structure",
+      "definition": "Vestigial: ancestral structure with REDUCED but still detectable form (whale pelvis, human appendix). Absent: structure entirely lost. Discriminator: trace remains as evidence of ancestral state.",
+      "sourceTag": "L08 §F"
+    },
+    {
+      "term": "Genus Homo vs Australopithecus",
+      "definition": "Australopithecus: bipedal but small-brained (~400 cc, chimp-sized); ~4–2 MYA; arboreal traits retained. Homo: larger brain (~600+ cc), tool use, longer legs, ground-committed; from ~2.5 MYA. Discriminator: brain size + tool tradition.",
+      "sourceTag": "L19 §B"
+    },
+    {
+      "term": "Allopatric vs parapatric speciation",
+      "definition": "Allopatric: zero gene flow during divergence. Parapatric: PARTIAL separation; ongoing gene flow on a range edge or cline; divergent selection overcomes flow. Discriminator: gene-flow level (zero vs reduced).",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Fitness vs survival",
+      "definition": "Survival is one component; fitness = LIFETIME REPRODUCTIVE success (offspring contributed to next gen). An organism can survive long but reproduce poorly (low fitness). Discriminator: longevity vs descendants left.",
+      "sourceTag": "L01 §C / L12"
+    }
+  ]
+}

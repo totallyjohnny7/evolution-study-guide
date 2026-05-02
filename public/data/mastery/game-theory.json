@@ -1,0 +1,122 @@
+{
+  "deckId": "game-theory",
+  "label": "Game Theory",
+  "description": "Payoff matrix problems and ESS analyses. Solve for the evolutionarily stable strategy or polymorphism.",
+  "cards": [
+    {
+      "term": "Hawk-Dove with V=10, C=20. Find ESS.",
+      "definition": "V<C → mixed ESS at p_Hawk* = V/C = 0.5. Population is 50% Hawks, 50% Doves; neither pure strategy invades.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Hawk-Dove with V=4, C=16. Find ESS.",
+      "definition": "p_Hawk* = V/C = 4/16 = 0.25. Mixed ESS at 25% Hawk, 75% Dove. Cost of fighting is high relative to resource value, so Doves dominate.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Hawk-Dove with V=18, C=20. Find ESS.",
+      "definition": "p_Hawk* = 18/20 = 0.9. Mixed ESS at 90% Hawk, 10% Dove. Resource almost equals injury cost; near pure-Hawk.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Hawk-Dove with V=15, C=10. Find ESS.",
+      "definition": "Pure-Hawk ESS. V≥C → formula gives p*=1.5 (out of [0,1]); fighting always pays, Doves cannot invade. Hawk vs Hawk payoff ½(V−C) = +2.5 > 0.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Hawk-Dove with V=20, C=20. Find ESS.",
+      "definition": "Boundary case p*=V/C=1. Pure-Hawk ESS. Hawk vs Hawk payoff = 0; Doves get 0 too vs Hawks; weak ESS at the boundary.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Hawk-Dove payoffs: list the four matrix cells.",
+      "definition": "Hawk vs Hawk: ½(V−C) each (50/50 win/lose, fight). Hawk vs Dove: V to Hawk, 0 to Dove. Dove vs Hawk: 0 to Dove, V to Hawk. Dove vs Dove: V/2 each (peaceful share).",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Show why all-Hawk is not an ESS when V<C.",
+      "definition": "In an all-Hawk population, average payoff = ½(V−C) < 0. A rare Dove invader gets 0 against Hawks (flees) — strictly better than negative. So Doves invade; all-Hawk is unstable.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Show why all-Dove is not an ESS.",
+      "definition": "In an all-Dove population, payoff = V/2. A rare Hawk invader gets V (takes from Doves) > V/2. Hawks invade; all-Dove always unstable when V > 0.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Side-blotched lizard rock-paper-scissors. Why is no morph an ESS?",
+      "definition": "Negative frequency-dependent cycling. Orange (aggressive) beats Blue (mate-guard) beats Yellow (sneaker) beats Orange. Each common morph gets exploited by its predator strategy; stable cycles ~5–6 years, not equilibrium.",
+      "sourceTag": "L13 §D"
+    },
+    {
+      "term": "Hamilton's rule: cost C=1, sibling (r=0.5). What benefit B is required to favor altruism?",
+      "definition": "Need rB > C → 0.5·B > 1 → B > 2. The act must provide at least 2× cost in offspring units to the sibling.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Hamilton's rule: cost C=1, first cousin (r=0.125). Required benefit?",
+      "definition": "0.125·B > 1 → B > 8. The recipient cousin must gain >8× the actor's cost.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Hamilton's rule: cost C=2, identical twin (r=1.0). Required benefit?",
+      "definition": "1.0·B > 2 → B > 2. The twin must gain >2 offspring units; same threshold as helping yourself.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Worker bees show altruism beyond what r=0.5 predicts. What does haplodiploidy add?",
+      "definition": "Hymenopteran sisters share r=0.75 (not 0.5) because daughters share 100% of their father's haploid genome plus 50% of mother's. Helping the queen produce sisters yields HIGHER inclusive fitness than producing own daughters (r=0.5).",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Tit-for-tat in iterated Prisoner's Dilemma. Why does it succeed where always-defect fails?",
+      "definition": "TFT cooperates first, then mirrors. Against itself: mutual cooperation, high payoff. Against defector: punished after one round. Reaches conditional cooperation in repeated games where always-defect locks in mutual defection (low payoff).",
+      "sourceTag": "L13 §E"
+    },
+    {
+      "term": "Maynard Smith's haystack model — when does group selection favor altruism?",
+      "definition": "When inter-group structure is strong AND extinction is frequent. Within-group selection still favors selfish, but altruistic groups outproduce selfish ones (selfish groups starve from over-cheating). Strong subdivision + cycling between isolation/dispersal = group component beats individual.",
+      "sourceTag": "L13 §A"
+    },
+    {
+      "term": "Producer-Scrounger game. What stabilizes the polymorphism?",
+      "definition": "Frequency-dependent payoffs. When producers are common, scroungers do well (free meals). When scroungers common, producers do better (more food found per producer). Mixed ESS at p_S* where producer and scrounger payoffs are equal.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Bourgeois strategy in territory disputes — what makes it ESS?",
+      "definition": "'Hawk if owner, Dove if intruder' (or vice versa) — uses an arbitrary asymmetry to break the tie. Avoids costly fights without losing always; can stabilize even when V<C because the rule decides the contest cheaply.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Sex-ratio game: Why does Fisher's principle predict 1:1?",
+      "definition": "Whichever sex is rare has higher per-individual reproductive payoff (each rare-sex offspring fertilizes/produces more grand-offspring). Frequency-dependent selection drives investment toward 1:1 equal investment — the only stable point.",
+      "sourceTag": "L11 §B"
+    },
+    {
+      "term": "Local mate competition predicts female-biased sex ratio. Why?",
+      "definition": "When sons compete only with brothers for mates (e.g., parasitoid wasps in a host), extra sons just steal each other's matings; mothers gain more grand-offspring by producing many daughters and just enough sons to fertilize them. Hamilton's local mate competition logic.",
+      "sourceTag": "L11 §B"
+    },
+    {
+      "term": "Snowdrift game vs Prisoner's Dilemma — different outcome, why?",
+      "definition": "Snowdrift: unilateral cooperation still beats mutual defection (someone shovels). Defection-vs-cooperation payoffs cross only partway, giving mixed ESS (some always shovel). Prisoner's Dilemma: pure-defect is dominant; cooperation needs iteration or kin.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "ESS for sneaker males in salmon: small size, no fighting; large hooknose males defend nests. Frequency-dependent?",
+      "definition": "Yes. Sneakers do well when hooknoses are common (free fertilizations). Hooknoses do well when sneakers common (each hooknose monopolizes more eggs). Mixed ESS at frequency where payoffs equate; persists across generations.",
+      "sourceTag": "L11 §C"
+    },
+    {
+      "term": "Public goods game: cooperation pays everyone, defection pays the individual more. ESS without enforcement?",
+      "definition": "Pure defection. Without punishment, monitoring, or reputation, defection invades any cooperative population — free-riders gain the benefit without paying. Stable cooperation requires enforcement or kin/reciprocity structure.",
+      "sourceTag": "L13 §E"
+    },
+    {
+      "term": "Compute mean Hawk payoff in mixed ESS Hawk-Dove with V=8, C=10.",
+      "definition": "p_H* = 0.8. Mean Hawk payoff = p_H·½(V−C) + (1−p_H)·V = 0.8·½(−2) + 0.2·8 = −0.8 + 1.6 = 0.8. At ESS, this equals mean Dove payoff = (1−p_H)·V/2 = 0.2·4 = 0.8. ✓",
+      "sourceTag": "L13 §C"
+    }
+  ]
+}

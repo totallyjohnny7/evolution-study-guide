@@ -1,0 +1,237 @@
+{
+  "deckId": "mechanisms",
+  "label": "Mechanisms",
+  "description": "Named processes, models, rules, and selection modes with their ordered logic — formulas and numbered conditions.",
+  "cards": [
+    {
+      "term": "Hardy-Weinberg equation",
+      "definition": "p² + 2pq + q² = 1. p² = freq(AA); 2pq = freq(Aa); q² = freq(aa); p+q=1 for a biallelic locus.",
+      "sourceTag": "L04 §B"
+    },
+    {
+      "term": "Five Hardy-Weinberg assumptions",
+      "definition": "(1) No mutation, (2) no migration/gene flow, (3) infinite population (no drift), (4) no selection, (5) random mating. Violation of any one shifts allele or genotype frequencies away from HWE.",
+      "sourceTag": "L04 §B"
+    },
+    {
+      "term": "Computing p from genotype counts",
+      "definition": "p = (2·N_AA + N_Aa) / (2·N_total). Each AA contributes 2 A alleles; each Aa contributes 1; each aa contributes 0. q = 1 − p.",
+      "sourceTag": "L04 §A"
+    },
+    {
+      "term": "Carrier frequency for a rare recessive disease",
+      "definition": "If disease frequency is q², then q ≈ √(disease freq); carrier frequency ≈ 2pq. When q is small, carriers ≫ affected individuals.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "X-linked Hardy-Weinberg",
+      "definition": "Hemizygous males express recessive at frequency q (one X). Females express recessive at q². Disease prevalence in males = q; in females = q². Males affected at higher rate, ratio = 1/q.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Inbreeding coefficient F",
+      "definition": "Probability the two alleles at a locus are identical by descent. F=0 random mating; F=1 fully inbred. Genotype frequencies become p²+Fpq, 2pq(1−F), q²+Fpq.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Wahlund effect",
+      "definition": "Pooling subpopulations with different allele frequencies produces apparent excess of homozygotes vs HWE, even if each subpop is internally in HWE. Pooled heterozygosity = 2 p̄ q̄ − 2·Var(p).",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Phenotypic variance partition",
+      "definition": "V_P = V_A + V_D + V_I + V_E. Additive (predictably heritable) + dominance (same-locus) + epistatic (cross-locus) + environmental (not inherited). Selection acts on V_P; only V_A predictably evolves.",
+      "sourceTag": "L05 §A"
+    },
+    {
+      "term": "Narrow-sense heritability h²",
+      "definition": "h² = V_A / V_P. Predicts response to selection. Estimated from parent-offspring regression slope.",
+      "sourceTag": "L05 §B"
+    },
+    {
+      "term": "Broad-sense heritability H²",
+      "definition": "H² = V_G / V_P = (V_A + V_D + V_I) / V_P. Total genetic share of phenotypic variance.",
+      "sourceTag": "L05 §B"
+    },
+    {
+      "term": "Breeder's equation",
+      "definition": "R = h² · S. Response to selection = narrow-sense heritability × selection differential. If h² = 0, R = 0 regardless of S.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "Selection differential S",
+      "definition": "S = mean trait value of breeders − mean trait value of original population. Measures intensity of selection.",
+      "sourceTag": "L02 §D / L05 §C"
+    },
+    {
+      "term": "Three requirements for natural selection",
+      "definition": "(1) Heritable variation in a trait, (2) differential survival or reproduction based on the trait, (3) consequent fitness differences across generations. All three required; remove any one and adaptation stops.",
+      "sourceTag": "L01 §C / L07 §A"
+    },
+    {
+      "term": "Darwin's three observations + one inference",
+      "definition": "Obs 1: heritable variation exists. Obs 2: more offspring produced than survive. Obs 3: survival/reproduction is non-random. Inference: heritable variants that raise reproduction become more common — natural selection.",
+      "sourceTag": "L02 §D"
+    },
+    {
+      "term": "Selection-vs-drift threshold",
+      "definition": "Selection dominates when |s| ≫ 1/(2Ne); drift dominates when |s| ≪ 1/(2Ne). For diploids, threshold ≈ 1/(2Ne). Large N → even weak selection beats drift; small N → drift overrides moderate selection.",
+      "sourceTag": "L01 §C / L04"
+    },
+    {
+      "term": "Three selection modes (quantitative)",
+      "definition": "DIRECTIONAL: mean shifts toward favored extreme; variance often decreases. STABILIZING: mean unchanged; extremes pruned; variance shrinks. DISRUPTIVE: extremes favored; variance increases; can produce bimodal distribution.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "Hamilton's rule",
+      "definition": "rB > C. Altruism is favored when relatedness × benefit to recipient > cost to actor. r = relatedness coefficient, B = benefit (in offspring units), C = cost.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Coefficient of relatedness — common values",
+      "definition": "Identical twins r=1.0; parent-offspring r=0.5; full sib r=0.5; half-sib r=0.25; first cousin r=0.125; hymenopteran sisters (haplodiploid) r=0.75.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Inclusive fitness",
+      "definition": "Direct fitness (own offspring) + indirect fitness (extra offspring of relatives, weighted by r). Captures genetic contribution at the allele level, not the individual level.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Evolutionarily Stable Strategy (ESS)",
+      "definition": "A strategy that, once common, cannot be invaded by any rare alternative. Frequency-dependent Nash equilibrium for evolutionary games.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Hawk-Dove ESS formula (V<C)",
+      "definition": "When V<C: mixed ESS at p_Hawk* = V/C. When V≥C: pure-Hawk ESS (no mixed equilibrium; Doves can't invade).",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Hawk-Dove payoff matrix",
+      "definition": "Hawk vs Hawk: ½(V−C) each. Hawk vs Dove: V (Hawk takes), 0 (Dove flees). Dove vs Dove: V/2 each.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Twofold cost of sex (Maynard Smith)",
+      "definition": "Asexual female passes 100% of her genes; sexual female passes 50% (half from male). Per-offspring transmission halved — sex must produce ≥2× the benefit to break even.",
+      "sourceTag": "L11 §A"
+    },
+    {
+      "term": "Three theories of senescence (MAD)",
+      "definition": "(1) MUTATION ACCUMULATION (Medawar): late-life deleterious mutations escape selection. (2) ANTAGONISTIC PLEIOTROPY (Williams): allele helps young, hurts old; net favored. (3) DISPOSABLE SOMA (Kirkwood): maintenance vs reproduction trade-off.",
+      "sourceTag": "L12 §C"
+    },
+    {
+      "term": "Five prezygotic isolation barriers",
+      "definition": "TEMPORAL (different breeding times), BEHAVIORAL (different courtship signals), MECHANICAL (incompatible genitalia/flowers), GAMETIC (sperm/pollen don't fertilize), HABITAT (don't meet because of niche).",
+      "sourceTag": "L16 §B"
+    },
+    {
+      "term": "Three postzygotic isolation barriers",
+      "definition": "HYBRID INVIABILITY (zygote/embryo fails). HYBRID STERILITY (mules — develops but can't reproduce). HYBRID BREAKDOWN (F1 fine but F2/backcross weak).",
+      "sourceTag": "L16 §B"
+    },
+    {
+      "term": "Four geographic speciation modes",
+      "definition": "ALLOPATRIC (full barrier, no gene flow), PERIPATRIC (small founder pop isolated), PARAPATRIC (partial separation, ongoing gene flow), SYMPATRIC (same range, niche shift or polyploidy).",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Reinforcement",
+      "definition": "Selection STRENGTHENS prezygotic isolation in zones of secondary contact when hybrids are unfit. Signature: greater prezygotic divergence in sympatry than allopatry.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Dobzhansky-Muller incompatibility",
+      "definition": "Mechanism for postzygotic isolation. Independently evolved alleles in two populations are individually fine but negative-epistatic when combined. F1 buffered (heterozygous); F2 exposes incompatible homozygous combinations → hybrid breakdown.",
+      "sourceTag": "L16 §B"
+    },
+    {
+      "term": "MacArthur-Wilson equilibrium",
+      "definition": "Standing species count S* = balance between immigration (declines as island fills) and extinction (rises with more species). S* depends on island size (extinction) and distance from source (immigration). Equilibrium is dynamic — turnover continues at S*.",
+      "sourceTag": "L17 §C"
+    },
+    {
+      "term": "Geographic Mosaic Theory of Coevolution (Thompson)",
+      "definition": "Coevolution intensity varies across the range — HOTSPOTS (intense reciprocal selection) + COLDSPOTS (weak/none). Gene flow + local trait evolution → mosaic of coevolutionary states; trait mismatch is positive evidence of dynamic process.",
+      "sourceTag": "L09 §E"
+    },
+    {
+      "term": "Ewald's virulence-transmission trade-off",
+      "definition": "Optimal pathogen virulence depends on transmission mode. Direct/respiratory: low virulence favored (need mobile host). Vector- or water-borne: high virulence tolerated (host immobility doesn't break transmission).",
+      "sourceTag": "L20 §C"
+    },
+    {
+      "term": "Red Queen hypothesis",
+      "definition": "Sex (recombination) is favored because parasites coevolve rapidly; new allele combinations help hosts stay one step ahead. Named for Lewis Carroll's queen who must run to stay in place.",
+      "sourceTag": "L11 §A"
+    },
+    {
+      "term": "Muller's ratchet",
+      "definition": "Asexual lineages cannot purge slightly deleterious mutations efficiently — mutations accumulate one-way (the ratchet clicks but never unclicks) → mutational meltdown over time.",
+      "sourceTag": "L11 §A"
+    },
+    {
+      "term": "Fisher's runaway",
+      "definition": "Arbitrary female preference + heritable male trait → offspring inherit BOTH preference and trait → preferred trait amplifies generationally even if costly. Self-reinforcing loop until natural-selection cost balances sexual-selection benefit.",
+      "sourceTag": "L11 §C"
+    },
+    {
+      "term": "Heterozygote advantage (overdominance)",
+      "definition": "Heterozygote has higher fitness than either homozygote. Maintains BOTH alleles in the population at a stable polymorphism. Equilibrium q* = (1−w_AA)/((1−w_AA) + (1−w_aa)) using fitness deficits.",
+      "sourceTag": "L20 §D"
+    },
+    {
+      "term": "Negative frequency-dependent selection",
+      "definition": "Fitness of a phenotype DECREASES as it becomes more common; rare types are favored. Maintains polymorphism (e.g., side-blotched lizards rock-paper-scissors; MHC alleles).",
+      "sourceTag": "L13 §D"
+    },
+    {
+      "term": "Adaptive radiation conditions",
+      "definition": "Rapid diversification of one lineage into many ecologically distinct species. Conditions: (1) open niches (post-extinction or new habitat), (2) key innovation, (3) ecological opportunity.",
+      "sourceTag": "L17 §E"
+    },
+    {
+      "term": "Endosymbiotic theory (Margulis)",
+      "definition": "Eukaryotes acquired organelles by engulfing free-living bacteria. Mitochondria from alphaproteobacteria (~2.0–1.6 GYA, eukaryotic stem). Chloroplasts from cyanobacteria (~1.5 GYA, Archaeplastida only — happened in cells that already had mitochondria).",
+      "sourceTag": "L09 §C / L14 §B"
+    },
+    {
+      "term": "Three types of homoplasy",
+      "definition": "(1) CONVERGENCE: similar traits evolve independently from different ancestral states. (2) PARALLELISM: similar derived states from the same ancestral state in separate lineages. (3) REVERSAL: derived state reverts to ancestral.",
+      "sourceTag": "L15 §B"
+    },
+    {
+      "term": "Three group classifications",
+      "definition": "MONOPHYLETIC (clade): ancestor + ALL descendants — only valid group. PARAPHYLETIC: ancestor + SOME descendants (excludes some). POLYPHYLETIC: members lacking shared immediate ancestor (built on convergence).",
+      "sourceTag": "L15 §C"
+    },
+    {
+      "term": "Maximum parsimony criterion",
+      "definition": "Among candidate trees, prefer the tree requiring the FEWEST evolutionary changes. Assumes evolution is rare. Fails for fast-evolving sequences (long-branch attraction).",
+      "sourceTag": "L15 §A"
+    },
+    {
+      "term": "Stepwise eye evolution stages",
+      "definition": "(1) Light-sensitive patch (photoreceptors). (2) Cupped patch — directional sensitivity. (3) Pinhole eye (Nautilus) — image without lens. (4) Lensed eye — sharp focus via co-opted crystallins.",
+      "sourceTag": "L08 §B"
+    },
+    {
+      "term": "Out-of-Africa model",
+      "definition": "Modern Homo sapiens originated in Africa ~300 KYA. Major out-of-Africa wave ~70 KYA met Neanderthals in the Middle East/Europe. Interbreeding ~50–60 KYA left ~1–4% Neanderthal DNA in non-Africans, ~0% in sub-Saharan Africans.",
+      "sourceTag": "L19 §C"
+    },
+    {
+      "term": "Big Five mass extinctions",
+      "definition": "End-Ordovician (~445 MYA), Late Devonian (~375 MYA), end-Permian (~252 MYA, largest, ~95% marine), end-Triassic (~201 MYA), end-Cretaceous (K-Pg, ~66 MYA, dinosaurs).",
+      "sourceTag": "L14 §D"
+    },
+    {
+      "term": "Combination therapy logic",
+      "definition": "Use ≥2 drugs simultaneously so pathogen needs multiple independent resistance mutations. Probability of double resistance ≈ p₁ × p₂ ≈ 10⁻⁹ × 10⁻⁹ = 10⁻¹⁸ vs 10⁻⁹ for single drug.",
+      "sourceTag": "L20 §B"
+    }
+  ]
+}

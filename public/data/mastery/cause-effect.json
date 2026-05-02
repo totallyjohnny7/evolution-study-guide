@@ -1,0 +1,177 @@
+{
+  "deckId": "cause-effect",
+  "label": "Cause and Effect",
+  "description": "Observed evolutionary patterns mapped to their selective explanations.",
+  "cards": [
+    {
+      "term": "Antibiotic resistance evolves within ~2 yr of new drug introduction in clinical settings.",
+      "definition": "Strong directional selection by the drug. Resistant variants pre-exist at low frequency; antibiotic kills susceptibles → resistant strains expand. Horizontal gene transfer accelerates spread among bacteria.",
+      "sourceTag": "L20 §B"
+    },
+    {
+      "term": "MHC genes are the most polymorphic in the vertebrate genome.",
+      "definition": "Balancing selection from coevolving pathogens. (1) Heterozygote advantage: Aa heterozygote presents wider peptide range than homozygotes. (2) Negative frequency-dependent selection: rare alleles favored as common ones get pathogen-evaded.",
+      "sourceTag": "L20 §D"
+    },
+    {
+      "term": "Sickle-cell allele persists at ~10% in malaria-endemic regions despite homozygote lethality.",
+      "definition": "Heterozygote advantage. HbA/HbS carriers are malaria-resistant with mild anemia; HbA/HbA vulnerable to malaria; HbS/HbS lethal anemia. Selection maintains polymorphism where malaria pressure exists.",
+      "sourceTag": "L20 §D"
+    },
+    {
+      "term": "Industrial regions saw peppered moths shift from light to >95% melanic; clean-air laws reversed it.",
+      "definition": "Differential bird predation by background-matching. Selective pressure (predation visibility) flipped with environmental change; allele frequencies tracked accordingly. Selection, not directed mutation.",
+      "sourceTag": "L07 §C"
+    },
+    {
+      "term": "Trophy hunting of bighorn sheep produced ~25% horn-size decline over 30 yr.",
+      "definition": "Anthropogenic directional selection AGAINST the favored trait. Hunters kill the largest-horned rams (heritable trait) → next-gen mean shifts smaller. Reverses sexual-selection direction by killing rather than reproducing with the favored phenotype.",
+      "sourceTag": "L18 §A"
+    },
+    {
+      "term": "Atlantic cod under 30+ years of size-limit fishing now mature smaller and earlier.",
+      "definition": "Fisheries-induced evolution. Size limit selects against late-maturing/large-bodied fish; heritable shift toward earlier maturation. Well-intentioned regulation creates strong directional selection.",
+      "sourceTag": "L18 §A"
+    },
+    {
+      "term": "European tree leaf-out has advanced ~3 days per decade since 1980.",
+      "definition": "Climate change as selective pressure (and plastic response). Earlier warm cues favor early leaf-out genotypes; phenological tracking. Mismatch with photoperiod-cued migrant predators threatens trophic interactions.",
+      "sourceTag": "L18 §C"
+    },
+    {
+      "term": "Inbreeding depression is severe in small isolated populations.",
+      "definition": "Small Ne raises homozygosity, exposing recessive deleterious alleles normally hidden in heterozygotes. Reduced fitness; sustained extreme inbreeding can also purge deleterious recessives over time.",
+      "sourceTag": "L18 §B"
+    },
+    {
+      "term": "Pooled subpopulations show apparent excess homozygotes vs HWE expectation.",
+      "definition": "Population subdivision (Wahlund effect). Different allele frequencies across subpops → pooled heterozygosity reduced by 2·Var(p), creating apparent inbreeding signature without true non-random mating.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Hybrid F1 is healthy but F2 generation collapses (cotton, mice, etc.).",
+      "definition": "Dobzhansky-Muller incompatibilities. F1 buffered by heterozygosity; F2 recombination produces homozygous combinations of incompatible alleles that evolved separately. Multi-locus negative epistasis exposed by segregation.",
+      "sourceTag": "L16 §B"
+    },
+    {
+      "term": "Hawaiian Drosophila: ~1,000 endemic species in <2,000-km island chain.",
+      "definition": "Peripatric founder events × 1,000. Each new volcanic island colonized by a few flies; small-Ne drift + new selection regimes → rapid divergence. Adaptive radiation under ecological opportunity.",
+      "sourceTag": "L17 §E"
+    },
+    {
+      "term": "Mammals diversified rapidly into large body sizes after K-Pg extinction (~66 MYA).",
+      "definition": "Adaptive radiation into emptied niches. Mass extinction cleared dinosaur ecospace; surviving mammals diversified into newly available ecological roles. Niche emptying + ecological opportunity.",
+      "sourceTag": "L14 §D / L17 §E"
+    },
+    {
+      "term": "Most animal phyla appear in fossil record within ~20 MY of the Cambrian explosion.",
+      "definition": "Combination: (1) hard-part evolution made fossils preservable; (2) Hox/Pax/Wnt regulatory toolkit enabled body-plan experimentation; (3) ecological arms race (predator-prey) drove armor, vision, burrowing; (4) O₂ rise enabled large active animals.",
+      "sourceTag": "L14 §B"
+    },
+    {
+      "term": "Hox cluster duplications coincide with vertebrate body-plan elaboration.",
+      "definition": "Two whole-genome duplications (1R, 2R) created 4 Hox clusters → more regulatory degrees of freedom → head, jaws, paired appendages, complex CNS. Teleost 3R duplication correlated with their >30,000-species radiation.",
+      "sourceTag": "L08 §E"
+    },
+    {
+      "term": "Vestigial structures (whale pelvis, human appendix, blind cave-fish eyes) persist.",
+      "definition": "Relaxed selection on ancestral structures. Inherited from ancestors and modified, not designed; reduced when no longer functional but not eliminated unless costly. Positive evidence FOR descent with modification.",
+      "sourceTag": "L08 §F"
+    },
+    {
+      "term": "Color-blindness vastly more common in human males than females.",
+      "definition": "X-linked recessive inheritance + male hemizygosity. Males express recessive at q; females at q². Ratio = 1/q ≈ 12.5× at q=0.08. Rare X-linked alleles always strongly skewed male.",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "Side-blotched lizard morph frequencies cycle every ~5–6 years (orange/blue/yellow).",
+      "definition": "Negative frequency-dependent selection in a rock-paper-scissors game. Each common morph gets exploited by its predator-strategy; rarity is rewarded; no single ESS — stable cycles instead.",
+      "sourceTag": "L13 §D"
+    },
+    {
+      "term": "Worker bees devote their lives to raising sisters rather than reproducing themselves.",
+      "definition": "Inclusive fitness via haplodiploid kin selection. Sisters share r=0.75 (vs r=0.5 with own daughters). Hamilton's rule favors helping the queen produce more sisters.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Peacock tail evolved despite reducing male survival.",
+      "definition": "Sexual selection (Fisher's runaway / handicap principle). Female preference + heritable tail length → both inherited together → trait amplifies generationally; ornament cost balances natural-selection cost at equilibrium.",
+      "sourceTag": "L11 §C"
+    },
+    {
+      "term": "Chimps have testes ~3× human size for body weight; gorillas have small testes.",
+      "definition": "Sperm competition intensity. Promiscuous mating → many ejaculates competing → bigger testes (more sperm = lottery odds). Single-male harems → no competition → small testes. Comparative anatomy across primates.",
+      "sourceTag": "L11 §D"
+    },
+    {
+      "term": "Greater song divergence between flycatcher species in zones of overlap than in pure-population zones.",
+      "definition": "Reinforcement. Selection STRENGTHENS prezygotic isolation in sympatry because hybrids are unfit. Allopatric populations lack this pressure. Diagnostic signature for active reinforcement.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Galápagos tortoises live ~100 years and reproduce slowly.",
+      "definition": "Slow life history under low extrinsic mortality (no native predators). Selection favored delayed maturity, fewer/larger offspring, longer life. Vulnerable to introduced predators because shift can't reverse fast enough.",
+      "sourceTag": "L12 §B"
+    },
+    {
+      "term": "Salmon expend nearly all energy in one upstream reproduction event, then die.",
+      "definition": "High extrinsic mortality (return-migration risk) + low expected future reproduction → selection for big-bang semelparity. Lifetime reproductive success maximized by all-in single event.",
+      "sourceTag": "L12 §A/B"
+    },
+    {
+      "term": "Asthma rates higher in urban only-children than in farm-raised children of same ancestry.",
+      "definition": "Hygiene hypothesis (mismatch). Reduced early microbial exposure mis-trains the immune Th1/Th2/Treg balance → over-active Th2 atopy. Modern sanitation creates mismatch with the diverse exposure our immune system evolved expecting.",
+      "sourceTag": "L20 §E"
+    },
+    {
+      "term": "Type 2 diabetes is rare in indigenous populations on traditional diets but epidemic when they adopt Western foods.",
+      "definition": "Evolutionary mismatch. Bodies adapted to ancestral diverse, low-calorie foraging diets fail to handle modern calorie-dense, processed foods. Same genome, novel environment → metabolic disease.",
+      "sourceTag": "L19 §D / L20 §E"
+    },
+    {
+      "term": "Cholera virulence is HIGH in regions with poor sanitation and LOW in regions with clean water.",
+      "definition": "Ewald's transmission-mode hypothesis. Waterborne transmission tolerates immobile hosts → high virulence favored. Clean water requires mobile hosts → high-virulence strains lose; lower-virulence wins.",
+      "sourceTag": "L20 §C"
+    },
+    {
+      "term": "Cancer cells acquire diverse genetic clones within a single tumor.",
+      "definition": "Somatic evolution. Mutation + selection acting on cell lineages within the body. Tumor heterogeneity is substrate for treatment-resistance evolution; chemo selects hardest against susceptibles, leaving resistant clones.",
+      "sourceTag": "L20 §F"
+    },
+    {
+      "term": "Geographic mismatch in newt-snake TTX/resistance values across populations.",
+      "definition": "Geographic Mosaic Theory of Coevolution. Hotspots of intense reciprocal selection + coldspots without it; gene flow + local selection → mosaic. Mismatch is positive evidence of dynamic coevolution, not refutation.",
+      "sourceTag": "L09 §E"
+    },
+    {
+      "term": "Bedbug males pierce female abdomen; females evolve thickened spermalege organs.",
+      "definition": "Antagonistic sexual conflict / intra-specific arms race. Male trait raises male fitness at female cost; female counter-trait neutralizes. Rapid genitalic divergence even between closely-related species.",
+      "sourceTag": "L11 §D"
+    },
+    {
+      "term": "Mosquito vectored pathogens (malaria, dengue) tolerate higher virulence than respiratory ones.",
+      "definition": "Vector-borne transmission decouples virulence from host mobility — sick host still bitten by vector. Respiratory pathogens need mobile hosts to spread; high virulence (bedridden) lowers transmission.",
+      "sourceTag": "L20 §C"
+    },
+    {
+      "term": "Identical genetic codes across all life despite no chemical reason for codon assignments.",
+      "definition": "Common descent from a single ancestor. Independent origins would predict different codes per origin lineage. Universal code = frozen accident locked in by the LUCA.",
+      "sourceTag": "L01 §B"
+    },
+    {
+      "term": "Cytochrome c is ~95% identical between human and rhesus, ~75% between human and fly.",
+      "definition": "Common descent + accumulated mutations along independent lineages. Graded similarity tracks divergence time; closer relatives share more recent ancestry → less time for differences to accumulate.",
+      "sourceTag": "L01 §B"
+    },
+    {
+      "term": "Stickleback freshwater populations repeatedly lost pelvic spines via the same Pitx1 enhancer.",
+      "definition": "Cis-regulatory evolution under repeated selection (predation regime change). Modular enhancer change avoids pleiotropic cost — Pitx1 protein still functional in teeth. Same molecular path, same selective pressure.",
+      "sourceTag": "L08 §C"
+    },
+    {
+      "term": "Eyes evolved >40 times independently across animal lineages.",
+      "definition": "Convergent evolution under similar selective pressure (light detection → directionality → image → focus). Each step functional, each conferring fitness; complex 'irreducible' organs are climbable from many starting points.",
+      "sourceTag": "L08 §B"
+    }
+  ]
+}

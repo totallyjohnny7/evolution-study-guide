@@ -1,0 +1,237 @@
+{
+  "deckId": "scenarios",
+  "label": "Scenarios",
+  "description": "Given an ecological/evolutionary setup, predict the outcome or identify the operating mechanism.",
+  "cards": [
+    {
+      "term": "A field of dandelions varies in flower color, but careful crosses show variation is purely from soil pH, not genetics. Can selection on color cause this population to evolve?",
+      "definition": "No. Without heritable variation, R = h²·S = 0 — selection produces evolution only when phenotypic differences correlate with genetic differences.",
+      "sourceTag": "L01 §A"
+    },
+    {
+      "term": "A flock of 8 finches gets blown to a remote island and founds a new population. After 100 generations, island finches differ from mainland at many neutral loci.",
+      "definition": "Genetic drift via founder effect. Small founding population → strong sampling error → random divergence at neutral loci unrelated to selection.",
+      "sourceTag": "L01 §C"
+    },
+    {
+      "term": "A new highway cuts through a salamander's range, blocking dispersal. Predict the change in gene flow and consequence.",
+      "definition": "Gene flow decreases between halves. Consequence: independent drift + locally divergent selection → genetic differentiation; small isolated populations risk inbreeding depression.",
+      "sourceTag": "L01 §C"
+    },
+    {
+      "term": "Antibiotic resistance appeared in a hospital strain after 3 months of drug use. Did the drug cause the mutations?",
+      "definition": "No — resistance mutations existed at low frequency before drug exposure. The antibiotic SELECTED pre-existing variants by killing susceptibles. Mutations are random with respect to fitness.",
+      "sourceTag": "L01 §C / L20"
+    },
+    {
+      "term": "An island population of 50 individuals carries a slightly beneficial allele (s = +0.005). Will selection or drift dominate?",
+      "definition": "Drift. Threshold ≈ 1/(2Ne) = 1/100 = 0.01. Since s = 0.005 < 0.01, the allele is effectively neutral; chance fluctuations determine fate.",
+      "sourceTag": "L01 §C"
+    },
+    {
+      "term": "Trout lay thousands of small eggs; sharks lay a few large eggs. Predict each species' selective environment.",
+      "definition": "Trout: high & unpredictable juvenile mortality → many-small bet-hedges. Sharks: stable predator/competitive environment → few-large each well-provisioned. Optimum set by offspring survival curve as a function of size.",
+      "sourceTag": "L12 §D"
+    },
+    {
+      "term": "Salmon swim upstream and reproduce ONCE, then die. Albatrosses reproduce slowly across decades. What single concept reconciles both?",
+      "definition": "Both maximize lifetime reproduction given their extrinsic mortality regime. Salmon face high return-migration mortality → big-bang reproduction. Albatrosses face low adult mortality → slow steady reproduction.",
+      "sourceTag": "L12 §A"
+    },
+    {
+      "term": "A population has 80% AA and 20% aa (no Aa). After one round of random mating with p=0.8, what genotype frequencies?",
+      "definition": "0.64 AA, 0.32 Aa, 0.04 aa. One generation of random mating restores HWE proportions p², 2pq, q² regardless of starting genotype distribution.",
+      "sourceTag": "L04 §B"
+    },
+    {
+      "term": "Subpop A has p=0.9; subpop B has p=0.1. Pooled: pooled p=0.5; observed heterozygotes = 0.18 (expected 2pq=0.5). Diagnose.",
+      "definition": "Wahlund effect (population subdivision). Pooling creates apparent homozygote excess vs HWE; no inbreeding required. Pooled heterozygosity = 2 p̄ q̄ − 2·Var(p).",
+      "sourceTag": "L04 §C"
+    },
+    {
+      "term": "A herd has mean milk yield 25 L/day; breeders' mean = 30 L/day. h² = 0.5. Predict next-generation mean.",
+      "definition": "S = 5 L/day. R = h²·S = 0.5·5 = 2.5 L/day. Next-gen mean ≈ 27.5 L/day.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "Drought favors deep beaks in Galápagos finches; mean beak depth shifts deeper across one generation. Identify the selection mode.",
+      "definition": "Directional selection — favors one extreme of the trait distribution; mean shifts toward favored end; variance often decreases.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "Human birth weight: very small AND very large babies have higher mortality. Mean stays at ~3.5 kg. Identify the selection mode and predict variance change.",
+      "definition": "Stabilizing selection. Mean unchanged; variance decreases as extremes are pruned each generation.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "African finch population is bimodal — small beaks crack soft seeds, large beaks crack hard seeds; intermediates poor at both. Identify mode and long-term outcome.",
+      "definition": "Disruptive selection. Both extremes favored; intermediates pruned. Long-term: if assortative mating evolves, may produce sympatric speciation.",
+      "sourceTag": "L05 §C"
+    },
+    {
+      "term": "A breeder selects largest tomatoes for the next generation; year after year, average size barely changes.",
+      "definition": "Heritability of fruit size is near zero (h² ≈ 0). R = h²·S = 0 even when S is large. Trait variation is mostly environmental.",
+      "sourceTag": "L02 §D"
+    },
+    {
+      "term": "Trophy hunters target the largest-horned bighorn rams; after 30 years average horn size declined ~25%. What process?",
+      "definition": "Human-induced directional selection against large horn size (heritable). Selective harvest reverses natural sexual-selection direction by killing rather than reproducing with the favored phenotype.",
+      "sourceTag": "L18 §A"
+    },
+    {
+      "term": "Atlantic cod under intense size-selective fishing now mature smaller and earlier than 40 years ago.",
+      "definition": "Fisheries-induced evolution. Size limit selects against late-maturing/large-bodied fish; heritable shift toward early maturation at smaller size within ~10–20 generations.",
+      "sourceTag": "L18 §A"
+    },
+    {
+      "term": "Florida panthers were down to ~30 individuals with severe inbreeding (heart defects, kinked tails). 8 Texas pumas were introduced; hybrid descendants showed restored fitness.",
+      "definition": "Genetic rescue. Introduction reduced homozygosity at deleterious recessive loci; outbreeding masks recessives → restored fitness. Subspecies were close enough to avoid outbreeding depression.",
+      "sourceTag": "L18 §B"
+    },
+    {
+      "term": "Tibetans tolerate high altitude via an EPAS1 variant matching the Denisovan genome; frequency in Tibetans ~87%, far higher than neighbors.",
+      "definition": "Adaptive introgression. Allele acquired by interbreeding with Denisovans, then strongly positively selected in Tibetans for high-altitude function. Three signals: divergent haplotype, Denisovan match, frequency spike.",
+      "sourceTag": "L19 §C"
+    },
+    {
+      "term": "European pied flycatchers migrate from Africa on photoperiod cues but their caterpillar prey now peak weeks earlier due to warming. Predict fitness impact.",
+      "definition": "Phenological mismatch → reduced fitness; photoperiod is fixed so flycatcher arrival is unchanged while prey peak has shifted. Chick provisioning fails; population decline.",
+      "sourceTag": "L18 §C"
+    },
+    {
+      "term": "In malaria-endemic regions, the sickle-cell allele (HbS) persists at ~10% despite being lethal in homozygotes.",
+      "definition": "Heterozygote advantage / balancing selection. HbA/HbS heterozygotes are malaria-resistant with mild anemia; selection maintains both alleles. Equilibrium q* set by relative fitness costs of homozygotes.",
+      "sourceTag": "L20 §D"
+    },
+    {
+      "term": "Cholera in regions with clean water tends to evolve toward less virulent strains; in regions with poor sanitation, toward more virulent strains.",
+      "definition": "Ewald's transmission-mode hypothesis. Clean water requires mobile host → low-virulence favored. Contaminated water transmits even immobile hosts → high-virulence tolerated.",
+      "sourceTag": "L20 §C"
+    },
+    {
+      "term": "Influenza HA/NA evolve rapidly under immune memory selection (~0.5% sequence change per year). Why does this require an annual flu shot?",
+      "definition": "Antigenic drift escapes prior antibody recognition. Last year's vaccine epitopes don't match this year's circulating strain. Update the vaccine each year to track drift.",
+      "sourceTag": "L07 §D / L20"
+    },
+    {
+      "term": "Two cricket species sing at different times of day. Identify the isolation barrier type.",
+      "definition": "Behavioral prezygotic isolation (different courtship signals).",
+      "sourceTag": "L16 §B"
+    },
+    {
+      "term": "Two mosquito species breed in different seasons. Identify the isolation barrier type.",
+      "definition": "Temporal prezygotic isolation (different breeding times).",
+      "sourceTag": "L16 §B"
+    },
+    {
+      "term": "Pied/collared flycatchers in Europe show stronger song differences in zones of overlap than in pure-population zones.",
+      "definition": "Reinforcement signature. Selection strengthens prezygotic isolation in sympatry because hybrids are unfit; allopatric populations lack this pressure.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Squirrels split by Grand Canyon → Kaibab and Abert squirrels. Identify the speciation mode.",
+      "definition": "Allopatric speciation. Geographic barrier (canyon) divides population; independent drift + selection produce divergence and reproductive isolation.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Apple maggot fly (Rhagoletis) shifted host from hawthorn to apple within a few centuries; populations on each host now differ. Identify the speciation mode.",
+      "definition": "Sympatric speciation via host race formation. Host shift creates assortative mating + disruptive selection on host-related traits without geographic isolation.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "South American + African biotas share Gondwanan ancestry; primate sister taxa split ~120 MYA when the Atlantic was opening. Vicariance or dispersal?",
+      "definition": "Vicariance — split timing matches the geological barrier (continental rift). Molecular date congruent with rift date is the diagnostic.",
+      "sourceTag": "L17 §B"
+    },
+    {
+      "term": "Hawaiian Drosophila phylogeny shows flies on the youngest island nested inside flies from the older adjacent island.",
+      "definition": "Peripatric island progression. Each new volcanic island colonized by founders from adjacent older island; nested phylogeny tracks island age order.",
+      "sourceTag": "L17 §E"
+    },
+    {
+      "term": "After K-Pg extinction (~66 MYA), mammals rapidly diversified into large-body and arboreal niches.",
+      "definition": "Adaptive radiation following niche emptying. Mass extinction cleared dinosaur-occupied niches → ecological opportunity for surviving lineages to diversify.",
+      "sourceTag": "L17 §E / L14"
+    },
+    {
+      "term": "Newts in some valleys make TTX; sympatric snakes there are TTX-resistant. Newts elsewhere make less TTX; local snakes are not resistant. Match traits across the range.",
+      "definition": "Geographic Mosaic Theory of Coevolution. Hotspots (mutual escalation) + coldspots (no reciprocal pressure); mismatch is positive evidence of ongoing dynamic process, not a refutation.",
+      "sourceTag": "L09 §B / §E"
+    },
+    {
+      "term": "Darwin saw the long-spurred Madagascar orchid (25-cm spur) and predicted a hawkmoth must exist with that exact tongue.",
+      "definition": "Mutualistic coevolution by reciprocal selection. Longer spurs force deeper push → flower fitness rewards length; longer tongues access more nectar → moth fitness rewards length. Tight match is a coevolutionary equilibrium.",
+      "sourceTag": "L09 §C"
+    },
+    {
+      "term": "Viceroy butterfly resembles monarch; both are noxious to predators. Identify the mimicry type.",
+      "definition": "Müllerian mimicry. Both species honest, both gain protection; signal reinforced — frequency doesn't matter (every encounter teaches the same lesson).",
+      "sourceTag": "L09 §D"
+    },
+    {
+      "term": "A non-toxic fly resembles a wasp.",
+      "definition": "Batesian mimicry. Harmless mimic resembles harmful model; mimic must stay rare or predators stop heeding the warning signal (frequency-dependent).",
+      "sourceTag": "L09 §D"
+    },
+    {
+      "term": "Side-blotched lizards: orange males beat blue, blue beat yellow, yellow beat orange. Frequencies cycle every ~5–6 years.",
+      "definition": "Negative frequency-dependent selection in a rock-paper-scissors structure. No single ESS; whichever morph is common gets exploited; rarity is rewarded; stable cycles, not equilibrium.",
+      "sourceTag": "L13 §D"
+    },
+    {
+      "term": "V=10, C=20 in Hawk-Dove. Compute the ESS Hawk frequency.",
+      "definition": "p_Hawk* = V/C = 10/20 = 0.5. Mixed ESS (V<C); 50% Hawks, 50% Doves.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "V=15, C=10 in Hawk-Dove. Compute the ESS.",
+      "definition": "Pure-Hawk ESS. Formula gives p* = 1.5 (out of valid domain V<C). When V≥C, fighting always pays; Doves cannot invade.",
+      "sourceTag": "L13 §C"
+    },
+    {
+      "term": "Worker bee leaves no direct offspring but tirelessly raises the queen's brood. How is this evolutionarily favored?",
+      "definition": "Inclusive fitness via kin selection. Workers (haplodiploid) share r=0.75 with sisters vs r=0.5 with their own offspring; helping the queen produce more sisters maximizes indirect fitness.",
+      "sourceTag": "L13 §B"
+    },
+    {
+      "term": "Seychelles warbler daughters on high-quality territories stay and help raise siblings; on low-quality territories they leave to breed.",
+      "definition": "Kin selection + ecological constraint. On saturated good territories, helping siblings (r=0.5) yields higher inclusive fitness than dispersing to a marginal site. Hamilton's rule satisfied because cost of staying is low.",
+      "sourceTag": "L12 §E / L13"
+    },
+    {
+      "term": "Chimps (promiscuous) have testes ~3× human size; gorillas (single-male harems) have small testes. What does this predict?",
+      "definition": "Testis size scales with sperm-competition intensity. Multi-male mating → big testes (lottery odds). Harem/monogamy → small testes (no rival sperm). Comparative anatomy across primates confirms.",
+      "sourceTag": "L11 §D"
+    },
+    {
+      "term": "Mainland opossums mature ~2 yr earlier than predator-free island opossums. Predict island opossum life history.",
+      "definition": "Slow life history under low extrinsic mortality — delayed maturity, fewer/larger offspring, longer life. Vulnerable to introduced predators because the shift can't reverse fast enough.",
+      "sourceTag": "L12 §B"
+    },
+    {
+      "term": "Children raised on farms have much lower asthma rates than urban only-children of the same ancestry.",
+      "definition": "Hygiene hypothesis. Diverse early microbial exposure calibrates immune Treg/Th1/Th2 balance; modern sanitized environments produce mismatch → over-active Th2 → atopic disease.",
+      "sourceTag": "L20 §E"
+    },
+    {
+      "term": "Tumor sequenced from different regions reveals dozens of distinct genetic clones.",
+      "definition": "Tumor heterogeneity from somatic evolution. Substrate for treatment-resistance evolution: any clone with a resistance mutation expands under chemo. Justifies adaptive therapy.",
+      "sourceTag": "L20 §F"
+    },
+    {
+      "term": "Bedbug males pierce female abdomen to inseminate; females evolve thickened spermalege organs. Pattern?",
+      "definition": "Antagonistic sexual conflict. Male trait raises male fitness at female cost; female counter-trait neutralizes it; arms race within the species → rapid genitalic divergence.",
+      "sourceTag": "L11 §D"
+    },
+    {
+      "term": "Predicted R from S=8, h²=0.5 → 4 cm. Observed R = 1 cm. Possible reasons?",
+      "definition": "Parent-offspring environment correlation inflated h² estimate; inbreeding depression; environment shifted between generations; selection actually targeted a correlated trait; frequency-dependent erosion of V_A.",
+      "sourceTag": "L07 §A"
+    },
+    {
+      "term": "Pre-industrial peppered moths mostly light; post-industrial revolution >95% melanic in polluted areas; clean-air laws → light morph rebound.",
+      "definition": "Differential bird predation by background-matching. Pollution killed lichen + blackened trunks → melanic less visible → selected up. Reversal proves selection (not mutation by environment) drove the shift.",
+      "sourceTag": "L07 §C"
+    }
+  ]
+}

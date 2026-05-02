@@ -1,0 +1,177 @@
+{
+  "deckId": "empirical",
+  "label": "Empirical Examples",
+  "description": "Real species and study cases mapped to the concept they illustrate.",
+  "cards": [
+    {
+      "term": "Grants' Galápagos finches (Daphne Major, 1977 drought)",
+      "definition": "Demonstrates measurable evolution by natural selection in real time. Pre-drought beak depth ~9.31 mm; survivors ~9.84 mm; S=0.53; h²≈0.78; predicted R≈0.41 mm matched observed next-generation shift. Validates breeder's equation.",
+      "sourceTag": "L07 §B"
+    },
+    {
+      "term": "Peppered moth (Biston betularia) industrial melanism",
+      "definition": "Demonstrates differential bird predation by background-matching. Pollution killed lichen → trunks blackened → melanic morph rose to >95%. Clean-air laws reversed the shift. Genetic basis: cortex-gene transposon insertion.",
+      "sourceTag": "L07 §C"
+    },
+    {
+      "term": "Greyhounds and silver foxes (Belyaev)",
+      "definition": "Demonstrate artificial selection (domestication). Greyhounds: ~20% faster than ancestral dogs over centuries. Belyaev's foxes: visible behavioral and morphological tameness in 10 generations. Same R=h²·S; bigger S than nature.",
+      "sourceTag": "L07 §D"
+    },
+    {
+      "term": "Newts (Taricha) and garter snakes (Thamnophis) — TTX",
+      "definition": "Demonstrate antagonistic coevolution arms race. Newts evolve TTX; sympatric snakes evolve resistant Na channels; trait values match across the range (Geographic Mosaic). Snake resistance trade-off with locomotion caps escalation.",
+      "sourceTag": "L09 §B/E"
+    },
+    {
+      "term": "Darwin's Madagascar orchid (Angraecum sesquipedale)",
+      "definition": "Demonstrates mutualistic coevolution by reciprocal selection. 25-cm spur predicted a long-tongued moth pollinator; Xanthopan morganii praedicta found decades later with matching tongue. Tight match is a coevolutionary equilibrium.",
+      "sourceTag": "L09 §C"
+    },
+    {
+      "term": "Crossbills (Loxia) and pine cones",
+      "definition": "Demonstrate Geographic Mosaic Theory. Beaks and cone morphology match locally in some valleys (hotspots), mismatch in others (coldspots). Mismatch is positive evidence of dynamic coevolution, not refutation.",
+      "sourceTag": "L09 §E"
+    },
+    {
+      "term": "Stickleback Pitx1 pelvic loss",
+      "definition": "Demonstrates cis-regulatory evolution. Repeated independent loss of pelvic spines via enhancer deletion at Pitx1 in freshwater populations. Coding region intact (still works in teeth) — pleiotropic cost avoided by tissue-specific cis change.",
+      "sourceTag": "L08 §C"
+    },
+    {
+      "term": "Drosophila Dscam alternative splicing",
+      "definition": "Demonstrates that proteome complexity can vastly exceed gene count. One gene → >38,000 mRNA isoforms via alternative splicing. Refutes naive 'gene number = complexity' assumption.",
+      "sourceTag": "L03 §B"
+    },
+    {
+      "term": "Cytochrome c sequence comparison",
+      "definition": "Demonstrates common descent. ~95% identical human-rhesus, ~90% human-dog, ~75% human-fly. Graded similarity tracks divergence time; supports universal common ancestor.",
+      "sourceTag": "L01 §B"
+    },
+    {
+      "term": "Lucy (Australopithecus afarensis)",
+      "definition": "Demonstrates that bipedalism preceded big brains in hominin evolution. ~3.2 Mya, brain ~400 cc (chimp-sized), but pelvis + valgus knee + foot arch confirm bipedality. Mosaic with retained arboreal traits.",
+      "sourceTag": "L19 §B"
+    },
+    {
+      "term": "Florida panther genetic rescue (1995)",
+      "definition": "Demonstrates inbreeding depression and rescue. Severely inbred ~30 individuals showed heart defects + sperm abnormalities; 8 Texas pumas introduced; F1 hybrid descendants showed restored fitness; population grew to ~200.",
+      "sourceTag": "L18 §B"
+    },
+    {
+      "term": "California condor captive breeding",
+      "definition": "Demonstrates captive-breeding rescue + ongoing risk. By 1987 only 27 birds left; pedigree-managed breeding rebuilt population to ~500. Lead poisoning from carcasses still kills wild birds — root cause unsolved.",
+      "sourceTag": "L18 §D"
+    },
+    {
+      "term": "Atlantic cod fisheries-induced evolution",
+      "definition": "Demonstrates anthropogenic directional selection. Size-limit fishing removed large/late-maturing individuals; mean size at maturity declined within ~10–20 generations. Selective harvest can reverse natural selection direction.",
+      "sourceTag": "L18 §A"
+    },
+    {
+      "term": "Bighorn sheep horn shrinkage (Ram Mountain, Alberta)",
+      "definition": "Demonstrates trophy-hunting-induced evolution. Mean horn size declined ~25% over 30 yr; h² of horn size ~0.7. Hunters preferentially killed largest-horned rams → heritable shift toward smaller.",
+      "sourceTag": "L18 §A"
+    },
+    {
+      "term": "Tibetan EPAS1 / Denisovan introgression",
+      "definition": "Demonstrates adaptive introgression. Tibetan high-altitude EPAS1 haplotype matches Denisovan genome; frequency ~87% in Tibetans (far above neighbors); strong recent positive selection signal.",
+      "sourceTag": "L19 §C"
+    },
+    {
+      "term": "Sickle-cell allele (HbS) in malaria-endemic regions",
+      "definition": "Demonstrates heterozygote advantage / balancing selection. HbS persists at ~5–15% in malaria-endemic regions despite homozygote lethality; Heterozygotes are malaria-resistant; absent where malaria absent.",
+      "sourceTag": "L20 §D"
+    },
+    {
+      "term": "MHC trans-species polymorphism",
+      "definition": "Demonstrates long-term balancing selection. Some MHC alleles persist tens of millions of years; humans and chimps share alleles. Driven by heterozygote advantage + negative frequency-dependent selection from coevolving pathogens.",
+      "sourceTag": "L20 §D"
+    },
+    {
+      "term": "Hawaiian Drosophila adaptive radiation",
+      "definition": "Demonstrates peripatric speciation. ~1,000 endemic species from one founder ~25 MYA; phylogeny nested by island age; each new island colonized by founders from older neighbor.",
+      "sourceTag": "L17 §E"
+    },
+    {
+      "term": "African cichlid radiation",
+      "definition": "Demonstrates rapid speciation under ecological opportunity + key innovation. Hundreds of species in <1 MYR in young Rift lakes; pharyngeal-jaw novelty + rapid niche specialization.",
+      "sourceTag": "L17 §E"
+    },
+    {
+      "term": "Apple maggot fly (Rhagoletis pomonella)",
+      "definition": "Demonstrates sympatric host-race speciation in progress. Host shift from hawthorn to apple within ~150 yr created assortative mating + diverging selection; populations show genetic differentiation despite no geographic barrier.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Pied/collared flycatcher song reinforcement",
+      "definition": "Demonstrates reinforcement of prezygotic isolation. Greater song divergence in zones of overlap than in pure-population zones; selection against unfit hybrids strengthens prezygotic barrier.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Side-blotched lizards (Uta stansburiana)",
+      "definition": "Demonstrates rock-paper-scissors negative frequency-dependent selection. Three male morphs (orange/blue/yellow) cycle in frequency every ~5–6 yr; no single ESS — stable cycles instead.",
+      "sourceTag": "L13 §D"
+    },
+    {
+      "term": "Seychelles warbler cooperative breeding",
+      "definition": "Demonstrates kin selection + ecological constraint. Daughters on high-quality territories stay to help raise siblings (r=0.5); on low-quality, they disperse. Hamilton's rule + saturated good territories.",
+      "sourceTag": "L12 §E / L13"
+    },
+    {
+      "term": "Wallace line",
+      "definition": "Demonstrates a sharp biogeographic boundary maintained by deep-water trenches. Asian fauna west; Australasian fauna east; <30 km separation but never connected during glacial low-stands.",
+      "sourceTag": "L17 §A"
+    },
+    {
+      "term": "Glossopteris (Permian seed fern) on Gondwanan continents",
+      "definition": "Demonstrates continental drift (vicariance). Same fossil seed plant on S.America, Africa, India, Australia, Antarctica; seeds couldn't disperse across modern oceans → required connected landmasses.",
+      "sourceTag": "L17 §B"
+    },
+    {
+      "term": "Influenza HA/NA antigenic drift",
+      "definition": "Demonstrates ongoing pathogen evolution under host immunity. ~0.5% sequence change per yr on surface antigens; escapes prior antibody recognition; requires annual vaccine update.",
+      "sourceTag": "L07 §D / L20"
+    },
+    {
+      "term": "Vampire bat (Desmodus rotundus) blood reciprocity",
+      "definition": "Demonstrates direct reciprocity. Bats regurgitate blood meals to non-relatives that fed them previously; documented record-keeping over months. Tit-for-tat in repeated encounters.",
+      "sourceTag": "L13 §E"
+    },
+    {
+      "term": "Bedbug traumatic insemination",
+      "definition": "Demonstrates antagonistic sexual conflict. Males pierce female abdomen to inseminate; females evolve thickened spermalege organs → arms race within species; rapid genitalic divergence.",
+      "sourceTag": "L11 §D"
+    },
+    {
+      "term": "Kaibab and Abert squirrels (Grand Canyon)",
+      "definition": "Demonstrates allopatric speciation by geographic barrier. Squirrel populations on opposite rims diverged in isolation; now distinct subspecies/species with different morphology.",
+      "sourceTag": "L16 §C"
+    },
+    {
+      "term": "Antarctic notothenioid antifreeze glycoprotein",
+      "definition": "Demonstrates protein cooption. Antifreeze evolved from a digestive enzyme that had weak ice-binding side activity; selection refined the side activity into a primary function. Novelty from existing toolkit.",
+      "sourceTag": "L08 §C"
+    },
+    {
+      "term": "Galápagos tortoises (long-isolated, predator-free)",
+      "definition": "Demonstrates slow life history under low extrinsic mortality. ~100 yr lifespan, delayed maturity, low reproduction; vulnerable to introduced predators (rats, dogs).",
+      "sourceTag": "L12 §B/D"
+    },
+    {
+      "term": "Salmon vs albatross",
+      "definition": "Demonstrate two stable life-history strategies given different mortality regimes. Salmon: high return-mortality → big-bang reproduction once. Albatross: low adult mortality → slow steady reproduction across decades.",
+      "sourceTag": "L12 §A"
+    },
+    {
+      "term": "European pied flycatcher phenological mismatch",
+      "definition": "Demonstrates climate-driven mismatch. Photoperiod-cued migration unchanged; caterpillar prey peak weeks earlier each year due to warming; chicks fledged with poor provisioning; population decline.",
+      "sourceTag": "L18 §C"
+    },
+    {
+      "term": "Archaeopteryx (stem bird)",
+      "definition": "Demonstrates transitional fossil + crown vs stem distinction. Mosaic of feathers + bird wings + dinosaur teeth/tail. Stem-group bird; not in modern crown. Documents incremental assembly of bird body plan.",
+      "sourceTag": "L15 §A"
+    }
+  ]
+}
