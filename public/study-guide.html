@@ -1,0 +1,2548 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cumulative Final · All units — BIOL 4230 Evolution</title>
+<style>
+  :root{
+    --bg:#0c0e12; --paper:#fdfaf2; --ink:#1a1814; --muted:#5b554b;
+    --rule:#d8d2c5; --accent:#c89b2e; --accent-bg:#fff4e2;
+    --shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Times New Roman", Times, serif;}
+  /* Toolbar */
+  .tb{position:sticky;top:0;z-index:50;background:#16161b;color:#e6dfd0;border-bottom:1px solid #22262f;padding:6px 12px;display:flex;flex-direction:column;gap:5px;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:12.5px;box-shadow:var(--shadow)}
+  .tb-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .tb .grp{display:inline-flex;gap:3px;align-items:center;border:1px solid #22262f;border-radius:6px;padding:2px 4px;background:#0c0e12}
+  .tb button, .tb select, .tb input[type=color]{
+    background:#14171d;border:1px solid transparent;border-radius:4px;padding:3px 6px;font-size:12.5px;cursor:pointer;color:#e6dfd0
+  }
+  .tb button:hover{background:#22262f}
+  .tb button:active{background:var(--accent);color:#0c0e12}
+  .tb select{padding:3px 5px;max-width:160px;background:#14171d;color:#e6dfd0}
+  .tb input[type=color]{width:24px;height:22px;padding:0;border:1px solid #22262f}
+  .tb .spacer{flex:1}
+  .tb .save-status{font-size:11.5px;color:#a59a83;min-width:140px;text-align:right;padding:0 6px}
+  .tb .save-status b{color:#5fa871}
+  .tb .save-status.dirty b{color:var(--accent)}
+  .tb-btn-wide{padding:3px 9px;font-weight:600}
+  .tb a.back-link{color:var(--accent);text-decoration:none;font-weight:600;padding:3px 8px;font-size:12.5px}
+  .tb a.back-link:hover{text-decoration:underline}
+  .doc blockquote{border-left:3px solid var(--accent);background:#fff7e8;margin:6px 0 6px 8px;padding:4px 12px;color:#3a2e15;font-style:italic}
+  .doc pre{font-family:Consolas,Menlo,Monaco,monospace;background:#fffaf0;border:1px solid var(--rule);border-radius:4px;padding:6px 10px;margin:6px 0;font-size:10.5pt;white-space:pre-wrap}
+  .doc .pb-all{border:1px solid #555;padding:4px 8px;border-radius:3px}
+  .doc .pb-top{border-top:1px solid #555;padding-top:3px}
+  .doc .pb-bottom{border-bottom:1px solid #555;padding-bottom:3px}
+  .doc .pb-left{border-left:3px solid #555;padding-left:8px}
+  .doc .pb-right{border-right:3px solid #555;padding-right:8px}
+  .doc .find-hit{background:#ffe17a;outline:1px solid #d6a01a}
+  .doc .find-hit-current{background:#ff9b1a;outline:2px solid #b04200;color:#fff}
+  /* Find bar */
+  .findbar{position:sticky;top:80px;z-index:49;background:#fffaf0;border-bottom:1px solid var(--rule);padding:6px 12px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;box-shadow:0 4px 12px rgba(0,0,0,0.06);font-family:"Inter",system-ui,sans-serif;font-size:13px}
+  .findbar input[type=text]{padding:5px 8px;border:1px solid var(--rule);border-radius:4px;font-size:13px;min-width:180px}
+  .findbar button{padding:5px 10px;border:1px solid var(--rule);background:#fff;border-radius:4px;cursor:pointer;font-size:12.5px}
+  .findbar button:hover{background:#f1ead9}
+  /* Page wrapper */
+  .pageWrap{padding:24px 0;display:flex;flex-direction:column;align-items:center;gap:16px}
+  .doc{
+    width:8.5in; min-height:11in; background:var(--paper); padding:0.55in 0.7in;
+    box-shadow:var(--shadow); border:1px solid var(--rule);
+    font-size:11pt; line-height:1.32;
+  }
+  .doc:focus{outline:none}
+  .doc h1{font-size:16pt;text-align:center;margin:0 0 2px;font-family:"Fraunces",Georgia,serif}
+  .doc h2{font-size:13pt;border-bottom:1.2pt solid var(--ink);padding-bottom:2px;margin:14px 0 6px;clear:both;font-family:"Fraunces",Georgia,serif;color:#3a2e15}
+  .doc h3{font-size:11.5pt;margin:8px 0 3px;color:#3a2e15;text-decoration:underline}
+  .doc h4{font-size:11pt;margin:6px 0 1px;font-style:italic}
+  .doc p{margin:2px 0 4px}
+  .doc p.intro{margin:4px 0 8px;font-style:italic;color:#3a2e15}
+  .doc p.overview{margin:3px 0 6px;color:#1a1814}
+  .doc .meta{text-align:center;color:var(--muted);font-size:10pt;margin-bottom:8px}
+  .doc ul{margin:2px 0 6px 18px;padding:0}
+  .doc li{margin:1px 0}
+  .doc .q{font-weight:700;margin-top:6px;color:#3a2e15}
+  .doc .a{font-weight:400}
+  .doc figure{
+    width:1.7in; margin:2px 8px 4px 8px; float:right; clear:right;
+    text-align:center; page-break-inside:avoid; break-inside:avoid;
+    font-size:8.5pt;
+  }
+  .doc figure img{max-width:100%;height:auto;max-height:1.6in;object-fit:contain;border:1px solid var(--rule);border-radius:3px;display:block;margin:0 auto}
+  .doc figcaption{font-size:8pt;color:var(--muted);margin-top:1px;font-style:italic;line-height:1.18}
+  .doc h2, .doc h3, .doc table, .doc .pagebreak{clear:both}
+  .doc table{margin-top:6px;border-collapse:collapse;width:100%;font-size:10.5pt}
+  .doc th,.doc td{border:0.5pt solid #888;padding:4px 6px;vertical-align:top}
+  .doc th{background:#f1ead9;text-align:left}
+  .doc .twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .doc .threecol{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .doc .pathway{font-family:Consolas,Menlo,Monaco,monospace;font-size:10.5pt;background:#fffaf0;border-left:3px solid var(--accent);padding:6px 10px;margin:6px 0}
+  .doc .callout{border-left:3px solid var(--accent);background:#fff7e8;padding:6px 10px;margin:8px 0;font-size:10.5pt;color:#3a2e15}
+  .pagebreak{page-break-after:always;break-after:page;height:0}
+  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:200;align-items:center;justify-content:center;padding:20px;font-family:system-ui,sans-serif}
+  .modal.show{display:flex}
+  .modal-card{background:#fff;border-radius:10px;max-width:1000px;width:100%;max-height:90vh;overflow:auto;padding:14px;color:#111}
+  .modal-card h3{margin:0 0 8px;font-family:system-ui}
+  /* Print */
+  @page{size:letter portrait;margin:0.45in}
+  @media print{
+    body{background:#fff}
+    .tb,.modal,.pageWrap,.findbar{padding:0;background:#fff;color:#111}
+    .tb,.findbar{display:none !important}
+    .doc{width:auto;min-height:0;box-shadow:none;border:none;padding:0;font-size:10.5pt;line-height:1.28}
+    .doc figure{width:1.5in;font-size:8pt}
+    .doc figure img{max-height:1.4in}
+    .doc figcaption{font-size:7.5pt}
+    .doc h1{font-size:15pt}
+    .doc h2{font-size:12.5pt;margin:10px 0 4px}
+    .doc h3{font-size:11pt;margin:6px 0 2px}
+    .pagebreak{page-break-after:always}
+    figure{page-break-inside:avoid}
+    h2,h3{page-break-after:avoid}
+    .no-print{display:none !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="tb no-print" id="toolbar">
+
+  <!-- Row 1 -->
+  <div class="tb-row">
+    <a class="back-link" href="guides.html">← Guides</a>
+    <a class="back-link" href="index.html">EVOLution</a>
+    <div class="grp" title="Paragraph style">
+      <select id="styleSelect" title="Paragraph style">
+        <option value="P">Normal</option>
+        <option value="H1">Title</option>
+        <option value="H2">Heading 1</option>
+        <option value="H3">Heading 2</option>
+        <option value="H4">Heading 3</option>
+        <option value="BLOCKQUOTE">Quote</option>
+        <option value="PRE">Code block</option>
+      </select>
+    </div>
+    <div class="grp">
+      <select id="fontFamily" title="Font family">
+        <option value="Times New Roman, Times, serif" selected>Times New Roman</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="Garamond, serif">Garamond</option>
+        <option value="Cambria, serif">Cambria</option>
+        <option value="Arial, Helvetica, sans-serif">Arial</option>
+        <option value="Calibri, sans-serif">Calibri</option>
+        <option value="Verdana, sans-serif">Verdana</option>
+        <option value="Tahoma, sans-serif">Tahoma</option>
+        <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+        <option value="Courier New, monospace">Courier New</option>
+        <option value="Consolas, monospace">Consolas</option>
+      </select>
+      <select id="fontSize" title="Font size (pt)">
+        <option value="1">8 pt</option>
+        <option value="2">10 pt</option>
+        <option value="3" selected>12 pt</option>
+        <option value="4">14 pt</option>
+        <option value="5">18 pt</option>
+        <option value="6">24 pt</option>
+        <option value="7">36 pt</option>
+      </select>
+    </div>
+    <div class="grp">
+      <button onclick="cmd('bold')" title="Bold (Ctrl+B)"><b>B</b></button>
+      <button onclick="cmd('italic')" title="Italic (Ctrl+I)"><i>I</i></button>
+      <button onclick="cmd('underline')" title="Underline (Ctrl+U)"><u>U</u></button>
+      <button onclick="cmd('strikeThrough')" title="Strikethrough"><s>S</s></button>
+      <button onclick="cmd('superscript')" title="Superscript (Ctrl+Shift+=)">x<sup>2</sup></button>
+      <button onclick="cmd('subscript')" title="Subscript (Ctrl+=)">x<sub>2</sub></button>
+      <button onclick="changeCase()" title="Change case — UPPER · lower · Title · Sentence">Aa▾</button>
+    </div>
+    <div class="grp">
+      <input type="color" id="fgColor" title="Text color" value="#111111" />
+      <input type="color" id="bgColor" title="Highlight color (text background)" value="#fff36b" />
+      <button onclick="unhighlight()" title="Remove highlight from selected text (Ctrl+Shift+H toggles)">⌫H</button>
+      <input type="color" id="paraShade" title="Paragraph shading (block background)" value="#f1ead9" />
+    </div>
+    <div class="grp">
+      <button onclick="cmd('undo')" title="Undo (Ctrl+Z)">↶</button>
+      <button onclick="cmd('redo')" title="Redo (Ctrl+Y)">↷</button>
+      <button onclick="cmd('removeFormat')" title="Clear formatting">⌫f</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="save-status" id="saveStatus" title="Edits autosave to this browser only">Loaded</div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="tb-row">
+    <div class="grp">
+      <button onclick="cmd('insertUnorderedList')" title="Bullet list">•≡</button>
+      <button onclick="cmd('insertOrderedList')" title="Numbered list">1.</button>
+      <select id="listStyleSelect" title="Multilevel / list style">
+        <option value="">List style…</option>
+        <optgroup label="Unordered">
+          <option value="ul:disc">• disc</option>
+          <option value="ul:circle">○ circle</option>
+          <option value="ul:square">▪ square</option>
+        </optgroup>
+        <optgroup label="Ordered">
+          <option value="ol:decimal">1. 2. 3.</option>
+          <option value="ol:lower-alpha">a. b. c.</option>
+          <option value="ol:upper-alpha">A. B. C.</option>
+          <option value="ol:lower-roman">i. ii. iii.</option>
+          <option value="ol:upper-roman">I. II. III.</option>
+        </optgroup>
+      </select>
+      <button onclick="cmd('outdent')" title="Decrease indent (Shift+Tab)">⇤</button>
+      <button onclick="cmd('indent')" title="Increase indent (Tab)">⇥</button>
+    </div>
+    <div class="grp">
+      <button onclick="cmd('justifyLeft')" title="Align left">⯇</button>
+      <button onclick="cmd('justifyCenter')" title="Align center">≡</button>
+      <button onclick="cmd('justifyRight')" title="Align right">⯈</button>
+      <button onclick="cmd('justifyFull')" title="Justify">☰</button>
+    </div>
+    <div class="grp">
+      <select id="lineSpacing" title="Line spacing">
+        <option value="">Spacing…</option>
+        <option value="1.0">1.0</option>
+        <option value="1.15">1.15</option>
+        <option value="1.32">1.32 (default)</option>
+        <option value="1.5">1.5</option>
+        <option value="2.0">2.0</option>
+        <option value="2.5">2.5</option>
+        <option value="3.0">3.0</option>
+      </select>
+      <select id="borderSelect" title="Paragraph border">
+        <option value="">Border…</option>
+        <option value="none">No border</option>
+        <option value="all">Box (all sides)</option>
+        <option value="top">Top only</option>
+        <option value="bottom">Bottom only</option>
+        <option value="left">Left only</option>
+        <option value="right">Right only</option>
+      </select>
+      <button onclick="applyShade()" title="Apply selected shading color to paragraph(s)">Shade</button>
+    </div>
+    <div class="grp">
+      <button onclick="openFind()" title="Find (Ctrl+F)">🔍 Find</button>
+      <button onclick="openReplace()" title="Find &amp; Replace (Ctrl+H)">⇄ Replace</button>
+      <button onclick="cmd('selectAll')" title="Select all (Ctrl+A)">Select All</button>
+    </div>
+    <div class="grp">
+      <select id="jumpTo" title="Jump to a section">
+        <option value="">Jump to…</option>
+      </select>
+    </div>
+    <div class="grp">
+      <button onclick="document.getElementById('imgFile').click()" title="Insert image from your computer">📷 Image</button>
+      <input type="file" id="imgFile" accept="image/*" style="display:none" onchange="insertImageFromFile(event)" />
+      <button onclick="insertHorizontalRule()" title="Horizontal rule">―</button>
+      <button onclick="insertPageBreak()" title="Insert page break (for print)">⤓ break</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="grp">
+      <button onclick="openShortcuts()" title="Edit keyboard shortcuts">⌨ Shortcuts</button>
+      <button onclick="window.print()" title="Print or save as PDF (8.5×11 portrait)" class="tb-btn-wide">Print / PDF</button>
+      <button onclick="downloadHTML()" title="Save the current document as a standalone .html file">⤓ .html</button>
+      <button onclick="resetDoc()" title="Restore the original seeded answers (your edits will be lost)" style="color:#c89b2e">Reset</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Shortcuts Settings Modal ===== -->
+<div class="modal" id="shortcutsModal" onclick="if(event.target===this) closeShortcuts()">
+  <div class="modal-card" style="max-width:560px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h3 style="margin:0">Keyboard shortcuts</h3>
+      <button onclick="closeShortcuts()" style="font-size:14px;padding:5px 10px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer">Close</button>
+    </div>
+    <p style="font-size:12.5px;color:#5b554b;margin:0 0 8px">Click a key combo to rebind. Then press the new combo (any of Ctrl/Alt/Shift + a key). Settings are saved to this browser.</p>
+    <table id="shortcutsTable" style="width:100%;font-family:system-ui,sans-serif;font-size:13px;border-collapse:collapse"></table>
+    <div style="margin-top:10px;display:flex;gap:6px;justify-content:flex-end">
+      <button onclick="resetShortcuts()" style="padding:6px 12px;border:1px solid var(--rule);background:#fff;border-radius:4px;cursor:pointer;color:#a3290e">Reset to defaults</button>
+    </div>
+  </div>
+</div>
+
+<div class="pageWrap">
+<div class="doc" id="doc" contenteditable="true" spellcheck="false">
+
+<h1>Cumulative Final · All units Study Guide</h1>
+
+<p class="meta">BIOL 4230 · Evolution · Cumulative Final · All units — Final exam Mon May 4, 2026 · 5–7 PM · Dr. Travis Robbins<br/>Lectures: L01 · L02 · L03 · L04 · L05 · L07 · L08 · L09 · L11 · L12 · L13 · L14 · L15 · L16 · L17 · L18 · L19 · L20</p>
+
+<p class="intro">This guide is fully editable — type anywhere, format with the toolbar, and your edits autosave to this browser. Reset restores the seeded content. Print to PDF (8.5×11 portrait) anytime.</p>
+
+<h2>L01 · What Is Evolution? Course Intro <span style="color:#7a7158;font-size:11pt;">(Ch 1)</span></h2>
+
+<p class="intro">First lecture frames evolution as the unifying theory of biology — a process of heritable change in populations over generations — and previews the four mechanisms (selection, drift, gene flow, mutation) the rest of the course will dissect.</p>
+
+<h3>§A — Defining evolution</h3>
+<p class="overview">Evolution is descent with modification — change in the heritable traits of populations across generations. It is a population-level, multi-generational phenomenon, not something that happens to an individual.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Evolution = change in allele frequencies in a population over generations.</li>
+<li>The unit of evolution is the population, not the individual.</li>
+<li>Individuals are selected; populations evolve.</li>
+<li>Heritable variation is required for evolutionary change to occur.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Evolution</b> — Change in the heritable traits (allele frequencies) of a population across generations.</li>
+<li><b>Population</b> — A group of interbreeding individuals of the same species in a defined area.</li>
+<li><b>Heritable variation</b> — Trait differences among individuals that have a genetic basis and can be passed to offspring.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>An individual cannot &#x27;evolve&#x27; — even if they change during their lifetime, evolution requires change across generations in a population.</li>
+<li>If trait differences are NOT heritable (e.g., purely environmental), selection on those traits produces no evolutionary change.</li>
+</ul></div>
+
+<h3>§B — Why evolution unifies biology</h3>
+<p class="overview">Dobzhansky&#x27;s 1973 essay — &#x27;Nothing in biology makes sense except in the light of evolution&#x27; — captures the role evolution plays as the explanatory glue across every biological subdiscipline.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Theodosius Dobzhansky (1973) wrote the famous essay establishing evolution as biology&#x27;s unifying theory.</li>
+<li>Evolution explains both unity (shared features from common descent) and diversity (lineage-specific adaptations).</li>
+<li>Practical applications include antibiotic resistance, vaccine design, conservation biology, and crop improvement.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Common descent</b> — All life on Earth shares a common ancestor; similarities reflect shared inheritance.</li>
+<li><b>Adaptation</b> — A heritable trait that increases fitness in a given environment, produced by natural selection.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>&#x27;Adaptation&#x27; has two meanings — a trait (the noun) AND the process that produces it (the verb). Context matters.</li>
+</ul></div>
+
+<h3>§C — The four evolutionary mechanisms (preview)</h3>
+<p class="overview">Four forces change allele frequencies. The course spends the next several lectures dissecting each one in turn.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Natural selection — non-random; differential survival/reproduction based on heritable trait differences.</li>
+<li>Genetic drift — random sampling of alleles; strongest in small populations.</li>
+<li>Gene flow — movement of alleles between populations via migration; tends to homogenize.</li>
+<li>Mutation — the ultimate source of new genetic variation; random with respect to fitness.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Natural selection</b> — Differential reproductive success based on heritable trait variation; non-random with respect to fitness.</li>
+<li><b>Genetic drift</b> — Random change in allele frequencies due to chance sampling, especially in small populations.</li>
+<li><b>Gene flow</b> — Movement of alleles between populations through migration of individuals or gametes.</li>
+<li><b>Mutation</b> — Heritable change in DNA sequence; the ultimate source of new alleles.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mutation is RANDOM with respect to fitness (it doesn&#x27;t &#x27;know&#x27; what&#x27;s useful), but selection acting on the resulting variation is NON-random.</li>
+<li>Drift and selection both change allele frequencies — but only selection systematically increases fitness.</li>
+</ul></div>
+
+<h2>L02 · Evolutionary Thinking — From Pre-Darwinian Worldviews to Natural Selection <span style="color:#7a7158;font-size:11pt;">(Ch 2)</span></h2>
+
+<p class="intro">How biologists came to think about life as a tree, not a ladder. This lecture traces the conceptual road from the Great Chain of Being to Darwin and Wallace, and frames the scientific method (hypothesis vs. theory) that lets evolutionary claims be tested.</p>
+
+<h3>§A — The Great Chain of Being and pre-Darwinian thinking</h3>
+<p class="overview">Before Darwin, the dominant Western view of life was the Scala Naturae — a fixed hierarchical ladder with humans at the top and &#x27;lower&#x27; organisms at the bottom. Species were considered immutable; extinction was not yet recognized as a real phenomenon.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>The Great Chain of Being arranged organisms in a fixed hierarchy with humans at the apex.</li>
+<li>Species were assumed to be immutable — created in their final form, not changing over time.</li>
+<li>Extinction was either denied outright or chalked up to local catastrophes; the idea that whole lineages had vanished was controversial well into the 1700s.</li>
+<li>There was no concept of &#x27;common ancestry&#x27; — similarities between organisms were attributed to a shared design template, not shared descent.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Great Chain of Being (Scala Naturae)</b> — Pre-Darwinian view of life as a fixed hierarchy with humans at the top — non-evolutionary, no shared descent.</li>
+<li><b>Immutability of species</b> — The pre-Darwinian assumption that species do not change over time.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The Great Chain of Being is NOT an evolutionary tree — it is a fixed ladder with no branching, no common ancestry, and no extinction.</li>
+<li>Don&#x27;t confuse the Chain of Being&#x27;s &#x27;progression toward humans&#x27; with evolution. Evolution does not progress toward any goal.</li>
+</ul></div>
+
+<h3>§B — Extinction recognized — William Smith and stratigraphy</h3>
+<p class="overview">The realization that whole groups of organisms had disappeared came from geology. William Smith showed that fossil sequences in rock layers had a consistent pattern across geography — and that some forms simply stopped appearing in younger rock.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>William Smith (early 1800s) used fossils + stratigraphy to map rock layers across England.</li>
+<li>He showed that distinct fossil assemblages characterize specific rock strata, in a consistent worldwide order — the principle of FAUNAL SUCCESSION.</li>
+<li>The disappearance of fossil types from younger strata established extinction as a real phenomenon.</li>
+<li>Georges Cuvier independently demonstrated extinction by comparing extinct fossil mammals (like mastodons) to all known living species.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Stratigraphy</b> — The study of rock layers; younger rocks lie atop older ones, and fossils within them mark time.</li>
+<li><b>Faunal succession</b> — The principle that distinct fossil assemblages occur in a consistent vertical order in rock strata, allowing rocks to be dated by their fossils.</li>
+<li><b>Extinction</b> — The complete disappearance of a species or lineage from Earth.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide explicitly flags William Smith&#x27;s role in establishing extinction — be ready to attribute him.</li>
+<li>Faunal succession is descriptive (which fossils where) — it doesn&#x27;t on its own explain WHY species disappeared. Extinction as a concept comes from observing the pattern.</li>
+</ul></div>
+
+<h3>§C — Lamarck, Lyell, and the road to Darwin</h3>
+<p class="overview">Several thinkers helped clear the conceptual ground before Darwin. Lamarck proposed an evolutionary mechanism (wrong about the details). Lyell argued for deep time and gradual geological change. Both shaped how Darwin framed natural selection.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Jean-Baptiste Lamarck (1809) was the first to propose a systematic mechanism of evolution: inheritance of ACQUIRED CHARACTERISTICS — traits acquired during an individual&#x27;s life are passed to offspring (e.g., the giraffe stretching its neck).</li>
+<li>Lamarck was wrong about the mechanism (acquired traits aren&#x27;t inherited via the standard germline) but right that species change over time.</li>
+<li>Charles Lyell argued for UNIFORMITARIANISM — the same gradual processes operating today shaped Earth over enormous spans of time.</li>
+<li>Lyell&#x27;s gift to Darwin: the concept of DEEP TIME — Earth is millions/billions of years old, plenty of time for slow evolutionary change to accumulate.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Inheritance of acquired characteristics (Lamarckism)</b> — Lamarck&#x27;s proposed mechanism: traits gained during life pass to offspring. Now known to be wrong as a general mechanism.</li>
+<li><b>Uniformitarianism</b> — Lyell&#x27;s principle that observable, gradual processes (erosion, sedimentation) operating over deep time produced Earth&#x27;s geological features.</li>
+<li><b>Deep time</b> — The vast time spans (millions to billions of years) over which Earth&#x27;s history has unfolded.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Lamarck is famous as a wrong example, but the study guide calls for matching him to &#x27;inheritance of acquired traits.&#x27; Don&#x27;t dismiss him without naming his contribution.</li>
+<li>Lyell was a geologist, not an evolutionary biologist. His contribution to evolution was indirect — providing deep time as a backdrop.</li>
+</ul></div>
+
+<h3>§D — Darwin, Wallace, and natural selection</h3>
+<p class="overview">Darwin&#x27;s voyage on the Beagle (1831–1836) and decades of subsequent work led him to natural selection. Alfred Russel Wallace independently arrived at the same idea — and his 1858 letter is what finally pushed Darwin to publish.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Charles Darwin developed the theory of evolution by natural selection through observations on the Beagle voyage and later work, especially on Galápagos finches and barnacles.</li>
+<li>Darwin&#x27;s three observations + one inference: (1) populations have heritable variation; (2) more offspring are produced than can survive; (3) survival/reproduction is non-random; → therefore (4) heritable traits associated with higher reproductive success increase in frequency.</li>
+<li>Alfred Russel Wallace independently conceived natural selection while working in the Malay Archipelago. His 1858 letter to Darwin spurred the joint Darwin-Wallace paper that year.</li>
+<li>Darwin published On the Origin of Species in 1859.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Natural selection</b> — The process by which individuals with heritable trait variants that increase reproductive success leave more offspring, increasing those variants&#x27; frequency over generations.</li>
+<li><b>Heritability</b> — The proportion of phenotypic variation that is genetically inherited rather than environmental.</li>
+<li><b>Selection differential (S)</b> — The difference between the mean trait value of breeders and the mean trait value of the original population.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide explicitly tests: &#x27;identifying which naturalist spurred Darwin to make his work public&#x27; — that&#x27;s WALLACE, via his 1858 letter.</li>
+<li>Natural selection requires variation, heritability, AND differential reproductive success. All three. Missing any one and the population doesn&#x27;t evolve.</li>
+</ul></div>
+
+<h3>§E — Hypotheses vs. theories — the scientific method</h3>
+<p class="overview">Lay usage of &#x27;theory&#x27; often means &#x27;guess,&#x27; but in science it means something quite different. Distinguishing hypothesis from theory is a small but reliably testable item.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>A HYPOTHESIS is a tentative, testable explanation for an observation — narrow in scope, designed to be falsified.</li>
+<li>A SCIENTIFIC THEORY is a well-substantiated, broad explanation supported by a large body of evidence and capable of generating many testable hypotheses.</li>
+<li>Evolution is a theory in the strong scientific sense: a unifying explanation supported by molecular, fossil, biogeographic, and experimental evidence.</li>
+<li>A good hypothesis is FALSIFIABLE — it specifies observations that would prove it wrong.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hypothesis</b> — A tentative, testable, falsifiable explanation for an observation.</li>
+<li><b>Scientific theory</b> — A broad, well-supported explanation for a major aspect of the natural world; generates testable hypotheses.</li>
+<li><b>Falsifiability</b> — The criterion that a scientific claim must specify observations that could prove it wrong.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>&#x27;Theory&#x27; in everyday language ≠ &#x27;theory&#x27; in science. Saying evolution is &#x27;just a theory&#x27; confuses the two senses.</li>
+<li>A good hypothesis says what observations would falsify it. &#x27;Evolution happens&#x27; is too broad to be a hypothesis; &#x27;antibiotic resistance increases when antibiotics are widely used&#x27; is testable.</li>
+</ul></div>
+
+<h2>L03 · Genes and Heritable Variation <span style="color:#7a7158;font-size:11pt;">(Ch 5)</span></h2>
+
+<p class="intro">Evolution requires heritable variation. This lecture is the genetics-and-genomics foundation: what genes ARE, how genomes are built, how alleles differ in their phenotypic effects, and how gene expression is regulated at multiple levels.</p>
+
+<h3>§A — Genome architecture — coding vs. noncoding DNA</h3>
+<p class="overview">Eukaryotic genomes are mostly NOT made of protein-coding genes. The bulk is noncoding DNA — pseudogenes, mobile elements, regulatory sequences, and stretches with no known function. This matters because evolution acts on genome content as a whole.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Protein-coding genes typically make up only a small fraction of eukaryotic genomes (humans: ~1–2% of the genome).</li>
+<li>Noncoding DNA includes pseudogenes (broken former genes), mobile genetic elements (transposons, retroelements), regulatory sequences, and repetitive DNA.</li>
+<li>GENOME SIZE does NOT correlate with organismal complexity (the C-value paradox) — some amoebas have larger genomes than humans.</li>
+<li>Pseudogenes are evolutionary fossils — once functional, now not — and provide direct evidence of evolutionary history.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Pseudogene</b> — A nonfunctional sequence resembling a known gene, usually disabled by stop codons, frameshifts, or loss of regulation.</li>
+<li><b>Mobile genetic element (MGE)</b> — DNA sequences that can change position within a genome — transposons, retroelements (LINEs, SINEs).</li>
+<li><b>C-value paradox</b> — The observation that genome size does not correlate with organismal complexity.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Genome size ≠ gene count ≠ complexity. The study guide flags this directly: &#x27;genome size does not necessarily correlate with organismal complexity.&#x27;</li>
+<li>Pseudogenes ARE part of the genome — they are real DNA, just not functional. Don&#x27;t exclude them when listing genome contents.</li>
+</ul></div>
+
+<h3>§B — Levels of gene expression regulation</h3>
+<p class="overview">Cells regulate gene expression at multiple stages — pre-transcriptional, transcriptional, post-transcriptional, and post-translational. Knowing which mechanism acts at which level is a core test item.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>PRE-TRANSCRIPTIONAL: chromatin structure, histone modification (acetylation, methylation), DNA methylation. Controls whether the gene is even ACCESSIBLE for transcription.</li>
+<li>TRANSCRIPTIONAL: transcription factors binding to promoters and enhancers; regulates the rate of mRNA synthesis.</li>
+<li>POST-TRANSCRIPTIONAL: alternative splicing of pre-mRNA, microRNA-mediated mRNA degradation, mRNA stability/localization.</li>
+<li>POST-TRANSLATIONAL: protein phosphorylation, ubiquitination, proteolytic cleavage, subcellular targeting — alters protein activity AFTER it is made.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>DNA methylation</b> — Addition of methyl groups to DNA (typically CpG sites); usually represses transcription. PRE-TRANSCRIPTIONAL regulation.</li>
+<li><b>Histone modification</b> — Chemical changes to histone tails (acetylation, methylation) that alter chromatin packing and gene accessibility. PRE-TRANSCRIPTIONAL.</li>
+<li><b>MicroRNA (miRNA)</b> — Small noncoding RNA that binds complementary mRNAs to suppress translation or trigger degradation. POST-TRANSCRIPTIONAL.</li>
+<li><b>Alternative splicing</b> — Production of multiple mRNA variants from a single gene by including/excluding different exons. POST-TRANSCRIPTIONAL.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>DNA methylation = PRE-transcriptional (controls access). MicroRNA = POST-transcriptional (degrades mRNAs after they&#x27;re made). Don&#x27;t mix them up.</li>
+<li>Phosphorylation can occur during transcription factor activation (transcriptional) or as a post-translational modification of any protein. Context tells you which level.</li>
+</ul></div>
+
+<h3>§C — Alleles — dominant, recessive, additive</h3>
+<p class="overview">Alleles are alternative versions of a gene at the same locus. How they interact with one another (dominance) — and how the homozygote/heterozygote phenotypes relate — sets how quickly selection can change allele frequencies.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>DOMINANT alleles mask the expression of recessive alleles in heterozygotes (Aa shows the A phenotype).</li>
+<li>ADDITIVE alleles each contribute incrementally to the phenotype — Aa is intermediate between AA and aa, and the effect scales linearly with copy number.</li>
+<li>RECESSIVE beneficial mutations spread SLOWLY from rarity — most copies hide in heterozygotes where they&#x27;re masked.</li>
+<li>DOMINANT beneficial mutations spread FAST — every heterozygote already shows the phenotype.</li>
+<li>Additive variance (V_A) is the only variance component that responds predictably to selection (covered more in L05).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Allele</b> — A specific variant of a gene at a given locus.</li>
+<li><b>Dominant</b> — An allele whose phenotype is fully expressed in heterozygotes.</li>
+<li><b>Recessive</b> — An allele whose phenotype is hidden in heterozygotes; only expressed when homozygous.</li>
+<li><b>Additive</b> — Allelic effects that combine linearly — phenotype is proportional to the dose of the allele.</li>
+<li><b>Locus</b> — The chromosomal location of a gene.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Beneficial RECESSIVE alleles increase slowly when rare (most are in Aa heterozygotes, hidden from selection). Beneficial DOMINANT alleles increase quickly when rare. Selection efficiency depends on dominance.</li>
+<li>Don&#x27;t confuse &#x27;additive&#x27; (linear dose-response across copies) with &#x27;codominant&#x27; (both alleles&#x27; phenotypes are visible in the heterozygote, but not necessarily linearly intermediate).</li>
+</ul></div>
+
+<h3>§D — Mutation as the source of new variation</h3>
+<p class="overview">Mutation is the ULTIMATE source of new genetic variation. Selection cannot create new alleles — it can only sort among existing variants. Mutation is random with respect to fitness.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Mutations are heritable changes in DNA sequence; they are the only source of NEW genetic variation.</li>
+<li>Mutations are RANDOM with respect to fitness — they don&#x27;t preferentially generate beneficial alleles when those would be useful.</li>
+<li>Most mutations are neutral or slightly deleterious; beneficial mutations are rare.</li>
+<li>Mutation rate per base per generation in eukaryotes is roughly 10⁻⁸ to 10⁻⁹, but compounded across the whole genome each individual carries dozens of new mutations.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Mutation</b> — Heritable change in DNA sequence — point mutations, insertions, deletions, duplications, inversions, translocations.</li>
+<li><b>Mutation rate</b> — The probability of a mutation per base per generation; ~10⁻⁸ to 10⁻⁹ in mammals.</li>
+<li><b>Random with respect to fitness</b> — Mutations don&#x27;t preferentially generate alleles that would be beneficial in the current environment.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mutation is random WITH RESPECT TO FITNESS. Mutation rates can vary across the genome (hotspots) and respond to environmental stressors — but the randomness referred to is about fitness-direction, not uniform per-base probability.</li>
+<li>Selection requires variation; mutation generates it. Without mutation, selection eventually exhausts genetic variation.</li>
+</ul></div>
+
+<h2>L04 · Genetic Evolution in Populations — Hardy-Weinberg <span style="color:#7a7158;font-size:11pt;">(Ch 6)</span></h2>
+
+<p class="intro">Hardy-Weinberg equilibrium is the null model of population genetics. It predicts genotype frequencies from allele frequencies in an idealized non-evolving population, so any deviation tells you something is going on (selection, drift, mutation, gene flow, or non-random mating).</p>
+
+<h3>§A — Allele frequencies vs genotype frequencies</h3>
+<p class="overview">An allele frequency is the proportion of a given allele at a locus across the whole population&#x27;s gene pool. Genotype frequencies are the proportions of homozygotes and heterozygotes.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>For a biallelic locus with alleles A and a, let p = freq(A), q = freq(a). Then p + q = 1.</li>
+<li>Allele frequencies are computed from genotype counts: p = (2·N_AA + N_Aa) / (2·N_total).</li>
+<li>Genotype frequencies should add to 1: freq(AA) + freq(Aa) + freq(aa) = 1.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Allele frequency</b> — The proportion of all gene copies in a population that are a given allele.</li>
+<li><b>Genotype frequency</b> — The proportion of individuals in a population with a given genotype (e.g., AA, Aa, aa).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Don&#x27;t confuse allele counts with individual counts — each diploid individual contributes TWO allele copies.</li>
+<li>Heterozygotes contribute ONE A and ONE a to the allele tally, not two of one.</li>
+</ul></div>
+
+<h3>§B — The Hardy-Weinberg equation</h3>
+<p class="overview">Under five idealizing assumptions, expected genotype frequencies are p², 2pq, q². The cross-multiplication comes from random union of gametes — Punnett-square logic at the population level.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Hardy-Weinberg expectation: p² + 2pq + q² = 1.</li>
+<li>p² is the expected frequency of homozygous AA; 2pq of heterozygous Aa; q² of homozygous aa.</li>
+<li>The five assumptions: (1) no mutation, (2) no gene flow / migration, (3) no genetic drift (infinite population size), (4) no natural selection, (5) random mating.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hardy-Weinberg equilibrium (HWE)</b> — The state of a population where allele and genotype frequencies remain constant across generations because none of the five evolutionary forces are acting.</li>
+<li><b>Random mating (panmixia)</b> — Each individual is equally likely to mate with any other; no preference based on genotype.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Hardy-Weinberg gives EXPECTED genotype frequencies under the null. If observed frequencies differ, that&#x27;s evidence the population is NOT in HWE — i.e., one or more forces are acting.</li>
+<li>HWE is achieved in ONE generation of random mating from any starting genotype frequencies (allele freq p stays the same; genotype freq snaps to p²/2pq/q²).</li>
+</ul></div>
+
+<h3>§C — Detecting deviations and what they mean</h3>
+<p class="overview">Excess homozygotes vs. excess heterozygotes are diagnostic of different evolutionary processes. Spotting and interpreting deviations is a core exam skill.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Excess HOMOZYGOTES (more AA + aa than expected) → suggests inbreeding or population subdivision (Wahlund effect).</li>
+<li>Excess HETEROZYGOTES → suggests heterozygote advantage (overdominant selection) or disassortative mating.</li>
+<li>Selection against a homozygote shifts allele frequencies AND warps genotype ratios away from HWE.</li>
+<li>Drift in small populations causes random departures from HWE that aren&#x27;t directional.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Inbreeding</b> — Mating between close relatives; increases homozygosity and exposes deleterious recessive alleles (inbreeding depression).</li>
+<li><b>Heterozygote advantage</b> — Heterozygotes have higher fitness than either homozygote; classic example is sickle-cell trait conferring malaria resistance.</li>
+<li><b>Wahlund effect</b> — Apparent excess of homozygotes when distinct subpopulations are pooled together as if they were one.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Selection AGAINST the recessive homozygote (aa) makes a slow change because most a alleles hide in heterozygotes — selection on rare recessives is inefficient.</li>
+<li>Inbreeding does NOT change allele frequencies on its own — it only changes genotype frequencies (more homozygotes, fewer heterozygotes).</li>
+</ul></div>
+
+<h3>§D — Worked computation pattern</h3>
+<p class="overview">Exam questions often hand you genotype counts and ask you to compute allele frequencies, then expected genotype frequencies under HWE, then compare to observed.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Step 1 — count alleles: each AA contributes 2 A; each Aa contributes 1 A and 1 a; each aa contributes 2 a.</li>
+<li>Step 2 — compute p and q from the totals.</li>
+<li>Step 3 — compute expected counts: N · p², N · 2pq, N · q².</li>
+<li>Step 4 — compare expected vs observed; if they don&#x27;t match, identify which mechanism best explains the pattern.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Common arithmetic slip: forgetting to multiply expected genotype FREQUENCIES by N (population size) when comparing to observed COUNTS.</li>
+<li>If only allele frequencies are given, you cannot detect HWE deviations — you need genotype counts.</li>
+</ul></div>
+
+<h2>L05 · Quantitative Genetics, Selection, and Plasticity <span style="color:#7a7158;font-size:11pt;">(Ch 7)</span></h2>
+
+<p class="intro">How traits with continuous variation (height, milk yield, beak depth) evolve. This lecture covers phenotypic variance partitioning, heritability, the breeder&#x27;s equation, and phenotypic plasticity — the ways environment shapes phenotype without changing genotype.</p>
+
+<h3>§A — Quantitative traits and partitioning phenotypic variance</h3>
+<p class="overview">Quantitative traits are continuously varying (height, mass, fitness components) — many genes plus environment. The total phenotypic variance V_P can be decomposed into components, each with a different evolutionary meaning.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Phenotypic variance equation: V_P = V_A + V_D + V_I + V_E.</li>
+<li>V_A (ADDITIVE genetic variance) — additive effects of alleles; the only component that responds predictably to selection.</li>
+<li>V_D (DOMINANCE variance) — interaction effects of alleles at the same locus.</li>
+<li>V_I (EPISTATIC / INTERACTION variance) — interaction effects of alleles at different loci.</li>
+<li>V_E (ENVIRONMENTAL variance) — variation in phenotype caused by environment, not heritable.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Quantitative trait</b> — A trait with continuous variation, typically influenced by many genes plus environment (height, weight, fecundity).</li>
+<li><b>V_A — Additive genetic variance</b> — The portion of genetic variance from additive allelic effects; passes predictably from parents to offspring; the engine of response to selection.</li>
+<li><b>V_D — Dominance variance</b> — Genetic variance arising from interactions between alleles at the same locus (heterozygote effects).</li>
+<li><b>V_I — Epistatic (interaction) variance</b> — Genetic variance arising from interactions between alleles at different loci.</li>
+<li><b>V_E — Environmental variance</b> — Phenotypic variance attributable to environmental differences; not inherited.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Only V_A responds predictably to selection. V_D and V_I get reshuffled by recombination each generation, so selection on them produces inconsistent gains.</li>
+<li>The study guide explicitly asks for the V_P expression — be ready to write it: V_P = V_A + V_D + V_I + V_E.</li>
+</ul></div>
+
+<h3>§B — Heritability — broad-sense vs. narrow-sense</h3>
+<p class="overview">Heritability is the fraction of phenotypic variance attributable to genetic causes. The narrow-sense version (h²) — using only V_A — is what predicts response to selection.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>BROAD-SENSE heritability H² = V_G / V_P, where V_G = V_A + V_D + V_I (total genetic variance).</li>
+<li>NARROW-SENSE heritability h² = V_A / V_P — uses only the additive component.</li>
+<li>h² ranges from 0 (no genetic basis) to 1 (purely genetic, no environmental influence).</li>
+<li>h² can be estimated from a PARENT-OFFSPRING REGRESSION — the slope of offspring trait values regressed on the mid-parent value.</li>
+<li>h² is a PROPERTY OF A POPULATION IN AN ENVIRONMENT — it changes when allele frequencies or environmental variance change. It is not an intrinsic property of the trait.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Broad-sense heritability (H²)</b> — Total genetic variance divided by total phenotypic variance: V_G / V_P.</li>
+<li><b>Narrow-sense heritability (h²)</b> — Additive genetic variance divided by total phenotypic variance: V_A / V_P. Predicts response to selection.</li>
+<li><b>Parent-offspring regression</b> — Plot of offspring trait values vs. mid-parent values; slope estimates h².</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>h² (lowercase, narrow-sense) ≠ H² (uppercase, broad-sense). The study guide tests h² because it&#x27;s the one that predicts evolution.</li>
+<li>Heritability is population-and-environment specific. A trait with h² = 0.6 in one population can have h² = 0.2 in another. Don&#x27;t quote heritability values as universal facts.</li>
+</ul></div>
+
+<h3>§C — The breeder&#x27;s equation — predicting response to selection</h3>
+<p class="overview">The breeder&#x27;s equation R = h² · S links heritability to selection differential to predict the per-generation response to selection. It is the central equation of quantitative genetics.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Breeder&#x27;s equation: R = h² · S.</li>
+<li>S (SELECTION DIFFERENTIAL) = mean of breeders − mean of original population. Captures the strength of selection on the phenotype.</li>
+<li>R (RESPONSE TO SELECTION) = mean of next generation − mean of current generation. Captures the actual evolutionary change.</li>
+<li>Larger S → larger R (selection is stronger). Larger h² → larger R (more of the variance is heritable).</li>
+<li>If h² = 0 (no heritability), R = 0 — no response, regardless of how strong the selection.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Selection differential (S)</b> — The phenotypic difference between selected breeders and the original population mean.</li>
+<li><b>Response to selection (R)</b> — The change in population mean from one generation to the next, due to selection.</li>
+<li><b>Breeder&#x27;s equation</b> — R = h² · S. Predicts evolutionary response from heritability and selection strength.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>If you select strongly (large S) but h² is near zero, the population doesn&#x27;t evolve. Heritability is the gating factor.</li>
+<li>The breeder&#x27;s equation works for ONE generation at a time. Iterating across generations requires knowing how V_A and h² change as allele frequencies shift (they don&#x27;t stay constant).</li>
+</ul></div>
+
+<h3>§D — Phenotypic plasticity and reaction norms</h3>
+<p class="overview">A single genotype can produce different phenotypes in different environments. Phenotypic plasticity is the rule, not the exception, and the patterns reveal whether plasticity itself can evolve.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>PHENOTYPIC PLASTICITY = the ability of a single genotype to produce different phenotypes in different environments.</li>
+<li>POLYPHENIC traits = single genotype producing DISCRETE alternative phenotypes (e.g., aphid winged vs. wingless morphs depending on density).</li>
+<li>REACTION NORM = a plot of phenotype (y) vs. environment (x) for a given genotype. Sloped lines = plasticity. Horizontal lines = no plasticity (canalization).</li>
+<li>GENOTYPE-BY-ENVIRONMENT INTERACTION (G×E, V_G×E) = genotypes differ in HOW they respond to environment (non-parallel reaction norms).</li>
+<li>G×E adds to phenotypic variance and can confound heritability estimates.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Phenotypic plasticity</b> — A genotype&#x27;s capacity to produce different phenotypes in different environments.</li>
+<li><b>Reaction norm</b> — A graph of phenotype vs. environment for one genotype.</li>
+<li><b>G×E interaction (V_G×E)</b> — Differences among genotypes in their response to environment — reaction norms with different slopes.</li>
+<li><b>Polyphenic trait</b> — A genotype producing two or more discrete alternative phenotypes triggered by environmental cues.</li>
+<li><b>Canalization</b> — Lack of plasticity — the genotype produces the same phenotype across environments.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Sloped reaction norms = plasticity. Non-parallel reaction norms = G×E. The study guide asks about interpreting these graphs.</li>
+<li>Plasticity is itself heritable and can evolve. A &#x27;plastic&#x27; trait isn&#x27;t the same as a &#x27;non-genetic&#x27; trait — the capacity to be plastic is genetic.</li>
+</ul></div>
+
+<h3>§E — Selection vs. evolution — a recurring distinction</h3>
+<p class="overview">Selection ACTING on a trait does not guarantee EVOLUTION. The link is heritability. This is the integrative concept the study guide returns to repeatedly.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Selection produces evolution ONLY when the selected trait has heritable variation (h² &gt; 0).</li>
+<li>If trait differences are entirely environmental (V_A = 0), selection can be strong but no evolution occurs.</li>
+<li>Evolution = change in allele frequencies across generations. Selection on phenotypes only matters evolutionarily if those phenotypes correlate with genotypes.</li>
+<li>This is the bedrock distinction between within-generation differences in survival/reproduction and between-generation evolutionary change.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Common exam scenario: selection clearly happens (some individuals reproduce more than others) but the trait is environmentally determined → NO evolutionary response. R = h² · S = 0.</li>
+<li>Selection is a within-generation process. Evolution is a between-generation outcome that requires heritability.</li>
+</ul></div>
+
+<h2>L07 · Empirical Studies of Natural Selection <span style="color:#7a7158;font-size:11pt;">(Ch 8)</span></h2>
+
+<p class="intro">How biologists actually MEASURE natural selection in the wild — landmark long-term studies that move &#x27;selection&#x27; from theory to observation. Grants&#x27; finches, peppered moths, and similar systems are the empirical canon.</p>
+
+<h3>§A — How selection is measured in nature</h3>
+<p class="overview">To demonstrate natural selection in the field, you need to (1) measure heritable variation in a trait, (2) measure differential survival or reproduction associated with that variation, and (3) ideally see allele-frequency change across generations.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Field measurement of selection requires longitudinal data — tracking marked individuals across years.</li>
+<li>Selection differential S can be measured directly by comparing the mean trait of breeders to the population mean.</li>
+<li>Heritability h² can be estimated from parent-offspring resemblance in the wild.</li>
+<li>Predicted response R = h² · S can be checked against the observed change in the next generation.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Selection in the wild</b> — Demonstrated when individuals with certain heritable trait values reproduce more than others in a natural setting.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Selection in the field can produce TINY per-generation changes that nonetheless add up over decades. Don&#x27;t dismiss small year-on-year shifts.</li>
+<li>Without heritability data, observed differential reproduction is selection but doesn&#x27;t predict evolution.</li>
+</ul></div>
+
+<h3>§B — Grants&#x27; Galápagos finches</h3>
+<p class="overview">Peter and Rosemary Grant&#x27;s decades-long study of medium ground finches (Geospiza fortis) on Daphne Major is the gold standard of natural selection in action.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>After the 1977 drought, large hard seeds dominated the food supply. Birds with deeper, stronger beaks survived better.</li>
+<li>The trait (beak depth) was heritable; the next generation had measurably deeper beaks — natural selection caught in real time.</li>
+<li>Subsequent wet years reversed the selective pressure (smaller seeds favored), demonstrating that selection direction is environment-contingent.</li>
+<li>Hybridization with a related species also introduced variation, showing how gene flow and selection can interact.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Geospiza fortis</b> — The medium ground finch on Daphne Major, focus of the Grants&#x27; long-term study.</li>
+<li><b>Selection on beak depth</b> — After the 1977 drought, deeper-beaked birds survived better and the next generation had deeper beaks on average.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The classic finch result is one-direction selection (deeper beaks) followed by reversal in different conditions. Selection can flip direction.</li>
+<li>The Grants observed evolution over a few generations — not &#x27;gradualism takes millions of years&#x27; as caricatured. Natural selection can act rapidly given strong pressure.</li>
+</ul></div>
+
+<h3>§C — Peppered moths and industrial melanism</h3>
+<p class="overview">Peppered moths (Biston betularia) shifted from light to dark forms during the Industrial Revolution and back again with pollution control. The textbook case of rapid microevolution under human-caused selection.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Pre-industrial: light morph dominant; rested camouflaged on lichen-covered tree trunks.</li>
+<li>Industrial-era pollution killed lichen and blackened tree trunks; dark (melanic) form had a survival advantage and rose to &gt;95% in polluted regions.</li>
+<li>Selection mechanism: differential bird predation on visible morphs.</li>
+<li>After clean-air legislation reduced soot, lichen returned, and the light morph rebounded — selection direction reversed.</li>
+<li>The genetic basis is now known: a transposon insertion in the cortex gene.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Industrial melanism</b> — Increase of dark (melanic) morphs in animal populations due to human-caused environmental darkening; classic in Biston betularia.</li>
+<li><b>Biston betularia</b> — The peppered moth species in which industrial melanism was documented.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The peppered moth case is sometimes attacked as bad evidence; modern replication of Kettlewell&#x27;s experiments confirms differential predation does drive the morph frequencies.</li>
+<li>The selective agent is bird predation on resting moths — not direct toxicity of pollutants.</li>
+</ul></div>
+
+<h3>§D — Other documented examples — flu, antibiotics, domestication</h3>
+<p class="overview">Beyond classic natural systems, human activities provide many real-time tests of selection: pathogens evolving resistance, domesticated species evolving under artificial selection.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Influenza evolves antigenic variation rapidly under selection from host immune systems and (where used) antiviral drugs.</li>
+<li>Antibiotic resistance in bacteria is a textbook case of strong, directional natural selection by humans.</li>
+<li>Domestication is artificial selection — humans choose breeders. Greyhounds bred for speed show measurable evolution of sprint biomechanics over decades.</li>
+<li>These cases share a structure: heritable variation + strong directional selection → rapid measurable change.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Antibiotic resistance</b> — Evolution of bacteria able to survive antibiotic exposure; driven by selection on rare resistant variants in large populations.</li>
+<li><b>Artificial selection</b> — Selection in which humans (rather than the natural environment) determine which individuals reproduce.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Antibiotic resistance is NOT caused by the antibiotic mutating bacteria. The mutations occur randomly; the antibiotic selects existing variants.</li>
+<li>Artificial selection follows the same logic as natural selection — the only difference is who/what is doing the selecting.</li>
+</ul></div>
+
+<h2>L08 · Complex Adaptations <span style="color:#7a7158;font-size:11pt;">(Ch 10)</span></h2>
+
+<p class="intro">How complex traits — eyes, wings, body plans — evolve through stepwise mutations, regulatory changes, and gene-network conservation. This lecture is the EVO-DEVO chapter, integrating molecular biology with classical evolutionary thinking.</p>
+
+<h3>§A — Adaptation as both trait and process</h3>
+<p class="overview">The word &#x27;adaptation&#x27; has two meanings: a trait that has been shaped by past selection, AND the process by which selection produces such traits. Complex adaptations build incrementally — they do not appear in their finished form.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Adaptation (noun) = a heritable trait whose current form is the product of past natural selection in service of some function.</li>
+<li>Adaptation (verb) = the process by which selection improves fit between organism and environment.</li>
+<li>Complex adaptations arise through MANY small mutational steps, each conferring some fitness advantage along the way.</li>
+<li>Each intermediate stage must itself be functional and selectively advantageous — selection cannot &#x27;plan ahead.&#x27;</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Adaptation</b> — Either a trait shaped by past selection (noun) OR the process producing such traits (verb).</li>
+<li><b>Gradual evolution</b> — Complex traits accumulate from many small mutational changes, each itself favorable.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The classic &#x27;half an eye is useless&#x27; objection ignores that early eyes are not failed full eyes — they are simpler light-detecting structures with their own value.</li>
+<li>Selection works on what&#x27;s available. A trait can be &#x27;good enough&#x27; rather than perfect — historical contingency leaves limits.</li>
+</ul></div>
+
+<h3>§B — Evolution of the vertebrate eye — gradual stepwise model</h3>
+<p class="overview">The vertebrate eye is the textbook example of complex adaptation evolving through functional intermediates. Each step (light-sensitive patch → cup → pinhole → lensed eye) is itself useful.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Stage 1: light-sensitive patch — distinguishes light from dark; useful for circadian rhythms and predator detection.</li>
+<li>Stage 2: cupped patch — adds directional sensitivity; can detect WHERE light comes from.</li>
+<li>Stage 3: pinhole eye (e.g., Nautilus) — narrows the aperture, producing a crude image without a lens.</li>
+<li>Stage 4: lens added — focuses light; sharper image. Lenses likely evolved from co-opted crystallin proteins.</li>
+<li>Eyes have evolved INDEPENDENTLY at least 40 times across animals — convergent solutions to a common selective problem.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Stepwise eye evolution</b> — The gradual elaboration from light-sensitive patch to cup to pinhole to lensed eye, each step functional.</li>
+<li><b>Convergent evolution of eyes</b> — Eyes have arisen independently in many animal lineages; the camera eye of vertebrates and cephalopods is the classic case.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The vertebrate camera eye and the cephalopod camera eye look superficially similar but evolved independently — convergent, not homologous.</li>
+<li>Each eye-evolution stage is documented in a living organism today (flatworm patches, Nautilus pinhole, etc.). The intermediates are not hypothetical.</li>
+</ul></div>
+
+<h3>§C — Regulatory networks and gene duplication</h3>
+<p class="overview">A lot of evolutionary novelty comes from RE-WIRING existing genes rather than inventing new ones. Mutations in regulatory regions, gene duplication followed by sub- or neofunctionalization, and changes in expression timing/location all reshape phenotype without changing the underlying protein-coding repertoire.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Mutations in cis-regulatory elements (enhancers, promoters) can reshape WHEN and WHERE a gene is expressed without changing the protein.</li>
+<li>Gene duplication produces redundant copies — one can retain the original function while the other evolves a new role (NEOFUNCTIONALIZATION) or a subset of the old role (SUBFUNCTIONALIZATION).</li>
+<li>Many adaptations are &#x27;tinkering&#x27; on conserved gene networks rather than de novo invention.</li>
+<li>PROTEIN PROMISCUITY — proteins often have weak side-activities that can be co-opted and refined into new primary functions.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Cis-regulatory mutation</b> — Mutation in a regulatory sequence (enhancer, promoter) that alters when/where a gene is expressed without changing the protein.</li>
+<li><b>Gene duplication</b> — Production of an extra copy of a gene; relaxed selection on the duplicate enables new function evolution.</li>
+<li><b>Neofunctionalization</b> — One copy of a duplicated gene evolves a novel function while the other retains the original.</li>
+<li><b>Subfunctionalization</b> — Both copies of a duplicated gene specialize on different subsets of the ancestral function.</li>
+<li><b>Protein promiscuity</b> — Proteins often have weak side-activities; selection can refine these into new primary functions.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Cis-regulatory evolution is a major route to morphological novelty — Hox-gene expression changes reshape body plans without changing the Hox proteins themselves.</li>
+<li>Don&#x27;t confuse subfunctionalization with neofunctionalization. Sub: each copy does part of the original. Neo: one copy gains a new function.</li>
+</ul></div>
+
+<h3>§D — Heterochrony — changes in developmental timing</h3>
+<p class="overview">Many morphological differences across species reflect changes in WHEN developmental processes occur, not WHAT they do. Speeding up, slowing down, or shifting the onset of a process produces dramatically different adult forms.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HETEROCHRONY = evolutionary change in the relative TIMING or RATE of developmental events.</li>
+<li>Examples: paedomorphosis (juvenile features retained in adults — axolotl salamander), peramorphosis (extension of growth past ancestral state — large antlers).</li>
+<li>Small changes in timing (a few hours of extra cell proliferation) can produce dramatic morphological differences.</li>
+<li>Heterochronic changes often have a simple genetic basis — a few mutations in regulatory genes.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Heterochrony</b> — Evolutionary change in the timing or rate of developmental events between species.</li>
+<li><b>Paedomorphosis</b> — Retention of juvenile features in the adult form (e.g., axolotl reproduces while still in larval form).</li>
+<li><b>Peramorphosis</b> — Extension of development past the ancestral end-point, producing more derived adult forms.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Heterochrony explains a lot of variation among closely related species without invoking many new genes.</li>
+<li>Don&#x27;t conflate heterochrony with heterotopy (changes in WHERE in the body something develops). Different concept, often paired.</li>
+</ul></div>
+
+<h3>§E — Hox genes and conserved developmental networks</h3>
+<p class="overview">Hox genes encode transcription factors that pattern the anterior-posterior axis of bilaterian animals. They are deeply conserved across phyla — the same Hox toolkit patterns flies, mice, and humans.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Hox genes are clustered in a chromosomal arrangement that mirrors their expression pattern along the body axis (COLINEARITY).</li>
+<li>Hox proteins are transcription factors that turn on segment-specific developmental programs.</li>
+<li>The same Hox genes pattern the body axes of vastly different animals — flies, mice, humans — testifying to deep evolutionary conservation.</li>
+<li>Differences in WHERE Hox genes are expressed (regulatory evolution) underlie many morphological differences across species.</li>
+<li>Hox-cluster duplications correlate with major body-plan transitions (the vertebrate genome has 4 Hox clusters; invertebrates typically have 1).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hox gene</b> — Member of a family of transcription factors that pattern the anterior-posterior body axis in bilaterian animals.</li>
+<li><b>Colinearity</b> — The arrangement of Hox genes along the chromosome matches their expression order along the body axis.</li>
+<li><b>Conservation of developmental networks</b> — Core gene-regulatory networks (Hox, Pax, Wnt) are shared across distantly related animals — evidence of deep common ancestry.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Hox-gene CONSERVATION across phyla is the headline. Differences in body plan come largely from differences in REGULATION, not from new Hox proteins.</li>
+<li>Don&#x27;t say Hox genes &#x27;cause&#x27; segments. They specify segment IDENTITY — what each segment becomes — given an underlying segmentation process.</li>
+</ul></div>
+
+<h3>§F — Imperfect adaptation — limits and constraints</h3>
+<p class="overview">Selection produces traits that are &#x27;good enough,&#x27; not optimal. Historical legacy, developmental constraints, and trade-offs leave fingerprints of imperfection — and those imperfections are often the strongest evidence of evolution.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Adaptations are constrained by history — selection can only modify what&#x27;s already there.</li>
+<li>Vestigial structures (whale pelvis, human appendix, ostrich wings) reflect ancestral function with no current use.</li>
+<li>Trade-offs — improving one trait often comes at the cost of another (running speed vs. heat dissipation).</li>
+<li>The vertebrate retina has the photoreceptors BACKWARDS (light passes through neurons before reaching them) — a historical accident, not a design choice.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Vestigial structure</b> — A structure that retains ancestral form but has lost most or all of its original function.</li>
+<li><b>Trade-off</b> — Improving one trait comes at the cost of reduced performance in another.</li>
+<li><b>Constraint</b> — Historical or developmental factors that limit what selection can produce.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Imperfections are powerful evidence of evolution. A designed system would not have a blind spot; an evolved one inherits its &#x27;mistakes.&#x27;</li>
+<li>&#x27;Good enough&#x27; is the right framing — selection lifts fitness, but is not an optimization algorithm with foresight.</li>
+</ul></div>
+
+<h2>L09 · Coevolution <span style="color:#7a7158;font-size:11pt;">(Ch 15)</span></h2>
+
+<p class="intro">Coevolution is reciprocal evolutionary change in two interacting species — each lineage&#x27;s adaptations are evolutionary responses to the other. It produces arms races, mutualisms, and the geographic mosaic of selection.</p>
+
+<h3>§A — Defining reciprocal coevolution</h3>
+<p class="overview">Coevolution is not just any pair of species coexisting — it requires that adaptations in one lineage drive adaptive responses in the other, in a feedback loop.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Coevolution = reciprocal evolutionary change between two (or more) interacting lineages, each responding to selective pressure from the other.</li>
+<li>Coexistence alone is not coevolution; the interaction must shape heritable trait change in both directions.</li>
+<li>The interaction can be antagonistic (predator-prey, host-parasite) or mutualistic (pollinators-flowers).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Coevolution</b> — Reciprocal evolutionary change in two or more interacting species driven by selective pressures each imposes on the others.</li>
+<li><b>Reciprocal selection</b> — Selection imposed by one species on another, which then imposes selection back on the first.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mere ecological association ≠ coevolution. The textbook bar is: changes in species A drive changes in species B, which drive further changes in A.</li>
+<li>Convergent evolution (similar solutions in unrelated lineages) is NOT coevolution — there&#x27;s no reciprocal feedback.</li>
+</ul></div>
+
+<h3>§B — Antagonistic arms races</h3>
+<p class="overview">When predator-prey or host-parasite interactions persist, each side evolves countermeasures, which selects for new adaptations in the other side, in an open-ended escalation.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Classic case: rough-skinned newts (Taricha) produce tetrodotoxin (TTX); garter snakes (Thamnophis) evolve TTX-resistant sodium channels.</li>
+<li>Geographic variation is striking: where snakes are highly resistant, newts are highly toxic; where snakes are sensitive, newts are weakly toxic.</li>
+<li>Arms races can be asymmetric — one side may &#x27;win&#x27; temporarily, with the other lagging behind in evolutionary response time.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Coevolutionary arms race</b> — Reciprocal escalation of offense/defense traits in interacting species, driven by ongoing antagonistic selection.</li>
+<li><b>Tetrodotoxin (TTX)</b> — Potent neurotoxin produced by newts that blocks voltage-gated sodium channels; basis of the newt-snake arms race.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Arms races don&#x27;t always escalate forever — fitness costs (e.g., snake speed cost of TTX resistance) can cap the escalation.</li>
+<li>Variation across geography is the key signature of a true arms race; uniform &#x27;one-size-fits-all&#x27; adaptations argue against ongoing coevolution.</li>
+</ul></div>
+
+<h3>§C — Mutualistic coevolution</h3>
+<p class="overview">Mutualisms are coevolutionary too: each partner&#x27;s traits are adapted to the other, and selection on one drives change in the other in a cooperative direction.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Pollinator-plant mutualisms (e.g., long-tongued moths and long-spurred orchids — Darwin&#x27;s prediction) show co-adapted morphology.</li>
+<li>Endosymbiosis (mitochondria from ancestral alphaproteobacteria, chloroplasts from cyanobacteria) is the deepest mutualism — now obligate.</li>
+<li>Mutualisms can break down or shift to parasitism if cost/benefit balance changes.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Mutualism</b> — An interaction in which both species gain net fitness benefit.</li>
+<li><b>Endosymbiosis</b> — One organism living inside another; classic origin of eukaryotic mitochondria and plastids.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mutualists often cheat — selection favors taking benefits without paying costs. Stable mutualisms typically have enforcement mechanisms.</li>
+<li>Mutualism is not &#x27;cooperation for the good of the species&#x27; — each partner is selected for individual fitness; mutual benefit is a coincidence of interests.</li>
+</ul></div>
+
+<h3>§D — Mimicry — Batesian vs. Müllerian</h3>
+<p class="overview">Mimicry is a coevolutionary product where one species&#x27; phenotype evolves to resemble another. The two flavors differ in who pays the cost.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Batesian mimicry — a HARMLESS mimic resembles a HARMFUL model; mimic gains protection without bearing the cost of being toxic. Mimic must stay rare or predators learn the trick.</li>
+<li>Müllerian mimicry — multiple HARMFUL species converge on a shared warning signal; predators learn &#x27;this color = bad&#x27; faster, benefiting all.</li>
+<li>Both are products of frequency-dependent selection by shared predators.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Batesian mimicry</b> — A palatable species evolves to resemble an unpalatable model species, gaining protection from predators.</li>
+<li><b>Müllerian mimicry</b> — Multiple unpalatable species converge on a similar warning signal, sharing the cost of educating predators.</li>
+<li><b>Aposematism</b> — Conspicuous warning coloration in unpalatable or dangerous species.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Batesian mimicry breaks down at high mimic-to-model ratios — predators encounter the harmless mimic too often and stop avoiding the warning signal.</li>
+<li>Müllerian mimicry is technically convergent evolution AND coevolution — both species evolve toward each other&#x27;s signal.</li>
+</ul></div>
+
+<h3>§E — Geographic Mosaic Theory of Coevolution</h3>
+<p class="overview">Thompson&#x27;s framework: coevolutionary outcomes vary across geography because local ecological conditions tilt the cost/benefit balance differently in different places.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Coevolution happens in &#x27;hotspots&#x27; (intense reciprocal selection) and &#x27;coldspots&#x27; (weak or no reciprocal selection).</li>
+<li>Gene flow between hotspots and coldspots, plus local trait evolution, generates a mosaic of coevolutionary states across the species&#x27; range.</li>
+<li>Predictions: trait values mismatched in some places (showing the mosaic), no single &#x27;optimal&#x27; coevolutionary outcome.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Geographic Mosaic Theory of Coevolution</b> — Thompson&#x27;s hypothesis that coevolution proceeds at different rates and in different directions across a species&#x27; geographic range, producing spatially variable trait combinations.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mosaic theory predicts trait MISMATCH in some areas — this is evidence FOR ongoing coevolution, not against it.</li>
+<li>Don&#x27;t confuse the geographic mosaic with simple local adaptation; mosaic theory specifically requires reciprocal feedback between species.</li>
+</ul></div>
+
+<h2>L11 · Sex and Sexual Selection <span style="color:#7a7158;font-size:11pt;">(Ch 11)</span></h2>
+
+<p class="intro">Why does sex exist at all, given its costs? Once it exists, why do males and females differ so dramatically? This lecture covers the evolution of sexual reproduction, the origin of anisogamy, and the consequences — sexual selection, sexual conflict, sperm competition.</p>
+
+<h3>§A — The cost of sex and why sex evolved anyway</h3>
+<p class="overview">Sexual reproduction has obvious costs (the &#x27;twofold cost of males,&#x27; searching for mates, recombination breaking up good gene combinations) — yet sex is widespread. The benefits must outweigh these costs.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>TWOFOLD COST OF SEX (Maynard Smith): in sexual species, males don&#x27;t directly produce offspring, so a sexual mother passes on only HALF as many genes per offspring as an asexual one would.</li>
+<li>BENEFIT 1 — Genetic diversity through recombination: sexual reproduction shuffles alleles, creating new combinations selection can act on.</li>
+<li>BENEFIT 2 — MULLER&#x27;S RATCHET: in asexual lineages, deleterious mutations accumulate irreversibly; sex purges them via recombination.</li>
+<li>BENEFIT 3 — RED QUEEN HYPOTHESIS: parasites coevolve rapidly with hosts; sexual recombination lets hosts &#x27;run faster&#x27; to stay ahead of parasites.</li>
+<li>BENEFIT 4 — Sib competition reduction: sexual offspring are genetically diverse, reducing competition among siblings for the same niche.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Twofold cost of sex</b> — Sexual females produce half the gene-copies per offspring that asexual ones would, because they share parentage with males.</li>
+<li><b>Muller&#x27;s ratchet</b> — In asexual populations, deleterious mutations accumulate over generations; without recombination, the mutation-free class is irreversibly lost.</li>
+<li><b>Red Queen hypothesis</b> — Sex provides genetic novelty needed to keep up with rapidly evolving parasites; named after Lewis Carroll&#x27;s Red Queen (&#x27;it takes all the running you can do, to keep in the same place&#x27;).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The &#x27;twofold cost&#x27; is sometimes phrased as the cost of MALES, sometimes the cost of SEX. The cost is real either way — sexual mothers transmit half the gene copies per offspring vs. asexual.</li>
+<li>Muller&#x27;s ratchet specifically requires that recombination be ABSENT. Bacteria recombine via horizontal gene transfer and can purge mutations by other routes.</li>
+</ul></div>
+
+<h3>§B — Anisogamy — the foundation of male and female</h3>
+<p class="overview">ANISOGAMY = unequal gamete sizes. Females (by definition) produce few large gametes (eggs); males produce many small gametes (sperm). This asymmetry is the foundation of nearly all sex differences.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ANISOGAMY = unequal gamete sizes; the OPERATIONAL DEFINITION of male and female (rather than secondary sex characteristics).</li>
+<li>Female = the sex that makes the larger, costlier gamete; male = the sex with the smaller, cheaper gamete.</li>
+<li>Asymmetric gamete investment leads to asymmetric reproductive strategies: females typically more selective, males typically compete for mates.</li>
+<li>Anisogamy evolved in the deep past as a stable evolutionary endpoint of disruptive selection on gamete size.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Anisogamy</b> — Unequal gamete sizes — the foundation of biological sex differences.</li>
+<li><b>Isogamy</b> — Equal-sized gametes — found in some algae and fungi; the ancestral state from which anisogamy evolved.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Sex is defined by GAMETE SIZE, not by secondary sex characteristics, behavior, or chromosomes. Don&#x27;t define &#x27;female&#x27; as &#x27;the one that nurtures&#x27; — that&#x27;s downstream of anisogamy.</li>
+<li>Anisogamy is not &#x27;why&#x27; sex exists; it&#x27;s a feature of HOW sex is organized once it exists.</li>
+</ul></div>
+
+<h3>§C — Sexual selection — Darwin&#x27;s second mechanism</h3>
+<p class="overview">Sexual selection is selection on traits that increase MATING success rather than survival. It explains otherwise-puzzling traits (peacock tails, antlers) that reduce survival.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>SEXUAL SELECTION = selection arising from competition for mates, distinct from survival selection (though both fall under &#x27;natural selection&#x27; in a broad sense).</li>
+<li>INTRASEXUAL selection (male-male competition): direct contests between same-sex individuals for access to mates. Produces weapons, large body size in the more competitive sex.</li>
+<li>INTERSEXUAL selection (mate choice, typically female choice): one sex chooses mates based on signal traits. Produces ornaments — peacock tails, bird songs.</li>
+<li>Sexual selection can OPPOSE survival selection: showy ornaments attract mates AND predators. Net fitness = mating gain − survival cost.</li>
+<li>FISHERIAN RUNAWAY: an arbitrary preference for a trait can amplify itself if &#x27;sexy&#x27; offspring inherit both the trait and the preference (positive feedback).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Sexual selection</b> — Selection for traits increasing mating success rather than survival.</li>
+<li><b>Intrasexual selection</b> — Same-sex competition for mates (e.g., male-male combat).</li>
+<li><b>Intersexual selection</b> — Mate choice — one sex selects partners based on signal traits.</li>
+<li><b>Sexual dimorphism</b> — Difference in form between males and females; often a product of sexual selection.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Sexual selection IS a form of natural selection — Darwin distinguished them but they share the same logic of differential reproduction.</li>
+<li>Sexually selected traits (peacock tails) often REDUCE survival. Their fitness gain comes from mating, which more than offsets the survival cost.</li>
+</ul></div>
+
+<h3>§D — Sexual conflict and sperm competition</h3>
+<p class="overview">Male and female evolutionary interests often diverge. Sexual CONFLICT — selection pressures pulling males and females in different directions — drives much of the elaborate biology of mating.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>SEXUAL CONFLICT: males benefit from many matings; females typically benefit from FEW matings with HIGH-quality partners. Their interests diverge.</li>
+<li>SPERM COMPETITION: when females mate with multiple males, sperm from different males compete to fertilize her eggs. Drives evolution of large testes, long sperm, mating plugs, and sperm-removal devices.</li>
+<li>Cryptic FEMALE choice: females can bias paternity post-copulation through reproductive-tract physiology.</li>
+<li>ANTAGONISTIC COEVOLUTION: an arms race within species — male traits coercing females, female traits resisting. Examples: ducks (sexually antagonistic genital coevolution), bedbugs (traumatic insemination).</li>
+<li>Sexual conflict can drive RAPID evolutionary change in reproductive structures.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Sexual conflict</b> — Mismatch between the reproductive interests of males and females, generating opposing selection pressures.</li>
+<li><b>Sperm competition</b> — Competition between sperm from different males to fertilize the same female&#x27;s eggs.</li>
+<li><b>Cryptic female choice</b> — Female biasing paternity after mating, via reproductive-tract mechanisms.</li>
+<li><b>Antagonistic coevolution</b> — Reciprocal evolutionary change between sexes (or between species) driven by conflicting interests.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Sexual conflict is INTRA-species coevolution — males and females are members of the same species and yet are evolutionary antagonists.</li>
+<li>Sperm competition implies polyandry (multiple mating by females). In strictly monogamous species, sperm competition is weak.</li>
+</ul></div>
+
+<h2>L12 · Life History Evolution <span style="color:#7a7158;font-size:11pt;">(Ch 12)</span></h2>
+
+<p class="intro">Life history is the schedule of an organism&#x27;s birth, growth, reproduction, and death. Selection cannot maximize all these at once — trade-offs between traits force compromises, and the form those compromises take depends on the environment.</p>
+
+<h3>§A — Trade-offs in energy allocation</h3>
+<p class="overview">An organism has finite resources and time. Energy spent on growth cannot be spent on reproduction; reproduction now reduces resources available for survival and future reproduction.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Life-history trade-offs: growth vs. reproduction, current vs. future reproduction, offspring number vs. offspring size.</li>
+<li>These trade-offs are physiological constraints — selection cannot break them, only navigate them.</li>
+<li>OPTIMAL allocation depends on the environment: high adult survival favors investment in future reproduction; low adult survival favors current reproduction.</li>
+<li>Reaction norms for life-history traits show context-dependent allocation.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Life history</b> — The schedule of major events in an organism&#x27;s life — age at maturity, fecundity, longevity, reproductive timing.</li>
+<li><b>Trade-off</b> — An inverse relationship between two fitness-related traits enforced by limited resources or physiological constraints.</li>
+<li><b>Reproductive effort</b> — The fraction of an organism&#x27;s resources allocated to current reproduction vs. survival/future reproduction.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Trade-offs are physical/physiological — they are not optional. Selection works WITHIN trade-offs to optimize, not to escape them.</li>
+<li>Don&#x27;t expect organisms to maximize one fitness component (e.g., longevity). Selection maximizes lifetime reproductive success, integrated over all life-history traits.</li>
+</ul></div>
+
+<h3>§B — Extrinsic mortality and life-history strategies</h3>
+<p class="overview">Extrinsic mortality — the rate at which adults die from external causes (predation, disease) — is the single most important determinant of optimal life-history strategy.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HIGH extrinsic mortality (e.g., heavy predation) → favors EARLY reproduction, MANY offspring, short lifespan (&#x27;live fast, die young&#x27;).</li>
+<li>LOW extrinsic mortality → favors DELAYED reproduction, FEWER but better-provisioned offspring, longer lifespan.</li>
+<li>Classic comparison: opossums on predator-rich mainland mature earlier and produce more offspring than opossums on predator-free islands.</li>
+<li>These life-history shifts evolve quickly — within tens of generations under strong selection.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Extrinsic mortality</b> — Death from external causes (predation, disease, accident) — outside the organism&#x27;s physiological control.</li>
+<li><b>Intrinsic mortality / senescence</b> — Death from internal causes (aging, organ failure) — physiological decline.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>When the study guide asks about predation effects, the answer is usually: high predation → early/fast reproduction; low predation → delayed/slow reproduction.</li>
+<li>Extrinsic mortality affects optimal age at maturity, even if intrinsic survival is high.</li>
+</ul></div>
+
+<h3>§C — Theories of senescence — why we age</h3>
+<p class="overview">Why doesn&#x27;t selection prevent aging? Two main answers, both rooted in the fact that selection becomes weaker at older ages.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>MUTATION ACCUMULATION (Medawar): late-life deleterious mutations escape selection because they affect individuals who&#x27;ve already reproduced. Such mutations accumulate.</li>
+<li>ANTAGONISTIC PLEIOTROPY (Williams): some genes have BENEFICIAL effects early in life and HARMFUL effects late. Selection favors them on net because early-life effects on reproduction outweigh late-life costs.</li>
+<li>DISPOSABLE SOMA (Kirkwood): organisms allocate finite resources between somatic maintenance (long life) and reproduction (more offspring). Investment in soma reduces fecundity.</li>
+<li>These theories are not mutually exclusive — all may contribute.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Senescence</b> — Age-related decline in survival and reproduction; aging.</li>
+<li><b>Mutation accumulation theory</b> — Late-acting deleterious mutations escape selection and accumulate, causing senescence.</li>
+<li><b>Antagonistic pleiotropy</b> — A single gene with beneficial early-life effects and harmful late-life effects; selection favors the early benefit.</li>
+<li><b>Disposable soma theory</b> — Trade-off between somatic maintenance and reproduction; selection favors reproduction at the cost of long-term cell repair.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Antagonistic pleiotropy is a single-gene story (one gene, two effects at different ages). Mutation accumulation is a many-gene story (many late-acting mutations escape selection).</li>
+<li>&#x27;Why we age&#x27; has multiple non-exclusive answers — be ready to name and distinguish at least two of the three theories.</li>
+</ul></div>
+
+<h3>§D — Age at maturity and offspring size</h3>
+<p class="overview">When to start reproducing, and how to package each offspring, are central life-history decisions. Both depend on environmental risk and resource availability.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>AGE AT MATURITY: earlier maturity → reproduce sooner but at smaller size (less invested in growth). Optimal age depends on growth rate, mortality risk, and reproductive payoff.</li>
+<li>OFFSPRING SIZE-NUMBER trade-off: a fixed reproductive budget can be split into MANY SMALL offspring (high mortality of each, but bet-hedging) OR FEW LARGE offspring (each well-provisioned, higher per-offspring survival).</li>
+<li>r-selected species (high mortality, ephemeral resources): many small offspring, early maturity. (Mice, weeds.)</li>
+<li>K-selected species (stable, competitive environments): few large offspring, delayed maturity, parental care. (Elephants, oaks.)</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Age at maturity</b> — Age at which an individual first reproduces.</li>
+<li><b>r/K selection</b> — Classical (and somewhat dated) framework distinguishing fast-living, high-fecundity (r) from slow-living, low-fecundity (K) life histories.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>r/K is a useful heuristic but not a strict dichotomy. Many species are intermediate. Modern life-history theory uses continuous variables.</li>
+<li>Earlier maturity does NOT always mean smaller offspring; the trade-off is about TOTAL reproductive investment, not necessarily individual offspring size.</li>
+</ul></div>
+
+<h3>§E — Case study — Seychelles warblers</h3>
+<p class="overview">The Seychelles warbler (Acrocephalus sechellensis) population on Cousin Island provides one of the best documented life-history datasets, including sex-biased dispersal driven by territory quality.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Seychelles warblers cooperatively breed: offspring help parents raise subsequent broods.</li>
+<li>Territory quality varies dramatically; high-quality territories support more breeding success.</li>
+<li>FEMALE OFFSPRING are more likely to remain on natal high-quality territories as helpers; MALE OFFSPRING disperse — sex-biased dispersal driven by territory value.</li>
+<li>Demonstrates how ecological constraints (territory quality, helping opportunities) shape life-history decisions about dispersal, helping, and breeding.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Cooperative breeding</b> — A breeding system in which adult helpers (often offspring from previous broods) assist parents in raising young.</li>
+<li><b>Sex-biased dispersal</b> — One sex disperses from the natal site more than the other; common in birds and mammals.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Sex-biased dispersal in Seychelles warblers is FEMALE-PHILOPATRIC (females stay on good territories, males disperse). The direction of bias is testable.</li>
+<li>Helping is not pure altruism — helpers gain inclusive fitness through helping kin and may inherit territories later.</li>
+</ul></div>
+
+<h2>L13 · Evolution of Social Behavior <span style="color:#7a7158;font-size:11pt;">(Ch 16)</span></h2>
+
+<p class="intro">How can selection favor cooperative or self-sacrificing behavior when those behaviors apparently lower the actor&#x27;s fitness? The answer — kin selection, inclusive fitness, evolutionarily stable strategies — is a foundational result in modern evolutionary biology.</p>
+
+<h3>§A — Individual vs. group selection</h3>
+<p class="overview">An old idea: traits evolve &#x27;for the good of the species&#x27; or &#x27;good of the group.&#x27; Modern evolutionary biology rejects naïve group selection — selection acts predominantly at the level of individuals (or genes), and selfish individuals usually outcompete cooperative ones.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>GROUP SELECTION (naïve form): traits spread because they benefit the group, even at individual cost.</li>
+<li>Problem with naïve group selection: a &#x27;cheater&#x27; that benefits from cooperation without contributing has higher individual fitness. Cheaters spread; cooperation collapses.</li>
+<li>Modern view: selection mostly works at the individual or genic level; apparent group benefits arise from individual benefits.</li>
+<li>Special conditions (frequent population extinctions, strict subdivision) can permit some forms of group-level selection, but it&#x27;s the exception.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Group selection</b> — Selection in which differential reproduction of GROUPS (not individuals) drives evolutionary change.</li>
+<li><b>Selfish gene perspective</b> — Dawkins&#x27;s framing: selection favors alleles that increase their own propagation, even if that means promoting altruistic behavior toward genetic relatives.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>&#x27;Good of the species&#x27; is a non-explanation. Always ask: what&#x27;s in it for the individual (or the gene)?</li>
+<li>Group selection isn&#x27;t strictly impossible, but it&#x27;s overwhelmed by individual selection in nearly all real-world cases.</li>
+</ul></div>
+
+<h3>§B — Kin selection and inclusive fitness</h3>
+<p class="overview">Hamilton&#x27;s insight: an altruistic gene can spread if its bearers help GENETIC RELATIVES, who share copies of the gene. The propagation of the gene matters, not the survival of the individual.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HAMILTON&#x27;S RULE: rB &gt; C, where r = coefficient of relatedness, B = benefit to recipient, C = cost to actor. Altruism evolves when rB &gt; C.</li>
+<li>Coefficient of relatedness r: parent-offspring r = 0.5; full siblings r = 0.5; half-siblings r = 0.25; first cousins r = 0.125.</li>
+<li>INCLUSIVE FITNESS = direct fitness (own offspring) + indirect fitness (extra offspring of relatives that wouldn&#x27;t have existed without your help, weighted by relatedness).</li>
+<li>Eusociality (worker bees, ants, naked mole-rats) is the extreme case — workers forgo reproduction entirely to raise relatives.</li>
+<li>Haplodiploidy in hymenopterans: sisters share r = 0.75 (more than they&#x27;d share with their own offspring, r = 0.5), favoring sister-helping behavior. Disputed as a complete explanation, but suggestive.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hamilton&#x27;s rule</b> — Altruism is favored when rB &gt; C; rB is the indirect benefit through relatives, C is the cost to the actor.</li>
+<li><b>Coefficient of relatedness (r)</b> — Probability that two individuals share a given allele by recent common descent.</li>
+<li><b>Inclusive fitness</b> — Direct fitness from own offspring plus indirect fitness gained through helping relatives reproduce.</li>
+<li><b>Eusociality</b> — Highly social organization with reproductive division of labor — workers forgo reproduction to raise relatives.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Hamilton&#x27;s rule is rB &gt; C, NOT B &gt; C. Forgetting the r is the classic error.</li>
+<li>Helping random strangers does not satisfy Hamilton&#x27;s rule (r = 0). Apparent altruism toward strangers usually involves reciprocity, reputation, or other mechanisms.</li>
+</ul></div>
+
+<h3>§C — Evolutionarily stable strategies (ESS)</h3>
+<p class="overview">An ESS is a behavioral strategy that, once common in a population, cannot be invaded by a rare alternative. ESS reasoning predicts which behaviors persist under frequency-dependent selection.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ESS = a strategy that, when adopted by most of a population, cannot be invaded by a rare alternative — a Nash equilibrium in evolutionary terms.</li>
+<li>ESS depends on FREQUENCY-DEPENDENT payoffs: the fitness of a strategy depends on what other strategies are common.</li>
+<li>Hawk-Dove game: pure-Hawk is unstable (Hawks fight, costs mount); pure-Dove is unstable (a rare Hawk exploits all the Doves). Mixed equilibrium emerges.</li>
+<li>ESS is solved with game-theory tools — payoff matrices and frequency-dependent fitness.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Evolutionarily Stable Strategy (ESS)</b> — A strategy that, when adopted by most members of a population, cannot be invaded by any rare alternative strategy.</li>
+<li><b>Frequency-dependent selection</b> — Fitness of a strategy depends on its frequency in the population — common strategies may be at advantage or disadvantage.</li>
+<li><b>Hawk-Dove game</b> — Classic ESS model: aggressive (Hawk) and submissive (Dove) strategies in resource competition; equilibrium is a mix.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>An ESS is not necessarily the BEST strategy on average — it&#x27;s the strategy that can&#x27;t be displaced once common. Mixed ESS solutions are common.</li>
+<li>Frequency-dependent selection can MAINTAIN diversity at equilibrium — different strategies coexist because each is favored when rare.</li>
+</ul></div>
+
+<h3>§D — Side-blotched lizards — rock-paper-scissors in nature</h3>
+<p class="overview">Male side-blotched lizards (Uta stansburiana) come in three throat-color morphs that play a rock-paper-scissors mating game — a real-world demonstration of frequency-dependent ESS dynamics.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Three male morphs: ORANGE (aggressive, defends large territories with many females), BLUE (defends small territories with one mate, vigilant against sneakers), YELLOW (sneaker, mimics females, sneaks copulations).</li>
+<li>Orange beats Blue (Orange&#x27;s aggression overwhelms Blue&#x27;s small-territory defense).</li>
+<li>Blue beats Yellow (Blue&#x27;s vigilance catches Yellow sneakers).</li>
+<li>Yellow beats Orange (Orange spreads thin defending many females; Yellow sneaks in unnoticed).</li>
+<li>Result: frequencies of the three morphs cycle over years — no single ESS, but a stable cyclic dynamic.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Side-blotched lizard (Uta stansburiana)</b> — Lizard species with three male throat-color morphs displaying rock-paper-scissors mating dynamics.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The &#x27;rock-paper-scissors&#x27; framing: Orange &gt; Blue, Blue &gt; Yellow, Yellow &gt; Orange. Cyclic dominance, not one winner.</li>
+<li>This is a real demonstration of NEGATIVE frequency-dependent selection — each morph is favored when rare, disadvantaged when common.</li>
+</ul></div>
+
+<h3>§E — Cooperation among non-kin — reciprocity, reputation, byproducts</h3>
+<p class="overview">Cooperation among unrelated individuals does occur. The mechanisms are different from kin-selected altruism — reciprocity, reputation, partner choice, or mutual benefit.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>DIRECT RECIPROCITY: &#x27;I help you now if you help me later.&#x27; Requires repeat interaction and memory.</li>
+<li>INDIRECT RECIPROCITY: helping confers a reputation that attracts future help from third parties. Requires public visibility.</li>
+<li>MUTUALISTIC BYPRODUCT: cooperation costs nothing (or even directly benefits the actor) — pure self-interest aligns.</li>
+<li>Cheating is always tempting; cooperation among non-kin is fragile and requires enforcement, sanctions, or partner choice to persist.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Direct reciprocity</b> — Cooperation maintained by tit-for-tat exchange between two individuals over repeated interactions.</li>
+<li><b>Indirect reciprocity</b> — Cooperation maintained because helpful behavior earns a reputation that attracts future help from others.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Reciprocity requires REPEATED INTERACTION — it doesn&#x27;t work in one-shot games or anonymous encounters.</li>
+<li>Cooperation among non-kin is often unstable; cheating invades unless mechanisms exist to detect and punish defectors.</li>
+</ul></div>
+
+<h2>L14 · History of Life <span style="color:#7a7158;font-size:11pt;">(Ch 3)</span></h2>
+
+<p class="intro">A 4-billion-year overview of life on Earth — when, where, and roughly how. The lecture covers Earth&#x27;s age, key evolutionary milestones (origin of life, photosynthesis, eukaryotes, multicellularity, Cambrian explosion), mass extinctions, and the dating tools that anchor it all.</p>
+
+<h3>§A — Earth&#x27;s age and dating methods</h3>
+<p class="overview">Earth is ~4.568 billion years old. We know this from radiometric dating of Earth and meteorite materials. Dating life&#x27;s milestones depends on the same physics — measuring ratios of radioactive isotopes in rocks.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Earth&#x27;s age: ~4.568 billion years (radiometric dating of meteorites, oldest Earth zircons).</li>
+<li>RADIOMETRIC DATING measures the ratio of a parent isotope to its daughter (decay product). Each isotope has a known half-life.</li>
+<li>Different isotope systems for different time scales: ¹⁴C for tens of thousands of years; U-Pb for billions of years; K-Ar for millions.</li>
+<li>BIOMARKERS (chemical signatures in rocks like specific lipid molecules) suggest life by ~3.5–3.8 billion years ago.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Radiometric dating</b> — Determining the age of a rock by measuring ratios of parent and daughter isotopes; uses known half-lives.</li>
+<li><b>Half-life</b> — Time required for half of a radioactive isotope to decay.</li>
+<li><b>Biomarker</b> — A chemical molecule (often a lipid) preserved in ancient rocks that indicates the past presence of specific organisms.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Carbon-14 dating only works back ~50,000 years (5 half-lives × 5,730 yr ≈ 28k yr; method becomes unreliable beyond that). For deep time, you need U-Pb, K-Ar, etc.</li>
+<li>Earth&#x27;s age is ~4.568 billion years — close to but distinct from the universe&#x27;s age (~13.8 Gyr) or the age of the oldest rocks on Earth (~4.0 Gyr).</li>
+</ul></div>
+
+<h3>§B — Major milestones in life&#x27;s history</h3>
+<p class="overview">Life appeared early. Then for a couple billion years, very little visible happened. Then in a few hundred million years, all the modern phyla appeared. The timeline matters.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>~3.5–3.8 GYA: earliest evidence of life (microbial mats, biomarkers).</li>
+<li>~2.4 GYA: GREAT OXIDATION EVENT — cyanobacteria producing oxygen accumulate atmospheric O₂; redox-sensitive minerals show the shift in rocks worldwide.</li>
+<li>~2.1–1.6 GYA: first eukaryotes (mitochondrial endosymbiosis).</li>
+<li>~1.0 GYA: first multicellular life.</li>
+<li>~541 MYA: CAMBRIAN EXPLOSION — most modern animal phyla appear in the fossil record over ~20 million years.</li>
+<li>~444 MYA (Ordovician): early bony fishes; first land plants.</li>
+<li>~419 MYA (Silurian): first land animals (millipedes, arthropods).</li>
+<li>~359 MYA (Devonian): age of fishes; early tetrapods (Tiktaalik, etc.).</li>
+<li>~251 MYA (Permian-Triassic boundary): largest mass extinction; ~95% marine species lost.</li>
+<li>~66 MYA (K-T or K-Pg boundary): asteroid impact; non-avian dinosaurs go extinct.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Great Oxidation Event</b> — Rise of atmospheric oxygen ~2.4 GYA driven by cyanobacterial photosynthesis; transformed Earth&#x27;s chemistry and life.</li>
+<li><b>Cambrian explosion</b> — Rapid (~541–520 MYA) diversification of most modern animal phyla, recorded in the fossil record.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The Cambrian explosion is RAPID on a geological timescale (~20 MYR) but is NOT instant. It also represents the appearance of HARD PARTS that fossilize, not necessarily the origin of phyla.</li>
+<li>Don&#x27;t confuse the Permian-Triassic extinction (~252 MYA, biggest) with the K-T / K-Pg extinction (~66 MYA, dinosaurs).</li>
+</ul></div>
+
+<h3>§C — Geological time periods to recognize</h3>
+<p class="overview">The study guide explicitly lists Ordovician, Silurian, Devonian, Permian. Be ready to associate each period with its key biological event.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ORDOVICIAN (~488–444 MYA): early bony fishes; first land plants.</li>
+<li>SILURIAN (~444–416 MYA): first land animals (arthropods, including millipedes).</li>
+<li>DEVONIAN (~416–359 MYA): age of fishes; early tetrapod evolution; early forests; major reef expansion.</li>
+<li>PERMIAN (~299–251 MYA): origin of reptiles and proto-mammals (synapsids); ends with the Permian-Triassic mass extinction.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Devonian</b> — Geological period (~416–359 MYA) marked by major fish diversification and the origin of land vertebrates.</li>
+<li><b>Permian</b> — Geological period (~299–251 MYA) ending in Earth&#x27;s largest mass extinction.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide explicitly tests these period-event associations. Memorize the canonical pairings.</li>
+<li>The Devonian = &#x27;Age of Fishes&#x27;; the Permian-Triassic boundary = the largest mass extinction.</li>
+</ul></div>
+
+<h3>§D — Mass extinctions</h3>
+<p class="overview">Five &#x27;Big Five&#x27; mass extinctions punctuate the Phanerozoic. Each reset evolutionary trajectories — opening new niches for survivors. Mass extinction is not unidirectional; it shapes which lineages get to radiate next.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>BIG FIVE mass extinctions: end-Ordovician (~444 MYA), Late Devonian (~375 MYA), end-Permian (~252 MYA), end-Triassic (~201 MYA), end-Cretaceous (K-Pg, ~66 MYA).</li>
+<li>End-PERMIAN: largest, ~95% marine species lost; cause likely Siberian Trap volcanism + climate change + ocean acidification.</li>
+<li>K-T (end-CRETACEOUS): asteroid impact at the Yucatán (Chicxulub crater); iridium layer is the smoking gun. Non-avian dinosaurs eliminated.</li>
+<li>Mass extinctions clear out dominant groups, opening niches for survivors to radiate (mammals diversified after the K-Pg).</li>
+<li>Many biologists argue we are now in the SIXTH MASS EXTINCTION driven by humans.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Mass extinction</b> — A geologically rapid event eliminating a large fraction of Earth&#x27;s species, usually defined as &gt;75% species loss.</li>
+<li><b>K-T (K-Pg) boundary</b> — End-Cretaceous boundary (~66 MYA) marked by asteroid impact and the extinction of non-avian dinosaurs.</li>
+<li><b>Iridium layer</b> — A thin global layer of iridium-rich sediment at the K-Pg boundary, evidence for an extraterrestrial impact.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide directly asks about the K-T boundary&#x27;s significance — be ready: asteroid impact, end-Cretaceous, non-avian dinosaur extinction, mammal radiation thereafter.</li>
+<li>K-T (K-Pg) is the dinosaur extinction; the Permian-Triassic is the bigger one. Don&#x27;t confuse them.</li>
+</ul></div>
+
+<h2>L15 · Phylogenetics and the Tree of Life <span style="color:#7a7158;font-size:11pt;">(Ch 4)</span></h2>
+
+<p class="intro">Phylogenetic trees are hypotheses about evolutionary relationships built from shared derived characters. The skill on this exam is reading trees correctly and choosing the right kind of character (synapomorphy, not symplesiomorphy or homoplasy) to define groups.</p>
+
+<h3>§A — Reading phylogenetic trees</h3>
+<p class="overview">A phylogenetic tree depicts hypothesized evolutionary relationships among taxa. Tips are extant or extinct organisms; internal nodes are common ancestors; branches represent lineages over time.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>A NODE is a common ancestor of the taxa above it (toward the tips).</li>
+<li>Two taxa that share a more RECENT common ancestor are more CLOSELY related — measured by node depth, NOT by physical distance on the page.</li>
+<li>Trees can be rotated at any node without changing relationships — only the order of branching matters.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Tip / Terminal taxon</b> — An extant (or extinct) organism at the end of a branch — what&#x27;s being classified.</li>
+<li><b>Node</b> — A point in the tree where lineages diverge — represents the most recent common ancestor of all descendants.</li>
+<li><b>Branch</b> — A line in the tree representing a lineage existing through time.</li>
+<li><b>Sister groups</b> — Two clades that share an immediate common ancestor (a single node).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Visual proximity on the page does NOT equal evolutionary closeness — trees can be drawn with branches in any rotation.</li>
+<li>Don&#x27;t assume tips on adjacent branches are sister groups; trace back to the node and see what it joins.</li>
+</ul></div>
+
+<h3>§B — Synapomorphies vs. symplesiomorphies vs. homoplasies</h3>
+<p class="overview">Only SYNAPOMORPHIES — shared derived characters — define monophyletic groups. Symplesiomorphies (shared ancestral traits) and homoplasies (independent acquisitions) mislead.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Synapomorphy = a derived character STATE shared because of inheritance from a common ancestor that first evolved it.</li>
+<li>Symplesiomorphy = a shared ANCESTRAL state — present in more distant ancestors, not informative about which lineages cluster.</li>
+<li>Homoplasy = a similar state arising independently (convergence) or by reversal — misleading; not a synapomorphy.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Synapomorphy</b> — A shared, derived (evolutionarily novel) character state that is informative for defining a monophyletic group.</li>
+<li><b>Symplesiomorphy</b> — A shared ancestral character state; widespread among lineages and uninformative about closer relationships.</li>
+<li><b>Homoplasy</b> — Similar character states in different lineages that did NOT come from a common ancestor — produced by convergence, parallelism, or reversal.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>&#x27;Has a backbone&#x27; is a synapomorphy of vertebrates as a whole, but a SYMPLESIOMORPHY for any subgroup (e.g., mammals + birds) — i.e., the same character can play different roles depending on the level you&#x27;re working at.</li>
+<li>If two distantly related lineages share a feature, suspect homoplasy — check whether the common ancestor likely had it.</li>
+</ul></div>
+
+<h3>§C — Monophyletic, paraphyletic, polyphyletic</h3>
+<p class="overview">Modern systematics requires named groups to be monophyletic. Para- and polyphyletic groups are rejected because they don&#x27;t reflect evolutionary history.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>MONOPHYLETIC (clade) = a common ancestor + ALL its descendants. Defined by synapomorphies.</li>
+<li>PARAPHYLETIC = common ancestor + SOME (not all) descendants. Example: &#x27;Reptilia&#x27; excluding birds — birds are reptiles by descent but were left out historically.</li>
+<li>POLYPHYLETIC = group built from members that do NOT share an immediate common ancestor; based on convergent traits. Example: &#x27;warm-blooded animals&#x27; (mammals + birds, not their reptilian common ancestor).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Clade / Monophyletic group</b> — A common ancestor and all of its descendants — the only kind of group that reflects an evolutionary unit.</li>
+<li><b>Paraphyletic group</b> — A group containing a common ancestor but NOT all of its descendants; rejected in modern systematics.</li>
+<li><b>Polyphyletic group</b> — A group whose members do not share an immediate common ancestor; based on convergent (homoplasic) traits.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Birds nest within reptiles — calling &#x27;Reptilia&#x27; (without birds) a valid group makes it paraphyletic. Modern usage either includes birds or uses &#x27;Sauropsida&#x27;.</li>
+<li>Polyphyletic groups are diagnosed by SHARED CONVERGENT FEATURES, not common ancestry.</li>
+</ul></div>
+
+<h3>§D — Species concepts</h3>
+<p class="overview">Different species concepts emphasize different criteria. The Biological Species Concept (BSC) is the most famous, but it has limits.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Biological Species Concept (BSC, Mayr): species = groups of actually or potentially interbreeding populations, reproductively isolated from others. Strength: clear mechanism (gene flow). Limit: can&#x27;t apply to asexual organisms or fossils.</li>
+<li>Morphological Species Concept: species defined by distinctive form. Strength: usable on fossils and any organism. Limit: cryptic species and morphological plasticity confuse it.</li>
+<li>Phylogenetic Species Concept: species = smallest monophyletic group with shared derived characters. Strength: works for asexuals and fossils. Limit: depends on chosen markers; tends to split lineages aggressively.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Biological Species Concept (BSC)</b> — Mayr&#x27;s definition: a species is a group of interbreeding (or potentially interbreeding) natural populations reproductively isolated from others.</li>
+<li><b>Morphological species concept</b> — Species defined by distinct, diagnosable morphological differences.</li>
+<li><b>Phylogenetic species concept</b> — Species defined as the smallest monophyletic group identifiable by shared derived characters.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The BSC requires reproductive isolation — but two morphologically distinct populations that occasionally hybridize can still be &#x27;good&#x27; biological species if hybrids have reduced fitness.</li>
+<li>Asexual organisms (bacteria, parthenogenetic animals) are not species under the BSC. Use morphology or phylogeny instead.</li>
+</ul></div>
+
+<h2>L16 · Species Concepts and Reproductive Isolation <span style="color:#7a7158;font-size:11pt;">(Ch 13)</span></h2>
+
+<p class="intro">What IS a species, exactly? Different concepts emphasize different criteria, each with strengths and limits. This lecture covers species concepts and the reproductive isolation mechanisms — pre- and postzygotic — that keep species apart.</p>
+
+<h3>§A — Major species concepts</h3>
+<p class="overview">There is no single universal species definition. The Biological Species Concept dominates animal biology; alternatives handle cases where the BSC fails.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>BIOLOGICAL SPECIES CONCEPT (BSC, Mayr): species = groups of actually or potentially interbreeding natural populations, reproductively isolated from other such groups. Strength: clear mechanism (gene flow). Limits: can&#x27;t apply to asexual organisms or fossils.</li>
+<li>MORPHOLOGICAL SPECIES CONCEPT: species defined by distinct, diagnosable morphological differences. Strength: applies to fossils and asexuals. Limit: cryptic species (genetically distinct but morphologically identical) and morphological plasticity create errors.</li>
+<li>PHYLOGENETIC SPECIES CONCEPT: species = the smallest monophyletic group identifiable by shared derived characters. Strength: works for asexuals, applies cladistic logic. Limit: sensitive to sampling and characters chosen; tends to split lineages aggressively.</li>
+<li>ECOLOGICAL SPECIES CONCEPT: species = populations occupying the same adaptive zone (niche). Useful but sometimes blurry.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Biological Species Concept (BSC)</b> — Mayr&#x27;s definition: species = group of interbreeding natural populations reproductively isolated from others.</li>
+<li><b>Morphological species concept</b> — Species defined by diagnosable morphological differences.</li>
+<li><b>Phylogenetic species concept</b> — Species = smallest monophyletic group sharing derived characters.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The BSC fails for asexual organisms (bacteria, parthenogenetic species) and for fossils — you can&#x27;t test interbreeding with extinct populations.</li>
+<li>Different concepts can disagree about what counts as a species in the same case (e.g., a hybridizing species pair). The &#x27;right&#x27; concept depends on what you need it for.</li>
+</ul></div>
+
+<h3>§B — Reproductive isolation — prezygotic vs postzygotic</h3>
+<p class="overview">The BSC requires reproductive isolation. Mechanisms split into PREZYGOTIC (preventing zygote formation) and POSTZYGOTIC (acting after zygote formation).</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>PREZYGOTIC barriers prevent fertilization or gamete contact:</li>
+<li>  • TEMPORAL — populations breed at different times (different seasons, different times of day).</li>
+<li>  • BEHAVIORAL — different mating displays/courtship songs prevent recognition between species.</li>
+<li>  • MECHANICAL — incompatible reproductive structures (e.g., insect genital morphology) prevent successful copulation.</li>
+<li>  • GAMETIC — sperm cannot fertilize eggs of different species (incompatible surface proteins).</li>
+<li>  • HABITAT/ECOLOGICAL — populations live in different microhabitats and rarely encounter each other.</li>
+<li>POSTZYGOTIC barriers act AFTER zygote formation:</li>
+<li>  • HYBRID INVIABILITY — hybrid embryos fail to develop or survive.</li>
+<li>  • HYBRID STERILITY — hybrids survive but are sterile (e.g., mules, zorses).</li>
+<li>  • HYBRID BREAKDOWN — F1 hybrids viable and fertile, but F2 (or later) generations show reduced fitness.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Prezygotic isolation</b> — Reproductive barriers preventing successful fertilization between species (temporal, behavioral, mechanical, gametic, habitat).</li>
+<li><b>Postzygotic isolation</b> — Reproductive barriers acting after zygote formation: hybrid inviability, sterility, or breakdown.</li>
+<li><b>Hybrid sterility</b> — Hybrid offspring survive but cannot reproduce; classic example is the mule (horse × donkey).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Pre-zygotic = before zygote (no successful fertilization). Post-zygotic = after zygote (hybrid problems). The dividing line is fertilization.</li>
+<li>Hybrid INVIABILITY ≠ hybrid STERILITY. Inviability: hybrids die. Sterility: hybrids live but can&#x27;t reproduce.</li>
+</ul></div>
+
+<h3>§C — Speciation — how new species arise</h3>
+<p class="overview">Speciation is the evolutionary process by which one species splits into two or more reproductively isolated descendants. Geography is often (but not always) involved.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ALLOPATRIC speciation: populations geographically separated → independent evolution → reproductive isolation accumulates → new species. Most common.</li>
+<li>PERIPATRIC speciation: a small founder population becomes geographically isolated; drift + selection in the small population accelerates divergence.</li>
+<li>PARAPATRIC speciation: populations are partially separated (adjacent ranges, narrow contact zone); divergence occurs despite some gene flow.</li>
+<li>SYMPATRIC speciation: divergence WITHOUT geographic separation, often via niche differentiation, polyploidy (especially in plants), or strong assortative mating.</li>
+<li>REINFORCEMENT: when populations come back into secondary contact, selection can favor stronger prezygotic isolation IF hybrids have low fitness.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Allopatric speciation</b> — New species form in geographically separated populations.</li>
+<li><b>Sympatric speciation</b> — New species form within the same geographic range, often via niche shifts or polyploidy.</li>
+<li><b>Reinforcement</b> — Selection strengthens prezygotic isolation when hybrids between two populations are unfit, accelerating completion of speciation.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Allopatric is the DEFAULT speciation mode for most animals. Sympatric is rare in animals but more common in plants (polyploidy is sympatric).</li>
+<li>Reinforcement is a SECONDARY-CONTACT phenomenon — it only operates AFTER initial divergence in allopatry, when populations meet again.</li>
+</ul></div>
+
+<h3>§D — Hybrid zones and viable hybrids</h3>
+<p class="overview">Real populations don&#x27;t always fit clean species boundaries. Hybrid zones — where two species meet and interbreed — reveal incomplete reproductive isolation.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HYBRID ZONES are geographic regions where two species&#x27; ranges overlap and they interbreed.</li>
+<li>VIABLE HYBRIDS can exist (offspring survive) but typically have REDUCED FITNESS — outcompeted by parental species, often sterile, or maladapted to either parental habitat.</li>
+<li>Hybrid zones can be stable (selection against hybrids balanced by gene flow) or move over time.</li>
+<li>Sometimes hybrids THRIVE in intermediate environments — hybrid zones can also be sites of evolution and even hybrid speciation.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hybrid zone</b> — Geographic region where two species&#x27; ranges overlap and they interbreed, typically producing hybrids of intermediate or reduced fitness.</li>
+<li><b>Viable hybrid</b> — Hybrid offspring that survives but typically with reduced fitness.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Hybrid existence does NOT disprove species status under the BSC — hybrids with reduced fitness still leave the parental species reproductively isolated in the long run.</li>
+<li>Hybrid speciation (e.g., in sunflowers) is a real but special case where hybrids form a stable third lineage.</li>
+</ul></div>
+
+<h2>L17 · Biogeography, Speciation, and Extinction <span style="color:#7a7158;font-size:11pt;">(Ch 14)</span></h2>
+
+<p class="intro">Why are species where they are? This lecture covers the geographic distribution of life — how dispersal, vicariance, and continental drift shape biodiversity, plus what determines diversity in a given place over time.</p>
+
+<h3>§A — What is biogeography?</h3>
+<p class="overview">Biogeography is the study of WHERE species live and WHY. Past geological history (continental drift, glaciation) and ecological factors (climate, dispersal) jointly shape modern distributions.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>BIOGEOGRAPHY = the study of species distributions across geographic space and through geological time.</li>
+<li>Wallace and Darwin both argued that geographic patterns (e.g., distinct faunas on different continents) are best explained by descent and history, not independent creation.</li>
+<li>Modern biogeography integrates plate tectonics, climate history, dispersal ability, and ecological interactions.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Biogeography</b> — The study of the geographic distribution of species and ecosystems through space and time.</li>
+<li><b>Wallace line</b> — A faunal boundary in the Indonesian archipelago separating Asian and Australasian biotas; named for Alfred Russel Wallace.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Biogeography unites geology, ecology, and evolution — questions can pull from any of these.</li>
+<li>Patterns of distribution are clues to history; similar species in distant places may share ancestry (vicariance) or have dispersed.</li>
+</ul></div>
+
+<h3>§B — Dispersal vs. vicariance</h3>
+<p class="overview">Two opposing explanations for why related species are found in different places: organisms moved (dispersal) or the geography moved underneath them (vicariance).</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>DISPERSAL: organisms move from one place to another; the same lineage now occupies multiple regions because individuals or propagules crossed geographic barriers.</li>
+<li>VICARIANCE: a geographic barrier (mountain range, sea-level change, continental drift) splits a previously continuous range, separating populations that diverge.</li>
+<li>Often both have operated; modern molecular phylogenies + dating help distinguish them.</li>
+<li>Classic vicariance example: the close relationship of South American and African biota reflects their shared Gondwanan ancestry — they were once continuous before continental drift split them.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Dispersal</b> — Movement of organisms from one location to another, crossing geographic barriers.</li>
+<li><b>Vicariance</b> — Geographic separation of a once-continuous range by a new barrier (mountains, seaways, continental drift).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Distinguishing dispersal from vicariance requires DATING — vicariant splits should match the geological barrier formation; dispersal splits can be any age.</li>
+<li>Don&#x27;t assume vicariance for every pair of similar species on different continents — some are dispersal events (especially birds, oceanic taxa).</li>
+</ul></div>
+
+<h3>§C — Standing diversity and species turnover</h3>
+<p class="overview">STANDING DIVERSITY is how many species are present in a region at one time. TURNOVER is the rate at which species enter (originate, immigrate) and leave (go extinct, emigrate).</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Standing diversity at any moment = (cumulative origination) − (cumulative extinction) − (emigration) + (immigration).</li>
+<li>Turnover RATE = species replacement rate; high turnover means many species coming and going.</li>
+<li>Equilibrium theory of island biogeography (MacArthur &amp; Wilson): diversity is set by the BALANCE between immigration (decreasing as species accumulate) and extinction (increasing as species accumulate).</li>
+<li>Standing diversity can be stable while turnover is high (membership of the species list constantly changes).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Standing diversity</b> — The number of species present in a region at a given time.</li>
+<li><b>Turnover rate</b> — The rate at which species are replaced — incoming species per unit time, balanced by extinctions/emigrations.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Standing diversity is a SNAPSHOT; turnover is a RATE. Don&#x27;t conflate them.</li>
+<li>Two communities with the same standing diversity can have very different turnover rates.</li>
+</ul></div>
+
+<h3>§D — Mass extinctions and their consequences</h3>
+<p class="overview">Mass extinctions reset the trajectory of life by clearing dominant lineages and opening niches for survivors to radiate into. The Big Five share certain features but had different causes.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Big Five mass extinctions punctuate the Phanerozoic; each killed &gt;50% of marine species.</li>
+<li>End-Ordovician (~444 MYA): glaciation/sea-level fall.</li>
+<li>Late Devonian (~375 MYA): multiple pulses; possibly anoxia / sea-level / climate.</li>
+<li>End-Permian (~252 MYA): largest. Likely Siberian Trap volcanism, ocean acidification, climate change. ~95% marine species lost.</li>
+<li>End-Triassic (~201 MYA): extinction cleared major reptilian groups, allowing dinosaurs to dominate.</li>
+<li>End-Cretaceous / K-Pg (~66 MYA): asteroid impact (Chicxulub). Iridium layer is the smoking gun. Non-avian dinosaurs extinct; mammals radiate.</li>
+<li>After mass extinctions, surviving lineages undergo ADAPTIVE RADIATIONS into newly empty niches.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Adaptive radiation</b> — Rapid diversification of a single lineage into many ecologically distinct species, often after mass extinction or invasion of a new habitat.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>End-Permian, NOT end-Cretaceous, is the largest mass extinction.</li>
+<li>The K-Pg extinction is closely linked to the Chicxulub impact, but additional factors (Deccan Trap volcanism) likely contributed.</li>
+</ul></div>
+
+<h3>§E — Adaptive radiations</h3>
+<p class="overview">When a lineage colonizes a new environment or survives a mass extinction, it can rapidly diversify into many species exploiting different niches. Galápagos finches and Hawaiian honeycreepers are classic examples.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ADAPTIVE RADIATION = rapid diversification of one lineage into many ecologically diverse species.</li>
+<li>Conditions favoring adaptive radiation: open ecological space, new geographic colonization, key innovations, post-extinction recovery.</li>
+<li>Galápagos finches: ~14 species derived from a single ancestor, each specialized for a different food niche.</li>
+<li>Mammals radiated rapidly after the K-Pg extinction — the niches dinosaurs occupied were suddenly available.</li>
+<li>Adaptive radiations can be morphologically dramatic in a few million years.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Adaptive radiation</b> — Rapid evolutionary diversification of one lineage into many species occupying different ecological niches.</li>
+<li><b>Key innovation</b> — An evolutionary novelty (jaws, wings, flowering) that opens new ecological possibilities and can trigger radiations.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Adaptive radiation is fast diversification INTO DIFFERENT NICHES — not just speciation in general.</li>
+<li>Mammalian radiation didn&#x27;t START at the K-Pg; mammals existed earlier but were small and ecologically restricted. The K-Pg removed dinosaur competitors and let mammals diversify.</li>
+</ul></div>
+
+<h2>L18 · Conservation and Humans as a Selective Force <span style="color:#7a7158;font-size:11pt;">(Ch 8)</span></h2>
+
+<p class="intro">Humans are now a dominant evolutionary force — through habitat alteration, hunting, fishing, antibiotic use, and climate change, we are reshaping selection pressures on most species on Earth. This lecture is about that, plus what conservation biology can do.</p>
+
+<h3>§A — Humans as selective force</h3>
+<p class="overview">Human activities apply strong, directional selection on countless species. Wherever we hunt, harvest, or otherwise selectively kill or capture organisms, we drive evolutionary change.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>FISHERIES SELECTION: minimum-size limits selectively remove large individuals; over decades, fish populations evolve toward earlier maturation and smaller size.</li>
+<li>TROPHY HUNTING: selecting for large-horned individuals can reduce average horn size in the population over time (e.g., bighorn sheep on Ram Mountain).</li>
+<li>ANTIBIOTIC RESISTANCE: heavy use selects for resistant bacterial strains.</li>
+<li>PESTICIDE RESISTANCE: insect pests evolve resistance under heavy spraying.</li>
+<li>URBANIZATION: city-dwelling species (urban pigeons, mice, peppered moths) evolve under novel selective pressures.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Selective harvest</b> — Hunting/fishing that targets specific phenotypes (large size, big horns) and applies directional selection.</li>
+<li><b>Fisheries-induced evolution</b> — Evolutionary change in fish populations driven by size-selective fishing pressure.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Human selection is the same evolutionary process as natural selection; we just play the selecting role.</li>
+<li>Selective harvest can REVERSE pre-existing selection (e.g., natural selection for large body, fishing for small) — populations evolve away from natural-equilibrium phenotypes.</li>
+</ul></div>
+
+<h3>§B — Habitat destruction, fragmentation, and conservation genetics</h3>
+<p class="overview">Habitat loss and fragmentation reduce population sizes and gene flow — making drift stronger, inbreeding more likely, and adaptive evolution slower.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Small populations experience strong genetic drift, lose genetic variation, and are vulnerable to inbreeding depression.</li>
+<li>Population FRAGMENTATION reduces gene flow between subpopulations, accelerating local divergence and loss of variation.</li>
+<li>Florida panther example: a tiny remnant population suffered severe inbreeding depression (heart defects, reproductive issues); rescue via introduction from Texas pumas restored fitness.</li>
+<li>GENETIC RESCUE: introducing individuals from a related population can restore genetic variation and fitness in inbred populations.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Inbreeding depression</b> — Reduced fitness in inbred populations due to expression of deleterious recessive alleles in homozygotes.</li>
+<li><b>Genetic rescue</b> — Introducing individuals from another population to restore genetic variation and reduce inbreeding depression.</li>
+<li><b>Fragmentation</b> — Subdivision of habitat into smaller patches, reducing gene flow and population sizes.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Small populations are vulnerable to BOTH demographic and genetic problems. Conservation must address both.</li>
+<li>Genetic rescue can fail if the introduced population is so distantly related that hybrids are maladapted (outbreeding depression).</li>
+</ul></div>
+
+<h3>§C — Climate change as selective pressure</h3>
+<p class="overview">Anthropogenic climate change is a major and ongoing selective force. Some species track suitable climate by shifting range; others must evolve in place; many will fail to do either fast enough.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Many species are shifting ranges poleward and upslope as climates warm.</li>
+<li>Species with limited dispersal (e.g., trees, mountain-top organisms) cannot track climate easily and face strong selection or extinction.</li>
+<li>Phenological shifts (flowering, migration timing) reflect rapid evolution and plastic responses to changing seasonal cues.</li>
+<li>MISMATCHES between interacting species (e.g., insect emergence vs. plant flowering) may break ecological networks.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Phenological shift</b> — Change in the timing of seasonal biological events (flowering, breeding, migration) in response to climate.</li>
+<li><b>Range shift</b> — Geographic movement of a species&#x27; distribution, often poleward or upslope under warming.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Species can RESPOND to climate change by shifting range, evolving, going plastic, or going extinct. The mix depends on dispersal ability, generation time, and severity.</li>
+<li>Phenological shifts driven by climate are evidence of climate change effects on biology, even when range hasn&#x27;t shifted yet.</li>
+</ul></div>
+
+<h3>§D — Conservation strategies</h3>
+<p class="overview">Conservation biology applies evolutionary thinking to preserving biodiversity. The toolkit ranges from habitat protection to captive breeding to genetic rescue.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HABITAT PROTECTION: protected areas (national parks, reserves) preserve in-situ biodiversity.</li>
+<li>CAPTIVE BREEDING: ex-situ programs maintain populations of critically endangered species (California condor, Arabian oryx) for eventual reintroduction.</li>
+<li>ASSISTED MIGRATION: moving species to climate-appropriate habitats (controversial for risk of unintended consequences).</li>
+<li>GENETIC RESCUE / outcrossing programs: see §B above.</li>
+<li>Effective conservation manages BOTH demographic decline (low N) AND genetic decline (low diversity, inbreeding).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Conservation biology</b> — The study of preservation of biodiversity; applies evolutionary, ecological, and population-genetic principles.</li>
+<li><b>Captive breeding</b> — Maintaining populations in human care to prevent extinction and supply individuals for reintroduction.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Conservation is ALWAYS about both populations and the genes within them. A demographically large population with no genetic diversity is still vulnerable.</li>
+<li>Captive breeding can introduce its own selection pressures (adaptation to captivity) that may reduce wild fitness on release.</li>
+</ul></div>
+
+<h2>L19 · Human Evolution <span style="color:#7a7158;font-size:11pt;">(Ch 17)</span></h2>
+
+<p class="intro">Where we came from. The hominin lineage diverged from chimpanzees ~6–7 million years ago in Africa; bipedalism came first, then expanding brain, then long migration out of Africa. This lecture also touches evolutionary medicine — how our evolutionary history shapes modern disease.</p>
+
+<h3>§A — The hominin lineage and bipedalism</h3>
+<p class="overview">Humans share a common ancestor with chimpanzees ~6–7 MYA. The first major hominin innovation was BIPEDAL LOCOMOTION, which preceded brain enlargement.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Hominins (the human lineage after splitting from chimpanzees) appeared ~6–7 MYA in Africa.</li>
+<li>Earliest possible hominins: Sahelanthropus tchadensis (~7 MYA, Chad), Orrorin tugenensis, and Ardipithecus.</li>
+<li>BIPEDALISM (walking upright on two legs) was the first major hominin trait, evident in skeletal anatomy of these earliest forms.</li>
+<li>Bipedalism is documented in skeletal features: foramen magnum (where the spinal cord exits the skull) is positioned UNDERNEATH the skull, indicating an upright spine.</li>
+<li>Brain enlargement came AFTER bipedalism in hominin evolution.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hominin</b> — Members of the human lineage since the chimpanzee split — includes modern humans and all extinct relatives.</li>
+<li><b>Bipedalism</b> — Habitual two-legged walking; the earliest hallmark hominin adaptation.</li>
+<li><b>Foramen magnum</b> — The opening in the skull where the spinal cord exits; its position (rear vs. underneath) indicates posture.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide explicitly tests bipedalism: it began ~6–7 MYA. Brain enlargement is later.</li>
+<li>Sahelanthropus from Chad is the early hominin example the study guide flags. Recognize the Chad connection.</li>
+</ul></div>
+
+<h3>§B — Australopithecines and early Homo</h3>
+<p class="overview">After the earliest hominins, several species of Australopithecus dominated for several million years. Genus Homo appears ~2.5 MYA.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Australopithecus afarensis (~3.9–2.9 MYA) — &#x27;Lucy&#x27; is the famous specimen; small-brained but fully bipedal.</li>
+<li>Robust australopithecines (Paranthropus) — heavy chewing apparatus, evolutionary dead-end.</li>
+<li>Genus Homo appears ~2.5 MYA with H. habilis — first stone tools (Oldowan).</li>
+<li>Homo erectus (~1.9 MYA) — first hominin to leave Africa, larger brain, more sophisticated tools.</li>
+<li>Homo sapiens emerges in Africa ~300 KYA.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Australopithecus</b> — Genus of bipedal hominins (~4–2 MYA); &#x27;Lucy&#x27; is the famous A. afarensis specimen.</li>
+<li><b>Homo habilis</b> — Earliest member of genus Homo (~2.5 MYA); associated with first known stone tools.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Homo erectus is the FIRST hominin to leave Africa, not Homo sapiens.</li>
+<li>Brain size increased gradually through the hominin lineage; H. erectus had ~1000 cc, H. sapiens ~1350 cc.</li>
+</ul></div>
+
+<h3>§C — Out-of-Africa migrations and Neanderthal/Denisovan introgression</h3>
+<p class="overview">Modern humans (Homo sapiens) originated in Africa, then dispersed worldwide ~70 KYA, encountering and partly interbreeding with archaic populations like Neanderthals and Denisovans.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Anatomically modern Homo sapiens: ~300 KYA in Africa.</li>
+<li>Major out-of-Africa dispersal: ~70 KYA, replacing or absorbing earlier hominin populations across Eurasia.</li>
+<li>Modern non-African humans carry ~1–4% Neanderthal DNA from interbreeding ~40–60 KYA.</li>
+<li>Some Asian and Oceanic populations carry additional Denisovan DNA; this includes high-altitude adaptation alleles in Tibetans (EPAS1).</li>
+<li>Genetic introgression with archaic humans contributed alleles for immunity, skin pigmentation, altitude adaptation — partly accelerating modern-human adaptation to new environments.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Out of Africa</b> — The migration of anatomically modern humans from Africa to the rest of the world ~70 KYA.</li>
+<li><b>Introgression</b> — Gene flow between populations or species via interbreeding, contributing alleles from one to the other.</li>
+<li><b>Neanderthal</b> — Archaic human relative (Homo neanderthalensis) inhabiting Europe and West Asia; interbred with modern humans ~40–60 KYA.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>All non-African modern humans carry small amounts of Neanderthal DNA; African populations have very little or none (because the introgression happened after the migration out of Africa).</li>
+<li>The &#x27;Out of Africa&#x27; model is now better called &#x27;Recent African Origin&#x27; with admixture — it&#x27;s not a simple replacement.</li>
+</ul></div>
+
+<h3>§D — Evolutionary medicine — disease in evolutionary context</h3>
+<p class="overview">Many modern health problems make more sense when viewed through an evolutionary lens. Pathogens evolve in response to our defenses; our bodies are evolutionary compromises shaped by ancestral environments different from modern ones.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ANTIBIOTIC RESISTANCE: pathogens evolve resistance under selection. Once-treatable infections become untreatable. Solution: stewardship + new drug discovery.</li>
+<li>PATHOGEN VIRULENCE evolves. Mode of transmission shapes optimal virulence — directly transmitted (e.g., respiratory) pathogens often evolve toward LOWER virulence (need a healthy host to spread); waterborne / vector-borne pathogens can evolve high virulence (don&#x27;t need the host mobile).</li>
+<li>MISMATCH HYPOTHESIS: many modern diseases (obesity, type 2 diabetes, atherosclerosis) reflect mismatch between our ancestral environment (food-scarce, high physical activity) and modern conditions (food-abundant, sedentary).</li>
+<li>Our bodies show evolutionary compromises: backaches from upright posture, difficult childbirth from large brains + narrow pelvis, vestigial appendix prone to infection.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Evolutionary medicine</b> — Application of evolutionary principles to understanding human health and disease.</li>
+<li><b>Virulence</b> — The degree to which a pathogen damages its host; evolves in response to transmission mode and other ecological factors.</li>
+<li><b>Mismatch hypothesis</b> — Modern diseases arise from mismatch between traits adapted to ancestral environments and the conditions of modern life.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Pathogens evolve. Antibiotic resistance is one application; antigenic shift in flu is another.</li>
+<li>Evolutionary medicine doesn&#x27;t say &#x27;we should live like cave-people&#x27; — it says understanding the evolutionary mismatch helps explain susceptibility to certain modern diseases.</li>
+</ul></div>
+
+<h2>L20 · Evolutionary Medicine <span style="color:#7a7158;font-size:11pt;">(Ch 18)</span></h2>
+
+<p class="intro">Evolution doesn&#x27;t stop at the species boundary — it explains why we get sick, why pathogens evolve, and why some &#x27;designs&#x27; of the human body are flawed. This lecture frames disease, drug resistance, virulence evolution, and modern lifestyle illnesses through an evolutionary lens.</p>
+
+<h3>§A — What evolutionary medicine is</h3>
+<p class="overview">Evolutionary medicine applies evolutionary principles to human health. The central insight: many disease vulnerabilities make sense only as products of past selection in environments very different from the one we live in now.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Evolutionary medicine asks WHY (in evolutionary terms) bodies are vulnerable to particular diseases — not just HOW (mechanistically) the disease works.</li>
+<li>Six common evolutionary explanations for disease: (1) mismatch with modern environments, (2) coevolution with rapidly evolving pathogens, (3) constraints (selection cannot start over), (4) trade-offs, (5) reproduction trumps health (selection optimizes reproductive success, not longevity), (6) defenses are misperceived as &#x27;symptoms.&#x27;</li>
+<li>Modern medicine integrates evolutionary thinking into diagnosis, treatment, and public-health strategies (e.g., antibiotic stewardship, vaccine design, cancer treatment timing).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Evolutionary medicine</b> — Application of evolutionary biology to understanding human health, disease, and medical practice.</li>
+<li><b>Proximate vs ultimate explanation</b> — Proximate = mechanism (HOW); ultimate = evolutionary reason (WHY). Both are needed for full understanding.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Evolutionary medicine doesn&#x27;t claim modern medicine is wrong — it adds the WHY behind the HOW. Both are needed.</li>
+<li>&#x27;Why we get sick&#x27; is a question with at least six different evolutionary answer categories. Don&#x27;t reduce all disease to one explanation.</li>
+</ul></div>
+
+<h3>§B — Pathogen evolution and antibiotic resistance</h3>
+<p class="overview">Pathogens evolve fast — large populations, short generation times, strong selection. The most consequential evolutionary process in clinical medicine is antibiotic resistance, but the same logic applies to antiviral resistance, vaccine escape, and host-immune evasion.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ANTIBIOTIC RESISTANCE evolves whenever antibiotics are heavily used. Mutations conferring resistance occur randomly; the antibiotic kills susceptible bacteria and lets resistant rare variants reproduce.</li>
+<li>RESISTANCE GENES often spread between bacterial species via horizontal gene transfer (plasmids, transposons) — accelerating spread far beyond clonal reproduction.</li>
+<li>Common resistance mechanisms: enzymatic destruction of the drug (β-lactamases), efflux pumps, target-site modification, alternative metabolic pathways.</li>
+<li>ANTIBIOTIC STEWARDSHIP — limiting unnecessary antibiotic use, completing prescribed courses, restricting agricultural use — slows but does not stop the evolution of resistance.</li>
+<li>ANTIVIRAL RESISTANCE follows the same logic; HIV evolves resistance within a single patient given monotherapy, which is why combination therapy works.</li>
+<li>VACCINE ESCAPE: pathogens evolve antigenic variation to evade immune responses (influenza is the textbook annual case).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Antibiotic resistance</b> — Heritable ability of bacteria to survive antibiotic exposure; arises from random mutation, then spreads under selection.</li>
+<li><b>Horizontal gene transfer (HGT)</b> — Movement of DNA (often resistance genes) between bacterial species via plasmids, transformation, or transduction; accelerates resistance spread.</li>
+<li><b>Combination therapy</b> — Use of multiple drugs simultaneously so that pathogens require multiple independent resistance mutations to survive — exponentially less likely than single resistance.</li>
+<li><b>Vaccine escape / antigenic drift</b> — Pathogen evolution that alters surface antigens to evade prior immunity, requiring updated vaccines.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Antibiotics do NOT cause resistance mutations — they SELECT for already-existing rare resistant variants. Random mutation + non-random selection.</li>
+<li>Stopping a course early can leave partially-resistant survivors and worsen the resistance problem. Complete the prescribed course (current best evidence is more nuanced than the old &#x27;always finish&#x27; rule, but the evolutionary logic still favors fully suppressing the infection).</li>
+<li>Combination therapy works because the joint probability of multi-drug resistance is the product of single-drug resistance probabilities — for example, 10⁻⁹ × 10⁻⁹ = 10⁻¹⁸ per generation.</li>
+</ul></div>
+
+<h3>§C — Virulence evolution and transmission mode</h3>
+<p class="overview">How harmful (virulent) a pathogen is to its host is itself an evolutionary trait — and it depends on how the pathogen transmits. Mode of transmission shapes the cost-benefit balance for the pathogen.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>VIRULENCE = the degree of damage a pathogen causes its host (often measured as case-fatality or per-infection morbidity).</li>
+<li>Optimal virulence depends on the TRADE-OFF between transmission rate (often higher in more virulent infections, because pathogen load is higher) and host longevity (lower virulence keeps the host alive and infectious longer).</li>
+<li>DIRECTLY TRANSMITTED pathogens (respiratory, sexually transmitted) often evolve toward MODERATE OR LOWER virulence — they need a healthy, mobile host to spread.</li>
+<li>VECTOR-BORNE or WATERBORNE pathogens (cholera, malaria) can evolve HIGH virulence because the host&#x27;s mobility doesn&#x27;t matter — the vector or environment moves the pathogen.</li>
+<li>EWALD&#x27;S HYPOTHESIS: cleaner water supplies select for less-virulent diarrheal pathogens because immobile sick hosts can&#x27;t be visited by vectors or contaminate clean water sources.</li>
+<li>Pathogen evolution can shift virulence quickly — e.g., the 1918 influenza pandemic strain evolved very high virulence under crowded WWI conditions.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Virulence</b> — The degree of damage a pathogen causes its host; subject to evolutionary optimization.</li>
+<li><b>Virulence-transmission trade-off</b> — Higher within-host pathogen load increases transmission but reduces host survival — selection finds an intermediate optimum.</li>
+<li><b>Vector-borne</b> — Transmitted by a third organism (mosquito, tick); the host&#x27;s own movement doesn&#x27;t drive transmission.</li>
+<li><b>Ewald&#x27;s hypothesis</b> — Mode of transmission shapes optimal virulence; hygiene improvements lower virulence in waterborne pathogens.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Virulence is NOT &#x27;always&#x27; selected to decrease — that old folk-rule (pathogens evolve to be benign) was wrong. The direction depends on transmission mode.</li>
+<li>Sexually-transmitted, respiratory, and vector-borne pathogens all face DIFFERENT virulence-transmission trade-offs. Predicting virulence evolution requires identifying the transmission route.</li>
+</ul></div>
+
+<h3>§D — Host-pathogen coevolution</h3>
+<p class="overview">Hosts and pathogens are locked in mutual evolutionary arms races. Each side&#x27;s adaptations select for counter-adaptations in the other — driving rapid evolution on both sides.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HOST-PATHOGEN COEVOLUTION is reciprocal: hosts evolve immune defenses; pathogens evolve evasion; hosts evolve new defenses; and so on.</li>
+<li>MAJOR HISTOCOMPATIBILITY COMPLEX (MHC) is one of the most variable gene regions in vertebrate genomes — under strong balancing selection from coevolving pathogens. Rare MHC alleles are favored because pathogens haven&#x27;t adapted to them yet (negative frequency-dependent selection).</li>
+<li>RED QUEEN DYNAMICS at the population level: hosts must keep evolving genetic novelty (often via sexual recombination) just to keep up with parasites. This is one of the leading explanations for why sex evolved.</li>
+<li>Some pathogens drive long-term host evolution. Example: SICKLE-CELL ALLELE persists in human populations because heterozygotes have malaria resistance — heterozygote advantage maintained by pathogen selection.</li>
+<li>Pathogen counter-adaptations include antigenic variation (HIV, trypanosomes), immune-suppressive proteins, intracellular hiding, and rapid mutation rates.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>MHC (Major Histocompatibility Complex)</b> — Highly polymorphic immune-system genes presenting pathogen-derived peptides to T cells; under balancing selection from coevolving pathogens.</li>
+<li><b>Sickle-cell heterozygote advantage</b> — Heterozygotes (HbA/HbS) are protected against malaria; homozygotes (HbS/HbS) suffer sickle-cell anemia; selection by malaria maintains the allele in malaria-endemic regions.</li>
+<li><b>Antigenic variation</b> — Pathogen evolution of surface antigens to evade host immunity (HIV, influenza, trypanosomes).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Sickle-cell anemia is a classic POPULATION-LEVEL example of pathogen-driven host evolution. The allele persists not despite the homozygous cost, but because of the heterozygous benefit.</li>
+<li>MHC diversity is maintained by BALANCING SELECTION — distinct from directional or stabilizing selection. Rare alleles benefit from being unfamiliar to pathogens.</li>
+</ul></div>
+
+<h3>§E — Mismatch hypothesis — modern environments and chronic disease</h3>
+<p class="overview">Many chronic diseases of the modern industrialized world (obesity, type 2 diabetes, atherosclerosis, certain autoimmune disorders) reflect a mismatch between traits that were adaptive in ancestral environments and the conditions of modern life.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ANCESTRAL ENVIRONMENT (Pleistocene, hunter-gatherer): food often scarce, high physical activity, high pathogen load, modest reproductive lifespan.</li>
+<li>MODERN ENVIRONMENT: food abundant (especially refined sugars and fats), sedentary lifestyle, hygiene reduces pathogen exposure, longer lifespan.</li>
+<li>MISMATCH DISEASES: efficient fat storage and sweet/fat preferences (adaptive when food was scarce) contribute to obesity and metabolic syndrome in food-abundant environments.</li>
+<li>Type 2 DIABETES is rare in populations with traditional active lifestyles and rises sharply with sedentary, calorie-rich modern living.</li>
+<li>HYGIENE HYPOTHESIS: reduced early-life microbial exposure may underlie rising allergies, autoimmune diseases — the immune system &#x27;expects&#x27; diverse pathogen exposure that no longer occurs.</li>
+<li>Many cancers and atherosclerotic heart diseases are diseases of OLD AGE not strongly experienced ancestrally — selection couldn&#x27;t act against them because they manifest after reproduction.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Mismatch hypothesis</b> — Modern diseases arise from mismatch between ancestrally-adaptive traits and modern environmental conditions.</li>
+<li><b>Hygiene hypothesis</b> — Reduced early-life microbial exposure may contribute to rising allergies and autoimmune diseases.</li>
+<li><b>Diseases of civilization</b> — Chronic diseases (obesity, type 2 diabetes, atherosclerosis) prevalent in modernized populations and rare in traditional populations.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mismatch DOESN&#x27;T mean we should live like cave-people; it means understanding our evolutionary history helps explain why certain modern foods and habits are pathogenic.</li>
+<li>Diseases of old age (most cancers, Alzheimer&#x27;s) escape selection because they manifest after reproduction. They aren&#x27;t &#x27;designed&#x27; against — selection just can&#x27;t see them.</li>
+</ul></div>
+
+<h3>§F — Cancer as somatic evolution</h3>
+<p class="overview">Cancer is evolution playing out within an individual body. Cells acquire mutations, some of which give a growth advantage; selection within the body favors those cells; tumors are the result. This view reshapes treatment strategies.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Cancer cells DIVIDE rapidly with HIGH MUTATION RATES — generating heritable variation among tumor cells.</li>
+<li>Tumor cells COMPETE for resources (oxygen, glucose, space). Cells with growth-promoting mutations outcompete neighbors.</li>
+<li>Therapies act as STRONG SELECTIVE PRESSURES — chemotherapy and targeted drugs kill susceptible cells but select for resistant subclones, often leading to relapse.</li>
+<li>ADAPTIVE THERAPY is an experimental strategy: instead of trying to kill all tumor cells (which selects for resistance), maintain susceptible cells to suppress resistant ones — leveraging competition among tumor subclones.</li>
+<li>Cancer susceptibility itself reflects evolutionary trade-offs: mechanisms protecting against cancer (apoptosis, senescence) trade off against tissue regeneration and longevity.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Somatic evolution</b> — Evolution by mutation + selection acting on cell lineages within a multicellular organism&#x27;s body.</li>
+<li><b>Tumor heterogeneity</b> — Genetic diversity among cells within a single tumor, generated by ongoing mutation; substrate for treatment-resistance evolution.</li>
+<li><b>Adaptive therapy</b> — Cancer treatment strategy that maintains susceptible tumor cells to competitively suppress resistant subclones, rather than aggressive eradication.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Cancer is evolution writ small — the same processes (variation, selection, heritability) operating on cell lineages.</li>
+<li>Aggressive cancer therapy can SELECT for resistance just like aggressive antibiotic use does. Treatment strategy is also an evolutionary problem.</li>
+</ul></div>
+
+</div><!-- /doc -->
+</div><!-- /pageWrap -->
+
+<!-- ===== Find / Replace Bar ===== -->
+<div class="findbar no-print" id="findbar" style="display:none">
+  <input type="text" id="findInput" placeholder="Find" autocomplete="off" />
+  <input type="text" id="replaceInput" placeholder="Replace with…" autocomplete="off" />
+  <button onclick="findNext()" title="Next match (Enter)">↓ Next</button>
+  <button onclick="findPrev()" title="Previous match (Shift+Enter)">↑ Prev</button>
+  <button onclick="replaceOne()" title="Replace current match">Replace</button>
+  <button onclick="replaceAll()" title="Replace all matches">Replace All</button>
+  <span id="findCount" style="color:#5b554b;font-size:12px;margin-left:6px"></span>
+  <button onclick="closeFind()" title="Close (Esc)" style="margin-left:auto;color:#a3290e">Close</button>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  window.addEventListener('error', e => { console.warn('[study-guide] caught:', e.message); });
+
+  const doc = document.getElementById('doc');
+  const status = document.getElementById('saveStatus');
+  const STORAGE_KEY = 'evol4230_final_studyguide_v1';
+  const SHORTCUT_KEY = 'evol4230_final_studyguide_v1_shortcuts_v1';
+  const PRISTINE_HTML = doc.innerHTML;
+
+  try{
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if(saved){ doc.innerHTML = saved; status.innerHTML = 'Loaded from <b>local save</b>'; }
+    else { status.innerHTML = 'Loaded — <b>fresh copy</b>'; }
+  }catch(e){ console.warn('localStorage unavailable', e); status.innerHTML = '<span style="color:#c34">localStorage off</span>'; }
+
+  let saveTimer = null;
+  function markDirty(){
+    status.classList.add('dirty');
+    status.innerHTML = 'Editing…';
+    if(saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(scheduleSave, 1200);
+  }
+  function scheduleSave(){
+    if('requestIdleCallback' in window){
+      requestIdleCallback(saveNow, {timeout: 1500});
+    } else {
+      setTimeout(saveNow, 0);
+    }
+  }
+  function saveNow(){
+    try{
+      localStorage.setItem(STORAGE_KEY, doc.innerHTML);
+      status.classList.remove('dirty');
+      const t = new Date().toLocaleTimeString();
+      status.innerHTML = 'Saved <b>'+t+'</b>';
+    }catch(e){
+      status.innerHTML = '<span style="color:#c34">Save failed</span> — '+e.message;
+    }
+  }
+  doc.addEventListener('input', markDirty);
+  doc.addEventListener('paste', () => setTimeout(markDirty, 30));
+  window.addEventListener('beforeunload', saveNow);
+
+  function cmd(name, value){
+    try{
+      document.execCommand(name, false, value || null);
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('[study-guide] cmd '+name+' failed:', e); }
+  }
+  document.getElementById('fontFamily').addEventListener('change', e => { restoreSelection(); cmd('fontName', e.target.value); });
+  document.getElementById('fontSize').addEventListener('change', e => { restoreSelection(); cmd('fontSize', e.target.value); });
+  document.getElementById('fgColor').addEventListener('change', e => { restoreSelection(); cmd('foreColor', e.target.value); });
+  document.getElementById('bgColor').addEventListener('change', e => { restoreSelection(); cmd('hiliteColor', e.target.value); });
+
+  function insertHorizontalRule(){ cmd('insertHorizontalRule'); }
+  function insertPageBreak(){
+    document.execCommand('insertHTML', false, '<div class="pagebreak"></div>');
+    markDirty();
+  }
+
+  function insertImageFromFile(ev){
+    const f = ev.target.files[0]; if(!f) return;
+    const r = new FileReader();
+    r.onload = e => {
+      doc.focus();
+      document.execCommand('insertHTML', false, '<figure><img src="'+e.target.result+'" alt="user image"/><figcaption>User-inserted image</figcaption></figure>');
+      markDirty();
+    };
+    r.readAsDataURL(f);
+    ev.target.value = '';
+  }
+
+  function resetDoc(){
+    if(!confirm('Reset to the seeded content? Your edits will be lost.')) return;
+    doc.innerHTML = PRISTINE_HTML;
+    saveNow();
+  }
+
+  function downloadHTML(){
+    const html = '<!doctype html><html><head><meta charset="utf-8"><title>Cumulative Final · All units — BIOL 4230</title><style>'+
+      'body{font-family:"Times New Roman",serif;max-width:7in;margin:0.5in auto;line-height:1.45}'+
+      'h1{text-align:center}h2{border-bottom:1.5pt solid #000;padding-bottom:3px}h3{text-decoration:underline}'+
+      'figure{text-align:center;margin:8px auto}figure img{max-width:100%;border:1px solid #888}'+
+      'figcaption{font-size:10pt;color:#555;font-style:italic}'+
+      'table{border-collapse:collapse;width:100%;font-size:10.5pt}'+
+      'th,td{border:0.5pt solid #888;padding:4px 6px;vertical-align:top}'+
+      '.q{font-weight:700}.a{font-weight:400}'+
+      '.callout{border-left:3px solid #c89b2e;background:#fff7e8;padding:6px 10px;margin:8px 0}'+
+      '.pagebreak{page-break-after:always}'+
+      '@page{size:letter portrait;margin:0.5in}'+
+      '</style></head><body>' + doc.innerHTML + '</body></html>';
+    const blob = new Blob([html], {type:'text/html'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'Final_StudyGuide_BIOL4230.html';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  function applyBlockStyle(){
+    const el = document.getElementById('styleSelect');
+    if(!el) return;
+    const tag = el.value;
+    if(!tag) return;
+    try{
+      document.execCommand('formatBlock', false, '<' + tag + '>');
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('formatBlock failed', e); }
+    el.selectedIndex = 0;
+  }
+
+  function getSelectedBlocks(){
+    const sel = window.getSelection();
+    if(!sel || sel.rangeCount === 0) return [];
+    const range = sel.getRangeAt(0);
+    const blocks = new Set();
+    function climb(node){
+      while(node && node !== doc){
+        if(node.nodeType === 1){
+          const d = getComputedStyle(node).display;
+          if(d === 'block' || d === 'list-item' || /^(P|H[1-6]|LI|BLOCKQUOTE|PRE|FIGURE|TABLE|TR|TD|TH|DIV)$/.test(node.tagName)){
+            blocks.add(node); return;
+          }
+        }
+        node = node.parentNode;
+      }
+    }
+    climb(range.startContainer);
+    climb(range.endContainer);
+    const it = document.createTreeWalker(doc, NodeFilter.SHOW_ELEMENT, {
+      acceptNode: n => range.intersectsNode(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+    });
+    let n;
+    while((n = it.nextNode())){
+      const d = getComputedStyle(n).display;
+      if(d === 'block' || d === 'list-item') blocks.add(n);
+    }
+    return Array.from(blocks);
+  }
+
+  function changeCase(){
+    const choice = prompt('Change case to:\n  1) UPPERCASE\n  2) lowercase\n  3) Title Case\n  4) Sentence case\nEnter 1, 2, 3, or 4:');
+    const sel = window.getSelection();
+    if(!sel || sel.isCollapsed){ alert('Select some text first.'); return; }
+    const text = sel.toString();
+    let out = text;
+    if(choice === '1') out = text.toUpperCase();
+    else if(choice === '2') out = text.toLowerCase();
+    else if(choice === '3') out = text.toLowerCase().replace(/\b([a-z])/g, (m, c) => c.toUpperCase());
+    else if(choice === '4'){
+      out = text.toLowerCase().replace(/(^|[.!?]\s+)([a-z])/g, (m, p, c) => p + c.toUpperCase());
+    } else return;
+    document.execCommand('insertText', false, out);
+    markDirty();
+  }
+
+  function applyLineSpacing(){
+    const el = document.getElementById('lineSpacing');
+    if(!el || !el.value) return;
+    const v = el.value;
+    getSelectedBlocks().forEach(b => { b.style.lineHeight = v; });
+    el.selectedIndex = 0;
+    markDirty();
+  }
+
+  function colorsEqual(a, b){
+    if(!a || !b) return false;
+    const ma = ('' + a).match(/\d+/g);
+    const mb = ('' + b).match(/\d+/g);
+    if(!ma || !mb) return false;
+    return ma.slice(0,3).join(',') === mb.slice(0,3).join(',');
+  }
+  function hexToRgb(hex){
+    const m = hex.replace('#','');
+    return 'rgb(' + parseInt(m.slice(0,2),16) + ', ' + parseInt(m.slice(2,4),16) + ', ' + parseInt(m.slice(4,6),16) + ')';
+  }
+  function applyShade(){
+    const c = document.getElementById('paraShade').value;
+    const target = hexToRgb(c);
+    const blocks = getSelectedBlocks();
+    if(!blocks.length) return;
+    const allHave = blocks.every(b => colorsEqual(b.style.backgroundColor, target));
+    blocks.forEach(b => {
+      if(allHave){
+        b.style.backgroundColor = '';
+        if(!/pb-/.test(b.className)) b.style.padding = '';
+      } else {
+        b.style.backgroundColor = c;
+        if(!b.style.padding) b.style.padding = '4px 8px';
+      }
+    });
+    markDirty();
+  }
+
+  function applyBorder(){
+    const el = document.getElementById('borderSelect');
+    if(!el || !el.value) return;
+    const which = el.value;
+    const blocks = getSelectedBlocks();
+    el.selectedIndex = 0;
+    if(!blocks.length) return;
+    if(which === 'none'){
+      blocks.forEach(b => b.classList.remove('pb-all','pb-top','pb-bottom','pb-left','pb-right'));
+    } else {
+      const cls = 'pb-' + which;
+      const allHave = blocks.every(b => b.classList.contains(cls));
+      blocks.forEach(b => {
+        if(allHave){
+          b.classList.remove(cls);
+        } else {
+          b.classList.remove('pb-all','pb-top','pb-bottom','pb-left','pb-right');
+          b.classList.add(cls);
+        }
+      });
+    }
+    markDirty();
+  }
+
+  function applyListStyle(){
+    const el = document.getElementById('listStyleSelect');
+    if(!el || !el.value) return;
+    const [tag, style] = el.value.split(':');
+    const cmdName = tag === 'ol' ? 'insertOrderedList' : 'insertUnorderedList';
+    document.execCommand(cmdName, false, null);
+    const sel = window.getSelection();
+    if(sel && sel.rangeCount){
+      let n = sel.getRangeAt(0).startContainer;
+      while(n && n !== doc){
+        if(n.nodeType === 1 && /^(UL|OL)$/.test(n.tagName)){ n.style.listStyleType = style; break; }
+        n = n.parentNode;
+      }
+    }
+    el.selectedIndex = 0;
+    markDirty();
+  }
+
+  /* FIND / REPLACE */
+  let findHits = [];
+  let findIndex = -1;
+  function clearFindHits(){
+    doc.querySelectorAll('.find-hit, .find-hit-current').forEach(el => {
+      const parent = el.parentNode;
+      while(el.firstChild) parent.insertBefore(el.firstChild, el);
+      parent.removeChild(el);
+      parent.normalize();
+    });
+    findHits = []; findIndex = -1;
+    const cnt = document.getElementById('findCount'); if(cnt) cnt.textContent = '';
+  }
+  function highlightAll(query){
+    clearFindHits();
+    if(!query) return;
+    const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, {
+      acceptNode: n => n.parentElement && n.parentElement.closest('.find-hit') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    });
+    const targets = [];
+    let n;
+    while((n = walker.nextNode())){ if(re.test(n.nodeValue)){ re.lastIndex = 0; targets.push(n); } }
+    targets.forEach(node => {
+      const text = node.nodeValue;
+      const frag = document.createDocumentFragment();
+      let last = 0;
+      let m;
+      const re2 = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      while((m = re2.exec(text))){
+        if(m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const span = document.createElement('span');
+        span.className = 'find-hit';
+        span.textContent = m[0];
+        frag.appendChild(span);
+        findHits.push(span);
+        last = m.index + m[0].length;
+        if(m[0].length === 0) re2.lastIndex++;
+      }
+      if(last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+    const cnt = document.getElementById('findCount');
+    if(cnt) cnt.textContent = findHits.length ? (findHits.length + ' match' + (findHits.length === 1 ? '' : 'es')) : 'No matches';
+    if(findHits.length){ findIndex = 0; markCurrent(); }
+  }
+  function markCurrent(){
+    findHits.forEach((h, i) => h.className = (i === findIndex ? 'find-hit-current' : 'find-hit'));
+    if(findHits[findIndex]) findHits[findIndex].scrollIntoView({block:'center', behavior:'smooth'});
+    const cnt = document.getElementById('findCount');
+    if(cnt && findHits.length) cnt.textContent = (findIndex+1) + ' / ' + findHits.length;
+  }
+  function findNext(){ if(!findHits.length) return; findIndex = (findIndex+1) % findHits.length; markCurrent(); }
+  function findPrev(){ if(!findHits.length) return; findIndex = (findIndex-1+findHits.length) % findHits.length; markCurrent(); }
+  function replaceOne(){
+    const r = document.getElementById('replaceInput').value;
+    if(findIndex < 0 || !findHits[findIndex]) return;
+    const hit = findHits[findIndex];
+    const txt = document.createTextNode(r);
+    hit.parentNode.replaceChild(txt, hit);
+    findHits.splice(findIndex, 1);
+    if(findIndex >= findHits.length) findIndex = 0;
+    markCurrent();
+    markDirty();
+  }
+  function replaceAll(){
+    const r = document.getElementById('replaceInput').value;
+    if(!findHits.length) return;
+    findHits.forEach(h => { h.parentNode.replaceChild(document.createTextNode(r), h); });
+    const n = findHits.length;
+    findHits = []; findIndex = -1;
+    const cnt = document.getElementById('findCount'); if(cnt) cnt.textContent = 'Replaced ' + n;
+    markDirty();
+  }
+  function openFind(){
+    document.getElementById('findbar').style.display = 'flex';
+    const i = document.getElementById('findInput'); i.focus(); i.select();
+  }
+  function openReplace(){ openFind(); document.getElementById('replaceInput').focus(); }
+  function closeFind(){ clearFindHits(); document.getElementById('findbar').style.display = 'none'; doc.focus(); }
+
+  /* JUMP-TO TOC */
+  function buildJumpTo(){
+    const sel = document.getElementById('jumpTo');
+    if(!sel) return;
+    sel.innerHTML = '<option value="">Jump to…</option>';
+    const heads = doc.querySelectorAll('h1, h2, h3');
+    let i = 0;
+    heads.forEach(h => {
+      if(!h.id) h.id = 'sec-' + (i++);
+      const indent = h.tagName === 'H1' ? '' : (h.tagName === 'H2' ? '— ' : '  · ');
+      const o = document.createElement('option');
+      o.value = h.id;
+      o.textContent = indent + (h.textContent || '').trim().slice(0, 60);
+      sel.appendChild(o);
+    });
+  }
+  buildJumpTo();
+  let tocTimer = null;
+  doc.addEventListener('input', () => { clearTimeout(tocTimer); tocTimer = setTimeout(buildJumpTo, 1500); });
+
+  /* TOOLBAR WIRING */
+  document.querySelectorAll('.tb button, .findbar button').forEach(btn => {
+    btn.addEventListener('mousedown', e => e.preventDefault());
+  });
+
+  let savedRange = null;
+  function saveSelection(){
+    try{
+      const sel = window.getSelection();
+      if(sel && sel.rangeCount){
+        const r = sel.getRangeAt(0);
+        if(doc.contains(r.commonAncestorContainer)) savedRange = r.cloneRange();
+      }
+    }catch(e){}
+  }
+  function restoreSelection(){
+    if(!savedRange) return;
+    try{
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(savedRange);
+    }catch(e){}
+  }
+  doc.addEventListener('mouseup', saveSelection);
+  doc.addEventListener('keyup', saveSelection);
+  document.querySelectorAll('.tb select, .tb input[type=color]').forEach(el => {
+    el.addEventListener('mousedown', saveSelection);
+    el.addEventListener('focus', saveSelection);
+  });
+  function wrapWithRestore(handler){ return function(e){ restoreSelection(); handler(e); }; }
+
+  document.getElementById('styleSelect').addEventListener('change', wrapWithRestore(applyBlockStyle));
+  document.getElementById('lineSpacing').addEventListener('change', wrapWithRestore(applyLineSpacing));
+  document.getElementById('borderSelect').addEventListener('change', wrapWithRestore(applyBorder));
+  document.getElementById('listStyleSelect').addEventListener('change', wrapWithRestore(applyListStyle));
+  document.getElementById('jumpTo').addEventListener('change', e => {
+    const id = e.target.value;
+    if(!id) return;
+    const target = document.getElementById(id);
+    if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    e.target.selectedIndex = 0;
+  });
+  document.getElementById('findInput').addEventListener('input', e => highlightAll(e.target.value));
+  document.getElementById('findInput').addEventListener('keydown', e => {
+    if(e.key === 'Enter'){ e.preventDefault(); e.shiftKey ? findPrev() : findNext(); }
+    if(e.key === 'Escape'){ closeFind(); }
+  });
+  document.getElementById('replaceInput').addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeFind();
+  });
+
+  /* HIGHLIGHT toggle */
+  function selectionHasHighlight(){
+    try{
+      const v = document.queryCommandValue('hiliteColor') || document.queryCommandValue('backColor');
+      if(!v) return false;
+      const trimmed = ('' + v).trim();
+      if(!trimmed || trimmed === 'transparent' || /rgba?\(\s*0\s*,\s*0\s*,\s*0\s*,\s*0\s*\)/.test(trimmed)) return false;
+      const m = trimmed.match(/rgba?\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+      if(m && +m[1] >= 250 && +m[2] >= 250 && +m[3] >= 250) return false;
+      return true;
+    }catch(e){ return false; }
+  }
+  function unhighlight(){
+    try{
+      document.execCommand('hiliteColor', false, 'transparent');
+      const sel = window.getSelection();
+      if(sel && sel.rangeCount){
+        const range = sel.getRangeAt(0);
+        const it = document.createTreeWalker(doc, NodeFilter.SHOW_ELEMENT, {
+          acceptNode: n => range.intersectsNode(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+        });
+        let n;
+        while((n = it.nextNode())){
+          if(n.style && n.style.backgroundColor) n.style.backgroundColor = '';
+        }
+      }
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('unhighlight failed', e); }
+  }
+  function toggleHighlight(){
+    if(selectionHasHighlight()){
+      unhighlight();
+    } else {
+      const c = document.getElementById('bgColor').value;
+      cmd('hiliteColor', c);
+    }
+  }
+
+  /* CONFIGURABLE SHORTCUTS */
+  const ACTIONS = [
+    {id:'save',          label:'Save now',                        def:'ctrl+s',         run: () => saveNow()},
+    {id:'find',          label:'Find',                            def:'ctrl+f',         run: () => openFind()},
+    {id:'replace',       label:'Find & Replace',                  def:'ctrl+h',         run: () => openReplace()},
+    {id:'highlight',     label:'Toggle highlight on selection',   def:'ctrl+shift+h',   run: () => toggleHighlight()},
+    {id:'unhighlight',   label:'Remove highlight',                def:'ctrl+shift+u',   run: () => unhighlight()},
+    {id:'bold',          label:'Bold',                            def:'ctrl+b',         run: () => cmd('bold')},
+    {id:'italic',        label:'Italic',                          def:'ctrl+i',         run: () => cmd('italic')},
+    {id:'underline',     label:'Underline',                       def:'ctrl+u',         run: () => cmd('underline')},
+    {id:'strike',        label:'Strikethrough',                   def:'',               run: () => cmd('strikeThrough')},
+    {id:'super',         label:'Superscript',                     def:'ctrl+shift+=',   run: () => cmd('superscript')},
+    {id:'sub',           label:'Subscript',                       def:'ctrl+=',         run: () => cmd('subscript')},
+    {id:'selectAll',     label:'Select all (in document)',        def:'ctrl+a',         run: () => {
+        const range = document.createRange(); range.selectNodeContents(doc);
+        const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+    }},
+    {id:'indent',        label:'Increase indent',                 def:'tab',            run: () => { document.execCommand('indent'); markDirty(); }},
+    {id:'outdent',       label:'Decrease indent',                 def:'shift+tab',      run: () => { document.execCommand('outdent'); markDirty(); }},
+    {id:'undo',          label:'Undo',                            def:'ctrl+z',         run: () => cmd('undo')},
+    {id:'redo',          label:'Redo',                            def:'ctrl+y',         run: () => cmd('redo')}
+  ];
+  let bindings = {};
+  function loadShortcuts(){
+    try{
+      const saved = JSON.parse(localStorage.getItem(SHORTCUT_KEY) || '{}');
+      bindings = {};
+      ACTIONS.forEach(a => { bindings[a.id] = saved[a.id] != null ? saved[a.id] : a.def; });
+    }catch(e){ bindings = Object.fromEntries(ACTIONS.map(a => [a.id, a.def])); }
+  }
+  function saveShortcuts(){
+    try{ localStorage.setItem(SHORTCUT_KEY, JSON.stringify(bindings)); }catch(e){ console.warn('save shortcuts failed', e); }
+  }
+  function resetShortcuts(){
+    if(!confirm('Reset all shortcuts to defaults?')) return;
+    bindings = {};
+    ACTIONS.forEach(a => { bindings[a.id] = a.def; });
+    saveShortcuts();
+    renderShortcuts();
+  }
+  function comboFromEvent(e){
+    if(e.key === 'Tab'){
+      return (e.shiftKey ? 'shift+' : '') + 'tab';
+    }
+    if(e.key === 'Escape' || e.key === 'Control' || e.key === 'Shift' || e.key === 'Alt' || e.key === 'Meta') return null;
+    const parts = [];
+    if(e.ctrlKey || e.metaKey) parts.push('ctrl');
+    if(e.altKey) parts.push('alt');
+    if(e.shiftKey) parts.push('shift');
+    parts.push(e.key.toLowerCase());
+    return parts.join('+');
+  }
+  loadShortcuts();
+
+  function openShortcuts(){
+    document.getElementById('shortcutsModal').classList.add('show');
+    renderShortcuts();
+  }
+  function closeShortcuts(){
+    document.getElementById('shortcutsModal').classList.remove('show');
+  }
+  function renderShortcuts(){
+    const tbl = document.getElementById('shortcutsTable');
+    tbl.innerHTML = '<tr style="background:#f1ead9"><th style="text-align:left;padding:6px 8px;border-bottom:1px solid #ccc">Action</th><th style="text-align:left;padding:6px 8px;border-bottom:1px solid #ccc">Shortcut</th><th style="border-bottom:1px solid #ccc"></th></tr>';
+    ACTIONS.forEach(a => {
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td style="padding:5px 8px;border-bottom:1px solid #eee">'+a.label+'</td>' +
+        '<td style="padding:5px 8px;border-bottom:1px solid #eee"><button data-act="'+a.id+'" class="kb-btn" style="font-family:Consolas,monospace;padding:3px 8px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer;min-width:130px;text-align:left">'+(bindings[a.id] || '— click to set —')+'</button></td>' +
+        '<td style="padding:5px 4px;border-bottom:1px solid #eee"><button data-clear="'+a.id+'" style="font-size:11px;padding:3px 6px;border:1px solid #ccc;border-radius:3px;background:#fff;cursor:pointer">clear</button></td>';
+      tbl.appendChild(tr);
+    });
+    tbl.querySelectorAll('.kb-btn').forEach(btn => {
+      btn.onclick = () => {
+        btn.textContent = '… press a key combo …';
+        btn.style.background = '#fff4e2';
+        const handler = (ev) => {
+          ev.preventDefault();
+          const combo = comboFromEvent(ev);
+          if(combo == null) return;
+          const conflict = Object.entries(bindings).find(([k,v]) => v === combo && k !== btn.dataset.act);
+          if(conflict){
+            const ok = confirm('That combo is already bound to "'+ACTIONS.find(a=>a.id===conflict[0]).label+'". Reassign anyway?');
+            if(!ok){ btn.textContent = bindings[btn.dataset.act] || '— click to set —'; btn.style.background='#fff'; window.removeEventListener('keydown', handler, true); return; }
+            bindings[conflict[0]] = '';
+          }
+          bindings[btn.dataset.act] = combo;
+          saveShortcuts();
+          window.removeEventListener('keydown', handler, true);
+          renderShortcuts();
+        };
+        window.addEventListener('keydown', handler, true);
+      };
+    });
+    tbl.querySelectorAll('button[data-clear]').forEach(btn => {
+      btn.onclick = () => { bindings[btn.dataset.clear] = ''; saveShortcuts(); renderShortcuts(); };
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if(document.getElementById('shortcutsModal').classList.contains('show')) return;
+    const combo = comboFromEvent(e);
+    if(!combo) return;
+    for(const a of ACTIONS){
+      if(bindings[a.id] && bindings[a.id] === combo){
+        if((a.id === 'indent' || a.id === 'outdent') && !doc.contains(document.activeElement)) return;
+        if(a.id === 'selectAll' && !doc.contains(document.activeElement)) return;
+        e.preventDefault();
+        try{ a.run(); }catch(err){ console.warn('shortcut '+a.id+' failed:', err); }
+        return;
+      }
+    }
+  });
+
+  /* PUBLIC */
+  window.cmd = cmd;
+  window.changeCase = changeCase;
+  window.applyShade = applyShade;
+  window.unhighlight = unhighlight;
+  window.toggleHighlight = toggleHighlight;
+  window.openShortcuts = openShortcuts;
+  window.closeShortcuts = closeShortcuts;
+  window.resetShortcuts = resetShortcuts;
+  window.insertHorizontalRule = insertHorizontalRule;
+  window.insertPageBreak = insertPageBreak;
+  window.insertImageFromFile = insertImageFromFile;
+  window.openFind = openFind;
+  window.openReplace = openReplace;
+  window.closeFind = closeFind;
+  window.findNext = findNext;
+  window.findPrev = findPrev;
+  window.replaceOne = replaceOne;
+  window.replaceAll = replaceAll;
+  window.resetDoc = resetDoc;
+  window.downloadHTML = downloadHTML;
+})();
+</script>
+</body>
+</html>

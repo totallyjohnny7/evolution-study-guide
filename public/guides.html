@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BIOL 4230 — Editable Study Guides</title>
+<style>
+  :root{--bg:#0c0e12;--paper:#14171d;--ink:#e6dfd0;--muted:#a59a83;--rule:#22262f;--accent:#c89b2e;--accent-bg:#241c0d}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Fraunces",Georgia,serif}
+  .top{background:#16161b;border-bottom:1px solid var(--rule);padding:12px 24px;display:flex;align-items:center;gap:12px;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:14px}
+  .top a{text-decoration:none;color:var(--accent);font-weight:600}
+  .top .crumb{color:var(--muted)}
+  .wrap{max-width:1100px;margin:30px auto;padding:0 24px}
+  h1{font-size:28pt;text-align:center;margin:10px 0 4px;font-family:"Fraunces", Georgia, serif}
+  .lead{text-align:center;color:var(--muted);font-size:13.5pt;margin-bottom:30px;font-family:"Inter",system-ui,sans-serif}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+  .card{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:22px 20px;text-decoration:none;color:var(--ink);transition:transform 0.15s, box-shadow 0.15s, border-color 0.15s;display:flex;flex-direction:column;gap:8px;font-family:"Inter",system-ui,sans-serif}
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,0.3);border-color:var(--accent)}
+  .card .num{display:inline-block;background:var(--accent);color:#0c0e12;width:28px;height:28px;border-radius:50%;text-align:center;line-height:28px;font-weight:700}
+  .card .label{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .card h2{font-size:18pt;margin:6px 0 4px;font-family:"Fraunces", Georgia, serif;color:var(--accent)}
+  .card .topics{font-size:13px;color:var(--ink);line-height:1.4;opacity:0.85}
+  .card .meta{margin-top:8px;font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+  .card .meta span{background:var(--accent-bg);padding:2px 8px;border-radius:10px;color:var(--accent);font-weight:600}
+  .card.upcoming{border-color:var(--accent)}
+  .card.upcoming::before{content:"⭐ Final · cumulative";display:block;font-size:10.5px;color:var(--accent);font-weight:700;letter-spacing:0.1em;text-transform:uppercase}
+  .info{margin-top:30px;padding:14px 20px;background:#16161b;border:1px solid var(--rule);border-radius:8px;font-size:13px;color:var(--ink);line-height:1.55;font-family:"Inter",system-ui,sans-serif;opacity:0.92}
+  .info b{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a href="index.html">← Back to EVOLution main site</a>
+  <span class="crumb">/</span>
+  <span class="crumb">Editable Study Guides</span>
+</div>
+
+<div class="wrap">
+  <h1>BIOL 4230 — Editable Study Guides</h1>
+  <p class="lead">Pick the exam block you're studying for. Each guide is fully editable like a Word document — your edits autosave to this browser. Print to PDF (8.5×11 portrait) at any time.</p>
+
+  <div class="grid">
+    <a class="card" href="study-guide-exam1.html">
+      <div style="display:flex;align-items:center;gap:10px"><span class="num">1</span><span class="label">Exam 1 · Mechanisms</span></div>
+      <h2>Mechanisms, Genetics &amp; Pop Gen</h2>
+      <p class="topics">Defining evolution &amp; population thinking · Darwin / Wallace / Lamarck · genes &amp; heritable variation · Hardy-Weinberg equilibrium · the four mechanisms (selection, drift, gene flow, mutation) · quantitative genetics, heritability, plasticity · selection regimes (directional, stabilizing, disruptive).</p>
+      <div class="meta"><span>Lectures L01–L05</span><span>Ch 1, 2, 5, 6, 7</span></div>
+    </a>
+
+    <a class="card" href="study-guide-exam2.html">
+      <div style="display:flex;align-items:center;gap:10px"><span class="num">2</span><span class="label">Exam 2 · Adaptation</span></div>
+      <h2>Adaptation, Sex, Life History &amp; Social</h2>
+      <p class="topics">Empirical natural selection (Galápagos finches, Trinidad guppies) · complex adaptations · coevolution &amp; arms races · sex &amp; sexual selection (intra- vs intersexual, runaway, handicap, cryptic choice) · life history evolution (r/K, age at maturity, semelparity vs iteroparity) · social behavior · kin selection · inclusive fitness · Hamilton's rule · eusociality.</p>
+      <div class="meta"><span>Lectures L07–L13</span><span>Ch 8, 10, 11, 12, 15, 16</span></div>
+    </a>
+
+    <a class="card" href="study-guide-exam3.html">
+      <div style="display:flex;align-items:center;gap:10px"><span class="num">3</span><span class="label">Exam 3 · History &amp; Speciation</span></div>
+      <h2>History, Phylogeny, Speciation &amp; Humans</h2>
+      <p class="topics">History of life &amp; major radiations · phylogenetics &amp; reading trees (clades, monophyly, parsimony, molecular clocks) · species concepts (BSC, ESC, PSC, MSC) · reproductive isolation (pre- vs postzygotic) · biogeography · allopatric &amp; sympatric speciation · adaptive radiation · extinction · human evolution (hominin lineage, Out-of-Africa) · evolutionary medicine (antibiotic resistance, mismatch).</p>
+      <div class="meta"><span>Lectures L14–L20</span><span>Ch 3, 4, 8, 13, 14, 17, 18</span></div>
+    </a>
+
+    <a class="card upcoming" href="study-guide.html">
+      <div style="display:flex;align-items:center;gap:10px"><span class="num">★</span><span class="label">Final · Mon May 4, 2026 · 5–7 PM</span></div>
+      <h2>Cumulative Final · All units</h2>
+      <p class="topics">All 18 lectures (L01–L20) covering Chapters 1–18 of Zimmer &amp; Emlen. The combined master guide — 30 MC + 3–4 short-answer · 100 pts · Dr. Travis Robbins. Use the per-exam guides above to drill blocks; this one is for cumulative review and mixed practice.</p>
+      <div class="meta"><span>Lectures L01–L20</span><span>Ch 1–18</span><span>Final exam</span></div>
+    </a>
+  </div>
+
+  <div class="info">
+    <b>How these work.</b> Each guide opens as a Word-style editable document with full toolbar — fonts, sizes, B/I/U/strike, sub/superscript, case change, text color, highlight (toggles with Ctrl+Shift+H), un-highlight, paragraph styles (Title / H1 / H2 / Quote / Code), bullets &amp; multilevel numbering, indent/outdent, alignment, line spacing, paragraph shading, borders, find &amp; replace, select-all, jump-to-section, and customizable keyboard shortcuts. Insert images from your computer. Edits autosave to your browser's localStorage every 1.2 s. Print to PDF (8.5×11 portrait) any time.
+  </div>
+</div>
+
+</body>
+</html>

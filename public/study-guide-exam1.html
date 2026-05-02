@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Exam 1 · Mechanisms / Pop Gen — BIOL 4230 Evolution</title>
+<style>
+  :root{
+    --bg:#0c0e12; --paper:#fdfaf2; --ink:#1a1814; --muted:#5b554b;
+    --rule:#d8d2c5; --accent:#c89b2e; --accent-bg:#fff4e2;
+    --shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Times New Roman", Times, serif;}
+  /* Toolbar */
+  .tb{position:sticky;top:0;z-index:50;background:#16161b;color:#e6dfd0;border-bottom:1px solid #22262f;padding:6px 12px;display:flex;flex-direction:column;gap:5px;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:12.5px;box-shadow:var(--shadow)}
+  .tb-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .tb .grp{display:inline-flex;gap:3px;align-items:center;border:1px solid #22262f;border-radius:6px;padding:2px 4px;background:#0c0e12}
+  .tb button, .tb select, .tb input[type=color]{
+    background:#14171d;border:1px solid transparent;border-radius:4px;padding:3px 6px;font-size:12.5px;cursor:pointer;color:#e6dfd0
+  }
+  .tb button:hover{background:#22262f}
+  .tb button:active{background:var(--accent);color:#0c0e12}
+  .tb select{padding:3px 5px;max-width:160px;background:#14171d;color:#e6dfd0}
+  .tb input[type=color]{width:24px;height:22px;padding:0;border:1px solid #22262f}
+  .tb .spacer{flex:1}
+  .tb .save-status{font-size:11.5px;color:#a59a83;min-width:140px;text-align:right;padding:0 6px}
+  .tb .save-status b{color:#5fa871}
+  .tb .save-status.dirty b{color:var(--accent)}
+  .tb-btn-wide{padding:3px 9px;font-weight:600}
+  .tb a.back-link{color:var(--accent);text-decoration:none;font-weight:600;padding:3px 8px;font-size:12.5px}
+  .tb a.back-link:hover{text-decoration:underline}
+  .doc blockquote{border-left:3px solid var(--accent);background:#fff7e8;margin:6px 0 6px 8px;padding:4px 12px;color:#3a2e15;font-style:italic}
+  .doc pre{font-family:Consolas,Menlo,Monaco,monospace;background:#fffaf0;border:1px solid var(--rule);border-radius:4px;padding:6px 10px;margin:6px 0;font-size:10.5pt;white-space:pre-wrap}
+  .doc .pb-all{border:1px solid #555;padding:4px 8px;border-radius:3px}
+  .doc .pb-top{border-top:1px solid #555;padding-top:3px}
+  .doc .pb-bottom{border-bottom:1px solid #555;padding-bottom:3px}
+  .doc .pb-left{border-left:3px solid #555;padding-left:8px}
+  .doc .pb-right{border-right:3px solid #555;padding-right:8px}
+  .doc .find-hit{background:#ffe17a;outline:1px solid #d6a01a}
+  .doc .find-hit-current{background:#ff9b1a;outline:2px solid #b04200;color:#fff}
+  /* Find bar */
+  .findbar{position:sticky;top:80px;z-index:49;background:#fffaf0;border-bottom:1px solid var(--rule);padding:6px 12px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;box-shadow:0 4px 12px rgba(0,0,0,0.06);font-family:"Inter",system-ui,sans-serif;font-size:13px}
+  .findbar input[type=text]{padding:5px 8px;border:1px solid var(--rule);border-radius:4px;font-size:13px;min-width:180px}
+  .findbar button{padding:5px 10px;border:1px solid var(--rule);background:#fff;border-radius:4px;cursor:pointer;font-size:12.5px}
+  .findbar button:hover{background:#f1ead9}
+  /* Page wrapper */
+  .pageWrap{padding:24px 0;display:flex;flex-direction:column;align-items:center;gap:16px}
+  .doc{
+    width:8.5in; min-height:11in; background:var(--paper); padding:0.55in 0.7in;
+    box-shadow:var(--shadow); border:1px solid var(--rule);
+    font-size:11pt; line-height:1.32;
+  }
+  .doc:focus{outline:none}
+  .doc h1{font-size:16pt;text-align:center;margin:0 0 2px;font-family:"Fraunces",Georgia,serif}
+  .doc h2{font-size:13pt;border-bottom:1.2pt solid var(--ink);padding-bottom:2px;margin:14px 0 6px;clear:both;font-family:"Fraunces",Georgia,serif;color:#3a2e15}
+  .doc h3{font-size:11.5pt;margin:8px 0 3px;color:#3a2e15;text-decoration:underline}
+  .doc h4{font-size:11pt;margin:6px 0 1px;font-style:italic}
+  .doc p{margin:2px 0 4px}
+  .doc p.intro{margin:4px 0 8px;font-style:italic;color:#3a2e15}
+  .doc p.overview{margin:3px 0 6px;color:#1a1814}
+  .doc .meta{text-align:center;color:var(--muted);font-size:10pt;margin-bottom:8px}
+  .doc ul{margin:2px 0 6px 18px;padding:0}
+  .doc li{margin:1px 0}
+  .doc .q{font-weight:700;margin-top:6px;color:#3a2e15}
+  .doc .a{font-weight:400}
+  .doc figure{
+    width:1.7in; margin:2px 8px 4px 8px; float:right; clear:right;
+    text-align:center; page-break-inside:avoid; break-inside:avoid;
+    font-size:8.5pt;
+  }
+  .doc figure img{max-width:100%;height:auto;max-height:1.6in;object-fit:contain;border:1px solid var(--rule);border-radius:3px;display:block;margin:0 auto}
+  .doc figcaption{font-size:8pt;color:var(--muted);margin-top:1px;font-style:italic;line-height:1.18}
+  .doc h2, .doc h3, .doc table, .doc .pagebreak{clear:both}
+  .doc table{margin-top:6px;border-collapse:collapse;width:100%;font-size:10.5pt}
+  .doc th,.doc td{border:0.5pt solid #888;padding:4px 6px;vertical-align:top}
+  .doc th{background:#f1ead9;text-align:left}
+  .doc .twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .doc .threecol{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .doc .pathway{font-family:Consolas,Menlo,Monaco,monospace;font-size:10.5pt;background:#fffaf0;border-left:3px solid var(--accent);padding:6px 10px;margin:6px 0}
+  .doc .callout{border-left:3px solid var(--accent);background:#fff7e8;padding:6px 10px;margin:8px 0;font-size:10.5pt;color:#3a2e15}
+  .pagebreak{page-break-after:always;break-after:page;height:0}
+  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:200;align-items:center;justify-content:center;padding:20px;font-family:system-ui,sans-serif}
+  .modal.show{display:flex}
+  .modal-card{background:#fff;border-radius:10px;max-width:1000px;width:100%;max-height:90vh;overflow:auto;padding:14px;color:#111}
+  .modal-card h3{margin:0 0 8px;font-family:system-ui}
+  /* Print */
+  @page{size:letter portrait;margin:0.45in}
+  @media print{
+    body{background:#fff}
+    .tb,.modal,.pageWrap,.findbar{padding:0;background:#fff;color:#111}
+    .tb,.findbar{display:none !important}
+    .doc{width:auto;min-height:0;box-shadow:none;border:none;padding:0;font-size:10.5pt;line-height:1.28}
+    .doc figure{width:1.5in;font-size:8pt}
+    .doc figure img{max-height:1.4in}
+    .doc figcaption{font-size:7.5pt}
+    .doc h1{font-size:15pt}
+    .doc h2{font-size:12.5pt;margin:10px 0 4px}
+    .doc h3{font-size:11pt;margin:6px 0 2px}
+    .pagebreak{page-break-after:always}
+    figure{page-break-inside:avoid}
+    h2,h3{page-break-after:avoid}
+    .no-print{display:none !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="tb no-print" id="toolbar">
+
+  <!-- Row 1 -->
+  <div class="tb-row">
+    <a class="back-link" href="guides.html">← Guides</a>
+    <a class="back-link" href="index.html">EVOLution</a>
+    <div class="grp" title="Paragraph style">
+      <select id="styleSelect" title="Paragraph style">
+        <option value="P">Normal</option>
+        <option value="H1">Title</option>
+        <option value="H2">Heading 1</option>
+        <option value="H3">Heading 2</option>
+        <option value="H4">Heading 3</option>
+        <option value="BLOCKQUOTE">Quote</option>
+        <option value="PRE">Code block</option>
+      </select>
+    </div>
+    <div class="grp">
+      <select id="fontFamily" title="Font family">
+        <option value="Times New Roman, Times, serif" selected>Times New Roman</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="Garamond, serif">Garamond</option>
+        <option value="Cambria, serif">Cambria</option>
+        <option value="Arial, Helvetica, sans-serif">Arial</option>
+        <option value="Calibri, sans-serif">Calibri</option>
+        <option value="Verdana, sans-serif">Verdana</option>
+        <option value="Tahoma, sans-serif">Tahoma</option>
+        <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+        <option value="Courier New, monospace">Courier New</option>
+        <option value="Consolas, monospace">Consolas</option>
+      </select>
+      <select id="fontSize" title="Font size (pt)">
+        <option value="1">8 pt</option>
+        <option value="2">10 pt</option>
+        <option value="3" selected>12 pt</option>
+        <option value="4">14 pt</option>
+        <option value="5">18 pt</option>
+        <option value="6">24 pt</option>
+        <option value="7">36 pt</option>
+      </select>
+    </div>
+    <div class="grp">
+      <button onclick="cmd('bold')" title="Bold (Ctrl+B)"><b>B</b></button>
+      <button onclick="cmd('italic')" title="Italic (Ctrl+I)"><i>I</i></button>
+      <button onclick="cmd('underline')" title="Underline (Ctrl+U)"><u>U</u></button>
+      <button onclick="cmd('strikeThrough')" title="Strikethrough"><s>S</s></button>
+      <button onclick="cmd('superscript')" title="Superscript (Ctrl+Shift+=)">x<sup>2</sup></button>
+      <button onclick="cmd('subscript')" title="Subscript (Ctrl+=)">x<sub>2</sub></button>
+      <button onclick="changeCase()" title="Change case — UPPER · lower · Title · Sentence">Aa▾</button>
+    </div>
+    <div class="grp">
+      <input type="color" id="fgColor" title="Text color" value="#111111" />
+      <input type="color" id="bgColor" title="Highlight color (text background)" value="#fff36b" />
+      <button onclick="unhighlight()" title="Remove highlight from selected text (Ctrl+Shift+H toggles)">⌫H</button>
+      <input type="color" id="paraShade" title="Paragraph shading (block background)" value="#f1ead9" />
+    </div>
+    <div class="grp">
+      <button onclick="cmd('undo')" title="Undo (Ctrl+Z)">↶</button>
+      <button onclick="cmd('redo')" title="Redo (Ctrl+Y)">↷</button>
+      <button onclick="cmd('removeFormat')" title="Clear formatting">⌫f</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="save-status" id="saveStatus" title="Edits autosave to this browser only">Loaded</div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="tb-row">
+    <div class="grp">
+      <button onclick="cmd('insertUnorderedList')" title="Bullet list">•≡</button>
+      <button onclick="cmd('insertOrderedList')" title="Numbered list">1.</button>
+      <select id="listStyleSelect" title="Multilevel / list style">
+        <option value="">List style…</option>
+        <optgroup label="Unordered">
+          <option value="ul:disc">• disc</option>
+          <option value="ul:circle">○ circle</option>
+          <option value="ul:square">▪ square</option>
+        </optgroup>
+        <optgroup label="Ordered">
+          <option value="ol:decimal">1. 2. 3.</option>
+          <option value="ol:lower-alpha">a. b. c.</option>
+          <option value="ol:upper-alpha">A. B. C.</option>
+          <option value="ol:lower-roman">i. ii. iii.</option>
+          <option value="ol:upper-roman">I. II. III.</option>
+        </optgroup>
+      </select>
+      <button onclick="cmd('outdent')" title="Decrease indent (Shift+Tab)">⇤</button>
+      <button onclick="cmd('indent')" title="Increase indent (Tab)">⇥</button>
+    </div>
+    <div class="grp">
+      <button onclick="cmd('justifyLeft')" title="Align left">⯇</button>
+      <button onclick="cmd('justifyCenter')" title="Align center">≡</button>
+      <button onclick="cmd('justifyRight')" title="Align right">⯈</button>
+      <button onclick="cmd('justifyFull')" title="Justify">☰</button>
+    </div>
+    <div class="grp">
+      <select id="lineSpacing" title="Line spacing">
+        <option value="">Spacing…</option>
+        <option value="1.0">1.0</option>
+        <option value="1.15">1.15</option>
+        <option value="1.32">1.32 (default)</option>
+        <option value="1.5">1.5</option>
+        <option value="2.0">2.0</option>
+        <option value="2.5">2.5</option>
+        <option value="3.0">3.0</option>
+      </select>
+      <select id="borderSelect" title="Paragraph border">
+        <option value="">Border…</option>
+        <option value="none">No border</option>
+        <option value="all">Box (all sides)</option>
+        <option value="top">Top only</option>
+        <option value="bottom">Bottom only</option>
+        <option value="left">Left only</option>
+        <option value="right">Right only</option>
+      </select>
+      <button onclick="applyShade()" title="Apply selected shading color to paragraph(s)">Shade</button>
+    </div>
+    <div class="grp">
+      <button onclick="openFind()" title="Find (Ctrl+F)">🔍 Find</button>
+      <button onclick="openReplace()" title="Find &amp; Replace (Ctrl+H)">⇄ Replace</button>
+      <button onclick="cmd('selectAll')" title="Select all (Ctrl+A)">Select All</button>
+    </div>
+    <div class="grp">
+      <select id="jumpTo" title="Jump to a section">
+        <option value="">Jump to…</option>
+      </select>
+    </div>
+    <div class="grp">
+      <button onclick="document.getElementById('imgFile').click()" title="Insert image from your computer">📷 Image</button>
+      <input type="file" id="imgFile" accept="image/*" style="display:none" onchange="insertImageFromFile(event)" />
+      <button onclick="insertHorizontalRule()" title="Horizontal rule">―</button>
+      <button onclick="insertPageBreak()" title="Insert page break (for print)">⤓ break</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="grp">
+      <button onclick="openShortcuts()" title="Edit keyboard shortcuts">⌨ Shortcuts</button>
+      <button onclick="window.print()" title="Print or save as PDF (8.5×11 portrait)" class="tb-btn-wide">Print / PDF</button>
+      <button onclick="downloadHTML()" title="Save the current document as a standalone .html file">⤓ .html</button>
+      <button onclick="resetDoc()" title="Restore the original seeded answers (your edits will be lost)" style="color:#c89b2e">Reset</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Shortcuts Settings Modal ===== -->
+<div class="modal" id="shortcutsModal" onclick="if(event.target===this) closeShortcuts()">
+  <div class="modal-card" style="max-width:560px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h3 style="margin:0">Keyboard shortcuts</h3>
+      <button onclick="closeShortcuts()" style="font-size:14px;padding:5px 10px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer">Close</button>
+    </div>
+    <p style="font-size:12.5px;color:#5b554b;margin:0 0 8px">Click a key combo to rebind. Then press the new combo (any of Ctrl/Alt/Shift + a key). Settings are saved to this browser.</p>
+    <table id="shortcutsTable" style="width:100%;font-family:system-ui,sans-serif;font-size:13px;border-collapse:collapse"></table>
+    <div style="margin-top:10px;display:flex;gap:6px;justify-content:flex-end">
+      <button onclick="resetShortcuts()" style="padding:6px 12px;border:1px solid var(--rule);background:#fff;border-radius:4px;cursor:pointer;color:#a3290e">Reset to defaults</button>
+    </div>
+  </div>
+</div>
+
+<div class="pageWrap">
+<div class="doc" id="doc" contenteditable="true" spellcheck="false">
+
+<h1>Exam 1 · Mechanisms / Pop Gen Study Guide</h1>
+
+<p class="meta">BIOL 4230 · Evolution · Exam 1 · Mechanisms / Pop Gen — Final exam Mon May 4, 2026 · 5–7 PM · Dr. Travis Robbins<br/>Lectures: L01 · L02 · L03 · L04 · L05</p>
+
+<p class="intro">This guide is fully editable — type anywhere, format with the toolbar, and your edits autosave to this browser. Reset restores the seeded content. Print to PDF (8.5×11 portrait) anytime.</p>
+
+<h2>L01 · What Is Evolution? Course Intro <span style="color:#7a7158;font-size:11pt;">(Ch 1)</span></h2>
+
+<p class="intro">First lecture frames evolution as the unifying theory of biology — a process of heritable change in populations over generations — and previews the four mechanisms (selection, drift, gene flow, mutation) the rest of the course will dissect.</p>
+
+<h3>§A — Defining evolution</h3>
+<p class="overview">Evolution is descent with modification — change in the heritable traits of populations across generations. It is a population-level, multi-generational phenomenon, not something that happens to an individual.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Evolution = change in allele frequencies in a population over generations.</li>
+<li>The unit of evolution is the population, not the individual.</li>
+<li>Individuals are selected; populations evolve.</li>
+<li>Heritable variation is required for evolutionary change to occur.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Evolution</b> — Change in the heritable traits (allele frequencies) of a population across generations.</li>
+<li><b>Population</b> — A group of interbreeding individuals of the same species in a defined area.</li>
+<li><b>Heritable variation</b> — Trait differences among individuals that have a genetic basis and can be passed to offspring.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>An individual cannot &#x27;evolve&#x27; — even if they change during their lifetime, evolution requires change across generations in a population.</li>
+<li>If trait differences are NOT heritable (e.g., purely environmental), selection on those traits produces no evolutionary change.</li>
+</ul></div>
+
+<h3>§B — Why evolution unifies biology</h3>
+<p class="overview">Dobzhansky&#x27;s 1973 essay — &#x27;Nothing in biology makes sense except in the light of evolution&#x27; — captures the role evolution plays as the explanatory glue across every biological subdiscipline.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Theodosius Dobzhansky (1973) wrote the famous essay establishing evolution as biology&#x27;s unifying theory.</li>
+<li>Evolution explains both unity (shared features from common descent) and diversity (lineage-specific adaptations).</li>
+<li>Practical applications include antibiotic resistance, vaccine design, conservation biology, and crop improvement.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Common descent</b> — All life on Earth shares a common ancestor; similarities reflect shared inheritance.</li>
+<li><b>Adaptation</b> — A heritable trait that increases fitness in a given environment, produced by natural selection.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>&#x27;Adaptation&#x27; has two meanings — a trait (the noun) AND the process that produces it (the verb). Context matters.</li>
+</ul></div>
+
+<h3>§C — The four evolutionary mechanisms (preview)</h3>
+<p class="overview">Four forces change allele frequencies. The course spends the next several lectures dissecting each one in turn.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Natural selection — non-random; differential survival/reproduction based on heritable trait differences.</li>
+<li>Genetic drift — random sampling of alleles; strongest in small populations.</li>
+<li>Gene flow — movement of alleles between populations via migration; tends to homogenize.</li>
+<li>Mutation — the ultimate source of new genetic variation; random with respect to fitness.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Natural selection</b> — Differential reproductive success based on heritable trait variation; non-random with respect to fitness.</li>
+<li><b>Genetic drift</b> — Random change in allele frequencies due to chance sampling, especially in small populations.</li>
+<li><b>Gene flow</b> — Movement of alleles between populations through migration of individuals or gametes.</li>
+<li><b>Mutation</b> — Heritable change in DNA sequence; the ultimate source of new alleles.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mutation is RANDOM with respect to fitness (it doesn&#x27;t &#x27;know&#x27; what&#x27;s useful), but selection acting on the resulting variation is NON-random.</li>
+<li>Drift and selection both change allele frequencies — but only selection systematically increases fitness.</li>
+</ul></div>
+
+<h2>L02 · Evolutionary Thinking — From Pre-Darwinian Worldviews to Natural Selection <span style="color:#7a7158;font-size:11pt;">(Ch 2)</span></h2>
+
+<p class="intro">How biologists came to think about life as a tree, not a ladder. This lecture traces the conceptual road from the Great Chain of Being to Darwin and Wallace, and frames the scientific method (hypothesis vs. theory) that lets evolutionary claims be tested.</p>
+
+<h3>§A — The Great Chain of Being and pre-Darwinian thinking</h3>
+<p class="overview">Before Darwin, the dominant Western view of life was the Scala Naturae — a fixed hierarchical ladder with humans at the top and &#x27;lower&#x27; organisms at the bottom. Species were considered immutable; extinction was not yet recognized as a real phenomenon.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>The Great Chain of Being arranged organisms in a fixed hierarchy with humans at the apex.</li>
+<li>Species were assumed to be immutable — created in their final form, not changing over time.</li>
+<li>Extinction was either denied outright or chalked up to local catastrophes; the idea that whole lineages had vanished was controversial well into the 1700s.</li>
+<li>There was no concept of &#x27;common ancestry&#x27; — similarities between organisms were attributed to a shared design template, not shared descent.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Great Chain of Being (Scala Naturae)</b> — Pre-Darwinian view of life as a fixed hierarchy with humans at the top — non-evolutionary, no shared descent.</li>
+<li><b>Immutability of species</b> — The pre-Darwinian assumption that species do not change over time.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The Great Chain of Being is NOT an evolutionary tree — it is a fixed ladder with no branching, no common ancestry, and no extinction.</li>
+<li>Don&#x27;t confuse the Chain of Being&#x27;s &#x27;progression toward humans&#x27; with evolution. Evolution does not progress toward any goal.</li>
+</ul></div>
+
+<h3>§B — Extinction recognized — William Smith and stratigraphy</h3>
+<p class="overview">The realization that whole groups of organisms had disappeared came from geology. William Smith showed that fossil sequences in rock layers had a consistent pattern across geography — and that some forms simply stopped appearing in younger rock.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>William Smith (early 1800s) used fossils + stratigraphy to map rock layers across England.</li>
+<li>He showed that distinct fossil assemblages characterize specific rock strata, in a consistent worldwide order — the principle of FAUNAL SUCCESSION.</li>
+<li>The disappearance of fossil types from younger strata established extinction as a real phenomenon.</li>
+<li>Georges Cuvier independently demonstrated extinction by comparing extinct fossil mammals (like mastodons) to all known living species.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Stratigraphy</b> — The study of rock layers; younger rocks lie atop older ones, and fossils within them mark time.</li>
+<li><b>Faunal succession</b> — The principle that distinct fossil assemblages occur in a consistent vertical order in rock strata, allowing rocks to be dated by their fossils.</li>
+<li><b>Extinction</b> — The complete disappearance of a species or lineage from Earth.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide explicitly flags William Smith&#x27;s role in establishing extinction — be ready to attribute him.</li>
+<li>Faunal succession is descriptive (which fossils where) — it doesn&#x27;t on its own explain WHY species disappeared. Extinction as a concept comes from observing the pattern.</li>
+</ul></div>
+
+<h3>§C — Lamarck, Lyell, and the road to Darwin</h3>
+<p class="overview">Several thinkers helped clear the conceptual ground before Darwin. Lamarck proposed an evolutionary mechanism (wrong about the details). Lyell argued for deep time and gradual geological change. Both shaped how Darwin framed natural selection.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Jean-Baptiste Lamarck (1809) was the first to propose a systematic mechanism of evolution: inheritance of ACQUIRED CHARACTERISTICS — traits acquired during an individual&#x27;s life are passed to offspring (e.g., the giraffe stretching its neck).</li>
+<li>Lamarck was wrong about the mechanism (acquired traits aren&#x27;t inherited via the standard germline) but right that species change over time.</li>
+<li>Charles Lyell argued for UNIFORMITARIANISM — the same gradual processes operating today shaped Earth over enormous spans of time.</li>
+<li>Lyell&#x27;s gift to Darwin: the concept of DEEP TIME — Earth is millions/billions of years old, plenty of time for slow evolutionary change to accumulate.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Inheritance of acquired characteristics (Lamarckism)</b> — Lamarck&#x27;s proposed mechanism: traits gained during life pass to offspring. Now known to be wrong as a general mechanism.</li>
+<li><b>Uniformitarianism</b> — Lyell&#x27;s principle that observable, gradual processes (erosion, sedimentation) operating over deep time produced Earth&#x27;s geological features.</li>
+<li><b>Deep time</b> — The vast time spans (millions to billions of years) over which Earth&#x27;s history has unfolded.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Lamarck is famous as a wrong example, but the study guide calls for matching him to &#x27;inheritance of acquired traits.&#x27; Don&#x27;t dismiss him without naming his contribution.</li>
+<li>Lyell was a geologist, not an evolutionary biologist. His contribution to evolution was indirect — providing deep time as a backdrop.</li>
+</ul></div>
+
+<h3>§D — Darwin, Wallace, and natural selection</h3>
+<p class="overview">Darwin&#x27;s voyage on the Beagle (1831–1836) and decades of subsequent work led him to natural selection. Alfred Russel Wallace independently arrived at the same idea — and his 1858 letter is what finally pushed Darwin to publish.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Charles Darwin developed the theory of evolution by natural selection through observations on the Beagle voyage and later work, especially on Galápagos finches and barnacles.</li>
+<li>Darwin&#x27;s three observations + one inference: (1) populations have heritable variation; (2) more offspring are produced than can survive; (3) survival/reproduction is non-random; → therefore (4) heritable traits associated with higher reproductive success increase in frequency.</li>
+<li>Alfred Russel Wallace independently conceived natural selection while working in the Malay Archipelago. His 1858 letter to Darwin spurred the joint Darwin-Wallace paper that year.</li>
+<li>Darwin published On the Origin of Species in 1859.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Natural selection</b> — The process by which individuals with heritable trait variants that increase reproductive success leave more offspring, increasing those variants&#x27; frequency over generations.</li>
+<li><b>Heritability</b> — The proportion of phenotypic variation that is genetically inherited rather than environmental.</li>
+<li><b>Selection differential (S)</b> — The difference between the mean trait value of breeders and the mean trait value of the original population.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide explicitly tests: &#x27;identifying which naturalist spurred Darwin to make his work public&#x27; — that&#x27;s WALLACE, via his 1858 letter.</li>
+<li>Natural selection requires variation, heritability, AND differential reproductive success. All three. Missing any one and the population doesn&#x27;t evolve.</li>
+</ul></div>
+
+<h3>§E — Hypotheses vs. theories — the scientific method</h3>
+<p class="overview">Lay usage of &#x27;theory&#x27; often means &#x27;guess,&#x27; but in science it means something quite different. Distinguishing hypothesis from theory is a small but reliably testable item.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>A HYPOTHESIS is a tentative, testable explanation for an observation — narrow in scope, designed to be falsified.</li>
+<li>A SCIENTIFIC THEORY is a well-substantiated, broad explanation supported by a large body of evidence and capable of generating many testable hypotheses.</li>
+<li>Evolution is a theory in the strong scientific sense: a unifying explanation supported by molecular, fossil, biogeographic, and experimental evidence.</li>
+<li>A good hypothesis is FALSIFIABLE — it specifies observations that would prove it wrong.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hypothesis</b> — A tentative, testable, falsifiable explanation for an observation.</li>
+<li><b>Scientific theory</b> — A broad, well-supported explanation for a major aspect of the natural world; generates testable hypotheses.</li>
+<li><b>Falsifiability</b> — The criterion that a scientific claim must specify observations that could prove it wrong.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>&#x27;Theory&#x27; in everyday language ≠ &#x27;theory&#x27; in science. Saying evolution is &#x27;just a theory&#x27; confuses the two senses.</li>
+<li>A good hypothesis says what observations would falsify it. &#x27;Evolution happens&#x27; is too broad to be a hypothesis; &#x27;antibiotic resistance increases when antibiotics are widely used&#x27; is testable.</li>
+</ul></div>
+
+<h2>L03 · Genes and Heritable Variation <span style="color:#7a7158;font-size:11pt;">(Ch 5)</span></h2>
+
+<p class="intro">Evolution requires heritable variation. This lecture is the genetics-and-genomics foundation: what genes ARE, how genomes are built, how alleles differ in their phenotypic effects, and how gene expression is regulated at multiple levels.</p>
+
+<h3>§A — Genome architecture — coding vs. noncoding DNA</h3>
+<p class="overview">Eukaryotic genomes are mostly NOT made of protein-coding genes. The bulk is noncoding DNA — pseudogenes, mobile elements, regulatory sequences, and stretches with no known function. This matters because evolution acts on genome content as a whole.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Protein-coding genes typically make up only a small fraction of eukaryotic genomes (humans: ~1–2% of the genome).</li>
+<li>Noncoding DNA includes pseudogenes (broken former genes), mobile genetic elements (transposons, retroelements), regulatory sequences, and repetitive DNA.</li>
+<li>GENOME SIZE does NOT correlate with organismal complexity (the C-value paradox) — some amoebas have larger genomes than humans.</li>
+<li>Pseudogenes are evolutionary fossils — once functional, now not — and provide direct evidence of evolutionary history.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Pseudogene</b> — A nonfunctional sequence resembling a known gene, usually disabled by stop codons, frameshifts, or loss of regulation.</li>
+<li><b>Mobile genetic element (MGE)</b> — DNA sequences that can change position within a genome — transposons, retroelements (LINEs, SINEs).</li>
+<li><b>C-value paradox</b> — The observation that genome size does not correlate with organismal complexity.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Genome size ≠ gene count ≠ complexity. The study guide flags this directly: &#x27;genome size does not necessarily correlate with organismal complexity.&#x27;</li>
+<li>Pseudogenes ARE part of the genome — they are real DNA, just not functional. Don&#x27;t exclude them when listing genome contents.</li>
+</ul></div>
+
+<h3>§B — Levels of gene expression regulation</h3>
+<p class="overview">Cells regulate gene expression at multiple stages — pre-transcriptional, transcriptional, post-transcriptional, and post-translational. Knowing which mechanism acts at which level is a core test item.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>PRE-TRANSCRIPTIONAL: chromatin structure, histone modification (acetylation, methylation), DNA methylation. Controls whether the gene is even ACCESSIBLE for transcription.</li>
+<li>TRANSCRIPTIONAL: transcription factors binding to promoters and enhancers; regulates the rate of mRNA synthesis.</li>
+<li>POST-TRANSCRIPTIONAL: alternative splicing of pre-mRNA, microRNA-mediated mRNA degradation, mRNA stability/localization.</li>
+<li>POST-TRANSLATIONAL: protein phosphorylation, ubiquitination, proteolytic cleavage, subcellular targeting — alters protein activity AFTER it is made.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>DNA methylation</b> — Addition of methyl groups to DNA (typically CpG sites); usually represses transcription. PRE-TRANSCRIPTIONAL regulation.</li>
+<li><b>Histone modification</b> — Chemical changes to histone tails (acetylation, methylation) that alter chromatin packing and gene accessibility. PRE-TRANSCRIPTIONAL.</li>
+<li><b>MicroRNA (miRNA)</b> — Small noncoding RNA that binds complementary mRNAs to suppress translation or trigger degradation. POST-TRANSCRIPTIONAL.</li>
+<li><b>Alternative splicing</b> — Production of multiple mRNA variants from a single gene by including/excluding different exons. POST-TRANSCRIPTIONAL.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>DNA methylation = PRE-transcriptional (controls access). MicroRNA = POST-transcriptional (degrades mRNAs after they&#x27;re made). Don&#x27;t mix them up.</li>
+<li>Phosphorylation can occur during transcription factor activation (transcriptional) or as a post-translational modification of any protein. Context tells you which level.</li>
+</ul></div>
+
+<h3>§C — Alleles — dominant, recessive, additive</h3>
+<p class="overview">Alleles are alternative versions of a gene at the same locus. How they interact with one another (dominance) — and how the homozygote/heterozygote phenotypes relate — sets how quickly selection can change allele frequencies.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>DOMINANT alleles mask the expression of recessive alleles in heterozygotes (Aa shows the A phenotype).</li>
+<li>ADDITIVE alleles each contribute incrementally to the phenotype — Aa is intermediate between AA and aa, and the effect scales linearly with copy number.</li>
+<li>RECESSIVE beneficial mutations spread SLOWLY from rarity — most copies hide in heterozygotes where they&#x27;re masked.</li>
+<li>DOMINANT beneficial mutations spread FAST — every heterozygote already shows the phenotype.</li>
+<li>Additive variance (V_A) is the only variance component that responds predictably to selection (covered more in L05).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Allele</b> — A specific variant of a gene at a given locus.</li>
+<li><b>Dominant</b> — An allele whose phenotype is fully expressed in heterozygotes.</li>
+<li><b>Recessive</b> — An allele whose phenotype is hidden in heterozygotes; only expressed when homozygous.</li>
+<li><b>Additive</b> — Allelic effects that combine linearly — phenotype is proportional to the dose of the allele.</li>
+<li><b>Locus</b> — The chromosomal location of a gene.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Beneficial RECESSIVE alleles increase slowly when rare (most are in Aa heterozygotes, hidden from selection). Beneficial DOMINANT alleles increase quickly when rare. Selection efficiency depends on dominance.</li>
+<li>Don&#x27;t confuse &#x27;additive&#x27; (linear dose-response across copies) with &#x27;codominant&#x27; (both alleles&#x27; phenotypes are visible in the heterozygote, but not necessarily linearly intermediate).</li>
+</ul></div>
+
+<h3>§D — Mutation as the source of new variation</h3>
+<p class="overview">Mutation is the ULTIMATE source of new genetic variation. Selection cannot create new alleles — it can only sort among existing variants. Mutation is random with respect to fitness.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Mutations are heritable changes in DNA sequence; they are the only source of NEW genetic variation.</li>
+<li>Mutations are RANDOM with respect to fitness — they don&#x27;t preferentially generate beneficial alleles when those would be useful.</li>
+<li>Most mutations are neutral or slightly deleterious; beneficial mutations are rare.</li>
+<li>Mutation rate per base per generation in eukaryotes is roughly 10⁻⁸ to 10⁻⁹, but compounded across the whole genome each individual carries dozens of new mutations.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Mutation</b> — Heritable change in DNA sequence — point mutations, insertions, deletions, duplications, inversions, translocations.</li>
+<li><b>Mutation rate</b> — The probability of a mutation per base per generation; ~10⁻⁸ to 10⁻⁹ in mammals.</li>
+<li><b>Random with respect to fitness</b> — Mutations don&#x27;t preferentially generate alleles that would be beneficial in the current environment.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mutation is random WITH RESPECT TO FITNESS. Mutation rates can vary across the genome (hotspots) and respond to environmental stressors — but the randomness referred to is about fitness-direction, not uniform per-base probability.</li>
+<li>Selection requires variation; mutation generates it. Without mutation, selection eventually exhausts genetic variation.</li>
+</ul></div>
+
+<h2>L04 · Genetic Evolution in Populations — Hardy-Weinberg <span style="color:#7a7158;font-size:11pt;">(Ch 6)</span></h2>
+
+<p class="intro">Hardy-Weinberg equilibrium is the null model of population genetics. It predicts genotype frequencies from allele frequencies in an idealized non-evolving population, so any deviation tells you something is going on (selection, drift, mutation, gene flow, or non-random mating).</p>
+
+<h3>§A — Allele frequencies vs genotype frequencies</h3>
+<p class="overview">An allele frequency is the proportion of a given allele at a locus across the whole population&#x27;s gene pool. Genotype frequencies are the proportions of homozygotes and heterozygotes.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>For a biallelic locus with alleles A and a, let p = freq(A), q = freq(a). Then p + q = 1.</li>
+<li>Allele frequencies are computed from genotype counts: p = (2·N_AA + N_Aa) / (2·N_total).</li>
+<li>Genotype frequencies should add to 1: freq(AA) + freq(Aa) + freq(aa) = 1.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Allele frequency</b> — The proportion of all gene copies in a population that are a given allele.</li>
+<li><b>Genotype frequency</b> — The proportion of individuals in a population with a given genotype (e.g., AA, Aa, aa).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Don&#x27;t confuse allele counts with individual counts — each diploid individual contributes TWO allele copies.</li>
+<li>Heterozygotes contribute ONE A and ONE a to the allele tally, not two of one.</li>
+</ul></div>
+
+<h3>§B — The Hardy-Weinberg equation</h3>
+<p class="overview">Under five idealizing assumptions, expected genotype frequencies are p², 2pq, q². The cross-multiplication comes from random union of gametes — Punnett-square logic at the population level.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Hardy-Weinberg expectation: p² + 2pq + q² = 1.</li>
+<li>p² is the expected frequency of homozygous AA; 2pq of heterozygous Aa; q² of homozygous aa.</li>
+<li>The five assumptions: (1) no mutation, (2) no gene flow / migration, (3) no genetic drift (infinite population size), (4) no natural selection, (5) random mating.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hardy-Weinberg equilibrium (HWE)</b> — The state of a population where allele and genotype frequencies remain constant across generations because none of the five evolutionary forces are acting.</li>
+<li><b>Random mating (panmixia)</b> — Each individual is equally likely to mate with any other; no preference based on genotype.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Hardy-Weinberg gives EXPECTED genotype frequencies under the null. If observed frequencies differ, that&#x27;s evidence the population is NOT in HWE — i.e., one or more forces are acting.</li>
+<li>HWE is achieved in ONE generation of random mating from any starting genotype frequencies (allele freq p stays the same; genotype freq snaps to p²/2pq/q²).</li>
+</ul></div>
+
+<h3>§C — Detecting deviations and what they mean</h3>
+<p class="overview">Excess homozygotes vs. excess heterozygotes are diagnostic of different evolutionary processes. Spotting and interpreting deviations is a core exam skill.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Excess HOMOZYGOTES (more AA + aa than expected) → suggests inbreeding or population subdivision (Wahlund effect).</li>
+<li>Excess HETEROZYGOTES → suggests heterozygote advantage (overdominant selection) or disassortative mating.</li>
+<li>Selection against a homozygote shifts allele frequencies AND warps genotype ratios away from HWE.</li>
+<li>Drift in small populations causes random departures from HWE that aren&#x27;t directional.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Inbreeding</b> — Mating between close relatives; increases homozygosity and exposes deleterious recessive alleles (inbreeding depression).</li>
+<li><b>Heterozygote advantage</b> — Heterozygotes have higher fitness than either homozygote; classic example is sickle-cell trait conferring malaria resistance.</li>
+<li><b>Wahlund effect</b> — Apparent excess of homozygotes when distinct subpopulations are pooled together as if they were one.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Selection AGAINST the recessive homozygote (aa) makes a slow change because most a alleles hide in heterozygotes — selection on rare recessives is inefficient.</li>
+<li>Inbreeding does NOT change allele frequencies on its own — it only changes genotype frequencies (more homozygotes, fewer heterozygotes).</li>
+</ul></div>
+
+<h3>§D — Worked computation pattern</h3>
+<p class="overview">Exam questions often hand you genotype counts and ask you to compute allele frequencies, then expected genotype frequencies under HWE, then compare to observed.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Step 1 — count alleles: each AA contributes 2 A; each Aa contributes 1 A and 1 a; each aa contributes 2 a.</li>
+<li>Step 2 — compute p and q from the totals.</li>
+<li>Step 3 — compute expected counts: N · p², N · 2pq, N · q².</li>
+<li>Step 4 — compare expected vs observed; if they don&#x27;t match, identify which mechanism best explains the pattern.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Common arithmetic slip: forgetting to multiply expected genotype FREQUENCIES by N (population size) when comparing to observed COUNTS.</li>
+<li>If only allele frequencies are given, you cannot detect HWE deviations — you need genotype counts.</li>
+</ul></div>
+
+<h2>L05 · Quantitative Genetics, Selection, and Plasticity <span style="color:#7a7158;font-size:11pt;">(Ch 7)</span></h2>
+
+<p class="intro">How traits with continuous variation (height, milk yield, beak depth) evolve. This lecture covers phenotypic variance partitioning, heritability, the breeder&#x27;s equation, and phenotypic plasticity — the ways environment shapes phenotype without changing genotype.</p>
+
+<h3>§A — Quantitative traits and partitioning phenotypic variance</h3>
+<p class="overview">Quantitative traits are continuously varying (height, mass, fitness components) — many genes plus environment. The total phenotypic variance V_P can be decomposed into components, each with a different evolutionary meaning.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Phenotypic variance equation: V_P = V_A + V_D + V_I + V_E.</li>
+<li>V_A (ADDITIVE genetic variance) — additive effects of alleles; the only component that responds predictably to selection.</li>
+<li>V_D (DOMINANCE variance) — interaction effects of alleles at the same locus.</li>
+<li>V_I (EPISTATIC / INTERACTION variance) — interaction effects of alleles at different loci.</li>
+<li>V_E (ENVIRONMENTAL variance) — variation in phenotype caused by environment, not heritable.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Quantitative trait</b> — A trait with continuous variation, typically influenced by many genes plus environment (height, weight, fecundity).</li>
+<li><b>V_A — Additive genetic variance</b> — The portion of genetic variance from additive allelic effects; passes predictably from parents to offspring; the engine of response to selection.</li>
+<li><b>V_D — Dominance variance</b> — Genetic variance arising from interactions between alleles at the same locus (heterozygote effects).</li>
+<li><b>V_I — Epistatic (interaction) variance</b> — Genetic variance arising from interactions between alleles at different loci.</li>
+<li><b>V_E — Environmental variance</b> — Phenotypic variance attributable to environmental differences; not inherited.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Only V_A responds predictably to selection. V_D and V_I get reshuffled by recombination each generation, so selection on them produces inconsistent gains.</li>
+<li>The study guide explicitly asks for the V_P expression — be ready to write it: V_P = V_A + V_D + V_I + V_E.</li>
+</ul></div>
+
+<h3>§B — Heritability — broad-sense vs. narrow-sense</h3>
+<p class="overview">Heritability is the fraction of phenotypic variance attributable to genetic causes. The narrow-sense version (h²) — using only V_A — is what predicts response to selection.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>BROAD-SENSE heritability H² = V_G / V_P, where V_G = V_A + V_D + V_I (total genetic variance).</li>
+<li>NARROW-SENSE heritability h² = V_A / V_P — uses only the additive component.</li>
+<li>h² ranges from 0 (no genetic basis) to 1 (purely genetic, no environmental influence).</li>
+<li>h² can be estimated from a PARENT-OFFSPRING REGRESSION — the slope of offspring trait values regressed on the mid-parent value.</li>
+<li>h² is a PROPERTY OF A POPULATION IN AN ENVIRONMENT — it changes when allele frequencies or environmental variance change. It is not an intrinsic property of the trait.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Broad-sense heritability (H²)</b> — Total genetic variance divided by total phenotypic variance: V_G / V_P.</li>
+<li><b>Narrow-sense heritability (h²)</b> — Additive genetic variance divided by total phenotypic variance: V_A / V_P. Predicts response to selection.</li>
+<li><b>Parent-offspring regression</b> — Plot of offspring trait values vs. mid-parent values; slope estimates h².</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>h² (lowercase, narrow-sense) ≠ H² (uppercase, broad-sense). The study guide tests h² because it&#x27;s the one that predicts evolution.</li>
+<li>Heritability is population-and-environment specific. A trait with h² = 0.6 in one population can have h² = 0.2 in another. Don&#x27;t quote heritability values as universal facts.</li>
+</ul></div>
+
+<h3>§C — The breeder&#x27;s equation — predicting response to selection</h3>
+<p class="overview">The breeder&#x27;s equation R = h² · S links heritability to selection differential to predict the per-generation response to selection. It is the central equation of quantitative genetics.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Breeder&#x27;s equation: R = h² · S.</li>
+<li>S (SELECTION DIFFERENTIAL) = mean of breeders − mean of original population. Captures the strength of selection on the phenotype.</li>
+<li>R (RESPONSE TO SELECTION) = mean of next generation − mean of current generation. Captures the actual evolutionary change.</li>
+<li>Larger S → larger R (selection is stronger). Larger h² → larger R (more of the variance is heritable).</li>
+<li>If h² = 0 (no heritability), R = 0 — no response, regardless of how strong the selection.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Selection differential (S)</b> — The phenotypic difference between selected breeders and the original population mean.</li>
+<li><b>Response to selection (R)</b> — The change in population mean from one generation to the next, due to selection.</li>
+<li><b>Breeder&#x27;s equation</b> — R = h² · S. Predicts evolutionary response from heritability and selection strength.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>If you select strongly (large S) but h² is near zero, the population doesn&#x27;t evolve. Heritability is the gating factor.</li>
+<li>The breeder&#x27;s equation works for ONE generation at a time. Iterating across generations requires knowing how V_A and h² change as allele frequencies shift (they don&#x27;t stay constant).</li>
+</ul></div>
+
+<h3>§D — Phenotypic plasticity and reaction norms</h3>
+<p class="overview">A single genotype can produce different phenotypes in different environments. Phenotypic plasticity is the rule, not the exception, and the patterns reveal whether plasticity itself can evolve.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>PHENOTYPIC PLASTICITY = the ability of a single genotype to produce different phenotypes in different environments.</li>
+<li>POLYPHENIC traits = single genotype producing DISCRETE alternative phenotypes (e.g., aphid winged vs. wingless morphs depending on density).</li>
+<li>REACTION NORM = a plot of phenotype (y) vs. environment (x) for a given genotype. Sloped lines = plasticity. Horizontal lines = no plasticity (canalization).</li>
+<li>GENOTYPE-BY-ENVIRONMENT INTERACTION (G×E, V_G×E) = genotypes differ in HOW they respond to environment (non-parallel reaction norms).</li>
+<li>G×E adds to phenotypic variance and can confound heritability estimates.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Phenotypic plasticity</b> — A genotype&#x27;s capacity to produce different phenotypes in different environments.</li>
+<li><b>Reaction norm</b> — A graph of phenotype vs. environment for one genotype.</li>
+<li><b>G×E interaction (V_G×E)</b> — Differences among genotypes in their response to environment — reaction norms with different slopes.</li>
+<li><b>Polyphenic trait</b> — A genotype producing two or more discrete alternative phenotypes triggered by environmental cues.</li>
+<li><b>Canalization</b> — Lack of plasticity — the genotype produces the same phenotype across environments.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Sloped reaction norms = plasticity. Non-parallel reaction norms = G×E. The study guide asks about interpreting these graphs.</li>
+<li>Plasticity is itself heritable and can evolve. A &#x27;plastic&#x27; trait isn&#x27;t the same as a &#x27;non-genetic&#x27; trait — the capacity to be plastic is genetic.</li>
+</ul></div>
+
+<h3>§E — Selection vs. evolution — a recurring distinction</h3>
+<p class="overview">Selection ACTING on a trait does not guarantee EVOLUTION. The link is heritability. This is the integrative concept the study guide returns to repeatedly.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Selection produces evolution ONLY when the selected trait has heritable variation (h² &gt; 0).</li>
+<li>If trait differences are entirely environmental (V_A = 0), selection can be strong but no evolution occurs.</li>
+<li>Evolution = change in allele frequencies across generations. Selection on phenotypes only matters evolutionarily if those phenotypes correlate with genotypes.</li>
+<li>This is the bedrock distinction between within-generation differences in survival/reproduction and between-generation evolutionary change.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Common exam scenario: selection clearly happens (some individuals reproduce more than others) but the trait is environmentally determined → NO evolutionary response. R = h² · S = 0.</li>
+<li>Selection is a within-generation process. Evolution is a between-generation outcome that requires heritability.</li>
+</ul></div>
+
+</div><!-- /doc -->
+</div><!-- /pageWrap -->
+
+<!-- ===== Find / Replace Bar ===== -->
+<div class="findbar no-print" id="findbar" style="display:none">
+  <input type="text" id="findInput" placeholder="Find" autocomplete="off" />
+  <input type="text" id="replaceInput" placeholder="Replace with…" autocomplete="off" />
+  <button onclick="findNext()" title="Next match (Enter)">↓ Next</button>
+  <button onclick="findPrev()" title="Previous match (Shift+Enter)">↑ Prev</button>
+  <button onclick="replaceOne()" title="Replace current match">Replace</button>
+  <button onclick="replaceAll()" title="Replace all matches">Replace All</button>
+  <span id="findCount" style="color:#5b554b;font-size:12px;margin-left:6px"></span>
+  <button onclick="closeFind()" title="Close (Esc)" style="margin-left:auto;color:#a3290e">Close</button>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  window.addEventListener('error', e => { console.warn('[study-guide] caught:', e.message); });
+
+  const doc = document.getElementById('doc');
+  const status = document.getElementById('saveStatus');
+  const STORAGE_KEY = 'evol4230_exam1_studyguide_v1';
+  const SHORTCUT_KEY = 'evol4230_exam1_studyguide_v1_shortcuts_v1';
+  const PRISTINE_HTML = doc.innerHTML;
+
+  try{
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if(saved){ doc.innerHTML = saved; status.innerHTML = 'Loaded from <b>local save</b>'; }
+    else { status.innerHTML = 'Loaded — <b>fresh copy</b>'; }
+  }catch(e){ console.warn('localStorage unavailable', e); status.innerHTML = '<span style="color:#c34">localStorage off</span>'; }
+
+  let saveTimer = null;
+  function markDirty(){
+    status.classList.add('dirty');
+    status.innerHTML = 'Editing…';
+    if(saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(scheduleSave, 1200);
+  }
+  function scheduleSave(){
+    if('requestIdleCallback' in window){
+      requestIdleCallback(saveNow, {timeout: 1500});
+    } else {
+      setTimeout(saveNow, 0);
+    }
+  }
+  function saveNow(){
+    try{
+      localStorage.setItem(STORAGE_KEY, doc.innerHTML);
+      status.classList.remove('dirty');
+      const t = new Date().toLocaleTimeString();
+      status.innerHTML = 'Saved <b>'+t+'</b>';
+    }catch(e){
+      status.innerHTML = '<span style="color:#c34">Save failed</span> — '+e.message;
+    }
+  }
+  doc.addEventListener('input', markDirty);
+  doc.addEventListener('paste', () => setTimeout(markDirty, 30));
+  window.addEventListener('beforeunload', saveNow);
+
+  function cmd(name, value){
+    try{
+      document.execCommand(name, false, value || null);
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('[study-guide] cmd '+name+' failed:', e); }
+  }
+  document.getElementById('fontFamily').addEventListener('change', e => { restoreSelection(); cmd('fontName', e.target.value); });
+  document.getElementById('fontSize').addEventListener('change', e => { restoreSelection(); cmd('fontSize', e.target.value); });
+  document.getElementById('fgColor').addEventListener('change', e => { restoreSelection(); cmd('foreColor', e.target.value); });
+  document.getElementById('bgColor').addEventListener('change', e => { restoreSelection(); cmd('hiliteColor', e.target.value); });
+
+  function insertHorizontalRule(){ cmd('insertHorizontalRule'); }
+  function insertPageBreak(){
+    document.execCommand('insertHTML', false, '<div class="pagebreak"></div>');
+    markDirty();
+  }
+
+  function insertImageFromFile(ev){
+    const f = ev.target.files[0]; if(!f) return;
+    const r = new FileReader();
+    r.onload = e => {
+      doc.focus();
+      document.execCommand('insertHTML', false, '<figure><img src="'+e.target.result+'" alt="user image"/><figcaption>User-inserted image</figcaption></figure>');
+      markDirty();
+    };
+    r.readAsDataURL(f);
+    ev.target.value = '';
+  }
+
+  function resetDoc(){
+    if(!confirm('Reset to the seeded content? Your edits will be lost.')) return;
+    doc.innerHTML = PRISTINE_HTML;
+    saveNow();
+  }
+
+  function downloadHTML(){
+    const html = '<!doctype html><html><head><meta charset="utf-8"><title>Exam 1 · Mechanisms / Pop Gen — BIOL 4230</title><style>'+
+      'body{font-family:"Times New Roman",serif;max-width:7in;margin:0.5in auto;line-height:1.45}'+
+      'h1{text-align:center}h2{border-bottom:1.5pt solid #000;padding-bottom:3px}h3{text-decoration:underline}'+
+      'figure{text-align:center;margin:8px auto}figure img{max-width:100%;border:1px solid #888}'+
+      'figcaption{font-size:10pt;color:#555;font-style:italic}'+
+      'table{border-collapse:collapse;width:100%;font-size:10.5pt}'+
+      'th,td{border:0.5pt solid #888;padding:4px 6px;vertical-align:top}'+
+      '.q{font-weight:700}.a{font-weight:400}'+
+      '.callout{border-left:3px solid #c89b2e;background:#fff7e8;padding:6px 10px;margin:8px 0}'+
+      '.pagebreak{page-break-after:always}'+
+      '@page{size:letter portrait;margin:0.5in}'+
+      '</style></head><body>' + doc.innerHTML + '</body></html>';
+    const blob = new Blob([html], {type:'text/html'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'Exam1_StudyGuide_BIOL4230.html';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  function applyBlockStyle(){
+    const el = document.getElementById('styleSelect');
+    if(!el) return;
+    const tag = el.value;
+    if(!tag) return;
+    try{
+      document.execCommand('formatBlock', false, '<' + tag + '>');
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('formatBlock failed', e); }
+    el.selectedIndex = 0;
+  }
+
+  function getSelectedBlocks(){
+    const sel = window.getSelection();
+    if(!sel || sel.rangeCount === 0) return [];
+    const range = sel.getRangeAt(0);
+    const blocks = new Set();
+    function climb(node){
+      while(node && node !== doc){
+        if(node.nodeType === 1){
+          const d = getComputedStyle(node).display;
+          if(d === 'block' || d === 'list-item' || /^(P|H[1-6]|LI|BLOCKQUOTE|PRE|FIGURE|TABLE|TR|TD|TH|DIV)$/.test(node.tagName)){
+            blocks.add(node); return;
+          }
+        }
+        node = node.parentNode;
+      }
+    }
+    climb(range.startContainer);
+    climb(range.endContainer);
+    const it = document.createTreeWalker(doc, NodeFilter.SHOW_ELEMENT, {
+      acceptNode: n => range.intersectsNode(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+    });
+    let n;
+    while((n = it.nextNode())){
+      const d = getComputedStyle(n).display;
+      if(d === 'block' || d === 'list-item') blocks.add(n);
+    }
+    return Array.from(blocks);
+  }
+
+  function changeCase(){
+    const choice = prompt('Change case to:\n  1) UPPERCASE\n  2) lowercase\n  3) Title Case\n  4) Sentence case\nEnter 1, 2, 3, or 4:');
+    const sel = window.getSelection();
+    if(!sel || sel.isCollapsed){ alert('Select some text first.'); return; }
+    const text = sel.toString();
+    let out = text;
+    if(choice === '1') out = text.toUpperCase();
+    else if(choice === '2') out = text.toLowerCase();
+    else if(choice === '3') out = text.toLowerCase().replace(/\b([a-z])/g, (m, c) => c.toUpperCase());
+    else if(choice === '4'){
+      out = text.toLowerCase().replace(/(^|[.!?]\s+)([a-z])/g, (m, p, c) => p + c.toUpperCase());
+    } else return;
+    document.execCommand('insertText', false, out);
+    markDirty();
+  }
+
+  function applyLineSpacing(){
+    const el = document.getElementById('lineSpacing');
+    if(!el || !el.value) return;
+    const v = el.value;
+    getSelectedBlocks().forEach(b => { b.style.lineHeight = v; });
+    el.selectedIndex = 0;
+    markDirty();
+  }
+
+  function colorsEqual(a, b){
+    if(!a || !b) return false;
+    const ma = ('' + a).match(/\d+/g);
+    const mb = ('' + b).match(/\d+/g);
+    if(!ma || !mb) return false;
+    return ma.slice(0,3).join(',') === mb.slice(0,3).join(',');
+  }
+  function hexToRgb(hex){
+    const m = hex.replace('#','');
+    return 'rgb(' + parseInt(m.slice(0,2),16) + ', ' + parseInt(m.slice(2,4),16) + ', ' + parseInt(m.slice(4,6),16) + ')';
+  }
+  function applyShade(){
+    const c = document.getElementById('paraShade').value;
+    const target = hexToRgb(c);
+    const blocks = getSelectedBlocks();
+    if(!blocks.length) return;
+    const allHave = blocks.every(b => colorsEqual(b.style.backgroundColor, target));
+    blocks.forEach(b => {
+      if(allHave){
+        b.style.backgroundColor = '';
+        if(!/pb-/.test(b.className)) b.style.padding = '';
+      } else {
+        b.style.backgroundColor = c;
+        if(!b.style.padding) b.style.padding = '4px 8px';
+      }
+    });
+    markDirty();
+  }
+
+  function applyBorder(){
+    const el = document.getElementById('borderSelect');
+    if(!el || !el.value) return;
+    const which = el.value;
+    const blocks = getSelectedBlocks();
+    el.selectedIndex = 0;
+    if(!blocks.length) return;
+    if(which === 'none'){
+      blocks.forEach(b => b.classList.remove('pb-all','pb-top','pb-bottom','pb-left','pb-right'));
+    } else {
+      const cls = 'pb-' + which;
+      const allHave = blocks.every(b => b.classList.contains(cls));
+      blocks.forEach(b => {
+        if(allHave){
+          b.classList.remove(cls);
+        } else {
+          b.classList.remove('pb-all','pb-top','pb-bottom','pb-left','pb-right');
+          b.classList.add(cls);
+        }
+      });
+    }
+    markDirty();
+  }
+
+  function applyListStyle(){
+    const el = document.getElementById('listStyleSelect');
+    if(!el || !el.value) return;
+    const [tag, style] = el.value.split(':');
+    const cmdName = tag === 'ol' ? 'insertOrderedList' : 'insertUnorderedList';
+    document.execCommand(cmdName, false, null);
+    const sel = window.getSelection();
+    if(sel && sel.rangeCount){
+      let n = sel.getRangeAt(0).startContainer;
+      while(n && n !== doc){
+        if(n.nodeType === 1 && /^(UL|OL)$/.test(n.tagName)){ n.style.listStyleType = style; break; }
+        n = n.parentNode;
+      }
+    }
+    el.selectedIndex = 0;
+    markDirty();
+  }
+
+  /* FIND / REPLACE */
+  let findHits = [];
+  let findIndex = -1;
+  function clearFindHits(){
+    doc.querySelectorAll('.find-hit, .find-hit-current').forEach(el => {
+      const parent = el.parentNode;
+      while(el.firstChild) parent.insertBefore(el.firstChild, el);
+      parent.removeChild(el);
+      parent.normalize();
+    });
+    findHits = []; findIndex = -1;
+    const cnt = document.getElementById('findCount'); if(cnt) cnt.textContent = '';
+  }
+  function highlightAll(query){
+    clearFindHits();
+    if(!query) return;
+    const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, {
+      acceptNode: n => n.parentElement && n.parentElement.closest('.find-hit') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    });
+    const targets = [];
+    let n;
+    while((n = walker.nextNode())){ if(re.test(n.nodeValue)){ re.lastIndex = 0; targets.push(n); } }
+    targets.forEach(node => {
+      const text = node.nodeValue;
+      const frag = document.createDocumentFragment();
+      let last = 0;
+      let m;
+      const re2 = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      while((m = re2.exec(text))){
+        if(m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const span = document.createElement('span');
+        span.className = 'find-hit';
+        span.textContent = m[0];
+        frag.appendChild(span);
+        findHits.push(span);
+        last = m.index + m[0].length;
+        if(m[0].length === 0) re2.lastIndex++;
+      }
+      if(last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+    const cnt = document.getElementById('findCount');
+    if(cnt) cnt.textContent = findHits.length ? (findHits.length + ' match' + (findHits.length === 1 ? '' : 'es')) : 'No matches';
+    if(findHits.length){ findIndex = 0; markCurrent(); }
+  }
+  function markCurrent(){
+    findHits.forEach((h, i) => h.className = (i === findIndex ? 'find-hit-current' : 'find-hit'));
+    if(findHits[findIndex]) findHits[findIndex].scrollIntoView({block:'center', behavior:'smooth'});
+    const cnt = document.getElementById('findCount');
+    if(cnt && findHits.length) cnt.textContent = (findIndex+1) + ' / ' + findHits.length;
+  }
+  function findNext(){ if(!findHits.length) return; findIndex = (findIndex+1) % findHits.length; markCurrent(); }
+  function findPrev(){ if(!findHits.length) return; findIndex = (findIndex-1+findHits.length) % findHits.length; markCurrent(); }
+  function replaceOne(){
+    const r = document.getElementById('replaceInput').value;
+    if(findIndex < 0 || !findHits[findIndex]) return;
+    const hit = findHits[findIndex];
+    const txt = document.createTextNode(r);
+    hit.parentNode.replaceChild(txt, hit);
+    findHits.splice(findIndex, 1);
+    if(findIndex >= findHits.length) findIndex = 0;
+    markCurrent();
+    markDirty();
+  }
+  function replaceAll(){
+    const r = document.getElementById('replaceInput').value;
+    if(!findHits.length) return;
+    findHits.forEach(h => { h.parentNode.replaceChild(document.createTextNode(r), h); });
+    const n = findHits.length;
+    findHits = []; findIndex = -1;
+    const cnt = document.getElementById('findCount'); if(cnt) cnt.textContent = 'Replaced ' + n;
+    markDirty();
+  }
+  function openFind(){
+    document.getElementById('findbar').style.display = 'flex';
+    const i = document.getElementById('findInput'); i.focus(); i.select();
+  }
+  function openReplace(){ openFind(); document.getElementById('replaceInput').focus(); }
+  function closeFind(){ clearFindHits(); document.getElementById('findbar').style.display = 'none'; doc.focus(); }
+
+  /* JUMP-TO TOC */
+  function buildJumpTo(){
+    const sel = document.getElementById('jumpTo');
+    if(!sel) return;
+    sel.innerHTML = '<option value="">Jump to…</option>';
+    const heads = doc.querySelectorAll('h1, h2, h3');
+    let i = 0;
+    heads.forEach(h => {
+      if(!h.id) h.id = 'sec-' + (i++);
+      const indent = h.tagName === 'H1' ? '' : (h.tagName === 'H2' ? '— ' : '  · ');
+      const o = document.createElement('option');
+      o.value = h.id;
+      o.textContent = indent + (h.textContent || '').trim().slice(0, 60);
+      sel.appendChild(o);
+    });
+  }
+  buildJumpTo();
+  let tocTimer = null;
+  doc.addEventListener('input', () => { clearTimeout(tocTimer); tocTimer = setTimeout(buildJumpTo, 1500); });
+
+  /* TOOLBAR WIRING */
+  document.querySelectorAll('.tb button, .findbar button').forEach(btn => {
+    btn.addEventListener('mousedown', e => e.preventDefault());
+  });
+
+  let savedRange = null;
+  function saveSelection(){
+    try{
+      const sel = window.getSelection();
+      if(sel && sel.rangeCount){
+        const r = sel.getRangeAt(0);
+        if(doc.contains(r.commonAncestorContainer)) savedRange = r.cloneRange();
+      }
+    }catch(e){}
+  }
+  function restoreSelection(){
+    if(!savedRange) return;
+    try{
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(savedRange);
+    }catch(e){}
+  }
+  doc.addEventListener('mouseup', saveSelection);
+  doc.addEventListener('keyup', saveSelection);
+  document.querySelectorAll('.tb select, .tb input[type=color]').forEach(el => {
+    el.addEventListener('mousedown', saveSelection);
+    el.addEventListener('focus', saveSelection);
+  });
+  function wrapWithRestore(handler){ return function(e){ restoreSelection(); handler(e); }; }
+
+  document.getElementById('styleSelect').addEventListener('change', wrapWithRestore(applyBlockStyle));
+  document.getElementById('lineSpacing').addEventListener('change', wrapWithRestore(applyLineSpacing));
+  document.getElementById('borderSelect').addEventListener('change', wrapWithRestore(applyBorder));
+  document.getElementById('listStyleSelect').addEventListener('change', wrapWithRestore(applyListStyle));
+  document.getElementById('jumpTo').addEventListener('change', e => {
+    const id = e.target.value;
+    if(!id) return;
+    const target = document.getElementById(id);
+    if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    e.target.selectedIndex = 0;
+  });
+  document.getElementById('findInput').addEventListener('input', e => highlightAll(e.target.value));
+  document.getElementById('findInput').addEventListener('keydown', e => {
+    if(e.key === 'Enter'){ e.preventDefault(); e.shiftKey ? findPrev() : findNext(); }
+    if(e.key === 'Escape'){ closeFind(); }
+  });
+  document.getElementById('replaceInput').addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeFind();
+  });
+
+  /* HIGHLIGHT toggle */
+  function selectionHasHighlight(){
+    try{
+      const v = document.queryCommandValue('hiliteColor') || document.queryCommandValue('backColor');
+      if(!v) return false;
+      const trimmed = ('' + v).trim();
+      if(!trimmed || trimmed === 'transparent' || /rgba?\(\s*0\s*,\s*0\s*,\s*0\s*,\s*0\s*\)/.test(trimmed)) return false;
+      const m = trimmed.match(/rgba?\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+      if(m && +m[1] >= 250 && +m[2] >= 250 && +m[3] >= 250) return false;
+      return true;
+    }catch(e){ return false; }
+  }
+  function unhighlight(){
+    try{
+      document.execCommand('hiliteColor', false, 'transparent');
+      const sel = window.getSelection();
+      if(sel && sel.rangeCount){
+        const range = sel.getRangeAt(0);
+        const it = document.createTreeWalker(doc, NodeFilter.SHOW_ELEMENT, {
+          acceptNode: n => range.intersectsNode(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+        });
+        let n;
+        while((n = it.nextNode())){
+          if(n.style && n.style.backgroundColor) n.style.backgroundColor = '';
+        }
+      }
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('unhighlight failed', e); }
+  }
+  function toggleHighlight(){
+    if(selectionHasHighlight()){
+      unhighlight();
+    } else {
+      const c = document.getElementById('bgColor').value;
+      cmd('hiliteColor', c);
+    }
+  }
+
+  /* CONFIGURABLE SHORTCUTS */
+  const ACTIONS = [
+    {id:'save',          label:'Save now',                        def:'ctrl+s',         run: () => saveNow()},
+    {id:'find',          label:'Find',                            def:'ctrl+f',         run: () => openFind()},
+    {id:'replace',       label:'Find & Replace',                  def:'ctrl+h',         run: () => openReplace()},
+    {id:'highlight',     label:'Toggle highlight on selection',   def:'ctrl+shift+h',   run: () => toggleHighlight()},
+    {id:'unhighlight',   label:'Remove highlight',                def:'ctrl+shift+u',   run: () => unhighlight()},
+    {id:'bold',          label:'Bold',                            def:'ctrl+b',         run: () => cmd('bold')},
+    {id:'italic',        label:'Italic',                          def:'ctrl+i',         run: () => cmd('italic')},
+    {id:'underline',     label:'Underline',                       def:'ctrl+u',         run: () => cmd('underline')},
+    {id:'strike',        label:'Strikethrough',                   def:'',               run: () => cmd('strikeThrough')},
+    {id:'super',         label:'Superscript',                     def:'ctrl+shift+=',   run: () => cmd('superscript')},
+    {id:'sub',           label:'Subscript',                       def:'ctrl+=',         run: () => cmd('subscript')},
+    {id:'selectAll',     label:'Select all (in document)',        def:'ctrl+a',         run: () => {
+        const range = document.createRange(); range.selectNodeContents(doc);
+        const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+    }},
+    {id:'indent',        label:'Increase indent',                 def:'tab',            run: () => { document.execCommand('indent'); markDirty(); }},
+    {id:'outdent',       label:'Decrease indent',                 def:'shift+tab',      run: () => { document.execCommand('outdent'); markDirty(); }},
+    {id:'undo',          label:'Undo',                            def:'ctrl+z',         run: () => cmd('undo')},
+    {id:'redo',          label:'Redo',                            def:'ctrl+y',         run: () => cmd('redo')}
+  ];
+  let bindings = {};
+  function loadShortcuts(){
+    try{
+      const saved = JSON.parse(localStorage.getItem(SHORTCUT_KEY) || '{}');
+      bindings = {};
+      ACTIONS.forEach(a => { bindings[a.id] = saved[a.id] != null ? saved[a.id] : a.def; });
+    }catch(e){ bindings = Object.fromEntries(ACTIONS.map(a => [a.id, a.def])); }
+  }
+  function saveShortcuts(){
+    try{ localStorage.setItem(SHORTCUT_KEY, JSON.stringify(bindings)); }catch(e){ console.warn('save shortcuts failed', e); }
+  }
+  function resetShortcuts(){
+    if(!confirm('Reset all shortcuts to defaults?')) return;
+    bindings = {};
+    ACTIONS.forEach(a => { bindings[a.id] = a.def; });
+    saveShortcuts();
+    renderShortcuts();
+  }
+  function comboFromEvent(e){
+    if(e.key === 'Tab'){
+      return (e.shiftKey ? 'shift+' : '') + 'tab';
+    }
+    if(e.key === 'Escape' || e.key === 'Control' || e.key === 'Shift' || e.key === 'Alt' || e.key === 'Meta') return null;
+    const parts = [];
+    if(e.ctrlKey || e.metaKey) parts.push('ctrl');
+    if(e.altKey) parts.push('alt');
+    if(e.shiftKey) parts.push('shift');
+    parts.push(e.key.toLowerCase());
+    return parts.join('+');
+  }
+  loadShortcuts();
+
+  function openShortcuts(){
+    document.getElementById('shortcutsModal').classList.add('show');
+    renderShortcuts();
+  }
+  function closeShortcuts(){
+    document.getElementById('shortcutsModal').classList.remove('show');
+  }
+  function renderShortcuts(){
+    const tbl = document.getElementById('shortcutsTable');
+    tbl.innerHTML = '<tr style="background:#f1ead9"><th style="text-align:left;padding:6px 8px;border-bottom:1px solid #ccc">Action</th><th style="text-align:left;padding:6px 8px;border-bottom:1px solid #ccc">Shortcut</th><th style="border-bottom:1px solid #ccc"></th></tr>';
+    ACTIONS.forEach(a => {
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td style="padding:5px 8px;border-bottom:1px solid #eee">'+a.label+'</td>' +
+        '<td style="padding:5px 8px;border-bottom:1px solid #eee"><button data-act="'+a.id+'" class="kb-btn" style="font-family:Consolas,monospace;padding:3px 8px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer;min-width:130px;text-align:left">'+(bindings[a.id] || '— click to set —')+'</button></td>' +
+        '<td style="padding:5px 4px;border-bottom:1px solid #eee"><button data-clear="'+a.id+'" style="font-size:11px;padding:3px 6px;border:1px solid #ccc;border-radius:3px;background:#fff;cursor:pointer">clear</button></td>';
+      tbl.appendChild(tr);
+    });
+    tbl.querySelectorAll('.kb-btn').forEach(btn => {
+      btn.onclick = () => {
+        btn.textContent = '… press a key combo …';
+        btn.style.background = '#fff4e2';
+        const handler = (ev) => {
+          ev.preventDefault();
+          const combo = comboFromEvent(ev);
+          if(combo == null) return;
+          const conflict = Object.entries(bindings).find(([k,v]) => v === combo && k !== btn.dataset.act);
+          if(conflict){
+            const ok = confirm('That combo is already bound to "'+ACTIONS.find(a=>a.id===conflict[0]).label+'". Reassign anyway?');
+            if(!ok){ btn.textContent = bindings[btn.dataset.act] || '— click to set —'; btn.style.background='#fff'; window.removeEventListener('keydown', handler, true); return; }
+            bindings[conflict[0]] = '';
+          }
+          bindings[btn.dataset.act] = combo;
+          saveShortcuts();
+          window.removeEventListener('keydown', handler, true);
+          renderShortcuts();
+        };
+        window.addEventListener('keydown', handler, true);
+      };
+    });
+    tbl.querySelectorAll('button[data-clear]').forEach(btn => {
+      btn.onclick = () => { bindings[btn.dataset.clear] = ''; saveShortcuts(); renderShortcuts(); };
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if(document.getElementById('shortcutsModal').classList.contains('show')) return;
+    const combo = comboFromEvent(e);
+    if(!combo) return;
+    for(const a of ACTIONS){
+      if(bindings[a.id] && bindings[a.id] === combo){
+        if((a.id === 'indent' || a.id === 'outdent') && !doc.contains(document.activeElement)) return;
+        if(a.id === 'selectAll' && !doc.contains(document.activeElement)) return;
+        e.preventDefault();
+        try{ a.run(); }catch(err){ console.warn('shortcut '+a.id+' failed:', err); }
+        return;
+      }
+    }
+  });
+
+  /* PUBLIC */
+  window.cmd = cmd;
+  window.changeCase = changeCase;
+  window.applyShade = applyShade;
+  window.unhighlight = unhighlight;
+  window.toggleHighlight = toggleHighlight;
+  window.openShortcuts = openShortcuts;
+  window.closeShortcuts = closeShortcuts;
+  window.resetShortcuts = resetShortcuts;
+  window.insertHorizontalRule = insertHorizontalRule;
+  window.insertPageBreak = insertPageBreak;
+  window.insertImageFromFile = insertImageFromFile;
+  window.openFind = openFind;
+  window.openReplace = openReplace;
+  window.closeFind = closeFind;
+  window.findNext = findNext;
+  window.findPrev = findPrev;
+  window.replaceOne = replaceOne;
+  window.replaceAll = replaceAll;
+  window.resetDoc = resetDoc;
+  window.downloadHTML = downloadHTML;
+})();
+</script>
+</body>
+</html>

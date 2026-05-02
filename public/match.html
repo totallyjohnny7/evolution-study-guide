@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Match Mode — BIOL 4230 Evolution</title>
+<style>
+  :root{--bg:#0c0e12;--paper:#14171d;--ink:#e6dfd0;--muted:#a59a83;--rule:#22262f;--accent:#c89b2e;--match-bad:#c34;--match-good:#3a8a3a;--match-active:#5a7ed8}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-tap-highlight-color:transparent}
+  .top{display:flex;align-items:center;gap:14px;padding:14px 24px;background:#16161b;border-bottom:1px solid var(--rule);flex-wrap:wrap}
+  .top a{color:var(--accent);text-decoration:none;font-weight:600;font-size:13px}
+  .top h1{margin:0;font-size:18px;font-family:"Fraunces",Georgia,serif;font-weight:600}
+  .pick{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+  .pick button{padding:8px 14px;background:#222;color:var(--ink);border:1px solid var(--rule);border-radius:6px;cursor:pointer;font-size:13px;font-weight:600}
+  .pick button:hover{background:#2a2a30}
+  .pick button.active{background:var(--accent);color:#000;border-color:var(--accent)}
+  .stats{display:flex;gap:18px;padding:10px 24px;background:#13131a;border-bottom:1px solid var(--rule);font-size:13px;color:var(--muted)}
+  .stats b{color:var(--ink);font-size:15px;font-variant-numeric:tabular-nums}
+  .stats .timer b{color:var(--accent)}
+  .stats .score b{color:var(--match-good)}
+  .stats .errors b{color:var(--match-bad)}
+  .controls{display:flex;gap:8px;margin-left:auto}
+  .controls button{padding:6px 12px;font-size:12px;border:1px solid var(--rule);background:#222;color:var(--ink);border-radius:5px;cursor:pointer;font-weight:600}
+  .controls button:hover{background:#2a2a30}
+  .controls .start{background:var(--accent);color:#000;border-color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;padding:16px;max-width:1400px;margin:0 auto}
+  .tile{background:var(--paper);border:1.5px solid var(--rule);border-radius:8px;padding:12px;cursor:pointer;transition:transform 0.1s, border-color 0.1s, background 0.15s;min-height:80px;display:flex;align-items:center;font-size:13.5px;line-height:1.35;user-select:none}
+  .tile:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .tile.active{background:var(--match-active);color:#fff;border-color:var(--match-active);transform:scale(1.03)}
+  .tile.matched{opacity:0.25;cursor:default;pointer-events:none;background:#0a1a0a;border-color:var(--match-good)}
+  .tile.wrong{background:var(--match-bad);color:#fff;border-color:var(--match-bad);animation:shake 0.4s}
+  .tile.term{font-weight:700;color:var(--accent)}
+  .tile.def{color:var(--ink)}
+  .tile sub, .tile sup{font-size:10px}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+  .splash{display:flex;align-items:center;justify-content:center;min-height:60vh;flex-direction:column;text-align:center;padding:20px;color:var(--muted)}
+  .splash h2{color:var(--ink);font-family:"Fraunces",Georgia,serif;margin:0 0 12px;font-size:24px}
+  .splash p{max-width:540px;line-height:1.5;font-size:14px}
+  .splash .start-btn{margin-top:18px;padding:14px 28px;background:var(--accent);color:#000;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer}
+  .winscreen{position:fixed;inset:0;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;z-index:100}
+  .winscreen.show{display:flex}
+  .winscreen .card{background:var(--paper);border:1px solid var(--accent);border-radius:12px;padding:28px;max-width:420px;text-align:center}
+  .winscreen h2{color:var(--accent);font-family:"Fraunces",Georgia,serif;margin:0 0 12px;font-size:26px}
+  .winscreen .stat{font-size:32px;font-weight:700;color:var(--ink);margin:6px 0;font-variant-numeric:tabular-nums}
+  .winscreen .stat-label{color:var(--muted);font-size:12px;letter-spacing:0.1em;text-transform:uppercase}
+  .winscreen button{margin:14px 6px 0;padding:10px 20px;background:var(--accent);color:#000;border:none;border-radius:6px;cursor:pointer;font-weight:700}
+  .pair-size{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:12px}
+  .pair-size button{padding:5px 10px;font-size:11px;background:#222;border:1px solid var(--rule);color:var(--ink);border-radius:4px;cursor:pointer;min-width:32px;min-height:32px}
+  .pair-size button.active{background:var(--accent);color:#000;border-color:var(--accent)}
+  .mastery{color:var(--muted);font-size:13px}
+  .mastery b{color:var(--match-good);font-size:15px;font-variant-numeric:tabular-nums}
+
+  /* ============ MOBILE / TOUCH RESPONSIVE ============ */
+  @media (max-width: 720px) {
+    .top{padding:10px 12px;gap:8px}
+    .top h1{font-size:15px}
+    .pick{margin-left:0;width:100%;gap:5px}
+    .pick button{padding:8px 10px;font-size:11.5px;flex:1;min-width:0;min-height:44px}
+    .stats{padding:8px 12px;font-size:12px;gap:10px;flex-wrap:wrap}
+    .stats .pair-size{order:5;flex-basis:100%;justify-content:flex-start}
+    .stats .controls{order:6;flex-basis:100%;justify-content:flex-start}
+    .stats .mastery{font-size:12px}
+    .controls button{padding:8px 14px;min-height:40px;font-size:12px}
+    .grid{padding:10px;gap:6px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+    .tile{padding:10px;font-size:12.5px;min-height:64px}
+  }
+  @media (max-width: 480px) {
+    .grid{grid-template-columns:repeat(2,1fr);gap:5px;padding:8px}
+    .tile{padding:8px;font-size:11.5px;min-height:60px;line-height:1.3}
+  }
+
+  /* Disable iOS zoom on tap; ensure touch target ≥44px */
+  .tile{touch-action:manipulation}
+  .pick button, .controls button, .pair-size button{touch-action:manipulation}
+
+  /* Suppress hover styles on touch devices */
+  @media (hover: none) {
+    .tile:hover{border-color:var(--rule);transform:none}
+    .pick button:hover{background:#222}
+    .controls button:hover{background:#222}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a href="index.html">← Back to EVOLution</a>
+  <h1>Match Mode · vocab game</h1>
+  <div class="pick" id="examPicker">
+    <button data-exam="1">Exam 1 · Mechanisms / Pop Gen (L01–L05)</button>
+    <button data-exam="2">Exam 2 · Adaptations / Sex / Social (L07–L13)</button>
+    <button data-exam="3" class="active">Exam 3 · Phylogeny / Speciation / Humans (L14–L20)</button>
+    <button data-exam="all">All · Final</button>
+  </div>
+</div>
+
+<div class="stats" id="stats" style="display:none">
+  <span class="timer">⏱ <b id="timer">0.0</b>s</span>
+  <span class="score">✅ <b id="score">0</b> / <b id="total">0</b></span>
+  <span class="errors">❌ <b id="errors">0</b></span>
+  <span class="pair-size">Round size:
+    <button data-size="6" class="active">6</button>
+    <button data-size="10">10</button>
+    <button data-size="14">14</button>
+    <button data-size="20">20</button>
+    <button data-size="30">30</button>
+  </span>
+  <span class="mastery">📚 <b id="mastered">0</b> / <b id="totalVocab">0</b> mastered</span>
+  <div class="controls">
+    <button onclick="startGame()" class="start" id="startBtn">▶ Start</button>
+    <button onclick="newRound()">New round</button>
+    <button onclick="resetMastery()" title="Reset mastery progress for this exam" style="color:#c34">↺ Reset</button>
+  </div>
+</div>
+
+<div id="content">
+  <div class="splash">
+    <h2>Match Mode</h2>
+    <p>Pick an exam above. The game pulls <b>vocabulary terms</b> from that exam's flashcard decks, scrambles them with their definitions, and shows them in a grid. Click a term, then click its match. Beat the clock.</p>
+    <p style="margin-top:14px"><b>Drill mode:</b> the game prioritizes terms you haven't yet matched on the first try. Once everything is mastered it shifts into review.</p>
+    <p style="margin-top:14px;color:var(--muted);font-size:12.5px">Self-paced flashcards are still in the main site (Flash mode) — this is the fast, timed recall game.</p>
+    <button class="start-btn" onclick="startGame()">▶ Start with Exam 3</button>
+  </div>
+</div>
+
+<div class="winscreen" id="winScreen">
+  <div class="card">
+    <h2>🎉 Round complete!</h2>
+    <div class="stat-label">Time</div>
+    <div class="stat" id="winTime">—</div>
+    <div class="stat-label">Errors</div>
+    <div class="stat" id="winErrors">—</div>
+    <div class="stat-label">Best for this exam · this round size</div>
+    <div class="stat" id="winBest">—</div>
+    <button onclick="newRound()">New round</button>
+    <button onclick="window.location.href='index.html'" style="background:#222;color:var(--ink)">Back</button>
+  </div>
+</div>
+
+<script src="content/flashcards.js"></script>
+<script src="content/flashcards-extra.js"></script>
+<script>
+/* =================================================================
+   MATCH MODE — fast-paced timed vocab game (BIOL 4230 Evolution)
+   ================================================================= */
+
+/* Map each exam to the lecture deck IDs it contains.
+   Source of truth: data/evol4230.json. */
+const EXAM_TO_LECTURES = {
+  '1':   ['L01','L02','L03','L04','L05'],
+  '2':   ['L07','L08','L09','L11','L12','L13'],
+  '3':   ['L14','L15','L16','L17','L18','L19','L20'],
+  'all': ['L01','L02','L03','L04','L05','L07','L08','L09','L11','L12','L13','L14','L15','L16','L17','L18','L19','L20'],
+};
+
+let currentExam = '3';
+let pairsThisRound = 6;
+let activeTile = null;
+let matched = 0;
+let errors = 0;
+let totalPairs = 0;
+let timerStart = 0;
+let timerInterval = null;
+let gameRunning = false;
+
+/* Strip HTML tags from a string and collapse whitespace. */
+function stripHtml(s) {
+  return (s || '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&[a-z]+;/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/* Extract vocab pairs from the requested exam's lecture decks.
+   Evolution flashcards have plain {term, def} entries — no WORD BREAKDOWN parsing.
+   We dedupe by lowercased term across all included lectures. */
+function extractVocab(examKey) {
+  const lectures = EXAM_TO_LECTURES[examKey] || [];
+  const decks = window.FLASHCARD_DECKS || {};
+  const seen = new Set();
+  const pairs = [];
+  lectures.forEach(L => {
+    const cards = decks[L] || [];
+    cards.forEach(card => {
+      if (!card || !card.term || !card.def) return;
+      const term = stripHtml(card.term);
+      let def = stripHtml(card.def);
+      if (!term || !def || def.length < 3) return;
+      if (def.toLowerCase() === term.toLowerCase()) return;
+      // Trim long definitions to fit the tile
+      if (def.length > 180) def = def.slice(0, 175) + '…';
+      const key = term.toLowerCase().replace(/[^a-z0-9]/g, '');
+      if (!key || seen.has(key)) return;
+      seen.add(key);
+      pairs.push({ term, def });
+    });
+  });
+  return pairs;
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function startGame() {
+  gameRunning = true;
+  document.getElementById('stats').style.display = 'flex';
+  newRound();
+}
+
+/* Mastery tracking — per exam, per term (lowercased term as key). */
+function masteryKey(exam) { return 'evol-match-mastered-' + exam; }
+function getMastery(exam) {
+  try { return new Set(JSON.parse(localStorage.getItem(masteryKey(exam)) || '[]')); }
+  catch (e) { return new Set(); }
+}
+function saveMastery(exam, set) {
+  try { localStorage.setItem(masteryKey(exam), JSON.stringify([...set])); } catch (e) {}
+}
+function termKey(t) { return t.toLowerCase().replace(/[^a-z0-9]/g, ''); }
+function updateMasteryDisplay() {
+  const pool = extractVocab(currentExam);
+  const mastered = getMastery(currentExam);
+  document.getElementById('mastered').textContent = [...mastered].filter(k => pool.some(p => termKey(p.term) === k)).length;
+  document.getElementById('totalVocab').textContent = pool.length;
+}
+function resetMastery() {
+  const label = currentExam === 'all' ? 'the Final pool' : 'Exam ' + currentExam;
+  if (!confirm('Reset mastery progress for ' + label + '?')) return;
+  saveMastery(currentExam, new Set());
+  updateMasteryDisplay();
+}
+
+function newRound() {
+  const pool = extractVocab(currentExam);
+  if (pool.length < 4) {
+    document.getElementById('content').innerHTML =
+      '<div class="splash"><p style="color:var(--match-bad)">Not enough vocab in this exam yet.</p></div>';
+    return;
+  }
+  updateMasteryDisplay();
+  // PRIORITIZE unmastered terms for drill mode
+  const mastered = getMastery(currentExam);
+  const unmastered = pool.filter(p => !mastered.has(termKey(p.term)));
+  let drawPool;
+  if (unmastered.length >= pairsThisRound) {
+    drawPool = unmastered;
+  } else if (unmastered.length > 0) {
+    drawPool = unmastered.concat(shuffle(pool.filter(p => mastered.has(termKey(p.term)))).slice(0, pairsThisRound - unmastered.length));
+  } else {
+    drawPool = pool.slice();
+  }
+  const n = Math.min(pairsThisRound, drawPool.length);
+  const chosen = shuffle(drawPool.slice()).slice(0, n);
+  totalPairs = n;
+  matched = 0;
+  errors = 0;
+  activeTile = null;
+  document.getElementById('total').textContent = n;
+  document.getElementById('score').textContent = '0';
+  document.getElementById('errors').textContent = '0';
+  const tiles = [];
+  chosen.forEach((p, i) => {
+    tiles.push({ kind: 'term', text: p.term, pairId: i });
+    tiles.push({ kind: 'def',  text: p.def,  pairId: i });
+  });
+  shuffle(tiles);
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+  tiles.forEach((t, idx) => {
+    const el = document.createElement('div');
+    el.className = 'tile ' + t.kind;
+    el.textContent = t.text;
+    el.dataset.pairId = t.pairId;
+    el.dataset.kind = t.kind;
+    el.dataset.idx = idx;
+    el.onclick = () => onTileClick(el);
+    grid.appendChild(el);
+  });
+  const content = document.getElementById('content');
+  content.innerHTML = '';
+  content.appendChild(grid);
+  if (timerInterval) clearInterval(timerInterval);
+  timerStart = Date.now();
+  timerInterval = setInterval(updateTimer, 100);
+  document.getElementById('winScreen').classList.remove('show');
+}
+
+function updateTimer() {
+  const t = (Date.now() - timerStart) / 1000;
+  document.getElementById('timer').textContent = t.toFixed(1);
+}
+
+function onTileClick(el) {
+  if (el.classList.contains('matched') || el.classList.contains('wrong')) return;
+  if (!activeTile) {
+    el.classList.add('active');
+    activeTile = el;
+    return;
+  }
+  if (activeTile === el) {
+    el.classList.remove('active');
+    activeTile = null;
+    return;
+  }
+  if (activeTile.dataset.pairId === el.dataset.pairId && activeTile.dataset.kind !== el.dataset.kind) {
+    activeTile.classList.remove('active');
+    activeTile.classList.add('matched');
+    el.classList.add('matched');
+    const term = (activeTile.dataset.kind === 'term' ? activeTile : el).textContent;
+    const mastered = getMastery(currentExam);
+    mastered.add(termKey(term));
+    saveMastery(currentExam, mastered);
+    updateMasteryDisplay();
+    activeTile = null;
+    matched++;
+    document.getElementById('score').textContent = matched;
+    if (matched === totalPairs) finishRound();
+  } else {
+    errors++;
+    document.getElementById('errors').textContent = errors;
+    el.classList.add('wrong');
+    const prev = activeTile;
+    prev.classList.remove('active');
+    prev.classList.add('wrong');
+    activeTile = null;
+    setTimeout(() => {
+      el.classList.remove('wrong');
+      prev.classList.remove('wrong');
+    }, 450);
+  }
+}
+
+function finishRound() {
+  clearInterval(timerInterval);
+  const t = (Date.now() - timerStart) / 1000;
+  const bestKey = 'evol-match-best-' + currentExam + '-' + pairsThisRound;
+  const score = t + errors * 2;
+  let best = parseFloat(localStorage.getItem(bestKey) || 'NaN');
+  if (isNaN(best) || score < best) {
+    best = score;
+    localStorage.setItem(bestKey, String(best));
+  }
+  document.getElementById('winTime').textContent = t.toFixed(1) + 's';
+  document.getElementById('winErrors').textContent = errors;
+  document.getElementById('winBest').textContent = best.toFixed(1) + 's';
+  document.getElementById('winScreen').classList.add('show');
+}
+
+document.querySelectorAll('#examPicker button').forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll('#examPicker button').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    currentExam = b.dataset.exam;
+    updateMasteryDisplay();
+    if (gameRunning) newRound();
+  };
+});
+
+setTimeout(updateMasteryDisplay, 200);
+
+document.querySelectorAll('.pair-size button').forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll('.pair-size button').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    pairsThisRound = parseInt(b.dataset.size, 10);
+    if (gameRunning) newRound();
+  };
+});
+
+window.startGame = startGame;
+window.newRound = newRound;
+</script>
+</body>
+</html>

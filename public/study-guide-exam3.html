@@ -1,0 +1,1522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Exam 3 · Phylogeny / Speciation / Humans — BIOL 4230 Evolution</title>
+<style>
+  :root{
+    --bg:#0c0e12; --paper:#fdfaf2; --ink:#1a1814; --muted:#5b554b;
+    --rule:#d8d2c5; --accent:#c89b2e; --accent-bg:#fff4e2;
+    --shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Times New Roman", Times, serif;}
+  /* Toolbar */
+  .tb{position:sticky;top:0;z-index:50;background:#16161b;color:#e6dfd0;border-bottom:1px solid #22262f;padding:6px 12px;display:flex;flex-direction:column;gap:5px;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:12.5px;box-shadow:var(--shadow)}
+  .tb-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .tb .grp{display:inline-flex;gap:3px;align-items:center;border:1px solid #22262f;border-radius:6px;padding:2px 4px;background:#0c0e12}
+  .tb button, .tb select, .tb input[type=color]{
+    background:#14171d;border:1px solid transparent;border-radius:4px;padding:3px 6px;font-size:12.5px;cursor:pointer;color:#e6dfd0
+  }
+  .tb button:hover{background:#22262f}
+  .tb button:active{background:var(--accent);color:#0c0e12}
+  .tb select{padding:3px 5px;max-width:160px;background:#14171d;color:#e6dfd0}
+  .tb input[type=color]{width:24px;height:22px;padding:0;border:1px solid #22262f}
+  .tb .spacer{flex:1}
+  .tb .save-status{font-size:11.5px;color:#a59a83;min-width:140px;text-align:right;padding:0 6px}
+  .tb .save-status b{color:#5fa871}
+  .tb .save-status.dirty b{color:var(--accent)}
+  .tb-btn-wide{padding:3px 9px;font-weight:600}
+  .tb a.back-link{color:var(--accent);text-decoration:none;font-weight:600;padding:3px 8px;font-size:12.5px}
+  .tb a.back-link:hover{text-decoration:underline}
+  .doc blockquote{border-left:3px solid var(--accent);background:#fff7e8;margin:6px 0 6px 8px;padding:4px 12px;color:#3a2e15;font-style:italic}
+  .doc pre{font-family:Consolas,Menlo,Monaco,monospace;background:#fffaf0;border:1px solid var(--rule);border-radius:4px;padding:6px 10px;margin:6px 0;font-size:10.5pt;white-space:pre-wrap}
+  .doc .pb-all{border:1px solid #555;padding:4px 8px;border-radius:3px}
+  .doc .pb-top{border-top:1px solid #555;padding-top:3px}
+  .doc .pb-bottom{border-bottom:1px solid #555;padding-bottom:3px}
+  .doc .pb-left{border-left:3px solid #555;padding-left:8px}
+  .doc .pb-right{border-right:3px solid #555;padding-right:8px}
+  .doc .find-hit{background:#ffe17a;outline:1px solid #d6a01a}
+  .doc .find-hit-current{background:#ff9b1a;outline:2px solid #b04200;color:#fff}
+  /* Find bar */
+  .findbar{position:sticky;top:80px;z-index:49;background:#fffaf0;border-bottom:1px solid var(--rule);padding:6px 12px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;box-shadow:0 4px 12px rgba(0,0,0,0.06);font-family:"Inter",system-ui,sans-serif;font-size:13px}
+  .findbar input[type=text]{padding:5px 8px;border:1px solid var(--rule);border-radius:4px;font-size:13px;min-width:180px}
+  .findbar button{padding:5px 10px;border:1px solid var(--rule);background:#fff;border-radius:4px;cursor:pointer;font-size:12.5px}
+  .findbar button:hover{background:#f1ead9}
+  /* Page wrapper */
+  .pageWrap{padding:24px 0;display:flex;flex-direction:column;align-items:center;gap:16px}
+  .doc{
+    width:8.5in; min-height:11in; background:var(--paper); padding:0.55in 0.7in;
+    box-shadow:var(--shadow); border:1px solid var(--rule);
+    font-size:11pt; line-height:1.32;
+  }
+  .doc:focus{outline:none}
+  .doc h1{font-size:16pt;text-align:center;margin:0 0 2px;font-family:"Fraunces",Georgia,serif}
+  .doc h2{font-size:13pt;border-bottom:1.2pt solid var(--ink);padding-bottom:2px;margin:14px 0 6px;clear:both;font-family:"Fraunces",Georgia,serif;color:#3a2e15}
+  .doc h3{font-size:11.5pt;margin:8px 0 3px;color:#3a2e15;text-decoration:underline}
+  .doc h4{font-size:11pt;margin:6px 0 1px;font-style:italic}
+  .doc p{margin:2px 0 4px}
+  .doc p.intro{margin:4px 0 8px;font-style:italic;color:#3a2e15}
+  .doc p.overview{margin:3px 0 6px;color:#1a1814}
+  .doc .meta{text-align:center;color:var(--muted);font-size:10pt;margin-bottom:8px}
+  .doc ul{margin:2px 0 6px 18px;padding:0}
+  .doc li{margin:1px 0}
+  .doc .q{font-weight:700;margin-top:6px;color:#3a2e15}
+  .doc .a{font-weight:400}
+  .doc figure{
+    width:1.7in; margin:2px 8px 4px 8px; float:right; clear:right;
+    text-align:center; page-break-inside:avoid; break-inside:avoid;
+    font-size:8.5pt;
+  }
+  .doc figure img{max-width:100%;height:auto;max-height:1.6in;object-fit:contain;border:1px solid var(--rule);border-radius:3px;display:block;margin:0 auto}
+  .doc figcaption{font-size:8pt;color:var(--muted);margin-top:1px;font-style:italic;line-height:1.18}
+  .doc h2, .doc h3, .doc table, .doc .pagebreak{clear:both}
+  .doc table{margin-top:6px;border-collapse:collapse;width:100%;font-size:10.5pt}
+  .doc th,.doc td{border:0.5pt solid #888;padding:4px 6px;vertical-align:top}
+  .doc th{background:#f1ead9;text-align:left}
+  .doc .twocol{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .doc .threecol{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .doc .pathway{font-family:Consolas,Menlo,Monaco,monospace;font-size:10.5pt;background:#fffaf0;border-left:3px solid var(--accent);padding:6px 10px;margin:6px 0}
+  .doc .callout{border-left:3px solid var(--accent);background:#fff7e8;padding:6px 10px;margin:8px 0;font-size:10.5pt;color:#3a2e15}
+  .pagebreak{page-break-after:always;break-after:page;height:0}
+  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:200;align-items:center;justify-content:center;padding:20px;font-family:system-ui,sans-serif}
+  .modal.show{display:flex}
+  .modal-card{background:#fff;border-radius:10px;max-width:1000px;width:100%;max-height:90vh;overflow:auto;padding:14px;color:#111}
+  .modal-card h3{margin:0 0 8px;font-family:system-ui}
+  /* Print */
+  @page{size:letter portrait;margin:0.45in}
+  @media print{
+    body{background:#fff}
+    .tb,.modal,.pageWrap,.findbar{padding:0;background:#fff;color:#111}
+    .tb,.findbar{display:none !important}
+    .doc{width:auto;min-height:0;box-shadow:none;border:none;padding:0;font-size:10.5pt;line-height:1.28}
+    .doc figure{width:1.5in;font-size:8pt}
+    .doc figure img{max-height:1.4in}
+    .doc figcaption{font-size:7.5pt}
+    .doc h1{font-size:15pt}
+    .doc h2{font-size:12.5pt;margin:10px 0 4px}
+    .doc h3{font-size:11pt;margin:6px 0 2px}
+    .pagebreak{page-break-after:always}
+    figure{page-break-inside:avoid}
+    h2,h3{page-break-after:avoid}
+    .no-print{display:none !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="tb no-print" id="toolbar">
+
+  <!-- Row 1 -->
+  <div class="tb-row">
+    <a class="back-link" href="guides.html">← Guides</a>
+    <a class="back-link" href="index.html">EVOLution</a>
+    <div class="grp" title="Paragraph style">
+      <select id="styleSelect" title="Paragraph style">
+        <option value="P">Normal</option>
+        <option value="H1">Title</option>
+        <option value="H2">Heading 1</option>
+        <option value="H3">Heading 2</option>
+        <option value="H4">Heading 3</option>
+        <option value="BLOCKQUOTE">Quote</option>
+        <option value="PRE">Code block</option>
+      </select>
+    </div>
+    <div class="grp">
+      <select id="fontFamily" title="Font family">
+        <option value="Times New Roman, Times, serif" selected>Times New Roman</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="Garamond, serif">Garamond</option>
+        <option value="Cambria, serif">Cambria</option>
+        <option value="Arial, Helvetica, sans-serif">Arial</option>
+        <option value="Calibri, sans-serif">Calibri</option>
+        <option value="Verdana, sans-serif">Verdana</option>
+        <option value="Tahoma, sans-serif">Tahoma</option>
+        <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+        <option value="Courier New, monospace">Courier New</option>
+        <option value="Consolas, monospace">Consolas</option>
+      </select>
+      <select id="fontSize" title="Font size (pt)">
+        <option value="1">8 pt</option>
+        <option value="2">10 pt</option>
+        <option value="3" selected>12 pt</option>
+        <option value="4">14 pt</option>
+        <option value="5">18 pt</option>
+        <option value="6">24 pt</option>
+        <option value="7">36 pt</option>
+      </select>
+    </div>
+    <div class="grp">
+      <button onclick="cmd('bold')" title="Bold (Ctrl+B)"><b>B</b></button>
+      <button onclick="cmd('italic')" title="Italic (Ctrl+I)"><i>I</i></button>
+      <button onclick="cmd('underline')" title="Underline (Ctrl+U)"><u>U</u></button>
+      <button onclick="cmd('strikeThrough')" title="Strikethrough"><s>S</s></button>
+      <button onclick="cmd('superscript')" title="Superscript (Ctrl+Shift+=)">x<sup>2</sup></button>
+      <button onclick="cmd('subscript')" title="Subscript (Ctrl+=)">x<sub>2</sub></button>
+      <button onclick="changeCase()" title="Change case — UPPER · lower · Title · Sentence">Aa▾</button>
+    </div>
+    <div class="grp">
+      <input type="color" id="fgColor" title="Text color" value="#111111" />
+      <input type="color" id="bgColor" title="Highlight color (text background)" value="#fff36b" />
+      <button onclick="unhighlight()" title="Remove highlight from selected text (Ctrl+Shift+H toggles)">⌫H</button>
+      <input type="color" id="paraShade" title="Paragraph shading (block background)" value="#f1ead9" />
+    </div>
+    <div class="grp">
+      <button onclick="cmd('undo')" title="Undo (Ctrl+Z)">↶</button>
+      <button onclick="cmd('redo')" title="Redo (Ctrl+Y)">↷</button>
+      <button onclick="cmd('removeFormat')" title="Clear formatting">⌫f</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="save-status" id="saveStatus" title="Edits autosave to this browser only">Loaded</div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="tb-row">
+    <div class="grp">
+      <button onclick="cmd('insertUnorderedList')" title="Bullet list">•≡</button>
+      <button onclick="cmd('insertOrderedList')" title="Numbered list">1.</button>
+      <select id="listStyleSelect" title="Multilevel / list style">
+        <option value="">List style…</option>
+        <optgroup label="Unordered">
+          <option value="ul:disc">• disc</option>
+          <option value="ul:circle">○ circle</option>
+          <option value="ul:square">▪ square</option>
+        </optgroup>
+        <optgroup label="Ordered">
+          <option value="ol:decimal">1. 2. 3.</option>
+          <option value="ol:lower-alpha">a. b. c.</option>
+          <option value="ol:upper-alpha">A. B. C.</option>
+          <option value="ol:lower-roman">i. ii. iii.</option>
+          <option value="ol:upper-roman">I. II. III.</option>
+        </optgroup>
+      </select>
+      <button onclick="cmd('outdent')" title="Decrease indent (Shift+Tab)">⇤</button>
+      <button onclick="cmd('indent')" title="Increase indent (Tab)">⇥</button>
+    </div>
+    <div class="grp">
+      <button onclick="cmd('justifyLeft')" title="Align left">⯇</button>
+      <button onclick="cmd('justifyCenter')" title="Align center">≡</button>
+      <button onclick="cmd('justifyRight')" title="Align right">⯈</button>
+      <button onclick="cmd('justifyFull')" title="Justify">☰</button>
+    </div>
+    <div class="grp">
+      <select id="lineSpacing" title="Line spacing">
+        <option value="">Spacing…</option>
+        <option value="1.0">1.0</option>
+        <option value="1.15">1.15</option>
+        <option value="1.32">1.32 (default)</option>
+        <option value="1.5">1.5</option>
+        <option value="2.0">2.0</option>
+        <option value="2.5">2.5</option>
+        <option value="3.0">3.0</option>
+      </select>
+      <select id="borderSelect" title="Paragraph border">
+        <option value="">Border…</option>
+        <option value="none">No border</option>
+        <option value="all">Box (all sides)</option>
+        <option value="top">Top only</option>
+        <option value="bottom">Bottom only</option>
+        <option value="left">Left only</option>
+        <option value="right">Right only</option>
+      </select>
+      <button onclick="applyShade()" title="Apply selected shading color to paragraph(s)">Shade</button>
+    </div>
+    <div class="grp">
+      <button onclick="openFind()" title="Find (Ctrl+F)">🔍 Find</button>
+      <button onclick="openReplace()" title="Find &amp; Replace (Ctrl+H)">⇄ Replace</button>
+      <button onclick="cmd('selectAll')" title="Select all (Ctrl+A)">Select All</button>
+    </div>
+    <div class="grp">
+      <select id="jumpTo" title="Jump to a section">
+        <option value="">Jump to…</option>
+      </select>
+    </div>
+    <div class="grp">
+      <button onclick="document.getElementById('imgFile').click()" title="Insert image from your computer">📷 Image</button>
+      <input type="file" id="imgFile" accept="image/*" style="display:none" onchange="insertImageFromFile(event)" />
+      <button onclick="insertHorizontalRule()" title="Horizontal rule">―</button>
+      <button onclick="insertPageBreak()" title="Insert page break (for print)">⤓ break</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="grp">
+      <button onclick="openShortcuts()" title="Edit keyboard shortcuts">⌨ Shortcuts</button>
+      <button onclick="window.print()" title="Print or save as PDF (8.5×11 portrait)" class="tb-btn-wide">Print / PDF</button>
+      <button onclick="downloadHTML()" title="Save the current document as a standalone .html file">⤓ .html</button>
+      <button onclick="resetDoc()" title="Restore the original seeded answers (your edits will be lost)" style="color:#c89b2e">Reset</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Shortcuts Settings Modal ===== -->
+<div class="modal" id="shortcutsModal" onclick="if(event.target===this) closeShortcuts()">
+  <div class="modal-card" style="max-width:560px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h3 style="margin:0">Keyboard shortcuts</h3>
+      <button onclick="closeShortcuts()" style="font-size:14px;padding:5px 10px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer">Close</button>
+    </div>
+    <p style="font-size:12.5px;color:#5b554b;margin:0 0 8px">Click a key combo to rebind. Then press the new combo (any of Ctrl/Alt/Shift + a key). Settings are saved to this browser.</p>
+    <table id="shortcutsTable" style="width:100%;font-family:system-ui,sans-serif;font-size:13px;border-collapse:collapse"></table>
+    <div style="margin-top:10px;display:flex;gap:6px;justify-content:flex-end">
+      <button onclick="resetShortcuts()" style="padding:6px 12px;border:1px solid var(--rule);background:#fff;border-radius:4px;cursor:pointer;color:#a3290e">Reset to defaults</button>
+    </div>
+  </div>
+</div>
+
+<div class="pageWrap">
+<div class="doc" id="doc" contenteditable="true" spellcheck="false">
+
+<h1>Exam 3 · Phylogeny / Speciation / Humans Study Guide</h1>
+
+<p class="meta">BIOL 4230 · Evolution · Exam 3 · Phylogeny / Speciation / Humans — Final exam Mon May 4, 2026 · 5–7 PM · Dr. Travis Robbins<br/>Lectures: L14 · L15 · L16 · L17 · L18 · L19 · L20</p>
+
+<p class="intro">This guide is fully editable — type anywhere, format with the toolbar, and your edits autosave to this browser. Reset restores the seeded content. Print to PDF (8.5×11 portrait) anytime.</p>
+
+<h2>L14 · History of Life <span style="color:#7a7158;font-size:11pt;">(Ch 3)</span></h2>
+
+<p class="intro">A 4-billion-year overview of life on Earth — when, where, and roughly how. The lecture covers Earth&#x27;s age, key evolutionary milestones (origin of life, photosynthesis, eukaryotes, multicellularity, Cambrian explosion), mass extinctions, and the dating tools that anchor it all.</p>
+
+<h3>§A — Earth&#x27;s age and dating methods</h3>
+<p class="overview">Earth is ~4.568 billion years old. We know this from radiometric dating of Earth and meteorite materials. Dating life&#x27;s milestones depends on the same physics — measuring ratios of radioactive isotopes in rocks.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Earth&#x27;s age: ~4.568 billion years (radiometric dating of meteorites, oldest Earth zircons).</li>
+<li>RADIOMETRIC DATING measures the ratio of a parent isotope to its daughter (decay product). Each isotope has a known half-life.</li>
+<li>Different isotope systems for different time scales: ¹⁴C for tens of thousands of years; U-Pb for billions of years; K-Ar for millions.</li>
+<li>BIOMARKERS (chemical signatures in rocks like specific lipid molecules) suggest life by ~3.5–3.8 billion years ago.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Radiometric dating</b> — Determining the age of a rock by measuring ratios of parent and daughter isotopes; uses known half-lives.</li>
+<li><b>Half-life</b> — Time required for half of a radioactive isotope to decay.</li>
+<li><b>Biomarker</b> — A chemical molecule (often a lipid) preserved in ancient rocks that indicates the past presence of specific organisms.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Carbon-14 dating only works back ~50,000 years (5 half-lives × 5,730 yr ≈ 28k yr; method becomes unreliable beyond that). For deep time, you need U-Pb, K-Ar, etc.</li>
+<li>Earth&#x27;s age is ~4.568 billion years — close to but distinct from the universe&#x27;s age (~13.8 Gyr) or the age of the oldest rocks on Earth (~4.0 Gyr).</li>
+</ul></div>
+
+<h3>§B — Major milestones in life&#x27;s history</h3>
+<p class="overview">Life appeared early. Then for a couple billion years, very little visible happened. Then in a few hundred million years, all the modern phyla appeared. The timeline matters.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>~3.5–3.8 GYA: earliest evidence of life (microbial mats, biomarkers).</li>
+<li>~2.4 GYA: GREAT OXIDATION EVENT — cyanobacteria producing oxygen accumulate atmospheric O₂; redox-sensitive minerals show the shift in rocks worldwide.</li>
+<li>~2.1–1.6 GYA: first eukaryotes (mitochondrial endosymbiosis).</li>
+<li>~1.0 GYA: first multicellular life.</li>
+<li>~541 MYA: CAMBRIAN EXPLOSION — most modern animal phyla appear in the fossil record over ~20 million years.</li>
+<li>~444 MYA (Ordovician): early bony fishes; first land plants.</li>
+<li>~419 MYA (Silurian): first land animals (millipedes, arthropods).</li>
+<li>~359 MYA (Devonian): age of fishes; early tetrapods (Tiktaalik, etc.).</li>
+<li>~251 MYA (Permian-Triassic boundary): largest mass extinction; ~95% marine species lost.</li>
+<li>~66 MYA (K-T or K-Pg boundary): asteroid impact; non-avian dinosaurs go extinct.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Great Oxidation Event</b> — Rise of atmospheric oxygen ~2.4 GYA driven by cyanobacterial photosynthesis; transformed Earth&#x27;s chemistry and life.</li>
+<li><b>Cambrian explosion</b> — Rapid (~541–520 MYA) diversification of most modern animal phyla, recorded in the fossil record.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The Cambrian explosion is RAPID on a geological timescale (~20 MYR) but is NOT instant. It also represents the appearance of HARD PARTS that fossilize, not necessarily the origin of phyla.</li>
+<li>Don&#x27;t confuse the Permian-Triassic extinction (~252 MYA, biggest) with the K-T / K-Pg extinction (~66 MYA, dinosaurs).</li>
+</ul></div>
+
+<h3>§C — Geological time periods to recognize</h3>
+<p class="overview">The study guide explicitly lists Ordovician, Silurian, Devonian, Permian. Be ready to associate each period with its key biological event.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ORDOVICIAN (~488–444 MYA): early bony fishes; first land plants.</li>
+<li>SILURIAN (~444–416 MYA): first land animals (arthropods, including millipedes).</li>
+<li>DEVONIAN (~416–359 MYA): age of fishes; early tetrapod evolution; early forests; major reef expansion.</li>
+<li>PERMIAN (~299–251 MYA): origin of reptiles and proto-mammals (synapsids); ends with the Permian-Triassic mass extinction.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Devonian</b> — Geological period (~416–359 MYA) marked by major fish diversification and the origin of land vertebrates.</li>
+<li><b>Permian</b> — Geological period (~299–251 MYA) ending in Earth&#x27;s largest mass extinction.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide explicitly tests these period-event associations. Memorize the canonical pairings.</li>
+<li>The Devonian = &#x27;Age of Fishes&#x27;; the Permian-Triassic boundary = the largest mass extinction.</li>
+</ul></div>
+
+<h3>§D — Mass extinctions</h3>
+<p class="overview">Five &#x27;Big Five&#x27; mass extinctions punctuate the Phanerozoic. Each reset evolutionary trajectories — opening new niches for survivors. Mass extinction is not unidirectional; it shapes which lineages get to radiate next.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>BIG FIVE mass extinctions: end-Ordovician (~444 MYA), Late Devonian (~375 MYA), end-Permian (~252 MYA), end-Triassic (~201 MYA), end-Cretaceous (K-Pg, ~66 MYA).</li>
+<li>End-PERMIAN: largest, ~95% marine species lost; cause likely Siberian Trap volcanism + climate change + ocean acidification.</li>
+<li>K-T (end-CRETACEOUS): asteroid impact at the Yucatán (Chicxulub crater); iridium layer is the smoking gun. Non-avian dinosaurs eliminated.</li>
+<li>Mass extinctions clear out dominant groups, opening niches for survivors to radiate (mammals diversified after the K-Pg).</li>
+<li>Many biologists argue we are now in the SIXTH MASS EXTINCTION driven by humans.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Mass extinction</b> — A geologically rapid event eliminating a large fraction of Earth&#x27;s species, usually defined as &gt;75% species loss.</li>
+<li><b>K-T (K-Pg) boundary</b> — End-Cretaceous boundary (~66 MYA) marked by asteroid impact and the extinction of non-avian dinosaurs.</li>
+<li><b>Iridium layer</b> — A thin global layer of iridium-rich sediment at the K-Pg boundary, evidence for an extraterrestrial impact.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide directly asks about the K-T boundary&#x27;s significance — be ready: asteroid impact, end-Cretaceous, non-avian dinosaur extinction, mammal radiation thereafter.</li>
+<li>K-T (K-Pg) is the dinosaur extinction; the Permian-Triassic is the bigger one. Don&#x27;t confuse them.</li>
+</ul></div>
+
+<h2>L15 · Phylogenetics and the Tree of Life <span style="color:#7a7158;font-size:11pt;">(Ch 4)</span></h2>
+
+<p class="intro">Phylogenetic trees are hypotheses about evolutionary relationships built from shared derived characters. The skill on this exam is reading trees correctly and choosing the right kind of character (synapomorphy, not symplesiomorphy or homoplasy) to define groups.</p>
+
+<h3>§A — Reading phylogenetic trees</h3>
+<p class="overview">A phylogenetic tree depicts hypothesized evolutionary relationships among taxa. Tips are extant or extinct organisms; internal nodes are common ancestors; branches represent lineages over time.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>A NODE is a common ancestor of the taxa above it (toward the tips).</li>
+<li>Two taxa that share a more RECENT common ancestor are more CLOSELY related — measured by node depth, NOT by physical distance on the page.</li>
+<li>Trees can be rotated at any node without changing relationships — only the order of branching matters.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Tip / Terminal taxon</b> — An extant (or extinct) organism at the end of a branch — what&#x27;s being classified.</li>
+<li><b>Node</b> — A point in the tree where lineages diverge — represents the most recent common ancestor of all descendants.</li>
+<li><b>Branch</b> — A line in the tree representing a lineage existing through time.</li>
+<li><b>Sister groups</b> — Two clades that share an immediate common ancestor (a single node).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Visual proximity on the page does NOT equal evolutionary closeness — trees can be drawn with branches in any rotation.</li>
+<li>Don&#x27;t assume tips on adjacent branches are sister groups; trace back to the node and see what it joins.</li>
+</ul></div>
+
+<h3>§B — Synapomorphies vs. symplesiomorphies vs. homoplasies</h3>
+<p class="overview">Only SYNAPOMORPHIES — shared derived characters — define monophyletic groups. Symplesiomorphies (shared ancestral traits) and homoplasies (independent acquisitions) mislead.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Synapomorphy = a derived character STATE shared because of inheritance from a common ancestor that first evolved it.</li>
+<li>Symplesiomorphy = a shared ANCESTRAL state — present in more distant ancestors, not informative about which lineages cluster.</li>
+<li>Homoplasy = a similar state arising independently (convergence) or by reversal — misleading; not a synapomorphy.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Synapomorphy</b> — A shared, derived (evolutionarily novel) character state that is informative for defining a monophyletic group.</li>
+<li><b>Symplesiomorphy</b> — A shared ancestral character state; widespread among lineages and uninformative about closer relationships.</li>
+<li><b>Homoplasy</b> — Similar character states in different lineages that did NOT come from a common ancestor — produced by convergence, parallelism, or reversal.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>&#x27;Has a backbone&#x27; is a synapomorphy of vertebrates as a whole, but a SYMPLESIOMORPHY for any subgroup (e.g., mammals + birds) — i.e., the same character can play different roles depending on the level you&#x27;re working at.</li>
+<li>If two distantly related lineages share a feature, suspect homoplasy — check whether the common ancestor likely had it.</li>
+</ul></div>
+
+<h3>§C — Monophyletic, paraphyletic, polyphyletic</h3>
+<p class="overview">Modern systematics requires named groups to be monophyletic. Para- and polyphyletic groups are rejected because they don&#x27;t reflect evolutionary history.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>MONOPHYLETIC (clade) = a common ancestor + ALL its descendants. Defined by synapomorphies.</li>
+<li>PARAPHYLETIC = common ancestor + SOME (not all) descendants. Example: &#x27;Reptilia&#x27; excluding birds — birds are reptiles by descent but were left out historically.</li>
+<li>POLYPHYLETIC = group built from members that do NOT share an immediate common ancestor; based on convergent traits. Example: &#x27;warm-blooded animals&#x27; (mammals + birds, not their reptilian common ancestor).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Clade / Monophyletic group</b> — A common ancestor and all of its descendants — the only kind of group that reflects an evolutionary unit.</li>
+<li><b>Paraphyletic group</b> — A group containing a common ancestor but NOT all of its descendants; rejected in modern systematics.</li>
+<li><b>Polyphyletic group</b> — A group whose members do not share an immediate common ancestor; based on convergent (homoplasic) traits.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Birds nest within reptiles — calling &#x27;Reptilia&#x27; (without birds) a valid group makes it paraphyletic. Modern usage either includes birds or uses &#x27;Sauropsida&#x27;.</li>
+<li>Polyphyletic groups are diagnosed by SHARED CONVERGENT FEATURES, not common ancestry.</li>
+</ul></div>
+
+<h3>§D — Species concepts</h3>
+<p class="overview">Different species concepts emphasize different criteria. The Biological Species Concept (BSC) is the most famous, but it has limits.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Biological Species Concept (BSC, Mayr): species = groups of actually or potentially interbreeding populations, reproductively isolated from others. Strength: clear mechanism (gene flow). Limit: can&#x27;t apply to asexual organisms or fossils.</li>
+<li>Morphological Species Concept: species defined by distinctive form. Strength: usable on fossils and any organism. Limit: cryptic species and morphological plasticity confuse it.</li>
+<li>Phylogenetic Species Concept: species = smallest monophyletic group with shared derived characters. Strength: works for asexuals and fossils. Limit: depends on chosen markers; tends to split lineages aggressively.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Biological Species Concept (BSC)</b> — Mayr&#x27;s definition: a species is a group of interbreeding (or potentially interbreeding) natural populations reproductively isolated from others.</li>
+<li><b>Morphological species concept</b> — Species defined by distinct, diagnosable morphological differences.</li>
+<li><b>Phylogenetic species concept</b> — Species defined as the smallest monophyletic group identifiable by shared derived characters.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The BSC requires reproductive isolation — but two morphologically distinct populations that occasionally hybridize can still be &#x27;good&#x27; biological species if hybrids have reduced fitness.</li>
+<li>Asexual organisms (bacteria, parthenogenetic animals) are not species under the BSC. Use morphology or phylogeny instead.</li>
+</ul></div>
+
+<h2>L16 · Species Concepts and Reproductive Isolation <span style="color:#7a7158;font-size:11pt;">(Ch 13)</span></h2>
+
+<p class="intro">What IS a species, exactly? Different concepts emphasize different criteria, each with strengths and limits. This lecture covers species concepts and the reproductive isolation mechanisms — pre- and postzygotic — that keep species apart.</p>
+
+<h3>§A — Major species concepts</h3>
+<p class="overview">There is no single universal species definition. The Biological Species Concept dominates animal biology; alternatives handle cases where the BSC fails.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>BIOLOGICAL SPECIES CONCEPT (BSC, Mayr): species = groups of actually or potentially interbreeding natural populations, reproductively isolated from other such groups. Strength: clear mechanism (gene flow). Limits: can&#x27;t apply to asexual organisms or fossils.</li>
+<li>MORPHOLOGICAL SPECIES CONCEPT: species defined by distinct, diagnosable morphological differences. Strength: applies to fossils and asexuals. Limit: cryptic species (genetically distinct but morphologically identical) and morphological plasticity create errors.</li>
+<li>PHYLOGENETIC SPECIES CONCEPT: species = the smallest monophyletic group identifiable by shared derived characters. Strength: works for asexuals, applies cladistic logic. Limit: sensitive to sampling and characters chosen; tends to split lineages aggressively.</li>
+<li>ECOLOGICAL SPECIES CONCEPT: species = populations occupying the same adaptive zone (niche). Useful but sometimes blurry.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Biological Species Concept (BSC)</b> — Mayr&#x27;s definition: species = group of interbreeding natural populations reproductively isolated from others.</li>
+<li><b>Morphological species concept</b> — Species defined by diagnosable morphological differences.</li>
+<li><b>Phylogenetic species concept</b> — Species = smallest monophyletic group sharing derived characters.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The BSC fails for asexual organisms (bacteria, parthenogenetic species) and for fossils — you can&#x27;t test interbreeding with extinct populations.</li>
+<li>Different concepts can disagree about what counts as a species in the same case (e.g., a hybridizing species pair). The &#x27;right&#x27; concept depends on what you need it for.</li>
+</ul></div>
+
+<h3>§B — Reproductive isolation — prezygotic vs postzygotic</h3>
+<p class="overview">The BSC requires reproductive isolation. Mechanisms split into PREZYGOTIC (preventing zygote formation) and POSTZYGOTIC (acting after zygote formation).</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>PREZYGOTIC barriers prevent fertilization or gamete contact:</li>
+<li>  • TEMPORAL — populations breed at different times (different seasons, different times of day).</li>
+<li>  • BEHAVIORAL — different mating displays/courtship songs prevent recognition between species.</li>
+<li>  • MECHANICAL — incompatible reproductive structures (e.g., insect genital morphology) prevent successful copulation.</li>
+<li>  • GAMETIC — sperm cannot fertilize eggs of different species (incompatible surface proteins).</li>
+<li>  • HABITAT/ECOLOGICAL — populations live in different microhabitats and rarely encounter each other.</li>
+<li>POSTZYGOTIC barriers act AFTER zygote formation:</li>
+<li>  • HYBRID INVIABILITY — hybrid embryos fail to develop or survive.</li>
+<li>  • HYBRID STERILITY — hybrids survive but are sterile (e.g., mules, zorses).</li>
+<li>  • HYBRID BREAKDOWN — F1 hybrids viable and fertile, but F2 (or later) generations show reduced fitness.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Prezygotic isolation</b> — Reproductive barriers preventing successful fertilization between species (temporal, behavioral, mechanical, gametic, habitat).</li>
+<li><b>Postzygotic isolation</b> — Reproductive barriers acting after zygote formation: hybrid inviability, sterility, or breakdown.</li>
+<li><b>Hybrid sterility</b> — Hybrid offspring survive but cannot reproduce; classic example is the mule (horse × donkey).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Pre-zygotic = before zygote (no successful fertilization). Post-zygotic = after zygote (hybrid problems). The dividing line is fertilization.</li>
+<li>Hybrid INVIABILITY ≠ hybrid STERILITY. Inviability: hybrids die. Sterility: hybrids live but can&#x27;t reproduce.</li>
+</ul></div>
+
+<h3>§C — Speciation — how new species arise</h3>
+<p class="overview">Speciation is the evolutionary process by which one species splits into two or more reproductively isolated descendants. Geography is often (but not always) involved.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ALLOPATRIC speciation: populations geographically separated → independent evolution → reproductive isolation accumulates → new species. Most common.</li>
+<li>PERIPATRIC speciation: a small founder population becomes geographically isolated; drift + selection in the small population accelerates divergence.</li>
+<li>PARAPATRIC speciation: populations are partially separated (adjacent ranges, narrow contact zone); divergence occurs despite some gene flow.</li>
+<li>SYMPATRIC speciation: divergence WITHOUT geographic separation, often via niche differentiation, polyploidy (especially in plants), or strong assortative mating.</li>
+<li>REINFORCEMENT: when populations come back into secondary contact, selection can favor stronger prezygotic isolation IF hybrids have low fitness.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Allopatric speciation</b> — New species form in geographically separated populations.</li>
+<li><b>Sympatric speciation</b> — New species form within the same geographic range, often via niche shifts or polyploidy.</li>
+<li><b>Reinforcement</b> — Selection strengthens prezygotic isolation when hybrids between two populations are unfit, accelerating completion of speciation.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Allopatric is the DEFAULT speciation mode for most animals. Sympatric is rare in animals but more common in plants (polyploidy is sympatric).</li>
+<li>Reinforcement is a SECONDARY-CONTACT phenomenon — it only operates AFTER initial divergence in allopatry, when populations meet again.</li>
+</ul></div>
+
+<h3>§D — Hybrid zones and viable hybrids</h3>
+<p class="overview">Real populations don&#x27;t always fit clean species boundaries. Hybrid zones — where two species meet and interbreed — reveal incomplete reproductive isolation.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HYBRID ZONES are geographic regions where two species&#x27; ranges overlap and they interbreed.</li>
+<li>VIABLE HYBRIDS can exist (offspring survive) but typically have REDUCED FITNESS — outcompeted by parental species, often sterile, or maladapted to either parental habitat.</li>
+<li>Hybrid zones can be stable (selection against hybrids balanced by gene flow) or move over time.</li>
+<li>Sometimes hybrids THRIVE in intermediate environments — hybrid zones can also be sites of evolution and even hybrid speciation.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hybrid zone</b> — Geographic region where two species&#x27; ranges overlap and they interbreed, typically producing hybrids of intermediate or reduced fitness.</li>
+<li><b>Viable hybrid</b> — Hybrid offspring that survives but typically with reduced fitness.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Hybrid existence does NOT disprove species status under the BSC — hybrids with reduced fitness still leave the parental species reproductively isolated in the long run.</li>
+<li>Hybrid speciation (e.g., in sunflowers) is a real but special case where hybrids form a stable third lineage.</li>
+</ul></div>
+
+<h2>L17 · Biogeography, Speciation, and Extinction <span style="color:#7a7158;font-size:11pt;">(Ch 14)</span></h2>
+
+<p class="intro">Why are species where they are? This lecture covers the geographic distribution of life — how dispersal, vicariance, and continental drift shape biodiversity, plus what determines diversity in a given place over time.</p>
+
+<h3>§A — What is biogeography?</h3>
+<p class="overview">Biogeography is the study of WHERE species live and WHY. Past geological history (continental drift, glaciation) and ecological factors (climate, dispersal) jointly shape modern distributions.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>BIOGEOGRAPHY = the study of species distributions across geographic space and through geological time.</li>
+<li>Wallace and Darwin both argued that geographic patterns (e.g., distinct faunas on different continents) are best explained by descent and history, not independent creation.</li>
+<li>Modern biogeography integrates plate tectonics, climate history, dispersal ability, and ecological interactions.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Biogeography</b> — The study of the geographic distribution of species and ecosystems through space and time.</li>
+<li><b>Wallace line</b> — A faunal boundary in the Indonesian archipelago separating Asian and Australasian biotas; named for Alfred Russel Wallace.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Biogeography unites geology, ecology, and evolution — questions can pull from any of these.</li>
+<li>Patterns of distribution are clues to history; similar species in distant places may share ancestry (vicariance) or have dispersed.</li>
+</ul></div>
+
+<h3>§B — Dispersal vs. vicariance</h3>
+<p class="overview">Two opposing explanations for why related species are found in different places: organisms moved (dispersal) or the geography moved underneath them (vicariance).</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>DISPERSAL: organisms move from one place to another; the same lineage now occupies multiple regions because individuals or propagules crossed geographic barriers.</li>
+<li>VICARIANCE: a geographic barrier (mountain range, sea-level change, continental drift) splits a previously continuous range, separating populations that diverge.</li>
+<li>Often both have operated; modern molecular phylogenies + dating help distinguish them.</li>
+<li>Classic vicariance example: the close relationship of South American and African biota reflects their shared Gondwanan ancestry — they were once continuous before continental drift split them.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Dispersal</b> — Movement of organisms from one location to another, crossing geographic barriers.</li>
+<li><b>Vicariance</b> — Geographic separation of a once-continuous range by a new barrier (mountains, seaways, continental drift).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Distinguishing dispersal from vicariance requires DATING — vicariant splits should match the geological barrier formation; dispersal splits can be any age.</li>
+<li>Don&#x27;t assume vicariance for every pair of similar species on different continents — some are dispersal events (especially birds, oceanic taxa).</li>
+</ul></div>
+
+<h3>§C — Standing diversity and species turnover</h3>
+<p class="overview">STANDING DIVERSITY is how many species are present in a region at one time. TURNOVER is the rate at which species enter (originate, immigrate) and leave (go extinct, emigrate).</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Standing diversity at any moment = (cumulative origination) − (cumulative extinction) − (emigration) + (immigration).</li>
+<li>Turnover RATE = species replacement rate; high turnover means many species coming and going.</li>
+<li>Equilibrium theory of island biogeography (MacArthur &amp; Wilson): diversity is set by the BALANCE between immigration (decreasing as species accumulate) and extinction (increasing as species accumulate).</li>
+<li>Standing diversity can be stable while turnover is high (membership of the species list constantly changes).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Standing diversity</b> — The number of species present in a region at a given time.</li>
+<li><b>Turnover rate</b> — The rate at which species are replaced — incoming species per unit time, balanced by extinctions/emigrations.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Standing diversity is a SNAPSHOT; turnover is a RATE. Don&#x27;t conflate them.</li>
+<li>Two communities with the same standing diversity can have very different turnover rates.</li>
+</ul></div>
+
+<h3>§D — Mass extinctions and their consequences</h3>
+<p class="overview">Mass extinctions reset the trajectory of life by clearing dominant lineages and opening niches for survivors to radiate into. The Big Five share certain features but had different causes.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Big Five mass extinctions punctuate the Phanerozoic; each killed &gt;50% of marine species.</li>
+<li>End-Ordovician (~444 MYA): glaciation/sea-level fall.</li>
+<li>Late Devonian (~375 MYA): multiple pulses; possibly anoxia / sea-level / climate.</li>
+<li>End-Permian (~252 MYA): largest. Likely Siberian Trap volcanism, ocean acidification, climate change. ~95% marine species lost.</li>
+<li>End-Triassic (~201 MYA): extinction cleared major reptilian groups, allowing dinosaurs to dominate.</li>
+<li>End-Cretaceous / K-Pg (~66 MYA): asteroid impact (Chicxulub). Iridium layer is the smoking gun. Non-avian dinosaurs extinct; mammals radiate.</li>
+<li>After mass extinctions, surviving lineages undergo ADAPTIVE RADIATIONS into newly empty niches.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Adaptive radiation</b> — Rapid diversification of a single lineage into many ecologically distinct species, often after mass extinction or invasion of a new habitat.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>End-Permian, NOT end-Cretaceous, is the largest mass extinction.</li>
+<li>The K-Pg extinction is closely linked to the Chicxulub impact, but additional factors (Deccan Trap volcanism) likely contributed.</li>
+</ul></div>
+
+<h3>§E — Adaptive radiations</h3>
+<p class="overview">When a lineage colonizes a new environment or survives a mass extinction, it can rapidly diversify into many species exploiting different niches. Galápagos finches and Hawaiian honeycreepers are classic examples.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ADAPTIVE RADIATION = rapid diversification of one lineage into many ecologically diverse species.</li>
+<li>Conditions favoring adaptive radiation: open ecological space, new geographic colonization, key innovations, post-extinction recovery.</li>
+<li>Galápagos finches: ~14 species derived from a single ancestor, each specialized for a different food niche.</li>
+<li>Mammals radiated rapidly after the K-Pg extinction — the niches dinosaurs occupied were suddenly available.</li>
+<li>Adaptive radiations can be morphologically dramatic in a few million years.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Adaptive radiation</b> — Rapid evolutionary diversification of one lineage into many species occupying different ecological niches.</li>
+<li><b>Key innovation</b> — An evolutionary novelty (jaws, wings, flowering) that opens new ecological possibilities and can trigger radiations.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Adaptive radiation is fast diversification INTO DIFFERENT NICHES — not just speciation in general.</li>
+<li>Mammalian radiation didn&#x27;t START at the K-Pg; mammals existed earlier but were small and ecologically restricted. The K-Pg removed dinosaur competitors and let mammals diversify.</li>
+</ul></div>
+
+<h2>L18 · Conservation and Humans as a Selective Force <span style="color:#7a7158;font-size:11pt;">(Ch 8)</span></h2>
+
+<p class="intro">Humans are now a dominant evolutionary force — through habitat alteration, hunting, fishing, antibiotic use, and climate change, we are reshaping selection pressures on most species on Earth. This lecture is about that, plus what conservation biology can do.</p>
+
+<h3>§A — Humans as selective force</h3>
+<p class="overview">Human activities apply strong, directional selection on countless species. Wherever we hunt, harvest, or otherwise selectively kill or capture organisms, we drive evolutionary change.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>FISHERIES SELECTION: minimum-size limits selectively remove large individuals; over decades, fish populations evolve toward earlier maturation and smaller size.</li>
+<li>TROPHY HUNTING: selecting for large-horned individuals can reduce average horn size in the population over time (e.g., bighorn sheep on Ram Mountain).</li>
+<li>ANTIBIOTIC RESISTANCE: heavy use selects for resistant bacterial strains.</li>
+<li>PESTICIDE RESISTANCE: insect pests evolve resistance under heavy spraying.</li>
+<li>URBANIZATION: city-dwelling species (urban pigeons, mice, peppered moths) evolve under novel selective pressures.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Selective harvest</b> — Hunting/fishing that targets specific phenotypes (large size, big horns) and applies directional selection.</li>
+<li><b>Fisheries-induced evolution</b> — Evolutionary change in fish populations driven by size-selective fishing pressure.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Human selection is the same evolutionary process as natural selection; we just play the selecting role.</li>
+<li>Selective harvest can REVERSE pre-existing selection (e.g., natural selection for large body, fishing for small) — populations evolve away from natural-equilibrium phenotypes.</li>
+</ul></div>
+
+<h3>§B — Habitat destruction, fragmentation, and conservation genetics</h3>
+<p class="overview">Habitat loss and fragmentation reduce population sizes and gene flow — making drift stronger, inbreeding more likely, and adaptive evolution slower.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Small populations experience strong genetic drift, lose genetic variation, and are vulnerable to inbreeding depression.</li>
+<li>Population FRAGMENTATION reduces gene flow between subpopulations, accelerating local divergence and loss of variation.</li>
+<li>Florida panther example: a tiny remnant population suffered severe inbreeding depression (heart defects, reproductive issues); rescue via introduction from Texas pumas restored fitness.</li>
+<li>GENETIC RESCUE: introducing individuals from a related population can restore genetic variation and fitness in inbred populations.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Inbreeding depression</b> — Reduced fitness in inbred populations due to expression of deleterious recessive alleles in homozygotes.</li>
+<li><b>Genetic rescue</b> — Introducing individuals from another population to restore genetic variation and reduce inbreeding depression.</li>
+<li><b>Fragmentation</b> — Subdivision of habitat into smaller patches, reducing gene flow and population sizes.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Small populations are vulnerable to BOTH demographic and genetic problems. Conservation must address both.</li>
+<li>Genetic rescue can fail if the introduced population is so distantly related that hybrids are maladapted (outbreeding depression).</li>
+</ul></div>
+
+<h3>§C — Climate change as selective pressure</h3>
+<p class="overview">Anthropogenic climate change is a major and ongoing selective force. Some species track suitable climate by shifting range; others must evolve in place; many will fail to do either fast enough.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Many species are shifting ranges poleward and upslope as climates warm.</li>
+<li>Species with limited dispersal (e.g., trees, mountain-top organisms) cannot track climate easily and face strong selection or extinction.</li>
+<li>Phenological shifts (flowering, migration timing) reflect rapid evolution and plastic responses to changing seasonal cues.</li>
+<li>MISMATCHES between interacting species (e.g., insect emergence vs. plant flowering) may break ecological networks.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Phenological shift</b> — Change in the timing of seasonal biological events (flowering, breeding, migration) in response to climate.</li>
+<li><b>Range shift</b> — Geographic movement of a species&#x27; distribution, often poleward or upslope under warming.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Species can RESPOND to climate change by shifting range, evolving, going plastic, or going extinct. The mix depends on dispersal ability, generation time, and severity.</li>
+<li>Phenological shifts driven by climate are evidence of climate change effects on biology, even when range hasn&#x27;t shifted yet.</li>
+</ul></div>
+
+<h3>§D — Conservation strategies</h3>
+<p class="overview">Conservation biology applies evolutionary thinking to preserving biodiversity. The toolkit ranges from habitat protection to captive breeding to genetic rescue.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HABITAT PROTECTION: protected areas (national parks, reserves) preserve in-situ biodiversity.</li>
+<li>CAPTIVE BREEDING: ex-situ programs maintain populations of critically endangered species (California condor, Arabian oryx) for eventual reintroduction.</li>
+<li>ASSISTED MIGRATION: moving species to climate-appropriate habitats (controversial for risk of unintended consequences).</li>
+<li>GENETIC RESCUE / outcrossing programs: see §B above.</li>
+<li>Effective conservation manages BOTH demographic decline (low N) AND genetic decline (low diversity, inbreeding).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Conservation biology</b> — The study of preservation of biodiversity; applies evolutionary, ecological, and population-genetic principles.</li>
+<li><b>Captive breeding</b> — Maintaining populations in human care to prevent extinction and supply individuals for reintroduction.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Conservation is ALWAYS about both populations and the genes within them. A demographically large population with no genetic diversity is still vulnerable.</li>
+<li>Captive breeding can introduce its own selection pressures (adaptation to captivity) that may reduce wild fitness on release.</li>
+</ul></div>
+
+<h2>L19 · Human Evolution <span style="color:#7a7158;font-size:11pt;">(Ch 17)</span></h2>
+
+<p class="intro">Where we came from. The hominin lineage diverged from chimpanzees ~6–7 million years ago in Africa; bipedalism came first, then expanding brain, then long migration out of Africa. This lecture also touches evolutionary medicine — how our evolutionary history shapes modern disease.</p>
+
+<h3>§A — The hominin lineage and bipedalism</h3>
+<p class="overview">Humans share a common ancestor with chimpanzees ~6–7 MYA. The first major hominin innovation was BIPEDAL LOCOMOTION, which preceded brain enlargement.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Hominins (the human lineage after splitting from chimpanzees) appeared ~6–7 MYA in Africa.</li>
+<li>Earliest possible hominins: Sahelanthropus tchadensis (~7 MYA, Chad), Orrorin tugenensis, and Ardipithecus.</li>
+<li>BIPEDALISM (walking upright on two legs) was the first major hominin trait, evident in skeletal anatomy of these earliest forms.</li>
+<li>Bipedalism is documented in skeletal features: foramen magnum (where the spinal cord exits the skull) is positioned UNDERNEATH the skull, indicating an upright spine.</li>
+<li>Brain enlargement came AFTER bipedalism in hominin evolution.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Hominin</b> — Members of the human lineage since the chimpanzee split — includes modern humans and all extinct relatives.</li>
+<li><b>Bipedalism</b> — Habitual two-legged walking; the earliest hallmark hominin adaptation.</li>
+<li><b>Foramen magnum</b> — The opening in the skull where the spinal cord exits; its position (rear vs. underneath) indicates posture.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>The study guide explicitly tests bipedalism: it began ~6–7 MYA. Brain enlargement is later.</li>
+<li>Sahelanthropus from Chad is the early hominin example the study guide flags. Recognize the Chad connection.</li>
+</ul></div>
+
+<h3>§B — Australopithecines and early Homo</h3>
+<p class="overview">After the earliest hominins, several species of Australopithecus dominated for several million years. Genus Homo appears ~2.5 MYA.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Australopithecus afarensis (~3.9–2.9 MYA) — &#x27;Lucy&#x27; is the famous specimen; small-brained but fully bipedal.</li>
+<li>Robust australopithecines (Paranthropus) — heavy chewing apparatus, evolutionary dead-end.</li>
+<li>Genus Homo appears ~2.5 MYA with H. habilis — first stone tools (Oldowan).</li>
+<li>Homo erectus (~1.9 MYA) — first hominin to leave Africa, larger brain, more sophisticated tools.</li>
+<li>Homo sapiens emerges in Africa ~300 KYA.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Australopithecus</b> — Genus of bipedal hominins (~4–2 MYA); &#x27;Lucy&#x27; is the famous A. afarensis specimen.</li>
+<li><b>Homo habilis</b> — Earliest member of genus Homo (~2.5 MYA); associated with first known stone tools.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Homo erectus is the FIRST hominin to leave Africa, not Homo sapiens.</li>
+<li>Brain size increased gradually through the hominin lineage; H. erectus had ~1000 cc, H. sapiens ~1350 cc.</li>
+</ul></div>
+
+<h3>§C — Out-of-Africa migrations and Neanderthal/Denisovan introgression</h3>
+<p class="overview">Modern humans (Homo sapiens) originated in Africa, then dispersed worldwide ~70 KYA, encountering and partly interbreeding with archaic populations like Neanderthals and Denisovans.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Anatomically modern Homo sapiens: ~300 KYA in Africa.</li>
+<li>Major out-of-Africa dispersal: ~70 KYA, replacing or absorbing earlier hominin populations across Eurasia.</li>
+<li>Modern non-African humans carry ~1–4% Neanderthal DNA from interbreeding ~40–60 KYA.</li>
+<li>Some Asian and Oceanic populations carry additional Denisovan DNA; this includes high-altitude adaptation alleles in Tibetans (EPAS1).</li>
+<li>Genetic introgression with archaic humans contributed alleles for immunity, skin pigmentation, altitude adaptation — partly accelerating modern-human adaptation to new environments.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Out of Africa</b> — The migration of anatomically modern humans from Africa to the rest of the world ~70 KYA.</li>
+<li><b>Introgression</b> — Gene flow between populations or species via interbreeding, contributing alleles from one to the other.</li>
+<li><b>Neanderthal</b> — Archaic human relative (Homo neanderthalensis) inhabiting Europe and West Asia; interbred with modern humans ~40–60 KYA.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>All non-African modern humans carry small amounts of Neanderthal DNA; African populations have very little or none (because the introgression happened after the migration out of Africa).</li>
+<li>The &#x27;Out of Africa&#x27; model is now better called &#x27;Recent African Origin&#x27; with admixture — it&#x27;s not a simple replacement.</li>
+</ul></div>
+
+<h3>§D — Evolutionary medicine — disease in evolutionary context</h3>
+<p class="overview">Many modern health problems make more sense when viewed through an evolutionary lens. Pathogens evolve in response to our defenses; our bodies are evolutionary compromises shaped by ancestral environments different from modern ones.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ANTIBIOTIC RESISTANCE: pathogens evolve resistance under selection. Once-treatable infections become untreatable. Solution: stewardship + new drug discovery.</li>
+<li>PATHOGEN VIRULENCE evolves. Mode of transmission shapes optimal virulence — directly transmitted (e.g., respiratory) pathogens often evolve toward LOWER virulence (need a healthy host to spread); waterborne / vector-borne pathogens can evolve high virulence (don&#x27;t need the host mobile).</li>
+<li>MISMATCH HYPOTHESIS: many modern diseases (obesity, type 2 diabetes, atherosclerosis) reflect mismatch between our ancestral environment (food-scarce, high physical activity) and modern conditions (food-abundant, sedentary).</li>
+<li>Our bodies show evolutionary compromises: backaches from upright posture, difficult childbirth from large brains + narrow pelvis, vestigial appendix prone to infection.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Evolutionary medicine</b> — Application of evolutionary principles to understanding human health and disease.</li>
+<li><b>Virulence</b> — The degree to which a pathogen damages its host; evolves in response to transmission mode and other ecological factors.</li>
+<li><b>Mismatch hypothesis</b> — Modern diseases arise from mismatch between traits adapted to ancestral environments and the conditions of modern life.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Pathogens evolve. Antibiotic resistance is one application; antigenic shift in flu is another.</li>
+<li>Evolutionary medicine doesn&#x27;t say &#x27;we should live like cave-people&#x27; — it says understanding the evolutionary mismatch helps explain susceptibility to certain modern diseases.</li>
+</ul></div>
+
+<h2>L20 · Evolutionary Medicine <span style="color:#7a7158;font-size:11pt;">(Ch 18)</span></h2>
+
+<p class="intro">Evolution doesn&#x27;t stop at the species boundary — it explains why we get sick, why pathogens evolve, and why some &#x27;designs&#x27; of the human body are flawed. This lecture frames disease, drug resistance, virulence evolution, and modern lifestyle illnesses through an evolutionary lens.</p>
+
+<h3>§A — What evolutionary medicine is</h3>
+<p class="overview">Evolutionary medicine applies evolutionary principles to human health. The central insight: many disease vulnerabilities make sense only as products of past selection in environments very different from the one we live in now.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Evolutionary medicine asks WHY (in evolutionary terms) bodies are vulnerable to particular diseases — not just HOW (mechanistically) the disease works.</li>
+<li>Six common evolutionary explanations for disease: (1) mismatch with modern environments, (2) coevolution with rapidly evolving pathogens, (3) constraints (selection cannot start over), (4) trade-offs, (5) reproduction trumps health (selection optimizes reproductive success, not longevity), (6) defenses are misperceived as &#x27;symptoms.&#x27;</li>
+<li>Modern medicine integrates evolutionary thinking into diagnosis, treatment, and public-health strategies (e.g., antibiotic stewardship, vaccine design, cancer treatment timing).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Evolutionary medicine</b> — Application of evolutionary biology to understanding human health, disease, and medical practice.</li>
+<li><b>Proximate vs ultimate explanation</b> — Proximate = mechanism (HOW); ultimate = evolutionary reason (WHY). Both are needed for full understanding.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Evolutionary medicine doesn&#x27;t claim modern medicine is wrong — it adds the WHY behind the HOW. Both are needed.</li>
+<li>&#x27;Why we get sick&#x27; is a question with at least six different evolutionary answer categories. Don&#x27;t reduce all disease to one explanation.</li>
+</ul></div>
+
+<h3>§B — Pathogen evolution and antibiotic resistance</h3>
+<p class="overview">Pathogens evolve fast — large populations, short generation times, strong selection. The most consequential evolutionary process in clinical medicine is antibiotic resistance, but the same logic applies to antiviral resistance, vaccine escape, and host-immune evasion.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ANTIBIOTIC RESISTANCE evolves whenever antibiotics are heavily used. Mutations conferring resistance occur randomly; the antibiotic kills susceptible bacteria and lets resistant rare variants reproduce.</li>
+<li>RESISTANCE GENES often spread between bacterial species via horizontal gene transfer (plasmids, transposons) — accelerating spread far beyond clonal reproduction.</li>
+<li>Common resistance mechanisms: enzymatic destruction of the drug (β-lactamases), efflux pumps, target-site modification, alternative metabolic pathways.</li>
+<li>ANTIBIOTIC STEWARDSHIP — limiting unnecessary antibiotic use, completing prescribed courses, restricting agricultural use — slows but does not stop the evolution of resistance.</li>
+<li>ANTIVIRAL RESISTANCE follows the same logic; HIV evolves resistance within a single patient given monotherapy, which is why combination therapy works.</li>
+<li>VACCINE ESCAPE: pathogens evolve antigenic variation to evade immune responses (influenza is the textbook annual case).</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Antibiotic resistance</b> — Heritable ability of bacteria to survive antibiotic exposure; arises from random mutation, then spreads under selection.</li>
+<li><b>Horizontal gene transfer (HGT)</b> — Movement of DNA (often resistance genes) between bacterial species via plasmids, transformation, or transduction; accelerates resistance spread.</li>
+<li><b>Combination therapy</b> — Use of multiple drugs simultaneously so that pathogens require multiple independent resistance mutations to survive — exponentially less likely than single resistance.</li>
+<li><b>Vaccine escape / antigenic drift</b> — Pathogen evolution that alters surface antigens to evade prior immunity, requiring updated vaccines.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Antibiotics do NOT cause resistance mutations — they SELECT for already-existing rare resistant variants. Random mutation + non-random selection.</li>
+<li>Stopping a course early can leave partially-resistant survivors and worsen the resistance problem. Complete the prescribed course (current best evidence is more nuanced than the old &#x27;always finish&#x27; rule, but the evolutionary logic still favors fully suppressing the infection).</li>
+<li>Combination therapy works because the joint probability of multi-drug resistance is the product of single-drug resistance probabilities — for example, 10⁻⁹ × 10⁻⁹ = 10⁻¹⁸ per generation.</li>
+</ul></div>
+
+<h3>§C — Virulence evolution and transmission mode</h3>
+<p class="overview">How harmful (virulent) a pathogen is to its host is itself an evolutionary trait — and it depends on how the pathogen transmits. Mode of transmission shapes the cost-benefit balance for the pathogen.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>VIRULENCE = the degree of damage a pathogen causes its host (often measured as case-fatality or per-infection morbidity).</li>
+<li>Optimal virulence depends on the TRADE-OFF between transmission rate (often higher in more virulent infections, because pathogen load is higher) and host longevity (lower virulence keeps the host alive and infectious longer).</li>
+<li>DIRECTLY TRANSMITTED pathogens (respiratory, sexually transmitted) often evolve toward MODERATE OR LOWER virulence — they need a healthy, mobile host to spread.</li>
+<li>VECTOR-BORNE or WATERBORNE pathogens (cholera, malaria) can evolve HIGH virulence because the host&#x27;s mobility doesn&#x27;t matter — the vector or environment moves the pathogen.</li>
+<li>EWALD&#x27;S HYPOTHESIS: cleaner water supplies select for less-virulent diarrheal pathogens because immobile sick hosts can&#x27;t be visited by vectors or contaminate clean water sources.</li>
+<li>Pathogen evolution can shift virulence quickly — e.g., the 1918 influenza pandemic strain evolved very high virulence under crowded WWI conditions.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Virulence</b> — The degree of damage a pathogen causes its host; subject to evolutionary optimization.</li>
+<li><b>Virulence-transmission trade-off</b> — Higher within-host pathogen load increases transmission but reduces host survival — selection finds an intermediate optimum.</li>
+<li><b>Vector-borne</b> — Transmitted by a third organism (mosquito, tick); the host&#x27;s own movement doesn&#x27;t drive transmission.</li>
+<li><b>Ewald&#x27;s hypothesis</b> — Mode of transmission shapes optimal virulence; hygiene improvements lower virulence in waterborne pathogens.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Virulence is NOT &#x27;always&#x27; selected to decrease — that old folk-rule (pathogens evolve to be benign) was wrong. The direction depends on transmission mode.</li>
+<li>Sexually-transmitted, respiratory, and vector-borne pathogens all face DIFFERENT virulence-transmission trade-offs. Predicting virulence evolution requires identifying the transmission route.</li>
+</ul></div>
+
+<h3>§D — Host-pathogen coevolution</h3>
+<p class="overview">Hosts and pathogens are locked in mutual evolutionary arms races. Each side&#x27;s adaptations select for counter-adaptations in the other — driving rapid evolution on both sides.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>HOST-PATHOGEN COEVOLUTION is reciprocal: hosts evolve immune defenses; pathogens evolve evasion; hosts evolve new defenses; and so on.</li>
+<li>MAJOR HISTOCOMPATIBILITY COMPLEX (MHC) is one of the most variable gene regions in vertebrate genomes — under strong balancing selection from coevolving pathogens. Rare MHC alleles are favored because pathogens haven&#x27;t adapted to them yet (negative frequency-dependent selection).</li>
+<li>RED QUEEN DYNAMICS at the population level: hosts must keep evolving genetic novelty (often via sexual recombination) just to keep up with parasites. This is one of the leading explanations for why sex evolved.</li>
+<li>Some pathogens drive long-term host evolution. Example: SICKLE-CELL ALLELE persists in human populations because heterozygotes have malaria resistance — heterozygote advantage maintained by pathogen selection.</li>
+<li>Pathogen counter-adaptations include antigenic variation (HIV, trypanosomes), immune-suppressive proteins, intracellular hiding, and rapid mutation rates.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>MHC (Major Histocompatibility Complex)</b> — Highly polymorphic immune-system genes presenting pathogen-derived peptides to T cells; under balancing selection from coevolving pathogens.</li>
+<li><b>Sickle-cell heterozygote advantage</b> — Heterozygotes (HbA/HbS) are protected against malaria; homozygotes (HbS/HbS) suffer sickle-cell anemia; selection by malaria maintains the allele in malaria-endemic regions.</li>
+<li><b>Antigenic variation</b> — Pathogen evolution of surface antigens to evade host immunity (HIV, influenza, trypanosomes).</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Sickle-cell anemia is a classic POPULATION-LEVEL example of pathogen-driven host evolution. The allele persists not despite the homozygous cost, but because of the heterozygous benefit.</li>
+<li>MHC diversity is maintained by BALANCING SELECTION — distinct from directional or stabilizing selection. Rare alleles benefit from being unfamiliar to pathogens.</li>
+</ul></div>
+
+<h3>§E — Mismatch hypothesis — modern environments and chronic disease</h3>
+<p class="overview">Many chronic diseases of the modern industrialized world (obesity, type 2 diabetes, atherosclerosis, certain autoimmune disorders) reflect a mismatch between traits that were adaptive in ancestral environments and the conditions of modern life.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>ANCESTRAL ENVIRONMENT (Pleistocene, hunter-gatherer): food often scarce, high physical activity, high pathogen load, modest reproductive lifespan.</li>
+<li>MODERN ENVIRONMENT: food abundant (especially refined sugars and fats), sedentary lifestyle, hygiene reduces pathogen exposure, longer lifespan.</li>
+<li>MISMATCH DISEASES: efficient fat storage and sweet/fat preferences (adaptive when food was scarce) contribute to obesity and metabolic syndrome in food-abundant environments.</li>
+<li>Type 2 DIABETES is rare in populations with traditional active lifestyles and rises sharply with sedentary, calorie-rich modern living.</li>
+<li>HYGIENE HYPOTHESIS: reduced early-life microbial exposure may underlie rising allergies, autoimmune diseases — the immune system &#x27;expects&#x27; diverse pathogen exposure that no longer occurs.</li>
+<li>Many cancers and atherosclerotic heart diseases are diseases of OLD AGE not strongly experienced ancestrally — selection couldn&#x27;t act against them because they manifest after reproduction.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Mismatch hypothesis</b> — Modern diseases arise from mismatch between ancestrally-adaptive traits and modern environmental conditions.</li>
+<li><b>Hygiene hypothesis</b> — Reduced early-life microbial exposure may contribute to rising allergies and autoimmune diseases.</li>
+<li><b>Diseases of civilization</b> — Chronic diseases (obesity, type 2 diabetes, atherosclerosis) prevalent in modernized populations and rare in traditional populations.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Mismatch DOESN&#x27;T mean we should live like cave-people; it means understanding our evolutionary history helps explain why certain modern foods and habits are pathogenic.</li>
+<li>Diseases of old age (most cancers, Alzheimer&#x27;s) escape selection because they manifest after reproduction. They aren&#x27;t &#x27;designed&#x27; against — selection just can&#x27;t see them.</li>
+</ul></div>
+
+<h3>§F — Cancer as somatic evolution</h3>
+<p class="overview">Cancer is evolution playing out within an individual body. Cells acquire mutations, some of which give a growth advantage; selection within the body favors those cells; tumors are the result. This view reshapes treatment strategies.</p>
+<p class="q">Key points</p>
+<ul class="a">
+<li>Cancer cells DIVIDE rapidly with HIGH MUTATION RATES — generating heritable variation among tumor cells.</li>
+<li>Tumor cells COMPETE for resources (oxygen, glucose, space). Cells with growth-promoting mutations outcompete neighbors.</li>
+<li>Therapies act as STRONG SELECTIVE PRESSURES — chemotherapy and targeted drugs kill susceptible cells but select for resistant subclones, often leading to relapse.</li>
+<li>ADAPTIVE THERAPY is an experimental strategy: instead of trying to kill all tumor cells (which selects for resistance), maintain susceptible cells to suppress resistant ones — leveraging competition among tumor subclones.</li>
+<li>Cancer susceptibility itself reflects evolutionary trade-offs: mechanisms protecting against cancer (apoptosis, senescence) trade off against tissue regeneration and longevity.</li>
+</ul>
+<p class="q">Key terms</p>
+<ul class="a">
+<li><b>Somatic evolution</b> — Evolution by mutation + selection acting on cell lineages within a multicellular organism&#x27;s body.</li>
+<li><b>Tumor heterogeneity</b> — Genetic diversity among cells within a single tumor, generated by ongoing mutation; substrate for treatment-resistance evolution.</li>
+<li><b>Adaptive therapy</b> — Cancer treatment strategy that maintains susceptible tumor cells to competitively suppress resistant subclones, rather than aggressive eradication.</li>
+</ul>
+<div class="callout"><b>Exam traps</b><ul style="margin-top:4px">
+<li>Cancer is evolution writ small — the same processes (variation, selection, heritability) operating on cell lineages.</li>
+<li>Aggressive cancer therapy can SELECT for resistance just like aggressive antibiotic use does. Treatment strategy is also an evolutionary problem.</li>
+</ul></div>
+
+</div><!-- /doc -->
+</div><!-- /pageWrap -->
+
+<!-- ===== Find / Replace Bar ===== -->
+<div class="findbar no-print" id="findbar" style="display:none">
+  <input type="text" id="findInput" placeholder="Find" autocomplete="off" />
+  <input type="text" id="replaceInput" placeholder="Replace with…" autocomplete="off" />
+  <button onclick="findNext()" title="Next match (Enter)">↓ Next</button>
+  <button onclick="findPrev()" title="Previous match (Shift+Enter)">↑ Prev</button>
+  <button onclick="replaceOne()" title="Replace current match">Replace</button>
+  <button onclick="replaceAll()" title="Replace all matches">Replace All</button>
+  <span id="findCount" style="color:#5b554b;font-size:12px;margin-left:6px"></span>
+  <button onclick="closeFind()" title="Close (Esc)" style="margin-left:auto;color:#a3290e">Close</button>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  window.addEventListener('error', e => { console.warn('[study-guide] caught:', e.message); });
+
+  const doc = document.getElementById('doc');
+  const status = document.getElementById('saveStatus');
+  const STORAGE_KEY = 'evol4230_exam3_studyguide_v1';
+  const SHORTCUT_KEY = 'evol4230_exam3_studyguide_v1_shortcuts_v1';
+  const PRISTINE_HTML = doc.innerHTML;
+
+  try{
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if(saved){ doc.innerHTML = saved; status.innerHTML = 'Loaded from <b>local save</b>'; }
+    else { status.innerHTML = 'Loaded — <b>fresh copy</b>'; }
+  }catch(e){ console.warn('localStorage unavailable', e); status.innerHTML = '<span style="color:#c34">localStorage off</span>'; }
+
+  let saveTimer = null;
+  function markDirty(){
+    status.classList.add('dirty');
+    status.innerHTML = 'Editing…';
+    if(saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(scheduleSave, 1200);
+  }
+  function scheduleSave(){
+    if('requestIdleCallback' in window){
+      requestIdleCallback(saveNow, {timeout: 1500});
+    } else {
+      setTimeout(saveNow, 0);
+    }
+  }
+  function saveNow(){
+    try{
+      localStorage.setItem(STORAGE_KEY, doc.innerHTML);
+      status.classList.remove('dirty');
+      const t = new Date().toLocaleTimeString();
+      status.innerHTML = 'Saved <b>'+t+'</b>';
+    }catch(e){
+      status.innerHTML = '<span style="color:#c34">Save failed</span> — '+e.message;
+    }
+  }
+  doc.addEventListener('input', markDirty);
+  doc.addEventListener('paste', () => setTimeout(markDirty, 30));
+  window.addEventListener('beforeunload', saveNow);
+
+  function cmd(name, value){
+    try{
+      document.execCommand(name, false, value || null);
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('[study-guide] cmd '+name+' failed:', e); }
+  }
+  document.getElementById('fontFamily').addEventListener('change', e => { restoreSelection(); cmd('fontName', e.target.value); });
+  document.getElementById('fontSize').addEventListener('change', e => { restoreSelection(); cmd('fontSize', e.target.value); });
+  document.getElementById('fgColor').addEventListener('change', e => { restoreSelection(); cmd('foreColor', e.target.value); });
+  document.getElementById('bgColor').addEventListener('change', e => { restoreSelection(); cmd('hiliteColor', e.target.value); });
+
+  function insertHorizontalRule(){ cmd('insertHorizontalRule'); }
+  function insertPageBreak(){
+    document.execCommand('insertHTML', false, '<div class="pagebreak"></div>');
+    markDirty();
+  }
+
+  function insertImageFromFile(ev){
+    const f = ev.target.files[0]; if(!f) return;
+    const r = new FileReader();
+    r.onload = e => {
+      doc.focus();
+      document.execCommand('insertHTML', false, '<figure><img src="'+e.target.result+'" alt="user image"/><figcaption>User-inserted image</figcaption></figure>');
+      markDirty();
+    };
+    r.readAsDataURL(f);
+    ev.target.value = '';
+  }
+
+  function resetDoc(){
+    if(!confirm('Reset to the seeded content? Your edits will be lost.')) return;
+    doc.innerHTML = PRISTINE_HTML;
+    saveNow();
+  }
+
+  function downloadHTML(){
+    const html = '<!doctype html><html><head><meta charset="utf-8"><title>Exam 3 · Phylogeny / Speciation / Humans — BIOL 4230</title><style>'+
+      'body{font-family:"Times New Roman",serif;max-width:7in;margin:0.5in auto;line-height:1.45}'+
+      'h1{text-align:center}h2{border-bottom:1.5pt solid #000;padding-bottom:3px}h3{text-decoration:underline}'+
+      'figure{text-align:center;margin:8px auto}figure img{max-width:100%;border:1px solid #888}'+
+      'figcaption{font-size:10pt;color:#555;font-style:italic}'+
+      'table{border-collapse:collapse;width:100%;font-size:10.5pt}'+
+      'th,td{border:0.5pt solid #888;padding:4px 6px;vertical-align:top}'+
+      '.q{font-weight:700}.a{font-weight:400}'+
+      '.callout{border-left:3px solid #c89b2e;background:#fff7e8;padding:6px 10px;margin:8px 0}'+
+      '.pagebreak{page-break-after:always}'+
+      '@page{size:letter portrait;margin:0.5in}'+
+      '</style></head><body>' + doc.innerHTML + '</body></html>';
+    const blob = new Blob([html], {type:'text/html'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'Exam3_StudyGuide_BIOL4230.html';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  function applyBlockStyle(){
+    const el = document.getElementById('styleSelect');
+    if(!el) return;
+    const tag = el.value;
+    if(!tag) return;
+    try{
+      document.execCommand('formatBlock', false, '<' + tag + '>');
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('formatBlock failed', e); }
+    el.selectedIndex = 0;
+  }
+
+  function getSelectedBlocks(){
+    const sel = window.getSelection();
+    if(!sel || sel.rangeCount === 0) return [];
+    const range = sel.getRangeAt(0);
+    const blocks = new Set();
+    function climb(node){
+      while(node && node !== doc){
+        if(node.nodeType === 1){
+          const d = getComputedStyle(node).display;
+          if(d === 'block' || d === 'list-item' || /^(P|H[1-6]|LI|BLOCKQUOTE|PRE|FIGURE|TABLE|TR|TD|TH|DIV)$/.test(node.tagName)){
+            blocks.add(node); return;
+          }
+        }
+        node = node.parentNode;
+      }
+    }
+    climb(range.startContainer);
+    climb(range.endContainer);
+    const it = document.createTreeWalker(doc, NodeFilter.SHOW_ELEMENT, {
+      acceptNode: n => range.intersectsNode(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+    });
+    let n;
+    while((n = it.nextNode())){
+      const d = getComputedStyle(n).display;
+      if(d === 'block' || d === 'list-item') blocks.add(n);
+    }
+    return Array.from(blocks);
+  }
+
+  function changeCase(){
+    const choice = prompt('Change case to:\n  1) UPPERCASE\n  2) lowercase\n  3) Title Case\n  4) Sentence case\nEnter 1, 2, 3, or 4:');
+    const sel = window.getSelection();
+    if(!sel || sel.isCollapsed){ alert('Select some text first.'); return; }
+    const text = sel.toString();
+    let out = text;
+    if(choice === '1') out = text.toUpperCase();
+    else if(choice === '2') out = text.toLowerCase();
+    else if(choice === '3') out = text.toLowerCase().replace(/\b([a-z])/g, (m, c) => c.toUpperCase());
+    else if(choice === '4'){
+      out = text.toLowerCase().replace(/(^|[.!?]\s+)([a-z])/g, (m, p, c) => p + c.toUpperCase());
+    } else return;
+    document.execCommand('insertText', false, out);
+    markDirty();
+  }
+
+  function applyLineSpacing(){
+    const el = document.getElementById('lineSpacing');
+    if(!el || !el.value) return;
+    const v = el.value;
+    getSelectedBlocks().forEach(b => { b.style.lineHeight = v; });
+    el.selectedIndex = 0;
+    markDirty();
+  }
+
+  function colorsEqual(a, b){
+    if(!a || !b) return false;
+    const ma = ('' + a).match(/\d+/g);
+    const mb = ('' + b).match(/\d+/g);
+    if(!ma || !mb) return false;
+    return ma.slice(0,3).join(',') === mb.slice(0,3).join(',');
+  }
+  function hexToRgb(hex){
+    const m = hex.replace('#','');
+    return 'rgb(' + parseInt(m.slice(0,2),16) + ', ' + parseInt(m.slice(2,4),16) + ', ' + parseInt(m.slice(4,6),16) + ')';
+  }
+  function applyShade(){
+    const c = document.getElementById('paraShade').value;
+    const target = hexToRgb(c);
+    const blocks = getSelectedBlocks();
+    if(!blocks.length) return;
+    const allHave = blocks.every(b => colorsEqual(b.style.backgroundColor, target));
+    blocks.forEach(b => {
+      if(allHave){
+        b.style.backgroundColor = '';
+        if(!/pb-/.test(b.className)) b.style.padding = '';
+      } else {
+        b.style.backgroundColor = c;
+        if(!b.style.padding) b.style.padding = '4px 8px';
+      }
+    });
+    markDirty();
+  }
+
+  function applyBorder(){
+    const el = document.getElementById('borderSelect');
+    if(!el || !el.value) return;
+    const which = el.value;
+    const blocks = getSelectedBlocks();
+    el.selectedIndex = 0;
+    if(!blocks.length) return;
+    if(which === 'none'){
+      blocks.forEach(b => b.classList.remove('pb-all','pb-top','pb-bottom','pb-left','pb-right'));
+    } else {
+      const cls = 'pb-' + which;
+      const allHave = blocks.every(b => b.classList.contains(cls));
+      blocks.forEach(b => {
+        if(allHave){
+          b.classList.remove(cls);
+        } else {
+          b.classList.remove('pb-all','pb-top','pb-bottom','pb-left','pb-right');
+          b.classList.add(cls);
+        }
+      });
+    }
+    markDirty();
+  }
+
+  function applyListStyle(){
+    const el = document.getElementById('listStyleSelect');
+    if(!el || !el.value) return;
+    const [tag, style] = el.value.split(':');
+    const cmdName = tag === 'ol' ? 'insertOrderedList' : 'insertUnorderedList';
+    document.execCommand(cmdName, false, null);
+    const sel = window.getSelection();
+    if(sel && sel.rangeCount){
+      let n = sel.getRangeAt(0).startContainer;
+      while(n && n !== doc){
+        if(n.nodeType === 1 && /^(UL|OL)$/.test(n.tagName)){ n.style.listStyleType = style; break; }
+        n = n.parentNode;
+      }
+    }
+    el.selectedIndex = 0;
+    markDirty();
+  }
+
+  /* FIND / REPLACE */
+  let findHits = [];
+  let findIndex = -1;
+  function clearFindHits(){
+    doc.querySelectorAll('.find-hit, .find-hit-current').forEach(el => {
+      const parent = el.parentNode;
+      while(el.firstChild) parent.insertBefore(el.firstChild, el);
+      parent.removeChild(el);
+      parent.normalize();
+    });
+    findHits = []; findIndex = -1;
+    const cnt = document.getElementById('findCount'); if(cnt) cnt.textContent = '';
+  }
+  function highlightAll(query){
+    clearFindHits();
+    if(!query) return;
+    const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, {
+      acceptNode: n => n.parentElement && n.parentElement.closest('.find-hit') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    });
+    const targets = [];
+    let n;
+    while((n = walker.nextNode())){ if(re.test(n.nodeValue)){ re.lastIndex = 0; targets.push(n); } }
+    targets.forEach(node => {
+      const text = node.nodeValue;
+      const frag = document.createDocumentFragment();
+      let last = 0;
+      let m;
+      const re2 = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      while((m = re2.exec(text))){
+        if(m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const span = document.createElement('span');
+        span.className = 'find-hit';
+        span.textContent = m[0];
+        frag.appendChild(span);
+        findHits.push(span);
+        last = m.index + m[0].length;
+        if(m[0].length === 0) re2.lastIndex++;
+      }
+      if(last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+    const cnt = document.getElementById('findCount');
+    if(cnt) cnt.textContent = findHits.length ? (findHits.length + ' match' + (findHits.length === 1 ? '' : 'es')) : 'No matches';
+    if(findHits.length){ findIndex = 0; markCurrent(); }
+  }
+  function markCurrent(){
+    findHits.forEach((h, i) => h.className = (i === findIndex ? 'find-hit-current' : 'find-hit'));
+    if(findHits[findIndex]) findHits[findIndex].scrollIntoView({block:'center', behavior:'smooth'});
+    const cnt = document.getElementById('findCount');
+    if(cnt && findHits.length) cnt.textContent = (findIndex+1) + ' / ' + findHits.length;
+  }
+  function findNext(){ if(!findHits.length) return; findIndex = (findIndex+1) % findHits.length; markCurrent(); }
+  function findPrev(){ if(!findHits.length) return; findIndex = (findIndex-1+findHits.length) % findHits.length; markCurrent(); }
+  function replaceOne(){
+    const r = document.getElementById('replaceInput').value;
+    if(findIndex < 0 || !findHits[findIndex]) return;
+    const hit = findHits[findIndex];
+    const txt = document.createTextNode(r);
+    hit.parentNode.replaceChild(txt, hit);
+    findHits.splice(findIndex, 1);
+    if(findIndex >= findHits.length) findIndex = 0;
+    markCurrent();
+    markDirty();
+  }
+  function replaceAll(){
+    const r = document.getElementById('replaceInput').value;
+    if(!findHits.length) return;
+    findHits.forEach(h => { h.parentNode.replaceChild(document.createTextNode(r), h); });
+    const n = findHits.length;
+    findHits = []; findIndex = -1;
+    const cnt = document.getElementById('findCount'); if(cnt) cnt.textContent = 'Replaced ' + n;
+    markDirty();
+  }
+  function openFind(){
+    document.getElementById('findbar').style.display = 'flex';
+    const i = document.getElementById('findInput'); i.focus(); i.select();
+  }
+  function openReplace(){ openFind(); document.getElementById('replaceInput').focus(); }
+  function closeFind(){ clearFindHits(); document.getElementById('findbar').style.display = 'none'; doc.focus(); }
+
+  /* JUMP-TO TOC */
+  function buildJumpTo(){
+    const sel = document.getElementById('jumpTo');
+    if(!sel) return;
+    sel.innerHTML = '<option value="">Jump to…</option>';
+    const heads = doc.querySelectorAll('h1, h2, h3');
+    let i = 0;
+    heads.forEach(h => {
+      if(!h.id) h.id = 'sec-' + (i++);
+      const indent = h.tagName === 'H1' ? '' : (h.tagName === 'H2' ? '— ' : '  · ');
+      const o = document.createElement('option');
+      o.value = h.id;
+      o.textContent = indent + (h.textContent || '').trim().slice(0, 60);
+      sel.appendChild(o);
+    });
+  }
+  buildJumpTo();
+  let tocTimer = null;
+  doc.addEventListener('input', () => { clearTimeout(tocTimer); tocTimer = setTimeout(buildJumpTo, 1500); });
+
+  /* TOOLBAR WIRING */
+  document.querySelectorAll('.tb button, .findbar button').forEach(btn => {
+    btn.addEventListener('mousedown', e => e.preventDefault());
+  });
+
+  let savedRange = null;
+  function saveSelection(){
+    try{
+      const sel = window.getSelection();
+      if(sel && sel.rangeCount){
+        const r = sel.getRangeAt(0);
+        if(doc.contains(r.commonAncestorContainer)) savedRange = r.cloneRange();
+      }
+    }catch(e){}
+  }
+  function restoreSelection(){
+    if(!savedRange) return;
+    try{
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(savedRange);
+    }catch(e){}
+  }
+  doc.addEventListener('mouseup', saveSelection);
+  doc.addEventListener('keyup', saveSelection);
+  document.querySelectorAll('.tb select, .tb input[type=color]').forEach(el => {
+    el.addEventListener('mousedown', saveSelection);
+    el.addEventListener('focus', saveSelection);
+  });
+  function wrapWithRestore(handler){ return function(e){ restoreSelection(); handler(e); }; }
+
+  document.getElementById('styleSelect').addEventListener('change', wrapWithRestore(applyBlockStyle));
+  document.getElementById('lineSpacing').addEventListener('change', wrapWithRestore(applyLineSpacing));
+  document.getElementById('borderSelect').addEventListener('change', wrapWithRestore(applyBorder));
+  document.getElementById('listStyleSelect').addEventListener('change', wrapWithRestore(applyListStyle));
+  document.getElementById('jumpTo').addEventListener('change', e => {
+    const id = e.target.value;
+    if(!id) return;
+    const target = document.getElementById(id);
+    if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    e.target.selectedIndex = 0;
+  });
+  document.getElementById('findInput').addEventListener('input', e => highlightAll(e.target.value));
+  document.getElementById('findInput').addEventListener('keydown', e => {
+    if(e.key === 'Enter'){ e.preventDefault(); e.shiftKey ? findPrev() : findNext(); }
+    if(e.key === 'Escape'){ closeFind(); }
+  });
+  document.getElementById('replaceInput').addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeFind();
+  });
+
+  /* HIGHLIGHT toggle */
+  function selectionHasHighlight(){
+    try{
+      const v = document.queryCommandValue('hiliteColor') || document.queryCommandValue('backColor');
+      if(!v) return false;
+      const trimmed = ('' + v).trim();
+      if(!trimmed || trimmed === 'transparent' || /rgba?\(\s*0\s*,\s*0\s*,\s*0\s*,\s*0\s*\)/.test(trimmed)) return false;
+      const m = trimmed.match(/rgba?\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
+      if(m && +m[1] >= 250 && +m[2] >= 250 && +m[3] >= 250) return false;
+      return true;
+    }catch(e){ return false; }
+  }
+  function unhighlight(){
+    try{
+      document.execCommand('hiliteColor', false, 'transparent');
+      const sel = window.getSelection();
+      if(sel && sel.rangeCount){
+        const range = sel.getRangeAt(0);
+        const it = document.createTreeWalker(doc, NodeFilter.SHOW_ELEMENT, {
+          acceptNode: n => range.intersectsNode(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+        });
+        let n;
+        while((n = it.nextNode())){
+          if(n.style && n.style.backgroundColor) n.style.backgroundColor = '';
+        }
+      }
+      doc.focus();
+      markDirty();
+    }catch(e){ console.warn('unhighlight failed', e); }
+  }
+  function toggleHighlight(){
+    if(selectionHasHighlight()){
+      unhighlight();
+    } else {
+      const c = document.getElementById('bgColor').value;
+      cmd('hiliteColor', c);
+    }
+  }
+
+  /* CONFIGURABLE SHORTCUTS */
+  const ACTIONS = [
+    {id:'save',          label:'Save now',                        def:'ctrl+s',         run: () => saveNow()},
+    {id:'find',          label:'Find',                            def:'ctrl+f',         run: () => openFind()},
+    {id:'replace',       label:'Find & Replace',                  def:'ctrl+h',         run: () => openReplace()},
+    {id:'highlight',     label:'Toggle highlight on selection',   def:'ctrl+shift+h',   run: () => toggleHighlight()},
+    {id:'unhighlight',   label:'Remove highlight',                def:'ctrl+shift+u',   run: () => unhighlight()},
+    {id:'bold',          label:'Bold',                            def:'ctrl+b',         run: () => cmd('bold')},
+    {id:'italic',        label:'Italic',                          def:'ctrl+i',         run: () => cmd('italic')},
+    {id:'underline',     label:'Underline',                       def:'ctrl+u',         run: () => cmd('underline')},
+    {id:'strike',        label:'Strikethrough',                   def:'',               run: () => cmd('strikeThrough')},
+    {id:'super',         label:'Superscript',                     def:'ctrl+shift+=',   run: () => cmd('superscript')},
+    {id:'sub',           label:'Subscript',                       def:'ctrl+=',         run: () => cmd('subscript')},
+    {id:'selectAll',     label:'Select all (in document)',        def:'ctrl+a',         run: () => {
+        const range = document.createRange(); range.selectNodeContents(doc);
+        const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+    }},
+    {id:'indent',        label:'Increase indent',                 def:'tab',            run: () => { document.execCommand('indent'); markDirty(); }},
+    {id:'outdent',       label:'Decrease indent',                 def:'shift+tab',      run: () => { document.execCommand('outdent'); markDirty(); }},
+    {id:'undo',          label:'Undo',                            def:'ctrl+z',         run: () => cmd('undo')},
+    {id:'redo',          label:'Redo',                            def:'ctrl+y',         run: () => cmd('redo')}
+  ];
+  let bindings = {};
+  function loadShortcuts(){
+    try{
+      const saved = JSON.parse(localStorage.getItem(SHORTCUT_KEY) || '{}');
+      bindings = {};
+      ACTIONS.forEach(a => { bindings[a.id] = saved[a.id] != null ? saved[a.id] : a.def; });
+    }catch(e){ bindings = Object.fromEntries(ACTIONS.map(a => [a.id, a.def])); }
+  }
+  function saveShortcuts(){
+    try{ localStorage.setItem(SHORTCUT_KEY, JSON.stringify(bindings)); }catch(e){ console.warn('save shortcuts failed', e); }
+  }
+  function resetShortcuts(){
+    if(!confirm('Reset all shortcuts to defaults?')) return;
+    bindings = {};
+    ACTIONS.forEach(a => { bindings[a.id] = a.def; });
+    saveShortcuts();
+    renderShortcuts();
+  }
+  function comboFromEvent(e){
+    if(e.key === 'Tab'){
+      return (e.shiftKey ? 'shift+' : '') + 'tab';
+    }
+    if(e.key === 'Escape' || e.key === 'Control' || e.key === 'Shift' || e.key === 'Alt' || e.key === 'Meta') return null;
+    const parts = [];
+    if(e.ctrlKey || e.metaKey) parts.push('ctrl');
+    if(e.altKey) parts.push('alt');
+    if(e.shiftKey) parts.push('shift');
+    parts.push(e.key.toLowerCase());
+    return parts.join('+');
+  }
+  loadShortcuts();
+
+  function openShortcuts(){
+    document.getElementById('shortcutsModal').classList.add('show');
+    renderShortcuts();
+  }
+  function closeShortcuts(){
+    document.getElementById('shortcutsModal').classList.remove('show');
+  }
+  function renderShortcuts(){
+    const tbl = document.getElementById('shortcutsTable');
+    tbl.innerHTML = '<tr style="background:#f1ead9"><th style="text-align:left;padding:6px 8px;border-bottom:1px solid #ccc">Action</th><th style="text-align:left;padding:6px 8px;border-bottom:1px solid #ccc">Shortcut</th><th style="border-bottom:1px solid #ccc"></th></tr>';
+    ACTIONS.forEach(a => {
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td style="padding:5px 8px;border-bottom:1px solid #eee">'+a.label+'</td>' +
+        '<td style="padding:5px 8px;border-bottom:1px solid #eee"><button data-act="'+a.id+'" class="kb-btn" style="font-family:Consolas,monospace;padding:3px 8px;border:1px solid #ccc;border-radius:4px;background:#fff;cursor:pointer;min-width:130px;text-align:left">'+(bindings[a.id] || '— click to set —')+'</button></td>' +
+        '<td style="padding:5px 4px;border-bottom:1px solid #eee"><button data-clear="'+a.id+'" style="font-size:11px;padding:3px 6px;border:1px solid #ccc;border-radius:3px;background:#fff;cursor:pointer">clear</button></td>';
+      tbl.appendChild(tr);
+    });
+    tbl.querySelectorAll('.kb-btn').forEach(btn => {
+      btn.onclick = () => {
+        btn.textContent = '… press a key combo …';
+        btn.style.background = '#fff4e2';
+        const handler = (ev) => {
+          ev.preventDefault();
+          const combo = comboFromEvent(ev);
+          if(combo == null) return;
+          const conflict = Object.entries(bindings).find(([k,v]) => v === combo && k !== btn.dataset.act);
+          if(conflict){
+            const ok = confirm('That combo is already bound to "'+ACTIONS.find(a=>a.id===conflict[0]).label+'". Reassign anyway?');
+            if(!ok){ btn.textContent = bindings[btn.dataset.act] || '— click to set —'; btn.style.background='#fff'; window.removeEventListener('keydown', handler, true); return; }
+            bindings[conflict[0]] = '';
+          }
+          bindings[btn.dataset.act] = combo;
+          saveShortcuts();
+          window.removeEventListener('keydown', handler, true);
+          renderShortcuts();
+        };
+        window.addEventListener('keydown', handler, true);
+      };
+    });
+    tbl.querySelectorAll('button[data-clear]').forEach(btn => {
+      btn.onclick = () => { bindings[btn.dataset.clear] = ''; saveShortcuts(); renderShortcuts(); };
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if(document.getElementById('shortcutsModal').classList.contains('show')) return;
+    const combo = comboFromEvent(e);
+    if(!combo) return;
+    for(const a of ACTIONS){
+      if(bindings[a.id] && bindings[a.id] === combo){
+        if((a.id === 'indent' || a.id === 'outdent') && !doc.contains(document.activeElement)) return;
+        if(a.id === 'selectAll' && !doc.contains(document.activeElement)) return;
+        e.preventDefault();
+        try{ a.run(); }catch(err){ console.warn('shortcut '+a.id+' failed:', err); }
+        return;
+      }
+    }
+  });
+
+  /* PUBLIC */
+  window.cmd = cmd;
+  window.changeCase = changeCase;
+  window.applyShade = applyShade;
+  window.unhighlight = unhighlight;
+  window.toggleHighlight = toggleHighlight;
+  window.openShortcuts = openShortcuts;
+  window.closeShortcuts = closeShortcuts;
+  window.resetShortcuts = resetShortcuts;
+  window.insertHorizontalRule = insertHorizontalRule;
+  window.insertPageBreak = insertPageBreak;
+  window.insertImageFromFile = insertImageFromFile;
+  window.openFind = openFind;
+  window.openReplace = openReplace;
+  window.closeFind = closeFind;
+  window.findNext = findNext;
+  window.findPrev = findPrev;
+  window.replaceOne = replaceOne;
+  window.replaceAll = replaceAll;
+  window.resetDoc = resetDoc;
+  window.downloadHTML = downloadHTML;
+})();
+</script>
+</body>
+</html>
