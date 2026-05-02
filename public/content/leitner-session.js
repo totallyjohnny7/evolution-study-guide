@@ -1,20 +1,22 @@
 /* leitner-session.js — Compressed in-session Leitner-style flashcards.
  *
  * Replaces FSRS interval scheduling with a session loop:
- *  - 3-button grading (1=Miss, 2=Shaky, 3=Got it)
+ *  - 3-button grading (Miss / Shaky / Got it) with remappable hotkeys (default Z/X/C)
  *  - Re-queue on Miss (~+4) and Shaky (~+12)
  *  - Got it leaves session, parked for tomorrow
- *  - Session timer 10 / 20 / 30 min, counts down
+ *  - Sessions sized by CARD COUNT (25/50/100/all), not minutes
+ *  - Live avg-time-per-card + ETA (after enough data)
  *  - Trap cards every ~12 cards (auto-MC from recent misses)
  *  - Triple-miss rescue
  *  - End-of-session: stats, top misses, Boss Mode, tomorrow's deck builder
+ *  - Mobile/touch friendly
  *  - Persistence: every action saved; resume on page reopen
  *
  * Storage:
  *  leitner-progress-v1   per-card state across sessions (state, missCount, lastSeen)
  *  leitner-session-v1    live session for resume
- *  leitner-history-v1    rolling stats + tomorrow's deck seeds
- *  leitner-settings-v1   last-used deck + minutes
+ *  leitner-history-v1    rolling stats + tomorrow's deck seeds + rolling avg-ms-per-card
+ *  leitner-settings-v1   last-used deck + cardCount + custom hotkeys
  */
 (function () {
   'use strict';
@@ -83,6 +85,32 @@
     const min = Math.max(2, target - jitter);
     const max = target + jitter;
     return min + Math.floor(Math.random() * (max - min + 1));
+  }
+
+  // ============================================================ settings + hotkeys
+
+  const DEFAULT_HOTKEYS = { miss: 'z', shaky: 'x', gotIt: 'c' };
+  const CARD_COUNT_PRESETS = [25, 50, 100, 999]; // 999 = "All"
+
+  function getSettings() {
+    const s = loadJSON(KEYS.SETTINGS, {}) || {};
+    return {
+      deckId: s.deckId || 'all',
+      cardCount: typeof s.cardCount === 'number' ? s.cardCount : 50,
+      hotkeys: Object.assign({}, DEFAULT_HOTKEYS, s.hotkeys || {}),
+    };
+  }
+  function saveSettings(patch) {
+    const cur = getSettings();
+    saveJSON(KEYS.SETTINGS, Object.assign({}, cur, patch));
+  }
+  function hotkeyLabel(k) {
+    if (!k) return '?';
+    if (k === ' ') return 'Space';
+    return k.length === 1 ? k.toUpperCase() : k;
+  }
+  function isValidHotkey(k) {
+    return typeof k === 'string' && k.length === 1 && /[a-z0-9]/i.test(k);
   }
 
   // ============================================================ migration
@@ -242,7 +270,9 @@
     const s = loadJSON(KEYS.SESSION, null);
     if (!s || !Array.isArray(s.queue) || !s.queue.length) return false;
     if (s.endedAt) return false;
-    if ((s.remainingMs || 0) <= 0) return false;
+    // Old shape: had remainingMs gating. New shape: gated by cardSeen vs targetCards.
+    const target = s.targetCards;
+    if (typeof target === 'number' && (s.cardSeen || 0) >= target) return false;
     return true;
   }
 
@@ -322,21 +352,22 @@
     }));
   }
 
-  function startSession(deckId, minutes, mode) {
+  function startSession(deckId, targetCards, mode) {
     mode = mode || 'normal';
     const queue = buildQueue(deckId, mode);
     if (!queue.length) {
       alert('No cards to study in this deck.');
       return;
     }
+    // Cap targetCards by available unique cards for sane "all" behavior
+    const effTarget = Math.min(targetCards || queue.length, queue.length * 4);
     S = {
       deckId,
       mode,
-      minutes,
-      startedAt: Date.now(),
-      endsAt:    Date.now() + minutes * 60 * 1000,
-      remainingMs: minutes * 60 * 1000,
-      pausedAt:  null,
+      targetCards: effTarget,
+      startedAt:   Date.now(),
+      pausedAt:    null,
+      pausedMs:    0,
 
       queue,
       currentIdx: 0,
@@ -346,6 +377,10 @@
       firstTryGotIt:  0,
       streak:         0,
       bestStreak:     0,
+
+      lastGradeAt:    null,
+      gradeMsTotal:   0,
+      gradeMsCount:   0,
 
       missCounts:      {},
       todayMisses:     [],
@@ -363,7 +398,7 @@
 
       endedAt:   null,
       endReason: null,
-      version:   1,
+      version:   2,
     };
     persistSession();
     UI.startTimerLoop();
@@ -374,25 +409,33 @@
     const saved = loadJSON(KEYS.SESSION, null);
     if (!saved) return false;
     S = saved;
-    if (S.pausedAt) {
-      // stay paused; render will reflect
-    } else {
-      S.endsAt = Date.now() + (S.remainingMs || 0);
+    // Migrate old time-based sessions: drop minutes/endsAt/remainingMs, default targetCards
+    if (typeof S.targetCards !== 'number') {
+      S.targetCards = Math.max(25, (S.queue && S.queue.length) || 50);
     }
+    if (typeof S.pausedMs !== 'number') S.pausedMs = 0;
+    if (typeof S.gradeMsTotal !== 'number') S.gradeMsTotal = 0;
+    if (typeof S.gradeMsCount !== 'number') S.gradeMsCount = 0;
     UI.startTimerLoop();
     UI.render();
     return true;
   }
 
+  function avgMsPerCard() {
+    if (!S || !S.gradeMsCount) return 0;
+    return S.gradeMsTotal / S.gradeMsCount;
+  }
+  function etaMs() {
+    if (!S) return 0;
+    const avg = avgMsPerCard();
+    if (!avg) return 0;
+    const remaining = Math.max(0, (S.targetCards || 0) - (S.cardSeen || 0));
+    return remaining * avg;
+  }
+
   function tickTimer() {
     if (!S || S.endedAt) return;
-    if (S.pausedAt) return;
-    S.remainingMs = Math.max(0, S.endsAt - Date.now());
-    const el = document.getElementById('lzTimer');
-    if (el) el.textContent = fmtTime(S.remainingMs);
-    if (S.remainingMs <= 0) {
-      endSession('timer');
-    }
+    UI.refreshHeader();
   }
 
   function endSession(reason) {
@@ -408,6 +451,13 @@
     hist.lastSessionEnd = Date.now();
     hist.totalCardsSeen = (hist.totalCardsSeen || 0) + S.cardSeen;
     hist.totalSessions  = (hist.totalSessions || 0) + 1;
+    hist.todayGotIt     = (hist.todayGotIt || []).concat(S.todayGotIt || []);
+    // Rolling exponential avg for ETA prediction across sessions
+    const sessionAvg = avgMsPerCard();
+    if (sessionAvg > 0 && S.gradeMsCount >= 3) {
+      const prev = hist.rollingAvgMsPerCard || sessionAvg;
+      hist.rollingAvgMsPerCard = Math.round(prev * 0.6 + sessionAvg * 0.4);
+    }
     saveJSON(KEYS.HISTORY, hist);
 
     persistSession();
@@ -422,8 +472,10 @@
   function unpauseSession() {
     if (!S || !S.pausedAt) return;
     const pausedFor = Date.now() - S.pausedAt;
-    S.endsAt += pausedFor;
+    S.pausedMs = (S.pausedMs || 0) + pausedFor;
     S.pausedAt = null;
+    // Don't credit paused time to the next card's per-card timing
+    S.lastGradeAt = Date.now();
     persistSession();
   }
 
@@ -474,6 +526,19 @@
     });
     if (S.history.length > 20) S.history.shift();
     const snap = S.history[S.history.length - 1];
+
+    // Time tracking: ms since last grade (or session start), capped at 60s
+    // to ignore "stepped away" outliers when computing avg.
+    {
+      const now = Date.now();
+      const refTs = S.lastGradeAt || S.startedAt || now;
+      const dt = Math.min(60 * 1000, Math.max(0, now - refTs));
+      if (dt > 0) {
+        S.gradeMsTotal = (S.gradeMsTotal || 0) + dt;
+        S.gradeMsCount = (S.gradeMsCount || 0) + 1;
+      }
+      S.lastGradeAt = now;
+    }
 
     S.cardSeen++;
     S.cardsSinceTrap++;
@@ -538,6 +603,10 @@
 
     if (S.queue.length === 0) {
       endSession('clear');
+      return;
+    }
+    if (S.targetCards && S.cardSeen >= S.targetCards) {
+      endSession('target');
       return;
     }
 
@@ -663,7 +732,7 @@
 
   function maybeOfferBreak() {
     if (!S) return;
-    const elapsedSec = (Date.now() - S.startedAt) / 1000;
+    const elapsedSec = (Date.now() - S.startedAt - (S.pausedMs || 0)) / 1000;
     if (elapsedSec < 8 * 60) return;
     if (S.breakOfferedAt8 || S.breakForcedAt8) return;
 
@@ -740,16 +809,22 @@
       const decks = window.FLASHCARD_DECKS || {};
       const labels = window.FLASHCARD_LABELS || {};
       const lectureIds = (window.FC_DECKS || []).filter(id => id !== 'all');
-      const settings = loadJSON(KEYS.SETTINGS, { deckId: 'all', minutes: 20 });
+      const settings = getSettings();
+
+      // Estimate ETA for the active card-count, based on rolling avg from history
+      const hist = loadJSON(KEYS.HISTORY, {});
+      const rollingAvgMs = hist.rollingAvgMsPerCard || 0;
 
       let resumeBlock = '';
       if (hasSavedSession()) {
         const s = loadJSON(KEYS.SESSION, {}) || {};
+        const seen = s.cardSeen || 0;
+        const target = s.targetCards || (Array.isArray(s.queue) ? s.queue.length : 0);
         resumeBlock = `
           <div class="lz-resume">
             <h3>Resume previous session?</h3>
             <div class="lz-resume-meta">
-              ${(s.cardSeen || 0)} cards seen · ${Array.isArray(s.queue) ? s.queue.length : 0} left · ${fmtTime(s.remainingMs || 0)} on the clock
+              ${seen} / ${target} cards · ${Array.isArray(s.queue) ? s.queue.length : 0} in queue
             </div>
             <div class="lz-resume-buttons">
               <button class="lz-btn lz-btn-primary" id="lzResume">Resume</button>
@@ -767,10 +842,17 @@
         return `<option value="${escHTML(id)}" ${sel} ${dis}>${escHTML(lbl)}${n ? ' · ' + n : ' · empty'}</option>`;
       }).join('');
 
-      const minOpts = [10, 20, 30].map(m =>
-        `<button type="button" class="lz-time-chip ${m === settings.minutes ? 'active' : ''}" data-min="${m}">${m} min</button>`
-      ).join('');
+      const cardChip = (n) => {
+        const isAll = n >= 999;
+        const lbl = isAll ? 'All' : String(n);
+        const eta = (rollingAvgMs && !isAll)
+          ? ` <span class="lz-time-chip-eta">~${Math.max(1, Math.round(n * rollingAvgMs / 60000))}m</span>`
+          : '';
+        return `<button type="button" class="lz-time-chip ${n === settings.cardCount ? 'active' : ''}" data-cards="${n}">${lbl}${isAll ? '' : ' cards'}${eta}</button>`;
+      };
+      const cardOpts = CARD_COUNT_PRESETS.map(cardChip).join('');
 
+      const hk = settings.hotkeys;
       const flaggedCount = loadFlagged().length;
       root.innerHTML = `
         <div class="lz-setup">
@@ -788,12 +870,39 @@
               <select id="lzDeck" class="lz-select">${deckOpts}</select>
             </label>
             <label class="lz-field">
-              <span class="lz-field-label">Length</span>
-              <div class="lz-time-chips" id="lzTimeChips">${minOpts}</div>
+              <span class="lz-field-label">Cards</span>
+              <div class="lz-time-chips" id="lzCardChips">${cardOpts}</div>
             </label>
+            <details class="lz-hk-details" id="lzHkDetails">
+              <summary class="lz-hk-summary">
+                Hotkeys ·
+                <kbd id="lzHkSumMiss">${escHTML(hotkeyLabel(hk.miss))}</kbd>
+                <kbd id="lzHkSumShaky">${escHTML(hotkeyLabel(hk.shaky))}</kbd>
+                <kbd id="lzHkSumGotIt">${escHTML(hotkeyLabel(hk.gotIt))}</kbd>
+                <span class="lz-hk-summary-edit">customize</span>
+              </summary>
+              <div class="lz-hk-grid">
+                <label class="lz-hk-row">
+                  <span class="lz-hk-lbl lz-hk-lbl-miss">Miss</span>
+                  <input type="text" class="lz-hk-input" id="lzHkMiss" maxlength="1" value="${escHTML(hk.miss)}" autocomplete="off" />
+                </label>
+                <label class="lz-hk-row">
+                  <span class="lz-hk-lbl lz-hk-lbl-shaky">Shaky</span>
+                  <input type="text" class="lz-hk-input" id="lzHkShaky" maxlength="1" value="${escHTML(hk.shaky)}" autocomplete="off" />
+                </label>
+                <label class="lz-hk-row">
+                  <span class="lz-hk-lbl lz-hk-lbl-got">Got it</span>
+                  <input type="text" class="lz-hk-input" id="lzHkGot" maxlength="1" value="${escHTML(hk.gotIt)}" autocomplete="off" />
+                </label>
+                <button type="button" class="lz-hk-reset" id="lzHkReset">Reset to Z / X / C</button>
+              </div>
+            </details>
             <button class="lz-btn lz-btn-primary lz-btn-go" id="lzStart">Start session</button>
             <p class="lz-setup-hint">
-              <kbd>1</kbd> Miss · <kbd>2</kbd> Shaky · <kbd>3</kbd> Got it · <kbd>Space</kbd> flip · <kbd>U</kbd> undo · <kbd>J</kbd> skip · <kbd>F</kbd> flag
+              <kbd>${escHTML(hotkeyLabel(hk.miss))}</kbd> Miss ·
+              <kbd>${escHTML(hotkeyLabel(hk.shaky))}</kbd> Shaky ·
+              <kbd>${escHTML(hotkeyLabel(hk.gotIt))}</kbd> Got it ·
+              <kbd>Space</kbd> flip · <kbd>U</kbd> undo · <kbd>J</kbd> skip · <kbd>F</kbd> flag
             </p>
           </div>
         </div>
@@ -805,21 +914,56 @@
       const openFlagged = document.getElementById('lzOpenFlagged');
       if (openFlagged) openFlagged.addEventListener('click', () => UI.openFlaggedReview());
 
-      document.querySelectorAll('#lzTimeChips .lz-time-chip').forEach(c => {
+      document.querySelectorAll('#lzCardChips .lz-time-chip').forEach(c => {
         c.addEventListener('click', () => {
-          document.querySelectorAll('#lzTimeChips .lz-time-chip').forEach(x => x.classList.remove('active'));
+          document.querySelectorAll('#lzCardChips .lz-time-chip').forEach(x => x.classList.remove('active'));
           c.classList.add('active');
         });
+      });
+
+      // Hotkey input handlers — single-char, save on input, conflict warning
+      const hkMiss = document.getElementById('lzHkMiss');
+      const hkShaky = document.getElementById('lzHkShaky');
+      const hkGot = document.getElementById('lzHkGot');
+      const hkReset = document.getElementById('lzHkReset');
+      const hkSync = () => {
+        const next = {
+          miss: (hkMiss.value || 'z').slice(0, 1).toLowerCase(),
+          shaky: (hkShaky.value || 'x').slice(0, 1).toLowerCase(),
+          gotIt: (hkGot.value || 'c').slice(0, 1).toLowerCase(),
+        };
+        if (!isValidHotkey(next.miss)) next.miss = 'z';
+        if (!isValidHotkey(next.shaky)) next.shaky = 'x';
+        if (!isValidHotkey(next.gotIt)) next.gotIt = 'c';
+        // Resolve duplicates by reverting the input that caused the clash
+        const set = new Set([next.miss, next.shaky, next.gotIt]);
+        if (set.size !== 3) return; // skip save on conflict; user can fix
+        saveSettings({ hotkeys: next });
+        const sumMiss = document.getElementById('lzHkSumMiss');
+        const sumShaky = document.getElementById('lzHkSumShaky');
+        const sumGot = document.getElementById('lzHkSumGotIt');
+        if (sumMiss) sumMiss.textContent = hotkeyLabel(next.miss);
+        if (sumShaky) sumShaky.textContent = hotkeyLabel(next.shaky);
+        if (sumGot) sumGot.textContent = hotkeyLabel(next.gotIt);
+      };
+      [hkMiss, hkShaky, hkGot].forEach(inp => {
+        if (!inp) return;
+        inp.addEventListener('input', hkSync);
+        inp.addEventListener('focus', () => inp.select());
+      });
+      if (hkReset) hkReset.addEventListener('click', () => {
+        hkMiss.value = 'z'; hkShaky.value = 'x'; hkGot.value = 'c';
+        hkSync();
       });
 
       const startBtn = document.getElementById('lzStart');
       if (startBtn) startBtn.addEventListener('click', () => {
         const deckId = document.getElementById('lzDeck').value;
-        const activeChip = document.querySelector('#lzTimeChips .lz-time-chip.active');
-        const minutes = parseInt(activeChip ? activeChip.dataset.min : '20', 10);
-        saveJSON(KEYS.SETTINGS, { deckId, minutes });
+        const activeChip = document.querySelector('#lzCardChips .lz-time-chip.active');
+        const cardCount = parseInt(activeChip ? activeChip.dataset.cards : '50', 10);
+        saveSettings({ deckId, cardCount });
         clearSession();
-        startSession(deckId, minutes, 'normal');
+        startSession(deckId, cardCount, 'normal');
       });
 
       const resumeBtn = document.getElementById('lzResume');
@@ -951,9 +1095,7 @@
         if (b) b.disabled = !S.flipped;
       });
 
-      const tEl = document.getElementById('lzTimer');
-      if (tEl) tEl.textContent = fmtTime(S.remainingMs);
-
+      UI.refreshHeader();
       UI.refreshFlagBtn();
     },
 
@@ -1174,10 +1316,12 @@
       if (!root || !S) return;
       UI.stopTimerLoop();
 
-      const elapsedMs = (S.endedAt || Date.now()) - S.startedAt;
+      const elapsedMs = Math.max(0, (S.endedAt || Date.now()) - S.startedAt - (S.pausedMs || 0));
       const elapsedMin = Math.floor(elapsedMs / 60000);
       const elapsedSec = Math.floor((elapsedMs % 60000) / 1000);
       const rate = S.cardSeen > 0 ? Math.round(S.firstTryGotIt / S.cardSeen * 100) : 0;
+      const sessAvgMs = avgMsPerCard();
+      const avgPerCardSec = sessAvgMs ? (sessAvgMs / 1000).toFixed(1) : '—';
 
       const topMisses = Object.entries(S.missCounts || {})
         .sort((a, b) => b[1] - a[1])
@@ -1192,8 +1336,9 @@
       const canBoss = failedKeys.length > 0;
       const tomorrowCount = (S.todayMisses || []).length + (S.todayShakies || []).length;
 
-      const reasonLabel = S.endReason === 'timer' ? 'Time up'
+      const reasonLabel = S.endReason === 'target' ? 'Target hit'
         : S.endReason === 'clear' ? 'Queue cleared'
+        : S.endReason === 'timer' ? 'Time up'
         : 'Ended';
 
       root.innerHTML = `
@@ -1207,6 +1352,7 @@
             <div class="lz-stat"><span class="lz-stat-num">${elapsedMin}m ${elapsedSec}s</span><span class="lz-stat-lbl">Time</span></div>
             <div class="lz-stat"><span class="lz-stat-num">${S.cardSeen}</span><span class="lz-stat-lbl">Cards seen</span></div>
             <div class="lz-stat"><span class="lz-stat-num">${rate}%</span><span class="lz-stat-lbl">First-try Got it</span></div>
+            <div class="lz-stat"><span class="lz-stat-num">${avgPerCardSec}s</span><span class="lz-stat-lbl">Avg / card</span></div>
             <div class="lz-stat"><span class="lz-stat-num">🔥 ${S.bestStreak}</span><span class="lz-stat-lbl">Best streak</span></div>
           </div>
           ${topMisses.length ? `
@@ -1242,8 +1388,10 @@
         hist.todayShakies = S.todayShakies;
         saveJSON(KEYS.HISTORY, hist);
         const deckId = S.deckId;
+        const failedKeyCount = [...new Set([...(S.todayMisses || []), ...(S.todayShakies || [])])].length;
+        const target = Math.max(15, Math.min(60, failedKeyCount * 2));
         clearSession();
-        startSession(deckId, 10, 'boss');
+        startSession(deckId, target, 'boss');
       });
     },
 
@@ -1417,15 +1565,20 @@
 
     html: {
       session() {
+        const hk = getSettings().hotkeys;
         return `
           <div class="lz-shell">
             <header class="lz-top">
               <span class="lz-counter" id="lzCounter">Card 1</span>
               <span class="lz-streak" id="lzStreak"><span class="lz-streak-flame">🔥</span><span class="lz-streak-num">0</span></span>
-              <span class="lz-timer" id="lzTimer">0:00</span>
+              <span class="lz-progress-wrap">
+                <span class="lz-progress" id="lzProgress">0 / 0</span>
+                <span class="lz-eta" id="lzEta"></span>
+              </span>
               <button class="lz-icon-btn" id="lzPause" title="Pause/resume">⏸</button>
               <button class="lz-icon-btn lz-close" id="lzExit" title="Exit (Esc)">×</button>
             </header>
+            <div class="lz-progress-bar"><div class="lz-progress-bar-fill" id="lzProgressFill" style="width:0%"></div></div>
             <div class="lz-card-stage">
               <div class="lz-card" id="lzCard">
                 <div class="lz-ctx" id="lzCtx"></div>
@@ -1440,15 +1593,15 @@
             </div>
             <div class="lz-grade-bar">
               <button type="button" class="lz-grade-btn lz-grade-1" id="lzGrade1" disabled>
-                <span class="lz-grade-key">1</span>
+                <span class="lz-grade-key" id="lzGrade1Key">${escHTML(hotkeyLabel(hk.miss))}</span>
                 <span class="lz-grade-lbl">Miss</span>
               </button>
               <button type="button" class="lz-grade-btn lz-grade-2" id="lzGrade2" disabled>
-                <span class="lz-grade-key">2</span>
+                <span class="lz-grade-key" id="lzGrade2Key">${escHTML(hotkeyLabel(hk.shaky))}</span>
                 <span class="lz-grade-lbl">Shaky</span>
               </button>
               <button type="button" class="lz-grade-btn lz-grade-3" id="lzGrade3" disabled>
-                <span class="lz-grade-key">3</span>
+                <span class="lz-grade-key" id="lzGrade3Key">${escHTML(hotkeyLabel(hk.gotIt))}</span>
                 <span class="lz-grade-lbl">Got it</span>
               </button>
             </div>
@@ -1461,7 +1614,31 @@
           </div>
         `;
       }
-    }
+    },
+
+    refreshHeader() {
+      if (!S) return;
+      const seen = S.cardSeen || 0;
+      const target = S.targetCards || (S.queue ? S.queue.length + seen : 0) || 1;
+      const pct = Math.min(100, Math.round((seen / target) * 100));
+      const progEl = document.getElementById('lzProgress');
+      if (progEl) progEl.textContent = `${seen} / ${target}`;
+      const fillEl = document.getElementById('lzProgressFill');
+      if (fillEl) fillEl.style.width = pct + '%';
+      const etaEl = document.getElementById('lzEta');
+      if (etaEl) {
+        // Show ETA after at least 5 cards (enough data); also show avg/card
+        if ((S.gradeMsCount || 0) >= 5) {
+          const avgSec = avgMsPerCard() / 1000;
+          const remaining = Math.max(0, target - seen);
+          const eta = remaining * avgMsPerCard();
+          etaEl.textContent = `~${fmtTime(eta)} · ${avgSec.toFixed(1)}s/card`;
+          etaEl.style.display = '';
+        } else {
+          etaEl.style.display = 'none';
+        }
+      }
+    },
   };
 
   // ============================================================ keyboard
@@ -1471,21 +1648,31 @@
     if (!document.getElementById('lzRoot')) return;
     const t = e.target;
     if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)) return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
     // Don't intercept inside trap modal — its buttons handle keyboard naturally
-    if (e.key === ' ' || e.code === 'Space') { e.preventDefault(); flip(); }
-    else if (e.key === '1') { e.preventDefault(); grade(1); }
-    else if (e.key === '2') { e.preventDefault(); grade(2); }
-    else if (e.key === '3') { e.preventDefault(); grade(3); }
-    else if (e.key === 'u' || e.key === 'U') { e.preventDefault(); undo(); }
-    else if (e.key === 'j' || e.key === 'J') { e.preventDefault(); skip(); }
-    else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); UI.openFlagPicker(); }
-    else if (e.key === 'Escape') {
+    if (e.key === ' ' || e.code === 'Space') { e.preventDefault(); flip(); return; }
+    if (e.key === 'Escape') {
       if (S && !S.endedAt) {
         if (confirm('Exit session? Progress is saved — you can resume later.')) UI.exit();
       } else {
         UI.exit();
       }
+      return;
     }
+
+    const k = (e.key || '').toLowerCase();
+    if (k === 'u') { e.preventDefault(); undo(); return; }
+    if (k === 'j') { e.preventDefault(); skip(); return; }
+    if (k === 'f') { e.preventDefault(); UI.openFlagPicker(); return; }
+
+    const hk = getSettings().hotkeys;
+    if (k === (hk.miss  || 'z')) { e.preventDefault(); grade(1); return; }
+    if (k === (hk.shaky || 'x')) { e.preventDefault(); grade(2); return; }
+    if (k === (hk.gotIt || 'c')) { e.preventDefault(); grade(3); return; }
+    // Numeric fallback so the old 1/2/3 still works for muscle memory
+    if (k === '1') { e.preventDefault(); grade(1); return; }
+    if (k === '2') { e.preventDefault(); grade(2); return; }
+    if (k === '3') { e.preventDefault(); grade(3); return; }
   });
 
   // ============================================================ styles
@@ -2441,20 +2628,180 @@
       .lz-flagged-toast-ok { color: #6bd06b !important; }
       .lz-flagged-toast-err { color: #e36b6b !important; }
 
-      /* --- responsive --- */
+      /* --- progress + ETA in header --- */
+      .lz-progress-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: auto;
+        gap: 2px;
+        line-height: 1;
+      }
+      .lz-progress {
+        font-family: var(--ff-mono, ui-monospace, monospace);
+        font-size: 16px;
+        color: var(--ink, #e6dfd0);
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
+      }
+      .lz-eta {
+        font-size: 11px;
+        color: var(--ink-faint, #6b6353);
+        font-variant-numeric: tabular-nums;
+      }
+      .lz-progress-bar {
+        height: 3px;
+        background: var(--bg-sunk, #090a0e);
+        border-bottom: 1px solid var(--rule, #22262f);
+        position: relative;
+      }
+      .lz-progress-bar-fill {
+        height: 100%;
+        background: var(--accent, #c89b2e);
+        transition: width 0.25s ease;
+      }
+
+      /* --- hotkey customization in setup --- */
+      .lz-hk-details {
+        background: var(--bg-sunk, #090a0e);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 6px;
+        padding: 0;
+        overflow: hidden;
+      }
+      .lz-hk-summary {
+        padding: 10px 14px;
+        font-size: 12px;
+        color: var(--ink-dim, #a59a83);
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .lz-hk-summary::-webkit-details-marker { display: none; }
+      .lz-hk-summary kbd {
+        background: var(--bg-elev, #14171d);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 3px;
+        padding: 2px 7px;
+        font-family: var(--ff-mono, ui-monospace, monospace);
+        font-size: 11px;
+        color: var(--accent-ink, #f1d278);
+      }
+      .lz-hk-summary-edit {
+        margin-left: auto;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink-faint, #6b6353);
+      }
+      .lz-hk-grid {
+        padding: 12px 14px 14px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        align-items: end;
+        border-top: 1px solid var(--rule, #22262f);
+      }
+      .lz-hk-row {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .lz-hk-lbl {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink-faint, #6b6353);
+      }
+      .lz-hk-lbl-miss { color: var(--wrong, #c86462); }
+      .lz-hk-lbl-shaky { color: var(--warn, #c89b2e); }
+      .lz-hk-lbl-got { color: var(--correct, #5fa871); }
+      .lz-hk-input {
+        background: var(--bg-elev, #14171d);
+        color: var(--ink, #e6dfd0);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 4px;
+        padding: 8px 10px;
+        text-align: center;
+        font-family: var(--ff-mono, ui-monospace, monospace);
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .lz-hk-input:focus {
+        outline: none;
+        border-color: var(--accent, #c89b2e);
+      }
+      .lz-hk-reset {
+        grid-column: 1 / -1;
+        background: transparent;
+        color: var(--ink-faint, #6b6353);
+        border: 1px solid var(--rule, #22262f);
+        border-radius: 4px;
+        padding: 6px 10px;
+        font-family: inherit;
+        font-size: 11px;
+        cursor: pointer;
+      }
+      .lz-hk-reset:hover { color: var(--ink, #e6dfd0); }
+
+      .lz-time-chip-eta {
+        font-size: 10px;
+        color: var(--ink-faint, #6b6353);
+        font-variant-numeric: tabular-nums;
+        margin-left: 4px;
+      }
+      .lz-time-chip.active .lz-time-chip-eta { color: var(--accent-ink, #f1d278); opacity: 0.85; }
+
+      /* --- mobile + touch --- */
+      .lz-card { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+      .lz-grade-btn, .lz-btn, .lz-time-chip, .lz-btn-small, .lz-icon-btn,
+      .lz-grade-1, .lz-grade-2, .lz-grade-3 {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
       @media (max-width: 720px) {
-        .lz-shell { padding: 0 14px; }
-        .lz-card { padding: 26px 20px; }
-        .lz-question { font-size: 24px; }
-        .lz-answer { font-size: 15px; }
-        .lz-grade-btn { padding: 14px 10px; font-size: 13px; }
-        .lz-grade-btn .lz-grade-lbl { display: none; }
-        .lz-grade-key { font-size: 14px; min-width: 28px; height: 28px; line-height: 28px; }
-        .lz-grade-1::after { content: ' Miss'; font-weight: 500; font-size: 13px; }
-        .lz-grade-2::after { content: ' Shaky'; font-weight: 500; font-size: 13px; }
-        .lz-grade-3::after { content: ' Got it'; font-weight: 500; font-size: 13px; }
+        .lz-shell { padding: 0 12px; min-height: 100dvh; }
+        .lz-top { padding: 12px 0 10px; gap: 10px; flex-wrap: wrap; }
+        .lz-card { padding: 22px 18px; gap: 14px; }
+        .lz-card-stage { padding: 18px 0; }
+        .lz-question { font-size: 22px; line-height: 1.22; }
+        .lz-answer { font-size: 15px; padding-top: 14px; }
+        .lz-progress { font-size: 14px; }
+        .lz-eta { font-size: 10px; }
+        .lz-grade-bar { gap: 6px; padding-top: 4px; position: sticky; bottom: 0; background: var(--bg, #0c0e12); padding-bottom: 6px; }
+        .lz-grade-btn {
+          padding: 14px 6px;
+          font-size: 14px;
+          min-height: 56px;
+          flex-direction: column;
+          gap: 4px;
+        }
+        .lz-grade-key { font-size: 14px; min-width: 24px; height: 22px; line-height: 22px; padding: 0 6px; }
+        .lz-grade-lbl { font-size: 12px; }
+        .lz-bottom-row { flex-wrap: wrap; gap: 6px; padding: 10px 0 16px; }
+        .lz-btn-small { padding: 8px 10px; font-size: 12px; min-height: 36px; }
         .lz-end-stats { grid-template-columns: repeat(2, 1fr); }
-        .lz-setup { margin: 4vh auto 0; padding: 24px 18px; }
+        .lz-setup { margin: 2vh auto 0; padding: 20px 16px; border-radius: 8px; max-width: 100%; }
+        .lz-setup-head h2 { font-size: 22px; }
+        .lz-time-chip { padding: 14px 10px; min-height: 48px; font-size: 13px; }
+        .lz-hk-grid { gap: 8px; padding: 10px 12px 12px; }
+        .lz-hk-input { padding: 10px; font-size: 18px; min-height: 44px; }
+        .lz-modal { padding: 22px 18px 18px; max-height: 90vh; }
+        .lz-modal h3 { font-size: 19px; }
+        .lz-trap-choice { padding: 14px 14px; font-size: 14px; min-height: 56px; }
+      }
+
+      @media (max-width: 420px) {
+        .lz-grade-bar { gap: 4px; }
+        .lz-grade-btn { padding: 12px 4px; font-size: 12px; }
+        .lz-grade-lbl { font-size: 11px; }
+        .lz-question { font-size: 20px; }
+        .lz-card { padding: 18px 14px; }
+        .lz-setup-hint { font-size: 11px; }
       }
     `;
     document.head.appendChild(css);

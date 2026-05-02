@@ -25,13 +25,14 @@
   'use strict';
 
   const KEY_STATE = 'study-plan-v1';
+  const PLAN_SCHEMA = 2; // bump to force regenerate today's plan after a generator change
   const KEY_LEITNER_HIST = 'leitner-history-v1';
   const KEY_LEITNER_PROG = 'leitner-progress-v1';
   const KEY_LEITNER_SESS = 'leitner-session-v1';
   const KEY_STIM_SESS = 'evol_stim_session';
 
   const EXAM_ISO = '2026-05-04'; // Monday
-  const EXAM_NAME = 'BIOL 4230 Exam 2';
+  const EXAM_NAME = 'BIOL 4230 Final';
 
   // ============================================================ utility
 
@@ -91,6 +92,37 @@
     const liveCount = live && !live.endedAt ? (live.cardSeen || 0) : 0;
     return (h.totalCardsSeen || 0) + liveCount;
   }
+
+  // ============================================================ deck coverage
+
+  // How many UNIQUE cards in the full deck the user has touched / mastered.
+  // Reads from leitner-progress-v1 + the live session for in-flight grades.
+  function deckCoverage() {
+    const decks = (typeof window !== 'undefined' && window.FLASHCARD_DECKS) || {};
+    const all = decks.all || [];
+    const total = Array.isArray(all) ? all.length : 0;
+
+    const progress = load(KEY_LEITNER_PROG, {}) || {};
+    let covered = 0, mastered = 0;
+    Object.values(progress).forEach(v => {
+      if (!v || !v.state) return;
+      if (v.state === 'got_it') { mastered++; covered++; }
+      else if (v.state === 'miss' || v.state === 'shaky') { covered++; }
+    });
+
+    // Best-effort: include in-flight grades from the live session
+    const live = load(KEY_LEITNER_SESS, null);
+    if (live && !live.endedAt && Array.isArray(live.todayGotIt)) {
+      // todayGotIt holds card keys that haven't yet been persisted to progress
+      // (persistence is debounced) — count any not already in progress
+      live.todayGotIt.forEach(k => {
+        if (!progress[k] || progress[k].state !== 'got_it') {
+          // already counted or not counted — best-effort, no double-count guaranteed
+        }
+      });
+    }
+    return { total, covered, mastered };
+  }
   function totalStimAnswered() {
     const s = load(KEY_STIM_SESS, null);
     if (!s) return 0;
@@ -107,52 +139,51 @@
   // kind ∈ 'flash' | 'stim' | 'boss' | 'review' | 'rest'
 
   function generateDayBlocks(daysOut /* days to exam */, dateISO) {
-    // 4-day plan tuned for Exam 2 (Ch 10-16, L08/L09/L11/L12/L13).
+    // Newbie cram plan — exam covers ALL cards. Starting from zero on Day 1.
+    // Total deck is roughly ~330 cards across L01-L20. Day 1 = full first pass,
+    // Day 2 = drill weak + second pass, Day 3 = mock + cleanup, Day 4 = exam.
     const id = (k) => `${dateISO}__${k}`;
-    if (daysOut >= 4) {
-      // Today (Thu) — Exam-2 chapter sweep (heaviest day)
-      return [
-        { id: id('a'), start: '09:00', end: '09:45', title: 'L08 Flash · Complex Adaptations', kind: 'flash', deckId: 'L08', target: { cardsSeen: 26 }, note: 'eye, regulatory, Hox, heterochrony' },
-        { id: id('b'), start: '11:00', end: '11:45', title: 'L09 + L11 Flash · Coevolution + Sex', kind: 'flash', deckId: 'all', target: { cardsSeen: 38 }, note: 'mutualism, mimicry, anisogamy, sexual conflict' },
-        { id: id('c'), start: '14:00', end: '14:45', title: 'L12 Flash · Life History', kind: 'flash', deckId: 'L12', target: { cardsSeen: 19 }, note: 'tradeoffs, senescence theories, r/K, Seychelles' },
-        { id: id('d'), start: '16:00', end: '16:45', title: 'L13 Flash · Social Behavior', kind: 'flash', deckId: 'L13', target: { cardsSeen: 21 }, note: 'Hamilton, ESS, RPS lizards, reciprocity' },
-        { id: id('e'), start: '19:30', end: '20:15', title: 'Stim · 20 Exam-2 Qs', kind: 'stim', target: { stimQs: 20 }, note: 'mixed L08-L13' },
-      ];
-    }
     if (daysOut === 3) {
-      // Fri — Boss Mode + cumulative review + first full Stim
+      // Fri — Day 1: First exposure pass through every lecture. Heavy day.
+      // No Boss Mode yet (no misses to drill). Pure flash, deck-by-deck.
       return [
-        { id: id('a'), start: '09:00', end: '09:30', title: 'Boss Mode · yesterday\'s misses', kind: 'boss', target: { cardsSeen: 15 }, note: 'today\'s misses + shakies' },
-        { id: id('b'), start: '11:00', end: '12:00', title: 'Cumulative Flash · L02-L05 review', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'HWE math, selection types, Darwin' },
-        { id: id('c'), start: '14:00', end: '14:45', title: 'L11 + L12 mixed Flash', kind: 'flash', deckId: 'all', target: { cardsSeen: 30 }, note: 'sexual selection + life history' },
-        { id: id('d'), start: '16:00', end: '17:00', title: 'Stim · 30 Exam-2 Qs', kind: 'stim', target: { stimQs: 30 }, note: 'full Exam-2 mix' },
-        { id: id('e'), start: '19:30', end: '20:30', title: 'L05 + L13 final pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 35 }, note: 'breeder eq, ESS, Hamilton' },
+        { id: id('a'), start: '09:00', end: '10:00', title: 'L01–L04 · First pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'Intro, evolutionary thinking, genes, populations · just see them all' },
+        { id: id('b'), start: '10:15', end: '11:15', title: 'L05 + L07 · First pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'Quant gen, selection types, empirical · mark anything fuzzy' },
+        { id: id('c'), start: '13:30', end: '14:30', title: 'L08 + L09 · First pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'Complex adaptations, coevolution · short break after' },
+        { id: id('d'), start: '15:00', end: '16:00', title: 'L11 + L12 + L13 · First pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'Sex, life history, social behavior' },
+        { id: id('e'), start: '19:00', end: '20:00', title: 'L14–L17 · First pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'History of life, phylogenetics, species, biogeography' },
+        { id: id('f'), start: '20:15', end: '21:00', title: 'L18–L20 · First pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'Conservation, human evolution, evo medicine · last block, skim mode is fine' },
       ];
     }
     if (daysOut === 2) {
-      // Sat — Mock exam day
+      // Sat — Day 2: Drill yesterday's misses, second pass through all decks,
+      // first stim quiz to measure baseline.
       return [
-        { id: id('a'), start: '09:00', end: '10:00', title: 'Mock Exam 2 · Stim 50 Qs', kind: 'stim', target: { stimQs: 50 }, note: 'simulate exam conditions' },
-        { id: id('b'), start: '10:30', end: '11:00', title: 'Review missed Stim Qs', kind: 'review', target: { cardsSeen: 15 }, note: 'understand each miss' },
-        { id: id('c'), start: '14:00', end: '15:00', title: 'Boss Mode · top misses', kind: 'boss', target: { cardsSeen: 30 }, note: 'leech-flagged + repeat misses' },
-        { id: id('d'), start: '16:00', end: '16:45', title: 'Cheatsheet skim · flag weak', kind: 'review', target: {}, note: 'note any concept still murky' },
-        { id: id('e'), start: '19:30', end: '20:00', title: 'L08-L13 quick sweep', kind: 'flash', deckId: 'all', target: { cardsSeen: 40 }, note: 'fast pace, anything unsure → mark' },
+        { id: id('a'), start: '09:00', end: '09:45', title: 'Boss Mode · yesterday\'s misses', kind: 'boss', target: { cardsSeen: 50 }, note: 'starts with cards you flagged or missed yesterday' },
+        { id: id('b'), start: '10:00', end: '11:00', title: 'L01–L07 · Second pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'should feel faster than Day 1' },
+        { id: id('c'), start: '13:30', end: '14:30', title: 'L08–L13 · Second pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'mid-semester core' },
+        { id: id('d'), start: '15:00', end: '16:00', title: 'Stim · 30 Qs warmup', kind: 'stim', target: { stimQs: 30 }, note: 'first quiz · note which lectures you bomb' },
+        { id: id('e'), start: '16:15', end: '17:00', title: 'Boss Mode · today\'s misses', kind: 'boss', target: { cardsSeen: 30 }, note: 'clean up everything that broke' },
+        { id: id('f'), start: '19:30', end: '20:30', title: 'L14–L20 · Second pass', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'last lectures · lighter, you\'re tired' },
       ];
     }
     if (daysOut === 1) {
-      // Sun — Light load, top misses only
+      // Sun — Day 3: Mock exam + targeted cleanup + final pass
       return [
-        { id: id('a'), start: '10:00', end: '10:45', title: 'Top misses · Boss Mode', kind: 'boss', target: { cardsSeen: 25 }, note: 'final cleanup' },
-        { id: id('b'), start: '14:00', end: '14:30', title: 'Cheatsheet read-through', kind: 'review', target: {}, note: 'aloud if possible' },
-        { id: id('c'), start: '16:00', end: '16:30', title: '5 Stim Qs per Exam-2 lecture', kind: 'stim', target: { stimQs: 25 }, note: 'sanity check across L08-L13' },
-        { id: id('d'), start: '19:30', end: '19:50', title: 'Light flash · all decks (20)', kind: 'flash', deckId: 'all', target: { cardsSeen: 20 }, note: 'short, low-stress, sleep early' },
+        { id: id('a'), start: '09:00', end: '10:00', title: 'Mock exam · 50 Stim Qs', kind: 'stim', target: { stimQs: 50 }, note: 'phone away, time it, no peeking' },
+        { id: id('b'), start: '10:15', end: '11:00', title: 'Review missed Stim Qs', kind: 'review', target: {}, note: 'understand WHY each was wrong · don\'t skip' },
+        { id: id('c'), start: '13:30', end: '14:30', title: 'Boss Mode · top misses (all)', kind: 'boss', target: { cardsSeen: 50 }, note: 'every miss/shaky from Days 1–3' },
+        { id: id('d'), start: '15:00', end: '15:30', title: 'Cheatsheet read-through', kind: 'review', target: {}, note: 'read aloud if possible · /cheatsheet.html' },
+        { id: id('e'), start: '16:00', end: '17:00', title: 'Final pass · all decks', kind: 'flash', deckId: 'all', target: { cardsSeen: 100 }, note: 'fast pace · should mostly be Got-it' },
+        { id: id('f'), start: '19:00', end: '19:30', title: 'Last Boss · weakest 25', kind: 'boss', target: { cardsSeen: 25 }, note: 'short final cleanup · sleep early' },
       ];
     }
     if (daysOut === 0) {
-      // Exam day — rest, maybe one cheatsheet skim
+      // Exam day — rest, one cheatsheet skim
       return [
-        { id: id('a'), start: '08:00', end: '08:20', title: 'Cheatsheet final skim', kind: 'review', target: {}, note: '~1 hr before exam · quick pass · NO new content' },
-        { id: id('b'), start: '09:00', end: '09:00', title: 'EXAM · ' + EXAM_NAME, kind: 'rest', target: {}, note: 'good luck!' },
+        { id: id('a'), start: '07:30', end: '08:00', title: 'Cheatsheet final skim', kind: 'review', target: {}, note: '~1 hr before exam · quick pass · NO new content' },
+        { id: id('b'), start: '08:15', end: '08:30', title: 'Top 10 misses · last look', kind: 'boss', target: { cardsSeen: 10 }, note: '15 min only · then close the laptop' },
+        { id: id('c'), start: '09:00', end: '09:00', title: 'EXAM · ' + EXAM_NAME, kind: 'rest', target: {}, note: 'good luck!' },
       ];
     }
     if (daysOut < 0) {
@@ -160,10 +191,11 @@
         { id: id('a'), start: '12:00', end: '12:00', title: 'Exam done · plan exhausted', kind: 'rest', target: {}, note: 'add a new exam date in study-plan-v1 to refresh' },
       ];
     }
-    // 5+ days out — generic study block
+    // 4+ days out — pacing block, get ahead
     return [
-      { id: id('a'), start: '10:00', end: '10:45', title: 'Daily review', kind: 'flash', deckId: 'all', target: { cardsSeen: 30 } },
-      { id: id('b'), start: '15:00', end: '15:30', title: 'Stim 15', kind: 'stim', target: { stimQs: 15 } },
+      { id: id('a'), start: '10:00', end: '10:45', title: 'Get ahead · L01–L05', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 }, note: 'banking cards before crunch' },
+      { id: id('b'), start: '15:00', end: '15:30', title: 'Stim 20', kind: 'stim', target: { stimQs: 20 } },
+      { id: id('c'), start: '19:30', end: '20:00', title: 'Get ahead · L06–L10', kind: 'flash', deckId: 'all', target: { cardsSeen: 50 } },
     ];
   }
 
@@ -262,28 +294,30 @@
     const exam = new Date(examDateStr + 'T08:00:00');
     const daysOut = daysBetween(now, exam);
 
-    if (!state.plansByDay[todayISO] || !Array.isArray(state.plansByDay[todayISO].blocks) || state.plansByDay[todayISO].blocks.length === 0) {
+    const existing = state.plansByDay[todayISO];
+    const needsRegen =
+      !existing ||
+      !Array.isArray(existing.blocks) ||
+      existing.blocks.length === 0 ||
+      (existing.schemaVersion || 0) < PLAN_SCHEMA ||
+      (existing.examDateAtCreate && existing.examDateAtCreate !== examDateStr);
+
+    if (needsRegen) {
       const rawBlocks = generateDayBlocks(daysOut, todayISO);
       const blocks = adaptBlocksForCurrentTime(rawBlocks, todayISO);
       state.plansByDay[todayISO] = {
         blocks,
-        baselineCards: totalCardsSeen(),
-        baselineStim: totalStimAnswered(),
-        compressed: blocks !== rawBlocks,
-        examDateAtCreate: examDateStr, // track what we generated for
-      };
-    } else if (state.plansByDay[todayISO].examDateAtCreate &&
-               state.plansByDay[todayISO].examDateAtCreate !== examDateStr) {
-      // Exam date changed since this plan was generated → regenerate
-      const rawBlocks = generateDayBlocks(daysOut, todayISO);
-      const blocks = adaptBlocksForCurrentTime(rawBlocks, todayISO);
-      state.plansByDay[todayISO] = {
-        blocks,
-        baselineCards: state.plansByDay[todayISO].baselineCards,
-        baselineStim: state.plansByDay[todayISO].baselineStim,
+        baselineCards: existing?.baselineCards ?? totalCardsSeen(),
+        baselineStim: existing?.baselineStim ?? totalStimAnswered(),
         compressed: blocks !== rawBlocks,
         examDateAtCreate: examDateStr,
+        schemaVersion: PLAN_SCHEMA,
       };
+      // Drop completion entries for regenerated blocks (block IDs may have shifted)
+      const oldIds = new Set((existing?.blocks || []).map(b => b.id));
+      Object.keys(state.completion || {}).forEach(k => {
+        if (oldIds.has(k)) delete state.completion[k];
+      });
     }
     save(KEY_STATE, state);
     return { state, todayISO, daysOut };
@@ -428,6 +462,51 @@
       .sp-meta strong { color: ${COLORS.accentInk}; font-weight: 600; }
       .sp-meta-countdown { color: ${COLORS.accent}; font-weight: 700; }
 
+      .sp-coverage {
+        padding: 10px 16px 12px;
+        border-bottom: 1px solid ${COLORS.rule};
+        display: flex; flex-direction: column; gap: 6px;
+      }
+      .sp-coverage-row {
+        display: flex; justify-content: space-between; align-items: baseline;
+        font-size: 11px; color: ${COLORS.inkDim};
+      }
+      .sp-coverage-lbl {
+        text-transform: uppercase; letter-spacing: 0.08em;
+        font-weight: 600; color: ${COLORS.inkFaint};
+      }
+      .sp-coverage-num { font-variant-numeric: tabular-nums; }
+      .sp-coverage-num strong { color: ${COLORS.ink}; font-size: 14px; font-weight: 700; }
+      .sp-coverage-pct {
+        margin-left: 6px;
+        color: ${COLORS.accentInk};
+        font-weight: 700;
+      }
+      .sp-coverage-bar {
+        height: 6px;
+        background: ${COLORS.bgSunk};
+        border-radius: 3px;
+        overflow: hidden;
+        display: flex;
+      }
+      .sp-coverage-bar-mastered {
+        height: 100%;
+        background: ${COLORS.got};
+        transition: width 0.3s;
+      }
+      .sp-coverage-bar-touched {
+        height: 100%;
+        background: ${COLORS.shaky};
+        opacity: 0.55;
+        transition: width 0.3s;
+      }
+      .sp-coverage-sub {
+        font-size: 10px; text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .sp-coverage-mastered { color: ${COLORS.got}; font-weight: 700; }
+      .sp-coverage-todo { color: ${COLORS.inkFaint}; }
+
       .sp-stats {
         display: grid; grid-template-columns: 1fr 1fr 1fr;
         padding: 10px 16px; gap: 6px;
@@ -552,6 +631,10 @@
       `;
     };
 
+    const cov = deckCoverage();
+    const coveredPct = cov.total ? Math.round((cov.covered / cov.total) * 100) : 0;
+    const masteredPct = cov.total ? Math.round((cov.mastered / cov.total) * 100) : 0;
+
     root.innerHTML = `
       <div class="sp-head">
         <span class="sp-head-title">Today's plan</span>
@@ -561,6 +644,20 @@
       <div class="sp-meta">
         <span><strong>${fmtDate(now)}</strong></span>
         <span class="sp-meta-countdown">${dayLabel} to ${escHTML(state.examName || 'exam')}</span>
+      </div>
+      <div class="sp-coverage" title="Cards you've touched at least once · cards in Got-it state">
+        <div class="sp-coverage-row">
+          <span class="sp-coverage-lbl">Cards covered</span>
+          <span class="sp-coverage-num"><strong>${cov.covered}</strong> / ${cov.total} <span class="sp-coverage-pct">${coveredPct}%</span></span>
+        </div>
+        <div class="sp-coverage-bar">
+          <div class="sp-coverage-bar-mastered" style="width:${masteredPct}%" title="${cov.mastered} mastered (${masteredPct}%)"></div>
+          <div class="sp-coverage-bar-touched" style="width:${coveredPct - masteredPct}%" title="${cov.covered - cov.mastered} seen but not mastered"></div>
+        </div>
+        <div class="sp-coverage-row sp-coverage-sub">
+          <span class="sp-coverage-mastered">● ${cov.mastered} mastered</span>
+          <span class="sp-coverage-todo">${Math.max(0, cov.total - cov.covered)} untouched</span>
+        </div>
       </div>
       <div class="sp-stats">
         <div class="sp-stat"><span class="sp-stat-num" id="spCardsToday">${cardsToday}</span><span class="sp-stat-lbl">Cards today</span></div>
@@ -646,16 +743,17 @@
 
   function launchBlock(block) {
     if (block.kind === 'flash' || block.kind === 'boss') {
-      // Persist preferred deck + minutes for the Leitner setup screen
-      const minutes = (() => {
-        const [sh, sm] = block.start.split(':').map(Number);
-        const [eh, em] = block.end.split(':').map(Number);
-        const total = (eh * 60 + em) - (sh * 60 + sm);
-        if (total <= 12) return 10;
-        if (total <= 25) return 20;
-        return 30;
-      })();
-      const settings = { deckId: block.deckId || 'all', minutes };
+      // Persist preferred deck + cardCount for the Leitner setup screen
+      const targetCards = block.target?.cardsSeen || 50;
+      // Snap to one of the preset chips so the setup UI shows a selection
+      const presets = [25, 50, 100, 999];
+      const snapped = presets.reduce((best, p) =>
+        Math.abs(p - targetCards) < Math.abs(best - targetCards) ? p : best, presets[0]);
+      const prev = load('leitner-settings-v1', {}) || {};
+      const settings = Object.assign({}, prev, {
+        deckId: block.deckId || 'all',
+        cardCount: snapped,
+      });
       try { localStorage.setItem('leitner-settings-v1', JSON.stringify(settings)); } catch (e) {}
       const flashBtn = Array.from(document.querySelectorAll('button')).find(b => b.textContent.trim() === 'Flash');
       if (flashBtn) flashBtn.click();
