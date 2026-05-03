@@ -21,6 +21,35 @@
       localStorage.setItem('__bootErrors', JSON.stringify(window.__bootErrors));
     } catch(_) {}
   });
+  // One-shot migration of legacy biol-* localStorage keys → evol-* so the evolution
+  // site no longer collides with biol3020 in the same browser. Runs before any
+  // inline-script reads the keys below. leitner-session.js still reads the
+  // legacy biol-fc-progress-v2 key for its own format migration — that path is
+  // untouched on purpose. Idempotent via the evol-ls-migrated-v1 sentinel.
+  (function migrateLsKeys() {
+    try {
+      if (localStorage.getItem('evol-ls-migrated-v1') === '1') return;
+      const pairs = [
+        ['biol-fc-progress-v2',    'evol-fc-progress-v2'],
+        ['biol-fc-filter-v1',      'evol-fc-filter-v1'],
+        ['biol-fcw-on',            'evol-fcw-on'],
+        ['biol-fcw-deck',          'evol-fcw-deck'],
+        ['biol-fcw-seen-v2',       'evol-fcw-seen-v2'],
+        ['biol-tweaks-v1',         'evol-tweaks-v1'],
+        ['biol-fc-cards-v1',       'evol-fc-cards-v1'],
+        ['biol-fc-instructions-v1','evol-fc-instructions-v1'],
+      ];
+      pairs.forEach(function (p) {
+        try {
+          var v = localStorage.getItem(p[0]);
+          if (v !== null && localStorage.getItem(p[1]) === null) {
+            localStorage.setItem(p[1], v);
+          }
+        } catch (_) {}
+      });
+      localStorage.setItem('evol-ls-migrated-v1', '1');
+    } catch (_) {}
+  })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -6555,8 +6584,8 @@ let fcIdx = 0, fcKnown = 0, fcReview = 0;
 // Storage model: progress is GLOBAL by card-term, not per-deck. So marking a card
 // "missed" in the Ch20 view also marks it missed in the All-chapters view (same card).
 // Format: { [termKey]: 'missed' | 'known' }
-const FC_PROG_KEY = 'biol-fc-progress-v2';
-const FC_FILTER_KEY = 'biol-fc-filter-v1';
+const FC_PROG_KEY = 'evol-fc-progress-v2';
+const FC_FILTER_KEY = 'evol-fc-filter-v1';
 
 let fcProgress = (() => {
   try {
@@ -7543,7 +7572,7 @@ window.synthXctx = function(card) {
   const pbFill = document.getElementById('fcwPbFill');
   const xctxEl = document.getElementById('fcwXctx');
 
-  let deckId = localStorage.getItem('biol-fcw-deck') || 'ch14';
+  let deckId = localStorage.getItem('evol-fcw-deck') || 'ch14';
   let idx = 0;
   let flipped = false;
 
@@ -7599,7 +7628,7 @@ window.synthXctx = function(card) {
 
   window.toggleFcw = function() {
     document.body.classList.toggle('fcw-on');
-    localStorage.setItem('biol-fcw-on', document.body.classList.contains('fcw-on') ? '1' : '0');
+    localStorage.setItem('evol-fcw-on', document.body.classList.contains('fcw-on') ? '1' : '0');
     if (document.body.classList.contains('fcw-on')) render();
   };
   window.fcwNext = function() { const arr=cards(); if(!arr.length) return; idx=(idx+1)%arr.length; flipped=false; document.body.classList.remove('fcw-flipped'); render(); };
@@ -7612,7 +7641,7 @@ window.synthXctx = function(card) {
     deckId = ch;
     idx = 0; flipped = false;
     document.body.classList.remove('fcw-flipped');
-    localStorage.setItem('biol-fcw-deck', ch);
+    localStorage.setItem('evol-fcw-deck', ch);
     render();
   };
 
@@ -7739,14 +7768,14 @@ window.synthXctx = function(card) {
   }, { passive: true });
 
   // Boot: render and optionally open if previously open
-  const initialOpen = localStorage.getItem('biol-fcw-on') === '1';
+  const initialOpen = localStorage.getItem('evol-fcw-on') === '1';
   if (initialOpen) document.body.classList.add('fcw-on');
   // Wait a tick for FLASHCARD_DECKS to be available
   setTimeout(() => { render(); syncHeight(); }, 200);
 
   // ---- First-visit discovery: pulse the launcher + show a hint bubble ----
   (function firstVisitHint() {
-    const SEEN_KEY = 'biol-fcw-seen-v2';
+    const SEEN_KEY = 'evol-fcw-seen-v2';
     const seen = localStorage.getItem(SEEN_KEY) === '1';
     if (seen) return;
     // Don't interrupt if the widget is already open from a restored session
@@ -8773,7 +8802,7 @@ window.synthXctx = function(card) {
    - Copy all → markdown to clipboard for pasting into Claude Code
    ============================================================ */
 (function() {
-  const STORAGE_KEY = 'biol-tweaks-v1';
+  const STORAGE_KEY = 'evol-tweaks-v1';
   const MAX_IMAGE_BYTES = 800 * 1024; // ~800 KB per image (pre-base64) hard cap to avoid quota issues
 
   const fab = document.getElementById('tweakFab');
@@ -9322,8 +9351,8 @@ window.synthXctx = function(card) {
    - export with author instructions for Claude Code to act on
    ============================================================ */
 (function() {
-  const STORAGE_CARDS = 'biol-fc-cards-v1';
-  const STORAGE_INSTR = 'biol-fc-instructions-v1';
+  const STORAGE_CARDS = 'evol-fc-cards-v1';
+  const STORAGE_INSTR = 'evol-fc-instructions-v1';
 
   const fab = document.getElementById('fcFab');
   const countEl = document.getElementById('fcCount');

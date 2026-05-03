@@ -12,8 +12,10 @@
 | Severity | Found | Fixed | Notes |
 |---|---|---|---|
 | Critical (live runtime crash) | 1 | 1 | qbank.js init type bug |
+| Stale UI copy | 1 | 1 | mastery.html "Eight new decks" / "8 decks" — updated to 9 to match the new Cloze deck |
 | Inconsistency | 1 | 0 | study-guide.html (cumulative final) lacks Cloze + mobile injectors — flagged, not fixed (out of scope per task) |
 | Stale localStorage prefixes | 8 keys | 0 | `biol-*` keys leftover from biol3020 port — flagged, NOT fixed (would lose user progress) |
+| Dead-weight asset | 1 | 0 | `public/content/flashcards.js.bak-pre-port-20260501` (178 KB) ships in the deploy but is unreferenced — flagged, not deleted (recent backup) |
 | All other audit checks | n/a | n/a | All pass — see "Verifications" below |
 
 ---
@@ -44,7 +46,26 @@ window.QBANK = Array.isArray(window.QBANK) ? window.QBANK : [];
 
 ---
 
-## Issue 2 (FLAGGED — not fixed): study-guide.html (Cumulative Final) lacks injected Cloze Mode + mobile CSS
+## Issue 2 (FIXED): stale "Eight new decks" / "8 decks" copy in mastery.html
+
+**File:** `public/mastery.html` (lines 924, 929 of pre-fix)
+
+The hero sub-paragraph and the `#masteryStatHero` placeholder both said "Eight new decks" / "8 decks", listing only the original eight synthesis decks (Scenarios, Mechanisms, Game Theory, Compare/Contrast, Calculations, Empirical Examples, Phylogeny, Cause-and-Effect). The new **Cloze** deck (54 cards) makes nine decks total.
+
+The dynamic `renderDecks()` JS at line 1250 already overwrites `#masteryStatHero` with the live count once `MASTERY_READY` resolves (so the live UX was correct after a few hundred ms). But the static fallback was visible during the FOUC window, and the prose paragraph never re-rendered.
+
+**Fix:** Updated both strings to "Nine decks…" and "9 decks", and added "Cloze" to the enumerated list:
+```html
+<p class="hero-sub">Block-based study built for 90% retention at 72h. Nine decks of synthesis cards — Scenarios, Mechanisms, Game Theory, Compare/Contrast, Calculations, Empirical Examples, Phylogeny, Cause-and-Effect, Cloze — plus a three-round Match → Flashcards → Mini-Match pipeline …</p>
+…
+<span id="masteryStatHero">— cards across 9 decks</span>
+```
+
+**Status:** Deployed and verified via curl that the live `mastery` page now serves "Nine decks" and "9 decks".
+
+---
+
+## Issue 3 (FLAGGED — not fixed): study-guide.html (Cumulative Final) lacks injected Cloze Mode + mobile CSS
 
 **File:** `public/study-guide.html`
 
@@ -56,7 +77,7 @@ window.QBANK = Array.isArray(window.QBANK) ? window.QBANK : [];
 
 ---
 
-## Issue 3 (FLAGGED — not fixed): `biol-*` localStorage keys leftover from biol3020 port
+## Issue 4 (FLAGGED — not fixed): `biol-*` localStorage keys leftover from biol3020 port
 
 `NEXT_STEPS.md` notes the prefix should have been renamed `biol-` → `evol-`. Eight key prefixes still use `biol-` and would cross-pollute localStorage if user visits both the cell-bio and evolution sites in the same browser:
 
@@ -75,6 +96,16 @@ window.QBANK = Array.isArray(window.QBANK) ? window.QBANK : [];
 | content/leitner-session.js:123 | `biol-fc-progress-v2` (intentional migration source — leave alone) |
 
 **Why not fixed:** Renaming would silently drop any user's existing flashcard progress, widget state, and authored tweaks unless coupled with a migration. That's a refactor with risk; the audit task is "fix what's broken." The current keys ARE functional. Flagging only.
+
+---
+
+## Issue 5 (FLAGGED — not fixed): pre-port flashcards backup ships in deploy
+
+**File:** `public/content/flashcards.js.bak-pre-port-20260501` (178 KB)
+
+This is a backup of `flashcards.js` from before the May 1 biol→evol port. Nothing references it (no `<script src=...>`, no fetches), so it has zero runtime effect. But Cloudflare Pages deploys the entire `public/` tree, so this file is publicly downloadable from the live site as dead weight.
+
+**Why not fixed:** It's a recent backup (May 1) that the user may want to keep accessible during the cell-bio→evolution port debugging. Deleting it would also be a destructive operation that the audit task doesn't authorize. Flagging only — recommend `git rm` once the port stabilizes.
 
 ---
 
@@ -123,13 +154,32 @@ Mastery.html `APP_PROMPTS` dict (line 1760) covers 8 of 9 decks. The new `cloze`
 ## Files modified this pass
 
 - `public/content/qbank.js` — type-safe initialization (Issue 1 fix).
+- `public/mastery.html` — "Eight new decks" → "Nine decks (… Cloze)" + "8 decks" → "9 decks" (Issue 2 fix).
 
 ## Files NOT modified (intentionally)
 
-- `public/study-guide.html` — Issue 2, flagged.
-- `public/index.html` — Issue 3, flagged (10 stale `biol-` keys).
+- `public/study-guide.html` — Issue 3, flagged.
+- `public/index.html` — Issue 4, flagged (10 stale `biol-` keys).
+- `public/content/flashcards.js.bak-pre-port-20260501` — Issue 5, flagged.
 - All other public/ files — verified clean.
 
 ## Deploy
 
-`./deploy.sh "audit: ensure window.QBANK is array (fixes runtime TypeError on every index.html load)"`
+```
+$ ./deploy.sh "audit fix: QBANK is array (was object), update '8 decks' → 9 decks in mastery hero"
+✨ Success! Uploaded 0 files (98 already uploaded) (0.14 sec)
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://8e39cb66.evolution-study-guide.pages.dev
+✔ Deploy complete. Live URL: https://evolution-study-guide.pages.dev/
+```
+
+Commit: `b9df730 audit: window.QBANK must be Array, not {} (fixes runtime TypeError on every index.html load — bank.forEach @8341, (window.QBANK || []).forEach @7837)`
+
+## Live verification (post-deploy curl)
+
+| Check | Result |
+|---|---|
+| `https://evolution-study-guide.pages.dev/content/qbank.js` | Serves the array-safe init line: `window.QBANK = Array.isArray(window.QBANK) ? window.QBANK : [];` |
+| `https://evolution-study-guide.pages.dev/mastery` hero | Shows `Nine decks of synthesis cards — … Cloze` and `— cards across 9 decks` |
+| `https://evolution-study-guide.pages.dev/data/mastery/cloze.json` | HTTP 200, `deckId: cloze`, 54 cards |
+| Local preview at `localhost:4201` | `__bootErrors` empty after reload of `index.html`; `window.QBANK === []`; `MASTERY_DECKS` has 9 entries / 324 cards; clicking 📚 Flashcards (Leitner) launches a 30-card cross-deck drill including Cloze cards. |

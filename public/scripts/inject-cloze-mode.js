@@ -3,7 +3,12 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const FILES = ['study-guide-exam1.html', 'study-guide-exam2.html', 'study-guide-exam3.html'];
+const FILES = [
+  'study-guide-exam1.html',
+  'study-guide-exam2.html',
+  'study-guide-exam3.html',
+  'study-guide.html', // cumulative final (added 2026-05-02 per audit Issue 3)
+];
 
 const BLOCK = `
 <!-- ===== CLOZE MODE + TERM HOVER TOOLTIPS — auto-injected by scripts/inject-cloze-mode.js ===== -->
