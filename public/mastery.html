@@ -921,12 +921,12 @@ html, body { max-width: 100%; overflow-x: hidden; overscroll-behavior-y: contain
 <section class="hero">
   <div class="hero-kicker">Mastery · BIOL 4230</div>
   <h1 class="hero-title"><em>Three days</em> to<br>retention.</h1>
-  <p class="hero-sub">Block-based study built for 90% retention at 72h. Eight new decks of synthesis cards — Scenarios, Mechanisms, Game Theory, Compare/Contrast, Calculations, Empirical Examples, Phylogeny, Cause-and-Effect — plus a three-round Match → Flashcards → Mini-Match pipeline and Application Blocks that grade your typed answers.</p>
+  <p class="hero-sub">Block-based study built for 90% retention at 72h. Nine decks of synthesis cards — Scenarios, Mechanisms, Game Theory, Compare/Contrast, Calculations, Empirical Examples, Phylogeny, Cause-and-Effect, Cloze — plus a three-round Match → Flashcards → Mini-Match pipeline and Application Blocks that grade your typed answers.</p>
   <p class="hero-sub" style="margin-top:10px; font-size:14px; color:var(--ink-dim);"><b style="color:var(--accent-ink);">True Mastery</b> requires two App-mode (typed) correct attempts on the same card, separated by ≥ 6 hours. Calculations must hit every gold number, not just the formula. Match and flip-card answers update progress but do <em>not</em> count toward True Mastery — the headline number is the one that predicts your exam score.</p>
   <div class="hero-meta">
     <span>📅 Final · May 4, 2026 · 5–7 PM</span>
     <span>🧠 Block plan with 10-min breaks</span>
-    <span id="masteryStatHero">— cards across 8 decks</span>
+    <span id="masteryStatHero">— cards across 9 decks</span>
   </div>
 </section>
 
@@ -943,6 +943,7 @@ html, body { max-width: 100%; overflow-x: hidden; overscroll-behavior-y: contain
   <p class="section-sub">Run a single block, or launch the cross-deck Mastery Run for the full pipeline. Existing Vocabulary deck (lectures L01–L20) is in <a href="match.html" style="color:var(--accent);">Match Mode</a> — untouched.</p>
   <div class="deck-actions" style="margin-bottom:16px;">
     <button class="btn primary" id="masteryRunBtn">⚡ Cross-Deck Mastery Run</button>
+    <button class="btn" id="flashcardsBtn" title="Leitner-style typed flashcards across all decks until mastered">📚 Flashcards (Leitner)</button>
     <button class="btn" id="customBlockBtn">Custom Block</button>
   </div>
   <div class="deck-grid" id="deckGrid">
@@ -1293,6 +1294,16 @@ document.getElementById('masteryRunBtn').addEventListener('click', function () {
 });
 document.getElementById('customBlockBtn').addEventListener('click', function () {
   showCustomBlockPicker();
+});
+// Leitner-style typed flashcards across all in-scope cards. Uses the existing Drill engine
+// (same per-card classifier as biol3020 + japanese — known/shaky/unknown).
+document.getElementById('flashcardsBtn').addEventListener('click', function () {
+  beginRun({
+    type: 'drill',
+    deckId: 'all',
+    title: 'Flashcards (Leitner) · All Decks',
+    crossDeck: true,
+  });
 });
 
 // ---------- BLOCK ENGINE ----------

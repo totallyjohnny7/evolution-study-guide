@@ -11,6 +11,7 @@
     'empirical',
     'phylogeny',
     'cause-effect',
+    'cloze',
   ];
 
   window.MASTERY_DECKS = window.MASTERY_DECKS || {};
