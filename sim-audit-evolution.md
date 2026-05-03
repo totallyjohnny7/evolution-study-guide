@@ -11,12 +11,14 @@
 
 | Severity | Found | Fixed | Notes |
 |---|---|---|---|
-| Critical (live runtime crash) | 1 | 1 | qbank.js init type bug |
-| Stale UI copy | 1 | 1 | mastery.html "Eight new decks" / "8 decks" — updated to 9 to match the new Cloze deck |
-| Inconsistency | 1 | 0 | study-guide.html (cumulative final) lacks Cloze + mobile injectors — flagged, not fixed (out of scope per task) |
-| Stale localStorage prefixes | 8 keys | 0 | `biol-*` keys leftover from biol3020 port — flagged, NOT fixed (would lose user progress) |
-| Dead-weight asset | 1 | 0 | `public/content/flashcards.js.bak-pre-port-20260501` (178 KB) ships in the deploy but is unreferenced — flagged, not deleted (recent backup) |
+| Critical (live runtime crash) | 1 | **1** | qbank.js init type bug |
+| Stale UI copy | 1 | **1** | mastery.html "Eight new decks" / "8 decks" → 9 (incl. Cloze) |
+| Inconsistency | 1 | **1** | study-guide.html (cumulative final) added to both injectors and re-injected — now has Cloze + mobile blocks like the per-exam guides |
+| Stale localStorage prefixes | 8 keys | **8** | All `biol-*` keys renamed to `evol-*` in index.html. One-shot migration block preserves existing user progress (copies biol-X → evol-X at boot, idempotent via `evol-ls-migrated-v1`). Legacy `biol-*` keys are left intact so leitner-session.js's own migration path keeps working. |
+| Dead-weight asset | 1 | **1** | `flashcards.js.bak-pre-port-20260501` (178 KB) `git mv`'d out of `public/content/` into `_backups/`. Not in deploy. |
 | All other audit checks | n/a | n/a | All pass — see "Verifications" below |
+
+**Final score: 12/12 audit items resolved. Zero issues outstanding.**
 
 ---
 
@@ -65,19 +67,34 @@ The dynamic `renderDecks()` JS at line 1250 already overwrites `#masteryStatHero
 
 ---
 
-## Issue 3 (FLAGGED — not fixed): study-guide.html (Cumulative Final) lacks injected Cloze Mode + mobile CSS
+## Issue 3 (FIXED): study-guide.html (Cumulative Final) lacks injected Cloze Mode + mobile CSS
 
 **File:** `public/study-guide.html`
 
-`scripts/inject-cloze-mode.js` and `scripts/inject-mobile-css.js` enumerate only the three per-exam guides (`study-guide-exam{1,2,3}.html`) in their `FILES` array. The Cumulative Final at `study-guide.html` shares the same DOM (`<div class="doc" id="doc" contenteditable>`) and is the page user will reach for the May 4 final, but does not get cloze toggle or mobile fix.
+`scripts/inject-cloze-mode.js` and `scripts/inject-mobile-css.js` enumerated only the three per-exam guides (`study-guide-exam{1,2,3}.html`) in their `FILES` array. The Cumulative Final at `study-guide.html` shares the same DOM (`<div class="doc" id="doc" contenteditable>`) and is the page the user will reach for the May 4 final, but did not get the cloze toggle or mobile fix.
 
-**Why not fixed:** The audit task explicitly enumerates "3 study guides" and "Don't add features." Adding the file to both injectors is functionally a parity fix, but is a feature increase relative to the task scope. Flagging here so user can decide.
+**Fix:** Added `'study-guide.html'` to the `FILES` array in both injector scripts:
 
-**Suggested fix (not applied):** add `'study-guide.html'` to the `FILES` arrays in both injector scripts and re-run.
+```js
+const FILES = [
+  'study-guide-exam1.html',
+  'study-guide-exam2.html',
+  'study-guide-exam3.html',
+  'study-guide.html', // cumulative final (added 2026-05-02 per audit Issue 3)
+];
+```
+
+Re-ran both injectors:
+```
+✓ Injected mobile CSS into study-guide{,-exam1,-exam2,-exam3}.html  (4/4)
+✓ Injected Cloze Mode into study-guide{,-exam1,-exam2,-exam3}.html  (4/4)
+```
+
+**Verified:** Cumulative-final page loads cleanly; clicking 🎯 Cloze Mode toggles **297** bolded terms into clickable blanks; clicking a blank reveals it; LS key `evolution-cloze-Cumulative-Final-All-units-BIOL-4230-Evo` persists per-page. Zero `__bootErrors`.
 
 ---
 
-## Issue 4 (FLAGGED — not fixed): `biol-*` localStorage keys leftover from biol3020 port
+## Issue 4 (FIXED): `biol-*` localStorage keys leftover from biol3020 port
 
 `NEXT_STEPS.md` notes the prefix should have been renamed `biol-` → `evol-`. Eight key prefixes still use `biol-` and would cross-pollute localStorage if user visits both the cell-bio and evolution sites in the same browser:
 
@@ -95,17 +112,51 @@ The dynamic `renderDecks()` JS at line 1250 already overwrites `#masteryStatHero
 | index.html:9326 | `biol-fc-instructions-v1` |
 | content/leitner-session.js:123 | `biol-fc-progress-v2` (intentional migration source — leave alone) |
 
-**Why not fixed:** Renaming would silently drop any user's existing flashcard progress, widget state, and authored tweaks unless coupled with a migration. That's a refactor with risk; the audit task is "fix what's broken." The current keys ARE functional. Flagging only.
+**Fix:** Renamed every active use of `biol-*` LS keys in `index.html` to `evol-*`. Added a one-shot migration block at the top of `index.html` (immediately after the boot-error trap) that copies each legacy `biol-X` value into `evol-X` if `evol-X` is missing — so existing user progress is preserved across the rename. Idempotent via the `evol-ls-migrated-v1` sentinel:
+
+```js
+(function migrateLsKeys() {
+  try {
+    if (localStorage.getItem('evol-ls-migrated-v1') === '1') return;
+    const pairs = [
+      ['biol-fc-progress-v2',    'evol-fc-progress-v2'],
+      ['biol-fc-filter-v1',      'evol-fc-filter-v1'],
+      ['biol-fcw-on',            'evol-fcw-on'],
+      ['biol-fcw-deck',          'evol-fcw-deck'],
+      ['biol-fcw-seen-v2',       'evol-fcw-seen-v2'],
+      ['biol-tweaks-v1',         'evol-tweaks-v1'],
+      ['biol-fc-cards-v1',       'evol-fc-cards-v1'],
+      ['biol-fc-instructions-v1','evol-fc-instructions-v1'],
+    ];
+    pairs.forEach(function (p) {
+      try {
+        var v = localStorage.getItem(p[0]);
+        if (v !== null && localStorage.getItem(p[1]) === null) {
+          localStorage.setItem(p[1], v);
+        }
+      } catch (_) {}
+    });
+    localStorage.setItem('evol-ls-migrated-v1', '1');
+  } catch (_) {}
+})();
+```
+
+The legacy `biol-*` keys are LEFT in localStorage so `content/leitner-session.js`'s own format migration (which still reads `biol-fc-progress-v2`) continues to work — that path was never broken and changing it would risk losing flashcard mastery records.
+
+**Verified:**
+1. Seeded test biol-* values, removed evol-* equivalents, deleted the migration sentinel, then reloaded — all four evol-* keys came back populated with the biol-* contents (correct copy).
+2. Set `evol-fcw-on=0` (newer user choice) but `biol-fcw-on=1` (stale legacy), reloaded with sentinel intact — the user's `evol-fcw-on=0` was preserved (no clobber). Idempotent ✓.
+3. Toggled the live flashcards widget on/off — value lands in `evol-fcw-on`, not `biol-fcw-on`. New writes only touch the new key.
 
 ---
 
-## Issue 5 (FLAGGED — not fixed): pre-port flashcards backup ships in deploy
+## Issue 5 (FIXED): pre-port flashcards backup ships in deploy
 
-**File:** `public/content/flashcards.js.bak-pre-port-20260501` (178 KB)
+**File:** moved `public/content/flashcards.js.bak-pre-port-20260501` (178 KB) → `_backups/flashcards.js.bak-pre-port-20260501`
 
-This is a backup of `flashcards.js` from before the May 1 biol→evol port. Nothing references it (no `<script src=...>`, no fetches), so it has zero runtime effect. But Cloudflare Pages deploys the entire `public/` tree, so this file is publicly downloadable from the live site as dead weight.
+This was a backup of `flashcards.js` from before the May 1 biol→evol port. Nothing references it (no `<script src=...>`, no fetches), so it had zero runtime effect — but Cloudflare Pages deploys the entire `public/` tree, so the file was publicly downloadable from the live site as 178 KB of dead weight.
 
-**Why not fixed:** It's a recent backup (May 1) that the user may want to keep accessible during the cell-bio→evolution port debugging. Deleting it would also be a destructive operation that the audit task doesn't authorize. Flagging only — recommend `git rm` once the port stabilizes.
+**Fix:** `git mv public/content/flashcards.js.bak-pre-port-20260501 _backups/flashcards.js.bak-pre-port-20260501` — the file is preserved in the repo (recoverable) but no longer in the deploy. Verified post-deploy: `curl -I https://evolution-study-guide.pages.dev/content/flashcards.js.bak-pre-port-20260501` returns the SPA fallback (`Content-Type: text/html`, 387 KB index.html) instead of the 178 KB JS — confirming the file is gone from `/content/` on the live site.
 
 ---
 
@@ -151,17 +202,18 @@ Mastery.html `APP_PROMPTS` dict (line 1760) covers 8 of 9 decks. The new `cloze`
 
 ---
 
-## Files modified this pass
+## Files modified across both audit passes
 
-- `public/content/qbank.js` — type-safe initialization (Issue 1 fix).
-- `public/mastery.html` — "Eight new decks" → "Nine decks (… Cloze)" + "8 decks" → "9 decks" (Issue 2 fix).
-
-## Files NOT modified (intentionally)
-
-- `public/study-guide.html` — Issue 3, flagged.
-- `public/index.html` — Issue 4, flagged (10 stale `biol-` keys).
-- `public/content/flashcards.js.bak-pre-port-20260501` — Issue 5, flagged.
-- All other public/ files — verified clean.
+| File | Change |
+|---|---|
+| `public/content/qbank.js` | type-safe array init (Issue 1) |
+| `public/mastery.html` | "Eight new decks"→"Nine decks · Cloze", "8 decks"→"9 decks" (Issue 2) |
+| `public/scripts/inject-cloze-mode.js` | added `'study-guide.html'` to `FILES` (Issue 3) |
+| `public/scripts/inject-mobile-css.js` | added `'study-guide.html'` to `FILES` (Issue 3) |
+| `public/study-guide.html` | re-injected → now has CLOZE + MOBILE blocks (Issue 3) |
+| `public/study-guide-exam{1,2,3}.html` | re-injected (no semantic change, regenerated for parity) |
+| `public/index.html` | (a) one-shot `migrateLsKeys()` IIFE at top of head; (b) all 8 active uses of `biol-*` keys renamed to `evol-*` (Issue 4) |
+| `_backups/flashcards.js.bak-pre-port-20260501` | moved out of `public/content/` (Issue 5) |
 
 ## Deploy
 
@@ -182,4 +234,25 @@ Commit: `b9df730 audit: window.QBANK must be Array, not {} (fixes runtime TypeEr
 | `https://evolution-study-guide.pages.dev/content/qbank.js` | Serves the array-safe init line: `window.QBANK = Array.isArray(window.QBANK) ? window.QBANK : [];` |
 | `https://evolution-study-guide.pages.dev/mastery` hero | Shows `Nine decks of synthesis cards — … Cloze` and `— cards across 9 decks` |
 | `https://evolution-study-guide.pages.dev/data/mastery/cloze.json` | HTTP 200, `deckId: cloze`, 54 cards |
-| Local preview at `localhost:4201` | `__bootErrors` empty after reload of `index.html`; `window.QBANK === []`; `MASTERY_DECKS` has 9 entries / 324 cards; clicking 📚 Flashcards (Leitner) launches a 30-card cross-deck drill including Cloze cards. |
+| `https://evolution-study-guide.pages.dev/study-guide` | HTTP 200; HTML includes `BEGIN CLOZE MODE` + `END CLOZE MODE` + `id="mobile-responsive-styles"` markers |
+| `https://evolution-study-guide.pages.dev/` (index) | Includes `migrateLsKeys` IIFE and zero active `biol-*` LS reads (only the migration source listing) |
+| `https://evolution-study-guide.pages.dev/content/flashcards.js.bak-pre-port-20260501` | SPA fallback (HTML) — file is gone from `/content/` on the live deploy |
+
+## Local simulation (preview server `localhost:4201`)
+
+End-to-end smoke test running each fix back-to-back. Console-error count stayed at **0** throughout.
+
+| Test | Result |
+|---|---|
+| Reload `index.html` after seeding `biol-*` keys, removing `evol-*` equivalents, clearing `evol-ls-migrated-v1` | All four `evol-*` keys repopulated from `biol-*` sources; `evol-ls-migrated-v1=1`; `__bootErrors=[]`. |
+| Reload again with `evol-fcw-on=0` and `biol-fcw-on=1` (sentinel intact) | `evol-fcw-on` stayed at `0` — migration is idempotent and does not clobber later writes. |
+| Load `mastery.html` | 9 decks loaded / 324 cards; hero shows "0 / 324 truly mastered · 9 decks"; flashcards button labeled "📚 Flashcards (Leitner)". |
+| Programmatically click `#flashcardsBtn` | Runner overlay opens with title "Flashcards (Leitner) · All Decks", 30 cards across `cycle 1/3`; cloze cards (with `____`) appear in the rendered match grid alongside other deck types. |
+| Load `match.html` | 4-button exam picker, splash visible, no boot errors. |
+| Load `study-guide.html` (cumulative final) | Toggle 🎯 Cloze Mode on → **297** bolds → 297 `.cloze-blank` spans; click first blank → `.revealed` class added. Toggle off → 0 blanks; original DOM restored; LS key `evolution-cloze-Cumulative-Final-All-units-BIOL-4230-Evo` written. |
+| Load `study-guide-exam1.html` | 82 blanks / 82 bolds, toggle on/off clean, no errors. |
+| Load `study-guide-exam2.html` | 102 blanks / 102 bolds, clean. |
+| Load `study-guide-exam3.html` | 113 blanks / 113 bolds, clean. |
+| Toggle flashcards widget on `index.html` (`window.toggleFcw()`) | Sets `evol-fcw-on=1`; toggling off sets `evol-fcw-on=0`; `evol-fcw-deck` reads the migrated value `L05`. No writes to any `biol-*` key. |
+| `preview_console_logs(level: 'error')` after full session | "No console logs." (zero errors) |
+| `preview_console_logs(level: 'warn')` after full session | "No console logs." (zero warnings) |
