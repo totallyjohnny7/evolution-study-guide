@@ -253,25 +253,43 @@
 
   function startSession(settings) {
     const bank = window.STIM_BANK;
-    let pool = bank.filter(q => settings.exam === 0 || q.exam === settings.exam);
-    if (settings.lecture && settings.lecture !== 'all') {
-      pool = pool.filter(q => q.lecture === settings.lecture);
+    let selected;
+    let sessionId = 'sess_' + Date.now();
+
+    // Variation preset: if settings carries an explicit qid list (mastery
+    // page launched a specific practice-final variation), use exactly those
+    // questions in that order. Bypasses pool filtering and shuffling so
+    // Variation A always runs the same 30 questions.
+    if (Array.isArray(settings._variationQids) && settings._variationQids.length > 0) {
+      const byId = new Map(bank.map(q => [q.id, q]));
+      selected = settings._variationQids.map(id => byId.get(id)).filter(Boolean);
+      if (selected.length === 0) {
+        alert('Variation question set could not be loaded — falling back to a random pool.');
+      } else {
+        if (settings._variationLabel) sessionId += '_' + settings._variationLabel;
+      }
     }
-    if (settings.type === 'mc') pool = pool.filter(q => q.type === 'mc');
-    if (settings.type === 'sa') pool = pool.filter(q => q.type === 'sa');
-    if (pool.length === 0) {
-      alert('No questions match those filters.');
-      return;
+
+    if (!selected || selected.length === 0) {
+      let pool = bank.filter(q => settings.exam === 0 || q.exam === settings.exam);
+      if (settings.lecture && settings.lecture !== 'all') {
+        pool = pool.filter(q => q.lecture === settings.lecture);
+      }
+      if (settings.type === 'mc') pool = pool.filter(q => q.type === 'mc');
+      if (settings.type === 'sa') pool = pool.filter(q => q.type === 'sa');
+      if (pool.length === 0) {
+        alert('No questions match those filters.');
+        return;
+      }
+      const shuffled = shuffleSeeded(pool, sessionId);
+      const target = settings.count === 0 ? shuffled.length : Math.min(settings.count, shuffled.length);
+      selected = shuffled.slice(0, target);
     }
-    const sessionId = 'sess_' + Date.now();
-    const shuffled = shuffleSeeded(pool, sessionId);
-    const target = settings.count === 0 ? shuffled.length : Math.min(settings.count, shuffled.length);
-    const selected = shuffled.slice(0, target);
 
     session = {
       id: sessionId,
       exam: settings.exam,
-      count: target,
+      count: selected.length,
       type: settings.type,
       timer_sec: settings.timer,
       started_at: Date.now(),
@@ -281,7 +299,8 @@
       answers: {},   // qid -> { mc_idx | sa_text }
       flags: {},     // qid -> true
       finished: false,
-      results: null
+      results: null,
+      variationLabel: settings._variationLabel || null,
     };
     saveJSON(LS_SESSION, session);
     renderExam();

@@ -6117,28 +6117,50 @@ document.querySelectorAll('.mode-switch button').forEach(b => {
 
 // ---------- Practice-exam variation deep-link (#stim-A through #stim-D) ----------
 // When mastery.html sends the user here with a variation hash, pre-configure
-// Stim Mode for a 30-question cumulative practice final and activate it.
-// User lands on the Stim Mode setup screen with chips already selected; one
-// click on "Start exam" begins the timed run.
-window.handleStimVariation = function () {
+// Stim Mode for the 30-question cumulative practice final tied to that
+// variation. We fetch public/data/practice-exam-variations.json which maps
+// each variation to its fixed list of stim-bank qids; Stim Mode's
+// startSession honors a _variationQids field and runs exactly those
+// questions in that order, so Variation A always pulls the same 30.
+let __variationManifest = null;
+async function __loadVariationManifest() {
+  if (__variationManifest) return __variationManifest;
+  try {
+    const res = await fetch('data/practice-exam-variations.json');
+    if (!res.ok) return null;
+    __variationManifest = await res.json();
+    return __variationManifest;
+  } catch (e) {
+    return null;
+  }
+}
+
+window.handleStimVariation = async function () {
   const m = String(location.hash || '').match(/^#stim-([A-D])\b/i);
   if (!m) return false;
   const variation = m[1].toUpperCase();
-  const presets = {
-    A: { exam: 0, count: 30, type: 'mixed', timer: 3000, lecture: 'all', _variation: 'A' },
-    B: { exam: 0, count: 30, type: 'mixed', timer: 3000, lecture: 'all', _variation: 'B' },
-    C: { exam: 0, count: 30, type: 'mixed', timer: 3000, lecture: 'all', _variation: 'C' },
-    D: { exam: 0, count: 30, type: 'mixed', timer: 3000, lecture: 'all', _variation: 'D' },
+  const variationId = 'Final-' + variation;
+
+  const manifest = await __loadVariationManifest();
+  const v = manifest && manifest.variations && manifest.variations[variationId];
+  // Build the qid list, MC first then SA (the existing Stim Mode runner
+  // handles type-mixed sessions natively).
+  const qids = v ? [...(v.mcQids || []), ...(v.saQids || [])] : null;
+
+  const settings = {
+    exam: 0,                 // cumulative
+    count: qids ? qids.length : 30,
+    type: 'mixed',
+    timer: 3000,             // 50 min
+    lecture: 'all',
+    _variationLabel: variation,
+    _variationQids: qids,    // Stim Mode honors this if non-empty
   };
   try {
-    localStorage.setItem('evol_stim_settings', JSON.stringify(presets[variation]));
-    // Clear any half-finished session so the user lands on the setup screen,
-    // not a resumed exam from a different variation.
+    localStorage.setItem('evol_stim_settings', JSON.stringify(settings));
     localStorage.removeItem('evol_stim_session');
   } catch (e) {}
-  // Activate Stim Mode (waits for window.StimMode to be defined; stim-mode.js
-  // loads via <script> tag below this block, so on a cold load we may need to
-  // wait one tick for it to register on window).
+
   const tryActivate = (attempt) => {
     if (window.StimMode && typeof window.StimMode.activate === 'function') {
       setMode('stim');

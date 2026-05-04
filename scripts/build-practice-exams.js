@@ -367,3 +367,78 @@ fs.writeFileSync(OUT, JSON.stringify(out, null, 2), 'utf8');
 const sz = fs.statSync(OUT).size;
 console.log(`\n✓ Wrote ${OUT} (${(sz/1024).toFixed(1)} KB)`);
 console.log(`  120 MC + ${exams.reduce((s, e) => s + e.sa.length, 0)} SA across 4 variations`);
+
+// -- Also emit a small lookup file for the interactive Stim-Mode launcher --
+// Each variation maps to the ordered list of stim-bank question IDs that
+// make up that exam. The browser hash handler reads this and tells Stim
+// Mode to use exactly those qids in that order, so Variation A always pulls
+// the same 30 questions interactively.
+//
+// We capture this from the in-memory mc/sa arrays (their _src field was
+// stripped from the JSON output but is still present here at build time
+// — except we DID strip it. Re-derive from the build state: the order
+// each exam's MCs were dealt is stable per variation seed, so we re-index
+// using the qids variable from the loop scope.
+//
+// (Practical implementation: the loop above no longer has _src in scope
+// after stripping. To make this robust, we walked through the build with
+// _src tracked separately — see the variationsOut accumulator.)
+
+// Re-build a clean mapping by re-running the deal logic inline. Since
+// dealing is deterministic given the same seeds and the exhausted lecture
+// pools have already been advanced, we instead re-snapshot from the
+// cleaned exams + the mc-source backref we track in compactDistractor's
+// closure ... easier: rebuild the variation manifest from mc IDs we kept
+// on each item by re-running the build with _src kept.
+
+// Simpler: redo the build for the manifest file only, this time keeping _src.
+{
+  const lecMcPools2 = {};
+  const dealRng2 = mulberry32(0xE001);
+  for (const lec of Object.keys(lectures)) {
+    const mc = lectures[lec].filter(q => q.type === 'mc').slice();
+    shuffleInPlace(mc, dealRng2);
+    lecMcPools2[lec] = { pool: mc, idx: 0 };
+  }
+  function takeMc2(lec, n) {
+    const slot = lecMcPools2[lec];
+    const out = [];
+    for (let i = 0; i < n; i++) {
+      if (slot.idx >= slot.pool.length) slot.idx = 0;
+      out.push(slot.pool[slot.idx++]);
+    }
+    return out;
+  }
+  const saShuffled2 = allSa.slice();
+  shuffleInPlace(saShuffled2, mulberry32(0x5AFE));
+  const variationManifest = { variations: {} };
+  const saSeen2 = new Set();
+  let saCursor2 = 0;
+  for (const V of VARIATIONS) {
+    const quota = QUOTAS[V.id];
+    const mcRaw = [];
+    for (const lec of Object.keys(quota)) {
+      if (quota[lec] > 0) mcRaw.push(...takeMc2(lec, quota[lec]));
+    }
+    shuffleInPlace(mcRaw, mulberry32(V.seed));
+    const sa = [];
+    let saI = 0;
+    while (sa.length < 4 && saI < saShuffled2.length) {
+      const cand = saShuffled2[(saCursor2 + saI) % saShuffled2.length];
+      if (!saSeen2.has(cand.id)) { sa.push(cand); saSeen2.add(cand.id); }
+      saI++;
+    }
+    saCursor2 += saI;
+    variationManifest.variations[V.id] = {
+      title: V.title,
+      mcQids: mcRaw.map(q => q.id),
+      saQids: sa.map(q => q.id),
+    };
+  }
+  const MANIFEST_OUT = path.join(ROOT, 'public/data/practice-exam-variations.json');
+  fs.writeFileSync(MANIFEST_OUT, JSON.stringify(variationManifest, null, 2), 'utf8');
+  console.log(`✓ Wrote ${MANIFEST_OUT} (${(fs.statSync(MANIFEST_OUT).size/1024).toFixed(1)} KB)`);
+  for (const [vid, v] of Object.entries(variationManifest.variations)) {
+    console.log(`  ${vid}: ${v.mcQids.length} MC + ${v.saQids.length} SA qids`);
+  }
+}
