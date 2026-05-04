@@ -1,0 +1,1846 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Evolution Final · Visual Cram Sheet · 2-hour everything review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0e12; --bg-elev:#14171d; --bg-card:#181b22; --bg-sunk:#090a0e;
+    --rule:#22262f; --rule-strong:#2e333d;
+    --ink:#e6dfd0; --ink-dim:#a59a83; --ink-faint:#6b6353;
+    --accent:#c89b2e; --accent-soft:#241c0d; --accent-ink:#f1d278;
+    --correct:#5fa871; --wrong:#c86462; --info:#7a8fa8; --magenta:#b96ea0; --teal:#5fa8a1;
+    --topic-mut:#c89b2e; --topic-pop:#7a8fa8; --topic-sel:#c86462;
+    --topic-adapt:#5fa871; --topic-sex:#b96ea0; --topic-deep:#5fa8a1;
+    --topic-spec:#d68a3c; --topic-med:#c86462;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.55}
+
+  /* Top chrome */
+  .chrome{position:sticky;top:0;z-index:50;background:rgba(12,14,18,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+  .chrome-inner{max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .brand{font-family:"Fraunces",Georgia,serif;font-size:18px;font-weight:600;letter-spacing:-0.01em;color:var(--ink)}
+  .brand-mark{color:var(--accent);font-style:italic;font-weight:500}
+  .chrome a.back{color:var(--accent);text-decoration:none;font-size:13px;font-weight:600}
+  .chrome a.back:hover{text-decoration:underline}
+  .toc-nav{display:flex;gap:6px;flex-wrap:wrap;font-size:11.5px;margin-left:auto}
+  .toc-nav a{color:var(--ink-dim);text-decoration:none;padding:3px 8px;border:1px solid var(--rule);border-radius:14px;transition:all 0.15s}
+  .toc-nav a:hover{color:var(--accent);border-color:var(--accent)}
+
+  /* Hero */
+  .hero{max-width:1240px;margin:0 auto;padding:30px 24px 14px;text-align:center}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-size:36px;font-weight:600;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+  .hero h1 em{color:var(--accent);font-style:italic;font-weight:500}
+  .hero .lead{margin-top:8px;color:var(--ink-dim);font-size:14px;max-width:720px;margin-left:auto;margin-right:auto}
+  .hero .meta{margin-top:12px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-faint)}
+  .hero .meta span{padding:3px 10px;background:var(--bg-elev);border:1px solid var(--rule);border-radius:14px}
+
+  /* Page wrap */
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px 60px}
+
+  /* Section */
+  section{margin-top:30px;scroll-margin-top:80px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;padding-bottom:10px;border-bottom:1.5px solid var(--accent)}
+  .sec-num{font-family:"Fraunces",serif;font-size:28px;color:var(--accent);font-weight:600;font-style:italic;line-height:1}
+  .sec-title{font-family:"Fraunces",serif;font-size:22px;color:var(--ink);font-weight:600;letter-spacing:-0.01em}
+  .sec-blurb{margin-left:auto;color:var(--ink-dim);font-size:12px;font-style:italic;text-align:right;max-width:380px}
+
+  /* Grid system */
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(12,1fr)}
+  .col-3{grid-column:span 3} .col-4{grid-column:span 4} .col-5{grid-column:span 5}
+  .col-6{grid-column:span 6} .col-7{grid-column:span 7} .col-8{grid-column:span 8}
+  .col-9{grid-column:span 9} .col-12{grid-column:span 12}
+
+  /* Cards */
+  .card{background:var(--bg-card);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+  .card-label{font-family:"Inter",sans-serif;font-size:9.5px;font-weight:700;color:var(--ink-faint);letter-spacing:0.18em;text-transform:uppercase}
+  .card-title{font-family:"Fraunces",serif;font-size:15px;color:var(--ink);font-weight:600;line-height:1.25}
+  .card-body{font-size:12.5px;color:var(--ink);line-height:1.5}
+  .card-body b{color:var(--accent-ink);font-weight:600}
+  .card-body strong{color:var(--accent-ink);font-weight:700}
+
+  /* SVG card */
+  .svg-card svg{width:100%;height:auto;display:block;background:#0f1117;border-radius:4px;border:1px solid var(--rule)}
+  .svg-cap{font-family:"Fraunces",serif;font-style:italic;font-size:12.5px;color:var(--correct);margin-top:4px;line-height:1.35}
+  .svg-cap.warn{color:var(--accent-ink)}
+  .svg-cap.danger{color:var(--wrong)}
+
+  /* Mnemonic callouts (golden box like the war sheet) */
+  .mnem{background:var(--accent-soft);border-left:3px solid var(--accent);padding:8px 12px;border-radius:4px;font-size:12.5px}
+  .mnem .star{color:var(--accent);font-weight:700;margin-right:4px}
+  .mnem .quote{font-family:"Fraunces",serif;font-style:italic;color:var(--accent-ink);font-weight:600;display:block;margin-bottom:3px}
+  .mnem .gloss{color:var(--ink);font-size:11.5px}
+
+  /* Trap callout (red) */
+  .trap{background:rgba(200,100,98,0.12);border-left:3px solid var(--wrong);padding:8px 12px;border-radius:4px;font-size:12.5px;color:var(--ink)}
+  .trap .lbl{color:var(--wrong);font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;display:block;margin-bottom:3px}
+  .trap b{color:var(--wrong);font-weight:600}
+
+  /* Empirical (green) */
+  .emp{background:rgba(95,168,113,0.10);border-left:3px solid var(--correct);padding:8px 12px;border-radius:4px;font-size:12.5px;color:var(--ink)}
+  .emp .lbl{color:var(--correct);font-weight:700;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;display:block;margin-bottom:3px}
+  .emp b{color:var(--correct);font-weight:600}
+
+  /* Equation box */
+  .eq{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;background:var(--bg-sunk);border:1px solid var(--rule);border-radius:4px;padding:8px 12px;text-align:center;color:var(--accent-ink);font-weight:600}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+  th,td{border:1px solid var(--rule);padding:5px 8px;text-align:left;vertical-align:top}
+  th{background:var(--bg-elev);color:var(--accent-ink);font-weight:600;font-size:11px;letter-spacing:0.06em}
+  td b{color:var(--accent-ink)}
+
+  /* Lists */
+  ul{margin:2px 0 4px 18px}
+  li{margin:2px 0}
+
+  /* Topic-colored section bars */
+  section[data-topic="mut"] .sec-head{border-color:var(--topic-mut)}
+  section[data-topic="mut"] .sec-num{color:var(--topic-mut)}
+  section[data-topic="pop"] .sec-head{border-color:var(--topic-pop)}
+  section[data-topic="pop"] .sec-num{color:var(--topic-pop)}
+  section[data-topic="sel"] .sec-head{border-color:var(--topic-sel)}
+  section[data-topic="sel"] .sec-num{color:var(--topic-sel)}
+  section[data-topic="adapt"] .sec-head{border-color:var(--topic-adapt)}
+  section[data-topic="adapt"] .sec-num{color:var(--topic-adapt)}
+  section[data-topic="sex"] .sec-head{border-color:var(--topic-sex)}
+  section[data-topic="sex"] .sec-num{color:var(--topic-sex)}
+  section[data-topic="deep"] .sec-head{border-color:var(--topic-deep)}
+  section[data-topic="deep"] .sec-num{color:var(--topic-deep)}
+  section[data-topic="spec"] .sec-head{border-color:var(--topic-spec)}
+  section[data-topic="spec"] .sec-num{color:var(--topic-spec)}
+  section[data-topic="med"] .sec-head{border-color:var(--topic-med)}
+  section[data-topic="med"] .sec-num{color:var(--topic-med)}
+
+  /* Mobile */
+  @media (max-width: 880px){
+    .chrome-inner{padding:10px 14px}
+    .toc-nav{display:none}
+    .hero{padding:18px 14px 8px}
+    .hero h1{font-size:25px}
+    .wrap{padding:0 14px 40px}
+    .sec-head{flex-wrap:wrap}
+    .sec-blurb{margin-left:0;text-align:left;margin-top:4px;max-width:100%}
+    .col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9{grid-column:1 / -1}
+  }
+
+  /* Print */
+  @page{size:letter portrait;margin:0.35in}
+  @media print{
+    body{background:#fff;color:#1a1815;font-size:9pt;line-height:1.3}
+    .chrome,.toc-nav{display:none !important}
+    .hero{padding:8px 0;text-align:left}
+    .hero h1{font-size:16pt;color:#1a1815}
+    .hero h1 em{color:#b45309}
+    .hero .lead,.hero .meta{display:none}
+    .wrap{padding:0;max-width:none}
+    section{margin-top:14px;break-inside:avoid;page-break-inside:avoid}
+    .sec-head{padding-bottom:4px;margin-bottom:8px}
+    .sec-num{font-size:18pt}
+    .sec-title{font-size:13pt;color:#1a1815}
+    .sec-blurb{display:none}
+    .card{background:#fffefb;border:0.4pt solid #ccc;padding:6px 8px;break-inside:avoid;page-break-inside:avoid}
+    .card-label{color:#777;font-size:7pt}
+    .card-title{font-size:9pt;color:#1a1815}
+    .card-body{font-size:8.5pt;color:#1a1815}
+    .card-body b,.card-body strong{color:#b45309}
+    .svg-card svg{background:#fff;border:0.3pt solid #ccc}
+    .svg-cap{color:#047857;font-size:8pt}
+    .svg-cap.warn{color:#b45309}
+    .svg-cap.danger{color:#b91c1c}
+    .mnem{background:#fff7e8;border-left:2pt solid #b45309;padding:4px 8px;font-size:8.5pt;color:#1a1815}
+    .mnem .quote{color:#b45309;font-size:8.5pt}
+    .mnem .gloss{color:#1a1815;font-size:8pt}
+    .trap{background:#fef2f2;border-left:2pt solid #b91c1c;color:#1a1815;font-size:8.5pt}
+    .trap .lbl,.trap b{color:#b91c1c}
+    .emp{background:#f0fdf4;border-left:2pt solid #047857;color:#1a1815;font-size:8.5pt}
+    .emp .lbl,.emp b{color:#047857}
+    .eq{background:#fffaf0;border:0.4pt solid #b45309;color:#92400e;font-size:9pt;padding:5px 8px}
+    th{background:#fef3c7;color:#92400e;font-size:8pt}
+    td{font-size:8pt;color:#1a1815}
+    td b{color:#b45309}
+    .grid{gap:6px}
+  }
+</style>
+</head>
+<body>
+
+<div class="chrome">
+  <div class="chrome-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">EVOL</span>ution</a>
+    <a class="back" href="index.html">← Home</a>
+    <a class="back" href="guides.html">Study Guides</a>
+    <a class="back" href="cheatsheet.html">Cheat Sheet</a>
+    <nav class="toc-nav">
+      <a href="#big">Big Pic</a>
+      <a href="#hist">History</a>
+      <a href="#mut">Mutation</a>
+      <a href="#hwe">HWE</a>
+      <a href="#herit">Heritability</a>
+      <a href="#sel">Selection</a>
+      <a href="#emp">Empirical</a>
+      <a href="#adapt">Adaptation</a>
+      <a href="#coev">Coevol</a>
+      <a href="#sex">Sex</a>
+      <a href="#life">Life Hist</a>
+      <a href="#kin">Kin/ESS</a>
+      <a href="#deep">Deep Time</a>
+      <a href="#date">Dating</a>
+      <a href="#phy">Phylogeny</a>
+      <a href="#spec">Speciation</a>
+      <a href="#bio">Biogeo</a>
+      <a href="#cons">Conserv</a>
+      <a href="#hum">Humans</a>
+      <a href="#med">Medicine</a>
+      <a href="#trap">Traps</a>
+    </nav>
+  </div>
+</div>
+
+<div class="hero">
+  <h1><em>Evolution Final</em> · Visual Cram Sheet</h1>
+  <p class="lead">Every mnemonic, every diagram, every Robbins-trap — organized for a 2-hour walk-in review. Designed to mirror the war-sheet PDF with richer visuals so molecular &amp; conceptual content is memorizable at a glance.</p>
+  <div class="meta">
+    <span>21 sections</span>
+    <span>~25 diagrams</span>
+    <span>L01–L20 cumulative</span>
+    <span>Print-ready (letter portrait)</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- =================================================================== -->
+<!-- SECTION 1 · BIG PICTURE -->
+<!-- =================================================================== -->
+<section id="big" data-topic="mut">
+  <div class="sec-head">
+    <div class="sec-num">01</div>
+    <div class="sec-title">Big Picture · what evolution actually IS</div>
+    <div class="sec-blurb">Selection picks people · Evolution moves the population</div>
+  </div>
+  <div class="grid">
+
+    <div class="card svg-card col-7">
+      <div class="card-label">Diagram · the evolution loop</div>
+      <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four mechanisms feed allele frequency change">
+        <defs><marker id="ar1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 Z" fill="#c89b2e"/></marker></defs>
+        <rect width="720" height="240" fill="#0f1117"/>
+        <text x="360" y="22" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.6" fill="#a59a83">FOUR MECHANISMS · ONLY THINGS THAT CHANGE ALLELE FREQUENCIES</text>
+        <g font-family="Fraunces" font-size="13" fill="#e6dfd0">
+          <rect x="40" y="55" width="140" height="80" fill="#181b22" stroke="#c89b2e" stroke-width="1.4" rx="6"/>
+          <text x="110" y="80" text-anchor="middle" font-style="italic" fill="#c89b2e">Mutation</text>
+          <text x="110" y="100" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">ONLY source of</text>
+          <text x="110" y="115" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">NEW variation</text>
+
+          <rect x="200" y="55" width="140" height="80" fill="#181b22" stroke="#7a8fa8" stroke-width="1.4" rx="6"/>
+          <text x="270" y="80" text-anchor="middle" font-style="italic" fill="#7a8fa8">Drift</text>
+          <text x="270" y="100" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">random sampling</text>
+          <text x="270" y="115" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">strongest in small N</text>
+
+          <rect x="360" y="55" width="140" height="80" fill="#181b22" stroke="#5fa871" stroke-width="1.4" rx="6"/>
+          <text x="430" y="80" text-anchor="middle" font-style="italic" fill="#5fa871">Gene flow</text>
+          <text x="430" y="100" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">migration between</text>
+          <text x="430" y="115" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">populations</text>
+
+          <rect x="520" y="55" width="160" height="80" fill="#181b22" stroke="#c86462" stroke-width="1.4" rx="6"/>
+          <text x="600" y="80" text-anchor="middle" font-style="italic" fill="#c86462">Natural selection</text>
+          <text x="600" y="100" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">non-random survival</text>
+          <text x="600" y="115" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">+ reproduction</text>
+        </g>
+        <path d="M 360 155 L 360 175" stroke="#c89b2e" stroke-width="1.2" marker-end="url(#ar1)"/>
+        <rect x="190" y="180" width="340" height="42" fill="#241c0d" stroke="#c89b2e" stroke-width="1" rx="4"/>
+        <text x="360" y="200" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#f1d278">Δ allele frequency</text>
+        <text x="360" y="216" text-anchor="middle" font-family="Inter" font-size="10.5" fill="#a59a83">= EVOLUTION (allele freq change &gt; 1 generation)</text>
+      </svg>
+      <div class="svg-cap">"Mutation Makes, Selection Sorts, Drift Drifts, Flow Flows."</div>
+    </div>
+
+    <div class="card col-5">
+      <div class="card-label">Background · what counts as evolution</div>
+      <div class="card-body">
+        <p><b>Selection</b> acts on <b>individuals</b> (one organism survives or breeds). <b>Evolution</b> happens to the <b>population</b> (allele frequencies shift between generations). Selection without heritability ≠ evolution.</p>
+      </div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"V-H-D-F: Variation, Heritable, Differential, Fitness"</span><span class="gloss">Darwin's 4 NS requirements. Miss any → no evolution.</span></div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Selection picks PEOPLE; Evolution moves the POPULATION"</span></div>
+      <div class="card-body" style="margin-top:4px">
+        <b>Theory</b> ≠ guess. Theory of Evolution sits beside Theory of Gravity — a tested-to-death framework.
+        <br>— Dobzhansky 1973: "<i>Nothing in biology makes sense except in the light of evolution.</i>"
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 2 · PRE-DARWINIAN HISTORY -->
+<!-- =================================================================== -->
+<section id="hist" data-topic="deep">
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <div class="sec-title">Pre-Darwinian History · who set the stage</div>
+    <div class="sec-blurb">Hutton-Lyell-Smith-Cuvier-Lamarck-Malthus → Darwin/Wallace 1858</div>
+  </div>
+  <div class="grid">
+
+    <div class="card svg-card col-12">
+      <div class="card-label">Diagram · timeline of ideas Darwin needed</div>
+      <svg viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pre-Darwinian thinkers timeline">
+        <rect width="1200" height="220" fill="#0f1117"/>
+        <text x="600" y="22" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.6" fill="#a59a83">TIMELINE · 1788 → 1859 · IDEAS DARWIN STITCHED TOGETHER</text>
+        <line x1="60" y1="140" x2="1140" y2="140" stroke="#6b6353" stroke-width="1.2"/>
+        <g font-family="Fraunces" font-style="italic" font-size="12" fill="#e6dfd0" text-anchor="middle">
+          <circle cx="100" cy="140" r="6" fill="#7a8fa8"/><text x="100" y="172" font-family="Inter" font-style="normal" font-size="10" fill="#a59a83">1788</text><text x="100" y="100">Hutton</text><text x="100" y="116" font-family="Inter" font-style="normal" font-size="9" fill="#a59a83">deep time</text>
+          <circle cx="240" cy="140" r="6" fill="#7a8fa8"/><text x="240" y="172" font-family="Inter" font-style="normal" font-size="10" fill="#a59a83">1809</text><text x="240" y="100">Lamarck</text><text x="240" y="116" font-family="Inter" font-style="normal" font-size="9" fill="#a59a83">acquired traits ✗</text>
+          <circle cx="380" cy="140" r="6" fill="#7a8fa8"/><text x="380" y="172" font-family="Inter" font-style="normal" font-size="10" fill="#a59a83">1815</text><text x="380" y="100">W. Smith</text><text x="380" y="116" font-family="Inter" font-style="normal" font-size="9" fill="#a59a83">stratigraphy</text>
+          <circle cx="520" cy="140" r="6" fill="#7a8fa8"/><text x="520" y="172" font-family="Inter" font-style="normal" font-size="10" fill="#a59a83">1820s</text><text x="520" y="100">Cuvier</text><text x="520" y="116" font-family="Inter" font-style="normal" font-size="9" fill="#a59a83">extinction real</text>
+          <circle cx="660" cy="140" r="6" fill="#7a8fa8"/><text x="660" y="172" font-family="Inter" font-style="normal" font-size="10" fill="#a59a83">1830</text><text x="660" y="100">Lyell</text><text x="660" y="116" font-family="Inter" font-style="normal" font-size="9" fill="#a59a83">uniformitarianism</text>
+          <circle cx="800" cy="140" r="6" fill="#7a8fa8"/><text x="800" y="172" font-family="Inter" font-style="normal" font-size="10" fill="#a59a83">1838</text><text x="800" y="100">Malthus</text><text x="800" y="116" font-family="Inter" font-style="normal" font-size="9" fill="#a59a83">pop pressure</text>
+          <circle cx="960" cy="140" r="9" fill="#c89b2e"/><text x="960" y="172" font-family="Inter" font-style="normal" font-size="10" fill="#c89b2e">1858</text><text x="960" y="100" fill="#c89b2e">Darwin/Wallace</text><text x="960" y="116" font-family="Inter" font-style="normal" font-size="9" fill="#c89b2e">Linnean Society</text>
+          <circle cx="1100" cy="140" r="9" fill="#c89b2e"/><text x="1100" y="172" font-family="Inter" font-style="normal" font-size="10" fill="#c89b2e">1859</text><text x="1100" y="100" fill="#c89b2e">Origin</text><text x="1100" y="116" font-family="Inter" font-style="normal" font-size="9" fill="#c89b2e">published</text>
+        </g>
+        <text x="600" y="208" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#5fa871">Deep time + extinction + struggle for existence = the canvas Darwin needed.</text>
+      </svg>
+      <div class="svg-cap">Wallace's identical theory (Malay Archipelago, 1858) forced Darwin to publish.</div>
+    </div>
+
+    <div class="card col-4">
+      <div class="card-label">Each thinker · what they contributed</div>
+      <div class="card-body">
+        <ul>
+          <li><b>Hutton/Lyell</b> — uniformitarianism, deep time</li>
+          <li><b>Smith</b> — stratigraphy, index fossils</li>
+          <li><b>Cuvier</b> — confirmed extinction</li>
+          <li><b>Lamarck</b> — wrong mechanism, RIGHT that species change</li>
+          <li><b>Malthus</b> — populations breed faster than food → struggle</li>
+          <li><b>Darwin/Wallace 1858</b> — joint paper</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card col-4">
+      <div class="card-label">Key mnemonics</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Malthus made Darwin Mean"</span><span class="gloss">Darwin read Malthus 1838 → realized struggle for existence is universal.</span></div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Lamarck = Limbs from Lifting + Legacy"</span><span class="gloss">Use &amp; disuse + inheritance of acquired traits. Both wrong. Don't confuse with right-that-species-change.</span></div>
+    </div>
+
+    <div class="card col-4">
+      <div class="card-label">Trap</div>
+      <div class="trap"><span class="lbl">⚠ Common Trap</span><b>Lamarck</b> was <b>wrong about mechanism</b> (acquired traits don't inherit) but <b>right that species change</b>. Robbins penalizes "Lamarck was wrong about everything."</div>
+      <div class="emp" style="margin-top:8px"><span class="lbl">📜 Wallace</span>Sent Darwin his identical theory from Malay Archipelago 1858. <b>Joint paper</b> at Linnean Society — no priority dispute.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 3 · GENOME & MUTATION -->
+<!-- =================================================================== -->
+<section id="mut" data-topic="mut">
+  <div class="sec-head">
+    <div class="sec-num">03</div>
+    <div class="sec-title">Genome &amp; Mutation · the molecular fuel</div>
+    <div class="sec-blurb">Mutation = ONLY source of new variation · Cis-regulatory drives morphology</div>
+  </div>
+  <div class="grid">
+
+    <!-- TRANSITION vs TRANSVERSION DIAGRAM -->
+    <div class="card svg-card col-6">
+      <div class="card-label">Diagram · base swap geometry</div>
+      <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Transition vs transversion mutations">
+        <rect width="720" height="320" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">TRANSITION vs TRANSVERSION · BASE GEOMETRY</text>
+
+        <!-- Purines column -->
+        <text x="180" y="55" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#c89b2e">PURINES — double-ring, BIG</text>
+        <g transform="translate(110,70)">
+          <ellipse cx="30" cy="22" rx="26" ry="20" fill="#241c0d" stroke="#c89b2e" stroke-width="1.5"/>
+          <ellipse cx="55" cy="22" rx="20" ry="16" fill="#241c0d" stroke="#c89b2e" stroke-width="1.5"/>
+          <text x="40" y="27" text-anchor="middle" font-family="Fraunces" font-size="20" font-weight="700" fill="#f1d278">A</text>
+          <text x="40" y="60" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">Adenine</text>
+        </g>
+        <g transform="translate(190,70)">
+          <ellipse cx="30" cy="22" rx="26" ry="20" fill="#241c0d" stroke="#c89b2e" stroke-width="1.5"/>
+          <ellipse cx="55" cy="22" rx="20" ry="16" fill="#241c0d" stroke="#c89b2e" stroke-width="1.5"/>
+          <text x="40" y="27" text-anchor="middle" font-family="Fraunces" font-size="20" font-weight="700" fill="#f1d278">G</text>
+          <text x="40" y="60" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">Guanine</text>
+        </g>
+
+        <!-- Pyrimidines column -->
+        <text x="540" y="55" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#7a8fa8">PYRIMIDINES — single-ring, small</text>
+        <g transform="translate(470,70)">
+          <ellipse cx="40" cy="22" rx="22" ry="17" fill="#0f1f2e" stroke="#7a8fa8" stroke-width="1.5"/>
+          <text x="40" y="27" text-anchor="middle" font-family="Fraunces" font-size="20" font-weight="700" fill="#a8c5e0">C</text>
+          <text x="40" y="60" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">Cytosine</text>
+        </g>
+        <g transform="translate(560,70)">
+          <ellipse cx="40" cy="22" rx="22" ry="17" fill="#0f1f2e" stroke="#7a8fa8" stroke-width="1.5"/>
+          <text x="40" y="27" text-anchor="middle" font-family="Fraunces" font-size="20" font-weight="700" fill="#a8c5e0">T</text>
+          <text x="40" y="60" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">Thymine</text>
+        </g>
+
+        <!-- Transition arrows (within type) -->
+        <defs>
+          <marker id="arT" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 Z" fill="#5fa871"/></marker>
+          <marker id="arV" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 Z" fill="#c86462"/></marker>
+        </defs>
+        <path d="M 180 92 Q 180 110 240 92" stroke="#5fa871" stroke-width="2" fill="none" marker-end="url(#arT)"/>
+        <path d="M 240 92 Q 240 110 180 92" stroke="#5fa871" stroke-width="2" fill="none" marker-end="url(#arT)"/>
+        <text x="210" y="155" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#5fa871">TRANSITION (A↔G)</text>
+
+        <path d="M 540 92 Q 540 110 600 92" stroke="#5fa871" stroke-width="2" fill="none" marker-end="url(#arT)"/>
+        <path d="M 600 92 Q 600 110 540 92" stroke="#5fa871" stroke-width="2" fill="none" marker-end="url(#arT)"/>
+        <text x="570" y="155" text-anchor="middle" font-family="Inter" font-size="10" font-weight="600" fill="#5fa871">TRANSITION (C↔T)</text>
+
+        <!-- Transversion arrows (cross type) -->
+        <path d="M 195 105 L 510 105" stroke="#c86462" stroke-width="2" stroke-dasharray="4 3" fill="none" marker-end="url(#arV)"/>
+        <path d="M 510 110 L 195 110" stroke="#c86462" stroke-width="2" stroke-dasharray="4 3" fill="none" marker-end="url(#arV)"/>
+
+        <text x="360" y="200" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#c86462">TRANSVERSION (purine ↔ pyrimidine) — rarer, bigger structural impact</text>
+
+        <rect x="80" y="220" width="560" height="80" fill="#0c0e12" stroke="#22262f" stroke-width="1" rx="4"/>
+        <text x="360" y="245" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#5fa871">TRANSITIONS — same shape category, swap is geometrically tolerable</text>
+        <text x="360" y="265" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#c86462">TRANSVERSIONS — shape category flips, helix geometry disrupted</text>
+        <text x="360" y="290" text-anchor="middle" font-family="Inter" font-size="11" fill="#c89b2e" font-weight="600">"Transitions Trade Twins · Transversions Twist Types"</text>
+      </svg>
+      <div class="svg-cap">A↔G and C↔T are transitions (within-class). Anything else is a transversion (cross-class).</div>
+    </div>
+
+    <!-- MUTATION OUTCOMES DIAGRAM -->
+    <div class="card svg-card col-6">
+      <div class="card-label">Diagram · functional outcomes (codon → protein)</div>
+      <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Synonymous, missense, nonsense, frameshift mutation outcomes">
+        <rect width="720" height="320" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">MUTATION OUTCOMES · LEAST → MOST DISRUPTIVE</text>
+
+        <!-- Reference -->
+        <text x="20" y="55" font-family="Inter" font-size="10" font-weight="600" fill="#a59a83">REFERENCE</text>
+        <g font-family="JetBrains Mono" font-size="13">
+          <text x="20" y="75" fill="#e6dfd0">ATG · CAT · GCC · GTA · TAA</text>
+          <text x="20" y="92" fill="#a59a83" font-size="10">Met &nbsp; · His &nbsp;· Ala&nbsp; · Val&nbsp; · STOP</text>
+        </g>
+
+        <!-- 4 outcomes -->
+        <g font-family="JetBrains Mono" font-size="12">
+          <!-- Synonymous -->
+          <rect x="20" y="110" width="330" height="40" fill="#1a2a1e" stroke="#5fa871" stroke-width="1" rx="3"/>
+          <text x="30" y="125" font-family="Inter" font-size="10" font-weight="700" fill="#5fa871">SYNONYMOUS</text>
+          <text x="30" y="143" fill="#e6dfd0">ATG·CAT·GCC·GT<tspan fill="#5fa871" font-weight="700">G</tspan>·TAA</text>
+          <text x="240" y="143" font-family="Inter" font-size="10" fill="#5fa871">→ still Val (silent)</text>
+
+          <!-- Missense -->
+          <rect x="20" y="158" width="330" height="40" fill="#241c0d" stroke="#c89b2e" stroke-width="1" rx="3"/>
+          <text x="30" y="173" font-family="Inter" font-size="10" font-weight="700" fill="#c89b2e">MISSENSE</text>
+          <text x="30" y="191" fill="#e6dfd0">ATG·CAT·G<tspan fill="#c89b2e" font-weight="700">A</tspan>C·GTA·TAA</text>
+          <text x="240" y="191" font-family="Inter" font-size="10" fill="#c89b2e">→ Ala→Asp</text>
+
+          <!-- Nonsense -->
+          <rect x="370" y="110" width="330" height="40" fill="#2a1616" stroke="#c86462" stroke-width="1" rx="3"/>
+          <text x="380" y="125" font-family="Inter" font-size="10" font-weight="700" fill="#c86462">NONSENSE</text>
+          <text x="380" y="143" fill="#e6dfd0">ATG·<tspan fill="#c86462" font-weight="700">TAG</tspan>·GCC·GTA·TAA</text>
+          <text x="610" y="143" font-family="Inter" font-size="10" fill="#c86462">→ early STOP</text>
+
+          <!-- Frameshift -->
+          <rect x="370" y="158" width="330" height="40" fill="#2a1616" stroke="#c86462" stroke-width="1.4" rx="3"/>
+          <text x="380" y="173" font-family="Inter" font-size="10" font-weight="700" fill="#c86462">FRAMESHIFT</text>
+          <text x="380" y="191" fill="#e6dfd0">ATG·C<tspan fill="#c86462" font-weight="700">+G</tspan>AT·GCC·GTA·TAA</text>
+          <text x="380" y="207" font-family="Inter" font-size="9" fill="#c86462">→ all downstream codons SHIFTED</text>
+        </g>
+
+        <!-- Severity bar -->
+        <text x="20" y="240" font-family="Inter" font-size="10" font-weight="600" fill="#a59a83">SEVERITY</text>
+        <rect x="20" y="248" width="660" height="14" fill="#0c0e12" stroke="#22262f"/>
+        <linearGradient id="sevGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#5fa871"/>
+          <stop offset="33%" stop-color="#c89b2e"/>
+          <stop offset="66%" stop-color="#c86462"/>
+          <stop offset="100%" stop-color="#7a1a1a"/>
+        </linearGradient>
+        <rect x="20" y="248" width="660" height="14" fill="url(#sevGrad)" opacity="0.85"/>
+        <g font-family="Inter" font-size="9" fill="#e6dfd0" text-anchor="middle">
+          <text x="100" y="278">silent</text>
+          <text x="280" y="278">missense</text>
+          <text x="450" y="278">nonsense</text>
+          <text x="620" y="278">frameshift</text>
+        </g>
+
+        <text x="360" y="305" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#c89b2e">"Synonymous Silent · Missense Modifies · Nonsense Knocks-out · Frameshift Fries"</text>
+      </svg>
+      <div class="svg-cap">Insertions/deletions not divisible by 3 = frameshift (worst). Single substitutions span the rest.</div>
+    </div>
+
+    <!-- CIS-REGULATORY: STICKLEBACK Pitx1 -->
+    <div class="card svg-card col-7">
+      <div class="card-label">Diagram · cis-regulatory evolution · Stickleback Pitx1</div>
+      <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stickleback Pitx1 cis-regulatory evolution">
+        <rect width="720" height="280" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">CIS-REGULATORY EVOLUTION · SAME GENE, DIFFERENT EXPRESSION</text>
+
+        <!-- Ocean fish (with spine) -->
+        <g transform="translate(60,55)">
+          <text x="115" y="0" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#7a8fa8">OCEAN STICKLEBACK</text>
+          <!-- fish body -->
+          <path d="M 20 50 Q 30 30 80 30 Q 160 30 200 50 Q 220 60 200 70 Q 160 90 80 90 Q 30 90 20 70 Z" fill="#1a2a3a" stroke="#7a8fa8" stroke-width="1.5"/>
+          <circle cx="180" cy="55" r="3" fill="#0f1117"/>
+          <path d="M 200 50 L 230 35 L 230 65 Z" fill="#1a2a3a" stroke="#7a8fa8" stroke-width="1.5"/>
+          <!-- pelvic spine (PRESENT) -->
+          <line x1="120" y1="90" x2="120" y2="115" stroke="#c89b2e" stroke-width="3"/>
+          <circle cx="120" cy="118" r="3" fill="#c89b2e"/>
+          <text x="135" y="115" font-family="Inter" font-size="9" fill="#c89b2e">pelvic spine</text>
+        </g>
+
+        <!-- Freshwater fish (no spine) -->
+        <g transform="translate(440,55)">
+          <text x="115" y="0" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#5fa871">LAKE STICKLEBACK</text>
+          <path d="M 20 50 Q 30 30 80 30 Q 160 30 200 50 Q 220 60 200 70 Q 160 90 80 90 Q 30 90 20 70 Z" fill="#1a2e22" stroke="#5fa871" stroke-width="1.5"/>
+          <circle cx="180" cy="55" r="3" fill="#0f1117"/>
+          <path d="M 200 50 L 230 35 L 230 65 Z" fill="#1a2e22" stroke="#5fa871" stroke-width="1.5"/>
+          <!-- no spine -->
+          <text x="120" y="108" text-anchor="middle" font-family="Inter" font-size="9" fill="#5fa871">no spine</text>
+          <text x="120" y="120" text-anchor="middle" font-family="Inter" font-size="8" fill="#a59a83">(freshwater = fewer predators,</text>
+          <text x="120" y="130" text-anchor="middle" font-family="Inter" font-size="8" fill="#a59a83">spine cost &gt; benefit)</text>
+        </g>
+
+        <!-- DNA tracks -->
+        <text x="20" y="180" font-family="Inter" font-size="10" font-weight="600" fill="#a59a83">DNA · Pitx1 LOCUS — same coding sequence in BOTH</text>
+        <g transform="translate(20,190)">
+          <!-- Ocean track -->
+          <text x="0" y="12" font-family="Inter" font-size="9" fill="#7a8fa8">OCEAN</text>
+          <rect x="55" y="0" width="80" height="16" fill="#5fa871" rx="2"/><text x="95" y="12" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12" font-weight="700">enhancer ✓</text>
+          <line x1="135" y1="8" x2="155" y2="8" stroke="#a59a83" stroke-width="1.5"/>
+          <rect x="155" y="0" width="120" height="16" fill="#c89b2e" rx="2"/><text x="215" y="12" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12" font-weight="700">Pitx1 coding</text>
+          <text x="290" y="12" font-family="Inter" font-size="9" fill="#5fa871">→ expressed in pelvis</text>
+
+          <!-- Lake track -->
+          <text x="0" y="42" font-family="Inter" font-size="9" fill="#5fa871">LAKE</text>
+          <rect x="55" y="30" width="80" height="16" fill="#7a1a1a" rx="2"/><text x="95" y="42" text-anchor="middle" font-family="Inter" font-size="9" fill="#e6dfd0" font-weight="700">enhancer ✗ deleted</text>
+          <line x1="135" y1="38" x2="155" y2="38" stroke="#a59a83" stroke-width="1.5"/>
+          <rect x="155" y="30" width="120" height="16" fill="#c89b2e" rx="2"/><text x="215" y="42" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12" font-weight="700">Pitx1 coding</text>
+          <text x="290" y="42" font-family="Inter" font-size="9" fill="#c86462">→ NOT expressed in pelvis</text>
+        </g>
+
+        <text x="360" y="265" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#c89b2e">Same protein. Different ENHANCER. Morphology evolves without changing the coding sequence.</text>
+      </svg>
+      <div class="svg-cap">"Cis-Regulatory Changes Make the Beast." Most morphological evolution = regulatory, not protein.</div>
+    </div>
+
+    <div class="card col-5">
+      <div class="card-label">Background · the human genome</div>
+      <div class="card-body">
+        <p>Of ~3 billion bases: <b>~2% codes for proteins</b>; <b>~98% is noncoding</b> (regulatory, structural, formerly "junk"). Most morphological differences between species sit in the <b>regulatory 98%</b>.</p>
+      </div>
+      <table>
+        <tr><th>Mutation</th><th>What changes</th></tr>
+        <tr><td><b>Point</b></td><td>single base swap</td></tr>
+        <tr><td><b>Indel</b></td><td>insertion / deletion</td></tr>
+        <tr><td><b>Transition</b></td><td>purine↔purine OR pyrimidine↔pyrimidine — common</td></tr>
+        <tr><td><b>Transversion</b></td><td>purine↔pyrimidine — rarer, larger impact</td></tr>
+      </table>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Cis-Regulatory Changes Make the Beast"</span><span class="gloss">Most morphological evolution = REGULATORY, not coding-sequence change.</span></div>
+      <div class="emp"><span class="lbl">🔬 Stickleback Pitx1</span>Pelvic-spine loss in freshwater lakes — <b>regulatory</b> change in <i>Pitx1</i> (enhancer deletion). Same protein, different deployment.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 4 · HARDY-WEINBERG -->
+<!-- =================================================================== -->
+<section id="hwe" data-topic="pop">
+  <div class="sec-head">
+    <div class="sec-num">04</div>
+    <div class="sec-title">Hardy-Weinberg · the null model</div>
+    <div class="sec-blurb">5 conditions hold → frequencies stay flat · break ANY → evolution</div>
+  </div>
+  <div class="grid">
+
+    <div class="card svg-card col-7">
+      <div class="card-label">Diagram · population-level Punnett</div>
+      <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hardy-Weinberg population Punnett square">
+        <rect width="720" height="280" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">HARDY-WEINBERG · GAMETES → ZYGOTES</text>
+
+        <!-- Sperm row -->
+        <text x="200" y="60" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#a59a83">SPERM ↓</text>
+        <rect x="270" y="42" width="140" height="30" fill="#241c0d" stroke="#c89b2e" rx="3"/>
+        <text x="340" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#f1d278" font-weight="700">A (p)</text>
+        <rect x="420" y="42" width="140" height="30" fill="#0f1f2e" stroke="#7a8fa8" rx="3"/>
+        <text x="490" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#a8c5e0" font-weight="700">a (q)</text>
+
+        <!-- Egg column -->
+        <text x="135" y="135" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#a59a83">EGG →</text>
+        <rect x="200" y="80" width="60" height="80" fill="#241c0d" stroke="#c89b2e" rx="3"/>
+        <text x="230" y="125" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#f1d278" font-weight="700">A (p)</text>
+        <rect x="200" y="170" width="60" height="80" fill="#0f1f2e" stroke="#7a8fa8" rx="3"/>
+        <text x="230" y="215" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#a8c5e0" font-weight="700">a (q)</text>
+
+        <!-- Squares -->
+        <rect x="270" y="80" width="140" height="80" fill="#1a2a1e" stroke="#5fa871" stroke-width="1.5" rx="3"/>
+        <text x="340" y="115" text-anchor="middle" font-family="Fraunces" font-size="20" fill="#5fa871" font-weight="700">AA</text>
+        <text x="340" y="138" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#e6dfd0">p²</text>
+
+        <rect x="420" y="80" width="140" height="80" fill="#241c0d" stroke="#c89b2e" stroke-width="1.5" rx="3"/>
+        <text x="490" y="115" text-anchor="middle" font-family="Fraunces" font-size="20" fill="#c89b2e" font-weight="700">Aa</text>
+        <text x="490" y="138" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#e6dfd0">pq</text>
+
+        <rect x="270" y="170" width="140" height="80" fill="#241c0d" stroke="#c89b2e" stroke-width="1.5" rx="3"/>
+        <text x="340" y="205" text-anchor="middle" font-family="Fraunces" font-size="20" fill="#c89b2e" font-weight="700">Aa</text>
+        <text x="340" y="228" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#e6dfd0">pq</text>
+
+        <rect x="420" y="170" width="140" height="80" fill="#2a1616" stroke="#c86462" stroke-width="1.5" rx="3"/>
+        <text x="490" y="205" text-anchor="middle" font-family="Fraunces" font-size="20" fill="#c86462" font-weight="700">aa</text>
+        <text x="490" y="228" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#e6dfd0">q²</text>
+
+        <!-- Sum -->
+        <text x="640" y="135" text-anchor="middle" font-family="Fraunces" font-size="14" font-style="italic" fill="#c89b2e">∑ = 1</text>
+        <text x="640" y="155" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#e6dfd0">p² + 2pq + q²</text>
+      </svg>
+      <div class="svg-cap">2pq counts BOTH heterozygote squares — that's where the "2" comes from.</div>
+    </div>
+
+    <div class="card col-5">
+      <div class="card-label">Equations · memorize cold</div>
+      <div class="eq">p + q = 1</div>
+      <div class="eq">p² + 2pq + q² = 1</div>
+      <div class="eq">2pq = HETEROZYGOTES</div>
+      <div class="trap" style="margin-top:6px"><span class="lbl">⚠ Trap</span><b>"2pq = homozygote"</b> → WRONG. 2pq is the HETEROZYGOTE frequency.</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"MMSRI"</span><span class="gloss">Mutation off · Migration off · Selection off · Random mating · Infinite N. Break ANY → evolution.</span></div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Math drill · steps not numbers</div>
+      <div class="card-body">
+        <ol style="margin-left:18px">
+          <li>Disease frequency = q²</li>
+          <li>√(q²) = q</li>
+          <li>p = 1 − q</li>
+          <li>Carrier frequency = 2pq</li>
+        </ol>
+      </div>
+      <div class="emp"><span class="lbl">🔬 Worked</span>Disease at 1/10,000 → q² = 0.0001 → <b>q = 0.01</b> → p ≈ 0.99 → <b>2pq ≈ 0.02</b> = 1 in 50 are carriers.</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">HWE deviation → diagnose mechanism</div>
+      <table>
+        <tr><th>Pattern</th><th>Mechanism</th></tr>
+        <tr><td>Heterozygote DEFICIT</td><td>Inbreeding / assortative mating</td></tr>
+        <tr><td>Heterozygote EXCESS</td><td><b>Heterozygote advantage</b> (sickle)</td></tr>
+        <tr><td>Allele freq differs by region</td><td>Selection or drift</td></tr>
+        <tr><td>Small isolated village shifts</td><td><b>Drift</b></td></tr>
+        <tr><td>Allele freq matches mainland</td><td><b>Gene flow</b></td></tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 5 · HERITABILITY & BREEDER'S -->
+<!-- =================================================================== -->
+<section id="herit" data-topic="pop">
+  <div class="sec-head">
+    <div class="sec-num">05</div>
+    <div class="sec-title">Heritability &amp; Breeder's Equation</div>
+    <div class="sec-blurb">Big H is whole-genetic · small h is additive-only · only h² predicts response</div>
+  </div>
+  <div class="grid">
+
+    <div class="card svg-card col-6">
+      <div class="card-label">Diagram · phenotypic variance decomposition</div>
+      <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Phenotypic variance decomposition">
+        <rect width="720" height="320" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">VARIANCE DECOMPOSITION · NESTED CIRCLES</text>
+
+        <!-- VP outer -->
+        <ellipse cx="360" cy="180" rx="320" ry="125" fill="none" stroke="#a59a83" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <text x="360" y="60" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="16" fill="#e6dfd0">V<tspan font-size="11" baseline-shift="sub">P</tspan> · phenotypic variance (everything observed)</text>
+
+        <!-- VG -->
+        <ellipse cx="240" cy="200" rx="170" ry="80" fill="#241c0d" fill-opacity="0.6" stroke="#c89b2e" stroke-width="1.5"/>
+        <text x="240" y="135" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#c89b2e">V<tspan font-size="10" baseline-shift="sub">G</tspan> · genetic</text>
+
+        <!-- VG sub-pieces -->
+        <ellipse cx="170" cy="200" rx="55" ry="40" fill="#1a2a1e" stroke="#5fa871" stroke-width="1.2"/>
+        <text x="170" y="195" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="12" fill="#5fa871">V<tspan font-size="9" baseline-shift="sub">A</tspan></text>
+        <text x="170" y="215" text-anchor="middle" font-family="Inter" font-size="9" fill="#e6dfd0">additive</text>
+
+        <ellipse cx="240" cy="220" rx="40" ry="30" fill="#1a1f2a" stroke="#7a8fa8" stroke-width="1.2"/>
+        <text x="240" y="220" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="11" fill="#7a8fa8">V<tspan font-size="9" baseline-shift="sub">D</tspan></text>
+        <text x="240" y="235" text-anchor="middle" font-family="Inter" font-size="8" fill="#a59a83">dominance</text>
+
+        <ellipse cx="310" cy="200" rx="40" ry="30" fill="#2a1c1a" stroke="#b96ea0" stroke-width="1.2"/>
+        <text x="310" y="200" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="11" fill="#b96ea0">V<tspan font-size="9" baseline-shift="sub">I</tspan></text>
+        <text x="310" y="215" text-anchor="middle" font-family="Inter" font-size="8" fill="#a59a83">epistasis</text>
+
+        <!-- VE -->
+        <ellipse cx="500" cy="200" rx="130" ry="70" fill="#0f1f2e" fill-opacity="0.6" stroke="#7a8fa8" stroke-width="1.5"/>
+        <text x="500" y="180" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#7a8fa8">V<tspan font-size="10" baseline-shift="sub">E</tspan> · environment</text>
+        <text x="500" y="220" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">+ V<tspan font-size="8" baseline-shift="sub">G×E</tspan> interaction</text>
+
+        <!-- Equations -->
+        <g transform="translate(360,275)">
+          <text x="-100" y="0" font-family="JetBrains Mono" font-size="13" fill="#c89b2e" font-weight="700">H² = V_G / V_P</text>
+          <text x="100" y="0" font-family="JetBrains Mono" font-size="13" fill="#5fa871" font-weight="700">h² = V_A / V_P</text>
+          <text x="0" y="20" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="11" fill="#a59a83">Big H = WHOLE-genetic · small h = ADDITIVE-only</text>
+        </g>
+      </svg>
+      <div class="svg-cap warn">Only h² (narrow / additive) predicts response to selection. Big H does NOT.</div>
+    </div>
+
+    <div class="card svg-card col-6">
+      <div class="card-label">Diagram · breeder's equation R = h²S</div>
+      <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Breeder's equation visual">
+        <rect width="720" height="320" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">BREEDER'S EQUATION · R = h² × S</text>
+
+        <!-- Bell 1: parental population -->
+        <g transform="translate(0,0)">
+          <text x="180" y="55" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#a59a83">parental population</text>
+          <line x1="40" y1="200" x2="320" y2="200" stroke="#6b6353" stroke-width="1"/>
+          <path d="M 50 200 Q 180 60 310 200 Z" fill="#241c0d" stroke="#c89b2e" stroke-width="1.5" opacity="0.7"/>
+          <line x1="180" y1="80" x2="180" y2="200" stroke="#a59a83" stroke-width="1" stroke-dasharray="3 2"/>
+          <text x="180" y="220" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">mean μ</text>
+
+          <!-- Selection cutoff -->
+          <line x1="240" y1="80" x2="240" y2="200" stroke="#c86462" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <path d="M 240 200 Q 270 130 310 200 Z" fill="#5fa871" stroke="#5fa871" stroke-width="1" opacity="0.6"/>
+          <text x="275" y="240" text-anchor="middle" font-family="Inter" font-size="10" fill="#5fa871">parents who BREED</text>
+
+          <!-- S arrow -->
+          <path d="M 180 100 L 240 100" stroke="#c86462" stroke-width="1.5" marker-end="url(#arrS)"/>
+          <text x="210" y="93" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#c86462">S</text>
+          <text x="210" y="265" text-anchor="middle" font-family="Inter" font-size="9" fill="#c86462">selection differential</text>
+        </g>
+
+        <!-- Bell 2: offspring -->
+        <g transform="translate(360,0)">
+          <text x="180" y="55" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#a59a83">offspring response</text>
+          <line x1="40" y1="200" x2="320" y2="200" stroke="#6b6353" stroke-width="1"/>
+          <path d="M 50 200 Q 180 60 310 200 Z" fill="#a59a83" stroke="#6b6353" stroke-width="1" opacity="0.3"/>
+          <path d="M 70 200 Q 200 60 330 200 Z" fill="#1a2a1e" stroke="#5fa871" stroke-width="1.5" opacity="0.85"/>
+          <line x1="180" y1="100" x2="180" y2="200" stroke="#a59a83" stroke-width="1" stroke-dasharray="3 2"/>
+          <line x1="200" y1="80" x2="200" y2="200" stroke="#5fa871" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <path d="M 180 110 L 200 110" stroke="#5fa871" stroke-width="1.5" marker-end="url(#arrR)"/>
+          <text x="190" y="103" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#5fa871">R</text>
+          <text x="190" y="265" text-anchor="middle" font-family="Inter" font-size="9" fill="#5fa871">response (μ shift)</text>
+        </g>
+
+        <defs>
+          <marker id="arrS" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#c86462"/></marker>
+          <marker id="arrR" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#5fa871"/></marker>
+        </defs>
+
+        <text x="360" y="295" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#c89b2e" font-weight="700">R = h² × S</text>
+        <text x="360" y="312" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">"S = how hard you SHOVE · R = how far it ROLLS · h² = how STICKY the floor is"</text>
+      </svg>
+      <div class="svg-cap">Realized h² = R/S. Calculated AFTER an experiment by inverting the equation.</div>
+    </div>
+
+    <div class="card col-12">
+      <div class="card-label">Equations · memorize</div>
+      <div class="grid" style="gap:8px">
+        <div class="eq col-3">V<sub>P</sub> = V<sub>G</sub> + V<sub>E</sub> + V<sub>G×E</sub></div>
+        <div class="eq col-3">V<sub>G</sub> = V<sub>A</sub> + V<sub>D</sub> + V<sub>I</sub></div>
+        <div class="eq col-3">H² = V<sub>G</sub>/V<sub>P</sub> &nbsp; h² = V<sub>A</sub>/V<sub>P</sub></div>
+        <div class="eq col-3">R = h² × S &nbsp; · &nbsp; h² ∈ [0,1]</div>
+      </div>
+      <div class="trap" style="margin-top:8px"><span class="lbl">⚠ Trap</span>"<b>Big H predicts response</b>" → WRONG. Only narrow-sense h² (additive) translates to offspring. Dominance &amp; epistasis don't transmit cleanly.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 6 · MODES OF SELECTION -->
+<!-- =================================================================== -->
+<section id="sel" data-topic="sel">
+  <div class="sec-head">
+    <div class="sec-num">06</div>
+    <div class="sec-title">Three Modes of Selection + Frequency-Dependent</div>
+    <div class="sec-blurb">Stabilizing squeezes · Directional drives · Disruptive divides</div>
+  </div>
+  <div class="grid">
+
+    <div class="card svg-card col-12">
+      <div class="card-label">Diagram · the 3 classic modes</div>
+      <svg viewBox="0 0 1200 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three modes of selection bell curves">
+        <rect width="1200" height="240" fill="#0f1117"/>
+        <text x="600" y="22" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">DISTRIBUTIONS BEFORE → AFTER SELECTION</text>
+
+        <!-- Stabilizing -->
+        <g transform="translate(0,0)">
+          <text x="200" y="55" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="16" fill="#5fa871" font-weight="600">STABILIZING</text>
+          <text x="200" y="72" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">middle wins · ↓ variance</text>
+          <line x1="60" y1="190" x2="340" y2="190" stroke="#6b6353" stroke-width="1"/>
+          <path d="M 70 190 Q 200 90 330 190 Z" fill="#a59a83" opacity="0.25"/>
+          <path d="M 110 190 Q 200 70 290 190 Z" fill="#5fa871" stroke="#5fa871" stroke-width="1.5" opacity="0.85"/>
+          <text x="200" y="220" text-anchor="middle" font-family="Inter" font-size="10" fill="#5fa871">e.g. human birth weight</text>
+        </g>
+
+        <!-- Directional -->
+        <g transform="translate(400,0)">
+          <text x="200" y="55" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="16" fill="#c86462" font-weight="600">DIRECTIONAL</text>
+          <text x="200" y="72" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">tail wins · mean shifts</text>
+          <line x1="60" y1="190" x2="340" y2="190" stroke="#6b6353" stroke-width="1"/>
+          <path d="M 70 190 Q 180 90 290 190 Z" fill="#a59a83" opacity="0.25"/>
+          <path d="M 130 190 Q 240 90 350 190 Z" fill="#c86462" stroke="#c86462" stroke-width="1.5" opacity="0.85"/>
+          <path d="M 180 100 L 240 100" stroke="#c89b2e" stroke-width="1.5" marker-end="url(#dirArr)"/>
+          <defs><marker id="dirArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#c89b2e"/></marker></defs>
+          <text x="200" y="220" text-anchor="middle" font-family="Inter" font-size="10" fill="#c86462">e.g. Galápagos finch beak depth</text>
+        </g>
+
+        <!-- Disruptive -->
+        <g transform="translate(800,0)">
+          <text x="200" y="55" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="16" fill="#b96ea0" font-weight="600">DISRUPTIVE</text>
+          <text x="200" y="72" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">tails win · ↑ variance</text>
+          <line x1="60" y1="190" x2="340" y2="190" stroke="#6b6353" stroke-width="1"/>
+          <path d="M 70 190 Q 200 90 330 190 Z" fill="#a59a83" opacity="0.25"/>
+          <path d="M 80 190 Q 130 100 180 190 Z" fill="#b96ea0" stroke="#b96ea0" stroke-width="1.5" opacity="0.85"/>
+          <path d="M 220 190 Q 270 100 320 190 Z" fill="#b96ea0" stroke="#b96ea0" stroke-width="1.5" opacity="0.85"/>
+          <text x="200" y="220" text-anchor="middle" font-family="Inter" font-size="10" fill="#b96ea0">e.g. African seed-cracker beaks</text>
+        </g>
+      </svg>
+      <div class="svg-cap">"Stabilizing Squeezes · Directional Drives · Disruptive Divides."</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Frequency-dependent selection</div>
+      <div class="card-body">
+        <p><b>Negative-FD:</b> rare wins → cycles, maintains polymorphism. Examples: side-blotched lizards (orange/blue/yellow rock-paper-scissors), MHC, prey switching.</p>
+        <p><b>Positive-FD:</b> common wins → locks in. Examples: warning coloration, Müllerian mimicry.</p>
+      </div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"HOT-FV = Balancing"</span><span class="gloss"><b>H</b>eterozygote advantage · Negative <b>F</b>requency-dependence · spatial/temporal <b>V</b>ariation. Three sub-types of balancing selection.</span></div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Truncation · the breeder's-equation default</div>
+      <div class="card-body">
+        Artificial selection: pick a cutoff → every individual above the cutoff breeds. Default for breeder's-equation problems unless told otherwise.
+      </div>
+      <div class="emp"><span class="lbl">🔬 Sickle-cell trifecta</span><b>Heterozygote Advantage = Overdominance = Balanced Polymorphism.</b> All synonymous. Robbins switches between them.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 7 · EMPIRICAL CASES -->
+<!-- =================================================================== -->
+<section id="emp" data-topic="sel">
+  <div class="sec-head">
+    <div class="sec-num">07</div>
+    <div class="sec-title">Empirical Cases · evolution caught in the act</div>
+    <div class="sec-blurb">Fast, real, observed</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="emp"><span class="lbl">🔬 Galápagos Finches (Grants)</span><b>"Dry Drives Deep beaks; Wet welcomes Wee."</b> 1977 drought killed shallow-beaked birds → mean beak depth shifted within ONE generation. Directional selection caught live.</div>
+      <div class="emp"><span class="lbl">🔬 Peppered Moths (Kettlewell)</span><b>"Soot Selects Black, Clean returns to Pepper."</b> Industrial melanism — dark form rose with soot, fell when air cleaned.</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="emp"><span class="lbl">🔬 Belyaev Foxes</span><b>"Tame in 50 Generations brings Floppy ears, Spots, Curly tails."</b> Selecting only on tameness pulled along piebald coat, floppy ears, curly tails — pleiotropy of tameness.</div>
+      <div class="emp"><span class="lbl">🔬 Endler Guppies</span><b>"Pretty Pools = Pretty Boys; Predator Pools = Plain Boys."</b> Color evolves up/down in 4–14 generations depending on predator presence.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 8 · ADAPTATION (Hox / Pax6 / eye / Tiktaalik / exaptation) -->
+<!-- =================================================================== -->
+<section id="adapt" data-topic="adapt">
+  <div class="sec-head">
+    <div class="sec-num">08</div>
+    <div class="sec-title">Adaptation · evo-devo + imperfection + exaptation</div>
+    <div class="sec-blurb">Tinkering, not engineering · cis-regulatory + heterochrony do most of the work</div>
+  </div>
+  <div class="grid">
+
+    <!-- HOX COLINEARITY DIAGRAM -->
+    <div class="card svg-card col-7">
+      <div class="card-label">Diagram · Hox colinearity (gene order = body order)</div>
+      <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hox gene colinearity">
+        <rect width="720" height="280" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">HOX COLINEARITY · CHROMOSOME ORDER = BODY ORDER</text>
+
+        <!-- Chromosome -->
+        <text x="40" y="55" font-family="Inter" font-size="10" font-weight="600" fill="#a59a83">CHROMOSOME (5′ → 3′)</text>
+        <rect x="40" y="65" width="640" height="30" fill="#181b22" stroke="#6b6353" rx="3"/>
+        <g font-family="Fraunces" font-style="italic" font-size="12" font-weight="700">
+          <rect x="50" y="68" width="80" height="24" fill="#c86462"/><text x="90" y="84" text-anchor="middle" fill="#fff">Hox 1</text>
+          <rect x="135" y="68" width="80" height="24" fill="#d68a3c"/><text x="175" y="84" text-anchor="middle" fill="#fff">Hox 2</text>
+          <rect x="220" y="68" width="80" height="24" fill="#c89b2e"/><text x="260" y="84" text-anchor="middle" fill="#0c0e12">Hox 3</text>
+          <rect x="305" y="68" width="80" height="24" fill="#5fa871"/><text x="345" y="84" text-anchor="middle" fill="#0c0e12">Hox 4</text>
+          <rect x="390" y="68" width="80" height="24" fill="#5fa8a1"/><text x="430" y="84" text-anchor="middle" fill="#0c0e12">Hox 5</text>
+          <rect x="475" y="68" width="80" height="24" fill="#7a8fa8"/><text x="515" y="84" text-anchor="middle" fill="#0c0e12">Hox 6</text>
+          <rect x="560" y="68" width="80" height="24" fill="#b96ea0"/><text x="600" y="84" text-anchor="middle" fill="#0c0e12">Hox 7</text>
+        </g>
+
+        <!-- Body axis -->
+        <text x="40" y="135" font-family="Inter" font-size="10" font-weight="600" fill="#a59a83">BODY (anterior → posterior)</text>
+        <g transform="translate(50,150)">
+          <rect x="0" y="0" width="80" height="80" fill="#c86462" opacity="0.7"/>
+          <rect x="85" y="0" width="80" height="80" fill="#d68a3c" opacity="0.7"/>
+          <rect x="170" y="0" width="80" height="80" fill="#c89b2e" opacity="0.7"/>
+          <rect x="255" y="0" width="80" height="80" fill="#5fa871" opacity="0.7"/>
+          <rect x="340" y="0" width="80" height="80" fill="#5fa8a1" opacity="0.7"/>
+          <rect x="425" y="0" width="80" height="80" fill="#7a8fa8" opacity="0.7"/>
+          <rect x="510" y="0" width="80" height="80" fill="#b96ea0" opacity="0.7"/>
+          <text x="40" y="40" text-anchor="middle" font-family="Inter" font-size="9" fill="#fff">head</text>
+          <text x="125" y="40" text-anchor="middle" font-family="Inter" font-size="9" fill="#fff">neck</text>
+          <text x="210" y="40" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12">thorax</text>
+          <text x="295" y="40" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12">limb-1</text>
+          <text x="380" y="40" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12">abdomen</text>
+          <text x="465" y="40" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12">hindlimb</text>
+          <text x="550" y="40" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12">tail</text>
+        </g>
+        <text x="360" y="260" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#c89b2e">Antennapedia mutation: Hox gene activated in wrong segment → legs where antennae should be.</text>
+      </svg>
+      <div class="svg-cap">"Hox Colinearity = Chromosome Order = Body Order." Same logic in flies, mice, humans.</div>
+    </div>
+
+    <!-- PAX6 DEEP HOMOLOGY -->
+    <div class="card svg-card col-5">
+      <div class="card-label">Diagram · Pax6 deep homology</div>
+      <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pax6 master gene fly and mouse">
+        <rect width="600" height="300" fill="#0f1117"/>
+        <text x="300" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">PAX6 · ONE MASTER GENE, TWO PHYLA</text>
+
+        <!-- Pax6 in middle -->
+        <rect x="220" y="120" width="160" height="60" fill="#241c0d" stroke="#c89b2e" stroke-width="2" rx="6"/>
+        <text x="300" y="148" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="20" fill="#c89b2e" font-weight="700">Pax6</text>
+        <text x="300" y="168" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83">master regulator</text>
+
+        <!-- Fly (left) -->
+        <g transform="translate(20,50)">
+          <text x="80" y="0" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#5fa871">FRUIT FLY</text>
+          <ellipse cx="80" cy="50" rx="55" ry="30" fill="#1a2e22" stroke="#5fa871"/>
+          <circle cx="60" cy="40" r="12" fill="#0f1117" stroke="#5fa871" stroke-width="1.2"/>
+          <circle cx="100" cy="40" r="12" fill="#0f1117" stroke="#5fa871" stroke-width="1.2"/>
+          <circle cx="60" cy="40" r="6" fill="#c89b2e"/>
+          <circle cx="100" cy="40" r="6" fill="#c89b2e"/>
+          <text x="80" y="100" text-anchor="middle" font-family="Inter" font-size="9" fill="#5fa871">compound eye</text>
+        </g>
+
+        <!-- Mouse (right) -->
+        <g transform="translate(420,50)">
+          <text x="80" y="0" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#7a8fa8">MOUSE</text>
+          <ellipse cx="80" cy="50" rx="55" ry="32" fill="#1a1f2a" stroke="#7a8fa8"/>
+          <circle cx="65" cy="42" r="10" fill="#0f1117" stroke="#7a8fa8" stroke-width="1.2"/>
+          <circle cx="65" cy="42" r="5" fill="#c89b2e"/>
+          <text x="80" y="100" text-anchor="middle" font-family="Inter" font-size="9" fill="#7a8fa8">camera eye</text>
+        </g>
+
+        <!-- Arrows from Pax6 to each eye -->
+        <defs><marker id="paxA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 Z" fill="#c89b2e"/></marker></defs>
+        <path d="M 220 150 Q 170 140 130 105" stroke="#c89b2e" stroke-width="1.5" fill="none" marker-end="url(#paxA)"/>
+        <path d="M 380 150 Q 430 140 470 110" stroke="#c89b2e" stroke-width="1.5" fill="none" marker-end="url(#paxA)"/>
+
+        <text x="300" y="220" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#e6dfd0">Mouse <i>Pax6</i> transplanted into a fly leg → fly grows an EYE there.</text>
+        <text x="300" y="245" text-anchor="middle" font-family="Inter" font-size="11" fill="#5fa871" font-weight="600">→ DEEP HOMOLOGY · same toolkit, last shared 540+ MYA</text>
+        <text x="300" y="280" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#c89b2e">"Pax6 Pops Eyes in flies AND mice."</text>
+      </svg>
+      <div class="svg-cap">Eyes evolved 40+ times independently — but always with Pax6 as the master switch.</div>
+    </div>
+
+    <!-- EYE EVOLUTION (pit→cup→pinhole→camera) -->
+    <div class="card svg-card col-6">
+      <div class="card-label">Diagram · eye evolution refutes "irreducible complexity"</div>
+      <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eye evolution stages">
+        <rect width="720" height="200" fill="#0f1117"/>
+        <text x="360" y="22" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">PIT → CUP → PINHOLE → CAMERA · NILSSON-PELGER ~400K GENERATIONS</text>
+
+        <!-- Stage 1: Patch -->
+        <g transform="translate(50,50)">
+          <circle cx="50" cy="60" r="40" fill="#181b22" stroke="#a59a83"/>
+          <rect x="20" y="55" width="60" height="10" fill="#c89b2e" opacity="0.5"/>
+          <text x="50" y="130" text-anchor="middle" font-family="Inter" font-size="10" fill="#e6dfd0">1 · Patch</text>
+          <text x="50" y="142" text-anchor="middle" font-family="Inter" font-size="8" fill="#a59a83">photoreceptors</text>
+        </g>
+        <!-- Stage 2: Pit -->
+        <g transform="translate(220,50)">
+          <circle cx="50" cy="60" r="40" fill="#181b22" stroke="#a59a83"/>
+          <path d="M 25 60 Q 50 80 75 60" fill="#c89b2e" opacity="0.7"/>
+          <text x="50" y="130" text-anchor="middle" font-family="Inter" font-size="10" fill="#e6dfd0">2 · Cup</text>
+          <text x="50" y="142" text-anchor="middle" font-family="Inter" font-size="8" fill="#a59a83">direction sense</text>
+        </g>
+        <!-- Stage 3: Pinhole -->
+        <g transform="translate(390,50)">
+          <circle cx="50" cy="60" r="40" fill="#181b22" stroke="#a59a83"/>
+          <path d="M 25 35 Q 35 35 40 50 L 60 50 Q 65 35 75 35 L 75 100 L 25 100 Z" fill="#c89b2e" opacity="0.7"/>
+          <circle cx="50" cy="42" r="3" fill="#0f1117"/>
+          <text x="50" y="130" text-anchor="middle" font-family="Inter" font-size="10" fill="#e6dfd0">3 · Pinhole</text>
+          <text x="50" y="142" text-anchor="middle" font-family="Inter" font-size="8" fill="#a59a83">image-form</text>
+        </g>
+        <!-- Stage 4: Camera -->
+        <g transform="translate(560,50)">
+          <circle cx="50" cy="60" r="40" fill="#181b22" stroke="#a59a83"/>
+          <path d="M 25 35 Q 35 35 40 50 L 60 50 Q 65 35 75 35 L 75 100 L 25 100 Z" fill="#c89b2e" opacity="0.6"/>
+          <circle cx="50" cy="42" r="10" fill="#a8c5e0" stroke="#7a8fa8" opacity="0.85"/>
+          <circle cx="50" cy="42" r="4" fill="#0f1117"/>
+          <text x="50" y="130" text-anchor="middle" font-family="Inter" font-size="10" fill="#e6dfd0">4 · Camera</text>
+          <text x="50" y="142" text-anchor="middle" font-family="Inter" font-size="8" fill="#a59a83">lens focuses</text>
+        </g>
+
+        <!-- Arrows -->
+        <defs><marker id="eyeArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#c89b2e"/></marker></defs>
+        <path d="M 165 110 L 215 110" stroke="#c89b2e" stroke-width="1.5" marker-end="url(#eyeArr)"/>
+        <path d="M 335 110 L 385 110" stroke="#c89b2e" stroke-width="1.5" marker-end="url(#eyeArr)"/>
+        <path d="M 505 110 L 555 110" stroke="#c89b2e" stroke-width="1.5" marker-end="url(#eyeArr)"/>
+
+        <text x="360" y="190" text-anchor="middle" font-family="Inter" font-size="11" font-weight="600" fill="#5fa871">Each step is functional and slightly fitter than the last → no "miracle leap" needed.</text>
+      </svg>
+      <div class="svg-cap">Eyes have evolved 40+ times independently across animals.</div>
+    </div>
+
+    <!-- GENE DUPLICATION -->
+    <div class="card svg-card col-6">
+      <div class="card-label">Diagram · gene duplication → divergence</div>
+      <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gene duplication paths">
+        <rect width="720" height="220" fill="#0f1117"/>
+        <text x="360" y="22" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">GENE DUPLICATION · 3 FATES OF THE EXTRA COPY</text>
+
+        <!-- Original gene -->
+        <rect x="40" y="90" width="100" height="24" fill="#c89b2e" rx="3"/>
+        <text x="90" y="106" text-anchor="middle" font-family="Inter" font-size="11" fill="#0c0e12" font-weight="700">ancestor</text>
+
+        <!-- Arrow to duplication -->
+        <defs><marker id="dupA" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#a59a83"/></marker></defs>
+        <path d="M 145 100 L 175 100" stroke="#a59a83" stroke-width="1.5" marker-end="url(#dupA)"/>
+        <text x="160" y="90" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">duplication</text>
+
+        <!-- Duplicate pair -->
+        <rect x="180" y="80" width="80" height="20" fill="#c89b2e" rx="3"/>
+        <text x="220" y="94" text-anchor="middle" font-family="Inter" font-size="10" fill="#0c0e12">copy 1</text>
+        <rect x="180" y="105" width="80" height="20" fill="#c89b2e" rx="3"/>
+        <text x="220" y="119" text-anchor="middle" font-family="Inter" font-size="10" fill="#0c0e12">copy 2</text>
+
+        <!-- 3 fates -->
+        <path d="M 265 90 L 320 50" stroke="#a59a83" stroke-width="1.5" marker-end="url(#dupA)"/>
+        <path d="M 265 105 L 320 105" stroke="#a59a83" stroke-width="1.5" marker-end="url(#dupA)"/>
+        <path d="M 265 115 L 320 165" stroke="#a59a83" stroke-width="1.5" marker-end="url(#dupA)"/>
+
+        <!-- Fate 1: nonfunctionalization -->
+        <rect x="325" y="35" width="350" height="32" fill="#1a1f2a" stroke="#7a8fa8" rx="3"/>
+        <text x="500" y="56" text-anchor="middle" font-family="Inter" font-size="11" fill="#7a8fa8"><tspan font-weight="700">Pseudogene</tspan> — copy degrades, lost</text>
+
+        <!-- Fate 2: subfunctionalization -->
+        <rect x="325" y="90" width="350" height="32" fill="#1a2e22" stroke="#5fa871" rx="3"/>
+        <text x="500" y="111" text-anchor="middle" font-family="Inter" font-size="11" fill="#5fa871"><tspan font-weight="700">Subfunctionalization</tspan> — each takes part of original role</text>
+
+        <!-- Fate 3: neofunctionalization -->
+        <rect x="325" y="148" width="350" height="32" fill="#241c0d" stroke="#c89b2e" rx="3"/>
+        <text x="500" y="169" text-anchor="middle" font-family="Inter" font-size="11" fill="#c89b2e"><tspan font-weight="700">Neofunctionalization</tspan> — copy evolves NEW function ✓</text>
+
+        <text x="360" y="205" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83" font-style="italic">Examples: globin family · opsins (color vision) · Hox clusters · gustducin</text>
+      </svg>
+      <div class="svg-cap">"Duplicate, Diverge, Discover new function."</div>
+    </div>
+
+    <div class="card col-12">
+      <div class="card-label">Imperfect adaptation · Exaptation · Tiktaalik</div>
+      <div class="grid" style="gap:8px">
+        <div class="col-4">
+          <div class="mnem"><span class="star">⭐</span><span class="quote">"Evolution is a TINKERER, not an ENGINEER" — Jacob</span></div>
+          <ul style="font-size:12px;color:var(--ink);margin-top:6px">
+            <li>Recurrent laryngeal nerve detour (4 m in giraffe)</li>
+            <li>Vertebrate retina is INSIDE-OUT → blind spot</li>
+            <li>Vestigial whale pelvic bones</li>
+            <li>Wisdom teeth, appendix, narrow human pelvis</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="card-label">Exaptation (Gould)</div>
+          <table>
+            <tr><th>Trait</th><th>Original</th><th>Now</th></tr>
+            <tr><td>Feathers</td><td>Insulation/display</td><td>Flight</td></tr>
+            <tr><td>Swim bladder</td><td>Lung in early fish</td><td>Buoyancy</td></tr>
+            <tr><td>Middle ear bones</td><td>Reptile jaw</td><td>Hearing</td></tr>
+          </table>
+          <div class="mnem" style="margin-top:6px"><span class="star">⭐</span><span class="quote">"Used For X, Now Used For Y"</span></div>
+        </div>
+        <div class="col-4">
+          <div class="card-label">Tiktaalik (Shubin 2004)</div>
+          <div class="emp"><span class="lbl">🦴 375 MYA · Ellesmere Is., Canada</span><b>Predicted, then found.</b> Phylogeny said "look in mid-Devonian rocks" → wrist bones AND fins. Fish-tetrapod transitional.</div>
+          <div class="card-body" style="margin-top:6px">
+            <b>Heterochrony:</b> change the pace, change the place. Axolotl = neoteny. Human skull = juvenile ape proportions retained.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 9 · COEVOLUTION & MIMICRY -->
+<!-- =================================================================== -->
+<section id="coev" data-topic="adapt">
+  <div class="sec-head">
+    <div class="sec-num">09</div>
+    <div class="sec-title">Coevolution &amp; Mimicry</div>
+    <div class="sec-blurb">Antagonist arms races + mutualist tangos</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="card-label">Antagonist · Red Queen</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Run to Stay in Place" — Van Valen</span><span class="gloss">Both sides evolve perpetually just to maintain fitness. Fitness ≠ stable; the arena moves.</span></div>
+      <div class="card-body">Examples: parasites vs hosts (sex pays for itself this way) · plant-toxin vs insect detox (Ehrlich-Raven escape-and-radiate).</div>
+      <div class="emp"><span class="lbl">🌿 Geographic mosaic</span>Thompson — coevolution has hot spots, cold spots, and trait mixes across geography.</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Mimicry · two flavors</div>
+      <table>
+        <tr><th>Type</th><th>Mechanism</th><th>Memorize</th></tr>
+        <tr><td><b>Batesian</b></td><td>Harmless mimics dangerous (cheats)</td><td>BLUFFS</td></tr>
+        <tr><td><b>Müllerian</b></td><td>Both dangerous, share warning</td><td>MUTUAL</td></tr>
+      </table>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Bates BLUFFS · Müller MUTUAL"</span></div>
+      <div class="emp"><span class="lbl">🌱 Escape-and-Radiate</span>Plant invents poison → bug catches up → cycle. Drives plant-insect diversification.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 10 · SEX & SEXUAL SELECTION -->
+<!-- =================================================================== -->
+<section id="sex" data-topic="sex">
+  <div class="sec-head">
+    <div class="sec-num">10</div>
+    <div class="sec-title">Sex &amp; Sexual Selection</div>
+    <div class="sec-blurb">Anisogamy starts everything · OSR drives ornament size</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="card-label">Why sex pays</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Red Queen + Muller's Ratchet"</span><span class="gloss">Sex outruns parasites + recombination purges deleterious mutations that asexual lineages accumulate.</span></div>
+      <div class="card-body">
+        <b>Anisogamy</b> — eggs expensive, sperm cheap → all sex-role asymmetries flow from this.<br>
+        <b>Bateman's principle</b> — females limited by EGGS; males limited by MATES.
+      </div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Two arenas of sexual selection</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Intra = Inside same sex (combat) · Inter = Between sexes (choice)"</span></div>
+      <div class="card-body">
+        <b>Intrasexual</b> → antlers, horns, body size (males vs males).<br>
+        <b>Intersexual</b> → peacock tail, bird song, bowerbird art (female choice).
+      </div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Skewed OSR = Strong Selection"</span><span class="gloss">Operational Sex Ratio: more receptive males than females → fierce competition → bigger ornaments.</span></div>
+    </div>
+
+    <div class="card col-12">
+      <div class="card-label">Three hypotheses for female choice (not exclusive)</div>
+      <div class="grid" style="gap:8px">
+        <div class="col-4"><div class="mnem"><span class="quote">FISHER RUNAWAY</span><span class="gloss">Trait + preference become genetically correlated → both escalate together.</span></div></div>
+        <div class="col-4"><div class="mnem"><span class="quote">ZAHAVI HANDICAP</span><span class="gloss">Costly trait HONEST signal — only good genes can afford it.</span></div></div>
+        <div class="col-4"><div class="mnem"><span class="quote">HAMILTON-ZUK PARASITES</span><span class="gloss">Bright = parasite-resistant → choosing him gives offspring resistant genes.</span></div></div>
+      </div>
+      <div class="card-body" style="margin-top:6px"><b>Post-mating</b>: sperm compete; females cryptic-choose (sperm storage, cervical filter, etc.).</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 11 · LIFE HISTORY -->
+<!-- =================================================================== -->
+<section id="life" data-topic="sex">
+  <div class="sec-head">
+    <div class="sec-num">11</div>
+    <div class="sec-title">Life History · the trade-offs of being alive</div>
+    <div class="sec-blurb">High extrinsic mortality → live fast, die young</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-4">
+      <div class="card-label">r vs K</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"r = many small (rats)<br>K = few big (elephants)"</span></div>
+      <div class="card-body">High extrinsic mortality favors r-strategy.</div>
+    </div>
+    <div class="card col-4">
+      <div class="card-label">Iter vs Semel</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Iter = REPEAT · Semel = SINGLE shot then die"</span></div>
+      <div class="card-body">Iteroparous: humans, oaks. Semelparous: salmon, agave, octopus, mayfly.</div>
+    </div>
+    <div class="card col-4">
+      <div class="card-label">Why we age (3 theories)</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Medawar Hides · Williams Trades · Kirkwood Disposes"</span><span class="gloss">Mutation Accumulation · Antagonistic Pleiotropy · Disposable Soma. <b>Senescence</b> is the technical word for aging.</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 12 · KIN SELECTION & ESS -->
+<!-- =================================================================== -->
+<section id="kin" data-topic="sex">
+  <div class="sec-head">
+    <div class="sec-num">12</div>
+    <div class="sec-title">Kin Selection &amp; ESS</div>
+    <div class="sec-blurb">Inclusive fitness = direct + indirect · Hamilton's rule</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="card-label">Hamilton's rule</div>
+      <div class="eq">rB &gt; C</div>
+      <div class="card-body" style="margin-top:6px"><b>r</b> = relatedness · <b>B</b> = benefit to recipient · <b>C</b> = cost to actor.</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"r-Big-Bigger-than-C"</span><span class="gloss">relatedness × Benefit beats Cost</span></div>
+      <table>
+        <tr><th>Relationship</th><th>r</th></tr>
+        <tr><td>Identical twins</td><td><b>1</b></td></tr>
+        <tr><td>Full sibs / parent-child</td><td>½</td></tr>
+        <tr><td>Half sibs</td><td>¼</td></tr>
+        <tr><td>Cousins</td><td>⅛</td></tr>
+        <tr><td>HONEYBEE SISTERS</td><td><b>¾</b></td></tr>
+      </table>
+    </div>
+
+    <div class="card svg-card col-6">
+      <div class="card-label">Diagram · haplodiploidy → bee sisters r=¾</div>
+      <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Haplodiploidy and bee relatedness">
+        <rect width="720" height="320" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">HAPLODIPLOIDY · WHY BEE SISTERS r = 0.75</text>
+
+        <!-- Dad (haploid) -->
+        <g transform="translate(80,60)">
+          <text x="50" y="0" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#7a8fa8">DAD (haploid)</text>
+          <rect x="20" y="10" width="60" height="22" fill="#7a8fa8" rx="3"/>
+          <text x="50" y="26" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#0c0e12" font-weight="700">A</text>
+          <text x="50" y="50" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">all sperm IDENTICAL</text>
+        </g>
+
+        <!-- Mom (diploid) -->
+        <g transform="translate(450,60)">
+          <text x="80" y="0" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#b96ea0">MOM (diploid)</text>
+          <rect x="20" y="10" width="60" height="22" fill="#b96ea0" rx="3"/>
+          <text x="50" y="26" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#0c0e12" font-weight="700">B</text>
+          <rect x="90" y="10" width="60" height="22" fill="#c89b2e" rx="3"/>
+          <text x="120" y="26" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#0c0e12" font-weight="700">C</text>
+        </g>
+
+        <!-- Sister 1 -->
+        <g transform="translate(150,170)">
+          <text x="50" y="0" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#5fa871">Sister 1</text>
+          <rect x="0" y="10" width="50" height="22" fill="#7a8fa8"/><text x="25" y="26" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#0c0e12" font-weight="700">A</text>
+          <rect x="55" y="10" width="50" height="22" fill="#b96ea0"/><text x="80" y="26" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#0c0e12" font-weight="700">B</text>
+        </g>
+
+        <!-- Sister 2 -->
+        <g transform="translate(450,170)">
+          <text x="50" y="0" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#5fa871">Sister 2</text>
+          <rect x="0" y="10" width="50" height="22" fill="#7a8fa8"/><text x="25" y="26" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#0c0e12" font-weight="700">A</text>
+          <rect x="55" y="10" width="50" height="22" fill="#b96ea0"/><text x="80" y="26" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#0c0e12" font-weight="700">B</text>
+        </g>
+
+        <!-- Math box -->
+        <rect x="90" y="240" width="540" height="60" fill="#241c0d" stroke="#c89b2e" stroke-width="1.4" rx="6"/>
+        <text x="360" y="262" text-anchor="middle" font-family="Inter" font-size="11" fill="#e6dfd0">Share <b>100%</b> of dad's allele (A) + <b>50%</b> of mom's → r = ½(1.0) + ½(0.5)</text>
+        <text x="360" y="285" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="16" fill="#c89b2e" font-weight="700">r (sister-to-sister) = 0.75</text>
+        <text x="360" y="313" text-anchor="middle" font-family="Inter" font-size="10" fill="#5fa871">→ MORE RELATED to sisters than to own daughters → STAY &amp; HELP = eusociality</text>
+      </svg>
+      <div class="svg-cap">"Haplodiploid Sisters Share Three-Quarters → Sterile Workers."</div>
+    </div>
+
+    <div class="card svg-card col-7">
+      <div class="card-label">Diagram · ESS rock-paper-scissors (side-blotched lizards)</div>
+      <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ESS lizard cycle">
+        <rect width="720" height="220" fill="#0f1117"/>
+        <text x="360" y="22" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">ESS · NEGATIVE-FREQUENCY-DEPENDENT CYCLE · UTA STANSBURIANA</text>
+
+        <defs><marker id="essArr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 Z" fill="#c89b2e"/></marker></defs>
+
+        <!-- Orange -->
+        <g transform="translate(120,60)">
+          <circle cx="50" cy="50" r="40" fill="#d68a3c" stroke="#c89b2e" stroke-width="2"/>
+          <text x="50" y="46" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#0c0e12" font-weight="700">ORANGE</text>
+          <text x="50" y="62" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12">bully</text>
+          <text x="50" y="120" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">large harem</text>
+        </g>
+
+        <!-- Blue -->
+        <g transform="translate(310,60)">
+          <circle cx="50" cy="50" r="40" fill="#7a8fa8" stroke="#a8c5e0" stroke-width="2"/>
+          <text x="50" y="46" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#0c0e12" font-weight="700">BLUE</text>
+          <text x="50" y="62" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12">guarder</text>
+          <text x="50" y="120" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">paired mate</text>
+        </g>
+
+        <!-- Yellow -->
+        <g transform="translate(500,60)">
+          <circle cx="50" cy="50" r="40" fill="#c89b2e" stroke="#f1d278" stroke-width="2"/>
+          <text x="50" y="46" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#0c0e12" font-weight="700">YELLOW</text>
+          <text x="50" y="62" text-anchor="middle" font-family="Inter" font-size="9" fill="#0c0e12">sneaker</text>
+          <text x="50" y="120" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">female-mimic</text>
+        </g>
+
+        <!-- Arrows: Orange beats Blue, Blue beats Yellow, Yellow beats Orange -->
+        <path d="M 230 100 L 300 100" stroke="#c89b2e" stroke-width="1.5" marker-end="url(#essArr)"/>
+        <text x="265" y="92" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">beats</text>
+        <path d="M 420 100 L 490 100" stroke="#c89b2e" stroke-width="1.5" marker-end="url(#essArr)"/>
+        <text x="455" y="92" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">beats</text>
+        <path d="M 540 145 Q 360 200 180 145" stroke="#c89b2e" stroke-width="1.5" fill="none" marker-end="url(#essArr)"/>
+        <text x="360" y="200" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">beats (cycle)</text>
+      </svg>
+      <div class="svg-cap">"ESS = Strategy that, once common, can't be invaded." — Maynard Smith</div>
+    </div>
+
+    <div class="card col-5">
+      <div class="card-label">Cooperation among non-kin</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Reciprocity, Reputation, Byproduct"</span></div>
+      <ul style="font-size:12px">
+        <li><b>Reciprocity</b> — direct ("you scratch my back…") or indirect (third-party watches)</li>
+        <li><b>Reputation</b> — being seen as cooperator pays</li>
+        <li><b>Byproduct</b> — both gain incidentally</li>
+      </ul>
+      <div class="trap"><span class="lbl">⚠ Trap</span><b>Group selection</b> mostly REJECTED — free-rider problem. Don't fall for "for the good of the species."</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 13 · DEEP TIME -->
+<!-- =================================================================== -->
+<section id="deep" data-topic="deep">
+  <div class="sec-head">
+    <div class="sec-num">13</div>
+    <div class="sec-title">Earth's Deep Time</div>
+    <div class="sec-blurb">4.5 BYA Earth · 3.8 BYA life · 540 MYA Cambrian</div>
+  </div>
+  <div class="grid">
+
+    <div class="card svg-card col-12">
+      <div class="card-label">Diagram · Phanerozoic period bar (color-coded)</div>
+      <svg viewBox="0 0 1200 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Phanerozoic periods">
+        <rect width="1200" height="130" fill="#0f1117"/>
+        <text x="600" y="22" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">PHANEROZOIC PERIODS · 540 MYA → PRESENT</text>
+        <g font-family="Inter" font-size="11" font-weight="700">
+          <rect x="20" y="40" width="120" height="40" fill="#5fa8a1"/><text x="80" y="58" text-anchor="middle" fill="#0c0e12">CAM</text><text x="80" y="74" text-anchor="middle" fill="#0c0e12" font-size="9">540</text>
+          <rect x="142" y="40" width="50" height="40" fill="#5fa871"/><text x="167" y="58" text-anchor="middle" fill="#0c0e12">ORD</text><text x="167" y="74" text-anchor="middle" fill="#0c0e12" font-size="9">485</text>
+          <rect x="194" y="40" width="60" height="40" fill="#a8c5e0"/><text x="224" y="58" text-anchor="middle" fill="#0c0e12">SIL</text><text x="224" y="74" text-anchor="middle" fill="#0c0e12" font-size="9">444</text>
+          <rect x="256" y="40" width="100" height="40" fill="#7a8fa8"/><text x="306" y="58" text-anchor="middle" fill="#0c0e12">DEV</text><text x="306" y="74" text-anchor="middle" fill="#0c0e12" font-size="9">419</text>
+          <rect x="358" y="40" width="120" height="40" fill="#6b6353"/><text x="418" y="58" text-anchor="middle" fill="#fff">CAR</text><text x="418" y="74" text-anchor="middle" fill="#fff" font-size="9">359</text>
+          <rect x="480" y="40" width="120" height="40" fill="#c86462"/><text x="540" y="58" text-anchor="middle" fill="#fff">PER</text><text x="540" y="74" text-anchor="middle" fill="#fff" font-size="9">299</text>
+          <rect x="602" y="40" width="120" height="40" fill="#b96ea0"/><text x="662" y="58" text-anchor="middle" fill="#fff">TRI</text><text x="662" y="74" text-anchor="middle" fill="#fff" font-size="9">252</text>
+          <rect x="724" y="40" width="160" height="40" fill="#c89b2e"/><text x="804" y="58" text-anchor="middle" fill="#0c0e12">JUR</text><text x="804" y="74" text-anchor="middle" fill="#0c0e12" font-size="9">201</text>
+          <rect x="886" y="40" width="200" height="40" fill="#5fa871"/><text x="986" y="58" text-anchor="middle" fill="#0c0e12">CRE</text><text x="986" y="74" text-anchor="middle" fill="#0c0e12" font-size="9">145</text>
+          <rect x="1088" y="40" width="92" height="40" fill="#d68a3c"/><text x="1134" y="58" text-anchor="middle" fill="#0c0e12">CEN</text><text x="1134" y="74" text-anchor="middle" fill="#0c0e12" font-size="9">66</text>
+        </g>
+        <!-- Mass extinction markers -->
+        <g font-family="Inter" font-size="10">
+          <text x="540" y="105" text-anchor="middle" fill="#c86462" font-weight="700">↑ PERMIAN 252 (96%)</text>
+          <text x="1086" y="105" text-anchor="middle" fill="#c86462" font-weight="700">↑ K-Pg 66 (76%)</text>
+        </g>
+        <text x="600" y="125" text-anchor="middle" font-family="Inter" font-size="10" fill="#a59a83" font-style="italic">"O-D-P-Tr-K — Old Dinosaurs Probably Took K-Pg" · the Big 5 mass extinctions</text>
+      </svg>
+      <div class="svg-cap">CAM 540 body plans EXPLODE · DEV 419 age of fish (Tiktaalik 375) · PER 299 Pangaea + Great Dying.</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">LUCA-Stromatolites-GOE triad</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"LUCA Started · Stromatolites Stacked · Oxygen Slaughtered"</span></div>
+      <ul style="font-size:12px">
+        <li><b>LUCA</b> ~3.5–3.8 BYA — Last Universal Common Ancestor</li>
+        <li><b>Stromatolites</b> 3.45 BYA — layered cyanobacterial mats</li>
+        <li><b>GOE</b> ~2.4 BYA — cyanobacteria pump O₂ → killed anaerobes (1st mass extinction) → enabled eukaryotes</li>
+      </ul>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">4 Eons · age-of-Earth history</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Hadean Hell · Archean Ancient · Proterozoic Pre-explosion · Phanerozoic Visible"</span></div>
+      <ul style="font-size:12px">
+        <li><b>Kelvin (1862)</b> — capped Earth at ~20 MY (no radioactivity, WRONG)</li>
+        <li><b>Holmes 1913 + Patterson 1956</b> — 4.5 BY via U-Pb on meteorites ✓</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 14 · DATING & EXTINCTIONS -->
+<!-- =================================================================== -->
+<section id="date" data-topic="deep">
+  <div class="sec-head">
+    <div class="sec-num">14</div>
+    <div class="sec-title">Radiometric Dating + Big 5 Extinctions</div>
+    <div class="sec-blurb">Cool Kids Usually Rock · O-D-P-Tr-K</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-7">
+      <div class="card-label">Radiometric pairs</div>
+      <table>
+        <tr><th>Pair</th><th>Half-life</th><th>Use for</th></tr>
+        <tr><td><b>C-14 → N-14</b></td><td>5,730 yr</td><td>Recent organics &lt; 50 KY</td></tr>
+        <tr><td><b>K-40 → Ar-40</b></td><td>1.3 BY</td><td>Volcanic; <b>hominin fossils</b></td></tr>
+        <tr><td><b>U-238 → Pb-206</b></td><td>4.5 BY</td><td>Ancient rocks; <b>dinosaurs</b></td></tr>
+        <tr><td><b>Rb-87 → Sr-87</b></td><td>47 BY</td><td>Solar-system age</td></tr>
+      </table>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Cool Kids Usually Rock"</span><span class="gloss">C, K, U, Rb (recent → ancient)</span></div>
+      <div class="trap"><span class="lbl">⚠ Robbins Trap</span><b>C-14 CANNOT date dinosaurs.</b> All C-14 gone after ~250 KY. Use U-Pb or K-Ar. <i>"Carbon-14 Can't Catch Cretaceous."</i></div>
+    </div>
+
+    <div class="card col-5">
+      <div class="card-label">Big 5 mass extinctions</div>
+      <table>
+        <tr><th>Event</th><th>MYA</th><th>Cause / loss</th></tr>
+        <tr><td>Ordovician</td><td>445</td><td>Glaciation</td></tr>
+        <tr><td>Devonian</td><td>375</td><td>Anoxia</td></tr>
+        <tr style="background:rgba(200,100,98,0.15)"><td><b>Permian</b></td><td><b>252</b></td><td><b>96% marine, BIGGEST</b><br>Siberian Traps</td></tr>
+        <tr><td>Triassic-J</td><td>201</td><td>Volcanism</td></tr>
+        <tr style="background:rgba(200,155,46,0.10)"><td><b>K-Pg</b></td><td><b>66</b></td><td><b>76%, dinosaurs</b><br>Chicxulub asteroid</td></tr>
+      </table>
+      <div class="trap"><span class="lbl">⚠ Trap</span><b>Permian was BIGGEST</b> (96%), not K-Pg (76%). K-Pg is the famous one because of dinosaurs.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 15 · PHYLOGENY -->
+<!-- =================================================================== -->
+<section id="phy" data-topic="spec">
+  <div class="sec-head">
+    <div class="sec-num">15</div>
+    <div class="sec-title">Phylogeny · reading trees</div>
+    <div class="sec-blurb">Synapomorphies define clades · parsimony picks the tree · rotations don't matter</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="card-label">Full 5-vocab set</div>
+      <table>
+        <tr><th>Term</th><th>Meaning</th></tr>
+        <tr><td>Plesiomorphy</td><td>Ancestral character (had it before)</td></tr>
+        <tr><td>Apomorphy</td><td>Derived character (new)</td></tr>
+        <tr><td>Symplesiomorphy</td><td>SHARED ANCESTRAL — useless for clades</td></tr>
+        <tr style="background:rgba(95,168,113,0.15)"><td><b>Synapomorphy</b></td><td><b>SHARED DERIVED — defines clades ✓</b></td></tr>
+        <tr><td>Autapomorphy</td><td>UNIQUE to one taxon — also can't define clade</td></tr>
+      </table>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Sym-PLES-io = Shared Junk · Syn-APO = Shared Gold · Auto-APO = Solo Quirk"</span></div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Clade classes + method</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Mono = Mom + ALL kids ✓ · Para = SOME kids ✗ · Poly = NOT same mom ✗"</span></div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Parsimony = Fewest Flips Wins"</span><span class="gloss">"Reading trees: Rotations don't matter, only branching." Outgroup roots the tree.</span></div>
+      <div class="trap"><span class="lbl">⚠ Trap</span><b>Reptiles WITHOUT birds = paraphyletic.</b> Crocs are closer to birds than to lizards. Sauropsida = the proper monophyletic name.</div>
+      <div class="card-body" style="margin-top:6px"><b>Homoplasy</b> = convergent / parallel = FALSE phylogenetic signal (bird wing + bat wing).</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 16 · SPECIES & SPECIATION -->
+<!-- =================================================================== -->
+<section id="spec" data-topic="spec">
+  <div class="sec-head">
+    <div class="sec-num">16</div>
+    <div class="sec-title">Species &amp; Speciation</div>
+    <div class="sec-blurb">4 concepts · pre/post-zygotic · ASP modes · Haldane's rule</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="card-label">4 species concepts</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"BMPE: Best Mammals Play Evens"</span></div>
+      <ol style="font-size:12px;margin-left:18px">
+        <li><b>Biological</b> (Mayr) — interbreed + reproductively isolated</li>
+        <li><b>Morphological</b> — looks</li>
+        <li><b>Phylogenetic</b> (Cracraft) — smallest monophyletic clade</li>
+        <li><b>Ecological</b> (Van Valen) — niche / adaptive zone</li>
+      </ol>
+      <div class="trap"><span class="lbl">⚠ Trap</span><b>BSC fails on FAH:</b> Fossils, Asexuals, Hybridizers.</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Reproductive isolation</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"PRE: HTBMG · POST: ISB"</span><span class="gloss"><b>Pre</b>zygotic: Habitat, Time, Behavior, Mechanical, Gametic. <b>Post</b>zygotic: Inviability, Sterility, Breakdown.</span></div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Heterogametic Hurts First" — Haldane's Rule</span><span class="gloss">Hybrid sterile/inviable sex = the heterogametic one (XY males in mammals, ZW females in birds).</span></div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Speciation modes</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"ASP: Allopatric Apart · Sympatric Same · Parapatric Partly"</span><span class="gloss"><b>Allopatric = MOST common.</b></span></div>
+      <div class="card-body"><b>Polyploidy</b> — Auto = self-doubling · Allo = hybrid + doubling. Instant speciation in plants. ~70% of flowering plants.</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Reinforcement: Hybrids Suck → Don't Date Them → Walls Get Thicker"</span></div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Real-time speciation</div>
+      <div class="emp"><span class="lbl">🍎 Rhagoletis apple maggot</span>Sympatric speciation, ~140 ya. Apples introduced ~400 ya, hawthorn flies shifted hosts → mating isolation on host plant.</div>
+      <div class="emp"><span class="lbl">🌼 Tragopogon goatsbeard</span>Allopolyploidy in Pacific NW, ~80 yrs. Observed in real time.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 17 · BIOGEOGRAPHY -->
+<!-- =================================================================== -->
+<section id="bio" data-topic="adapt">
+  <div class="sec-head">
+    <div class="sec-num">17</div>
+    <div class="sec-title">Biogeography &amp; Adaptive Radiation</div>
+    <div class="sec-blurb">MacArthur-Wilson · key innovation opens niches</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="card-label">MacArthur-Wilson (1967)</div>
+      <div class="eq">D₂ = D₁ + originations − extinctions</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"BIG + NEAR = MAX SPECIES · SMALL + FAR = FEW"</span></div>
+      <ul style="font-size:12px">
+        <li>Larger islands → more species (more niches, lower extinction)</li>
+        <li>Closer to mainland → more species (higher immigration)</li>
+        <li>Equilibrium = stable NUMBER, not stable composition</li>
+      </ul>
+      <div class="trap"><span class="lbl">⚠ Trap</span>Equilibrium = same NUMBER, NOT same SPECIES. Turnover continues.</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Adaptive radiation</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Empty Niche + Key Innovation + No Competitors"</span></div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Key Innovation = Removes a Constraint, Opens a Niche"</span><span class="gloss">NOT "got smarter." E.g., Eleutherodactylus frogs skip tadpole stage → 400+ species.</span></div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Dispersal Jumps · Vicariance Splits"</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 18 · CONSERVATION GENETICS -->
+<!-- =================================================================== -->
+<section id="cons" data-topic="adapt">
+  <div class="sec-head">
+    <div class="sec-num">18</div>
+    <div class="sec-title">Conservation Genetics</div>
+    <div class="sec-blurb">50/500 rule · Ne &lt; N · extinction vortex</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="card-label">Franklin's 50/500 rule</div>
+      <ul style="font-size:12px">
+        <li><b>Ne ≥ 50</b> short-term — avoid inbreeding depression</li>
+        <li><b>Ne ≥ 500</b> long-term — maintain adaptive variation</li>
+      </ul>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"50 to Survive · 500 to Thrive"</span></div>
+      <div class="trap"><span class="lbl">⚠ Trap</span><b>Ne is ALWAYS smaller than N.</b> Effective &lt; census because of unequal sex ratio, reproductive variance, bottlenecks.</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Real cases</div>
+      <div class="emp"><span class="lbl">🐆 Cheetah</span>So inbred that skin grafts between unrelated cheetahs are ACCEPTED (no MHC diversity); 70% abnormal sperm.</div>
+      <div class="emp"><span class="lbl">🐈 Florida panthers</span>Rescued by 8 Texas pumas in 1995; fitness restored within a generation.</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Extinction Vortex"</span><span class="gloss">Small → Inbreed → Lose Variation → Worse Adaptation → Smaller → 💀</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 19 · HUMAN EVOLUTION -->
+<!-- =================================================================== -->
+<section id="hum" data-topic="med">
+  <div class="sec-head">
+    <div class="sec-num">19</div>
+    <div class="sec-title">Human Evolution</div>
+    <div class="sec-blurb">Bipedal first, big brain later · Lucy settles it</div>
+  </div>
+  <div class="grid">
+
+    <div class="card col-6">
+      <div class="card-label">Hominin sequence</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Sahel-Ardi-Australo-Habilis-Erectus-Heidi-Neander-Sapiens"</span><span class="gloss"><b>Heidelbergensis</b> (~600 KYA) = common ancestor of Sapiens + Neanderthals + Denisovans.</span></div>
+      <div class="emp"><span class="lbl">👩‍🦴 Lucy</span><i>Australopithecus afarensis</i> · 3.2 MYA, Hadar Ethiopia (1974, Johanson) · 40% complete · <b>bipedal pelvis + chimp-sized brain (~400 cc)</b>.</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Bipedalism FIRST, Big Brain LATER"</span><span class="gloss">— Lucy settles it.</span></div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Forward Foramen = Forward-walking · Rear Foramen = Four-legged"</span><span class="gloss">Foramen magnum position = the single anatomical sign of bipedalism in fossils.</span></div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Walking trade-offs (4 B's)</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Walking Wrecks: Back, Birth, Bones, Bulges"</span></div>
+      <ul style="font-size:12px">
+        <li><b>Back</b> pain (lumbar curve, 80% of adults)</li>
+        <li><b>Birth</b> difficulty (obstetric dilemma)</li>
+        <li><b>Bones</b> wear (knee/hip arthritis)</li>
+        <li><b>Bulges</b> (hernias, gravity on abdomen)</li>
+      </ul>
+      <div class="trap"><span class="lbl">⚠ FOXP2 Trap</span>FOXP2 is <b>NOT "the language gene"</b>. It's a transcription factor for orofacial motor control — necessary but not sufficient. Functions in non-human animals (songbirds, mice). Robbins penalizes "language gene."</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Brain expansion · 3 hypotheses</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Cooking Calories · Social Skills · Survival Smarts"</span></div>
+      <ul style="font-size:12px">
+        <li><b>Cooking</b> (Wrangham) — fire unlocks calories</li>
+        <li><b>Social Brain</b> (Dunbar) — group size predicts neocortex</li>
+        <li><b>Ecological</b> — foraging / tool problem-solving</li>
+      </ul>
+      <div class="card-body"><b>Out-of-Africa:</b> H. erectus leaves first (~1.8 MYA); H. sapiens leaves ~60–70 KYA.<br>Non-Africans: 1–4% Neanderthal · Melanesians/Papuans: 3–6% Denisovan.<br>EPAS1 high-altitude variant in Tibetans = inherited from Denisovans.<br><b>Pääbo, 2022 Nobel</b> — proved Neanderthal interbreeding via ancient DNA.</div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Tools (4 industries)</div>
+      <table>
+        <tr><th>Industry</th><th>When</th><th>Maker</th></tr>
+        <tr><td>Oldowan</td><td>2.6 MYA</td><td>H. habilis (flakes)</td></tr>
+        <tr><td>Acheulean</td><td>1.7 MYA</td><td>H. erectus (hand-axes)</td></tr>
+        <tr><td>Mousterian</td><td>~300 KYA</td><td>Neanderthal (prepared cores)</td></tr>
+        <tr><td>Upper Paleo</td><td>50 KYA</td><td>Sapiens (blades, art, projectiles)</td></tr>
+      </table>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"O-A-M-U"</span></div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Looked Modern at 195 KYA · Acted Modern at 70-100 KYA"</span><span class="gloss">Anatomical = skeleton; Behavioral = art, symbols, trade. ~100 KY gap.</span></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 20 · EVOLUTIONARY MEDICINE -->
+<!-- =================================================================== -->
+<section id="med" data-topic="med">
+  <div class="sec-head">
+    <div class="sec-num">20</div>
+    <div class="sec-title">Evolutionary Medicine</div>
+    <div class="sec-blurb">Sickle cell · antibiotic resistance · cancer · FOXP2 trap · p53</div>
+  </div>
+  <div class="grid">
+
+    <!-- SICKLE CELL MOLECULAR ZOOM -->
+    <div class="card svg-card col-7">
+      <div class="card-label">Diagram · sickle cell · single nucleotide → whole disease</div>
+      <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sickle cell molecular zoom">
+        <rect width="720" height="360" fill="#0f1117"/>
+        <text x="360" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">SICKLE CELL · DNA → mRNA → PROTEIN → CELL → POPULATION</text>
+
+        <!-- DNA -->
+        <text x="40" y="55" font-family="Inter" font-size="10" fill="#a59a83" font-weight="600">β-globin codon 6</text>
+        <g font-family="JetBrains Mono" font-size="14">
+          <text x="40" y="80" fill="#5fa871">NORMAL · GA<tspan fill="#5fa871" font-weight="700">G</tspan> · &nbsp; → Glu (Glutamic acid)</text>
+          <text x="40" y="105" fill="#c86462">MUTANT · GT<tspan fill="#c86462" font-weight="700">G</tspan> · &nbsp; → Val (Valine)</text>
+        </g>
+        <text x="40" y="128" font-family="Inter" font-size="10" font-weight="600" fill="#c89b2e">↓ ONE BASE SWAP (A → T) · transversion</text>
+
+        <!-- Protein effect -->
+        <g transform="translate(40,150)">
+          <!-- Normal hemoglobin: smooth -->
+          <text x="0" y="0" font-family="Inter" font-size="11" fill="#5fa871" font-weight="700">Normal HbA</text>
+          <ellipse cx="60" cy="30" rx="50" ry="20" fill="#1a2e22" stroke="#5fa871" stroke-width="1.5"/>
+          <text x="60" y="34" text-anchor="middle" font-family="Inter" font-size="9" fill="#5fa871">soluble · folded</text>
+
+          <!-- Sickle hemoglobin: aggregates into fibers -->
+          <text x="220" y="0" font-family="Inter" font-size="11" fill="#c86462" font-weight="700">Sickle HbS · Val on outside</text>
+          <ellipse cx="280" cy="30" rx="50" ry="20" fill="#2a1616" stroke="#c86462" stroke-width="1.5"/>
+          <ellipse cx="345" cy="30" rx="50" ry="20" fill="#2a1616" stroke="#c86462" stroke-width="1.5"/>
+          <ellipse cx="410" cy="30" rx="50" ry="20" fill="#2a1616" stroke="#c86462" stroke-width="1.5"/>
+          <text x="345" y="65" text-anchor="middle" font-family="Inter" font-size="9" fill="#c86462">→ polymerizes into fibers under low O₂</text>
+
+          <!-- RBC shapes -->
+          <text x="540" y="0" font-family="Inter" font-size="11" fill="#a59a83" font-weight="700">Red blood cells</text>
+          <circle cx="580" cy="30" r="18" fill="#1a2e22" stroke="#5fa871" stroke-width="1.5"/>
+          <text x="580" y="55" text-anchor="middle" font-family="Inter" font-size="8" fill="#5fa871">biconcave</text>
+          <path d="M 620 25 Q 640 10 660 25 Q 670 40 660 50 Q 640 55 625 45 Z" fill="#2a1616" stroke="#c86462" stroke-width="1.5"/>
+          <text x="640" y="65" text-anchor="middle" font-family="Inter" font-size="8" fill="#c86462">sickled</text>
+        </g>
+
+        <!-- Population panel -->
+        <g transform="translate(40,250)">
+          <rect x="0" y="0" width="640" height="100" fill="#181b22" stroke="#22262f" rx="4"/>
+          <text x="320" y="20" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#c89b2e">FITNESS BY GENOTYPE · ENVIRONMENT-DEPENDENT</text>
+
+          <!-- Malaria zone -->
+          <text x="160" y="42" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#c86462">MALARIA ZONE</text>
+          <text x="160" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="13" fill="#e6dfd0">AS &gt; AA &gt; SS</text>
+          <text x="160" y="80" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">heterozygote advantage</text>
+
+          <!-- Vertical separator -->
+          <line x1="320" y1="40" x2="320" y2="90" stroke="#6b6353" stroke-width="1"/>
+
+          <!-- No malaria -->
+          <text x="480" y="42" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#5fa871">NO MALARIA</text>
+          <text x="480" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="13" fill="#e6dfd0">AA &gt; AS &gt; SS</text>
+          <text x="480" y="80" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">S allele purified out</text>
+        </g>
+      </svg>
+      <div class="svg-cap warn">"Same allele, opposite fitness = environment-dependent selection." Glu6Val single nucleotide swap → whole disease.</div>
+    </div>
+
+    <!-- ANTIBIOTIC RESISTANCE 4 MECHANISMS -->
+    <div class="card svg-card col-5">
+      <div class="card-label">Diagram · antibiotic resistance · 4 mechanisms</div>
+      <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Antibiotic resistance four mechanisms">
+        <rect width="600" height="360" fill="#0f1117"/>
+        <text x="300" y="20" text-anchor="middle" font-family="Inter" font-size="10.5" letter-spacing="2.4" fill="#a59a83">"TARGET, TRASH, TOSS, TRADE"</text>
+
+        <!-- TARGET -->
+        <g transform="translate(20,40)">
+          <rect x="0" y="0" width="270" height="140" fill="#181b22" stroke="#c89b2e" rx="4"/>
+          <text x="135" y="20" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#c89b2e" font-weight="700">1 · TARGET</text>
+          <text x="135" y="36" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">change drug binding site</text>
+          <!-- Lock-and-key broken -->
+          <rect x="40" y="60" width="60" height="50" fill="#241c0d" stroke="#c89b2e" stroke-width="1.5" rx="3"/>
+          <circle cx="70" cy="85" r="10" fill="#0f1117" stroke="#c89b2e"/>
+          <text x="70" y="130" text-anchor="middle" font-family="Inter" font-size="8" fill="#c89b2e">target</text>
+          <path d="M 145 85 L 175 85" stroke="#c86462" stroke-width="2"/>
+          <line x1="155" y1="78" x2="165" y2="92" stroke="#c86462" stroke-width="2"/>
+          <line x1="165" y1="78" x2="155" y2="92" stroke="#c86462" stroke-width="2"/>
+          <ellipse cx="210" cy="85" rx="20" ry="10" fill="#7a8fa8" stroke="#a8c5e0"/>
+          <text x="210" y="130" text-anchor="middle" font-family="Inter" font-size="8" fill="#a8c5e0">drug</text>
+        </g>
+
+        <!-- TRASH -->
+        <g transform="translate(310,40)">
+          <rect x="0" y="0" width="270" height="140" fill="#181b22" stroke="#c89b2e" rx="4"/>
+          <text x="135" y="20" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#c89b2e" font-weight="700">2 · TRASH</text>
+          <text x="135" y="36" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">enzyme eats drug (β-lactamase)</text>
+          <!-- Drug being chopped -->
+          <ellipse cx="70" cy="85" rx="20" ry="10" fill="#7a8fa8" stroke="#a8c5e0"/>
+          <path d="M 110 75 L 130 95 M 110 95 L 130 75" stroke="#5fa871" stroke-width="3"/>
+          <ellipse cx="160" cy="80" rx="10" ry="6" fill="#7a8fa8" opacity="0.6"/>
+          <ellipse cx="180" cy="92" rx="10" ry="6" fill="#7a8fa8" opacity="0.6"/>
+          <ellipse cx="200" cy="80" rx="10" ry="6" fill="#7a8fa8" opacity="0.6"/>
+          <text x="135" y="130" text-anchor="middle" font-family="Inter" font-size="8" fill="#5fa871">enzyme cleaves bonds</text>
+        </g>
+
+        <!-- TOSS -->
+        <g transform="translate(20,200)">
+          <rect x="0" y="0" width="270" height="140" fill="#181b22" stroke="#c89b2e" rx="4"/>
+          <text x="135" y="20" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#c89b2e" font-weight="700">3 · TOSS</text>
+          <text x="135" y="36" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">efflux pump throws drug out</text>
+          <!-- Cell membrane + pump -->
+          <rect x="20" y="60" width="230" height="60" fill="#241c0d" stroke="#c89b2e" stroke-width="1" opacity="0.5"/>
+          <line x1="60" y1="60" x2="80" y2="120" stroke="#c89b2e" stroke-width="2"/>
+          <line x1="80" y1="60" x2="60" y2="120" stroke="#c89b2e" stroke-width="2"/>
+          <ellipse cx="120" cy="90" rx="10" ry="6" fill="#7a8fa8"/>
+          <defs><marker id="abxArr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L5,3 L0,6 Z" fill="#5fa871"/></marker></defs>
+          <path d="M 130 90 L 200 90" stroke="#5fa871" stroke-width="2" marker-end="url(#abxArr)"/>
+          <ellipse cx="220" cy="90" rx="8" ry="5" fill="#7a8fa8" opacity="0.6"/>
+          <text x="135" y="135" text-anchor="middle" font-family="Inter" font-size="8" fill="#5fa871">drug pumped out</text>
+        </g>
+
+        <!-- TRADE -->
+        <g transform="translate(310,200)">
+          <rect x="0" y="0" width="270" height="140" fill="#181b22" stroke="#c89b2e" rx="4"/>
+          <text x="135" y="20" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="14" fill="#c89b2e" font-weight="700">4 · TRADE</text>
+          <text x="135" y="36" text-anchor="middle" font-family="Inter" font-size="9" fill="#a59a83">plasmid transfer (HGT)</text>
+          <!-- Two cells with plasmid -->
+          <ellipse cx="70" cy="90" rx="30" ry="22" fill="#241c0d" stroke="#c89b2e"/>
+          <circle cx="70" cy="85" r="8" fill="none" stroke="#5fa871" stroke-width="1.5" stroke-dasharray="2 2"/>
+          <ellipse cx="200" cy="90" rx="30" ry="22" fill="#0f1f2e" stroke="#7a8fa8"/>
+          <path d="M 100 90 L 170 90" stroke="#5fa871" stroke-width="2" marker-end="url(#abxArr)"/>
+          <text x="135" y="80" text-anchor="middle" font-family="Inter" font-size="9" fill="#5fa871">plasmid</text>
+          <text x="135" y="135" text-anchor="middle" font-family="Inter" font-size="8" fill="#5fa871">cross-species transfer</text>
+        </g>
+      </svg>
+      <div class="svg-cap danger">⚠ Antibiotics DON'T CAUSE mutations — they SELECT pre-existing variants. "Directed mutation" is WRONG.</div>
+    </div>
+
+    <div class="card col-12">
+      <div class="card-label">Nesse's 6 reasons we get sick</div>
+      <table>
+        <tr><th>#</th><th>Reason</th><th>Example</th></tr>
+        <tr><td>1</td><td>Pathogens evolve faster</td><td>HIV, flu</td></tr>
+        <tr><td>2</td><td>Mismatch (lag)</td><td>Obesity, diabetes</td></tr>
+        <tr><td>3</td><td>Trade-offs</td><td>Sickle, narrow pelvis</td></tr>
+        <tr><td>4</td><td>Constraints from history</td><td>Blind spot, back pain</td></tr>
+        <tr><td>5</td><td>Antagonistic pleiotropy</td><td>Testosterone → prostate cancer</td></tr>
+        <tr><td>6</td><td>Apparent disease IS adaptation</td><td>Fever, cough, morning sickness</td></tr>
+      </table>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"P-L-T-R-A-A: Pathogens Lag · Trade-offs Restrain · Antagonist Adaptations"</span></div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Virulence + hygiene</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Mobile host = Mild bug · Stationary/water host = Vicious bug"</span><span class="gloss">Cold (mild, mobile host) vs cholera (deadly, water-borne).</span></div>
+      <div class="emp"><span class="lbl">🐰 Myxoma + rabbits</span>Initial 99.8% kill rate evolved DOWN — dead rabbits = no mosquito feeding. Real-time virulence evolution.</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"More Clean = More Allergies, NOT Less"</span><span class="gloss">Hygiene hypothesis. No targets → immune system attacks pollen / self.</span></div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-label">Cancer = somatic evolution</div>
+      <div class="mnem"><span class="star">⭐</span><span class="quote">"Cancer is Darwin Inside You"</span><span class="gloss">Heritable variation (somatic mutations) + differential proliferation (selection) = adaptation of the tumor. Drug resistance in tumors mirrors antibiotic resistance.</span></div>
+      <div class="emp"><span class="lbl">🛡 p53</span><b>"Guardian of the Genome."</b> Tumor suppressor with antagonistic-pleiotropy character — prevents cancer early, may accelerate aging late.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================================================================== -->
+<!-- SECTION 21 · EXAM-DAY MENTAL FILE -->
+<!-- =================================================================== -->
+<section id="trap" data-topic="med">
+  <div class="sec-head">
+    <div class="sec-num">21</div>
+    <div class="sec-title">Exam-Day Mental File · trap-by-trap</div>
+    <div class="sec-blurb">"When Robbins asks WHICH IS NOT — slow down, eliminate one at a time."</div>
+  </div>
+  <div class="grid">
+    <div class="card col-12">
+      <table>
+        <tr><th style="width:38%">If you see…</th><th>Answer is…</th></tr>
+        <tr><td>Mule</td><td>Postzygotic / hybrid sterility</td></tr>
+        <tr><td>C-14 + dinosaur</td><td><b>WRONG</b> — switch to U-Pb or K-Ar</td></tr>
+        <tr><td>Permian</td><td>96%, biggest extinction</td></tr>
+        <tr><td>K-Pg</td><td>76%, dinosaurs, asteroid</td></tr>
+        <tr><td>"Antibiotics caused"</td><td><b>WRONG</b> — they SELECTED pre-existing variants</td></tr>
+        <tr><td>Trophy hunting</td><td>OPPOSES natural selection</td></tr>
+        <tr><td>"FOXP2 = language gene"</td><td><b>WRONG</b> — oversimplification</td></tr>
+        <tr><td>Lamarck</td><td>Wrong mechanism, RIGHT that change happens</td></tr>
+        <tr><td>Reptiles without birds</td><td>Paraphyletic, invalid</td></tr>
+        <tr><td>Anatomical = behavioral modernity</td><td><b>WRONG</b> — ~100 KY gap</td></tr>
+        <tr><td>"For the good of the species"</td><td>Group selection — REJECTED</td></tr>
+        <tr><td>"Acquired traits inherited"</td><td>Lamarck — WRONG</td></tr>
+        <tr><td>"Big H predicts response"</td><td><b>WRONG</b> — only h² (small h) does</td></tr>
+        <tr><td>"2pq = homozygote"</td><td><b>WRONG</b> — 2pq = HETEROZYGOTE</td></tr>
+        <tr><td>"Selection ⇒ Evolution"</td><td><b>WRONG</b> — needs heritability</td></tr>
+        <tr><td>"a and c" / "all of the above"</td><td>Often correct when present</td></tr>
+      </table>
+      <div class="mnem" style="margin-top:10px"><span class="star">🔥</span><span class="quote">"Every mnemonic · every trap · every lecture · walk in chanting — crush it."</span></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>
