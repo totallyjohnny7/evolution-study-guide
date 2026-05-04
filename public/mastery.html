@@ -2067,7 +2067,7 @@ function beginRun(cfg) {
   });
   let activePool = filteredPool.length ? filteredPool : pool;
   shuffle(activePool);
-  const cap = cfg.type === 'warmup' ? 12 : (cfg.type === 'application' ? 14 : 30);
+  const cap = cfg.type === 'warmup' ? 12 : (cfg.type === 'application' ? 14 : activePool.length);
   activePool = activePool.slice(0, cap);
 
   if (!activePool.length) { toast('No cards to run for this block.'); return; }
@@ -2080,7 +2080,7 @@ function beginRun(cfg) {
 
   currentRun = {
     cfg: cfg, pool: activePool,
-    cycle: 1, cycleMax: 3,
+    cycle: 1, cycleMax: 1,
     cardsThisCycle: activePool.slice(),
     correctCount: 0, wrongCount: 0,
     streak: 0, xp: 0, totalKnown: 0, totalSeen: 0,
@@ -2222,7 +2222,8 @@ function runMatchRound(host, secs, full) {
     tiles.forEach(function (t) {
       const el = document.createElement('div');
       el.className = 'match-tile ' + t.kind;
-      el.textContent = t.text.length > 80 ? t.text.slice(0, 78) + '…' : t.text;
+      const _maxLen = t.kind === 'term' ? 600 : 240;
+      el.textContent = t.text.length > _maxLen ? t.text.slice(0, _maxLen - 2) + '…' : t.text;
       const ovl = document.createElement('div'); ovl.className = 'tile-overlay'; ovl.textContent = t.text;
       el.appendChild(ovl);
       el.dataset.pairId = t.pairId; el.dataset.kind = t.kind;
