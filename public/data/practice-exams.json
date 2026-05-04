@@ -1,0 +1,1444 @@
+{
+  "exams": [
+    {
+      "id": "Final-A",
+      "title": "Practice Final — Cumulative · Variation A",
+      "subtitle": "30 MC (3 pts each) + 4 short answer · ~50 min · cumulative L01–L20",
+      "year_style": "Cumulative",
+      "mc": [
+        {
+          "n": 1,
+          "q": "If alleles at a locus act additively, the phenotype of an Aa heterozygote is most likely:",
+          "choices": [
+            "Identical to AA homozygote.",
+            "Wholly different from either homozygote.",
+            "Identical to aa homozygote.",
+            "Intermediate between AA and aa."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 2,
+          "q": "On a reaction-norm graph (phenotype on y-axis, environment on x-axis), what does a horizontal line for a given genotype indicate?",
+          "choices": [
+            "There is genotype-by-environment interaction.",
+            "The trait is environmentally determined and not genetic.",
+            "The genotype is plastic — a horizontal line means NO change",
+            "The genotype is not plastic"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 3,
+          "q": "On Ram Mountain, bighorn sheep were heavily trophy-hunted for large-horned males. Over decades, average horn size in the population DECREASED. The most likely cause is:",
+          "choices": [
+            "Selective hunting of large-horned individuals removed those phenotypes from the breeding pool",
+            "Sheep with large horns voluntarily hid them.",
+            "Random drift in a large population.",
+            "Climate change shrank horns."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 4,
+          "q": "An island has unpredictable resource availability — sometimes abundant, often scarce. Selection on this island would most likely favor:",
+          "choices": [
+            "Producing many small offspring as a bet-hedging strategy.",
+            "Eliminating reproduction entirely.",
+            "Producing few, large, well-provisioned offspring (K-strategy).",
+            "Producing exactly one offspring per lifetime."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 5,
+          "q": "Most cancers occur in older individuals. From an evolutionary perspective, why has selection failed to eliminate cancer susceptibility?",
+          "choices": [
+            "Cancer is contagious in some species.",
+            "Cancer was unknown in ancestral populations.",
+            "All organisms have an upper age limit.",
+            "Selection's strength declines with age"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 6,
+          "q": "Acetylation of histone tails generally:",
+          "choices": [
+            "Triggers degradation of the protein the gene encodes.",
+            "Causes alternative splicing of the resulting mRNA.",
+            "Tightens chromatin and represses transcription.",
+            "Loosens chromatin and promotes transcription."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 7,
+          "q": "In which scenario does NATURAL SELECTION OCCUR but NO EVOLUTION result?",
+          "choices": [
+            "A population shows heritable variation in beak depth, and large-beaked birds reproduce more during a drought.",
+            "Two populations are separated by a mountain range and experience different selective pressures.",
+            "A herd of cattle has variation in milk yield due entirely to feed differences (h² = 0)",
+            "Bacteria exposed to antibiotics develop resistance through mutation."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 8,
+          "q": "Which of the following is a HYPOTHESIS rather than a scientific theory?",
+          "choices": [
+            "The cell theory — cell theory is",
+            "The germ theory of disease.",
+            "Antibiotic-resistant strains will increase in frequency in hospitals where antibiotics are heavily used.",
+            "Evolution by natural selection."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 9,
+          "q": "Hospitals that heavily use a particular antibiotic see rising rates of resistance to that antibiotic. Which evolutionary mechanism is most directly responsible?",
+          "choices": [
+            "Natural selection on rare resistant mutants that arise independently of the antibiotic.",
+            "Lamarckian inheritance — bacteria acquire resistance from exposure and pass it to offspring.",
+            "Mutation rate increases when antibiotics are present, generating resistance on demand.",
+            "Genetic drift — random change in a small bacterial population."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 10,
+          "q": "Earth is approximately how old, based on radiometric dating?",
+          "choices": [
+            "100 million years",
+            "4.568 billion years",
+            "13.8 billion years",
+            "4.568 million years"
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 11,
+          "q": "PROTEIN PROMISCUITY refers to:",
+          "choices": [
+            "Proteins frequently interacting with foreign DNA.",
+            "Proteins binding multiple partners with equal strength.",
+            "Proteins that move freely between cellular compartments.",
+            "Proteins having weak side-activities beyond their primary function"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 12,
+          "q": "Salmon reproduce once in a single massive spawning event and die shortly afterward (semelparity). What life-history logic best explains this strategy?",
+          "choices": [
+            "Multiple breeding events are forbidden by Pacific Ocean conditions.",
+            "Salmon are too dumb to live longer than one breeding season.",
+            "Adult salmon survival is so low after migration that maximum effort in a single reproductive bout outperforms hedging across multiple bouts.",
+            "Salmon are unable to reproduce more than once due to a genetic defect."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 13,
+          "q": "Inbreeding depression in a small population arises because:",
+          "choices": [
+            "Inbreeding increases homozygosity",
+            "Inbreeding only affects sexually selected traits.",
+            "Inbreeding causes new mutations.",
+            "Inbreeding directly reduces population size."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 14,
+          "q": "Two islands have identical species counts (50 species each). Island A has high immigration and high extinction; Island B has low immigration and low extinction. Which statement is true?",
+          "choices": [
+            "Standing diversity differs; turnover rate is the same.",
+            "Standing diversity is the same",
+            "Neither matters because there are 50 species on each.",
+            "Both standing diversity and turnover differ."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 15,
+          "q": "Whales have small, internal pelvic bones that don't articulate with the spine. What does this best illustrate?",
+          "choices": [
+            "Pelvic bones formed by chance during whale development.",
+            "Whales recently developed a pelvis through convergent evolution with mammals.",
+            "Whales evolved from terrestrial ancestors that had functional pelvic skeletons",
+            "These bones support the whale's swimming musculature in a major way."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 16,
+          "q": "Two populations of squirrels are separated when a mountain range rises between them. Over time, they diverge and become reproductively incompatible. This is:",
+          "choices": [
+            "Allopatric speciation",
+            "Sympatric speciation.",
+            "Peripatric speciation only.",
+            "Parapatric speciation."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 17,
+          "q": "Which of the following best defines biological evolution?",
+          "choices": [
+            "An individual organism becoming better adapted over its lifetime.",
+            "Change in the heritable traits of a population across generations.",
+            "Progressive improvement of organisms toward greater complexity.",
+            "Random variation among individuals within a single generation."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 18,
+          "q": "Why is 'evolution happens' a poor scientific hypothesis even though evolution is well supported?",
+          "choices": [
+            "It is an example of inheritance of acquired characteristics.",
+            "It is religious rather than scientific.",
+            "It is too broad — it does not specify what observations would prove it wrong.",
+            "It is not supported by any evidence."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 19,
+          "q": "The Red Queen hypothesis proposes that sexual reproduction is favored because:",
+          "choices": [
+            "Predators preferentially attack asexual species.",
+            "Sex makes reproduction faster than asexual processes.",
+            "Sexual reproduction reduces parental investment in each offspring.",
+            "Hosts must constantly evolve to keep up with rapidly evolving parasites"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 20,
+          "q": "Closely related plant lineages on South America and Africa share an ancestor that lived ~120 MYA. The most likely explanation is:",
+          "choices": [
+            "Convergent evolution producing similar plants.",
+            "Long-distance bird-mediated seed transport at the species' age.",
+            "Recent dispersal across the Atlantic Ocean.",
+            "Vicariance — the lineage was once continuous on Gondwana before South America and Africa separated."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 21,
+          "q": "'Lucy' is a famous specimen of which species?",
+          "choices": [
+            "Australopithecus afarensis",
+            "Sahelanthropus tchadensis",
+            "Homo neanderthalensis",
+            "Homo erectus"
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 22,
+          "q": "The Devonian period (~416–359 MYA) is most associated with which biological event?",
+          "choices": [
+            "The first dinosaurs.",
+            "Diversification of fishes and the origin of land vertebrates (early tetrapods).",
+            "The Cambrian explosion.",
+            "The first land plants."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 23,
+          "q": "Which of the following is NOT one of the five assumptions of Hardy-Weinberg equilibrium?",
+          "choices": [
+            "Random mating",
+            "Infinite population size",
+            "Equal allele frequencies",
+            "No mutation"
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 24,
+          "q": "On a phylogenetic tree, two taxa are 'more closely related' to each other than to a third when:",
+          "choices": [
+            "Their lineages have evolved at similar rates.",
+            "Their branches end closer together horizontally on the page.",
+            "They share a more recent common ancestor (a more shallow node) than either does with the third.",
+            "They share more morphological similarities overall."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 25,
+          "q": "Worker honey bees forgo reproduction and help raise their queen's offspring. From an inclusive-fitness perspective, this makes sense because:",
+          "choices": [
+            "Workers are sterile and incapable of reproduction.",
+            "Workers gain inclusive fitness by helping raise sisters (in haplodiploid systems",
+            "Group selection at the colony level overrides individual fitness.",
+            "Workers are forced into helping by the queen and have no choice."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 26,
+          "q": "Why did the dark (melanic) form of Biston betularia rise to dominance in industrial regions of England?",
+          "choices": [
+            "Polluted air directly killed light-colored moths through respiratory toxicity.",
+            "Bird predators were more likely to spot light moths against soot-darkened tree trunks",
+            "Pollution induced melanism in moths during their lifetime.",
+            "Moths actively chose darker resting sites in polluted areas."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 27,
+          "q": "INCLUSIVE FITNESS is best defined as:",
+          "choices": [
+            "Average fitness of an individual's species.",
+            "The total number of allele copies an individual passes on",
+            "The fitness of the entire population.",
+            "The number of offspring an individual produces."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 28,
+          "q": "Which of the following best illustrates coevolution (rather than mere coexistence or convergence)?",
+          "choices": [
+            "Two species of cactus in the same desert evolving similar water-storage tissue.",
+            "Two unrelated frogs in different continents evolving the same toxic compound.",
+            "Different bird species nesting in the same forest without interacting.",
+            "A predator and its prey both evolving faster running speeds in response to one another."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 29,
+          "q": "Which of the following groups is the Biological Species Concept LEAST well suited to?",
+          "choices": [
+            "Sexual birds.",
+            "Sexual mammals.",
+            "Asexual bacteria.",
+            "Sexual amphibians."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 30,
+          "q": "Male elk grow large antlers used in physical combat with rival males during the breeding season. This is primarily an example of:",
+          "choices": [
+            "Sexual conflict — sexual conflict is between",
+            "Intrasexual selection (same-sex competition).",
+            "Intersexual selection (mate choice).",
+            "Sexual cooperation — combat is competitive, not"
+          ],
+          "ans": "B"
+        }
+      ],
+      "sa": [
+        {
+          "n": 1,
+          "q": "Evolution of complex adaptations like the vertebrate eye seems to require many coordinated changes. Explain (a) how STEPWISE GRADUAL EVOLUTION can build such structures; (b) the role of REGULATORY mutations; (c) the role of GENE DUPLICATION; (d) why complex adaptations are typically IMPERFECT.",
+          "ans": "(a) Complex adaptations build by STEPWISE accumulation of small mutational changes, each conferring some fitness advantage. The vertebrate eye evolved through a sequence — light-sensitive patch → cupped patch → pinhole eye → lensed eye — and each intermediate stage exists in living organisms today and is functional in its own context. (b) Many morphological changes come from CIS-REGULATORY mutations that alter WHEN and WHERE genes are expressed, without changing the proteins themselves. This rewires existing toolkits (e.g., Hox expression boundaries) to produce novel body plans. (c) GENE DUPLICATION creates redundant copies; relaxed selection on one copy lets it accumulate mutations and evolve new functions (neofunctionalization) or subdivide ancestral roles (subfunctionalization). (d) Complex adaptations are IMPERFECT because selection works only on what's available — historical legacy, developmental constraints, and trade-offs limit what can evolve. The vertebrate retina has its photoreceptors backward (light passes through neurons before reaching them) — a quirk of history, not optimal design."
+        },
+        {
+          "n": 2,
+          "q": "Describe what evidence the Grants needed to demonstrate that beak-depth evolution in Geospiza fortis after the 1977 drought was caused by natural selection. Name three specific kinds of evidence.",
+          "ans": "First, the Grants needed to show that beak-depth VARIATION existed in the pre-drought population. Second, they needed to show that variation was HERITABLE — using parent-offspring regressions to demonstrate that offspring beak depths predictably tracked their parents'. Third, they needed to show DIFFERENTIAL SURVIVAL: birds with deeper beaks survived the drought at higher rates because they could crack large seeds; and they needed to show that the next generation had measurably deeper beaks on average — the actual evolutionary RESPONSE to selection."
+        },
+        {
+          "n": 3,
+          "q": "Briefly explain what Dobzhansky's 1973 quote — 'Nothing in biology makes sense except in the light of evolution' — is claiming, and give one concrete example of a biological phenomenon that requires evolutionary thinking to explain.",
+          "ans": "Dobzhansky meant that evolution is the unifying theory of biology — the framework that ties together molecular, cellular, organismal, and ecological observations into a coherent whole. Without evolution, the patterns biologists observe are just disconnected facts. Example: antibiotic resistance in bacterial populations only makes sense as natural selection acting on heritable mutations conferring resistance — the mutation is random, but the selection is non-random, and the rapid spread reflects differential reproduction."
+        },
+        {
+          "n": 4,
+          "q": "The Biological Species Concept (BSC) defines species by reproductive isolation. Give one strength and two specific limitations of the BSC, and name an alternative species concept that handles each limitation.",
+          "ans": "The strength of the BSC (Mayr) is that it grounds species in a clear, testable evolutionary mechanism — gene flow — and is operational for most sexually-reproducing animals. Limitations: (1) The BSC fails for ASEXUAL organisms like bacteria and parthenogenetic lizards, where there's no interbreeding to test reproductive isolation against — these are typically classified using morphological or phylogenetic species concepts. (2) The BSC fails for FOSSILS, since you can't test interbreeding between extinct populations — paleontologists use the morphological species concept or phylogenetic species concept. Additional weakness (bonus): the BSC can be ambiguous when populations occasionally hybridize but maintain mostly distinct lineages."
+        }
+      ]
+    },
+    {
+      "id": "Final-B",
+      "title": "Practice Final — Cumulative · Variation B",
+      "subtitle": "30 MC (3 pts each) + 4 short answer · ~50 min · cumulative L01–L20",
+      "year_style": "Cumulative",
+      "mc": [
+        {
+          "n": 1,
+          "q": "Tall and short individuals in a wildflower population produce different numbers of seeds, but height in this species is determined entirely by soil nutrients (no genetic component). Across many generations, will the population evolve to be taller?",
+          "choices": [
+            "Yes — but only if selection pressure is strong enough.",
+            "No — but only because the population is not large enough.",
+            "No — selection requires heritable variation, and there is none.",
+            "Yes — natural selection is acting on height, so the population will evolve."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 2,
+          "q": "Florida panthers (a remnant subpopulation of cougars) suffered severe inbreeding depression. Conservation managers introduced cougars from Texas. The Florida population's fitness improved significantly. This intervention is called:",
+          "choices": [
+            "Convergent evolution.",
+            "Sympatric speciation.",
+            "Captive breeding.",
+            "Genetic rescue."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 3,
+          "q": "Lamarck's most famous proposed mechanism of evolution was:",
+          "choices": [
+            "Reproductive isolation between populations.",
+            "Genetic drift in small populations.",
+            "Inheritance of characteristics acquired during an individual's lifetime.",
+            "Natural selection of heritable variation."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 4,
+          "q": "A non-toxic hoverfly evolves yellow-and-black bands resembling a stinging wasp. Predators avoid both. As the hoverfly population grows so that hoverflies become MORE COMMON than wasps, what is most likely to happen?",
+          "choices": [
+            "Predator avoidance becomes stronger because the warning signal is more frequent.",
+            "Predator avoidance breaks down because most yellow-and-black insects are actually palatable.",
+            "Both species converge further on each other's appearance (Müllerian mimicry).",
+            "The hoverfly population stabilizes due to the ESS payoff structure."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 5,
+          "q": "Which statement best describes the pre-Darwinian Great Chain of Being?",
+          "choices": [
+            "A fixed hierarchical ladder placing humans at the top and lower forms at the bottom",
+            "A theological argument that God created species in series over time.",
+            "A geological framework explaining extinction events.",
+            "An early evolutionary tree showing common ancestry of organisms."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 6,
+          "q": "Why might captive-bred animals released into the wild have lower fitness than their wild counterparts?",
+          "choices": [
+            "Captive breeding produces genetically inferior offspring.",
+            "Captive environments impose unique selection pressures (relaxed predation",
+            "Captive breeding always works perfectly.",
+            "Wild and captive animals are different species."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 7,
+          "q": "After the 1977 drought on Daphne Major, the medium ground finch population shifted toward deeper beaks. The Grants concluded this was natural selection because:",
+          "choices": [
+            "The drought directly caused beaks to grow.",
+            "All small-beaked birds happened to die randomly.",
+            "Birds physically modified their beaks to deal with hard seeds.",
+            "Beak depth was heritable"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 8,
+          "q": "Why don't cheetahs have BOTH the speed of a sprinter AND the heat tolerance of a slow-walking lion?",
+          "choices": [
+            "Cheetahs are still actively evolving toward both.",
+            "Mutations for both traits never occurred.",
+            "Trade-offs: high-speed sprinting generates body heat that exceeds heat dissipation capacity",
+            "Lion alleles cannot be transferred to cheetahs."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 9,
+          "q": "In a population of 200 diploid individuals, the genotype counts are 50 AA, 100 Aa, and 50 aa. What is the frequency of allele A?",
+          "choices": [
+            "0.75",
+            "0.50",
+            "0.40",
+            "0.25"
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 10,
+          "q": "Species in which females mate with multiple males within a single breeding cycle tend to evolve relatively LARGE TESTES compared to species with strictly monogamous mating. The most likely explanation is:",
+          "choices": [
+            "Sperm competition — males who produce more sperm have higher chances of fertilizing ova when ejaculate from rival males is also present.",
+            "Larger testes are required for hormone signaling.",
+            "Larger testes evolved randomly via drift — the pattern is too strong and consistent across",
+            "Larger testes in polyandrous species support larger overall body size."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 11,
+          "q": "Two related fly species court at different times of day, so they rarely encounter each other. This is best classified as:",
+          "choices": [
+            "Prezygotic isolation — temporal.",
+            "Prezygotic isolation — mechanical.",
+            "Postzygotic isolation — hybrid sterility.",
+            "Postzygotic isolation — hybrid breakdown."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 12,
+          "q": "Life-history trade-offs exist because:",
+          "choices": [
+            "Resources are finite; energy spent on one trait cannot also be spent on another.",
+            "Selection has not yet eliminated trade-offs — given enough time, all could be optimized simultaneously.",
+            "Trade-offs are a textbook simplification that doesn't apply in nature.",
+            "Organisms have unlimited resources but choose to allocate them strategically."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 13,
+          "q": "After the UK's Clean Air Act reduced pollution, peppered moth populations shifted back toward the light morph. This best illustrates:",
+          "choices": [
+            "Selection direction can reverse when the environment changes.",
+            "Mutations had to occur to produce the light morph.",
+            "Genetic drift is more powerful than selection.",
+            "Selection direction is fixed once a trait evolves."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 14,
+          "q": "Radiometric dating works by measuring:",
+          "choices": [
+            "The total amount of radioactivity in a rock.",
+            "The depth at which a rock is buried.",
+            "The color of mineral inclusions in the rock.",
+            "The ratio of a parent isotope to its daughter (decay product)"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 15,
+          "q": "Two full siblings share a coefficient of relatedness r equal to:",
+          "choices": [
+            "0.5",
+            "0.125",
+            "0.25",
+            "1.0"
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 16,
+          "q": "Horses and donkeys mate and produce viable offspring (mules), but mules are sterile. This is best classified as:",
+          "choices": [
+            "Prezygotic isolation — behavioral.",
+            "Postzygotic isolation — hybrid sterility.",
+            "Postzygotic isolation — hybrid inviability.",
+            "Prezygotic isolation — gametic."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 17,
+          "q": "Why does aggressive chemotherapy that initially shrinks a tumor often lead to relapse with drug-resistant cancer?",
+          "choices": [
+            "Chemotherapy is a strong selective pressure",
+            "Chemotherapy causes new cancer mutations.",
+            "The drug stops working after a few weeks regardless.",
+            "Cancers learn from chemotherapy."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 18,
+          "q": "Which of the following is NOT one of the 'Big Five' mass extinctions?",
+          "choices": [
+            "End-Cretaceous / K-Pg (~66 MYA).",
+            "End-Pleistocene (~11 KYA megafauna extinction).",
+            "End-Permian (~252 MYA).",
+            "End-Triassic (~201 MYA)."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 19,
+          "q": "A trait has a large selection differential S but heritability h² = 0. What is the predicted response to selection R?",
+          "choices": [
+            "Equal to S, since selection is strong.",
+            "Negative — the population evolves the opposite way.",
+            "Half of S, on average.",
+            "R = 0, regardless of S."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 20,
+          "q": "In a Hawk-Dove game, why doesn't a population evolve to be entirely Hawks (always-aggressive)?",
+          "choices": [
+            "When Hawks are common, Hawk-Hawk fights inflict heavy costs",
+            "All-Hawk populations are never possible due to genetic constraints.",
+            "Doves are intrinsically more fit in all environments.",
+            "Group selection penalizes aggressive populations."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 21,
+          "q": "The traditional group 'Reptilia' (turtles, lizards, snakes, crocodiles) excludes birds. Birds, however, are descended from theropod dinosaurs, nested within Reptilia by descent. What kind of group is traditional 'Reptilia'?",
+          "choices": [
+            "Diphyletic — has exactly two ancestral origins.",
+            "Polyphyletic — members lack an immediate common ancestor.",
+            "Paraphyletic — includes a common ancestor and SOME but not all of its descendants.",
+            "Monophyletic — it's a clade — a clade includes ALL descendants"
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 22,
+          "q": "Fisherian runaway sexual selection refers to:",
+          "choices": [
+            "Mutation pressure generating new ornament traits.",
+            "A positive-feedback process where female preference for a male trait and the trait itself co-amplify over generations",
+            "Predators learning to avoid mating displays of unpalatable species.",
+            "Loss of all sexual ornaments due to high predation."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 23,
+          "q": "Influenza virus rapidly evolves resistance to antiviral drugs. Which statement best captures the role of mutation in this process?",
+          "choices": [
+            "Antiviral exposure causes the virus to mutate toward resistance.",
+            "The drug induces directed mutations only in the genes that confer resistance.",
+            "Mutations conferring resistance arise by chance independently of drug presence",
+            "Resistance is acquired during the host's lifetime and passed to offspring viruses through epigenetic inheritance."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 24,
+          "q": "The same Hox genes pattern the anterior-posterior axis of fruit flies, mice, and humans. What is the strongest evolutionary inference from this fact?",
+          "choices": [
+            "Hox genes evolved independently in flies, mice, and humans through convergence.",
+            "Insects and mammals are equally complex — hox conservation is about toolkit, not complexity.",
+            "Hox genes were present in the common ancestor of bilaterian animals and have been conserved over hundreds of millions of years.",
+            "Hox genes are randomly distributed across animal genomes."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 25,
+          "q": "The Cambrian explosion (~541 MYA) refers to:",
+          "choices": [
+            "The first appearance of plants.",
+            "A nuclear-scale extinction event in the Cambrian.",
+            "A volcanic eruption that ended the Cambrian.",
+            "The rapid (~20 MYR) appearance of most modern animal phyla in the fossil record."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 26,
+          "q": "Why did mammals undergo a major adaptive radiation after the K-Pg extinction?",
+          "choices": [
+            "Mammals appeared for the first time after the K-Pg.",
+            "Mammals were not affected by the asteroid impact.",
+            "Mammals had higher mutation rates after the extinction.",
+            "Mammals had been small and ecologically restricted"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 27,
+          "q": "An r-selected species would typically display which combination of traits?",
+          "choices": [
+            "One offspring per lifetime, no maturity stage, immortality.",
+            "Few offspring, late maturity, parental care, long lifespan.",
+            "Many offspring, early maturity, little parental care, short lifespan.",
+            "Sterile workers and a single reproductive queen."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 28,
+          "q": "A breeder selects heifers with the highest milk yield (mean = 25 kg/day) from a herd with mean 20 kg/day, and breeds them. Heritability of milk yield is h² = 0.4. What is the predicted mean milk yield of the next generation?",
+          "choices": [
+            "25 kg/day",
+            "23 kg/day",
+            "20 kg/day (no change)",
+            "22 kg/day"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 29,
+          "q": "Bipedal locomotion in the hominin lineage began approximately:",
+          "choices": [
+            "6–7 million years ago",
+            "200,000 years ago",
+            "100 million years ago",
+            "1 million years ago"
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 30,
+          "q": "Why is mutation considered the 'ultimate source' of genetic variation?",
+          "choices": [
+            "Mutation generates more variation than any other process.",
+            "Mutation is the only process that creates new alleles",
+            "Mutation is always beneficial in the long term.",
+            "Mutation is the only process that can change allele frequencies."
+          ],
+          "ans": "B"
+        }
+      ],
+      "sa": [
+        {
+          "n": 1,
+          "q": "Gene expression is regulated at four broadly different levels. Name each level and give one example of a regulatory mechanism that acts at that level.",
+          "ans": "PRE-TRANSCRIPTIONAL: DNA methylation at CpG sites silences gene access by altering chromatin packing. Histone modifications (e.g., histone acetylation opening chromatin, H3K9 methylation closing it) act at this level. TRANSCRIPTIONAL: transcription factors bind promoters and enhancers to recruit or block RNA polymerase II, controlling the rate of mRNA synthesis. POST-TRANSCRIPTIONAL: alternative splicing generates multiple mRNA isoforms from one gene; microRNAs bind complementary mRNAs to suppress translation or trigger degradation. POST-TRANSLATIONAL: protein phosphorylation activates or inactivates enzymes; ubiquitination tags proteins for degradation by the proteasome."
+        },
+        {
+          "n": 2,
+          "q": "Altruistic behavior — paying a cost to benefit another — should be selected against, yet it is widespread. (a) State Hamilton's rule. (b) Define each variable. (c) Explain why a worker bee helping its queen sister is favored even though the worker doesn't reproduce directly. (d) Explain why apparent altruism toward NON-kin requires a different mechanism.",
+          "ans": "(a) Hamilton's rule: rB > C. (b) r is the COEFFICIENT OF RELATEDNESS — the probability that two individuals share a given allele by recent common descent (e.g., siblings r = 0.5, half-siblings r = 0.25, first cousins r = 0.125). B is the BENEFIT to the recipient in additional offspring produced; C is the COST to the actor in offspring foregone. (c) Worker bees forgo direct reproduction to help raise their queen's offspring (their sisters). In haplodiploid hymenopterans, sisters share r = 0.75 — higher than mother-offspring r = 0.5. Helping a sister propagates more copies of shared alleles than helping own offspring would. The worker's INCLUSIVE FITNESS through her sisters exceeds what direct reproduction would give. (d) For apparent altruism toward unrelated individuals, r ≈ 0 and Hamilton's rule cannot be satisfied. These cases require different mechanisms: DIRECT RECIPROCITY (tit-for-tat), INDIRECT RECIPROCITY (reputation effects), MUTUALISTIC BYPRODUCTS (cooperation that's also self-beneficial), or PARTNER CHOICE."
+        },
+        {
+          "n": 3,
+          "q": "A population of snails has the following genotype counts at a shell-color locus: 90 RR, 20 Rr, 90 rr (total 200). (a) Calculate p (frequency of R) and q. (b) Compute the expected number of heterozygotes under Hardy-Weinberg. (c) Propose ONE mechanism that could explain the deviation between expected and observed heterozygote counts.",
+          "ans": "(a) Total alleles = 400. R copies = 2·90 + 1·20 = 200, so p = 0.5; q = 0.5. (b) Expected Rr under HWE = 2pq·N = 2·0.5·0.5·200 = 100 individuals. Observed = 20, so there are 80 fewer heterozygotes than expected — a substantial heterozygote deficit. (c) The most likely mechanism is INBREEDING or assortative mating by shell color (RR snails preferentially mating with RR, rr with rr). Either would push genotype frequencies toward homozygosity without changing allele frequencies. Alternatively, the Wahlund effect — if the 200 snails are actually two subpopulations pooled together, each of which has different allele frequencies, the combined sample would appear heterozygote-deficient."
+        },
+        {
+          "n": 4,
+          "q": "Pathogens evolve under medical pressure. (a) Explain why heavy antibiotic use selects for resistance using random-mutation logic. (b) Why does combination therapy slow this process? (c) How does mode of transmission shape virulence evolution? (d) Give one example of a directly-transmitted pathogen and one of a vector-borne or waterborne pathogen, predicting expected virulence trends.",
+          "ans": "(a) Antibiotic resistance evolves because resistance MUTATIONS OCCUR RANDOMLY at low frequency in large bacterial populations (independent of antibiotic exposure). When antibiotics are applied, susceptible bacteria die while rare resistant variants survive and multiply, raising the frequency of resistance — random mutation plus non-random selection. (b) COMBINATION THERAPY uses multiple drugs simultaneously. To survive, a bacterium must carry resistance to ALL drugs at once. The joint probability is the PRODUCT of individual probabilities — for three drugs at 10⁻⁹ each, joint resistance is 10⁻²⁷, vanishingly rare. (c) MODE OF TRANSMISSION shapes optimal virulence: directly-transmitted pathogens need a mobile, healthy host to spread, so very high virulence is selected against; vector-borne or waterborne pathogens transmit even from incapacitated hosts, so virulence can stay high. (d) EXAMPLES: the common cold (rhinovirus, directly respiratory) — predicted to evolve toward MODERATE virulence; cholera (waterborne) — predicted to evolve toward HIGH virulence. Improvements in clean water supply (Ewald) should select for less-virulent cholera strains."
+        }
+      ]
+    },
+    {
+      "id": "Final-C",
+      "title": "Practice Final — Quantitative-heavy · Variation C",
+      "subtitle": "30 MC (3 pts each) + 4 short answer · ~50 min · weighted toward HW · breeder’s eq · Hamilton",
+      "year_style": "Cumulative",
+      "mc": [
+        {
+          "n": 1,
+          "q": "HIV is treated with COMBINATION antiretroviral therapy (multiple drugs simultaneously) rather than a single drug. What is the evolutionary rationale?",
+          "choices": [
+            "Multiple drugs cure HIV completely.",
+            "Multiple drugs improve patient compliance.",
+            "Resistance to multiple drugs simultaneously",
+            "Multiple drugs work in different organs."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 2,
+          "q": "Total phenotypic variance V_P can be partitioned as:",
+          "choices": [
+            "V_P = h² + V_E",
+            "V_P = V_A · V_E",
+            "V_P = V_G + V_E",
+            "V_P = V_A + V_D + V_I + V_E"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 3,
+          "q": "Hamilton's rule for the evolution of altruism is:",
+          "choices": [
+            "C > rB",
+            "B > C",
+            "B = C",
+            "rB > C"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 4,
+          "q": "An Evolutionarily Stable Strategy (ESS) is best defined as:",
+          "choices": [
+            "A strategy that produces the most offspring on average.",
+            "A strategy that, when adopted by most members of a population, cannot be invaded by any rare alternative strategy.",
+            "The strategy that maximizes population mean fitness.",
+            "A strategy that always wins in head-to-head competition."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 5,
+          "q": "DNA methylation acts at which level of gene regulation?",
+          "choices": [
+            "Transcriptional",
+            "Post-transcriptional",
+            "Pre-transcriptional",
+            "Post-translational"
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 6,
+          "q": "Caterpillars now emerge earlier in spring due to warming. The bird species that depends on those caterpillars for chick food now arrives at the breeding grounds AFTER the caterpillar peak. This is called:",
+          "choices": [
+            "Convergent evolution.",
+            "Inclusive fitness.",
+            "Phenological mismatch.",
+            "Coevolution."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 7,
+          "q": "Side-blotched lizards have three male morphs whose frequencies cycle over years (Orange beats Blue, Blue beats Yellow, Yellow beats Orange). What does this real-world example illustrate?",
+          "choices": [
+            "Negative frequency-dependent selection",
+            "Sexual conflict between males and females.",
+            "Genetic drift in a small lizard population.",
+            "A single ESS dominates and the other strategies disappear."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 8,
+          "q": "Biomarkers are:",
+          "choices": [
+            "Radioactive isotopes used for dating.",
+            "Chemical signatures (often lipid molecules) preserved in ancient rocks that indicate the past presence of specific organisms.",
+            "Genetic markers used in modern populations.",
+            "Magnetic minerals showing past magnetic field reversals."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 9,
+          "q": "How did Charles Lyell's work most directly influence Darwin's theory of natural selection?",
+          "choices": [
+            "Lyell established that Earth was very old",
+            "Lyell catalogued the fossils Darwin used in On the Origin of Species.",
+            "Lyell discovered the genetic basis of inheritance, providing a mechanism.",
+            "Lyell argued that natural selection had been operating on geological scales."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 10,
+          "q": "Reinforcement of speciation occurs when:",
+          "choices": [
+            "Geographic isolation alone completes speciation.",
+            "Two species that have come back into secondary contact evolve stronger prezygotic isolation",
+            "Species independently evolve similar traits in different regions.",
+            "Polyploidy doubles chromosome counts — that's polyploidy, a mode of sympatric"
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 11,
+          "q": "A population has p = 0.4 (allele A) and q = 0.6 (allele a). Hardy-Weinberg expects 32% heterozygotes (2pq = 0.48 → 48%, sorry let me recompute: 2 × 0.4 × 0.6 = 0.48 = 48%). The population is observed to have only 20% heterozygotes. Which mechanism best explains this deviation?",
+          "choices": [
+            "Inbreeding or population subdivision",
+            "Strong selection against the AA homozygote",
+            "Heterozygote advantage (overdominance)",
+            "Recent admixture between populations"
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 12,
+          "q": "Evolutionary medicine differs from conventional medicine primarily by:",
+          "choices": [
+            "Asking WHY (in evolutionary terms) bodies are vulnerable to disease",
+            "Using evolutionary concepts to oppose vaccination and antibiotics.",
+            "Focusing only on infectious disease — evolutionary medicine spans infectious disease,",
+            "Replacing modern medical practice with paleolithic remedies."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 13,
+          "q": "Modern non-African humans typically carry approximately what fraction of Neanderthal-derived DNA?",
+          "choices": [
+            "20–30%",
+            "50%",
+            "1–4%",
+            "0%"
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 14,
+          "q": "Narrow-sense heritability is most directly estimated from:",
+          "choices": [
+            "The slope of offspring trait values regressed on the mid-parent trait value.",
+            "Counting the number of genes contributing to the trait.",
+            "The variance of trait values in the population.",
+            "The ratio of within-family to between-family variance."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 15,
+          "q": "In Drosophila, male seminal fluid contains compounds that increase female short-term egg-laying but reduce female lifespan. From a sexual-conflict perspective:",
+          "choices": [
+            "This is mutualism — both sexes benefit equally.",
+            "Females have evolved zero counter-adaptations to these compounds.",
+            "The compounds randomly evolved with no selective basis.",
+            "Male and female evolutionary interests diverge: males benefit from immediate fertilization even at long-term cost to females."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 16,
+          "q": "Biologically, the FEMALE in a sexually reproducing species is defined as:",
+          "choices": [
+            "The sex that bears live offspring.",
+            "The sex that has two X chromosomes.",
+            "The sex that displays mate choice.",
+            "The sex that produces the larger, costlier gamete."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 17,
+          "q": "Vampire bats regurgitate blood to feed roost-mates who failed to feed that night. Recipients later return the favor when they have surplus and the original donor goes hungry. This best illustrates:",
+          "choices": [
+            "Naïve group selection.",
+            "Inclusive fitness through close kinship only.",
+            "DIRECT reciprocity",
+            "Sexual conflict."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 18,
+          "q": "Which of the following is NOT considered part of the genome?",
+          "choices": [
+            "Pseudogenes.",
+            "Free amino acids in the cytoplasm.",
+            "Mobile genetic elements.",
+            "Protein-coding genes."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 19,
+          "q": "After a gene duplication event, one copy retains the ancestral function while the other accumulates mutations and eventually evolves a novel role. This is:",
+          "choices": [
+            "Pseudogenization",
+            "Gene conversion",
+            "Neofunctionalization",
+            "Subfunctionalization"
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 20,
+          "q": "Medawar's mutation accumulation theory of aging proposes that:",
+          "choices": [
+            "Each species has a fixed number of cell divisions.",
+            "Mutations are more common in older individuals.",
+            "Late-acting deleterious mutations escape selection and accumulate in the gene pool",
+            "Aging is caused by accumulation of toxins."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 21,
+          "q": "A population is started with 60% AA, 0% Aa, and 40% aa individuals. After one generation of random mating with all five HWE assumptions met, what are the genotype frequencies?",
+          "choices": [
+            "30% AA, 50% Aa, 20% aa",
+            "36% AA, 48% Aa, 16% aa",
+            "60% AA, 0% Aa, 40% aa (no change)",
+            "100% Aa (all heterozygous)"
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 22,
+          "q": "Female peahens prefer males with larger, more iridescent tails. Male peacock tails reduce survival (visible to predators, costly to grow). The persistence of the tail despite its survival cost is best explained by:",
+          "choices": [
+            "Intersexual selection (mate choice) outweighing the survival cost.",
+            "Group selection for showy populations — group selection isn't needed",
+            "Intrasexual selection — males physically fight with their tails.",
+            "Sexual conflict — females can't tell males with tails apart from males without."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 23,
+          "q": "The genetic basis of dark coloration in industrial peppered moths was identified as a transposon insertion in the cortex gene. What does this finding imply about the source of the melanic variant?",
+          "choices": [
+            "All cortex-gene insertions cause dark coloration in any species.",
+            "The transposon insertion was a pre-existing mutation present at low frequency before the Industrial Revolution",
+            "Pollution caused the transposon insertion through DNA damage.",
+            "The dark morph evolved entirely after pollution began."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 24,
+          "q": "Which formula correctly defines narrow-sense heritability h²?",
+          "choices": [
+            "h² = V_E / V_P",
+            "h² = V_G / V_P",
+            "h² = R · S",
+            "h² = V_A / V_P"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 25,
+          "q": "In Seychelles warblers, female offspring more often remain on natal high-quality territories as helpers, while males disperse. What does this pattern reveal?",
+          "choices": [
+            "Genetic differences between males and females in flight ability.",
+            "Females cannot survive away from natal territories.",
+            "Random dispersal independent of habitat quality.",
+            "Sex-biased dispersal driven by territory quality"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 26,
+          "q": "The selection differential S is best defined as:",
+          "choices": [
+            "The fitness advantage of the heterozygote over both homozygotes.",
+            "The proportion of phenotypic variance that is genetic.",
+            "The slope of offspring values regressed on parent values.",
+            "The difference between the mean trait value of breeders and the mean of the original population."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 27,
+          "q": "Mainland opossums (heavy predation) and island opossums (no predators) have evolved different life histories. Which prediction is most consistent with theory and observed data?",
+          "choices": [
+            "Mainland opossums mature earlier and produce larger litters",
+            "Mainland opossums mature later and produce smaller litters.",
+            "Mainland opossums age more slowly because predation 'tests' them.",
+            "Both populations have identical life histories because they are the same species."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 28,
+          "q": "On a plot of reaction norms for two genotypes, the lines have different slopes and cross each other. This indicates:",
+          "choices": [
+            "Genotype-by-environment interaction (V_G×E).",
+            "No genotype-by-environment interaction.",
+            "Both genotypes are canalized.",
+            "The trait has zero heritability."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 29,
+          "q": "The vertebrate eye and the cephalopod eye are both camera-type eyes with lens, retina, and pupil. They are best described as:",
+          "choices": [
+            "An example of horizontal gene transfer.",
+            "Convergent (analogous) structures",
+            "Vestigial structures — both eyes are functional,",
+            "Homologous structures inherited from a common eyed ancestor."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 30,
+          "q": "The Wallace Line is:",
+          "choices": [
+            "A line on a phylogenetic tree separating chordates from arthropods.",
+            "A faunal boundary in the Indonesian archipelago that separates Asian and Australasian biotas",
+            "A genetic marker used to date the human-chimpanzee split.",
+            "The boundary of Wallace's voyage on the HMS Beagle."
+          ],
+          "ans": "B"
+        }
+      ],
+      "sa": [
+        {
+          "n": 1,
+          "q": "Briefly describe the hominin evolutionary sequence from the chimpanzee split to modern humans. Include: (a) approximate time of the chimp-hominin split, (b) the FIRST major hominin innovation, (c) the genus that first left Africa, and (d) the approximate age of anatomically modern Homo sapiens.",
+          "ans": "(a) The hominin lineage diverged from chimpanzees approximately 6–7 MYA in Africa. (b) BIPEDALISM was the first major hominin trait — present in the earliest probable hominins (Sahelanthropus tchadensis from Chad, ~7 MYA; Ardipithecus, ~4.4 MYA). Brain enlargement came LATER in hominin evolution. (c) Homo erectus was the FIRST hominin to leave Africa, ~1.9 MYA, reaching as far as East Asia (Java, China) and Europe. (d) Anatomically modern Homo sapiens emerged in Africa ~300 KYA, with the major out-of-Africa dispersal ~70 KYA. After this dispersal, modern humans interbred with Neanderthals and Denisovans, contributing the ~1–4% archaic-human DNA found in modern non-African populations."
+        },
+        {
+          "n": 2,
+          "q": "Why does selection fail to eliminate aging? Briefly explain TWO theories that account for the persistence of senescence.",
+          "ans": "Two theories: (1) MUTATION ACCUMULATION (Medawar): selection becomes weaker at older ages because organisms have already reproduced; deleterious mutations whose effects manifest only late escape selection's filter and accumulate in the gene pool, producing senescence. (2) ANTAGONISTIC PLEIOTROPY (Williams): single genes can have beneficial effects early in life and harmful effects late. Selection favors them on net because the early benefit (boost to reproduction) outweighs the late cost (decline in old age). The cost of aging is the price of early-life adaptation. (A third theory, DISPOSABLE SOMA, frames aging as the result of an organism allocating finite resources between somatic maintenance and reproduction — investing in reproduction at the cost of long-term cell repair.)"
+        },
+        {
+          "n": 3,
+          "q": "Sexual reproduction has substantial costs. Name and briefly explain THREE benefits that have been proposed to outweigh those costs and explain why sex is widespread.",
+          "ans": "Three classical benefits of sex: (1) GENETIC DIVERSITY through recombination — sex shuffles alleles into novel combinations each generation, producing genetic variation on which selection can act. This is especially valuable when environments are fluctuating. (2) MULLER'S RATCHET avoidance — in asexual lineages, deleterious mutations accumulate irreversibly because there's no way to recreate the mutation-free class once it's lost. Sexual recombination can recreate clean genotypes, purging mutational load. (3) RED QUEEN dynamics — parasites coevolve rapidly with their hosts. Sexual recombination generates novel allele combinations that help hosts evade parasites that have adapted to last generation's common host genotypes. Despite the twofold cost of sex, these benefits collectively explain the widespread persistence of sexual reproduction."
+        },
+        {
+          "n": 4,
+          "q": "Explain the significance of the K-T (K-Pg) boundary. Include: (a) approximate date, (b) the main proposed cause, (c) the evidence supporting that cause, and (d) one major biological consequence.",
+          "ans": "The K-T (K-Pg) boundary marks the end-Cretaceous mass extinction ~66 million years ago. The main proposed cause is an ASTEROID IMPACT at the Chicxulub site on the Yucatán Peninsula. Evidence includes a globally distributed thin sediment layer enriched in IRIDIUM (rare in Earth's crust but common in meteorites), shocked-quartz grains, and the buried Chicxulub crater itself. The biological consequence: non-avian dinosaurs, ammonites, and many marine groups went extinct; the niches they occupied became available, leading to the rapid adaptive radiation of mammals (and birds, the surviving avian dinosaurs) over the following tens of millions of years."
+        }
+      ]
+    },
+    {
+      "id": "Final-D",
+      "title": "Practice Final — Conceptual-heavy · Variation D",
+      "subtitle": "30 MC (3 pts each) + 4 short answer · ~50 min · weighted toward species · phylogeny · sexual selection",
+      "year_style": "Cumulative",
+      "mc": [
+        {
+          "n": 1,
+          "q": "Two populations of guppies live in adjacent pools. Pool A has heavy predator presence; Pool B has no predators. What life-history difference would you predict?",
+          "choices": [
+            "Pool A guppies have longer lifespans because they're tougher.",
+            "Pool A guppies mature LATER and produce FEWER offspring.",
+            "Pool A guppies mature EARLIER and produce MORE offspring.",
+            "No difference — life history is genetically fixed."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 2,
+          "q": "Two related lizard species occur on different sides of a mountain range that uplifted ~10 MYA. The lizards' lineage split also dates to ~10 MYA. This pattern most likely reflects:",
+          "choices": [
+            "Convergent evolution — convergent evolution doesn't speak to phylogenetic split",
+            "Dispersal — the lizards crossed the mountain after it formed.",
+            "Drift in a small population — drift doesn't produce a coordinated split timed",
+            "Vicariance — the rising mountain split a previously continuous population."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 3,
+          "q": "Which hominin species was the FIRST to disperse out of Africa?",
+          "choices": [
+            "Australopithecus afarensis",
+            "Homo erectus",
+            "Homo sapiens",
+            "Homo neanderthalensis"
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 4,
+          "q": "Aphids develop into winged or wingless morphs depending on local population density. This is a classic example of:",
+          "choices": [
+            "Inheritance of acquired characteristics.",
+            "Independent assortment of alleles at multiple loci.",
+            "G×E interaction with no plasticity.",
+            "A polyphenic trait"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 5,
+          "q": "Antibiotic resistance in bacteria is a textbook example of natural selection because:",
+          "choices": [
+            "Resistance is acquired during a bacterium's lifetime and passed via cell division.",
+            "Antibiotics induce mutations toward resistance.",
+            "Resistance mutations occur randomly",
+            "Bacteria deliberately evolve resistance."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 6,
+          "q": "Sympatric speciation is most common in plants because of which mechanism?",
+          "choices": [
+            "Plants have shorter generation times.",
+            "Polyploidy — whole-genome duplication can immediately produce a reproductively isolated lineage in a single generation.",
+            "Plants have higher mutation rates than animals.",
+            "Plants are more mobile than animals."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 7,
+          "q": "Mayr's Biological Species Concept (BSC) defines a species as:",
+          "choices": [
+            "A group of actually or potentially interbreeding natural populations",
+            "Any group of organisms occupying the same niche.",
+            "A group of organisms with the same morphology.",
+            "The smallest monophyletic group identifiable by shared derived characters."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 8,
+          "q": "Researchers measure trait values, mark individuals, and follow them across years. They observe that birds with longer wings have higher survival. Which additional measurement is needed to predict an EVOLUTIONARY response?",
+          "choices": [
+            "Latitude of the population.",
+            "Heritability of wing length.",
+            "Total population size.",
+            "Mating system — mating system can"
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 9,
+          "q": "Biogeography is best defined as the study of:",
+          "choices": [
+            "The distribution of species and ecosystems in geographic space and through geological time.",
+            "Genetic differences within a single population.",
+            "How organisms differ chemically.",
+            "Climate change effects on individual organisms."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 10,
+          "q": "Type 2 diabetes is rare in traditional hunter-gatherer populations and prevalent in industrialized populations. Which evolutionary explanation best fits?",
+          "choices": [
+            "Mismatch — traits adaptive in ancestral environments (efficient fat storage",
+            "Industrialized populations have weaker immune systems.",
+            "Hunter-gatherers have higher mutation rates that prevent diabetes.",
+            "Hunter-gatherers do not have the genes for diabetes."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 11,
+          "q": "Muller's ratchet describes:",
+          "choices": [
+            "Loss of beneficial alleles by drift in small sexual populations.",
+            "The clicking sound of bacterial flagella.",
+            "A directional ratchet of beneficial mutations in sexual populations.",
+            "Irreversible accumulation of deleterious mutations in asexual populations"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 12,
+          "q": "Rough-skinned newts (Taricha) produce tetrodotoxin (TTX); garter snakes (Thamnophis) eat them. In some regions, snakes are highly TTX-resistant; in others, they have little resistance. What does this geographic variation suggest?",
+          "choices": [
+            "There is a coevolutionary geographic mosaic: 'hotspots' of intense reciprocal selection alternate with 'coldspots' of weak interaction.",
+            "Snake populations migrate between regions, equalizing resistance over time.",
+            "TTX evolved before snakes evolved resistance, and resistance is still spreading.",
+            "Coevolution is not actually occurring — the trait is just genetically variable."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 13,
+          "q": "What does the principle of faunal succession state?",
+          "choices": [
+            "Distinct fossil assemblages occur in a consistent vertical order in rock strata",
+            "Species can be ordered into a fixed hierarchy from simple to complex.",
+            "Each species evolves directly into the next; lineage is a straight line.",
+            "Species succeed each other in geographic space, with newer ones replacing older ones in the same habitat."
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 14,
+          "q": "Why is naïve group selection — the idea that traits evolve 'for the good of the species' — generally rejected in modern evolutionary biology?",
+          "choices": [
+            "Group benefits are physically impossible.",
+            "Species don't actually exist as discrete entities.",
+            "A 'cheater' that exploits cooperation has higher individual fitness than cooperators",
+            "Group selection only works when the cosmos approves."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 15,
+          "q": "Why does the common cold (respiratory, directly transmitted) tend to evolve toward MILDER virulence, while cholera (waterborne) does not face the same pressure?",
+          "choices": [
+            "The common cold has higher mutation rates.",
+            "Cholera bacteria are larger than cold viruses.",
+            "Directly transmitted pathogens need a healthy, mobile host to spread",
+            "The common cold evolved earlier than cholera."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 16,
+          "q": "All three of the following must be present for natural selection to produce evolution. Which is NOT required?",
+          "choices": [
+            "Differential survival or reproduction associated with the trait.",
+            "The trait must be heritable — required",
+            "Variation in a trait among individuals in the population.",
+            "The trait must benefit the species as a whole."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 17,
+          "q": "A microRNA binds to a complementary sequence in an mRNA and triggers its degradation. This is an example of:",
+          "choices": [
+            "Pre-transcriptional regulation",
+            "Post-transcriptional regulation",
+            "Post-translational regulation",
+            "Transcriptional regulation"
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 18,
+          "q": "When biologists say mutations are 'random,' they specifically mean:",
+          "choices": [
+            "Mutations only occur during environmental stress.",
+            "Mutations are unpredictable and cannot be studied scientifically.",
+            "Mutations occur at every base of the genome with equal probability.",
+            "Mutations are not directed toward producing adaptations that the organism needs."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 19,
+          "q": "Fisheries with minimum-size limits (only large fish kept, small ones returned) have led to evolution toward earlier maturation and smaller maximum size in many fish populations. Why?",
+          "choices": [
+            "Fish randomly become smaller over time.",
+            "Smaller fish have higher mutation rates.",
+            "Younger fish have lower nutritional needs.",
+            "Selection imposed by humans removes large individuals before they reproduce"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 20,
+          "q": "The largest mass extinction in Earth's history occurred at the:",
+          "choices": [
+            "Cambrian explosion, ~541 MYA — the Cambrian explosion is",
+            "End of the Cretaceous, killing all dinosaurs.",
+            "K-T (K-Pg) boundary, ~66 MYA, due to asteroid impact.",
+            "End of the Permian, ~252 MYA, eliminating ~95% of marine species."
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 21,
+          "q": "Which naturalist independently conceived natural selection and, by sending Darwin a letter outlining the idea in 1858, prompted Darwin to publish his work?",
+          "choices": [
+            "Thomas Malthus",
+            "Charles Lyell",
+            "Alfred Russel Wallace",
+            "Gregor Mendel"
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 22,
+          "q": "Which condition most strongly favors adaptive radiation?",
+          "choices": [
+            "Genetic drift in a single population.",
+            "Open ecological space (e.g.",
+            "High predation pressure.",
+            "A stable, fully occupied ecosystem."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 23,
+          "q": "You're trying to define a clade containing only mammals. 'Has a vertebral column' is a shared trait among all your candidate species. What is this character at the level of mammals?",
+          "choices": [
+            "Diagnostic of all mammals but not informative for non-mammalian relatives.",
+            "A synapomorphy uniting mammals — it's not novel to mammals",
+            "A symplesiomorphy — present in the deeper ancestor of all vertebrates",
+            "A homoplasy — independently evolved in different mammalian lineages."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 24,
+          "q": "Many bird species are now breeding earlier in spring than they did 50 years ago. This represents:",
+          "choices": [
+            "Hybridization between bird species.",
+            "A phenological shift",
+            "A purely behavioral choice with no evolutionary basis.",
+            "A speciation event — earlier breeding within"
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 25,
+          "q": "What is the 'twofold cost of sex' (Maynard Smith)?",
+          "choices": [
+            "Sexual reproduction produces twice as much genetic variation as asexual.",
+            "Sexual species have twice the mutation rate of asexual species.",
+            "A sexual female passes on only half as many of her genes per offspring (compared to an asexual female who would transmit all her genes).",
+            "Sexual reproduction takes twice as long as asexual reproduction."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 26,
+          "q": "Whose work using fossils and stratigraphy helped establish extinction as a real phenomenon?",
+          "choices": [
+            "William Smith",
+            "Charles Darwin",
+            "Alfred Russel Wallace",
+            "Jean-Baptiste Lamarck"
+          ],
+          "ans": "A"
+        },
+        {
+          "n": 27,
+          "q": "MHC genes show extreme polymorphism — some loci have >100 alleles in human populations. The most likely cause is:",
+          "choices": [
+            "Gene conversion homogenizing the locus.",
+            "Negative frequency-dependent (balancing) selection from coevolving pathogens",
+            "Random mutation alone, with no selection.",
+            "Genetic drift in large populations."
+          ],
+          "ans": "B"
+        },
+        {
+          "n": 28,
+          "q": "Critics sometimes object that 'half an eye is useless,' arguing complex traits like eyes can't evolve gradually. What is the strongest evolutionary response?",
+          "choices": [
+            "Eyes evolved in a single dramatic mutation.",
+            "The objection is correct, and eye evolution is genuinely mysterious.",
+            "Eyes only evolved once in evolutionary history.",
+            "Each intermediate stage (light-sensitive patch"
+          ],
+          "ans": "D"
+        },
+        {
+          "n": 29,
+          "q": "A hybrid zone exists where two species' ranges overlap and they interbreed, producing low-fitness hybrids. Does the existence of this hybrid zone disprove the species' status under the BSC?",
+          "choices": [
+            "Cannot be determined without additional evidence.",
+            "Yes — only completely non-interbreeding populations are species.",
+            "No — if hybrids have reduced fitness, gene flow remains limited",
+            "Yes — any interbreeding means they are the same species."
+          ],
+          "ans": "C"
+        },
+        {
+          "n": 30,
+          "q": "The Silurian period (~444–416 MYA) is best known for:",
+          "choices": [
+            "The K-T extinction event.",
+            "The origin of mammals.",
+            "The first land animals (e.g.",
+            "The first photosynthetic life."
+          ],
+          "ans": "C"
+        }
+      ],
+      "sa": [
+        {
+          "n": 1,
+          "q": "Reproductive isolation can be classified as prezygotic or postzygotic. (a) State the difference. (b) Give two examples of prezygotic isolation. (c) Give one example of postzygotic isolation. (d) Explain why reproductive isolation is central to the Biological Species Concept.",
+          "ans": "(a) PREZYGOTIC isolation acts BEFORE zygote formation, preventing fertilization. POSTZYGOTIC isolation acts AFTER zygote formation, reducing hybrid fitness. (b) Two prezygotic examples: TEMPORAL (e.g., two related plants flower at different times so pollen never crosses); BEHAVIORAL (e.g., different bird species have distinctive courtship songs that prevent inter-species recognition). Other prezygotic mechanisms include mechanical (incompatible reproductive structures), gametic (sperm/egg surface proteins don't match), and habitat (populations live in different microenvironments). (c) Postzygotic example: HYBRID STERILITY — horses and donkeys produce viable mules, but mules are sterile; the hybrid form exists but cannot reproduce. (d) Reproductive isolation is the heart of the BSC because the BSC defines species as populations that DON'T exchange genes. When two populations are reproductively isolated, gene flow stops, and they evolve independently — meeting Mayr's criterion for species status."
+        },
+        {
+          "n": 2,
+          "q": "Define standing diversity and turnover rate. Then explain how the equilibrium theory of island biogeography (MacArthur & Wilson) predicts the relationship between island size, distance from the mainland, and standing diversity.",
+          "ans": "STANDING DIVERSITY is the number of species present in a given area at a given time. TURNOVER RATE is the rate at which species enter (via origination or immigration) and leave (via extinction or emigration) the community. The MacArthur-Wilson EQUILIBRIUM THEORY OF ISLAND BIOGEOGRAPHY models standing diversity as the equilibrium between immigration (which DECREASES as more species are already present) and extinction (which INCREASES as more species are present). Two key predictions follow: (1) LARGER islands have lower per-species extinction rates (more individuals, more habitat heterogeneity) → higher equilibrium standing diversity. (2) Islands CLOSER to the mainland have higher immigration rates → higher equilibrium standing diversity. The two effects (size and distance) operate independently, so the highest diversity is on large near-mainland islands and the lowest on small remote islands."
+        },
+        {
+          "n": 3,
+          "q": "Match each key figure to their primary contribution to evolutionary thought, and briefly explain each contribution: (a) Lamarck, (b) Lyell, (c) Darwin, (d) Wallace.",
+          "ans": "(a) Lamarck proposed the INHERITANCE OF ACQUIRED CHARACTERISTICS — that traits gained during an individual's life are passed to offspring. The mechanism is wrong, but Lamarck deserves credit as the first to propose a systematic mechanism for evolutionary change. (b) Lyell, a geologist, argued for UNIFORMITARIANISM — that gradual, observable processes operating over DEEP TIME shaped Earth. He gave Darwin the temporal canvas needed for slow evolution to accumulate. (c) Darwin developed the theory of EVOLUTION BY NATURAL SELECTION through observations on the Beagle voyage and decades of subsequent work — variation + heritability + differential reproduction = evolutionary change. (d) Wallace INDEPENDENTLY CONCEIVED natural selection while working in the Malay Archipelago. His 1858 letter to Darwin is what finally spurred Darwin to publish, leading to the joint Darwin-Wallace paper that year."
+        },
+        {
+          "n": 4,
+          "q": "Endangered species face both demographic and genetic threats. Briefly describe (a) ONE genetic threat to small populations, (b) ONE conservation strategy that addresses it, (c) ONE example of human activity directly imposing selection on wild species, and (d) ONE example of mismatch between wild adaptation and modern conservation interventions.",
+          "ans": "(a) GENETIC THREAT: Inbreeding depression — small populations have more relatives mating, increasing homozygosity and exposing deleterious recessive alleles, lowering fitness. Florida panthers exemplified this with heart defects and reproductive failure. (b) STRATEGY: GENETIC RESCUE — introducing individuals from a related, healthier population to add variation and reduce inbreeding. The Texas-into-Florida cougar program restored panther fitness. (c) HUMAN-IMPOSED SELECTION: Fisheries-induced evolution — minimum-size limits remove large fish before they reproduce, selecting for earlier maturation and smaller body size in heavily fished populations. (d) MISMATCH: Captive-bred animals adapted to captivity (calm around humans, less predator-wary) often have reduced survival when released; well-designed programs minimize captivity-specific selection."
+        }
+      ]
+    }
+  ]
+}

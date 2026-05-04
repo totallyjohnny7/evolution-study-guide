@@ -1,0 +1,2091 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Mastery — BIOL 4230 Evolution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ff-display: 'Fraunces', 'Georgia', serif;
+  --ff-body: 'Fraunces', 'Georgia', serif;
+  --ff-ui: 'Inter', system-ui, sans-serif;
+  --ff-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --bg: #0c0e12;
+  --bg-elev: #14171d;
+  --bg-sunk: #090a0e;
+  --rule: #22262f;
+  --rule-strong: #2e333d;
+  --ink: #e6dfd0;
+  --ink-dim: #a59a83;
+  --ink-faint: #6b6353;
+  --ink-ghost: #3f3a32;
+  --accent: #c89b2e;
+  --accent-soft: #5b4412;
+  --accent-ink: #f1d278;
+  --correct: #5fa871;
+  --correct-soft: #1a2a1e;
+  --wrong: #c86462;
+  --wrong-soft: #2a1616;
+  --info: #7a8fa8;
+  --warn: #c89b2e;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+body.day-mode {
+  --bg: #f5f1e8;
+  --bg-elev: #ffffff;
+  --bg-sunk: #eae4d5;
+  --rule: #d4cdb8;
+  --rule-strong: #a89f85;
+  --ink: #1a1814;
+  --ink-dim: #4a4538;
+  --ink-faint: #7a7158;
+  --ink-ghost: #c4bba0;
+  --accent-soft: #f5e6c2;
+  --accent-ink: #6b4a0a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); color: var(--ink); }
+body {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+button { font-family: inherit; }
+input, textarea { font-family: inherit; font-size: 16px; }
+::selection { background: var(--accent); color: var(--bg); }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* CHROME */
+.chrome {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in oklab, var(--bg) 92%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
+}
+.chrome-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand-mark { font-style: italic; color: var(--accent); font-weight: 500; }
+.brand-sep { color: var(--ink-ghost); }
+.brand-sub {
+  font-family: var(--ff-ui);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+}
+.ch-nav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+  font-family: var(--ff-ui);
+  font-size: 13px;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+.ch-nav a {
+  color: var(--ink-dim);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: all .15s;
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  letter-spacing: 0.02em;
+}
+.ch-nav a:hover { color: var(--ink); background: var(--bg-elev); }
+.ch-nav a.active { color: var(--accent); }
+.icon-btn {
+  width: 36px; height: 36px;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink-dim);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all .15s;
+}
+.icon-btn:hover { color: var(--ink); border-color: var(--rule-strong); }
+.icon-btn svg { width: 14px; height: 14px; }
+
+/* APP */
+.app {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* HERO */
+.hero { padding: 56px 0 32px; border-bottom: 1px solid var(--rule); }
+.hero-kicker {
+  font-family: var(--ff-ui);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+.hero-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+.hero-sub {
+  font-size: clamp(15px, 2vw, 17px);
+  color: var(--ink-dim);
+  max-width: 640px;
+  line-height: 1.55;
+}
+.hero-meta {
+  margin-top: 22px;
+  display: flex;
+  gap: 22px;
+  font-family: var(--ff-ui);
+  font-size: 12px;
+  color: var(--ink-faint);
+  flex-wrap: wrap;
+}
+
+/* PLAN BOARD */
+.plan-board { padding: 36px 0 12px; }
+.section-h {
+  font-family: var(--ff-display);
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.section-sub {
+  color: var(--ink-faint);
+  font-family: var(--ff-ui);
+  font-size: 13px;
+  margin-bottom: 22px;
+  max-width: 640px;
+}
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.day-card {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  background: var(--bg-elev);
+}
+.day-card.today { border-color: var(--accent); }
+.day-kick {
+  font-family: var(--ff-ui);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+.day-card.today .day-kick { color: var(--accent); }
+.day-title {
+  font-family: var(--ff-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.block-list { display: flex; flex-direction: column; gap: 8px; }
+.block-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-family: var(--ff-ui);
+  font-size: 13px;
+  color: var(--ink-dim);
+  cursor: pointer;
+  transition: all .15s;
+  min-height: 48px;
+  user-select: none;
+}
+.block-row:hover { border-color: var(--rule-strong); color: var(--ink); }
+.block-row.done { opacity: .5; }
+.block-row.done .block-name { text-decoration: line-through; }
+.block-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--ink-ghost);
+  flex-shrink: 0;
+}
+.block-row.done .block-dot { background: var(--correct); }
+.block-name { font-weight: 500; flex: 1; }
+.block-meta { color: var(--ink-faint); font-size: 11px; }
+
+/* DECK GRID */
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+.deck-card {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  background: var(--bg-elev);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.deck-card-h {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.deck-name {
+  font-family: var(--ff-display);
+  font-size: 20px;
+  font-weight: 600;
+}
+.deck-count {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+.deck-desc {
+  font-family: var(--ff-ui);
+  font-size: 13px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+  flex: 1;
+}
+.deck-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.progress-bar {
+  height: 6px;
+  background: var(--bg-sunk);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width .3s;
+}
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+.deck-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* BUTTONS */
+.btn {
+  font-family: var(--ff-ui);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  transition: all .15s;
+  letter-spacing: 0.01em;
+  touch-action: manipulation;
+}
+.btn:hover { border-color: var(--rule-strong); }
+.btn.primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+.btn.primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+.btn.ghost { background: transparent; }
+.btn.danger { color: var(--wrong); border-color: var(--wrong-soft); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn-lg { padding: 14px 22px; font-size: 14px; min-height: 56px; }
+.btn-block { width: 100%; }
+
+/* RUNNER */
+.runner-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.runner-overlay.show { display: flex; }
+.runner-top {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+.runner-title {
+  font-family: var(--ff-display);
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: auto;
+}
+.runner-timer {
+  font-family: var(--ff-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-elev);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--rule);
+  font-variant-numeric: tabular-nums;
+}
+.runner-prog {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  color: var(--ink-dim);
+}
+.runner-body {
+  flex: 1;
+  padding: 24px 20px 40px;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+.cycle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ff-ui);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+  background: var(--bg-elev);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--rule);
+  margin-bottom: 16px;
+}
+.cycle-pill .accent { color: var(--accent); }
+
+/* MATCH GRID */
+.match-pool {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.match-batch-h {
+  font-family: var(--ff-ui);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+}
+.match-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+.match-tile {
+  background: var(--bg-elev);
+  border: 1.5px solid var(--rule);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  cursor: pointer;
+  font-family: var(--ff-ui);
+  font-size: 13px;
+  line-height: 1.35;
+  user-select: none;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  transition: transform .1s, border-color .1s, background .15s;
+  word-break: break-word;
+  touch-action: manipulation;
+  position: relative;
+}
+.match-tile.term { font-weight: 600; color: var(--accent); }
+.match-tile.def { color: var(--ink); }
+.match-tile:hover { border-color: var(--accent); }
+.match-tile.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: scale(1.02);
+}
+.match-tile.matched {
+  opacity: .25;
+  pointer-events: none;
+  background: var(--correct-soft);
+  border-color: var(--correct);
+}
+.match-tile.wrong {
+  background: var(--wrong-soft);
+  border-color: var(--wrong);
+  animation: shake .35s;
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+.tile-overlay {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--bg-sunk);
+  border: 1px solid var(--rule-strong);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink);
+  z-index: 5;
+  box-shadow: 0 6px 20px rgba(0,0,0,.45);
+  display: none;
+  font-weight: 400;
+}
+.match-tile.show-full .tile-overlay { display: block; }
+
+/* FLASHCARD */
+.fc-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 18px;
+}
+.fc-front {
+  font-family: var(--ff-display);
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.fc-back {
+  font-family: var(--ff-body);
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.55;
+  color: var(--ink-dim);
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+.fc-tag {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.fc-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.fc-actions.show-back { grid-template-columns: 1fr 1fr 1fr; }
+.fc-rate {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+.fc-rate .btn { font-size: 12px; padding: 12px 8px; }
+
+/* APPLICATION */
+.app-prompt {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  margin-bottom: 16px;
+}
+.app-prompt-h {
+  font-family: var(--ff-ui);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.app-prompt-body {
+  font-family: var(--ff-display);
+  font-size: clamp(17px, 2.4vw, 20px);
+  line-height: 1.4;
+  color: var(--ink);
+}
+.app-input {
+  width: 100%;
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 110px;
+  margin-bottom: 14px;
+}
+.app-input:focus { border-color: var(--accent); outline: none; }
+.app-feedback {
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  margin: 14px 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.app-feedback.ok {
+  background: var(--correct-soft);
+  border: 1px solid var(--correct);
+  color: var(--ink);
+}
+.app-feedback.partial {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  color: var(--ink);
+}
+.app-feedback.miss {
+  background: var(--wrong-soft);
+  border: 1px solid var(--wrong);
+  color: var(--ink);
+}
+.app-feedback h4 {
+  font-family: var(--ff-ui);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 8px;
+}
+.app-feedback .gold {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-dim);
+}
+
+/* BREAK */
+.break-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 200;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+.break-screen.show { display: flex; }
+.break-kick {
+  font-family: var(--ff-ui);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.break-timer {
+  font-family: var(--ff-mono);
+  font-size: clamp(72px, 14vw, 120px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 22px;
+  font-variant-numeric: tabular-nums;
+}
+.break-tip {
+  font-family: var(--ff-body);
+  font-size: clamp(15px, 2vw, 17px);
+  color: var(--ink-dim);
+  max-width: 480px;
+  line-height: 1.5;
+  margin-bottom: 26px;
+}
+.break-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+
+/* SUMMARY */
+.summary-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  text-align: center;
+}
+.summary-h {
+  font-family: var(--ff-display);
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.summary-stat-num {
+  font-family: var(--ff-mono);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.summary-stat-lbl {
+  font-family: var(--ff-ui);
+  font-size: 11px;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-top: 2px;
+}
+.summary-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+/* DECK BROWSER */
+.browser {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.browser-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.browser-controls select, .browser-controls input {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--ff-ui);
+  font-size: 14px;
+  min-height: 44px;
+}
+.browser-controls input { flex: 1; min-width: 200px; }
+.browser-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.browser-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+}
+.browser-card-h {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.browser-deck-tag {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.browser-source-tag {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: var(--ink-faint);
+  margin-left: auto;
+}
+.browser-term {
+  font-family: var(--ff-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.browser-def {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-dim);
+}
+.browser-pager {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.browser-pager .btn { padding: 8px 12px; min-height: 40px; }
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-elev);
+  border: 1px solid var(--accent);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  z-index: 300;
+  font-family: var(--ff-ui);
+  font-size: 13px;
+  color: var(--ink);
+  box-shadow: 0 8px 30px rgba(0,0,0,.4);
+  display: none;
+  max-width: 90%;
+  text-align: center;
+}
+.toast.show { display: block; }
+
+/* TABLET (640-1023) */
+@media (max-width: 1023px) {
+  .match-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}
+
+/* MOBILE (≤720) */
+@media (max-width: 720px) {
+  .chrome-inner { padding: 10px 14px; gap: 10px; }
+  .brand { white-space: nowrap; flex-shrink: 0; padding: 10px 4px; min-height: 44px; align-items: center; }
+  .ch-nav { gap: 2px; font-size: 12px; }
+  .ch-nav a { padding: 10px 12px; min-height: 44px; }
+  .icon-btn { width: 44px; height: 44px; }
+  .icon-btn svg { width: 16px; height: 16px; }
+  .app { padding: 0 16px 60px; }
+  .hero { padding: 36px 0 24px; }
+  .hero-meta { gap: 12px; font-size: 12px; }
+  .day-grid { grid-template-columns: 1fr; gap: 14px; }
+  .day-card, .deck-card { padding: 18px; }
+  .deck-grid { grid-template-columns: 1fr; gap: 14px; }
+  .runner-top {
+    padding: 10px 14px;
+    gap: 10px;
+    /* keep title ↔ exit on one line; timer wraps under if needed */
+    flex-wrap: wrap;
+  }
+  .runner-title { font-size: 14px; flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .runner-timer { padding: 6px 10px; }
+  .runner-body { padding: 18px 16px calc(36px + env(safe-area-inset-bottom, 0)); }
+  .match-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .match-tile { min-height: 80px; padding: 10px; font-size: 12.5px; }
+  .fc-card { padding: 24px 20px; min-height: 200px; }
+  .fc-actions, .fc-rate { gap: 6px; }
+  .fc-actions .btn, .fc-rate .btn { min-height: 48px; padding: 12px 6px; font-size: 12px; }
+  .app-input { font-size: 16px; min-height: 130px; }
+  /* Submit button (full-width) bumped to ≥56px on mobile */
+  #appSubmit, #appReveal { min-height: 56px; font-size: 14px; }
+  .summary-card { padding: 24px 20px; }
+  .browser-card { padding: 14px; }
+  .browser-controls { flex-direction: column; }
+  .browser-controls input, .browser-controls select { width: 100%; min-height: 48px; }
+  .browser-pager .btn { min-width: 44px; min-height: 44px; padding: 10px 12px; }
+  .toast { bottom: calc(20px + env(safe-area-inset-bottom, 0)); max-width: 86%; }
+  /* Break overlay tightens spacing */
+  .break-screen { padding: 16px; }
+}
+
+/* SMALL PHONES (≤480) */
+@media (max-width: 480px) {
+  .chrome-inner { padding: 10px 12px; gap: 6px; }
+  .brand { font-size: 16px; }
+  .ch-nav { gap: 0; font-size: 12px; }
+  .ch-nav a { padding: 10px 8px; min-height: 44px; }
+  .hero-meta { gap: 10px; font-size: 11.5px; }
+  .match-grid { grid-template-columns: repeat(2, 1fr); gap: 5px; }
+  .match-tile { min-height: 76px; padding: 8px; font-size: 12px; line-height: 1.3; }
+  /* Bigger break-screen timer minimum */
+  .break-timer { font-size: 84px; }
+}
+
+/* HOVER GUARD on touch */
+@media (hover: none) {
+  .match-tile:hover { border-color: var(--rule); transform: none; }
+  .btn:hover { border-color: var(--rule); }
+  .ch-nav a:hover { background: transparent; color: var(--ink-dim); }
+}
+
+/* DON'T LET ROOT SCROLL HORIZONTALLY */
+html, body { max-width: 100%; overflow-x: hidden; overscroll-behavior-y: contain; }
+</style>
+</head>
+<body>
+
+<header class="chrome">
+  <div class="chrome-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">Evol.</span>
+      <span class="brand-sep">/</span>
+      <span class="brand-sub">Mastery</span>
+    </a>
+    <nav class="ch-nav">
+      <a href="index.html">Study</a>
+      <a href="match.html">Match</a>
+      <a href="mastery.html" class="active">Mastery</a>
+      <a href="cheatsheet.html">Sheet</a>
+      <a href="guides.html">Guides</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" title="Toggle day/night">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main class="app">
+
+<section class="hero">
+  <div class="hero-kicker">Mastery · BIOL 4230</div>
+  <h1 class="hero-title"><em>Three days</em> to<br>retention.</h1>
+  <p class="hero-sub">Block-based study built for 90% retention at 72h. Nine decks of synthesis cards — Scenarios, Mechanisms, Game Theory, Compare/Contrast, Calculations, Empirical Examples, Phylogeny, Cause-and-Effect, Cloze — plus a three-round Match → Flashcards → Mini-Match pipeline and Application Blocks that grade your typed answers.</p>
+  <p class="hero-sub" style="margin-top:10px; font-size:14px; color:var(--ink-dim);"><b style="color:var(--accent-ink);">True Mastery</b> requires two App-mode (typed) correct attempts on the same card, separated by ≥ 6 hours. Calculations must hit every gold number, not just the formula. Match and flip-card answers update progress but do <em>not</em> count toward True Mastery — the headline number is the one that predicts your exam score.</p>
+  <div class="hero-meta">
+    <span>📅 Final · May 4, 2026 · 5–7 PM</span>
+    <span>🧠 Block plan with 10-min breaks</span>
+    <span id="masteryStatHero">— cards across 9 decks</span>
+  </div>
+</section>
+
+<section class="plan-board" id="planBoard">
+  <h2 class="section-h">3-Day Block Plan</h2>
+  <p class="section-sub">One day per row. Each block is ~25 min. 10-min mandatory break between blocks. Daily cap suggested at 5 blocks. <a href="#" id="resetPlanLink" style="color:var(--accent);">Reset plan</a></p>
+  <div class="day-grid" id="dayGrid">
+    <!-- populated dynamically -->
+  </div>
+</section>
+
+<section class="plan-board" id="deckSection">
+  <h2 class="section-h">Decks</h2>
+  <p class="section-sub">Run a single block, or launch the cross-deck Mastery Run for the full pipeline. Existing Vocabulary deck (lectures L01–L20) is in <a href="match.html" style="color:var(--accent);">Match Mode</a> — untouched.</p>
+  <div class="deck-actions" style="margin-bottom:16px;">
+    <button class="btn primary" id="masteryRunBtn">⚡ Cross-Deck Mastery Run</button>
+    <button class="btn" id="flashcardsBtn" title="Leitner-style typed flashcards across all decks until mastered">📚 Flashcards (Leitner)</button>
+    <button class="btn" id="customBlockBtn">Custom Block</button>
+  </div>
+  <div class="deck-grid" id="deckGrid">
+    <!-- populated -->
+  </div>
+</section>
+
+<section class="browser" id="browserSection">
+  <h2 class="section-h">Deck Browser</h2>
+  <p class="section-sub">Browse every Mastery card. Filter by deck, search by term, paginate.</p>
+  <div class="browser-controls">
+    <select id="browserDeck">
+      <option value="all">All decks</option>
+    </select>
+    <input id="browserSearch" type="search" placeholder="Search term or definition…" />
+    <button class="btn" id="browserClear">Clear</button>
+  </div>
+  <div class="browser-list" id="browserList"><!-- populated --></div>
+  <div class="browser-pager" id="browserPager"><!-- populated --></div>
+</section>
+
+</main>
+
+<!-- RUNNER OVERLAY -->
+<div class="runner-overlay" id="runnerOverlay">
+  <div class="runner-top">
+    <div class="runner-title" id="runnerTitle">Block</div>
+    <div class="runner-prog" id="runnerProg">—</div>
+    <div class="runner-timer" id="runnerTimer">00:00</div>
+    <button class="btn ghost" id="runnerExit">✕ Exit</button>
+  </div>
+  <div class="runner-body" id="runnerBody"><!-- populated --></div>
+</div>
+
+<!-- BREAK SCREEN -->
+<div class="break-screen" id="breakScreen">
+  <div class="break-kick">Mandatory 10-minute break</div>
+  <div class="break-timer" id="breakTimer">10:00</div>
+  <div class="break-tip">Look 20 ft away for 20 seconds. Drink water. Walk if you can. Coming back fresh is part of how blocks work — no skipping.</div>
+  <div class="break-actions">
+    <button class="btn" id="breakHalfBtn">5-min instead</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="content/mastery-decks.js"></script>
+<script>
+/* =================================================================
+   MASTERY · 3-DAY BLOCK PLAN + RETENTION ENGINE
+   Vanilla HTML/CSS/JS. No framework. localStorage persistence.
+   ================================================================= */
+
+// ---------- THEME ----------
+(function () {
+  const saved = localStorage.getItem('evol-theme') || 'night';
+  if (saved === 'day') document.body.classList.add('day-mode');
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    document.body.classList.toggle('day-mode');
+    localStorage.setItem('evol-theme', document.body.classList.contains('day-mode') ? 'day' : 'night');
+  });
+})();
+
+// ---------- TOAST ----------
+const toastEl = document.getElementById('toast');
+let toastTimer = null;
+function toast(msg, ms) {
+  ms = ms || 2000;
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, ms);
+}
+
+// ---------- STATE ----------
+const STORAGE = {
+  PROGRESS: 'evol-mastery-progress-v1',
+  PLAN:     'evol-mastery-plan-v1',
+  LAPSE:    'evol-mastery-lapse-v1',
+};
+// True Mastery gate: a card is exam-ready only when it has been answered
+// CORRECTLY in App (typed) mode at least twice, with the two attempts
+// separated by ≥ TRUE_MASTERY_GAP_MS so recognition can't masquerade as recall.
+const TRUE_MASTERY_GAP_MS = 6 * 60 * 60 * 1000; // 6 hours
+function loadJSON(key, def) {
+  try { return JSON.parse(localStorage.getItem(key)) || def; } catch (e) { return def; }
+}
+function saveJSON(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+
+// progress: { deckId: { cardIdx: {state, correct, wrong, lastSeen, appCorrects:[ts,...]} } }
+let progress = loadJSON(STORAGE.PROGRESS, {});
+let lapsePool = loadJSON(STORAGE.LAPSE, []); // array of {deckId, idx, ts}
+let plan = loadJSON(STORAGE.PLAN, null);
+
+function persistProgress() { saveJSON(STORAGE.PROGRESS, progress); }
+function persistLapse() { saveJSON(STORAGE.LAPSE, lapsePool); }
+function persistPlan() { saveJSON(STORAGE.PLAN, plan); }
+
+function cardKey(deckId, idx) { return deckId + '#' + idx; }
+function blankCardState() {
+  return { state: 'new', correct: 0, wrong: 0, lastSeen: 0, appCorrects: [] };
+}
+function getCardState(deckId, idx) {
+  const d = progress[deckId];
+  if (!d || !d[idx]) return blankCardState();
+  const s = d[idx];
+  if (!Array.isArray(s.appCorrects)) s.appCorrects = []; // migrate older saves
+  return s;
+}
+function setCardState(deckId, idx, patch) {
+  if (!progress[deckId]) progress[deckId] = {};
+  const cur = progress[deckId][idx] || blankCardState();
+  if (!Array.isArray(cur.appCorrects)) cur.appCorrects = [];
+  progress[deckId][idx] = Object.assign(cur, patch, { lastSeen: Date.now() });
+  schedulePersist();
+}
+function recordAppCorrect(deckId, idx) {
+  const cur = getCardState(deckId, idx);
+  const arr = (cur.appCorrects || []).slice();
+  arr.push(Date.now());
+  setCardState(deckId, idx, { appCorrects: arr });
+}
+function isTrueMastered(s) {
+  if (!s || !Array.isArray(s.appCorrects) || s.appCorrects.length < 2) return false;
+  const sorted = s.appCorrects.slice().sort(function (a, b) { return a - b; });
+  return (sorted[sorted.length - 1] - sorted[0]) >= TRUE_MASTERY_GAP_MS;
+}
+// For Calculations: require ≥60% of the *computed* gold numbers (gold − prompt, deduped)
+// to appear in the user's answer. Numbers in the prompt are givens; we don't make the
+// user retype them. We allow some intermediate-work numbers to be skipped, but the
+// punchline values have to come out right. Recognizing the formula is not enough.
+const CALC_NUMERIC_THRESHOLD = 0.6;
+function calcNumericMatch(ans, gold, prompt) {
+  const gNums = String(gold).match(/\d+(?:\.\d+)?/g) || [];
+  if (!gNums.length) return true;
+  const promptNums = new Set((String(prompt || '').match(/\d+(?:\.\d+)?/g) || []));
+  const required = [];
+  const seen = new Set();
+  gNums.forEach(function (n) {
+    if (!promptNums.has(n) && !seen.has(n)) { seen.add(n); required.push(n); }
+  });
+  if (!required.length) return true; // nothing new to compute
+  const aNums = new Set((String(ans).match(/\d+(?:\.\d+)?/g) || []));
+  let hits = 0;
+  required.forEach(function (n) { if (aNums.has(n)) hits++; });
+  return (hits / required.length) >= CALC_NUMERIC_THRESHOLD;
+}
+function pushLapse(deckId, idx) {
+  const k = cardKey(deckId, idx);
+  if (!lapsePool.some(function (x) { return cardKey(x.deckId, x.idx) === k; })) {
+    lapsePool.push({ deckId: deckId, idx: idx, ts: Date.now() });
+    persistLapse();
+  }
+}
+
+// Debounced persist (5s)
+let persistTimer = null;
+function schedulePersist() {
+  if (persistTimer) return;
+  persistTimer = setTimeout(function () {
+    persistProgress();
+    persistTimer = null;
+  }, 5000);
+}
+// Persist on visibility change & pagehide (more reliable than beforeunload, avoids race with manual storage edits)
+window.addEventListener('pagehide', function () { persistProgress(); persistLapse(); });
+document.addEventListener('visibilitychange', function () { if (document.hidden) { persistProgress(); persistLapse(); } });
+
+// ---------- PLAN ----------
+function defaultPlan() {
+  return {
+    createdAt: Date.now(),
+    days: [
+      {
+        title: 'Day 0 — Evening Encoding',
+        kicker: 'Tonight',
+        blocks: [
+          { type: 'encoding', deck: 'mechanisms', label: 'Encoding · Mechanisms', done: false },
+          { type: 'encoding', deck: 'compare-contrast', label: 'Encoding · Compare/Contrast', done: false },
+          { type: 'consolidation', deck: 'mechanisms', label: 'Consolidation · Mechanisms', done: false },
+        ],
+      },
+      {
+        title: 'Day 1 — Reactivate + Apply',
+        kicker: 'Tomorrow',
+        blocks: [
+          { type: 'warmup', deck: 'mechanisms', label: 'Warmup · Mechanisms', done: false },
+          { type: 'reactivation', deck: 'compare-contrast', label: 'Reactivation · Compare/Contrast', done: false },
+          { type: 'encoding', deck: 'scenarios', label: 'Encoding · Scenarios', done: false },
+          { type: 'application', deck: 'scenarios', label: 'Application · Scenarios', done: false },
+          { type: 'encoding', deck: 'cause-effect', label: 'Encoding · Cause-and-Effect', done: false },
+        ],
+      },
+      {
+        title: 'Day 2 — Apply + Quant',
+        kicker: 'Day after',
+        blocks: [
+          { type: 'reactivation', deck: 'mechanisms', label: 'Reactivation · Mechanisms', done: false },
+          { type: 'encoding', deck: 'calculations', label: 'Encoding · Calculations', done: false },
+          { type: 'application', deck: 'calculations', label: 'Application · Calculations', done: false },
+          { type: 'encoding', deck: 'game-theory', label: 'Encoding · Game Theory', done: false },
+          { type: 'application', deck: 'game-theory', label: 'Application · Game Theory', done: false },
+        ],
+      },
+      {
+        title: 'Day 3 — Final Drill',
+        kicker: 'Exam day morning',
+        blocks: [
+          { type: 'warmup', deck: 'all', label: 'Warmup · cross-deck', done: false },
+          { type: 'encoding', deck: 'empirical', label: 'Encoding · Empirical', done: false },
+          { type: 'encoding', deck: 'phylogeny', label: 'Encoding · Phylogeny', done: false },
+          { type: 'application', deck: 'cause-effect', label: 'Application · Cause-and-Effect', done: false },
+          { type: 'drill', deck: 'all', label: 'Drill · Mastery Run', done: false },
+        ],
+      },
+    ],
+  };
+}
+if (!plan) { plan = defaultPlan(); persistPlan(); }
+
+function renderPlan() {
+  const grid = document.getElementById('dayGrid');
+  grid.innerHTML = '';
+  const todayIdx = computeTodayIdx();
+  plan.days.forEach(function (day, di) {
+    const card = document.createElement('div');
+    card.className = 'day-card' + (di === todayIdx ? ' today' : '');
+    const completedCount = day.blocks.filter(function (b) { return b.done; }).length;
+    card.innerHTML =
+      '<div class="day-kick">' + day.kicker + (di === todayIdx ? ' · today' : '') + '</div>' +
+      '<div class="day-title">' + day.title + '</div>' +
+      '<div class="block-list" id="blockList' + di + '"></div>' +
+      '<div style="margin-top:14px;font-family:var(--ff-mono);font-size:11px;color:var(--ink-faint);">' +
+      completedCount + ' / ' + day.blocks.length + ' blocks · ' + (day.blocks.length * 25) + ' min total</div>';
+    grid.appendChild(card);
+    const list = card.querySelector('.block-list');
+    day.blocks.forEach(function (b, bi) {
+      const row = document.createElement('div');
+      row.className = 'block-row' + (b.done ? ' done' : '');
+      row.innerHTML =
+        '<span class="block-dot"></span>' +
+        '<span class="block-name">' + b.label + '</span>' +
+        '<span class="block-meta">' + (b.done ? '✓' : '~25m') + '</span>';
+      row.onclick = function () { startBlock(di, bi); };
+      list.appendChild(row);
+    });
+  });
+}
+function computeTodayIdx() {
+  const created = plan.createdAt || Date.now();
+  const days = Math.floor((Date.now() - created) / (24 * 3600 * 1000));
+  return Math.max(0, Math.min(plan.days.length - 1, days));
+}
+// Two-tap confirm to avoid a blocking confirm() dialog
+let resetPlanPrimed = 0;
+document.getElementById('resetPlanLink').addEventListener('click', function (e) {
+  e.preventDefault();
+  const now = Date.now();
+  if (resetPlanPrimed && now - resetPlanPrimed < 4000) {
+    plan = defaultPlan();
+    persistPlan();
+    renderPlan();
+    toast('Plan reset.');
+    resetPlanPrimed = 0;
+  } else {
+    resetPlanPrimed = now;
+    toast('Tap "Reset plan" again within 4s to confirm.', 4000);
+  }
+});
+
+// ---------- DECK GRID ----------
+function deckCardCount(deckId) {
+  const deck = window.MASTERY_DECKS[deckId];
+  return deck && deck.cards ? deck.cards.length : 0;
+}
+function deckMastered(deckId) {
+  const deck = window.MASTERY_DECKS[deckId];
+  if (!deck) return 0;
+  let count = 0;
+  deck.cards.forEach(function (_, i) {
+    const s = getCardState(deckId, i);
+    if (s.state === 'graduated') count++;
+  });
+  return count;
+}
+function deckTrueMastered(deckId) {
+  const deck = window.MASTERY_DECKS[deckId];
+  if (!deck) return 0;
+  let count = 0;
+  deck.cards.forEach(function (_, i) {
+    if (isTrueMastered(getCardState(deckId, i))) count++;
+  });
+  return count;
+}
+function totalTrueMastered() {
+  return (window.MASTERY_DECK_ORDER || []).reduce(function (s, id) { return s + deckTrueMastered(id); }, 0);
+}
+function renderDecks() {
+  const grid = document.getElementById('deckGrid');
+  grid.innerHTML = '';
+  const total = (window.MASTERY_DECK_ORDER || []).reduce(function (s, id) { return s + deckCardCount(id); }, 0);
+  const tm = totalTrueMastered();
+  const looseTotal = (window.MASTERY_DECK_ORDER || []).reduce(function (s, id) { return s + deckMastered(id); }, 0);
+  document.getElementById('masteryStatHero').textContent =
+    tm + ' / ' + total + ' truly mastered · ' + looseTotal + ' graduated (loose) · ' + Object.keys(window.MASTERY_DECKS).length + ' decks';
+  (window.MASTERY_DECK_ORDER || []).forEach(function (deckId) {
+    const deck = window.MASTERY_DECKS[deckId];
+    if (!deck) return;
+    const total = deck.cards.length;
+    const mastered = deckMastered(deckId);
+    const trueMastered = deckTrueMastered(deckId);
+    const pct = total ? Math.round(trueMastered / total * 100) : 0;
+    const loosePct = total ? Math.round(mastered / total * 100) : 0;
+    const card = document.createElement('div');
+    card.className = 'deck-card';
+    card.innerHTML =
+      '<div class="deck-card-h"><div class="deck-name">' + deck.label + '</div>' +
+      '<div class="deck-count">' + total + ' cards</div></div>' +
+      '<div class="deck-desc">' + deck.description + '</div>' +
+      '<div class="deck-progress">' +
+        '<div class="progress-bar" style="position:relative;">' +
+          '<div class="progress-bar-fill" style="width:' + loosePct + '%; background:var(--accent-soft); position:absolute; inset:0 auto 0 0;"></div>' +
+          '<div class="progress-bar-fill" style="width:' + pct + '%; position:relative;"></div>' +
+        '</div>' +
+        '<div class="progress-meta">' +
+          '<span><b style="color:var(--accent-ink);">' + trueMastered + '</b> truly mastered · ' + mastered + ' loose / ' + total + '</span>' +
+          '<span>' + pct + '%</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="deck-actions">' +
+        '<button class="btn primary" data-action="encode" data-deck="' + deckId + '">Encode</button>' +
+        '<button class="btn" data-action="drill" data-deck="' + deckId + '">Drill</button>' +
+        '<button class="btn" data-action="apply" data-deck="' + deckId + '">Apply</button>' +
+      '</div>';
+    grid.appendChild(card);
+  });
+  grid.querySelectorAll('button[data-action]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      const action = b.getAttribute('data-action');
+      const deckId = b.getAttribute('data-deck');
+      runAdHocBlock(action, deckId);
+    });
+  });
+}
+
+document.getElementById('masteryRunBtn').addEventListener('click', function () {
+  startMasteryRun();
+});
+document.getElementById('customBlockBtn').addEventListener('click', function () {
+  showCustomBlockPicker();
+});
+// Leitner-style typed flashcards across all in-scope cards. Uses the existing Drill engine
+// (same per-card classifier as biol3020 + japanese — known/shaky/unknown).
+document.getElementById('flashcardsBtn').addEventListener('click', function () {
+  beginRun({
+    type: 'drill',
+    deckId: 'all',
+    title: 'Flashcards (Leitner) · All Decks',
+    crossDeck: true,
+  });
+});
+
+// ---------- BLOCK ENGINE ----------
+const BLOCK_DURATIONS = {
+  encoding: 25 * 60,
+  consolidation: 25 * 60,
+  reactivation: 20 * 60,
+  application: 25 * 60,
+  drill: 25 * 60,
+  lapse: 15 * 60,
+  warmup: 10 * 60,
+};
+const overlay = document.getElementById('runnerOverlay');
+const breakOverlay = document.getElementById('breakScreen');
+
+let currentRun = null;
+
+function startBlock(dayIdx, blockIdx) {
+  const day = plan.days[dayIdx];
+  const block = day.blocks[blockIdx];
+  if (!block) return;
+  beginRun({
+    type: block.type,
+    deckId: block.deck,
+    title: block.label,
+    onComplete: function () {
+      block.done = true;
+      persistPlan();
+      renderPlan();
+    },
+  });
+}
+
+function runAdHocBlock(action, deckId) {
+  const map = { encode: 'encoding', drill: 'drill', apply: 'application' };
+  const type = map[action] || 'encoding';
+  const deck = window.MASTERY_DECKS[deckId];
+  if (!deck) return;
+  beginRun({
+    type: type,
+    deckId: deckId,
+    title: typeLabel(type) + ' · ' + deck.label,
+  });
+}
+
+function startMasteryRun() {
+  // Cross-deck Mastery Run = drill across ALL decks, prioritizing unmastered cards
+  beginRun({
+    type: 'drill',
+    deckId: 'all',
+    title: 'Cross-Deck Mastery Run',
+    crossDeck: true,
+  });
+}
+
+function showCustomBlockPicker() {
+  const types = ['encoding', 'reactivation', 'drill', 'application', 'lapse', 'warmup'];
+  const decks = (window.MASTERY_DECK_ORDER || []).slice();
+  // Build inline modal so we don't use blocking prompt()
+  const back = document.createElement('div');
+  back.className = 'cb-back';
+  back.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:250;display:flex;align-items:center;justify-content:center;padding:16px;';
+  back.innerHTML =
+    '<div style="background:var(--bg-elev);border:1px solid var(--rule);border-radius:12px;padding:22px;max-width:420px;width:100%;">' +
+      '<div style="font-family:var(--ff-display);font-size:20px;font-weight:600;margin-bottom:14px;">Custom Block</div>' +
+      '<label style="display:block;margin-bottom:10px;font-family:var(--ff-ui);font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--ink-faint);">Block type</label>' +
+      '<select id="cbType" style="width:100%;background:var(--bg-elev);border:1px solid var(--rule);color:var(--ink);padding:12px;border-radius:4px;font-family:var(--ff-ui);font-size:14px;min-height:48px;margin-bottom:14px;">' +
+        types.map(function(t){ return '<option value="' + t + '">' + typeLabel(t) + '</option>'; }).join('') +
+      '</select>' +
+      '<label style="display:block;margin-bottom:10px;font-family:var(--ff-ui);font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--ink-faint);">Deck</label>' +
+      '<select id="cbDeck" style="width:100%;background:var(--bg-elev);border:1px solid var(--rule);color:var(--ink);padding:12px;border-radius:4px;font-family:var(--ff-ui);font-size:14px;min-height:48px;margin-bottom:18px;">' +
+        '<option value="all">All decks (cross-deck)</option>' +
+        decks.map(function(id){ const d = window.MASTERY_DECKS[id]; return '<option value="' + id + '">' + (d ? d.label : id) + '</option>'; }).join('') +
+      '</select>' +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+        '<button class="btn primary btn-block" id="cbStart" style="flex:1 1 auto;min-height:48px;">Start block</button>' +
+        '<button class="btn ghost" id="cbCancel" style="flex:0 0 auto;min-height:48px;">Cancel</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(back);
+  back.addEventListener('click', function (e) { if (e.target === back) close(); });
+  document.getElementById('cbCancel').onclick = close;
+  document.getElementById('cbStart').onclick = function () {
+    const t = document.getElementById('cbType').value;
+    const d = document.getElementById('cbDeck').value;
+    close();
+    const isAll = d === 'all';
+    beginRun({ type: t, deckId: d, title: 'Custom · ' + typeLabel(t) + ' · ' + (isAll ? 'cross-deck' : ((window.MASTERY_DECKS[d]||{}).label || d)), crossDeck: isAll });
+  };
+  function close() { back.remove(); }
+}
+
+function typeLabel(t) {
+  return ({
+    encoding: 'Encoding',
+    consolidation: 'Consolidation',
+    reactivation: 'Reactivation',
+    application: 'Application',
+    drill: 'Drill',
+    lapse: 'Lapse',
+    warmup: 'Warmup',
+  })[t] || t;
+}
+
+function beginRun(cfg) {
+  // Build card pool
+  let pool = [];
+  if (cfg.deckId === 'all' || cfg.crossDeck) {
+    (window.MASTERY_DECK_ORDER || []).forEach(function (deckId) {
+      const deck = window.MASTERY_DECKS[deckId];
+      if (!deck) return;
+      deck.cards.forEach(function (c, i) { pool.push({ deckId: deckId, idx: i, card: c }); });
+    });
+  } else {
+    const deck = window.MASTERY_DECKS[cfg.deckId];
+    if (!deck) { alert('Deck not found: ' + cfg.deckId); return; }
+    deck.cards.forEach(function (c, i) { pool.push({ deckId: cfg.deckId, idx: i, card: c }); });
+  }
+
+  // Block-type queueing (anti-burnout: mastered cards stop appearing in drills)
+  const filteredPool = pool.filter(function (p) {
+    const s = getCardState(p.deckId, p.idx);
+    if (cfg.type === 'drill' || cfg.type === 'reactivation' || cfg.type === 'warmup') {
+      return s.state !== 'graduated';
+    }
+    if (cfg.type === 'lapse') {
+      return s.state === 'lapse';
+    }
+    return true; // encoding/consolidation/application: include all
+  });
+  let activePool = filteredPool.length ? filteredPool : pool;
+  // Shuffle (interleave)
+  shuffle(activePool);
+  // Cap by block type
+  const cap = cfg.type === 'warmup' ? 12 : (cfg.type === 'application' ? 14 : 30);
+  activePool = activePool.slice(0, cap);
+
+  if (!activePool.length) { toast('No cards to run for this block.'); return; }
+
+  currentRun = {
+    cfg: cfg,
+    pool: activePool,
+    cycle: 1,
+    cycleMax: 3,
+    cardsThisCycle: activePool.slice(),
+    correctCount: 0,
+    wrongCount: 0,
+    startTs: Date.now(),
+    endsAt: Date.now() + (BLOCK_DURATIONS[cfg.type] || 1500) * 1000,
+    pipelineStep: 0, // 0=match90, 1=flash, 2=miniMatch45 (for drill/encoding/reactivation)
+    mode: cfg.type === 'application' ? 'application' : (cfg.type === 'warmup' ? 'flash-only' : 'pipeline'),
+  };
+  document.getElementById('runnerTitle').textContent = cfg.title;
+  document.getElementById('runnerExit').onclick = exitRun;
+  overlay.classList.add('show');
+  startTimerLoop();
+  renderRunStep();
+}
+
+function exitRun() {
+  // Always exit immediately. Per-card progress is debounced-persisted; we flush here.
+  if (currentRun) { persistProgress(); persistLapse(); }
+  stopTimerLoop();
+  overlay.classList.remove('show');
+  currentRun = null;
+  toast('Block exited — progress saved.');
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+  }
+  return arr;
+}
+
+// ---------- TIMER ----------
+let timerHandle = null;
+function startTimerLoop() {
+  stopTimerLoop();
+  timerHandle = setInterval(updateTimer, 250);
+  updateTimer();
+}
+function stopTimerLoop() {
+  if (timerHandle) { clearInterval(timerHandle); timerHandle = null; }
+}
+function updateTimer() {
+  if (!currentRun) return;
+  const remaining = Math.max(0, currentRun.endsAt - Date.now());
+  const m = Math.floor(remaining / 60000);
+  const s = Math.floor((remaining % 60000) / 1000);
+  document.getElementById('runnerTimer').textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+}
+
+// ---------- PIPELINE ROUNDS ----------
+function renderRunStep() {
+  if (!currentRun) return;
+  const body = document.getElementById('runnerBody');
+  body.innerHTML = '';
+  const cfg = currentRun.cfg;
+  const cyc = '<div class="cycle-pill">Cycle <span class="accent">' + currentRun.cycle + ' / ' + currentRun.cycleMax + '</span> · ' +
+              typeLabel(cfg.type) + '</div>';
+  document.getElementById('runnerProg').textContent = currentRun.cardsThisCycle.length + ' cards · ' +
+    'cycle ' + currentRun.cycle + '/' + currentRun.cycleMax;
+  if (currentRun.mode === 'application') {
+    body.innerHTML = cyc;
+    runApplicationRound(body);
+    return;
+  }
+  if (currentRun.mode === 'flash-only') {
+    body.innerHTML = cyc;
+    runFlashRound(body);
+    return;
+  }
+  // Pipeline: round 0 = Match 90s, 1 = Flashcards, 2 = Mini-Match 45s
+  body.innerHTML = cyc;
+  if (currentRun.pipelineStep === 0) runMatchRound(body, 90, true);
+  else if (currentRun.pipelineStep === 1) runFlashRound(body);
+  else runMatchRound(body, 45, false);
+}
+
+function pipelineAdvance() {
+  if (!currentRun) return;
+  currentRun.pipelineStep++;
+  if (currentRun.pipelineStep >= 3) {
+    currentRun.pipelineStep = 0;
+    currentRun.cycle++;
+    if (currentRun.cycle > currentRun.cycleMax) {
+      finishBlock();
+      return;
+    }
+    // Auto-shuffle the surviving pool (graduated cards drop)
+    currentRun.cardsThisCycle = currentRun.cardsThisCycle.filter(function (p) {
+      const s = getCardState(p.deckId, p.idx);
+      return s.state !== 'graduated';
+    });
+    if (!currentRun.cardsThisCycle.length) { finishBlock(); return; }
+    showBreak(function () { renderRunStep(); });
+    return;
+  }
+  renderRunStep();
+}
+
+// ---------- MATCH ROUND ----------
+function runMatchRound(host, secs, full) {
+  // 10-card grid (5 pairs) batches; for "full" 30 cards as up to 3 batches; mini (45s) = 1 batch.
+  const cards = currentRun.cardsThisCycle.slice();
+  shuffle(cards);
+  const batchSize = 5;
+  const batches = full ? [cards.slice(0, batchSize), cards.slice(batchSize, batchSize * 2), cards.slice(batchSize * 2, batchSize * 3)] : [cards.slice(0, batchSize)];
+  const validBatches = batches.filter(function (b) { return b.length >= 2; });
+
+  const wrap = document.createElement('div');
+  wrap.className = 'match-pool';
+  const note = document.createElement('div');
+  note.style.fontFamily = 'var(--ff-ui)';
+  note.style.fontSize = '13px';
+  note.style.color = 'var(--ink-dim)';
+  note.style.marginBottom = '6px';
+  note.textContent = (full ? 'Match round · ' + secs + 's' : 'Mini-match · ' + secs + 's') + ' — tap a term, then tap its definition.';
+  wrap.appendChild(note);
+
+  const startTs = Date.now();
+  const endTs = startTs + secs * 1000;
+  let matchedCount = 0;
+  let wrongCount = 0;
+  let totalPairs = validBatches.reduce(function (s, b) { return s + b.length; }, 0);
+
+  validBatches.forEach(function (batch, bi) {
+    const h = document.createElement('div');
+    h.className = 'match-batch-h';
+    h.textContent = 'Batch ' + (bi + 1) + ' · ' + batch.length + ' pairs';
+    wrap.appendChild(h);
+    const grid = document.createElement('div');
+    grid.className = 'match-grid';
+    const tiles = [];
+    batch.forEach(function (p, i) {
+      tiles.push({ kind: 'term', text: p.card.term, pairId: bi + '-' + i, ref: p });
+      tiles.push({ kind: 'def',  text: p.card.definition, pairId: bi + '-' + i, ref: p });
+    });
+    shuffle(tiles);
+    tiles.forEach(function (t) {
+      const el = document.createElement('div');
+      el.className = 'match-tile ' + t.kind;
+      el.textContent = t.text.length > 80 ? t.text.slice(0, 78) + '…' : t.text;
+      const overlay = document.createElement('div');
+      overlay.className = 'tile-overlay';
+      overlay.textContent = t.text;
+      el.appendChild(overlay);
+      el.dataset.pairId = t.pairId;
+      el.dataset.kind = t.kind;
+      el.addEventListener('click', function () { onMatchClick(el, t); });
+      // Long-press to reveal full text
+      let pressTimer = null;
+      const startPress = function () {
+        pressTimer = setTimeout(function () {
+          el.classList.add('show-full');
+        }, 500);
+      };
+      const endPress = function () {
+        if (pressTimer) clearTimeout(pressTimer);
+        setTimeout(function () { el.classList.remove('show-full'); }, 150);
+      };
+      el.addEventListener('mousedown', startPress);
+      el.addEventListener('touchstart', startPress, { passive: true });
+      el.addEventListener('mouseup', endPress);
+      el.addEventListener('mouseleave', endPress);
+      el.addEventListener('touchend', endPress);
+      el.addEventListener('touchcancel', endPress);
+      grid.appendChild(el);
+    });
+    wrap.appendChild(grid);
+  });
+
+  const stats = document.createElement('div');
+  stats.style.cssText = 'margin-top:14px; font-family:var(--ff-mono); font-size:12px; color:var(--ink-dim); display:flex; gap:18px; flex-wrap:wrap;';
+  stats.innerHTML = '<span>Matched: <b id="mmCount" style="color:var(--correct);">0</b> / ' + totalPairs + '</span>' +
+                    '<span>Errors: <b id="mmErr" style="color:var(--wrong);">0</b></span>' +
+                    '<span>Time: <b id="mmTime">' + secs + 's</b></span>';
+  wrap.appendChild(stats);
+  const skipBtn = document.createElement('button');
+  skipBtn.className = 'btn btn-block';
+  skipBtn.style.marginTop = '12px';
+  skipBtn.textContent = 'Skip to next round';
+  skipBtn.onclick = function () { finishMatchRound(); };
+  wrap.appendChild(skipBtn);
+
+  host.appendChild(wrap);
+
+  let activeTile = null;
+  function onMatchClick(el, t) {
+    if (el.classList.contains('matched') || el.classList.contains('wrong')) return;
+    if (!activeTile) {
+      el.classList.add('active');
+      activeTile = el;
+      return;
+    }
+    if (activeTile === el) { el.classList.remove('active'); activeTile = null; return; }
+    if (activeTile.dataset.pairId === el.dataset.pairId && activeTile.dataset.kind !== el.dataset.kind) {
+      activeTile.classList.remove('active');
+      activeTile.classList.add('matched');
+      el.classList.add('matched');
+      // mark card progress
+      const ref = t.ref;
+      const cur = getCardState(ref.deckId, ref.idx);
+      setCardState(ref.deckId, ref.idx, { correct: (cur.correct || 0) + 1, state: cur.correct + 1 >= 2 ? 'graduated' : 'learning' });
+      activeTile = null;
+      matchedCount++;
+      currentRun.correctCount++;
+      document.getElementById('mmCount').textContent = matchedCount;
+      if (matchedCount >= totalPairs) finishMatchRound();
+    } else {
+      const prev = activeTile;
+      el.classList.add('wrong');
+      prev.classList.remove('active');
+      prev.classList.add('wrong');
+      activeTile = null;
+      wrongCount++;
+      currentRun.wrongCount++;
+      document.getElementById('mmErr').textContent = wrongCount;
+      const ref = t.ref;
+      const cur = getCardState(ref.deckId, ref.idx);
+      setCardState(ref.deckId, ref.idx, { wrong: (cur.wrong || 0) + 1, state: 'lapse' });
+      pushLapse(ref.deckId, ref.idx);
+      setTimeout(function () { el.classList.remove('wrong'); prev.classList.remove('wrong'); }, 300);
+    }
+  }
+
+  let mmHandle = setInterval(function () {
+    const left = Math.max(0, Math.ceil((endTs - Date.now()) / 1000));
+    const tEl = document.getElementById('mmTime');
+    if (tEl) tEl.textContent = left + 's';
+    if (Date.now() >= endTs) {
+      clearInterval(mmHandle);
+      finishMatchRound();
+    }
+  }, 250);
+
+  function finishMatchRound() {
+    if (mmHandle) { clearInterval(mmHandle); mmHandle = null; }
+    persistProgress();
+    pipelineAdvance();
+  }
+}
+
+// ---------- FLASH ROUND ----------
+function runFlashRound(host) {
+  const cards = currentRun.cardsThisCycle.slice();
+  shuffle(cards);
+  let i = 0;
+  let showBack = false;
+
+  const wrap = document.createElement('div');
+  host.appendChild(wrap);
+
+  function render() {
+    if (i >= cards.length) {
+      pipelineAdvance();
+      return;
+    }
+    const p = cards[i];
+    const deck = window.MASTERY_DECKS[p.deckId];
+    wrap.innerHTML =
+      '<div class="fc-card">' +
+        '<div class="fc-tag">' + (deck ? deck.label : '') + (p.card.sourceTag ? ' · ' + p.card.sourceTag : '') + '</div>' +
+        '<div class="fc-front">' + escapeHtml(p.card.term) + '</div>' +
+        (showBack ? '<div class="fc-back">' + escapeHtml(p.card.definition) + '</div>' : '') +
+      '</div>';
+    if (!showBack) {
+      const acts = document.createElement('div');
+      acts.className = 'fc-actions';
+      acts.innerHTML =
+        '<button class="btn ghost" data-act="prev">Prev</button>' +
+        '<button class="btn primary" data-act="show">Show answer</button>' +
+        '<button class="btn ghost" data-act="skip">Skip</button>';
+      wrap.appendChild(acts);
+      acts.querySelector('[data-act="show"]').onclick = function () { showBack = true; render(); };
+      acts.querySelector('[data-act="skip"]').onclick = function () { i++; showBack = false; render(); };
+      acts.querySelector('[data-act="prev"]').onclick = function () { if (i > 0) i--; showBack = false; render(); };
+    } else {
+      const rate = document.createElement('div');
+      rate.className = 'fc-rate';
+      rate.innerHTML =
+        '<button class="btn danger" data-rate="miss">Missed</button>' +
+        '<button class="btn" data-rate="hard">Hard</button>' +
+        '<button class="btn primary" data-rate="ok">Got it</button>';
+      wrap.appendChild(rate);
+      rate.querySelectorAll('button[data-rate]').forEach(function (b) {
+        b.onclick = function () {
+          const r = b.getAttribute('data-rate');
+          const cur = getCardState(p.deckId, p.idx);
+          if (r === 'ok') {
+            const c = (cur.correct || 0) + 1;
+            setCardState(p.deckId, p.idx, { correct: c, state: c >= 2 ? 'graduated' : 'learning' });
+            currentRun.correctCount++;
+          } else if (r === 'hard') {
+            setCardState(p.deckId, p.idx, { state: 'learning' });
+          } else {
+            setCardState(p.deckId, p.idx, { wrong: (cur.wrong || 0) + 1, state: 'lapse' });
+            pushLapse(p.deckId, p.idx);
+            currentRun.wrongCount++;
+          }
+          i++;
+          showBack = false;
+          render();
+        };
+      });
+    }
+  }
+  render();
+}
+
+// ---------- APPLICATION ROUND ----------
+const APP_PROMPTS = {
+  scenarios: function (card) { return { prompt: card.term, gold: card.definition, ask: 'Predict the outcome / mechanism.' }; },
+  mechanisms: function (card) { return { prompt: 'State the rule, formula, or ordered conditions for: ' + card.term, gold: card.definition, ask: 'Type the formula or numbered conditions.' }; },
+  'game-theory': function (card) { return { prompt: card.term, gold: card.definition, ask: 'Solve the game. Show ESS or reasoning.' }; },
+  'compare-contrast': function (card) {
+    const m = card.term.match(/^(.+?)\s+vs\s+(.+)$/i);
+    if (m) return { prompt: 'Define ' + m[1] + ' AND ' + m[2] + '. Then state the discriminator.', gold: card.definition, ask: 'Type both definitions and the key discriminating feature.' };
+    return { prompt: card.term, gold: card.definition, ask: 'Define both terms and state the discriminator.' };
+  },
+  calculations: function (card) { return { prompt: card.term, gold: card.definition, ask: 'Solve. Show the numeric answer.' }; },
+  empirical: function (card) { return { prompt: 'For the case: ' + card.term + ' — what does it demonstrate, and by what mechanism?', gold: card.definition, ask: 'Type the concept it illustrates and the mechanism.' }; },
+  phylogeny: function (card) { return { prompt: card.term, gold: card.definition, ask: 'Type the phylogenetic implication.' }; },
+  'cause-effect': function (card) { return { prompt: 'Pattern: ' + card.term + ' — what is the selective explanation?', gold: card.definition, ask: 'Type the selective explanation.' }; },
+};
+
+function runApplicationRound(host) {
+  const cards = currentRun.cardsThisCycle.slice();
+  shuffle(cards);
+  let i = 0;
+  const wrap = document.createElement('div');
+  host.appendChild(wrap);
+
+  function render() {
+    if (i >= cards.length) { finishBlock(); return; }
+    const p = cards[i];
+    const deck = window.MASTERY_DECKS[p.deckId];
+    const promptFn = APP_PROMPTS[p.deckId] || function (c) { return { prompt: c.term, gold: c.definition, ask: 'Recall and explain.' }; };
+    const Q = promptFn(p.card);
+    wrap.innerHTML =
+      '<div class="app-prompt">' +
+        '<div class="app-prompt-h">' + (deck ? deck.label : '') + ' · ' + Q.ask + '</div>' +
+        '<div class="app-prompt-body">' + escapeHtml(Q.prompt) + '</div>' +
+      '</div>' +
+      '<textarea class="app-input" id="appAnswer" placeholder="Type your answer (Enter+Shift for newline; Ctrl/⌘+Enter to submit)" autocomplete="off" autocorrect="off" spellcheck="false"></textarea>' +
+      '<div style="display:flex; gap:8px; flex-wrap:wrap;">' +
+        '<button class="btn primary btn-block" id="appSubmit">Submit (Ctrl/⌘+Enter)</button>' +
+        '<button class="btn ghost btn-block" id="appReveal">Reveal & skip</button>' +
+      '</div>' +
+      '<div id="appFeedback"></div>';
+    const ta = document.getElementById('appAnswer');
+    ta.focus();
+    ta.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    ta.addEventListener('keydown', function (e) {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); submit(); }
+    });
+    document.getElementById('appSubmit').onclick = submit;
+    document.getElementById('appReveal').onclick = function () { reveal(true); };
+
+    function submit() {
+      const ans = ta.value.trim();
+      if (!ans) { toast('Type an answer or use Reveal.'); return; }
+      const score = fuzzyGrade(ans, Q.gold);
+      reveal(false, score, ans);
+    }
+    function reveal(skipped, score, ans) {
+      const fb = document.getElementById('appFeedback');
+      let cls = 'miss', label = 'Miss', html = '';
+      const calcMiss = !skipped && score >= 0.65 && p.deckId === 'calculations' && !calcNumericMatch(ans || '', Q.gold, Q.prompt);
+      if (skipped) { cls = 'miss'; label = 'Revealed'; }
+      else if (calcMiss) { cls = 'partial'; label = 'Numbers off'; }
+      else if (score >= 0.65) { cls = 'ok'; label = 'Got it'; }
+      else if (score >= 0.35) { cls = 'partial'; label = 'Partial'; }
+      else { cls = 'miss'; label = 'Miss'; }
+      // True-Mastery credit hint (computed AFTER state update below; we
+      // preview here based on current state + this attempt for the user.)
+      const _preCur = getCardState(p.deckId, p.idx);
+      const _willCredit = !skipped && score >= 0.65 && (p.deckId !== 'calculations' || !calcMiss);
+      const _projected = (_preCur.appCorrects || []).slice();
+      if (_willCredit) _projected.push(Date.now());
+      let _tmHint = '';
+      if (_projected.length === 0) _tmHint = 'True-Mastery: 0 / 2 typed-correct attempts';
+      else if (_projected.length === 1) _tmHint = 'True-Mastery: 1 / 2 — return after a 6 h gap to lock it in';
+      else {
+        const span = _projected[_projected.length - 1] - _projected[0];
+        if (span >= TRUE_MASTERY_GAP_MS) _tmHint = '✓ Truly mastered — exam-ready';
+        else {
+          const hrsLeft = Math.max(0, Math.ceil((TRUE_MASTERY_GAP_MS - span) / 3600000));
+          _tmHint = 'True-Mastery pending: come back in ~' + hrsLeft + ' h for the second attempt to count';
+        }
+      }
+      html = '<div class="app-feedback ' + cls + '"><h4>' + label + (skipped ? '' : ' · score ' + Math.round(score * 100) + '%') + '</h4>' +
+             '<div class="gold"><b>Gold answer:</b> ' + escapeHtml(Q.gold) + '</div>' +
+             '<div class="gold" style="margin-top:8px; opacity:.85;">' + _tmHint + '</div></div>';
+      fb.innerHTML = html;
+      // update progress
+      const cur = getCardState(p.deckId, p.idx);
+      // For Calculations: a "Got it" only counts if every *computed* gold number is in the answer.
+      // Numbers already in the prompt are givens; we only require the new ones the user had to derive.
+      const calcStrictPass = p.deckId !== 'calculations' || calcNumericMatch(ans || '', Q.gold, Q.prompt);
+      if (!skipped && score >= 0.65 && calcStrictPass) {
+        const c = (cur.correct || 0) + 1;
+        setCardState(p.deckId, p.idx, { correct: c, state: c >= 2 ? 'graduated' : 'learning' });
+        recordAppCorrect(p.deckId, p.idx); // True-Mastery credit (App-mode only)
+        currentRun.correctCount++;
+      } else if (!skipped && score >= 0.65 && !calcStrictPass) {
+        // Words right, numbers wrong — treat as partial, no graduation, no True-Mastery credit.
+        setCardState(p.deckId, p.idx, { state: 'learning' });
+      } else if (!skipped && score >= 0.35) {
+        setCardState(p.deckId, p.idx, { state: 'learning' });
+      } else {
+        setCardState(p.deckId, p.idx, { wrong: (cur.wrong || 0) + 1, state: 'lapse' });
+        pushLapse(p.deckId, p.idx);
+        currentRun.wrongCount++;
+      }
+      // Next button
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'btn primary btn-block';
+      nextBtn.style.marginTop = '14px';
+      nextBtn.textContent = 'Next prompt';
+      nextBtn.onclick = function () { i++; render(); };
+      fb.appendChild(nextBtn);
+      nextBtn.focus();
+    }
+  }
+  render();
+}
+
+function fuzzyGrade(ans, gold) {
+  if (!ans || !gold) return 0;
+  const a = normalize(ans);
+  const g = normalize(gold);
+  if (!a.length || !g.length) return 0;
+  const stop = new Set(['the','a','an','of','and','or','to','in','on','for','with','by','is','are','be','as','at','that','this','it','from','its','than','then','when','what','why','which','who','how','its','also','but','not']);
+  const aTokens = tokens(a).filter(function (w) { return w.length > 2 && !stop.has(w); });
+  const gTokens = tokens(g).filter(function (w) { return w.length > 2 && !stop.has(w); });
+  const aSet = new Set(aTokens);
+  const gSet = new Set(gTokens);
+  // Numeric token bonus — extract bare numbers from BOTH answer and gold
+  const aNums = (a.match(/\d+(?:\.\d+)?/g) || []).map(String);
+  const gNums = (g.match(/\d+(?:\.\d+)?/g) || []).map(String);
+  let numScore = 0;
+  if (gNums.length) {
+    let nh = 0;
+    const aNumSet = new Set(aNums);
+    gNums.forEach(function (n) { if (aNumSet.has(n)) nh++; });
+    numScore = nh / gNums.length;
+  }
+  // Token overlap (Jaccard-ish, weighted toward gold coverage)
+  let hits = 0;
+  gSet.forEach(function (w) { if (aSet.has(w)) hits++; });
+  const tokScore = gSet.size ? hits / gSet.size : 0.5;
+  // Substring bonus — reward when the answer contains the first sentence of gold
+  const goldFirst = g.split(/[.!?]/)[0].trim();
+  const subBonus = (goldFirst.length > 12 && a.indexOf(goldFirst.slice(0, Math.min(40, goldFirst.length))) !== -1) ? 0.2 : 0;
+  // For calculations: if gold has numbers and answer matches all numbers, treat as strong correct
+  if (gNums.length && numScore >= 0.85) {
+    return Math.min(1, 0.75 + 0.25 * tokScore);
+  }
+  // Composite — token coverage primary, numbers secondary, substring tiebreaker
+  let composite = tokScore * 0.65 + numScore * 0.25 + subBonus;
+  // Length sanity: very short answers can't fully match long gold
+  if (a.length < g.length * 0.15 && composite < 0.6) composite *= 0.6;
+  return Math.max(0, Math.min(1, composite));
+}
+function normalize(s) {
+  return String(s).toLowerCase()
+    .replace(/[^a-z0-9\s.\-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+// Strip trailing/leading punctuation from each token
+function tokens(s) {
+  return s.split(/\s+/).map(function (t) { return t.replace(/^[-.]+|[-.]+$/g, ''); }).filter(Boolean);
+}
+function escapeHtml(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]; }); }
+
+// ---------- BREAK ----------
+let breakResume = null;
+function showBreak(after) {
+  breakResume = after;
+  let secs = 600;
+  document.getElementById('breakTimer').textContent = '10:00';
+  breakOverlay.classList.add('show');
+  let h = setInterval(function () {
+    secs--;
+    const m = Math.floor(secs / 60), s = secs % 60;
+    document.getElementById('breakTimer').textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    if (secs <= 0) { clearInterval(h); breakOverlay.classList.remove('show'); if (breakResume) breakResume(); }
+  }, 1000);
+  document.getElementById('breakHalfBtn').onclick = function () {
+    secs = Math.min(secs, 300);
+  };
+}
+
+// ---------- BLOCK FINISH ----------
+function finishBlock() {
+  if (!currentRun) return;
+  stopTimerLoop();
+  persistProgress();
+  persistLapse();
+  const dur = Math.round((Date.now() - currentRun.startTs) / 1000);
+  const body = document.getElementById('runnerBody');
+  body.innerHTML =
+    '<div class="summary-card">' +
+      '<div class="summary-h">Block complete.</div>' +
+      '<div class="hero-kicker" style="margin-top:0;">' + typeLabel(currentRun.cfg.type) + '</div>' +
+      '<div class="summary-stats">' +
+        '<div><div class="summary-stat-num">' + currentRun.correctCount + '</div><div class="summary-stat-lbl">Correct</div></div>' +
+        '<div><div class="summary-stat-num">' + currentRun.wrongCount + '</div><div class="summary-stat-lbl">Lapses</div></div>' +
+        '<div><div class="summary-stat-num">' + Math.floor(dur / 60) + 'm ' + (dur % 60) + 's</div><div class="summary-stat-lbl">Duration</div></div>' +
+      '</div>' +
+      '<div class="summary-actions">' +
+        '<button class="btn primary" id="sumDone">Done</button>' +
+        '<button class="btn" id="sumBreak">Take break</button>' +
+        '<button class="btn ghost" id="sumAgain">Run again</button>' +
+      '</div>' +
+    '</div>';
+  document.getElementById('sumDone').onclick = function () {
+    if (currentRun.cfg.onComplete) currentRun.cfg.onComplete();
+    overlay.classList.remove('show');
+    currentRun = null;
+    renderDecks();
+    renderPlan();
+  };
+  document.getElementById('sumBreak').onclick = function () {
+    if (currentRun.cfg.onComplete) currentRun.cfg.onComplete();
+    overlay.classList.remove('show');
+    currentRun = null;
+    renderDecks();
+    renderPlan();
+    showBreak(function () {});
+  };
+  document.getElementById('sumAgain').onclick = function () {
+    const cfg = currentRun.cfg;
+    overlay.classList.remove('show');
+    currentRun = null;
+    setTimeout(function () { beginRun(cfg); }, 80);
+  };
+}
+
+// ---------- DECK BROWSER ----------
+let browserPage = 0;
+const BROWSER_PAGE_SIZE = 50;
+function renderBrowser() {
+  const select = document.getElementById('browserDeck');
+  select.innerHTML = '<option value="all">All decks</option>';
+  (window.MASTERY_DECK_ORDER || []).forEach(function (id) {
+    const d = window.MASTERY_DECKS[id];
+    if (!d) return;
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = d.label + ' (' + d.cards.length + ')';
+    select.appendChild(opt);
+  });
+  ['change'].forEach(function (ev) {
+    select.addEventListener(ev, function () { browserPage = 0; updateBrowserList(); });
+  });
+  const search = document.getElementById('browserSearch');
+  ['input'].forEach(function (ev) {
+    search.addEventListener(ev, function () { browserPage = 0; updateBrowserList(); });
+  });
+  document.getElementById('browserClear').addEventListener('click', function () {
+    search.value = ''; select.value = 'all'; browserPage = 0; updateBrowserList();
+  });
+  updateBrowserList();
+}
+function getBrowserItems() {
+  const deckId = document.getElementById('browserDeck').value;
+  const q = (document.getElementById('browserSearch').value || '').trim().toLowerCase();
+  const items = [];
+  const ids = deckId === 'all' ? (window.MASTERY_DECK_ORDER || []) : [deckId];
+  ids.forEach(function (id) {
+    const d = window.MASTERY_DECKS[id];
+    if (!d) return;
+    d.cards.forEach(function (c, i) {
+      if (q) {
+        const hay = (c.term + ' ' + c.definition).toLowerCase();
+        if (hay.indexOf(q) === -1) return;
+      }
+      items.push({ deckId: id, idx: i, card: c, label: d.label });
+    });
+  });
+  return items;
+}
+function updateBrowserList() {
+  const items = getBrowserItems();
+  const total = items.length;
+  const totalPages = Math.max(1, Math.ceil(total / BROWSER_PAGE_SIZE));
+  if (browserPage >= totalPages) browserPage = 0;
+  const slice = items.slice(browserPage * BROWSER_PAGE_SIZE, (browserPage + 1) * BROWSER_PAGE_SIZE);
+  const list = document.getElementById('browserList');
+  list.innerHTML = '';
+  if (!slice.length) {
+    list.innerHTML = '<div style="font-family:var(--ff-ui);color:var(--ink-faint);padding:18px;text-align:center;">No cards match.</div>';
+  } else {
+    slice.forEach(function (it) {
+      const el = document.createElement('div');
+      el.className = 'browser-card';
+      el.innerHTML =
+        '<div class="browser-card-h">' +
+          '<span class="browser-deck-tag">' + it.label + '</span>' +
+          (it.card.sourceTag ? '<span class="browser-source-tag">' + it.card.sourceTag + '</span>' : '') +
+        '</div>' +
+        '<div class="browser-term">' + escapeHtml(it.card.term) + '</div>' +
+        '<div class="browser-def">' + escapeHtml(it.card.definition) + '</div>';
+      list.appendChild(el);
+    });
+  }
+  const pager = document.getElementById('browserPager');
+  pager.innerHTML = '';
+  if (totalPages > 1) {
+    const mk = function (lbl, p, dis) {
+      const b = document.createElement('button');
+      b.className = 'btn' + (p === browserPage ? ' primary' : '');
+      b.textContent = lbl;
+      if (dis) b.disabled = true;
+      b.onclick = function () { browserPage = p; updateBrowserList(); window.scrollTo({ top: document.getElementById('browserSection').offsetTop - 60, behavior: 'smooth' }); };
+      return b;
+    };
+    pager.appendChild(mk('‹ Prev', Math.max(0, browserPage - 1), browserPage === 0));
+    for (let i = 0; i < totalPages; i++) pager.appendChild(mk(String(i + 1), i, false));
+    pager.appendChild(mk('Next ›', Math.min(totalPages - 1, browserPage + 1), browserPage === totalPages - 1));
+  }
+  const meta = document.createElement('div');
+  meta.style.cssText = 'width:100%; text-align:center; font-family:var(--ff-mono); font-size:11px; color:var(--ink-faint); margin-top:6px;';
+  meta.textContent = total + ' card' + (total === 1 ? '' : 's') + ' · page ' + (browserPage + 1) + ' / ' + totalPages;
+  pager.appendChild(meta);
+}
+
+// ---------- BOOT ----------
+window.MASTERY_READY.then(function () {
+  if (!Object.keys(window.MASTERY_DECKS).length) {
+    document.getElementById('deckGrid').innerHTML = '<div style="grid-column:1/-1;color:var(--wrong);font-family:var(--ff-ui);padding:24px;border:1px solid var(--wrong-soft);border-radius:8px;background:var(--wrong-soft);">Failed to load Mastery decks. Check console.</div>';
+    return;
+  }
+  renderPlan();
+  renderDecks();
+  renderBrowser();
+});
+</script>
+</body>
+</html>
