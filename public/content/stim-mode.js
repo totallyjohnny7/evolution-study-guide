@@ -10,7 +10,7 @@
   const LS_SETTINGS = 'evol_stim_settings';
   const LS_DASH    = 'evol_stim_dash_prefs';
   const LS_REVIEW  = 'evol_stim_review_filter';
-  const LS_MIG_FULL_BANK = 'evol_stim_mig_full_bank_v1';
+  const LS_MIG_FULL_BANK = 'evol_stim_mig_full_bank_v2';
 
   // -------- helpers --------
   const $ = sel => document.querySelector(sel);
