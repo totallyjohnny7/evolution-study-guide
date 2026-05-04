@@ -115,9 +115,10 @@
   function updateUI() {
     if (!btn) return;
     btn.classList.toggle('on', on);
+    btn.title = (on ? 'Blink reminder ON · ' : 'Blink reminder OFF · ') +
+                'every ' + intervalSec + 's · click to toggle, right-click to change interval';
     btn.innerHTML =
       '<span class="br-eye">👁</span>' +
-      '<span class="br-label">' + (on ? 'Blink Reminder · ON' : 'Blink Reminder') + '</span>' +
       '<span class="br-int">' + intervalSec + 's</span>';
   }
 
@@ -130,27 +131,29 @@
     '  100% { opacity:0; transform:translateX(-50%) translateY(-4px) scale(1); }' +
     '}' +
     '#blinkReminderBtn {' +
-    '  position:fixed; bottom:80px; right:16px; z-index:9999;' +
-    '  display:inline-flex; gap:8px; align-items:center;' +
+    '  position:fixed; bottom:80px; right:14px; z-index:9999;' +
+    '  display:inline-flex; gap:5px; align-items:center;' +
     '  background:#1e293b; color:#cbd5e1; border:1px solid #475569;' +
-    '  padding:8px 13px; border-radius:24px;' +
-    '  font:600 12px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;' +
+    '  padding:5px 9px 5px 8px; border-radius:18px;' +
+    '  font:600 11px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;' +
     '  cursor:pointer; user-select:none;' +
     '  box-shadow:0 2px 6px rgba(0,0,0,.25); transition:all .15s;' +
-    '  -webkit-tap-highlight-color: transparent;' +
+    '  -webkit-tap-highlight-color: transparent; opacity:.85;' +
     '}' +
-    '#blinkReminderBtn:hover { transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.3); }' +
+    '#blinkReminderBtn:not(.on) { opacity:.55; }' +
+    '#blinkReminderBtn:hover { opacity:1 !important; transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.3); }' +
     '#blinkReminderBtn.on {' +
     '  background:linear-gradient(135deg,#15803d,#22c55e); color:#ecfdf5;' +
     '  border-color:#86efac;' +
     '  box-shadow:0 0 0 0 rgba(34,197,94,.5); animation:blinkBtnPulse 2s infinite;' +
     '}' +
-    '#blinkReminderBtn .br-eye { font-size:14px; line-height:1; }' +
+    '#blinkReminderBtn .br-eye { font-size:13px; line-height:1; }' +
     '#blinkReminderBtn .br-int {' +
-    '  background:rgba(0,0,0,.3); color:#fde68a;' +
-    '  padding:2px 7px; border-radius:10px;' +
-    '  font-weight:800; font-size:10.5px; letter-spacing:.3px;' +
+    '  background:rgba(0,0,0,.35); color:#fde68a;' +
+    '  padding:1.5px 5px; border-radius:8px;' +
+    '  font-weight:800; font-size:9.5px; letter-spacing:.2px;' +
     '}' +
+    '#blinkReminderBtn.on .br-int { background:rgba(0,0,0,.25); color:#fef3c7; }' +
     '@keyframes blinkBtnPulse {' +
     '  0%   { box-shadow:0 0 0 0 rgba(34,197,94,.45); }' +
     '  70%  { box-shadow:0 0 0 9px rgba(34,197,94,0); }' +
@@ -158,8 +161,7 @@
     '}' +
     '@media print { #blinkReminderBtn, #blinkReminderCue { display:none !important; } }' +
     '@media (max-width:540px) {' +
-    '  #blinkReminderBtn { bottom:74px; right:10px; padding:7px 10px; font-size:11px; }' +
-    '  #blinkReminderBtn .br-label { display:none; }' +
+    '  #blinkReminderBtn { bottom:74px; right:10px; padding:4px 8px; }' +
     '}';
   const style = document.createElement('style');
   style.id = 'blinkReminderStyles';
