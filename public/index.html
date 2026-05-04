@@ -1914,6 +1914,76 @@ body.stim-mode .chapter, body.stim-mode .hero, body.stim-mode .comp-wrap, body.s
 .stim-choice.selected { border-color: var(--accent, #f5b94c); background: rgba(245,185,76,0.08); }
 .stim-choice.correct-rev { border-color: #5fb87a; background: rgba(95,184,122,0.12); }
 .stim-choice.wrong-rev { border-color: #c74e4e; background: rgba(199,78,78,0.10); }
+.stim-choice .stim-choice-why {
+  display: block;
+  margin-top: 6px; padding-top: 6px;
+  border-top: 1px dashed rgba(255,255,255,0.12);
+  font-size: 12.5px; color: var(--ink-faint, #b0a796);
+  line-height: 1.45; font-weight: 400;
+}
+.stim-choice.correct-rev .stim-choice-why { color: #b5e2c2; border-top-color: rgba(95,184,122,0.3); }
+.stim-choice.wrong-rev .stim-choice-why { color: #ffb5b5; border-top-color: rgba(199,78,78,0.3); }
+/* Per-question feedback panel (practice mode) */
+.stim-feedback {
+  margin: 18px 0 24px; padding: 14px 18px;
+  border-radius: 10px;
+  border-left: 4px solid;
+  background: rgba(255,255,255,0.03);
+  font-size: 14px; line-height: 1.5;
+}
+.stim-feedback.correct { border-left-color: #5fb87a; background: rgba(95,184,122,0.08); }
+.stim-feedback.incorrect { border-left-color: #c74e4e; background: rgba(199,78,78,0.08); }
+.stim-feedback .fb-verdict {
+  font-family: var(--ff-display, 'Fraunces', Georgia, serif);
+  font-size: 18px; font-weight: 700; margin-bottom: 8px;
+}
+.stim-feedback.correct .fb-verdict { color: #5fb87a; }
+.stim-feedback.incorrect .fb-verdict { color: #ff8b8b; }
+.stim-feedback .fb-correct, .stim-feedback .fb-why,
+.stim-feedback .fb-user-why { margin-bottom: 6px; color: var(--ink, #f4ead8); }
+.stim-feedback .fb-correct strong,
+.stim-feedback .fb-why strong,
+.stim-feedback .fb-user-why strong { color: var(--accent, #f5b94c); }
+.stim-feedback .fb-source {
+  margin-top: 10px; padding-top: 10px;
+  border-top: 1px dashed rgba(255,255,255,0.15);
+  font-size: 12.5px; line-height: 1.55;
+  color: var(--ink, #f4ead8);
+}
+.stim-feedback .fb-source strong { color: var(--accent, #f5b94c); }
+.stim-feedback .fb-hint {
+  margin-top: 10px; font-size: 12.5px; color: var(--ink-faint, #b0a796);
+  font-style: italic;
+}
+/* Pause overlay (Stim Mode practice) */
+.stim-timer.paused { color: var(--ink-faint, #b0a796); opacity: 0.7; }
+.stim-paused-shell {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 60vh; padding: 32px 16px;
+}
+.stim-paused-card {
+  text-align: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed var(--rule, rgba(255,255,255,0.15));
+  border-radius: 16px;
+  padding: 56px 40px; max-width: 480px; width: 100%;
+}
+.stim-paused-eyebrow {
+  text-transform: uppercase; letter-spacing: 0.22em;
+  font-size: 11px; color: var(--ink-faint, #b0a796); margin-bottom: 14px;
+}
+.stim-paused-title {
+  font-family: var(--ff-display, 'Fraunces', Georgia, serif); font-size: 32px;
+  margin: 0 0 12px; color: var(--ink, #e8e2d6);
+}
+.stim-paused-msg {
+  color: var(--ink-faint, #b0a796); font-size: 14px;
+  margin: 0 0 24px; line-height: 1.6;
+}
+.stim-paused-time {
+  font-family: var(--ff-mono, monospace); font-size: 13px;
+  color: var(--ink-faint, #b0a796); margin-top: 16px;
+}
 .stim-choice-key { width: 22px; flex-shrink: 0; font-weight: 600; color: var(--ink-faint, #b0a796); }
 .stim-textarea {
   width: 100%; min-height: 140px; padding: 14px 16px;
