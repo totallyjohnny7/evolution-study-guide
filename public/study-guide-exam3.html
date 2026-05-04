@@ -1098,7 +1098,10 @@
       '.callout{border-left:3px solid #c89b2e;background:#fff7e8;padding:6px 10px;margin:8px 0}'+
       '.pagebreak{page-break-after:always}'+
       '@page{size:letter portrait;margin:0.5in}'+
-      '</style></head><body>' + doc.innerHTML + '</body></html>';
+      '</style></head><body>' + doc.innerHTML + '<!-- BEGIN BLINK REMINDER -->
+<script src="scripts/blink-reminder.js" defer></script>
+<!-- END BLINK REMINDER -->
+</body></html>';
     const blob = new Blob([html], {type:'text/html'});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
