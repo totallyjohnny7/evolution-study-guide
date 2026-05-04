@@ -307,7 +307,13 @@
     // page launched a specific practice-final variation), use exactly those
     // questions in that order. Bypasses pool filtering and shuffling so
     // Variation A always runs the same 30 questions.
-    if (Array.isArray(settings._variationQids) && settings._variationQids.length > 0) {
+    // Adaptive mode is meant to drill the full bank, so it ignores variation
+    // presets (and we clear them so they don't sneak back in next time).
+    if (settings.adaptive) {
+      delete settings._variationQids;
+      delete settings._variationLabel;
+      saveJSON(LS_SETTINGS, settings);
+    } else if (Array.isArray(settings._variationQids) && settings._variationQids.length > 0) {
       const byId = new Map(bank.map(q => [q.id, q]));
       selected = settings._variationQids.map(id => byId.get(id)).filter(Boolean);
       if (selected.length === 0) {
