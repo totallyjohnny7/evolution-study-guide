@@ -263,10 +263,13 @@ function shuffleQuestion(q, seed) {
     choices: reorderedChoices,
     correct: newCorrectIdx,
     correctLetter: String.fromCharCode(65 + newCorrectIdx),
+    choiceWhys: reorderedWhy,    // re-ordered to align with shuffled choices
+    indexMap: indices,           // shuffled[i] came from source.choices[indexMap[i]]
   };
 }
 
 const exams = [];
+const examSourceMeta = [];   // parallel to exams[], retains full _srcMeta for stim-bank-extra emit
 const saSeen = new Set();
 let saCursor = 0;
 
@@ -286,6 +289,9 @@ for (let vi = 0; vi < VARIATIONS.length; vi++) {
   shuffleInPlace(mcRaw, mulberry32(V.seed));
 
   // Convert each MC to practice-exam schema with shuffled choices.
+  // _srcMeta retains the full source question + per-question shuffle map so
+  // we can later emit a stim-bank-extra entry that has the same trimmed
+  // text but pulls why/choice_why/lecture/topic/section from the source.
   const mc = mcRaw.map((q, i) => {
     const sh = shuffleQuestion(q, V.seed + i * 31);
     return {
@@ -294,6 +300,11 @@ for (let vi = 0; vi < VARIATIONS.length; vi++) {
       choices: sh.choices,
       ans: sh.correctLetter,
       _src: q.id,
+      _srcMeta: {
+        source: q,
+        correctIdx: sh.correct,
+        choiceWhys: sh.choiceWhys,   // already aligned with shuffled choices
+      },
     };
   });
 
@@ -336,6 +347,7 @@ for (let vi = 0; vi < VARIATIONS.length; vi++) {
         q: cand.q,
         ans: cand.model_answer || cand.modelAnswer || '(model answer not provided in source)',
         _src: cand.id,
+        _srcMeta: { source: cand },
       });
       saSeen.add(cand.id);
     }
@@ -348,9 +360,27 @@ for (let vi = 0; vi < VARIATIONS.length; vi++) {
   for (const item of mc) finalLc[item.ans]++;
   console.log(`  ${V.id}: letter dist ${Object.entries(finalLc).map(([k,v]) => `${k}=${v}`).join(' ')} | ${sa.length} SA`);
 
-  // Strip the _src debug field before writing.
-  const mcClean = mc.map(({_src, ...rest}) => rest);
-  const saClean = sa.map(({_src, ...rest}) => rest);
+  // Capture the source meta BEFORE stripping for the stim-bank-extra emit.
+  examSourceMeta.push({
+    id: V.id,
+    mcMeta: mc.map(item => ({
+      varN: item.n,
+      q: item.q,
+      choices: item.choices,
+      ans: item.ans,
+      srcMeta: item._srcMeta,
+    })),
+    saMeta: sa.map(item => ({
+      varN: item.n,
+      q: item.q,
+      ans: item.ans,
+      srcMeta: item._srcMeta,
+    })),
+  });
+
+  // Strip the _src and _srcMeta debug fields before writing the JSON.
+  const mcClean = mc.map(({_src, _srcMeta, ...rest}) => rest);
+  const saClean = sa.map(({_src, _srcMeta, ...rest}) => rest);
 
   exams.push({
     id: V.id,
@@ -441,4 +471,92 @@ console.log(`  120 MC + ${exams.reduce((s, e) => s + e.sa.length, 0)} SA across 
   for (const [vid, v] of Object.entries(variationManifest.variations)) {
     console.log(`  ${vid}: ${v.mcQids.length} MC + ${v.saQids.length} SA qids`);
   }
+}
+
+// -- Emit stim-bank-extra.js so Stim Mode shows the 4 practice-final
+// variations as 136 distinct entries (in addition to the 156-question
+// source bank). Each entry uses the trimmed/shuffled q+choices from the
+// PDF and pulls why/choice_why/lecture/topic/section/source from its
+// source stim-bank question via _srcMeta. Loaded after stim-bank.js in
+// index.html, so it appends to the existing window.STIM_BANK and extends
+// window.STIM_INDEX.
+{
+  const extraEntries = [];
+  for (const examMeta of examSourceMeta) {
+    const variation = examMeta.id.replace(/^Final-/, '');   // 'A' / 'B' / 'C' / 'D'
+    examMeta.mcMeta.forEach((m, i) => {
+      const src = m.srcMeta && m.srcMeta.source;
+      if (!src) return;
+      const correctIdx = m.ans.charCodeAt(0) - 65;
+      extraEntries.push({
+        id: `STIM-VAR${variation}-${String(i + 1).padStart(3, '0')}`,
+        exam: 0,                           // cumulative — variations span all 3 exams
+        lecture: src.lecture,
+        section: src.section || '',
+        topic: src.topic + ' · Practice Final ' + variation,
+        type: 'mc',
+        difficulty: src.difficulty || 'application',
+        points: src.points || 1,
+        q: m.q,
+        choices: m.choices,
+        correct: correctIdx,
+        why: src.why || '',
+        choice_why: m.srcMeta.choiceWhys || src.choice_why || [],
+        source: (src.source || '') + ` · Practice Final ${variation} Q${m.varN}`,
+        variation_label: variation,
+        source_qid: src.id,
+      });
+    });
+    examMeta.saMeta.forEach((m, i) => {
+      const src = m.srcMeta && m.srcMeta.source;
+      if (!src) return;
+      extraEntries.push({
+        id: `STIM-VAR${variation}-SA-${String(i + 1).padStart(2, '0')}`,
+        exam: 0,
+        lecture: src.lecture,
+        section: src.section || '',
+        topic: src.topic + ' · Practice Final ' + variation,
+        type: 'sa',
+        difficulty: src.difficulty || 'synthesis',
+        points: src.points || 3,
+        q: m.q,
+        rubric: src.rubric || null,
+        model_answer: m.ans,
+        source: (src.source || '') + ` · Practice Final ${variation} SA${m.varN}`,
+        variation_label: variation,
+        source_qid: src.id,
+      });
+    });
+  }
+
+  const headerComment =
+    `/* Auto-generated by scripts/build-practice-exams.js — do not edit by hand.\n` +
+    `   Appends ${extraEntries.length} practice-final variation questions to the\n` +
+    `   Stim Mode bank. Loaded AFTER content/stim-bank.js, so window.STIM_BANK\n` +
+    `   already exists when this runs. */\n`;
+  const body =
+    `(function(){\n` +
+    `  var extra = ${JSON.stringify(extraEntries, null, 2)};\n` +
+    `  if (!Array.isArray(window.STIM_BANK)) window.STIM_BANK = [];\n` +
+    `  window.STIM_BANK = window.STIM_BANK.concat(extra);\n` +
+    `  // Extend STIM_INDEX so the new entries are reachable via the existing\n` +
+    `  // exam/lecture filters in Stim Mode setup. We push into Cumulative (0)\n` +
+    `  // and into each entry's lecture bucket.\n` +
+    `  if (window.STIM_INDEX) {\n` +
+    `    if (!window.STIM_INDEX.byExam) window.STIM_INDEX.byExam = {};\n` +
+    `    if (!window.STIM_INDEX.byLecture) window.STIM_INDEX.byLecture = {};\n` +
+    `    extra.forEach(function(q){\n` +
+    `      if (!window.STIM_INDEX.byExam[0]) window.STIM_INDEX.byExam[0] = [];\n` +
+    `      window.STIM_INDEX.byExam[0].push(q.id);\n` +
+    `      if (!window.STIM_INDEX.byLecture[q.lecture]) window.STIM_INDEX.byLecture[q.lecture] = [];\n` +
+    `      window.STIM_INDEX.byLecture[q.lecture].push(q.id);\n` +
+    `    });\n` +
+    `  }\n` +
+    `  console.log('[stim-bank-extra loaded] +' + extra.length + ' practice-final variations · STIM_BANK total = ' + window.STIM_BANK.length);\n` +
+    `})();\n`;
+
+  const EXTRA_OUT = path.join(ROOT, 'public/content/stim-bank-extra.js');
+  fs.writeFileSync(EXTRA_OUT, headerComment + body, 'utf8');
+  console.log(`✓ Wrote ${EXTRA_OUT} (${(fs.statSync(EXTRA_OUT).size/1024).toFixed(1)} KB)`);
+  console.log(`  ${extraEntries.length} practice-final variation entries (${extraEntries.filter(e => e.type==='mc').length} MC + ${extraEntries.filter(e => e.type==='sa').length} SA)`);
 }
