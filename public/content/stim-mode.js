@@ -10,6 +10,7 @@
   const LS_SETTINGS = 'evol_stim_settings';
   const LS_DASH    = 'evol_stim_dash_prefs';
   const LS_REVIEW  = 'evol_stim_review_filter';
+  const LS_MIG_FULL_BANK = 'evol_stim_mig_full_bank_v1';
 
   // -------- helpers --------
   const $ = sel => document.querySelector(sel);
@@ -55,6 +56,18 @@
         renderEmpty();
         return;
       }
+      // One-time migration: reset any in-progress adaptive session so it
+      // restarts against the full question bank (old sessions were capped
+      // by exam/lecture/count filters).
+      try {
+        if (!localStorage.getItem(LS_MIG_FULL_BANK)) {
+          const existing = loadJSON(LS_SESSION, null);
+          if (existing && existing.adaptive && !existing.finished) {
+            localStorage.removeItem(LS_SESSION);
+          }
+          localStorage.setItem(LS_MIG_FULL_BANK, '1');
+        }
+      } catch (e) {}
       session = loadJSON(LS_SESSION, null);
       if (session && !session.finished) {
         renderExam();
@@ -308,7 +321,12 @@
       const selectedLectures = Array.isArray(settings.lecture) ? settings.lecture : [];
       const lectureLocked = selectedLectures.length > 0;
       let pool;
-      if (lectureLocked) {
+      if (settings.adaptive) {
+        // Adaptive mode = drill EVERY question in the bank (still respects
+        // type filter so MC-only / SA-only stay meaningful). Exam/lecture
+        // filters and the count cap are intentionally ignored.
+        pool = bank.slice();
+      } else if (lectureLocked) {
         pool = bank.filter(q => selectedLectures.includes(q.lecture));
       } else {
         pool = bank.filter(q => settings.exam === 0 || q.exam === settings.exam);
@@ -320,7 +338,8 @@
         return;
       }
       const shuffled = shuffleSeeded(pool, sessionId);
-      const target = settings.count === 0 ? shuffled.length : Math.min(settings.count, shuffled.length);
+      const useAll = settings.adaptive || settings.count === 0;
+      const target = useAll ? shuffled.length : Math.min(settings.count, shuffled.length);
       selected = shuffled.slice(0, target);
     }
 
@@ -670,8 +689,8 @@
         ? ` <span style="background:#b45309;color:white;padding:1px 6px;border-radius:8px;font-size:11px;font-weight:700">REPEAT × ${attempts}${lapses > 0 ? ' · ' + lapses + ' miss' : ''}</span>`
         : '';
       progressLabel =
-        `<strong>🧠 Adaptive — ${mastered} / ${total} mastered</strong>` +
-        `<span style="color:var(--ink-faint,#b0a796)">${poolLeft} card${poolLeft===1?'':'s'} left in pool · ${q.lecture} · ${q.type.toUpperCase()}</span>` +
+        `<strong>🧠 Adaptive — ${mastered} mastered</strong>` +
+        `<span style="color:var(--ink-faint,#b0a796)">${poolLeft} card${poolLeft===1?'':'s'} left · ${q.lecture} · ${q.type.toUpperCase()}</span>` +
         repeatBadge;
     } else {
       progressLabel =
