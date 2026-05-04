@@ -12,6 +12,7 @@
     'phylogeny',
     'cause-effect',
     'cloze',
+    'mnemonics',
   ];
 
   window.MASTERY_DECKS = window.MASTERY_DECKS || {};

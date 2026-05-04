@@ -1091,7 +1091,7 @@ body.spotlight-on .spotlight-overlay { display: block; }
   <div class="hero-meta">
     <span id="heroExamMeta">📅 Final · May 4, 2026 · 5–7 PM</span>
     <span>🧠 Block plan with 10-min breaks</span>
-    <span id="masteryStatHero">— cards across 9 decks</span>
+    <span id="masteryStatHero">— cards across 10 decks</span>
   </div>
   <div id="cramBanner" class="cram-banner" style="display:none">
     ⚡ <b>Cram mode is ON</b> — block-diversity routing, 5-block cap, and gap warnings are disabled.
@@ -2477,6 +2477,7 @@ const APP_PROMPTS = {
   phylogeny: function (card) { return { prompt: card.term, gold: card.definition, ask: 'Type the phylogenetic implication.' }; },
   'cause-effect': function (card) { return { prompt: 'Pattern: ' + card.term + ' — what is the selective explanation?', gold: card.definition, ask: 'Type the selective explanation.' }; },
   cloze: function (card) { return { prompt: card.term, gold: card.definition, ask: 'Fill in the blank.' }; },
+  mnemonics: function (card) { return { prompt: 'Mnemonic: "' + card.term + '" — what does it stand for, and what does each part mean?', gold: card.definition, ask: 'Unpack each component of the mnemonic and state why it matters.' }; },
 };
 
 function runApplicationRound(host) {
