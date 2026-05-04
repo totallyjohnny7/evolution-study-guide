@@ -6115,6 +6115,49 @@ document.querySelectorAll('.mode-switch button').forEach(b => {
   b.addEventListener('click', () => setMode(b.dataset.mode));
 });
 
+// ---------- Practice-exam variation deep-link (#stim-A through #stim-D) ----------
+// When mastery.html sends the user here with a variation hash, pre-configure
+// Stim Mode for a 30-question cumulative practice final and activate it.
+// User lands on the Stim Mode setup screen with chips already selected; one
+// click on "Start exam" begins the timed run.
+window.handleStimVariation = function () {
+  const m = String(location.hash || '').match(/^#stim-([A-D])\b/i);
+  if (!m) return false;
+  const variation = m[1].toUpperCase();
+  const presets = {
+    A: { exam: 0, count: 30, type: 'mixed', timer: 3000, lecture: 'all', _variation: 'A' },
+    B: { exam: 0, count: 30, type: 'mixed', timer: 3000, lecture: 'all', _variation: 'B' },
+    C: { exam: 0, count: 30, type: 'mixed', timer: 3000, lecture: 'all', _variation: 'C' },
+    D: { exam: 0, count: 30, type: 'mixed', timer: 3000, lecture: 'all', _variation: 'D' },
+  };
+  try {
+    localStorage.setItem('evol_stim_settings', JSON.stringify(presets[variation]));
+    // Clear any half-finished session so the user lands on the setup screen,
+    // not a resumed exam from a different variation.
+    localStorage.removeItem('evol_stim_session');
+  } catch (e) {}
+  // Activate Stim Mode (waits for window.StimMode to be defined; stim-mode.js
+  // loads via <script> tag below this block, so on a cold load we may need to
+  // wait one tick for it to register on window).
+  const tryActivate = (attempt) => {
+    if (window.StimMode && typeof window.StimMode.activate === 'function') {
+      setMode('stim');
+    } else if (attempt < 40) {
+      setTimeout(() => tryActivate(attempt + 1), 50);
+    }
+  };
+  tryActivate(0);
+  return true;
+};
+// Run on initial load (after DOMContentLoaded so setMode is wired) and on
+// hash changes so the same tab can navigate between variations.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => window.handleStimVariation());
+} else {
+  window.handleStimVariation();
+}
+window.addEventListener('hashchange', () => window.handleStimVariation());
+
 // ---------- Question cards ----------
 let quiz = { answered: 0, correct: 0 };
 try { quiz = JSON.parse(localStorage.getItem('evol-quiz') || '{"answered":0,"correct":0}'); } catch(e){}
