@@ -130,7 +130,7 @@
     '  100% { opacity:0; transform:translateX(-50%) translateY(-4px) scale(1); }' +
     '}' +
     '#blinkReminderBtn {' +
-    '  position:fixed; bottom:16px; right:16px; z-index:9999;' +
+    '  position:fixed; bottom:80px; right:16px; z-index:9999;' +
     '  display:inline-flex; gap:8px; align-items:center;' +
     '  background:#1e293b; color:#cbd5e1; border:1px solid #475569;' +
     '  padding:8px 13px; border-radius:24px;' +
@@ -158,7 +158,7 @@
     '}' +
     '@media print { #blinkReminderBtn, #blinkReminderCue { display:none !important; } }' +
     '@media (max-width:540px) {' +
-    '  #blinkReminderBtn { bottom:10px; right:10px; padding:7px 10px; font-size:11px; }' +
+    '  #blinkReminderBtn { bottom:74px; right:10px; padding:7px 10px; font-size:11px; }' +
     '  #blinkReminderBtn .br-label { display:none; }' +
     '}';
   const style = document.createElement('style');
